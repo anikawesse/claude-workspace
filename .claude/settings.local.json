@@ -57,7 +57,15 @@
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__list-brand-kits",
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__request-outline-review",
       "WebFetch(domain:www.instagram.com)",
-      "Bash(dir /s /b \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\")"
+      "Bash(dir /s /b \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\")",
+      "Bash(python3 -c ' *)",
+      "Bash(powershell -Command ' *)",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__generate-design-structured",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__search-designs",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__start-editing-transaction",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__perform-editing-operations",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__commit-editing-transaction",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__move-item-to-folder"
     ]
   }
 }
