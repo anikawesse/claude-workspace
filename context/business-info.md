@@ -1,34 +1,70 @@
-# Business-Informationen
+# Business-Informationen — Anikas Pferdeakademie
 
-> Diese Datei liefert Hintergrund zur Organisation oder zum Business, in dem du arbeitest. Sie schafft die Grundlage, um deine Rolle (personal-info.md) und strategischen Prioritäten (strategy.md) zu verstehen.
+## Überblick
+Online-Akademie für Freizeitreiterinnen im deutschsprachigen Raum.  
+Mission: "Pferd und Mensch zusammenbringen" — Freizeitreiterinnen helfen, eine vertrauensvolle, entspannte Partnerschaft mit ihrem Pferd aufzubauen.
 
----
+## Zielgruppe
+- Freizeitreiterinnen (primär weiblich)
+- Wiedereinsteiger mit Unsicherheit oder Angst
+- Pferdebesitzerinnen, die ein verlässliches Reitpferd wollen
+- Deutschsprachig
 
-## Wie das zusammenhängt
+## Kernslogans
+- "Meine Mission ist es Pferd und Mensch zusammenzubringen."
+- "Für Freizeitreiterinnen – Endlich die gemeinsame Zeit mit dem Herzenspferd genießen"
+- "Der Schlüssel zum gesunden Freizeitpferd"
+- "Dein Weg zum Verlasspferd"
+- "So wirst du ein unschlagbares Team mit deinem Pferd"
 
-- **Diese Datei** liefert den organisatorischen Kontext
-- **personal-info.md** definiert deine Rolle darin
-- **strategy.md** beschreibt die Ziele, auf die du hinarbeitest
-- **current-data.md** trackt den Fortschritt und informiert Entscheidungen
+## Produkte & Angebote
 
----
+### Hauptprogramme (Paid)
 
-## Überblick zur Organisation
+| Programm | Webseiten-Preis | Funnel-Preis | Funnel-Name | Traffic-Quelle |
+|---|---|---|---|---|
+| Traumteam-Programm | 997 € | 697 € (3 Tage) | "Video Training" | Paid Ads (aktiv) |
+| Bauch-Bein-Po-Programm | 997 € | 697 € (3 Tage) | "Master Class" | Organisch |
 
-[Beschreibe das Business, das Unternehmen oder die Organisation. Was macht es? Wen bedient es? Was ist seine Mission oder sein Zweck?]
+- Beide Programme können einzeln oder zusammen erworben werden
+- Bauch-Bein-Po ist die "nächste Stufe" nach dem Traumteam (aber auch solo sinnvoll)
+- Verkauf läuft primär über Auto-Webinar-Funnels, nicht direkt über die Website
 
-## Produkte / Dienstleistungen / Schwerpunkte
+### Weitere Bezahl-Angebote
+- Energetik-Programm
+- Paddocktrail-Planung/-Optimierung
 
-[Was sind die primären Angebote oder Schwerpunkte? Das hilft Claude zu verstehen, was du baust oder lieferst.]
+### Kostenlose Lead-Magneten / Einstiege
+- Beziehungs-Check (Quiz)
+- Facebook-Gruppe
+- Info-Guide Offenstall
+- Video-Training (= Auto-Webinar Traumteam Funnel)
+- Masterclass (= Auto-Webinar Bauch-Bein-Po Funnel)
 
--
--
--
+## Communities & Traffic-Kanäle
+- **Instagram** — organische Reichweite, regelmäßige Kommentare, weniger aktiv als FB
+- **Facebook-Gruppe** — "Als Freizeitreiterin zum unschlagbaren Team mit deinem Pferd" — Haupt-Community, deutlich aktiver
+- **Paid Ads** — aktuell für Video Training (Traumteam-Funnel)
+- **E-Mail-Liste** — 8 Loopschleifen zu verschiedenen Produkten (Evergreen-Funnels)
 
-## Wichtiger Kontext
+## Funnel-Ablauf (Traumteam-Programm)
+```
+Erstkontakt (Ad / organischer Post / E-Mail-Loop)
+    ↓
+Eintragung ins Video Training (Auto-Webinar)
+    ↓
+Webinar anschauen → Kauf direkt (Sofortbonus-Anreiz) ← Hauptkauf-Moment
+    ↓ (falls kein Kauf)
+Sales-Mail-Sequenz → bisher 1 Kauf
+    ↓ (parallel)
+E-Mail-Loop-Schleife → bisher 2 Käufe
+```
 
-[Alle wichtigen Hintergrundinformationen: Unternehmensphase, Teamgröße, Marktposition, kürzliche Änderungen oder Rahmenbedingungen, die Claude kennen sollte.]
+**Erkenntnisse aus den Daten:**
+- Die meisten Käufe passieren direkt im Webinar (Sofortbonus wirkt)
+- Sales-Mail-Sequenz nach Webinar: 1 Kauf bisher
+- E-Mail-Loopschleifen: 2 Käufe bisher
+- Nachkauf-Sequenz ist noch ungenutzte Hebel-Stelle
 
----
-
-_Halte dies auf hohem Niveau — genug um Claude zu orientieren, kein umfassendes Unternehmens-Wiki._
+## USP
+Verbindet Beziehungsaufbau mit gesundheitsbewusstem Training — adressiert emotionale Bindung UND körperliche Konditionierung zur Verletzungsvorbeugung.

@@ -1,41 +1,32 @@
-# Aktuelle Daten
+# Aktuelle Daten — Anikas Pferdeakademie
+_Stand: April 2026_
 
-> Diese Datei enthält Metriken, Datenpunkte und aktuelle Statusinformationen, die für deine Rolle und Strategie relevant sind. Sie liefert Claude konkreten Kontext für Analysen und Entscheidungsfindung.
+## Community & Reichweite
 
----
+| Kanal | Größe | Notizen |
+|---|---|---|
+| E-Mail-Liste gesamt | ~4.000 | |
+| E-Mail-Liste aktiv (Newsletter) | ~3.000 | |
+| Facebook-Gruppe | ~3.000 Mitglieder | Haupt-Community, sehr aktiv |
+| Instagram | ~2.000 Follower | weniger aktiv als FB |
 
-## Wie das zusammenhängt
+## Verkäufe Traumteam-Programm
 
-- **business-info.md** liefert den organisatorischen Kontext
-- **personal-info.md** definiert, wofür du verantwortlich bist
-- **strategy.md** beschreibt, worauf du optimierst
-- **Diese Datei** gibt Claude die Zahlen hinter der Erzählung
+| Jahr | Verkäufe | Preis | Format | Vertriebsweg |
+|---|---|---|---|---|
+| 2024 | ~12 | 3.000 € | Premium-Coaching | Video Training → Gespräch → Kauf |
+| 2025 | ~12 | 3.000 € | Premium-Coaching | Video Training → Gespräch → Kauf |
+| 2026 (bisher) | ~17–20 | 697 € | Selbstlernkurs | Video Training → Direktkauf (automatisiert) |
 
----
+**Umsatz-Vergleich (grob):**
+- 2024/2025: 12 × 3.000 € = **36.000 € / Jahr**
+- 2026 (Pace): ~20 × 697 € = **~13.940 € / Jahr** ← deutlich weniger, mehr Volumen nötig
 
-## Schlüsselmetriken
+## Funnel-Performance (Traumteam, 2026)
+- Hauptkauf-Moment: direkt im Webinar (Sofortbonus wirkt)
+- Sales-Mail-Sequenz nach Webinar: 1 Kauf
+- E-Mail-Loopschleifen: 2 Käufe
+- Ads laufen aktiv auf Video Training
 
-[Welche Datenpunkte sind am wichtigsten für deine Arbeit? Umsatz, Nutzer, Conversion-Raten, Pipeline, Performance-Metriken?]
-
-| Metrik | Aktueller Wert | Zielwert | Notizen |
-| ------ | -------------- | -------- | ------- |
-|        |                |          |         |
-|        |                |          |         |
-
-## Aktueller Stand
-
-[Qualitative Daten: Status wichtiger Projekte, kürzliche Erfolge/Misserfolge, Blocker, Team-Kapazität?]
-
-## Datenquellen
-
-[Woher kommen diese Daten? Nützlich für zukünftige Automatisierung.]
-
----
-
-## Automatisierungshinweis
-
-_Diese Datei funktioniert als statischer Snapshot, kann aber mit Skripten erweitert werden, die Live-Daten ziehen. Sobald du mit dem Workspace vertraut bist, erwäge ein Skript in `scripts/` hinzuzufügen, das diese Datei aus deinen Datenquellen aktualisiert (Dashboards, APIs, Spreadsheets, etc.)._
-
----
-
-_Regelmäßig aktualisieren — veraltete Daten begrenzen Claudes Nützlichkeit als analytischer Partner._
+## Modell-Wandel (wichtiger Kontext)
+Anika hat das Traumteam-Programm 2026 von Premium-Coaching (3.000 €, Discovery Call nötig) auf Selbstlernkurs (697 €, vollautomatisiert) umgestellt — mit dem Ziel: skalierbar ohne Zeitaufwand.
