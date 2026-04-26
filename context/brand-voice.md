@@ -77,6 +77,32 @@ Du bist bei uns goldrichtig, wenn
 - Keine Überheblichkeit ("ich weiß es besser")
 - Kein Druck durch Angst ("du wirst versagen wenn du nicht kaufst")
 - Keine langen Absätze ohne Luft
+- **Keine Bindestriche (—)** — wirkt wie KI, nervig. Stattdessen "und" oder Komma.
+
+## Instagram Caption Format
+- Einzelne Punkte `.` als Absatztrenner zwischen Abschnitten
+- Jeder neue Gedanke = eigene Zeile
+- Emojis sparsam und gezielt (🐴 😪 💛 etc.)
+- Codewort in Anführungszeichen: "VERLASSPFERD"
+- Kurze Sätze, kein Schnörkel
+
+## Referenz Caption (Karussell Verlasspferd, April 2026)
+Kennst du das? 🐴
+.
+Die Sonne scheint, alle im Stall ziehen los, nur du bleibst zurück.😪
+.
+Nicht weil du keine Lust hast.
+.
+Sondern weil du weißt, was passiert, sobald ihr den Hof verlasst.
+.
+Dein Pferd wird hektisch. Überholt dich. Und du hast das Gefühl, keine Kontrolle mehr zu haben.
+.
+Dabei wünschst du dir doch nichts sehnlicher als diesen entspannten Ausflug: einfach losgehen, wann du willst.
+Auch alleine.
+.
+Das muss nicht so bleiben. 💛
+.
+Schreib "VERLASSPFERD" in die Kommentare und ich zeige dir, wie ihr Schritt für Schritt dahin kommt.
 
 ---
 

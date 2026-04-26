@@ -69,6 +69,8 @@
 
 → 2× Identität, 1× Problem, 1× Wahrheit, 1× Lösung
 
+**Angebote & CTAs:** ergeben sich aus dem Thema des Posts. Orientierung an den ManyChat-Codewörtern — welches Codewort passt zum Thema, das zeigt auch welches Angebot dahintersteht.
+
 ---
 
 ## Instagram 9er Feed Grid (Reihenfolge)

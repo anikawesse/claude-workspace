@@ -65,7 +65,13 @@
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__start-editing-transaction",
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__perform-editing-operations",
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__commit-editing-transaction",
-      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__move-item-to-folder"
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__move-item-to-folder",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__cancel-editing-transaction",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__export-design",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__merge-designs",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__get-design-content",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__comment-on-design",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__list-comments"
     ]
   }
 }
