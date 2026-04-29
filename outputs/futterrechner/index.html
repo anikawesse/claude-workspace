@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futterrechner – Anikas Pferdeakademie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <style>
+        :root {
+            --beige: #e6c5b4;
+            --gold: #d6b923;
+            --brown: #894b2f;
+            --red: #691212;
+            --light-bg: #fdf8f5;
+            --text: #2c1810;
+            --text-light: #6b4c3b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body { font-family: 'Open Sans', sans-serif; background: var(--light-bg); color: var(--text); min-height: 100vh; }
+
+        .header {
+            background: linear-gradient(135deg, #4a0c0c 0%, var(--red) 50%, #7a1818 100%);
+            padding: 20px 28px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 3px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -40px; right: -40px;
+            width: 160px; height: 160px;
+            border-radius: 50%;
+            background: rgba(214,185,35,0.08);
+            pointer-events: none;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px; left: 30%;
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            pointer-events: none;
+        }
+        .header-logo-wrap {
+            flex-shrink: 0;
+            width: 72px; height: 72px;
+            background: rgba(255,255,255,0.12);
+            border-radius: 50%;
+            border: 2px solid rgba(214,185,35,0.5);
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+        }
+        .header-logo-wrap img { width: 64px; height: 64px; object-fit: contain; }
+        .header-divider {
+            width: 1px; height: 48px;
+            background: rgba(255,255,255,0.2);
+            flex-shrink: 0;
+        }
+        .header-text { flex: 1; }
+        .header-text h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem; font-weight: 800;
+            color: white; line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+        .header-text h1 span { color: var(--gold); }
+        .header-text p { color: rgba(230,197,180,0.85); font-size: 0.8rem; margin-top: 4px; letter-spacing: 0.01em; }
+        .header-badge {
+            flex-shrink: 0;
+            background: rgba(214,185,35,0.15);
+            border: 1px solid rgba(214,185,35,0.4);
+            border-radius: 8px;
+            padding: 6px 12px;
+            text-align: center;
+        }
+        .header-badge span { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.62rem; color: var(--gold); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+        .header-badge strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 1rem; color: white; font-weight: 800; line-height: 1.1; margin-top: 1px; }
+
+        .progress-bar { background: var(--brown); padding: 0 24px; }
+        .steps { display: flex; max-width: 640px; margin: 0 auto; }
+        .step-indicator {
+            flex: 1; padding: 11px 6px; text-align: center;
+            font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 600;
+            color: rgba(255,255,255,0.45); position: relative; cursor: pointer;
+            transition: color 0.2s; user-select: none;
+        }
+        .step-indicator:hover { color: rgba(255,255,255,0.75); }
+        .step-indicator.active { color: var(--gold); }
+        .step-indicator.done { color: rgba(255,255,255,0.75); }
+        .step-indicator::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: transparent; }
+        .step-indicator.active::after { background: var(--gold); }
+
+        .main { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
+        .step-panel { display: none; }
+        .step-panel.active { display: block; }
+
+        .step-title { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; font-weight: 700; color: var(--red); margin-bottom: 5px; }
+        .step-subtitle { color: var(--text-light); font-size: 0.86rem; margin-bottom: 22px; }
+
+        .card { background: white; border-radius: 12px; padding: 20px; margin-bottom: 16px; border: 1px solid #ecddd5; }
+        .card-title { font-family: 'Montserrat', sans-serif; font-size: 0.88rem; font-weight: 700; color: var(--brown); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+
+        /* Form */
+        .form-group { margin-bottom: 16px; }
+        .form-group:last-child { margin-bottom: 0; }
+        label { display: block; font-weight: 600; font-size: 0.87rem; color: var(--text); margin-bottom: 6px; }
+        input[type="text"], input[type="number"] {
+            width: 100%; padding: 10px 14px; border: 1.5px solid #ddd; border-radius: 8px;
+            font-family: 'Open Sans', sans-serif; font-size: 0.93rem; color: var(--text);
+            transition: border-color 0.2s; background: white;
+        }
+        input[type="text"]:focus, input[type="number"]:focus { outline: none; border-color: var(--brown); }
+
+        /* Condition selector */
+        .condition-group { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin-top: 6px; }
+        .condition-option { position: relative; }
+        .condition-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+        .condition-option label {
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 12px 6px; border: 2px solid #ddd; border-radius: 10px; cursor: pointer;
+            text-align: center; font-size: 0.83rem; font-weight: 600; color: var(--text-light);
+            transition: all 0.2s; gap: 5px; min-height: 72px;
+        }
+        .condition-option label .icon { font-size: 1.4rem; }
+        .condition-option input:checked + label { border-color: var(--brown); background: #fef5ef; color: var(--red); }
+
+        /* Measure diagram */
+        .measure-diagram { margin-top: 12px; background: #fdf8f5; border: 1px solid #ecddd5; border-radius: 10px; padding: 12px; }
+        .measure-diagram-title { font-size: 0.78rem; font-weight: 600; color: var(--brown); margin-bottom: 8px; text-align: center; }
+
+        /* Heu mode */
+        .heu-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+        .heu-option { position: relative; }
+        .heu-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+        .heu-option label {
+            display: flex; flex-direction: column; align-items: center; gap: 7px; padding: 15px 10px;
+            border: 2px solid #ddd; border-radius: 10px; cursor: pointer; text-align: center;
+            font-size: 0.83rem; font-weight: 600; color: var(--text-light); transition: all 0.2s;
+        }
+        .heu-option label .icon { font-size: 1.7rem; }
+        .heu-option label strong { font-size: 0.9rem; }
+        .heu-option label span { font-weight: 400; font-size: 0.74rem; }
+        .heu-option input:checked + label { border-color: var(--gold); background: #fffbef; color: var(--brown); }
+
+        /* Upload area */
+        .upload-area { border: 2px dashed #ddd; border-radius: 10px; padding: 22px; text-align: center; cursor: pointer; transition: all 0.2s; background: #fafafa; }
+        .upload-area:hover { border-color: var(--brown); background: #fef8f5; }
+        .upload-area.has-file { border-color: var(--gold); background: #fffbef; }
+        .upload-area input[type="file"] { display: none; }
+        .upload-area .upload-icon { font-size: 2rem; margin-bottom: 7px; }
+        .upload-area p { font-size: 0.83rem; color: var(--text-light); }
+        .upload-area .file-name { font-weight: 600; color: var(--brown); margin-top: 5px; }
+        .analyze-btn { margin-top: 12px; width: 100%; padding: 10px; background: var(--gold); color: var(--text); border: none; border-radius: 8px; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.88rem; cursor: pointer; display: none; }
+        .analyze-btn:hover { background: #c5aa20; }
+        .analyze-btn:disabled { opacity: 0.6; cursor: default; }
+        .analyze-status { margin-top: 10px; font-size: 0.83rem; color: var(--text-light); text-align: center; min-height: 20px; }
+
+        .lufa-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .lufa-header strong { font-size: 0.86rem; color: var(--brown); }
+        .lufa-source-label { font-size: 0.74rem; color: var(--text-light); }
+        .lufa-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .lufa-field label { font-size: 0.76rem; color: var(--text-light); margin-bottom: 4px; font-weight: 600; }
+        .lufa-field input { padding: 7px 10px; font-size: 0.85rem; }
+        .lufa-note { font-size: 0.77rem; color: var(--text-light); margin-top: 10px; padding: 8px 10px; background: #f5f0eb; border-radius: 6px; }
+
+        /* Feed checkboxes Säule 1 & 2 */
+        .feed-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0e8e2; }
+        .feed-item:last-of-type { border-bottom: none; }
+        .feed-item input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--brown); cursor: pointer; flex-shrink: 0; }
+        .feed-item-label { flex: 1; }
+        .feed-item-label strong { font-size: 0.9rem; font-weight: 600; color: var(--text); }
+
+        /* Menge row (shown when checkbox checked) */
+        .menge-row { display: none; align-items: center; gap: 8px; padding: 4px 0 8px 28px; border-bottom: 1px solid #f0e8e2; }
+        .menge-row.visible { display: flex; }
+        .menge-input-sm { width: 100px; padding: 6px 10px; font-size: 0.84rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
+        .unit-select { padding: 6px 8px; font-size: 0.8rem; border: 1.5px solid #ddd; border-radius: 6px; background: white; color: var(--text); font-family: 'Open Sans', sans-serif; }
+        .menge-label-sm { font-size: 0.78rem; color: var(--text-light); white-space: nowrap; }
+
+        /* Dynamic Säule 3 & 4 */
+        .dynamic-items { min-height: 10px; }
+        .dynamic-item-row {
+            display: flex; gap: 8px; align-items: center;
+            padding: 8px 0; border-bottom: 1px solid #f0e8e2;
+        }
+        .dynamic-item-row:last-child { border-bottom: none; }
+        .item-name-input { flex: 1; min-width: 0; padding: 7px 10px; font-size: 0.85rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
+        .item-name-input:focus { outline: none; border-color: var(--brown); }
+        .item-menge-input { width: 72px; padding: 7px 8px; font-size: 0.84rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
+        .item-menge-input:focus { outline: none; border-color: var(--brown); }
+        .item-einheit-select { padding: 7px 6px; font-size: 0.78rem; border: 1.5px solid #ddd; border-radius: 6px; background: white; color: var(--text); font-family: 'Open Sans', sans-serif; max-width: 80px; }
+        .btn-item-photo {
+            background: white; border: 1.5px solid #ddd; border-radius: 6px;
+            padding: 5px 8px; cursor: pointer; font-size: 1rem; color: var(--brown);
+            flex-shrink: 0; transition: all 0.2s; line-height: 1;
+        }
+        .btn-item-photo:hover { border-color: var(--brown); background: #fef5ef; }
+        .btn-item-photo.loading { opacity: 0.5; cursor: default; }
+        .btn-item-remove { background: none; border: none; padding: 4px 6px; cursor: pointer; color: #ccc; font-size: 1.1rem; flex-shrink: 0; line-height: 1; transition: color 0.2s; }
+        .btn-item-remove:hover { color: var(--red); }
+
+        .btn-add-item {
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+            padding: 10px 16px; background: var(--light-bg); border: 1.5px dashed #ddd;
+            border-radius: 8px; font-family: 'Montserrat', sans-serif; font-size: 0.83rem;
+            font-weight: 600; color: var(--brown); cursor: pointer; width: 100%;
+            margin-top: 12px; transition: all 0.2s;
+        }
+        .btn-add-item:hover { border-color: var(--brown); background: #fef5ef; }
+
+        .saule-hint { font-size: 0.77rem; color: var(--text-light); margin-top: 10px; font-style: italic; line-height: 1.5; }
+        .photo-analyze-note { font-size: 0.77rem; color: var(--text-light); text-align: center; margin-top: 6px; }
+
+        /* Buttons */
+        .btn-row { display: flex; gap: 12px; margin-top: 24px; }
+        .btn-next, .btn-back, .btn-calc, .btn-pdf {
+            flex: 1; padding: 13px 18px; border-radius: 10px;
+            font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.93rem;
+            cursor: pointer; border: none; transition: all 0.2s;
+        }
+        .btn-next, .btn-calc { background: var(--red); color: white; }
+        .btn-next:hover, .btn-calc:hover { background: #7a1515; }
+        .btn-back { background: white; color: var(--text); border: 1.5px solid #ddd; flex: 0 0 auto; }
+        .btn-back:hover { background: #f5f0eb; }
+        .btn-pdf { background: var(--gold); color: var(--text); }
+        .btn-pdf:hover { background: #c5aa20; }
+
+        /* Results */
+        .success-banner { background: linear-gradient(135deg, #fef5ef 0%, #fff9f0 100%); border: 1px solid var(--beige); border-radius: 12px; padding: 18px; text-align: center; margin-bottom: 20px; }
+        .success-banner h2 { font-family: 'Montserrat', sans-serif; font-size: 1.15rem; color: var(--red); margin-bottom: 4px; }
+        .success-banner p { font-size: 0.83rem; color: var(--text-light); }
+        .result-section h3 { font-family: 'Montserrat', sans-serif; font-size: 0.97rem; font-weight: 700; color: var(--red); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--beige); }
+        .result-item { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid #f0e8e2; align-items: flex-start; }
+        .result-item:last-child { border-bottom: none; }
+        .result-item-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 1px; width: 24px; text-align: center; }
+        .result-item-content strong { display: block; font-size: 0.92rem; color: var(--text); margin-bottom: 2px; }
+        .amount { font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 700; color: var(--brown); }
+        .hint { font-size: 0.77rem; color: var(--text-light); margin-top: 3px; line-height: 1.45; }
+        .warning-item { background: #fff8e6; border: 1px solid #e8d46a; border-left: 4px solid var(--gold); border-radius: 8px; padding: 11px 12px; margin-bottom: 10px; }
+        .warning-item.error { background: #fff0f0; border-color: #e8a0a0; border-left-color: var(--red); }
+        .warning-item strong { display: block; font-size: 0.87rem; color: var(--brown); margin-bottom: 4px; }
+        .warning-item.error strong { color: var(--red); }
+        .warning-item p { font-size: 0.81rem; color: var(--text); line-height: 1.45; }
+        .heu-sugar-note { margin-top: 10px; padding: 9px 11px; background: #f5f0eb; border-radius: 7px; font-size: 0.81rem; color: var(--text-light); line-height: 1.45; }
+        .no-feed-note { color: var(--text-light); font-size: 0.86rem; padding: 8px 0; line-height: 1.5; }
+
+        /* Spinner */
+        .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--brown); border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 4px; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .footer { text-align: center; padding: 20px; font-size: 0.74rem; color: var(--text-light); }
+
+        /* Video button */
+        .video-btn {
+            display: flex; align-items: center; gap: 14px;
+            width: 100%; margin-top: 12px; padding: 14px 16px;
+            background: linear-gradient(135deg, var(--red) 0%, #7a1818 100%);
+            border: none; border-radius: 10px; cursor: pointer;
+            text-align: left; transition: opacity 0.2s;
+            box-shadow: 0 3px 10px rgba(105,18,18,0.25);
+        }
+        .video-btn:hover { opacity: 0.9; }
+        .video-btn-icon {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: rgba(255,255,255,0.15); border: 2px solid rgba(255,255,255,0.4);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 0.9rem; flex-shrink: 0;
+            padding-left: 3px;
+        }
+        .video-btn-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; font-weight: 700; color: white; }
+        .video-btn-text span { font-size: 0.76rem; color: rgba(230,197,180,0.85); margin-top: 2px; display: block; }
+
+        /* Video modal */
+        #video-modal {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.75); z-index: 1000;
+            align-items: center; justify-content: center; padding: 16px;
+        }
+        #video-modal.open { display: flex; }
+        .video-modal-box {
+            background: white; border-radius: 14px; width: 100%; max-width: 600px;
+            padding: 20px; position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .video-modal-close {
+            position: absolute; top: 12px; right: 14px;
+            background: none; border: none; font-size: 1.2rem;
+            cursor: pointer; color: var(--text-light); line-height: 1;
+        }
+        .video-modal-close:hover { color: var(--red); }
+        .video-modal-title {
+            font-family: 'Montserrat', sans-serif; font-weight: 700;
+            font-size: 1rem; color: var(--red); margin-bottom: 14px; padding-right: 24px;
+        }
+        .video-wrapper {
+            position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+            border-radius: 8px; background: #111;
+        }
+        .video-wrapper iframe {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;
+        }
+        .video-modal-hint {
+            margin-top: 12px; font-size: 0.78rem; color: var(--text-light); text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="header-logo-wrap">
+        <img src="logo.png" alt="Anikas Pferdeakademie" onerror="this.parentElement.style.background='rgba(214,185,35,0.2)'">
+    </div>
+    <div class="header-divider"></div>
+    <div class="header-text">
+        <h1>Futter<span>rechner</span></h1>
+        <p>Anikas Pferdeakademie · Basierend auf dem Futterfahrplan</p>
+    </div>
+    <div class="header-badge">
+        <span>basiert auf</span>
+        <strong>4-Säulen-<br>System</strong>
+    </div>
+</div>
+
+<div class="progress-bar">
+    <div class="steps">
+        <div class="step-indicator active" data-step="1">1. Dein Pferd</div>
+        <div class="step-indicator" data-step="2">2. Heuanalyse</div>
+        <div class="step-indicator" data-step="3">3. Futtermittel</div>
+        <div class="step-indicator" data-step="4">4. Empfehlung</div>
+    </div>
+</div>
+
+<div class="main">
+
+    <!-- ============================================================ -->
+    <!-- STEP 1 -->
+    <!-- ============================================================ -->
+    <div class="step-panel active" id="step1">
+        <h2 class="step-title">Erzähl mir von deinem Pferd</h2>
+        <p class="step-subtitle">Diese Angaben sind die Basis für deine individuelle Futterempfehlung.</p>
+
+        <div class="card">
+            <div class="form-group">
+                <label for="horse-name">Name deines Pferdes</label>
+                <input type="text" id="horse-name" placeholder="z. B. Luna">
+            </div>
+
+            <div class="form-group">
+                <label for="horse-weight">Gewicht (kg) <span style="color:var(--red)">*</span></label>
+                <input type="number" id="horse-weight" placeholder="z. B. 550" min="100" max="900">
+                <small style="color:var(--text-light);font-size:0.76rem;margin-top:4px;display:block;">
+                    Schätzung über Maßband: Herzgurtmaß² × Körperlänge ÷ 11900 (beide Maße in cm)
+                </small>
+
+                <button class="video-btn" onclick="openVideoModal()">
+                    <span class="video-btn-icon">▶</span>
+                    <span class="video-btn-text">
+                        <strong>Video: So messe ich richtig</strong>
+                        <span>Herzgurtmaß & Körperlänge — Schritt für Schritt</span>
+                    </span>
+                </button>
+
+                <!-- VIDEO MODAL (wird mit Vimeo-Link befüllt) -->
+                <div id="video-modal" onclick="closeVideoModal(event)">
+                    <div class="video-modal-box">
+                        <button class="video-modal-close" onclick="closeVideoModal()">✕</button>
+                        <div class="video-modal-title">So messe ich das Gewicht meines Pferdes</div>
+                        <div class="video-wrapper">
+                            <!-- VIMEO LINK HIER EINTRAGEN (Video-ID aus dem Vimeo-Link) -->
+                            <iframe id="vimeo-player"
+                                src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0&color=d6b923"
+                                frameborder="0"
+                                allow="autoplay; fullscreen; picture-in-picture"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <p class="video-modal-hint">Formel: Herzgurtmaß² × Körperlänge ÷ 11900 (beide in cm)</p>
+                    </div>
+                </div>
+
+                <div style="display:none"><!-- REMOVED SVG --><svg viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+                        <!-- Body -->
+                        <ellipse cx="245" cy="118" rx="108" ry="52" fill="#e6c5b4" stroke="#894b2f" stroke-width="2"/>
+                        <!-- Hindquarters blend -->
+                        <ellipse cx="320" cy="122" rx="52" ry="48" fill="#e6c5b4" stroke="#894b2f" stroke-width="0"/>
+                        <path d="M 318 74 Q 350 72 368 90 Q 378 115 368 150 Q 355 168 320 170 L 320 74 Z" fill="#e6c5b4" stroke="#894b2f" stroke-width="1.5"/>
+                        <!-- Neck -->
+                        <path d="M 148 94 Q 144 60 168 42 L 180 56 Q 160 70 160 98 Z" fill="#e6c5b4" stroke="#894b2f" stroke-width="2"/>
+                        <!-- Head -->
+                        <ellipse cx="172" cy="34" rx="20" ry="14" fill="#e6c5b4" stroke="#894b2f" stroke-width="2" transform="rotate(-20,172,34)"/>
+                        <!-- Ear -->
+                        <polygon points="165,23 160,13 171,21" fill="#894b2f"/>
+                        <!-- Eye -->
+                        <circle cx="176" cy="31" r="2" fill="#894b2f"/>
+                        <!-- Withers bump -->
+                        <path d="M 148 90 Q 152 76 162 80 Q 168 85 158 96" fill="#d4a876" stroke="#894b2f" stroke-width="1.5"/>
+                        <!-- Front legs -->
+                        <rect x="158" y="162" width="11" height="38" rx="3" fill="#d4a876" stroke="#894b2f" stroke-width="1.5"/>
+                        <rect x="176" y="162" width="11" height="38" rx="3" fill="#d4a876" stroke="#894b2f" stroke-width="1.5"/>
+                        <!-- Back legs -->
+                        <rect x="298" y="162" width="11" height="38" rx="3" fill="#d4a876" stroke="#894b2f" stroke-width="1.5"/>
+                        <rect x="320" y="162" width="11" height="38" rx="3" fill="#d4a876" stroke="#894b2f" stroke-width="1.5"/>
+                        <!-- Tail -->
+                        <path d="M 368 112 Q 392 94 388 132 Q 390 158 380 168" stroke="#894b2f" stroke-width="4" fill="none" stroke-linecap="round"/>
+                        <!-- Hooves -->
+                        <rect x="157" y="198" width="13" height="6" rx="2" fill="#6b4c3b"/>
+                        <rect x="175" y="198" width="13" height="6" rx="2" fill="#6b4c3b"/>
+                        <rect x="297" y="198" width="13" height="6" rx="2" fill="#6b4c3b"/>
+                        <rect x="319" y="198" width="13" height="6" rx="2" fill="#6b4c3b"/>
+
+                        <!-- ── HERZGURTMASS (gold) ── -->
+                        <!-- Curved dashed arc around girth, starting top (withers) going down and around belly -->
+                        <path d="M 172 78 Q 138 80 130 118 Q 132 155 172 162"
+                              stroke="#d6b923" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+                        <!-- Arrowhead top -->
+                        <polygon points="172,78 166,88 176,88" fill="#d6b923"/>
+                        <!-- Arrowhead bottom -->
+                        <polygon points="172,162 166,152 176,152" fill="#d6b923"/>
+                        <!-- Label -->
+                        <text x="62" y="108" font-family="sans-serif" font-size="10.5" fill="#d6b923" font-weight="bold">Herzgurt-</text>
+                        <text x="62" y="121" font-family="sans-serif" font-size="10.5" fill="#d6b923" font-weight="bold">maß</text>
+                        <line x1="112" y1="114" x2="128" y2="118" stroke="#d6b923" stroke-width="1.5"/>
+                        <!-- Small "1" badge -->
+                        <circle cx="56" cy="97" r="9" fill="#d6b923"/>
+                        <text x="56" y="101" font-family="sans-serif" font-size="10" fill="white" font-weight="bold" text-anchor="middle">1</text>
+
+                        <!-- ── KÖRPERLÄNGE (red) ── -->
+                        <!-- Horizontal arrow from shoulder point to hindquarter point -->
+                        <!-- Shoulder point: x≈150, Hindquarter: x≈368 -->
+                        <line x1="150" y1="186" x2="368" y2="186" stroke="#691212" stroke-width="2"/>
+                        <!-- Arrow heads -->
+                        <polygon points="150,186 160,182 160,190" fill="#691212"/>
+                        <polygon points="368,186 358,182 358,190" fill="#691212"/>
+                        <!-- Tick marks -->
+                        <line x1="150" y1="180" x2="150" y2="193" stroke="#691212" stroke-width="1.5"/>
+                        <line x1="368" y1="180" x2="368" y2="193" stroke="#691212" stroke-width="1.5"/>
+                        <!-- Dashed vertical guides -->
+                        <line x1="150" y1="105" x2="150" y2="179" stroke="#691212" stroke-width="1" stroke-dasharray="3,3"/>
+                        <line x1="368" y1="110" x2="368" y2="179" stroke="#691212" stroke-width="1" stroke-dasharray="3,3"/>
+                        <!-- Dots at measurement points -->
+                        <circle cx="150" cy="105" r="4" fill="#691212"/>
+                        <circle cx="368" cy="110" r="4" fill="#691212"/>
+                        <!-- Label -->
+                        <text x="259" y="204" font-family="sans-serif" font-size="10.5" fill="#691212" font-weight="bold" text-anchor="middle">Körperlänge</text>
+                        <!-- Small "2" badge -->
+                        <circle cx="368" cy="97" r="9" fill="#691212"/>
+                        <text x="368" y="101" font-family="sans-serif" font-size="10" fill="white" font-weight="bold" text-anchor="middle">2</text>
+
+                        <!-- Formula box -->
+                        <rect x="390" y="120" width="82" height="42" rx="6" fill="white" stroke="#e6c5b4" stroke-width="1.5"/>
+                        <text x="431" y="134" font-family="sans-serif" font-size="8.5" fill="#894b2f" text-anchor="middle" font-weight="bold">① ² × ②</text>
+                        <line x1="398" y1="139" x2="464" y2="139" stroke="#894b2f" stroke-width="1"/>
+                        <text x="431" y="152" font-family="sans-serif" font-size="8.5" fill="#894b2f" text-anchor="middle">11900</text>
+                    </svg>
+                </div></div>
+            </div>
+
+            <div class="form-group">
+                <label>Körperkondition</label>
+                <div class="condition-group">
+                    <div class="condition-option">
+                        <input type="radio" name="condition" id="cond-thin" value="thin">
+                        <label for="cond-thin"><span class="icon">🦴</span>Zu dünn</label>
+                    </div>
+                    <div class="condition-option">
+                        <input type="radio" name="condition" id="cond-ideal" value="ideal" checked>
+                        <label for="cond-ideal"><span class="icon">✅</span>Ideal</label>
+                    </div>
+                    <div class="condition-option">
+                        <input type="radio" name="condition" id="cond-fat" value="fat">
+                        <label for="cond-fat"><span class="icon">⚖️</span>Zu dick</label>
+                    </div>
+                </div>
+                <small style="color:var(--text-light);font-size:0.76rem;margin-top:8px;display:block;">
+                    Rippen gut fühlbar, aber nicht sichtbar = ideal &nbsp;·&nbsp; Rippen nicht tastbar = zu dick &nbsp;·&nbsp; Rippen sichtbar = zu dünn
+                </small>
+            </div>
+        </div>
+
+        <div class="btn-row">
+            <button class="btn-next" onclick="goToStep(2)">Weiter →</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- STEP 2 -->
+    <!-- ============================================================ -->
+    <div class="step-panel" id="step2">
+        <h2 class="step-title">Heuanalyse</h2>
+        <p class="step-subtitle">Je genauer deine Heuwerte, desto präziser die Empfehlung.</p>
+
+        <div class="card">
+            <div class="heu-options">
+                <div class="heu-option">
+                    <input type="radio" name="heu-mode" id="heu-upload" value="upload">
+                    <label for="heu-upload"><span class="icon">📸</span><strong>Meine Analyse</strong><span>Screenshot / Foto hochladen</span></label>
+                </div>
+                <div class="heu-option">
+                    <input type="radio" name="heu-mode" id="heu-lufa" value="lufa" checked>
+                    <label for="heu-lufa"><span class="icon">📊</span><strong>Lufa-Werte</strong><span>Durchschnitt 2025</span></label>
+                </div>
+            </div>
+
+            <div id="upload-area-wrap" style="display:none; margin-bottom:16px;">
+                <div class="upload-area" id="upload-area" onclick="document.getElementById('heu-file').click()">
+                    <div class="upload-icon">📄</div>
+                    <p>Klick zum Hochladen oder Foto hier ablegen</p>
+                    <p class="file-name" id="file-name-display" style="display:none;"></p>
+                    <input type="file" id="heu-file" accept="image/*,.pdf" onchange="handleFileSelect(this)">
+                </div>
+                <button class="analyze-btn" id="analyze-btn" onclick="analyzeHeu()">KI-Analyse starten</button>
+                <div class="analyze-status" id="analyze-status"></div>
+            </div>
+
+            <div id="lufa-values-section">
+                <div class="lufa-header">
+                    <strong>Heuwerte (bearbeitbar)</strong>
+                    <span class="lufa-source-label" id="lufa-source-label">Lufa 2025 Durchschnitt</span>
+                </div>
+                <div class="lufa-grid">
+                    <div class="lufa-field"><label>Gesamtzucker %</label><input type="number" id="heu-zucker" value="10.6" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Rohprotein g/kg</label><input type="number" id="heu-rohprotein" value="67" step="1" min="0"></div>
+                    <div class="lufa-field"><label>Calcium g/kg</label><input type="number" id="heu-calcium" value="3.5" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Phosphor g/kg</label><input type="number" id="heu-phosphor" value="1.7" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Magnesium g/kg</label><input type="number" id="heu-magnesium" value="1.3" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Zink mg/kg</label><input type="number" id="heu-zink" value="21" step="1" min="0"></div>
+                    <div class="lufa-field"><label>Kupfer mg/kg</label><input type="number" id="heu-kupfer" value="3.9" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Selen mg/kg</label><input type="number" id="heu-selen" value="0.044" step="0.001" min="0"></div>
+                </div>
+                <div class="lufa-note">💡 Du kannst alle Werte manuell anpassen — z. B. wenn du einzelne Werte deiner Analyse kennst.</div>
+            </div>
+        </div>
+
+        <div class="btn-row">
+            <button class="btn-back" onclick="goToStep(1)">← Zurück</button>
+            <button class="btn-next" onclick="goToStep(3)">Weiter →</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- STEP 3 -->
+    <!-- ============================================================ -->
+    <div class="step-panel" id="step3">
+        <h2 class="step-title">Deine aktuellen Futtermittel</h2>
+        <p class="step-subtitle">Hake an, was du gerade hast, und trage die Mengen ein.</p>
+
+        <!-- Säule 1 -->
+        <div class="card">
+            <div class="card-title">🌿 Säule 1 — Raufutter</div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-heu" class="feed-cb" checked>
+                <div class="feed-item-label"><strong>Heu</strong></div>
+            </div>
+            <div class="menge-row" id="menge-heu-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-heu" placeholder="z. B. 8">
+                <select class="unit-select" id="unit-heu"><option>kg/Tag</option><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-stroh" class="feed-cb">
+                <div class="feed-item-label"><strong>Haferstroh</strong></div>
+            </div>
+            <div class="menge-row" id="menge-stroh-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-stroh" placeholder="z. B. 1">
+                <select class="unit-select" id="unit-stroh"><option>kg/Tag</option><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-weide" class="feed-cb">
+                <div class="feed-item-label"><strong>Weide</strong></div>
+            </div>
+            <div class="menge-row" id="menge-weide-row">
+                <span class="menge-label-sm">Stunden:</span>
+                <input type="text" class="menge-input-sm" id="menge-weide" placeholder="z. B. 4">
+                <select class="unit-select" id="unit-weide"><option>Std/Tag</option><option>halber Tag</option><option>ganzer Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-aeste" class="feed-cb">
+                <div class="feed-item-label"><strong>Knabberäste</strong></div>
+            </div>
+            <div class="menge-row" id="menge-aeste-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-aeste" placeholder="nach Bedarf">
+                <select class="unit-select" id="unit-aeste"><option>nach Bedarf</option><option>täglich</option></select>
+            </div>
+        </div>
+
+        <!-- Säule 2 -->
+        <div class="card">
+            <div class="card-title">🌿 Säule 2 — Basisfutter & Protein</div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-hafer" class="feed-cb">
+                <div class="feed-item-label"><strong>Hafer</strong></div>
+            </div>
+            <div class="menge-row" id="menge-hafer-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-hafer" placeholder="z. B. 300">
+                <select class="unit-select" id="unit-hafer"><option>g/Tag</option><option>kg/Tag</option><option>Wasserglas/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-sojaschrot" class="feed-cb">
+                <div class="feed-item-label"><strong>Sojaschrot</strong></div>
+            </div>
+            <div class="menge-row" id="menge-sojaschrot-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-sojaschrot" placeholder="z. B. 120">
+                <select class="unit-select" id="unit-sojaschrot"><option>g/Tag</option><option>Wasserglas/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-luzerne" class="feed-cb">
+                <div class="feed-item-label"><strong>Luzerne</strong></div>
+            </div>
+            <div class="menge-row" id="menge-luzerne-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-luzerne" placeholder="z. B. 400">
+                <select class="unit-select" id="unit-luzerne"><option>g/Tag</option><option>kg/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-esparsette" class="feed-cb">
+                <div class="feed-item-label"><strong>Esparsette</strong></div>
+            </div>
+            <div class="menge-row" id="menge-esparsette-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-esparsette" placeholder="z. B. 300">
+                <select class="unit-select" id="unit-esparsette"><option>g/Tag</option><option>kg/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-hanfsamen" class="feed-cb">
+                <div class="feed-item-label"><strong>Hanfsamen (geschält)</strong></div>
+            </div>
+            <div class="menge-row" id="menge-hanfsamen-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-hanfsamen" placeholder="z. B. 50">
+                <select class="unit-select" id="unit-hanfsamen"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-hanfschrot" class="feed-cb">
+                <div class="feed-item-label"><strong>Hanfschrot / Hanfkuchen</strong></div>
+            </div>
+            <div class="menge-row" id="menge-hanfschrot-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-hanfschrot" placeholder="z. B. 60">
+                <select class="unit-select" id="unit-hanfschrot"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-leinsamen" class="feed-cb">
+                <div class="feed-item-label"><strong>Leinsamen</strong></div>
+            </div>
+            <div class="menge-row" id="menge-leinsamen-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-leinsamen" placeholder="z. B. 70">
+                <select class="unit-select" id="unit-leinsamen"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-kraeutermuesli" class="feed-cb">
+                <div class="feed-item-label"><strong>Jahreszeitenkräuter / Kräutermüsli</strong></div>
+            </div>
+            <div class="menge-row" id="menge-kraeutermuesli-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-kraeutermuesli" placeholder="z. B. 50">
+                <select class="unit-select" id="unit-kraeutermuesli"><option>g/Tag</option><option>Handvoll/Tag</option></select>
+            </div>
+
+            <!-- Dynamic extra items Säule 2 -->
+            <div class="dynamic-items" id="saule2-items"></div>
+
+            <button class="btn-add-item" onclick="addDynamicItem(2)">+ Weiteres Basisfutter hinzufügen</button>
+        </div>
+
+        <!-- Säule 3 — frei -->
+        <div class="card">
+            <div class="card-title">🌿 Säule 3 — Mineralstoffe & Vitamine</div>
+            <p class="saule-hint">Trage alle Mineralstoffe, Spurenelemente und Vitamine ein, die du aktuell gibst. Du kannst ein Foto der Verpackung hochladen — der Name und die Dosierung werden automatisch ausgelesen.</p>
+
+            <div class="dynamic-items" id="saule3-items" style="margin-top:12px;"></div>
+
+            <button class="btn-add-item" onclick="addDynamicItem(3)">+ Futtermittel hinzufügen</button>
+            <p class="photo-analyze-note" style="margin-top:8px;">📷 Tipp: Mit dem Kamera-Symbol in jeder Zeile die Verpackung fotografieren — Name und Menge werden automatisch eingetragen.</p>
+        </div>
+
+        <!-- Säule 4 — frei -->
+        <div class="card">
+            <div class="card-title">🌿 Säule 4 — Ergänzungen</div>
+            <p class="saule-hint">Kräuter, Algen, Leinsamen-Kuren usw. — alles was du aktuell ergänzt.</p>
+
+            <div class="dynamic-items" id="saule4-items" style="margin-top:12px;"></div>
+
+            <button class="btn-add-item" onclick="addDynamicItem(4)">+ Ergänzung hinzufügen</button>
+        </div>
+
+        <div class="btn-row">
+            <button class="btn-back" onclick="goToStep(2)">← Zurück</button>
+            <button class="btn-calc" onclick="calculate()">Empfehlung berechnen →</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- STEP 4 -->
+    <!-- ============================================================ -->
+    <div class="step-panel" id="step4">
+        <div class="success-banner">
+            <h2>🐴 Futterplan für <span id="result-horse-name"></span></h2>
+            <p id="result-summary"></p>
+        </div>
+        <div id="results-container"></div>
+        <div class="btn-row">
+            <button class="btn-back" onclick="goToStep(3)">← Zurück</button>
+            <button class="btn-pdf" onclick="downloadPDF()">📄 PDF herunterladen</button>
+        </div>
+        <p style="margin-top:16px;text-align:center;font-size:0.77rem;color:var(--text-light);line-height:1.5;">
+            Empfehlungen basieren auf dem Futterfahrplan-Kurs von Anika Wesse.<br>
+            Bei gesundheitlichen Fragen bitte immer den Tierarzt konsultieren.
+        </p>
+    </div>
+
+</div>
+
+<div class="footer">&copy; Anikas Pferdeakademie · anikas-pferdeakademie.de · Alle Angaben ohne Gewähr</div>
+
+<script>
+// ============================================================
+// LUFA 2025 (jährlich aktualisieren)
+// ============================================================
+const LUFA = {
+    zucker: 10.6, rohprotein: 67, calcium: 3.5, phosphor: 1.7,
+    magnesium: 1.3, zink: 21, kupfer: 3.9, selen: 0.044,
+    mangan: 118, eisen: 156
+};
+
+// ============================================================
+// VIDEO MODAL
+// ============================================================
+function openVideoModal() {
+    document.getElementById('video-modal').classList.add('open');
+}
+function closeVideoModal(e) {
+    if (!e || e.target === document.getElementById('video-modal')) {
+        document.getElementById('video-modal').classList.remove('open');
+    }
+}
+
+// ============================================================
+// NAVIGATION — Tabs klickbar
+// ============================================================
+let currentStep = 1;
+let lastResults = null;
+
+document.querySelectorAll('.step-indicator').forEach(el => {
+    el.addEventListener('click', function () {
+        const n = parseInt(this.dataset.step);
+        goToStep(n);
+    });
+});
+
+function goToStep(n) {
+    if (n > 1 && !validateStep1()) return;
+    document.getElementById('step' + currentStep).classList.remove('active');
+    currentStep = n;
+    document.getElementById('step' + n).classList.add('active');
+    document.querySelectorAll('.step-indicator').forEach(el => {
+        const s = parseInt(el.dataset.step);
+        el.classList.remove('active', 'done');
+        if (s === n) el.classList.add('active');
+        else if (s < n) el.classList.add('done');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function validateStep1() {
+    const w = parseFloat(document.getElementById('horse-weight').value);
+    if (!w || w < 100 || w > 900) {
+        alert('Bitte gib ein gültiges Gewicht (100–900 kg) ein.');
+        document.getElementById('horse-weight').focus();
+        return false;
+    }
+    return true;
+}
+
+// ============================================================
+// INIT
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+    // Heu mode toggle
+    document.querySelectorAll('input[name="heu-mode"]').forEach(r => {
+        r.addEventListener('change', function () {
+            document.getElementById('upload-area-wrap').style.display = this.value === 'upload' ? 'block' : 'none';
+            document.getElementById('lufa-source-label').textContent =
+                this.value === 'upload' ? 'Aus deiner Analyse' : 'Lufa 2025 Durchschnitt';
+            if (this.value === 'lufa') setLufaDefaults();
+        });
+    });
+
+    // Checkbox → menge row toggle
+    document.querySelectorAll('.feed-cb').forEach(cb => {
+        cb.addEventListener('change', function () {
+            const key = this.id.replace('feed-', '');
+            const row = document.getElementById('menge-' + key + '-row');
+            if (row) {
+                row.style.display = this.checked ? 'flex' : 'none';
+            }
+        });
+    });
+
+    // Heu pre-checked → show menge row
+    document.getElementById('menge-heu-row').style.display = 'flex';
+
+    setLufaDefaults();
+});
+
+function setLufaDefaults() {
+    document.getElementById('heu-zucker').value     = LUFA.zucker;
+    document.getElementById('heu-rohprotein').value = LUFA.rohprotein;
+    document.getElementById('heu-calcium').value    = LUFA.calcium;
+    document.getElementById('heu-phosphor').value   = LUFA.phosphor;
+    document.getElementById('heu-magnesium').value  = LUFA.magnesium;
+    document.getElementById('heu-zink').value       = LUFA.zink;
+    document.getElementById('heu-kupfer').value     = LUFA.kupfer;
+    document.getElementById('heu-selen').value      = LUFA.selen;
+}
+
+// ============================================================
+// HEU SCREENSHOT ANALYSE
+// ============================================================
+function handleFileSelect(input) {
+    if (input.files && input.files[0]) {
+        document.getElementById('file-name-display').textContent = '✓ ' + input.files[0].name;
+        document.getElementById('file-name-display').style.display = 'block';
+        document.getElementById('upload-area').classList.add('has-file');
+        document.getElementById('analyze-btn').style.display = 'block';
+    }
+}
+
+async function analyzeHeu() {
+    const file = document.getElementById('heu-file').files[0];
+    if (!file) return;
+    const statusEl = document.getElementById('analyze-status');
+    const btn = document.getElementById('analyze-btn');
+    btn.disabled = true;
+    statusEl.innerHTML = '<span class="spinner"></span> Analyse läuft …';
+    try {
+        const base64 = await fileToBase64(file);
+        const res = await fetch('/.netlify/functions/analyze-heu', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ image: base64, mediaType: file.type })
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+        const map = { zucker: 'heu-zucker', rohprotein: 'heu-rohprotein', calcium: 'heu-calcium', phosphor: 'heu-phosphor', magnesium: 'heu-magnesium', zink: 'heu-zink', kupfer: 'heu-kupfer', selen: 'heu-selen' };
+        for (const [k, id] of Object.entries(map)) {
+            if (data[k] != null) document.getElementById(id).value = data[k];
+        }
+        document.getElementById('lufa-source-label').textContent = '✓ Aus deiner Analyse';
+        statusEl.innerHTML = '✅ Werte übernommen — bitte kurz prüfen.';
+        statusEl.style.color = 'green';
+    } catch {
+        statusEl.innerHTML = '⚠️ Analyse nicht möglich. Bitte Werte manuell eingeben.';
+        statusEl.style.color = 'var(--brown)';
+    }
+    btn.disabled = false;
+}
+
+// ============================================================
+// DYNAMISCHE ITEMS (Säule 2, 3, 4)
+// ============================================================
+let dynCounters = { 2: 0, 3: 0, 4: 0 };
+
+const EINHEITEN = ['g/Tag', 'ml/Tag', 'kg/Tag', 'Messerspitze/Tag', 'Stück/Tag', 'Wasserglas/Tag', 'laut Hersteller'];
+
+function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag') {
+    const id = `s${saule}_${++dynCounters[saule]}`;
+    const container = document.getElementById('saule' + saule + '-items');
+
+    const row = document.createElement('div');
+    row.className = 'dynamic-item-row';
+    row.id = 'dyn-' + id;
+
+    const opts = EINHEITEN.map(e => `<option${e === einheit ? ' selected' : ''}>${e}</option>`).join('');
+
+    row.innerHTML = `
+        <button class="btn-item-photo" id="photo-btn-${id}" title="Verpackung fotografieren — Name wird automatisch ausgelesen" onclick="triggerPhoto('${id}')">📷</button>
+        <input type="file" id="photo-file-${id}" accept="image/*" style="display:none" onchange="analyzeProduct('${id}', this)">
+        <input type="text" class="item-name-input" id="name-${id}" placeholder="Produktname" value="${name}">
+        <input type="text" class="item-menge-input" id="menge-dyn-${id}" placeholder="Menge" value="${menge}">
+        <select class="item-einheit-select" id="einheit-${id}">${opts}</select>
+        <button class="btn-item-remove" onclick="removeDynamicItem('${id}')" title="Entfernen">✕</button>
+    `;
+
+    container.appendChild(row);
+}
+
+function removeDynamicItem(id) {
+    const el = document.getElementById('dyn-' + id);
+    if (el) el.remove();
+}
+
+function triggerPhoto(id) {
+    document.getElementById('photo-file-' + id).click();
+}
+
+async function analyzeProduct(id, input) {
+    if (!input.files || !input.files[0]) return;
+    const file = input.files[0];
+    const btn = document.getElementById('photo-btn-' + id);
+    const nameInput = document.getElementById('name-' + id);
+    const mengeInput = document.getElementById('menge-dyn-' + id);
+    const einheitSelect = document.getElementById('einheit-' + id);
+
+    btn.classList.add('loading');
+    btn.textContent = '⏳';
+
+    try {
+        const base64 = await fileToBase64(file);
+        const res = await fetch('/.netlify/functions/analyze-produkt', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ image: base64, mediaType: file.type })
+        });
+        if (!res.ok) throw new Error();
+        const data = await res.json();
+
+        if (data.name) nameInput.value = data.name;
+        if (data.menge) mengeInput.value = data.menge;
+        if (data.einheit) {
+            const match = EINHEITEN.find(e => e.toLowerCase().startsWith(data.einheit.toLowerCase().split('/')[0]));
+            if (match) einheitSelect.value = match;
+        }
+        btn.textContent = '✅';
+        setTimeout(() => { btn.textContent = '📷'; btn.classList.remove('loading'); }, 2000);
+    } catch {
+        btn.textContent = '❌';
+        setTimeout(() => { btn.textContent = '📷'; btn.classList.remove('loading'); }, 2000);
+    }
+}
+
+function getDynamicItems(saule) {
+    const items = [];
+    document.querySelectorAll(`#saule${saule}-items .dynamic-item-row`).forEach(row => {
+        const id = row.id.replace('dyn-', '');
+        const name   = (document.getElementById('name-' + id)?.value || '').trim();
+        const menge  = (document.getElementById('menge-dyn-' + id)?.value || '').trim();
+        const einheit = document.getElementById('einheit-' + id)?.value || 'g/Tag';
+        if (name) items.push({ name, menge, einheit });
+    });
+    return items;
+}
+
+// ============================================================
+// HELPERS
+// ============================================================
+function cb(id) { const el = document.getElementById(id); return el ? el.checked : false; }
+function r1(n) { return Math.round(n * 10) / 10; }
+function r2(n) { return Math.round(n * 100) / 100; }
+function val(id) { const el = document.getElementById(id); return el ? el.value.trim() : ''; }
+
+function getMenge(key) {
+    const m = val('menge-' + key);
+    const u = val('unit-' + key);
+    return m ? m + ' ' + u : '';
+}
+
+function getHeuValues() {
+    return {
+        zucker: parseFloat(document.getElementById('heu-zucker').value) || LUFA.zucker,
+        rohprotein: parseFloat(document.getElementById('heu-rohprotein').value) || LUFA.rohprotein,
+        calcium: parseFloat(document.getElementById('heu-calcium').value) || LUFA.calcium,
+        phosphor: parseFloat(document.getElementById('heu-phosphor').value) || LUFA.phosphor,
+        magnesium: parseFloat(document.getElementById('heu-magnesium').value) || LUFA.magnesium,
+        zink: parseFloat(document.getElementById('heu-zink').value) || LUFA.zink,
+        kupfer: parseFloat(document.getElementById('heu-kupfer').value) || LUFA.kupfer,
+        selen: parseFloat(document.getElementById('heu-selen').value) || LUFA.selen
+    };
+}
+
+function fileToBase64(file) {
+    return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+    });
+}
+
+// ============================================================
+// BERECHNUNG
+// ============================================================
+function calculate() {
+    const weight    = parseFloat(document.getElementById('horse-weight').value);
+    const condition = document.querySelector('input[name="condition"]:checked').value;
+    const horseName = val('horse-name') || 'dein Pferd';
+    const heu       = getHeuValues();
+
+    const results = buildResults(weight, condition, heu);
+    lastResults = { weight, condition, horseName, heu, results };
+
+    document.getElementById('result-horse-name').textContent = horseName;
+    const condLabel = condition === 'fat' ? 'Zu dick' : condition === 'thin' ? 'Zu dünn' : 'Ideale Kondition';
+    document.getElementById('result-summary').textContent =
+        `${weight} kg · ${condLabel} · Heu Zuckergehalt ${heu.zucker}%`;
+
+    renderResults(results);
+    goToStep(4);
+}
+
+function buildResults(weight, condition, heu) {
+    const res = { heu: {}, basisfutter: [], mineralstoffe: [], hinweise: [], saule3: [], saule4: [] };
+
+    // ── HEU ──
+    if (condition === 'fat') {
+        res.heu.min = r1(weight * 1.5 / 100);
+        res.heu.max = r1(weight * 1.8 / 100);
+        res.heu.note = 'Untere Menge anstreben. Haferstroh zumischen empfohlen. Ziel: Heu mit unter 10% Zucker.';
+    } else if (condition === 'thin') {
+        res.heu.min = r1(weight * 2.0 / 100);
+        res.heu.max = 'ad libitum';
+        res.heu.note = 'Heu ad libitum anbieten — Zugang jederzeit verfügbar. Bei Zahnproblemen: Heucobs als Alternative.';
+    } else {
+        res.heu.min = r1(weight * 1.5 / 100);
+        res.heu.max = r1(weight * 2.0 / 100);
+        res.heu.note = 'Tipp: Für eine ad libitum Fütterung sollte der Zuckergehalt gerne unter 7% sein.';
+    }
+    res.heu.zuckerHinweis = heu.zucker > 10
+        ? `⚠️ Zuckergehalt ${heu.zucker}% liegt über 10%. Heuquelle prüfen.`
+        : `✅ Zuckergehalt ${heu.zucker}% — gut (Ziel unter 10%).`;
+    res.heu.deineMenge = getMenge('heu');
+
+    const heuKg = (res.heu.min + (res.heu.max === 'ad libitum' ? res.heu.min * 1.3 : res.heu.max)) / 2;
+
+    // ── BASISFUTTER ──
+    const addFeed = (id, name, icon, empMin, empMax, empUnit, hinweis) => {
+        if (!cb('feed-' + id)) return;
+        const menge = getMenge(id);
+        res.basisfutter.push({ name, icon, menge, empfehlung: `${empMin}–${empMax} ${empUnit}`, hinweis });
+    };
+
+    if (cb('feed-stroh')) {
+        res.basisfutter.push({ name: 'Haferstroh', icon: '🌾', menge: getMenge('stroh'), empfehlung: condition === 'fat' ? '1–3 kg/Tag' : '0,5–1 kg/Tag', hinweis: condition === 'fat' ? 'Streckt die Heumahlzeit und senkt die Energiedichte. Muss fein gehäckselt sein!' : 'Überbrückt Fresspausen.' });
+    }
+    if (cb('feed-hafer')) {
+        let emp = condition === 'fat' ? '100–200 g/Tag' : condition === 'thin' ? `${Math.round(weight*0.6/100/10)*10}–${Math.round(weight*0.8/100/10)*10} g/Tag` : '200–400 g/Tag';
+        res.basisfutter.push({ name: 'Hafer', icon: '🌾', menge: getMenge('hafer'), empfehlung: emp, hinweis: condition === 'fat' ? 'Wenig wegen Übergewicht.' : 'Besonders wertvoll beim Fellwechsel.' });
+    }
+    if (cb('feed-sojaschrot')) res.basisfutter.push({ name: 'Sojaschrot', icon: '🫘', menge: getMenge('sojaschrot'), empfehlung: weight >= 400 ? '100–150 g/Tag' : '60–80 g/Tag', hinweis: 'Günstigste Proteinquelle. Europäischen Anbau bevorzugen.' });
+    if (cb('feed-hanfsamen')) res.basisfutter.push({ name: 'Hanfsamen (geschält)', icon: '🌱', menge: getMenge('hanfsamen'), empfehlung: `${Math.round(weight*10/100)} g/Tag`, hinweis: 'Langsam anfüttern. Kalt gepresst kaufen.' });
+    if (cb('feed-hanfschrot')) res.basisfutter.push({ name: 'Hanfschrot / Hanfkuchen', icon: '🌱', menge: getMenge('hanfschrot'), empfehlung: `${Math.round(weight*10/100)}–${Math.round(weight*20/100)} g/Tag`, hinweis: 'Mehr Protein als Hanfsamen. Gut für Muskelaufbau.' });
+    if (cb('feed-luzerne')) res.basisfutter.push({ name: 'Luzerne', icon: '🍀', menge: getMenge('luzerne'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: 'Calciumreich → Ca:P-Verhältnis beachten. Langsam anfüttern.' });
+    if (cb('feed-esparsette')) res.basisfutter.push({ name: 'Esparsette', icon: '🌸', menge: getMenge('esparsette'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: '⚠️ Immer einweichen! Tannine wirken anti-parasitär.' });
+    if (cb('feed-leinsamen')) res.basisfutter.push({ name: 'Leinsamen', icon: '🟤', menge: getMenge('leinsamen'), empfehlung: '50–100 g/Tag', hinweis: 'Als Schleimstoff: einweichen + schroten. Als Quellstoff: pur unters Futter.' });
+    if (cb('feed-kraeutermuesli')) res.basisfutter.push({ name: 'Jahreszeitenkräuter / Kräutermüsli', icon: '🌿', menge: getMenge('kraeutermuesli'), empfehlung: 'laut Hersteller', hinweis: 'Saisonal wechseln.' });
+
+    // Dynamic items Säule 2
+    getDynamicItems(2).forEach(item => res.basisfutter.push({ name: item.name, icon: '➕', menge: item.menge ? item.menge + ' ' + item.einheit : '', empfehlung: '', hinweis: '' }));
+
+    // ── MINERALSTOFFE (jetzt aus freier Eingabe) ──
+    res.saule3 = getDynamicItems(3);
+    res.saule4 = getDynamicItems(4);
+
+    // Allgemeine Mineral-Hinweise basierend auf Heuwerten
+    const magViaheu  = r1(heuKg * heu.magnesium);
+    const magBedarf  = r1(weight * 11.5 / 600);
+    const zinkViaheu = Math.round(heuKg * heu.zink);
+    const zinkBedarf = Math.round(weight * 500 / 600);
+    const selenViaheu = r2(heuKg * heu.selen);
+    const selenBedarf = r2(weight * 1.0 / 600);
+    const natriumBedarf = Math.round(weight * 12 / 600);
+    const natriumViaheu = r1(heuKg * 0.7);
+
+    const hasMineralNamed = (term) => res.saule3.some(i => i.name.toLowerCase().includes(term.toLowerCase()));
+
+    if (!hasMineralNamed('salz') && !hasMineralNamed('natrium') && !hasMineralNamed('leckstein')) {
+        res.mineralstoffe.push({ name: '🧂 Salzleckstein fehlt!', status: 'error', text: `Natriumbedarf ca. ${natriumBedarf} g/Tag. Über Heu nur ca. ${natriumViaheu} g. Salzleckstein dauerhaft anbieten.` });
+    }
+    if (!hasMineralNamed('magnesium') && magViaheu < magBedarf * 0.75) {
+        res.mineralstoffe.push({ name: '💛 Magnesium', status: 'warning', text: `Bedarf ~${magBedarf} g/Tag. Über Heu ca. ${magViaheu} g. Magnesiumcitrat-Kur empfohlen.` });
+    }
+    if (!hasMineralNamed('zink') && zinkViaheu < zinkBedarf * 0.55) {
+        res.mineralstoffe.push({ name: '⭐ Zink', status: 'warning', text: `Bedarf ~${zinkBedarf} mg/Tag. Über Heu ~${zinkViaheu} mg. Zinkchelat empfohlen — besonders vor Fellwechsel!` });
+    }
+    if (!hasMineralNamed('selen')) {
+        res.mineralstoffe.push({ name: '✨ Selen', status: 'warning', text: `Deutsche Böden selenarm. Über Heu nur ~${selenViaheu} mg/Tag (Bedarf ~${selenBedarf} mg). ${Math.round(weight * 5 / 600)} Paranüsse täglich oder Selenergänzung.` });
+    }
+
+    if (cb('feed-weide')) res.hinweise.push('🌿 Weidegang vorhanden — Vitamin A und E teilweise abgedeckt. Zuckeraufnahme im Blick behalten (1 Weidetag ≈ 1 kg Zucker).');
+
+    return res;
+}
+
+// ============================================================
+// ERGEBNIS RENDERN
+// ============================================================
+function renderResults(r) {
+    let html = '';
+
+    // Säule 1
+    html += `<div class="card result-section"><h3>🌿 Säule 1 — Raufutter (Heu)</h3>
+        <div class="result-item">
+            <div class="result-item-icon">📏</div>
+            <div class="result-item-content">
+                <strong>Tagesration Heu</strong>
+                <div class="amount">${r.heu.min} – ${r.heu.max} kg/Tag</div>
+                ${r.heu.deineMenge ? `<div class="hint">Deine aktuelle Menge: ${r.heu.deineMenge}</div>` : ''}
+                <div class="hint">${r.heu.note}</div>
+            </div>
+        </div>
+        <div class="heu-sugar-note">${r.heu.zuckerHinweis}</div>
+    </div>`;
+
+    // Säule 2
+    html += `<div class="card result-section"><h3>🌿 Säule 2 — Basisfutter & Protein</h3>`;
+    if (r.basisfutter.length > 0) {
+        for (const f of r.basisfutter) {
+            html += `<div class="result-item">
+                <div class="result-item-icon">${f.icon}</div>
+                <div class="result-item-content">
+                    <strong>${f.name}</strong>
+                    ${f.empfehlung ? `<div class="amount">Empfehlung: ${f.empfehlung}</div>` : ''}
+                    ${f.menge ? `<div class="hint">Deine Menge: ${f.menge}</div>` : ''}
+                    ${f.hinweis ? `<div class="hint">${f.hinweis}</div>` : ''}
+                </div>
+            </div>`;
+        }
+    } else {
+        html += `<p class="no-feed-note">Kein Basisfutter ausgewählt. Mindestens 1 Proteinquelle empfohlen.</p>`;
+    }
+    html += `</div>`;
+
+    // Säule 3
+    html += `<div class="card result-section"><h3>🌿 Säule 3 — Mineralstoffe & Vitamine</h3>`;
+    if (r.saule3.length > 0) {
+        for (const item of r.saule3) {
+            html += `<div class="result-item">
+                <div class="result-item-icon">💊</div>
+                <div class="result-item-content">
+                    <strong>${item.name}</strong>
+                    ${item.menge ? `<div class="amount">${item.menge} ${item.einheit}</div>` : ''}
+                </div>
+            </div>`;
+        }
+    } else {
+        html += `<p class="no-feed-note">Keine Mineralstoffe eingetragen.</p>`;
+    }
+    if (r.mineralstoffe.length > 0) {
+        html += `<div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0e8e2;"><p style="font-size:0.8rem;color:var(--text-light);margin-bottom:8px;font-weight:600;">Hinweise aus deinen Heuwerten:</p>`;
+        for (const m of r.mineralstoffe) {
+            html += `<div class="warning-item ${m.status === 'error' ? 'error' : ''}"><strong>${m.name}</strong><p>${m.text}</p></div>`;
+        }
+        html += `</div>`;
+    }
+    for (const h of r.hinweise) {
+        html += `<p style="font-size:0.81rem;color:var(--text-light);padding:6px 0;border-top:1px solid #f0e8e2;margin-top:6px;">${h}</p>`;
+    }
+    html += `</div>`;
+
+    // Säule 4
+    html += `<div class="card result-section"><h3>🌿 Säule 4 — Ergänzungen</h3>`;
+    if (r.saule4.length > 0) {
+        for (const item of r.saule4) {
+            html += `<div class="result-item">
+                <div class="result-item-icon">🌸</div>
+                <div class="result-item-content">
+                    <strong>${item.name}</strong>
+                    ${item.menge ? `<div class="amount">${item.menge} ${item.einheit}</div>` : ''}
+                </div>
+            </div>`;
+        }
+    } else {
+        html += `<p class="no-feed-note">Keine Ergänzungen eingetragen.</p>`;
+    }
+    html += `</div>`;
+
+    document.getElementById('results-container').innerHTML = html;
+}
+
+// ============================================================
+// PDF
+// ============================================================
+async function downloadPDF() {
+    if (!lastResults) return;
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+    const r = lastResults;
+    const pageW = 210, margin = 18, cW = pageW - margin * 2;
+    let y = 20;
+
+    const RED = [105,18,18], BROWN = [137,75,47], GOLD = [214,185,35], BEIGE = [230,197,180];
+    const LGRAY = [245,240,235], WHITE = [255,255,255], TEXT = [44,24,16], TLIGHT = [107,76,59];
+
+    doc.setFillColor(...RED); doc.rect(0, 0, pageW, 38, 'F');
+    try {
+        const logoEl = document.querySelector('.header img');
+        if (logoEl && logoEl.naturalWidth > 0) {
+            const cvs = document.createElement('canvas');
+            cvs.width = logoEl.naturalWidth; cvs.height = logoEl.naturalHeight;
+            cvs.getContext('2d').drawImage(logoEl, 0, 0);
+            doc.addImage(cvs.toDataURL('image/png'), 'PNG', margin, 4, 28, 28);
+        }
+    } catch (_) {}
+    doc.setFont('helvetica','bold'); doc.setFontSize(17); doc.setTextColor(...WHITE);
+    doc.text('Futterplan', margin+32, 17);
+    doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...BEIGE);
+    const cond = r.condition === 'fat' ? 'Zu dick' : r.condition === 'thin' ? 'Zu dünn' : 'Ideal';
+    doc.text(`für ${r.horseName}  ·  ${r.weight} kg  ·  ${cond}`, margin+32, 25);
+    doc.text(`Erstellt am ${new Date().toLocaleDateString('de-DE')} · anikas-pferdeakademie.de`, margin+32, 32);
+    y = 50;
+
+    function secHeader(title) {
+        if (y > 255) { doc.addPage(); y = 20; }
+        doc.setFillColor(...LGRAY); doc.rect(margin, y-5, cW, 10, 'F');
+        doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...RED);
+        doc.text(title, margin+3, y+2); y += 13;
+    }
+    function row(label, value, hint) {
+        if (y > 262) { doc.addPage(); y = 20; }
+        doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.setTextColor(...BROWN);
+        doc.text(label, margin+3, y);
+        if (value) { doc.setFontSize(10); doc.text(value, margin+82, y); }
+        y += 5.5;
+        if (hint) {
+            const lines = doc.splitTextToSize(hint, cW-6);
+            doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
+            doc.text(lines, margin+3, y); y += lines.length*4+2;
+        }
+        y += 2;
+    }
+    function warnBox(title, text, isError) {
+        const lines = doc.splitTextToSize(text, cW-8);
+        const boxH = 6 + lines.length*4 + 4;
+        if (y + boxH > 265) { doc.addPage(); y = 20; }
+        doc.setFillColor(isError?255:255, isError?240:251, isError?240:230);
+        doc.rect(margin, y-4, cW, boxH, 'F');
+        doc.setFillColor(...(isError?RED:GOLD)); doc.rect(margin, y-4, 3, boxH, 'F');
+        doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...(isError?RED:BROWN));
+        doc.text(title.replace(/[🧂💛⭐🟠✨💚]/g,'').trim(), margin+6, y);
+        y += 5;
+        doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TEXT);
+        doc.text(lines, margin+6, y); y += lines.length*4+6;
+    }
+
+    secHeader('Säule 1 — Raufutter (Heu)');
+    row('Tagesration Heu:', `${r.results.heu.min} – ${r.results.heu.max} kg/Tag`, r.results.heu.note);
+    if (r.results.heu.deineMenge) row('Deine aktuelle Menge:', r.results.heu.deineMenge, '');
+    const zlines = doc.splitTextToSize(r.results.heu.zuckerHinweis.replace(/[✅⚠️]/g,'').trim(), cW-6);
+    doc.setFont('helvetica','italic'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
+    doc.text(zlines, margin+3, y); y += zlines.length*4+8;
+
+    if (r.results.basisfutter.length > 0) {
+        secHeader('Säule 2 — Basisfutter & Protein');
+        for (const f of r.results.basisfutter) {
+            const hint = [f.hinweis, f.menge ? 'Deine Menge: ' + f.menge : ''].filter(Boolean).join(' | ');
+            row(f.name+':', f.empfehlung, hint);
+        }
+        y += 2;
+    }
+
+    secHeader('Säule 3 — Mineralstoffe & Vitamine');
+    if (r.results.saule3.length > 0) {
+        for (const item of r.results.saule3) {
+            row(item.name+':', item.menge ? item.menge+' '+item.einheit : '', '');
+        }
+    } else {
+        doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...TLIGHT);
+        doc.text('Keine Mineralstoffe eingetragen.', margin+3, y); y += 8;
+    }
+    if (r.results.mineralstoffe.length > 0) {
+        for (const m of r.results.mineralstoffe) warnBox(m.name, m.text, m.status==='error');
+    }
+    for (const h of r.results.hinweise) {
+        doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
+        doc.text(h.replace(/[✅🌿]/g,'').trim(), margin+3, y); y += 6;
+    }
+
+    if (r.results.saule4.length > 0) {
+        y += 2; secHeader('Säule 4 — Ergänzungen');
+        for (const item of r.results.saule4) {
+            row(item.name+':', item.menge ? item.menge+' '+item.einheit : '', '');
+        }
+    }
+
+    const pages = doc.internal.getNumberOfPages();
+    for (let i = 1; i <= pages; i++) {
+        doc.setPage(i);
+        doc.setFillColor(...LGRAY); doc.rect(0, 285, pageW, 12, 'F');
+        doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(...TLIGHT);
+        doc.text('Empfehlungen basieren auf dem Futterfahrplan-Kurs von Anika Wesse · anikas-pferdeakademie.de · Ohne Gewaehr', margin, 291, { maxWidth: cW-20 });
+        doc.text(`Seite ${i}/${pages}`, pageW-margin, 291, { align: 'right' });
+    }
+    const safeName = r.horseName.replace(/[^a-zA-Z0-9äöüÄÖÜß\s]/g,'_');
+    doc.save(`Futterplan_${safeName}_${new Date().toLocaleDateString('de-DE').replace(/\./g,'-')}.pdf`);
+}
+</script>
+</body>
+</html>

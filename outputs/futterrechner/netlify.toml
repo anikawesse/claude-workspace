@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+  publish   = "."
+
+[functions]
+  node_bundler = "esbuild"
+
+# Einbettung in Kurs-Plattformen erlauben (iframe)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options            = "ALLOWALL"
+    Content-Security-Policy    = "frame-ancestors *"
+    X-Content-Type-Options     = "nosniff"
