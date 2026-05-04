@@ -52,14 +52,14 @@
         }
         .header-logo-wrap {
             flex-shrink: 0;
-            width: 72px; height: 72px;
+            width: 62px; height: 62px;
             background: rgba(255,255,255,0.12);
             border-radius: 50%;
             border: 2px solid rgba(214,185,35,0.5);
             display: flex; align-items: center; justify-content: center;
             overflow: hidden;
         }
-        .header-logo-wrap img { width: 64px; height: 64px; object-fit: contain; }
+        .header-logo-wrap img { width: 58px; height: 58px; object-fit: contain; }
         .header-divider {
             width: 1px; height: 48px;
             background: rgba(255,255,255,0.2);
@@ -98,6 +98,18 @@
         .step-indicator.done { color: rgba(255,255,255,0.75); }
         .step-indicator::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: transparent; }
         .step-indicator.active::after { background: var(--gold); }
+
+        /* Auto-save indicator */
+        #save-indicator {
+            position: fixed; bottom: 18px; right: 18px;
+            background: #4a7c4a; color: white;
+            padding: 6px 14px; border-radius: 20px;
+            font-size: 0.74rem; font-weight: 600; letter-spacing: 0.02em;
+            opacity: 0; transition: opacity 0.35s;
+            pointer-events: none; z-index: 999;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        #save-indicator.visible { opacity: 1; }
 
         .main { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
         .step-panel { display: none; }
@@ -189,23 +201,39 @@
         /* Dynamic Säule 3 & 4 */
         .dynamic-items { min-height: 10px; }
         .dynamic-item-row {
-            display: flex; gap: 8px; align-items: center;
-            padding: 8px 0; border-bottom: 1px solid #f0e8e2;
+            display: flex; flex-direction: column; gap: 0;
+            padding: 10px 0; border-bottom: 1px solid #f0e8e2;
         }
         .dynamic-item-row:last-child { border-bottom: none; }
+        /* Mode bar */
+        .item-mode-bar { display: flex; gap: 6px; align-items: center; margin-bottom: 8px; }
+        .item-mode-btn {
+            padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+            cursor: pointer; border: 1.5px solid #ddd; background: white; color: var(--text-light);
+            font-family: 'Open Sans', sans-serif; transition: all 0.18s;
+        }
+        .item-mode-btn.active { background: var(--brown); color: white; border-color: var(--brown); }
+        .item-mode-btn:hover:not(.active) { border-color: var(--brown); color: var(--brown); }
+        .item-mode-spacer { flex: 1; }
+        /* Manual inputs */
+        .item-manual-row { display: flex; gap: 8px; align-items: center; }
         .item-name-input { flex: 1; min-width: 0; padding: 7px 10px; font-size: 0.85rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
         .item-name-input:focus { outline: none; border-color: var(--brown); }
         .item-menge-input { width: 72px; padding: 7px 8px; font-size: 0.84rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
         .item-menge-input:focus { outline: none; border-color: var(--brown); }
         .item-einheit-select { padding: 7px 6px; font-size: 0.78rem; border: 1.5px solid #ddd; border-radius: 6px; background: white; color: var(--text); font-family: 'Open Sans', sans-serif; max-width: 80px; }
-        .btn-item-photo {
-            background: white; border: 1.5px solid #ddd; border-radius: 6px;
-            padding: 5px 8px; cursor: pointer; font-size: 1rem; color: var(--brown);
-            flex-shrink: 0; transition: all 0.2s; line-height: 1;
+        /* Photo area */
+        .item-photo-area { display: flex; flex-direction: column; gap: 8px; }
+        .photo-upload-zone {
+            border: 2px dashed #ddd; border-radius: 8px; padding: 18px 12px;
+            text-align: center; cursor: pointer; color: var(--text-light);
+            font-size: 0.84rem; transition: all 0.2s; background: #fdf8f5;
         }
-        .btn-item-photo:hover { border-color: var(--brown); background: #fef5ef; }
-        .btn-item-photo.loading { opacity: 0.5; cursor: default; }
-        .btn-item-remove { background: none; border: none; padding: 4px 6px; cursor: pointer; color: #ccc; font-size: 1.1rem; flex-shrink: 0; line-height: 1; transition: color 0.2s; }
+        .photo-upload-zone:hover { border-color: var(--brown); background: #fef5ef; color: var(--brown); }
+        .photo-upload-zone.loading { opacity: 0.6; cursor: default; }
+        .photo-result-row { display: flex; gap: 8px; align-items: center; }
+        /* Remove button */
+        .btn-item-remove { background: none; border: none; padding: 4px 6px; cursor: pointer; color: #ccc; font-size: 1.1rem; line-height: 1; transition: color 0.2s; }
         .btn-item-remove:hover { color: var(--red); }
 
         .btn-add-item {
@@ -252,6 +280,26 @@
         .warning-item p { font-size: 0.81rem; color: var(--text); line-height: 1.45; }
         .heu-sugar-note { margin-top: 10px; padding: 9px 11px; background: #f5f0eb; border-radius: 7px; font-size: 0.81rem; color: var(--text-light); line-height: 1.45; }
         .no-feed-note { color: var(--text-light); font-size: 0.86rem; padding: 8px 0; line-height: 1.5; }
+        /* Nährstofftabelle */
+        .naehr-table { width: 100%; border-collapse: collapse; font-size: 0.81rem; margin-top: 4px; }
+        .naehr-table th { text-align: left; font-size: 0.74rem; font-weight: 700; color: var(--primary); padding: 5px 6px; border-bottom: 2px solid #f0e8e2; white-space: nowrap; }
+        .naehr-table th:nth-child(2), .naehr-table th:nth-child(3), .naehr-table th:nth-child(4) { text-align: right; }
+        .naehr-table th:nth-child(1) { width: 40%; }
+        .naehr-table th:nth-child(2), .naehr-table th:nth-child(3) { width: 20%; }
+        .naehr-table th:nth-child(4) { width: 10%; }
+        .naehr-table th:nth-child(5) { width: 5%; }
+        .naehr-table td { padding: 5px 6px; border-bottom: 1px solid #f5f0eb; vertical-align: middle; }
+        .naehr-table tr:last-child td { border-bottom: none; }
+        .naehr-table td:nth-child(2), .naehr-table td:nth-child(3), .naehr-table td:nth-child(4) { text-align: right; white-space: nowrap; }
+        .naehr-table td:nth-child(4) { font-weight: 600; min-width: 38px; }
+        .naehr-table td:nth-child(5) { text-align: center; padding-left: 8px; }
+        .ampel { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: middle; }
+        .ampel-green  { background: #5a9e5a; }
+        .ampel-yellow { background: #d4a017; }
+        .ampel-red    { background: #c0392b; }
+        .ampel-gray   { background: #bbb; }
+        .naehr-legend { font-size: 0.72rem; color: var(--text-light); margin-top: 9px; line-height: 1.6; }
+        .naehr-section-label { font-size: 0.72rem; font-weight: 700; color: var(--brown); text-transform: uppercase; letter-spacing: 0.04em; padding: 8px 6px 3px; }
 
         /* Spinner */
         .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--brown); border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 4px; }
@@ -330,6 +378,8 @@
     </div>
 </div>
 
+<div id="save-indicator">✓ Gespeichert</div>
+
 <div class="progress-bar">
     <div class="steps">
         <div class="step-indicator active" data-step="1">1. Dein Pferd</div>
@@ -377,7 +427,7 @@
                         <div class="video-wrapper">
                             <!-- VIMEO LINK HIER EINTRAGEN (Video-ID aus dem Vimeo-Link) -->
                             <iframe id="vimeo-player"
-                                src="https://player.vimeo.com/video/VIMEO_VIDEO_ID?title=0&byline=0&portrait=0&color=d6b923"
+                                src="https://player.vimeo.com/video/1187965804?h=2d7eee43b9&title=0&byline=0&portrait=0&color=d6b923"
                                 frameborder="0"
                                 allow="autoplay; fullscreen; picture-in-picture"
                                 allowfullscreen>
@@ -484,7 +534,6 @@
                     Rippen gut fühlbar, aber nicht sichtbar = ideal &nbsp;·&nbsp; Rippen nicht tastbar = zu dick &nbsp;·&nbsp; Rippen sichtbar = zu dünn
                 </small>
             </div>
-        </div>
 
         <div class="btn-row">
             <button class="btn-next" onclick="goToStep(2)">Weiter →</button>
@@ -527,16 +576,30 @@
                     <span class="lufa-source-label" id="lufa-source-label">Lufa 2025 Durchschnitt</span>
                 </div>
                 <div class="lufa-grid">
+                    <div class="lufa-field" style="grid-column:1/-1;padding:4px 0 2px;font-size:0.72rem;font-weight:700;color:var(--brown);text-transform:uppercase;letter-spacing:0.04em;">Energie & Protein</div>
+                    <div class="lufa-field"><label>ME Pferd (MJ/kg)</label><input type="number" id="heu-me" value="9.5" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>pcv XP %<span style="font-weight:400;color:#bbb"> (verd. Protein)</span></label><input type="number" id="heu-pcvxp" value="4.2" step="0.1" min="0"></div>
+
+                    <div class="lufa-field" style="grid-column:1/-1;padding:8px 0 2px;font-size:0.72rem;font-weight:700;color:var(--brown);text-transform:uppercase;letter-spacing:0.04em;">Zucker</div>
                     <div class="lufa-field"><label>Gesamtzucker %</label><input type="number" id="heu-zucker" value="10.6" step="0.1" min="0"></div>
-                    <div class="lufa-field"><label>Rohprotein g/kg</label><input type="number" id="heu-rohprotein" value="67" step="1" min="0"></div>
-                    <div class="lufa-field"><label>Calcium g/kg</label><input type="number" id="heu-calcium" value="3.5" step="0.1" min="0"></div>
-                    <div class="lufa-field"><label>Phosphor g/kg</label><input type="number" id="heu-phosphor" value="1.7" step="0.1" min="0"></div>
-                    <div class="lufa-field"><label>Magnesium g/kg</label><input type="number" id="heu-magnesium" value="1.3" step="0.1" min="0"></div>
-                    <div class="lufa-field"><label>Zink mg/kg</label><input type="number" id="heu-zink" value="21" step="1" min="0"></div>
+                    <div class="lufa-field"></div>
+
+                    <div class="lufa-field" style="grid-column:1/-1;padding:8px 0 2px;font-size:0.72rem;font-weight:700;color:var(--brown);text-transform:uppercase;letter-spacing:0.04em;">Mengenelemente (alle in %)</div>
+                    <div class="lufa-field"><label>Calcium %</label><input type="number" id="heu-calcium" value="0.35" step="0.01" min="0"></div>
+                    <div class="lufa-field"><label>Phosphor %</label><input type="number" id="heu-phosphor" value="0.17" step="0.01" min="0"></div>
+                    <div class="lufa-field"><label>Magnesium %</label><input type="number" id="heu-magnesium" value="0.13" step="0.01" min="0"></div>
+                    <div class="lufa-field"><label>Natrium %</label><input type="number" id="heu-natrium" value="0.10" step="0.01" min="0"></div>
+                    <div class="lufa-field"><label>Kalium %</label><input type="number" id="heu-kalium" value="1.90" step="0.01" min="0"></div>
+                    <div class="lufa-field"><label>Schwefel %</label><input type="number" id="heu-schwefel" value="0.20" step="0.01" min="0"></div>
+
+                    <div class="lufa-field" style="grid-column:1/-1;padding:8px 0 2px;font-size:0.72rem;font-weight:700;color:var(--brown);text-transform:uppercase;letter-spacing:0.04em;">Spurenelemente (mg/kg)</div>
                     <div class="lufa-field"><label>Kupfer mg/kg</label><input type="number" id="heu-kupfer" value="3.9" step="0.1" min="0"></div>
+                    <div class="lufa-field"><label>Zink mg/kg</label><input type="number" id="heu-zink" value="21" step="1" min="0"></div>
+                    <div class="lufa-field"><label>Mangan mg/kg</label><input type="number" id="heu-mangan" value="118" step="1" min="0"></div>
+                    <div class="lufa-field"><label>Eisen mg/kg</label><input type="number" id="heu-eisen" value="156" step="1" min="0"></div>
                     <div class="lufa-field"><label>Selen mg/kg</label><input type="number" id="heu-selen" value="0.044" step="0.001" min="0"></div>
                 </div>
-                <div class="lufa-note">💡 Du kannst alle Werte manuell anpassen — z. B. wenn du einzelne Werte deiner Analyse kennst.</div>
+                <div class="lufa-note">💡 Alle Werte aus der Spalte <strong>„Berechnet auf die Trockensubstanz"</strong> deiner LUFA-Analyse eintragen. Mengenelemente in %, Spurenelemente in mg/kg.</div>
             </div>
         </div>
 
@@ -564,7 +627,7 @@
             <div class="menge-row" id="menge-heu-row">
                 <span class="menge-label-sm">Menge:</span>
                 <input type="text" class="menge-input-sm" id="menge-heu" placeholder="z. B. 8">
-                <select class="unit-select" id="unit-heu"><option>kg/Tag</option><option>g/Tag</option></select>
+                <select class="unit-select" id="unit-heu"><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -574,7 +637,7 @@
             <div class="menge-row" id="menge-stroh-row">
                 <span class="menge-label-sm">Menge:</span>
                 <input type="text" class="menge-input-sm" id="menge-stroh" placeholder="z. B. 1">
-                <select class="unit-select" id="unit-stroh"><option>kg/Tag</option><option>g/Tag</option></select>
+                <select class="unit-select" id="unit-stroh"><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -584,7 +647,7 @@
             <div class="menge-row" id="menge-weide-row">
                 <span class="menge-label-sm">Stunden:</span>
                 <input type="text" class="menge-input-sm" id="menge-weide" placeholder="z. B. 4">
-                <select class="unit-select" id="unit-weide"><option>Std/Tag</option><option>halber Tag</option><option>ganzer Tag</option></select>
+                <select class="unit-select" id="unit-weide"><option>Std/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -592,8 +655,7 @@
                 <div class="feed-item-label"><strong>Knabberäste</strong></div>
             </div>
             <div class="menge-row" id="menge-aeste-row">
-                <span class="menge-label-sm">Menge:</span>
-                <input type="text" class="menge-input-sm" id="menge-aeste" placeholder="nach Bedarf">
+                <span class="menge-label-sm">Häufigkeit:</span>
                 <select class="unit-select" id="unit-aeste"><option>nach Bedarf</option><option>täglich</option></select>
             </div>
         </div>
@@ -609,7 +671,7 @@
             <div class="menge-row" id="menge-hafer-row">
                 <span class="menge-label-sm">Menge:</span>
                 <input type="text" class="menge-input-sm" id="menge-hafer" placeholder="z. B. 300">
-                <select class="unit-select" id="unit-hafer"><option>g/Tag</option><option>kg/Tag</option><option>Wasserglas/Tag</option></select>
+                <select class="unit-select" id="unit-hafer"><option>g/Tag</option><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -619,27 +681,37 @@
             <div class="menge-row" id="menge-sojaschrot-row">
                 <span class="menge-label-sm">Menge:</span>
                 <input type="text" class="menge-input-sm" id="menge-sojaschrot" placeholder="z. B. 120">
-                <select class="unit-select" id="unit-sojaschrot"><option>g/Tag</option><option>Wasserglas/Tag</option></select>
+                <select class="unit-select" id="unit-sojaschrot"><option>g/Tag</option><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-luzerne" class="feed-cb">
-                <div class="feed-item-label"><strong>Luzerne</strong></div>
+                <input type="checkbox" id="feed-luzernecobs" class="feed-cb">
+                <div class="feed-item-label"><strong>Luzernecobs</strong></div>
             </div>
-            <div class="menge-row" id="menge-luzerne-row">
+            <div class="menge-row" id="menge-luzernecobs-row">
                 <span class="menge-label-sm">Menge:</span>
-                <input type="text" class="menge-input-sm" id="menge-luzerne" placeholder="z. B. 400">
-                <select class="unit-select" id="unit-luzerne"><option>g/Tag</option><option>kg/Tag</option></select>
+                <input type="text" class="menge-input-sm" id="menge-luzernecobs" placeholder="z. B. 400">
+                <select class="unit-select" id="unit-luzernecobs"><option>g/Tag</option><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-esparsette" class="feed-cb">
-                <div class="feed-item-label"><strong>Esparsette</strong></div>
+                <input type="checkbox" id="feed-luzernehaecksel" class="feed-cb">
+                <div class="feed-item-label"><strong>Luzernehäcksel</strong></div>
             </div>
-            <div class="menge-row" id="menge-esparsette-row">
+            <div class="menge-row" id="menge-luzernehaecksel-row">
                 <span class="menge-label-sm">Menge:</span>
-                <input type="text" class="menge-input-sm" id="menge-esparsette" placeholder="z. B. 300">
-                <select class="unit-select" id="unit-esparsette"><option>g/Tag</option><option>kg/Tag</option></select>
+                <input type="text" class="menge-input-sm" id="menge-luzernehaecksel" placeholder="z. B. 400">
+                <select class="unit-select" id="unit-luzernehaecksel"><option>g/Tag</option><option>kg/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-esparsettecobs" class="feed-cb">
+                <div class="feed-item-label"><strong>Esparsettecobs</strong></div>
+            </div>
+            <div class="menge-row" id="menge-esparsettecobs-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-esparsettecobs" placeholder="z. B. 300">
+                <select class="unit-select" id="unit-esparsettecobs"><option>g/Tag</option><option>kg/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -673,13 +745,23 @@
             </div>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-kraeutermuesli" class="feed-cb">
-                <div class="feed-item-label"><strong>Jahreszeitenkräuter / Kräutermüsli</strong></div>
+                <input type="checkbox" id="feed-agrobs" class="feed-cb">
+                <div class="feed-item-label"><strong>Agrobs AlpenGrün Müsli</strong></div>
             </div>
-            <div class="menge-row" id="menge-kraeutermuesli-row">
+            <div class="menge-row" id="menge-agrobs-row">
                 <span class="menge-label-sm">Menge:</span>
-                <input type="text" class="menge-input-sm" id="menge-kraeutermuesli" placeholder="z. B. 50">
-                <select class="unit-select" id="unit-kraeutermuesli"><option>g/Tag</option><option>Handvoll/Tag</option></select>
+                <input type="text" class="menge-input-sm" id="menge-agrobs" placeholder="z. B. 150">
+                <select class="unit-select" id="unit-agrobs"><option>g/Tag</option><option>kg/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-jahreszeitenkraeuter" class="feed-cb">
+                <div class="feed-item-label"><strong>Jahreszeitenkräuter</strong></div>
+            </div>
+            <div class="menge-row" id="menge-jahreszeitenkraeuter-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="text" class="menge-input-sm" id="menge-jahreszeitenkraeuter" placeholder="z. B. 1">
+                <select class="unit-select" id="unit-jahreszeitenkraeuter"><option>Handvoll/Tag</option><option>g/Tag</option></select>
             </div>
 
             <!-- Dynamic extra items Säule 2 -->
@@ -691,12 +773,90 @@
         <!-- Säule 3 — frei -->
         <div class="card">
             <div class="card-title">🌿 Säule 3 — Mineralstoffe & Vitamine</div>
-            <p class="saule-hint">Trage alle Mineralstoffe, Spurenelemente und Vitamine ein, die du aktuell gibst. Du kannst ein Foto der Verpackung hochladen — der Name und die Dosierung werden automatisch ausgelesen.</p>
+            <p class="saule-hint">Hake an, was du gibst, und trage die Menge ein. Für weitere Produkte nutze den Button unten.</p>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-pharmox-mg" class="feed-cb">
+                <div class="feed-item-label"><strong>Pharmox Magnesiumcitrat</strong></div>
+            </div>
+            <div class="menge-row" id="menge-pharmox-mg-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-pharmox-mg" value="10">
+                <select class="unit-select" id="unit-pharmox-mg"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-themineral" class="feed-cb">
+                <div class="feed-item-label"><strong>Kristallkraft TheMineral</strong></div>
+            </div>
+            <div class="menge-row" id="menge-themineral-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-themineral" value="70">
+                <select class="unit-select" id="unit-themineral"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-okapi-mineral" class="feed-cb">
+                <div class="feed-item-label"><strong>OKAPI Mineralpellets</strong></div>
+            </div>
+            <div class="menge-row" id="menge-okapi-mineral-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-okapi-mineral" value="50">
+                <select class="unit-select" id="unit-okapi-mineral"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-okapi-zink" class="feed-cb">
+                <div class="feed-item-label"><strong>OKAPI Zinkchelat Plus</strong></div>
+            </div>
+            <div class="menge-row" id="menge-okapi-zink-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-okapi-zink" value="32">
+                <select class="unit-select" id="unit-okapi-zink"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-okapi-muskel" class="feed-cb">
+                <div class="feed-item-label"><strong>OKAPI Muskelmineral</strong></div>
+            </div>
+            <div class="menge-row" id="menge-okapi-muskel-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-okapi-muskel" value="500">
+                <select class="unit-select" id="unit-okapi-muskel"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-navalis-selen" class="feed-cb">
+                <div class="feed-item-label"><strong>Navalis Orthosal Selen</strong></div>
+            </div>
+            <div class="menge-row" id="menge-navalis-selen-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-navalis-selen" value="15">
+                <select class="unit-select" id="unit-navalis-selen"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-goldwert" class="feed-cb">
+                <div class="feed-item-label"><strong>Dr. Weyrauch Nr. 4 Goldwert</strong></div>
+            </div>
+            <div class="menge-row" id="menge-goldwert-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-goldwert" value="30">
+                <select class="unit-select" id="unit-goldwert"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-salzleckstein" class="feed-cb">
+                <div class="feed-item-label"><strong>Salzleckstein</strong></div>
+            </div>
+            <div class="menge-row" id="menge-salzleckstein-row">
+                <span class="menge-label-sm">Verfügbarkeit:</span>
+                <select class="unit-select" id="unit-salzleckstein"><option>zur freien Verfügung</option></select>
+            </div>
 
             <div class="dynamic-items" id="saule3-items" style="margin-top:12px;"></div>
 
-            <button class="btn-add-item" onclick="addDynamicItem(3)">+ Futtermittel hinzufügen</button>
-            <p class="photo-analyze-note" style="margin-top:8px;">📷 Tipp: Mit dem Kamera-Symbol in jeder Zeile die Verpackung fotografieren — Name und Menge werden automatisch eingetragen.</p>
+            <button class="btn-add-item" onclick="addDynamicItem(3)">+ Weiteres Mineralfutter hinzufügen</button>
         </div>
 
         <!-- Säule 4 — frei -->
@@ -719,6 +879,9 @@
     <!-- STEP 4 -->
     <!-- ============================================================ -->
     <div class="step-panel" id="step4">
+        <div class="btn-row" style="margin-top:0;margin-bottom:16px;">
+            <button class="btn-pdf" onclick="downloadPDF()">📄 PDF herunterladen</button>
+        </div>
         <div class="success-banner">
             <h2>🐴 Futterplan für <span id="result-horse-name"></span></h2>
             <p id="result-summary"></p>
@@ -742,10 +905,267 @@
 // ============================================================
 // LUFA 2025 (jährlich aktualisieren)
 // ============================================================
+// Einheiten: me=MJ/kg, zucker/pcvxp/ca/p/mg/na/k/s in %, spurenelemente in mg/kg
 const LUFA = {
-    zucker: 10.6, rohprotein: 67, calcium: 3.5, phosphor: 1.7,
-    magnesium: 1.3, zink: 21, kupfer: 3.9, selen: 0.044,
-    mangan: 118, eisen: 156
+    me: 9.5,
+    zucker: 10.6,
+    pcvxp: 4.2,       // pcv XP % TM (praecaecal verdauliches Rohprotein)
+    calcium: 0.35,    // % TM
+    phosphor: 0.17,   // % TM
+    magnesium: 0.13,  // % TM
+    natrium: 0.10,    // % TM
+    kalium: 1.90,     // % TM
+    schwefel: 0.20,   // % TM
+    kupfer: 3.9,      // mg/kg TM
+    zink: 21,         // mg/kg TM
+    mangan: 118,      // mg/kg TM
+    eisen: 156,       // mg/kg TM
+    selen: 0.044,     // mg/kg TM
+};
+
+// ============================================================
+// NÄHRWERT-DATENBANK (Werte pro kg Trockenmasse, außer Agrobs = pro kg Produkt)
+// Quellen: Gruber Tabelle LfL Bayern / GfE 2014 / Hersteller
+// ============================================================
+const NAEHRWERTE = {
+    haferstroh: {
+        tm: 0.86,           // Trockenmasse-Anteil (FM→TM)
+        me: 5.5,            // MJ/kg TM
+        pcve: 22,           // g/kg TM
+        rohfaser: 390,      // g/kg TM
+        zucker: 15,         // g/kg TM
+        staerke: 5,         // g/kg TM
+        calcium: 2.8,       // g/kg TM
+        phosphor: 0.9,      // g/kg TM
+        magnesium: 0.9,     // g/kg TM
+        natrium: 0.4,       // g/kg TM
+        kalium: 14,         // g/kg TM
+        kupfer: 3,          // mg/kg TM
+        zink: 18,           // mg/kg TM
+        selen: 0.06,        // mg/kg TM
+        mangan: 55,         // mg/kg TM
+        eisen: 145          // mg/kg TM
+    },
+    weide: {
+        tmProStunde: 0.7,   // kg TM pro Weidestunde
+        me: 10.5,           // MJ/kg TM
+        pcve: 105,          // g/kg TM
+        rohfaser: 220,      // g/kg TM
+        zucker: 150,        // g/kg TM
+        staerke: 20,        // g/kg TM
+        calcium: 5.0,       // g/kg TM
+        phosphor: 3.5,      // g/kg TM
+        magnesium: 2.0,     // g/kg TM
+        natrium: 1.5,       // g/kg TM
+        kalium: 26,         // g/kg TM
+        kupfer: 6,          // mg/kg TM
+        zink: 25,           // mg/kg TM
+        selen: 0.08,        // mg/kg TM
+        mangan: 65,         // mg/kg TM
+        eisen: 200          // mg/kg TM
+    },
+    agrobs: {
+        // Werte pro kg Produkt (laut Hersteller Agrobs AlpenGrün Müsli)
+        me: 8.2,            // MJ/kg
+        rohfaser: 233,      // g/kg
+        zucker: 94,         // g/kg
+        staerke: 25,        // g/kg
+        calcium: 5.3,       // g/kg
+        phosphor: 3.1,      // g/kg
+        magnesium: 2.3,     // g/kg
+        natrium: 0.5,       // g/kg
+        kalium: 13.5,       // g/kg
+        kupfer: 6.9,        // mg/kg
+        zink: 32,           // mg/kg
+        selen: 0.05,        // mg/kg
+        mangan: 101,        // mg/kg
+        eisen: null         // nicht angegeben
+    },
+    hanfsamen: {
+        // Werte pro kg Produkt (geschält)
+        me: 14,             // MJ/kg
+        pcve: 129,          // g/kg
+        rohfaser: 245,      // g/kg
+        zucker: 30,         // g/kg
+        staerke: 0,         // g/kg
+        calcium: 1.8,       // g/kg
+        phosphor: 4.7,      // g/kg
+        magnesium: 2.8,     // g/kg
+        natrium: 0.04,      // g/kg
+        kalium: 6.4,        // g/kg
+        kupfer: 11,         // mg/kg
+        zink: 37,           // mg/kg
+        selen: 0.05,        // mg/kg
+        mangan: 20,         // mg/kg
+        eisen: 59,          // mg/kg
+        vitA: 60,           // IE/kg
+        vitE: 30            // mg/kg
+    },
+    hanfschrot: {
+        // Werte pro kg Produkt (Hanfkuchen/-schrot) — Ø Godenstedt, Hempy, weitere
+        me: 10.5,           // MJ/kg
+        pcve: 200,          // g/kg
+        rohfaser: 270,      // g/kg
+        zucker: 20,         // g/kg
+        staerke: 10,        // g/kg
+        calcium: 1.8,       // g/kg
+        phosphor: 9.0,      // g/kg
+        magnesium: 5.5,     // g/kg
+        natrium: 0.1,       // g/kg
+        kalium: 11,         // g/kg
+        kupfer: 12,         // mg/kg
+        zink: 85,           // mg/kg
+        selen: 0.08,        // mg/kg
+        mangan: 80,         // mg/kg
+        eisen: 200,         // mg/kg
+        vitA: null,
+        vitE: null
+    },
+    leinsamen: {
+        // Werte pro kg Produkt (ganz) — Ø Produktdaten + Gruber Tabelle
+        me: 19,             // MJ/kg
+        pcve: 150,          // g/kg
+        rohfaser: 80,       // g/kg
+        zucker: 5,          // g/kg
+        staerke: 10,        // g/kg
+        calcium: 3.0,       // g/kg
+        phosphor: 7.0,      // g/kg
+        magnesium: 4.0,     // g/kg
+        natrium: 0.5,       // g/kg
+        kalium: 7.0,        // g/kg
+        kupfer: 10,         // mg/kg
+        zink: 45,           // mg/kg
+        selen: 0.15,        // mg/kg
+        mangan: 30,         // mg/kg
+        eisen: 60,          // mg/kg
+        vitA: null,
+        vitE: null
+    },
+    // ── SÄULE 3 — MINERALFUTTER (Werte pro kg Produkt) ──
+    'pharmox-mg': {
+        // 100% Magnesiumcitrat, Quelle: vitstore.de
+        magnesium: 160              // g/kg (~16% Mg-Anteil in Magnesiumcitrat)
+    },
+    themineral: {
+        // Kristallkraft TheMineral, Quelle: kristallkraft-pferdefutter.de
+        calcium: 93.7, phosphor: 2.5, magnesium: 23.7, natrium: 1.1, kalium: 7.2
+    },
+    'okapi-mineral': {
+        // OKAPI Mineralpellets, Quelle: okapi-online.de
+        calcium: 120, phosphor: 30, natrium: 80, magnesium: 18,
+        vitA: 400000, vitD: 40000, vitE: 3000,
+        zink: 7000, eisen: 1500, mangan: 4000, kupfer: 2000, selen: 20
+    },
+    'okapi-zink': {
+        // OKAPI Zinkchelat Plus, Quelle: okapi-online.de
+        zink: 12000, calcium: 6.5, phosphor: 2.8, natrium: 1.4
+    },
+    'okapi-muskel': {
+        // OKAPI Muskelmineral, Quelle: okapi-online.de
+        calcium: 23.5, phosphor: 5.8, natrium: 10.6, magnesium: 7.5,
+        zink: 600, mangan: 300, kupfer: 200, eisen: 80, selen: 0.8
+    },
+    'navalis-selen': {
+        // Navalis Orthosal Selen, Quelle: navalis-nutraceuticals.com
+        vitE: 40000, selen: 125
+    },
+    goldwert: {
+        // Dr. Weyrauch Nr. 4 Goldwert, Quelle: louven-shop.de
+        zink: 12000, mangan: 12000, eisen: 6000, kupfer: 2500,
+        selen: 25
+    },
+    hafer: {
+        // Werte pro kg Trockenmasse, TM-Gehalt ~88% (GfE / Gruber Tabelle)
+        tm: 0.88,
+        me: 11.2,           // MJ/kg TM
+        pcve: 82,           // g/kg TM
+        rohfaser: 110,      // g/kg TM
+        zucker: 18,         // g/kg TM
+        staerke: 400,       // g/kg TM
+        calcium: 1.0,       // g/kg TM
+        phosphor: 3.5,      // g/kg TM
+        magnesium: 1.4,     // g/kg TM
+        natrium: 0.3,       // g/kg TM
+        kalium: 5.0,        // g/kg TM
+        kupfer: 5,          // mg/kg TM
+        zink: 35,           // mg/kg TM
+        selen: 0.07,        // mg/kg TM
+        mangan: 42,         // mg/kg TM
+        eisen: 75           // mg/kg TM
+    },
+    sojaschrot: {
+        // Werte pro kg Trockenmasse, TM-Gehalt ~88% (HP, hocherhitzt; GfE / DLG)
+        tm: 0.88,
+        me: 12.5,           // MJ/kg TM
+        pcve: 285,          // g/kg TM
+        rohfaser: 45,       // g/kg TM
+        zucker: 70,         // g/kg TM
+        staerke: 15,        // g/kg TM
+        calcium: 3.5,       // g/kg TM
+        phosphor: 7.0,      // g/kg TM
+        magnesium: 3.0,     // g/kg TM
+        natrium: 0.3,       // g/kg TM
+        kalium: 22,         // g/kg TM
+        kupfer: 15,         // mg/kg TM
+        zink: 45,           // mg/kg TM
+        selen: 0.10,        // mg/kg TM
+        mangan: 30,         // mg/kg TM
+        eisen: 120          // mg/kg TM
+    },
+    luzernecobs: {
+        // Werte pro kg Produkt — Ø aus Agrobs, Semhof, Biohof Elmengrund
+        me: 6.0,            // MJ/kg
+        pcve: 98,           // g/kg
+        rohfaser: 266,      // g/kg
+        zucker: 44,         // g/kg
+        staerke: 20,        // g/kg
+        calcium: 14.5,      // g/kg
+        phosphor: 2.8,      // g/kg
+        magnesium: 2.4,     // g/kg
+        natrium: 0.3,       // g/kg
+        kalium: 24,         // g/kg
+        kupfer: 9,          // mg/kg
+        zink: 26,           // mg/kg
+        selen: 0.08,        // mg/kg
+        mangan: 60,         // mg/kg
+        eisen: 250          // mg/kg
+    },
+    luzernehaecksel: {
+        // Werte pro kg Produkt — Literatur + Herstellerangaben
+        me: 5.5,            // MJ/kg
+        pcve: 92,           // g/kg
+        rohfaser: 340,      // g/kg
+        zucker: 35,         // g/kg
+        staerke: 15,        // g/kg
+        calcium: 13.5,      // g/kg
+        phosphor: 2.7,      // g/kg
+        magnesium: 2.3,     // g/kg
+        natrium: 0.3,       // g/kg
+        kalium: 21,         // g/kg
+        kupfer: 8,          // mg/kg
+        zink: 23,           // mg/kg
+        selen: 0.3,         // mg/kg
+        mangan: 55,         // mg/kg
+        eisen: 312          // mg/kg
+    },
+    esparsettecobs: {
+        // Werte pro kg Produkt — Ø aus OKAPI, Nature's Best, Semhof
+        me: 6.0,            // MJ/kg
+        pcve: 88,           // g/kg
+        rohfaser: 243,      // g/kg
+        zucker: 75,         // g/kg
+        staerke: 5,         // g/kg
+        calcium: 13.0,      // g/kg
+        phosphor: 2.5,      // g/kg
+        magnesium: 1.0,     // g/kg
+        natrium: 0.3,       // g/kg
+        kalium: 15,         // g/kg
+        kupfer: 6,          // mg/kg
+        zink: 25,           // mg/kg
+        selen: 0.3,         // mg/kg
+        mangan: 30,         // mg/kg
+        eisen: 150          // mg/kg
+    }
 };
 
 // ============================================================
@@ -798,6 +1218,107 @@ function validateStep1() {
 }
 
 // ============================================================
+// AUTO-SAVE (localStorage)
+// ============================================================
+const SAVE_KEY = 'futterrechner_v1';
+
+const HEU_FIELDS = ['me','zucker','pcvxp','calcium','phosphor','magnesium',
+                    'natrium','kalium','schwefel','kupfer','zink','mangan','eisen','selen'];
+
+function saveState() {
+    const state = {
+        name:      document.getElementById('horse-name')?.value || '',
+        weight:    document.getElementById('horse-weight')?.value || '',
+        condition: document.querySelector('input[name="condition"]:checked')?.value || 'ideal',
+        heu:       {},
+        feeds:     {},
+        dynItems:  { 2: getDynamicItems(2), 3: getDynamicItems(3), 4: getDynamicItems(4) }
+    };
+
+    HEU_FIELDS.forEach(f => {
+        state.heu[f] = document.getElementById('heu-' + f)?.value ?? '';
+    });
+
+    document.querySelectorAll('.feed-cb').forEach(cb => {
+        const key = cb.id.replace('feed-', '');
+        state.feeds[key] = {
+            checked: cb.checked,
+            menge:   document.getElementById('menge-' + key)?.value || '',
+            unit:    document.getElementById('unit-' + key)?.value  || ''
+        };
+    });
+
+    try { localStorage.setItem(SAVE_KEY, JSON.stringify(state)); } catch(e) {}
+    showSaveIndicator();
+}
+
+function loadState() {
+    let state;
+    try { state = JSON.parse(localStorage.getItem(SAVE_KEY)); } catch(e) {}
+    if (!state) return;
+
+    // Schritt 1
+    const nameEl = document.getElementById('horse-name');
+    const weightEl = document.getElementById('horse-weight');
+    if (nameEl   && state.name)   nameEl.value   = state.name;
+    if (weightEl && state.weight) weightEl.value = state.weight;
+    if (state.condition) {
+        const r = document.querySelector(`input[name="condition"][value="${state.condition}"]`);
+        if (r) r.checked = true;
+    }
+
+    // Heu-Felder
+    if (state.heu) {
+        let hasCustomHeu = false;
+        HEU_FIELDS.forEach(f => {
+            const el = document.getElementById('heu-' + f);
+            if (el && state.heu[f] !== '') { el.value = state.heu[f]; hasCustomHeu = true; }
+        });
+        if (hasCustomHeu) {
+            document.getElementById('lufa-source-label').textContent = 'Gespeicherte Werte';
+        }
+    }
+
+    // Checkboxen + Mengen
+    if (state.feeds) {
+        Object.entries(state.feeds).forEach(([key, data]) => {
+            const cb = document.getElementById('feed-' + key);
+            if (!cb) return;
+            cb.checked = data.checked;
+            const row = document.getElementById('menge-' + key + '-row');
+            if (row) row.style.display = data.checked ? 'flex' : 'none';
+            const mengeEl = document.getElementById('menge-' + key);
+            if (mengeEl && data.menge) mengeEl.value = data.menge;
+            const unitEl = document.getElementById('unit-' + key);
+            if (unitEl && data.unit) unitEl.value = data.unit;
+        });
+    }
+
+    // Dynamische Items wiederherstellen
+    if (state.dynItems) {
+        [2, 3, 4].forEach(saule => {
+            (state.dynItems[saule] || []).forEach(item => {
+                addDynamicItem(saule, item.name, item.menge, item.einheit || 'g/Tag');
+            });
+        });
+    }
+}
+
+let _saveTimer;
+function scheduleSave() {
+    clearTimeout(_saveTimer);
+    _saveTimer = setTimeout(saveState, 500);
+}
+
+function showSaveIndicator() {
+    const el = document.getElementById('save-indicator');
+    if (!el) return;
+    el.classList.add('visible');
+    clearTimeout(el._fadeTimer);
+    el._fadeTimer = setTimeout(() => el.classList.remove('visible'), 2200);
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -826,17 +1347,38 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('menge-heu-row').style.display = 'flex';
 
     setLufaDefaults();
+
+    // Auto-Save: auf alle Eingaben hören
+    document.querySelectorAll('input:not([type="file"]):not([type="radio"]):not(.feed-cb), select, textarea').forEach(el => {
+        el.addEventListener('input',  scheduleSave);
+        el.addEventListener('change', scheduleSave);
+    });
+    document.querySelectorAll('.feed-cb').forEach(cb => {
+        cb.addEventListener('change', scheduleSave);
+    });
+    document.querySelectorAll('input[name="condition"]').forEach(r => {
+        r.addEventListener('change', scheduleSave);
+    });
+
+    // Gespeicherten Stand wiederherstellen
+    loadState();
 });
 
 function setLufaDefaults() {
-    document.getElementById('heu-zucker').value     = LUFA.zucker;
-    document.getElementById('heu-rohprotein').value = LUFA.rohprotein;
-    document.getElementById('heu-calcium').value    = LUFA.calcium;
-    document.getElementById('heu-phosphor').value   = LUFA.phosphor;
-    document.getElementById('heu-magnesium').value  = LUFA.magnesium;
-    document.getElementById('heu-zink').value       = LUFA.zink;
-    document.getElementById('heu-kupfer').value     = LUFA.kupfer;
-    document.getElementById('heu-selen').value      = LUFA.selen;
+    document.getElementById('heu-me').value        = LUFA.me;
+    document.getElementById('heu-zucker').value    = LUFA.zucker;
+    document.getElementById('heu-pcvxp').value     = LUFA.pcvxp;
+    document.getElementById('heu-calcium').value   = LUFA.calcium;
+    document.getElementById('heu-phosphor').value  = LUFA.phosphor;
+    document.getElementById('heu-magnesium').value = LUFA.magnesium;
+    document.getElementById('heu-natrium').value   = LUFA.natrium;
+    document.getElementById('heu-kalium').value    = LUFA.kalium;
+    document.getElementById('heu-schwefel').value  = LUFA.schwefel;
+    document.getElementById('heu-kupfer').value    = LUFA.kupfer;
+    document.getElementById('heu-zink').value      = LUFA.zink;
+    document.getElementById('heu-mangan').value    = LUFA.mangan;
+    document.getElementById('heu-eisen').value     = LUFA.eisen;
+    document.getElementById('heu-selen').value     = LUFA.selen;
 }
 
 // ============================================================
@@ -856,6 +1398,14 @@ async function analyzeHeu() {
     if (!file) return;
     const statusEl = document.getElementById('analyze-status');
     const btn = document.getElementById('analyze-btn');
+
+    // Lokal läuft keine Netlify-Function → direkt auf manuell hinweisen
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1' || location.protocol === 'file:') {
+        statusEl.innerHTML = '💡 Foto-Analyse ist nur in der Live-Version verfügbar. Bitte Werte unten manuell eingeben.';
+        statusEl.style.color = 'var(--brown)';
+        return;
+    }
+
     btn.disabled = true;
     statusEl.innerHTML = '<span class="spinner"></span> Analyse läuft …';
     try {
@@ -864,17 +1414,25 @@ async function analyzeHeu() {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ image: base64, mediaType: file.type })
         });
-        if (!res.ok) throw new Error();
+        if (!res.ok) {
+            const errData = await res.json().catch(() => ({}));
+            if (errData.error === 'API-Key nicht konfiguriert') {
+                throw new Error('API-Key fehlt — bitte in Netlify unter Site Settings → Environment Variables "ANTHROPIC_API_KEY" eintragen.');
+            }
+            throw new Error();
+        }
         const data = await res.json();
-        const map = { zucker: 'heu-zucker', rohprotein: 'heu-rohprotein', calcium: 'heu-calcium', phosphor: 'heu-phosphor', magnesium: 'heu-magnesium', zink: 'heu-zink', kupfer: 'heu-kupfer', selen: 'heu-selen' };
+        const map = { me: 'heu-me', zucker: 'heu-zucker', pcvxp: 'heu-pcvxp', calcium: 'heu-calcium', phosphor: 'heu-phosphor', magnesium: 'heu-magnesium', natrium: 'heu-natrium', kalium: 'heu-kalium', schwefel: 'heu-schwefel', kupfer: 'heu-kupfer', zink: 'heu-zink', mangan: 'heu-mangan', eisen: 'heu-eisen', selen: 'heu-selen' };
         for (const [k, id] of Object.entries(map)) {
             if (data[k] != null) document.getElementById(id).value = data[k];
         }
         document.getElementById('lufa-source-label').textContent = '✓ Aus deiner Analyse';
         statusEl.innerHTML = '✅ Werte übernommen — bitte kurz prüfen.';
         statusEl.style.color = 'green';
-    } catch {
-        statusEl.innerHTML = '⚠️ Analyse nicht möglich. Bitte Werte manuell eingeben.';
+    } catch (err) {
+        statusEl.innerHTML = err.message && err.message.includes('API-Key')
+            ? `⚠️ ${err.message}`
+            : '⚠️ Analyse nicht möglich. Bitte Werte unten manuell eingeben.';
         statusEl.style.color = 'var(--brown)';
     }
     btn.disabled = false;
@@ -885,7 +1443,7 @@ async function analyzeHeu() {
 // ============================================================
 let dynCounters = { 2: 0, 3: 0, 4: 0 };
 
-const EINHEITEN = ['g/Tag', 'ml/Tag', 'kg/Tag', 'Messerspitze/Tag', 'Stück/Tag', 'Wasserglas/Tag', 'laut Hersteller'];
+const EINHEITEN = ['g/Tag', 'ml/Tag', 'kg/Tag', 'Stück/Tag'];
 
 function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag') {
     const id = `s${saule}_${++dynCounters[saule]}`;
@@ -898,20 +1456,62 @@ function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag') {
     const opts = EINHEITEN.map(e => `<option${e === einheit ? ' selected' : ''}>${e}</option>`).join('');
 
     row.innerHTML = `
-        <button class="btn-item-photo" id="photo-btn-${id}" title="Verpackung fotografieren — Name wird automatisch ausgelesen" onclick="triggerPhoto('${id}')">📷</button>
-        <input type="file" id="photo-file-${id}" accept="image/*" style="display:none" onchange="analyzeProduct('${id}', this)">
-        <input type="text" class="item-name-input" id="name-${id}" placeholder="Produktname" value="${name}">
-        <input type="text" class="item-menge-input" id="menge-dyn-${id}" placeholder="Menge" value="${menge}">
-        <select class="item-einheit-select" id="einheit-${id}">${opts}</select>
-        <button class="btn-item-remove" onclick="removeDynamicItem('${id}')" title="Entfernen">✕</button>
+        <div class="item-mode-bar">
+            <button class="item-mode-btn active" id="mode-manual-${id}" onclick="setItemMode('${id}','manual')">✏️ Manuell</button>
+            <button class="item-mode-btn" id="mode-photo-${id}" onclick="setItemMode('${id}','photo')">📷 Foto</button>
+            <span class="item-mode-spacer"></span>
+            <button class="btn-item-remove" onclick="removeDynamicItem('${id}')" title="Entfernen">✕</button>
+        </div>
+        <div class="item-manual-row" id="manual-${id}">
+            <input type="text" class="item-name-input" id="name-${id}" placeholder="Produktname" value="${name}">
+            <input type="text" class="item-menge-input" id="menge-dyn-${id}" placeholder="Menge" value="${menge}">
+            <select class="item-einheit-select" id="einheit-${id}">${opts}</select>
+        </div>
+        <div class="item-photo-area" id="photo-area-${id}" style="display:none">
+            <div class="photo-upload-zone" id="photo-zone-${id}" onclick="triggerPhoto('${id}')">
+                📷 Foto der Verpackung aufnehmen oder hochladen<br>
+                <span style="font-size:0.75rem;opacity:0.7">Name und Menge werden automatisch erkannt</span>
+            </div>
+            <input type="file" id="photo-file-${id}" accept="image/*" style="display:none" onchange="analyzeProduct('${id}', this)">
+            <div class="photo-result-row" id="photo-result-${id}" style="display:none">
+                <input type="text" class="item-name-input" id="name-photo-${id}" placeholder="Produktname" readonly style="background:#f5f0eb;">
+                <input type="text" class="item-menge-input" id="menge-photo-${id}" placeholder="Menge" readonly style="background:#f5f0eb;">
+                <select class="item-einheit-select" id="einheit-photo-${id}">${opts}</select>
+            </div>
+        </div>
     `;
 
     container.appendChild(row);
+
+    // Eingaben in dynamischen Items ebenfalls auto-speichern
+    row.querySelectorAll('input[type="text"], select').forEach(el => {
+        el.addEventListener('input',  scheduleSave);
+        el.addEventListener('change', scheduleSave);
+    });
+    scheduleSave();
+}
+
+function setItemMode(id, mode) {
+    const manualRow  = document.getElementById('manual-' + id);
+    const photoArea  = document.getElementById('photo-area-' + id);
+    const btnManual  = document.getElementById('mode-manual-' + id);
+    const btnPhoto   = document.getElementById('mode-photo-' + id);
+    if (mode === 'manual') {
+        manualRow.style.display = '';
+        photoArea.style.display = 'none';
+        btnManual.classList.add('active');
+        btnPhoto.classList.remove('active');
+    } else {
+        manualRow.style.display = 'none';
+        photoArea.style.display = '';
+        btnManual.classList.remove('active');
+        btnPhoto.classList.add('active');
+    }
 }
 
 function removeDynamicItem(id) {
     const el = document.getElementById('dyn-' + id);
-    if (el) el.remove();
+    if (el) { el.remove(); scheduleSave(); }
 }
 
 function triggerPhoto(id) {
@@ -921,13 +1521,10 @@ function triggerPhoto(id) {
 async function analyzeProduct(id, input) {
     if (!input.files || !input.files[0]) return;
     const file = input.files[0];
-    const btn = document.getElementById('photo-btn-' + id);
-    const nameInput = document.getElementById('name-' + id);
-    const mengeInput = document.getElementById('menge-dyn-' + id);
-    const einheitSelect = document.getElementById('einheit-' + id);
+    const zone = document.getElementById('photo-zone-' + id);
 
-    btn.classList.add('loading');
-    btn.textContent = '⏳';
+    zone.classList.add('loading');
+    zone.innerHTML = '⏳ Wird analysiert…';
 
     try {
         const base64 = await fileToBase64(file);
@@ -938,17 +1535,27 @@ async function analyzeProduct(id, input) {
         if (!res.ok) throw new Error();
         const data = await res.json();
 
+        // Show result row and fill values
+        const resultRow = document.getElementById('photo-result-' + id);
+        const nameInput = document.getElementById('name-photo-' + id);
+        const mengeInput = document.getElementById('menge-photo-' + id);
+        const einheitSelect = document.getElementById('einheit-photo-' + id);
+
         if (data.name) nameInput.value = data.name;
         if (data.menge) mengeInput.value = data.menge;
         if (data.einheit) {
             const match = EINHEITEN.find(e => e.toLowerCase().startsWith(data.einheit.toLowerCase().split('/')[0]));
             if (match) einheitSelect.value = match;
         }
-        btn.textContent = '✅';
-        setTimeout(() => { btn.textContent = '📷'; btn.classList.remove('loading'); }, 2000);
+        resultRow.style.display = 'flex';
+
+        zone.classList.remove('loading');
+        zone.innerHTML = '✅ Erkannt! <span style="font-size:0.75rem;opacity:0.7">Nochmal fotografieren</span>';
+        zone.onclick = () => triggerPhoto(id);
+        scheduleSave();
     } catch {
-        btn.textContent = '❌';
-        setTimeout(() => { btn.textContent = '📷'; btn.classList.remove('loading'); }, 2000);
+        zone.classList.remove('loading');
+        zone.innerHTML = '❌ Nicht erkannt — <span style="text-decoration:underline;cursor:pointer" onclick="setItemMode(\''+id+'\',\'manual\')">manuell eingeben</span>';
     }
 }
 
@@ -956,9 +1563,19 @@ function getDynamicItems(saule) {
     const items = [];
     document.querySelectorAll(`#saule${saule}-items .dynamic-item-row`).forEach(row => {
         const id = row.id.replace('dyn-', '');
-        const name   = (document.getElementById('name-' + id)?.value || '').trim();
-        const menge  = (document.getElementById('menge-dyn-' + id)?.value || '').trim();
-        const einheit = document.getElementById('einheit-' + id)?.value || 'g/Tag';
+        // Check which mode is active
+        const photoArea = document.getElementById('photo-area-' + id);
+        const inPhotoMode = photoArea && photoArea.style.display !== 'none';
+        let name, menge, einheit;
+        if (inPhotoMode) {
+            name   = (document.getElementById('name-photo-' + id)?.value || '').trim();
+            menge  = (document.getElementById('menge-photo-' + id)?.value || '').trim();
+            einheit = document.getElementById('einheit-photo-' + id)?.value || 'g/Tag';
+        } else {
+            name   = (document.getElementById('name-' + id)?.value || '').trim();
+            menge  = (document.getElementById('menge-dyn-' + id)?.value || '').trim();
+            einheit = document.getElementById('einheit-' + id)?.value || 'g/Tag';
+        }
         if (name) items.push({ name, menge, einheit });
     });
     return items;
@@ -978,16 +1595,49 @@ function getMenge(key) {
     return m ? m + ' ' + u : '';
 }
 
+// Gibt kg Frischmasse zurück (für Trockenfutter: g→kg Umrechnung)
+function getKgFM(key) {
+    const m = parseFloat(val('menge-' + key)) || 0;
+    const u = val('unit-' + key);
+    if (u === 'g/Tag') return m / 1000;
+    if (u === 'kg/Tag') return m;
+    return m;
+}
+
+// Gibt kg TM für Weide zurück
+function getWeideKgTM() {
+    if (!cb('feed-weide')) return 0;
+    const m = parseFloat(val('menge-weide')) || 0;
+    const u = val('unit-weide');
+    if (u === 'Std/Tag') return m * NAEHRWERTE.weide.tmProStunde;
+    if (u === 'halber Tag') return 6 * NAEHRWERTE.weide.tmProStunde;
+    if (u === 'ganzer Tag') return 12 * NAEHRWERTE.weide.tmProStunde;
+    return 0;
+}
+
 function getHeuValues() {
+    // g() liest Formularwert, fallback = LUFA-Default
+    const g = (id, fallback) => parseFloat(document.getElementById(id)?.value) ?? fallback;
+    const pct = (id, fallback) => g(id, fallback) * 10; // % → g/kg TM
+    const pcvxp_pct = g('heu-pcvxp', LUFA.pcvxp);
     return {
-        zucker: parseFloat(document.getElementById('heu-zucker').value) || LUFA.zucker,
-        rohprotein: parseFloat(document.getElementById('heu-rohprotein').value) || LUFA.rohprotein,
-        calcium: parseFloat(document.getElementById('heu-calcium').value) || LUFA.calcium,
-        phosphor: parseFloat(document.getElementById('heu-phosphor').value) || LUFA.phosphor,
-        magnesium: parseFloat(document.getElementById('heu-magnesium').value) || LUFA.magnesium,
-        zink: parseFloat(document.getElementById('heu-zink').value) || LUFA.zink,
-        kupfer: parseFloat(document.getElementById('heu-kupfer').value) || LUFA.kupfer,
-        selen: parseFloat(document.getElementById('heu-selen').value) || LUFA.selen
+        me:        g('heu-me',        LUFA.me),       // MJ/kg TM
+        zucker:    g('heu-zucker',    LUFA.zucker),   // % (kein Umbau nötig)
+        pcvxp_pct,                                     // % (für Anzeige)
+        pcve:      pcvxp_pct * 10,                     // g/kg TM (% × 10)
+        // Mengenelemente: LUFA-Wert in % → intern g/kg TM (× 10)
+        calcium:   pct('heu-calcium',   LUFA.calcium),
+        phosphor:  pct('heu-phosphor',  LUFA.phosphor),
+        magnesium: pct('heu-magnesium', LUFA.magnesium),
+        natrium:   pct('heu-natrium',   LUFA.natrium),
+        kalium:    pct('heu-kalium',    LUFA.kalium),
+        schwefel:  pct('heu-schwefel',  LUFA.schwefel),
+        // Spurenelemente: direkt in mg/kg TM
+        kupfer:    g('heu-kupfer',    LUFA.kupfer),
+        zink:      g('heu-zink',      LUFA.zink),
+        mangan:    g('heu-mangan',    LUFA.mangan),
+        eisen:     g('heu-eisen',     LUFA.eisen),
+        selen:     g('heu-selen',     LUFA.selen),
     };
 }
 
@@ -1062,41 +1712,167 @@ function buildResults(weight, condition, heu) {
     if (cb('feed-sojaschrot')) res.basisfutter.push({ name: 'Sojaschrot', icon: '🫘', menge: getMenge('sojaschrot'), empfehlung: weight >= 400 ? '100–150 g/Tag' : '60–80 g/Tag', hinweis: 'Günstigste Proteinquelle. Europäischen Anbau bevorzugen.' });
     if (cb('feed-hanfsamen')) res.basisfutter.push({ name: 'Hanfsamen (geschält)', icon: '🌱', menge: getMenge('hanfsamen'), empfehlung: `${Math.round(weight*10/100)} g/Tag`, hinweis: 'Langsam anfüttern. Kalt gepresst kaufen.' });
     if (cb('feed-hanfschrot')) res.basisfutter.push({ name: 'Hanfschrot / Hanfkuchen', icon: '🌱', menge: getMenge('hanfschrot'), empfehlung: `${Math.round(weight*10/100)}–${Math.round(weight*20/100)} g/Tag`, hinweis: 'Mehr Protein als Hanfsamen. Gut für Muskelaufbau.' });
-    if (cb('feed-luzerne')) res.basisfutter.push({ name: 'Luzerne', icon: '🍀', menge: getMenge('luzerne'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: 'Calciumreich → Ca:P-Verhältnis beachten. Langsam anfüttern.' });
-    if (cb('feed-esparsette')) res.basisfutter.push({ name: 'Esparsette', icon: '🌸', menge: getMenge('esparsette'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: '⚠️ Immer einweichen! Tannine wirken anti-parasitär.' });
+    if (cb('feed-luzernecobs')) res.basisfutter.push({ name: 'Luzernecobs', icon: '🍀', menge: getMenge('luzernecobs'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: 'Calciumreich → Ca:P-Verhältnis beachten. Langsam anfüttern.' });
+    if (cb('feed-luzernehaecksel')) res.basisfutter.push({ name: 'Luzernehäcksel', icon: '🍀', menge: getMenge('luzernehaecksel'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: 'Höherer Rohfasergehalt als Cobs — gut für die Darmgesundheit.' });
+    if (cb('feed-esparsettecobs')) res.basisfutter.push({ name: 'Esparsettecobs', icon: '🌸', menge: getMenge('esparsettecobs'), empfehlung: condition === 'fat' ? '100–300 g/Tag' : condition === 'thin' ? '500–1.500 g/Tag' : '300–500 g/Tag', hinweis: '⚠️ Immer einweichen! Tannine wirken anti-parasitär.' });
     if (cb('feed-leinsamen')) res.basisfutter.push({ name: 'Leinsamen', icon: '🟤', menge: getMenge('leinsamen'), empfehlung: '50–100 g/Tag', hinweis: 'Als Schleimstoff: einweichen + schroten. Als Quellstoff: pur unters Futter.' });
-    if (cb('feed-kraeutermuesli')) res.basisfutter.push({ name: 'Jahreszeitenkräuter / Kräutermüsli', icon: '🌿', menge: getMenge('kraeutermuesli'), empfehlung: 'laut Hersteller', hinweis: 'Saisonal wechseln.' });
+    if (cb('feed-agrobs')) res.basisfutter.push({ name: 'Agrobs AlpenGrün Müsli', icon: '🌿', menge: getMenge('agrobs'), empfehlung: 'laut Hersteller (getreide- & melassefrei)', hinweis: 'Gut für stoffwechselempfindliche Pferde. Zuckergehalt beachten (9,4%).' });
+    if (cb('feed-jahreszeitenkraeuter')) res.basisfutter.push({ name: 'Jahreszeitenkräuter', icon: '🌿', menge: getMenge('jahreszeitenkraeuter'), empfehlung: 'saisonal', hinweis: 'Saisonal wechseln — unterstützt Entgiftung, Fellwechsel, Immunsystem.' });
 
     // Dynamic items Säule 2
     getDynamicItems(2).forEach(item => res.basisfutter.push({ name: item.name, icon: '➕', menge: item.menge ? item.menge + ' ' + item.einheit : '', empfehlung: '', hinweis: '' }));
 
-    // ── MINERALSTOFFE (jetzt aus freier Eingabe) ──
-    res.saule3 = getDynamicItems(3);
+    // ── MINERALSTOFFE — statische Checkboxen + dynamische Items ──
+    res.saule3 = [];
+    [
+        ['pharmox-mg',    'Pharmox Magnesiumcitrat'],
+        ['themineral',    'Kristallkraft TheMineral'],
+        ['okapi-mineral', 'OKAPI Mineralpellets'],
+        ['okapi-zink',    'OKAPI Zinkchelat Plus'],
+        ['okapi-muskel',  'OKAPI Muskelmineral'],
+        ['navalis-selen', 'Navalis Orthosal Selen'],
+        ['goldwert',      'Dr. Weyrauch Nr. 4 Goldwert'],
+        ['salzleckstein', 'Salzleckstein'],
+    ].forEach(([id, name]) => {
+        if (!cb('feed-' + id)) return;
+        const menge = id === 'salzleckstein' ? 'zur freien Verfügung' : getMenge(id);
+        res.saule3.push({ name, menge, einheit: '' });
+    });
+    getDynamicItems(3).forEach(item => res.saule3.push({
+        name: item.name, menge: item.menge ? item.menge + ' ' + item.einheit : '', einheit: ''
+    }));
     res.saule4 = getDynamicItems(4);
 
-    // Allgemeine Mineral-Hinweise basierend auf Heuwerten
-    const magViaheu  = r1(heuKg * heu.magnesium);
-    const magBedarf  = r1(weight * 11.5 / 600);
-    const zinkViaheu = Math.round(heuKg * heu.zink);
-    const zinkBedarf = Math.round(weight * 500 / 600);
-    const selenViaheu = r2(heuKg * heu.selen);
-    const selenBedarf = r2(weight * 1.0 / 600);
-    const natriumBedarf = Math.round(weight * 12 / 600);
-    const natriumViaheu = r1(heuKg * 0.7);
+    // ── NÄHRWERT-BERECHNUNGEN aus Säule 1 Futtermitteln ──
+    const strohKgTM        = cb('feed-stroh')          ? getKgFM('stroh')          * NAEHRWERTE.haferstroh.tm    : 0;
+    const weideKgTM        = getWeideKgTM();
+    const agrobs_kg        = cb('feed-agrobs')         ? getKgFM('agrobs')                                        : 0;
+    const haferKgTM        = cb('feed-hafer')          ? getKgFM('hafer')          * NAEHRWERTE.hafer.tm          : 0;
+    const sojaKgTM         = cb('feed-sojaschrot')     ? getKgFM('sojaschrot')     * NAEHRWERTE.sojaschrot.tm     : 0;
+    const luzCobsKg        = cb('feed-luzernecobs')    ? getKgFM('luzernecobs')                                   : 0;
+    const luzHaecksKg      = cb('feed-luzernehaecksel')? getKgFM('luzernehaecksel')                               : 0;
+    const espCobsKg        = cb('feed-esparsettecobs') ? getKgFM('esparsettecobs')                                 : 0;
+    const hanfsamenKg      = cb('feed-hanfsamen')      ? getKgFM('hanfsamen')      : 0;
+    const hanfschrotKg     = cb('feed-hanfschrot')     ? getKgFM('hanfschrot')     : 0;
+    const leinsamenKg      = cb('feed-leinsamen')      ? getKgFM('leinsamen')      : 0;
+    // Säule 3 — Mineralfutter
+    const pharmoxMgKg      = cb('feed-pharmox-mg')     ? getKgFM('pharmox-mg')     : 0;
+    const themineralKg     = cb('feed-themineral')     ? getKgFM('themineral')     : 0;
+    const okapiMinKg       = cb('feed-okapi-mineral')  ? getKgFM('okapi-mineral')  : 0;
+    const okapiZinkKg      = cb('feed-okapi-zink')     ? getKgFM('okapi-zink')     : 0;
+    const okapiMuskelKg    = cb('feed-okapi-muskel')   ? getKgFM('okapi-muskel')   : 0;
+    const navalisSelenKg   = cb('feed-navalis-selen')  ? getKgFM('navalis-selen')  : 0;
+    const goldwertKg       = cb('feed-goldwert')       ? getKgFM('goldwert')       : 0;
 
-    const hasMineralNamed = (term) => res.saule3.some(i => i.name.toLowerCase().includes(term.toLowerCase()));
+    // Hilfsfunktion: Summe eines Nährstoffs über alle Futtermittel
+    function nSum(mineral, factor) {
+        const n = (key) => (NAEHRWERTE[key] && NAEHRWERTE[key][mineral]) || 0;
+        return r2(
+            (heuKg         * (heu[mineral] || 0))          +
+            (strohKgTM     * n('haferstroh'))               +
+            (weideKgTM     * n('weide'))                    +
+            (agrobs_kg     * n('agrobs'))                   +
+            (haferKgTM     * n('hafer'))                    +
+            (sojaKgTM      * n('sojaschrot'))               +
+            (luzCobsKg     * n('luzernecobs'))              +
+            (luzHaecksKg   * n('luzernehaecksel'))          +
+            (espCobsKg     * n('esparsettecobs'))           +
+            (hanfsamenKg   * n('hanfsamen'))                +
+            (hanfschrotKg  * n('hanfschrot'))               +
+            (leinsamenKg   * n('leinsamen'))                +
+            (pharmoxMgKg   * n('pharmox-mg'))               +
+            (themineralKg  * n('themineral'))               +
+            (okapiMinKg    * n('okapi-mineral'))            +
+            (okapiZinkKg   * n('okapi-zink'))               +
+            (okapiMuskelKg * n('okapi-muskel'))             +
+            (navalisSelenKg* n('navalis-selen'))            +
+            (goldwertKg    * n('goldwert'))
+        ) * (factor || 1);
+    }
+
+    // ── NÄHRSTOFFTABELLE IST vs. SOLL ──
+    // Sollwerte nach GfE 2014 pro 100 kg KM (Erhaltungsbedarf)
+    const BEDARF_100 = {
+        me:        { soll: 10.5,  einheit: 'MJ' }, // Erhaltungsbedarf Warmblut (GfE)
+        pcve:      { soll: null,  einheit: 'g'  }, // Sonder: 1.8g × KM
+        calcium:   { soll: 3.5,   einheit: 'g'  },
+        phosphor:  { soll: 2.5,   einheit: 'g'  },
+        magnesium: { soll: 1.1,   einheit: 'g'  },
+        natrium:   { soll: 0.6,   einheit: 'g'  },
+        kalium:    { soll: 2.9,   einheit: 'g'  },
+        zink:      { soll: 85,    einheit: 'mg' },
+        kupfer:    { soll: 21,    einheit: 'mg' },
+        mangan:    { soll: 85,    einheit: 'mg' },
+        eisen:     { soll: 85,    einheit: 'mg' },
+        selen:     { soll: 0.21,  einheit: 'mg' },
+        vitE:      { soll: 106,   einheit: 'mg' },
+    };
+
+    function naehrRow(label, mineral, sollOverride) {
+        const bd = BEDARF_100[mineral];
+        const ist = nSum(mineral);
+        const soll = sollOverride !== undefined ? sollOverride : r2(bd.soll * weight / 100);
+        const pct  = soll > 0 && ist > 0 ? Math.round(ist / soll * 100) : (ist === 0 ? 0 : null);
+        return { label, ist: r2(ist), soll, pct, einheit: bd.einheit };
+    }
+
+    // ME-Soll: bei zu dünn +20%
+    const meSollFaktor = condition === 'thin' ? 1.2 : 1.0;
+    const meSoll = r2(BEDARF_100.me.soll * weight / 100 * meSollFaktor);
+
+    res.naehr = [
+        naehrRow('Energie (ME)',   'me',        meSoll),
+        naehrRow('Protein (pcvE)', 'pcve',      r1(1.8 * weight)),
+        naehrRow('Calcium',        'calcium'),
+        naehrRow('Phosphor',       'phosphor'),
+        naehrRow('Magnesium',      'magnesium'),
+        naehrRow('Natrium',        'natrium'),
+        naehrRow('Kalium',         'kalium'),
+        naehrRow('Zink',           'zink'),
+        naehrRow('Kupfer',         'kupfer'),
+        naehrRow('Mangan',         'mangan'),
+        naehrRow('Eisen',          'eisen'),
+        naehrRow('Selen',          'selen'),
+        naehrRow('Vitamin E',      'vitE'),
+    ];
+
+    // Salzleckstein → Natrium gilt als voll gedeckt
+    if (cb('feed-salzleckstein')) {
+        const natrRow = res.naehr.find(r => r.label === 'Natrium');
+        if (natrRow) { natrRow.ist = natrRow.soll; natrRow.pct = 100; }
+    }
+
+    // Kurzform für bestehende Hinweise-Logik
+    const magTotal      = nSum('magnesium');
+    const magBedarf     = r1(BEDARF_100.magnesium.soll * weight / 100);
+    const zinkTotal     = Math.round(nSum('zink'));
+    const zinkBedarf    = Math.round(BEDARF_100.zink.soll * weight / 100);
+    const selenTotal    = nSum('selen');
+    const selenBedarf   = r2(BEDARF_100.selen.soll * weight / 100);
+    const natriumBedarf = r1(BEDARF_100.natrium.soll * weight / 100);
+    const natriumTotal  = nSum('natrium');
+
+    const hasMineralNamed = (term) => {
+        const t = term.toLowerCase();
+        if (res.saule3.some(i => i.name.toLowerCase().includes(t))) return true;
+        if (t.includes('salz') || t.includes('natrium') || t.includes('leckstein')) return cb('feed-salzleckstein') || cb('feed-okapi-mineral') || cb('feed-okapi-muskel');
+        if (t.includes('magnesium')) return cb('feed-pharmox-mg') || cb('feed-themineral') || cb('feed-okapi-mineral') || cb('feed-okapi-muskel');
+        if (t.includes('zink')) return cb('feed-okapi-zink') || cb('feed-okapi-mineral') || cb('feed-goldwert');
+        if (t.includes('selen')) return cb('feed-navalis-selen') || cb('feed-okapi-mineral') || cb('feed-goldwert');
+        return false;
+    };
 
     if (!hasMineralNamed('salz') && !hasMineralNamed('natrium') && !hasMineralNamed('leckstein')) {
-        res.mineralstoffe.push({ name: '🧂 Salzleckstein fehlt!', status: 'error', text: `Natriumbedarf ca. ${natriumBedarf} g/Tag. Über Heu nur ca. ${natriumViaheu} g. Salzleckstein dauerhaft anbieten.` });
+        res.mineralstoffe.push({ name: '🧂 Salzleckstein fehlt!', status: 'error', text: `Natriumbedarf ca. ${natriumBedarf} g/Tag. Über Futter ca. ${natriumTotal} g gedeckt. Salzleckstein dauerhaft anbieten.` });
     }
-    if (!hasMineralNamed('magnesium') && magViaheu < magBedarf * 0.75) {
-        res.mineralstoffe.push({ name: '💛 Magnesium', status: 'warning', text: `Bedarf ~${magBedarf} g/Tag. Über Heu ca. ${magViaheu} g. Magnesiumcitrat-Kur empfohlen.` });
+    if (!hasMineralNamed('magnesium') && magTotal < magBedarf * 0.75) {
+        res.mineralstoffe.push({ name: '💛 Magnesium', status: 'warning', text: `Bedarf ~${magBedarf} g/Tag. Über Futter ca. ${magTotal} g gedeckt. Magnesiumcitrat-Kur empfohlen.` });
     }
-    if (!hasMineralNamed('zink') && zinkViaheu < zinkBedarf * 0.55) {
-        res.mineralstoffe.push({ name: '⭐ Zink', status: 'warning', text: `Bedarf ~${zinkBedarf} mg/Tag. Über Heu ~${zinkViaheu} mg. Zinkchelat empfohlen — besonders vor Fellwechsel!` });
+    if (!hasMineralNamed('zink') && zinkTotal < zinkBedarf * 0.55) {
+        res.mineralstoffe.push({ name: '⭐ Zink', status: 'warning', text: `Bedarf ~${zinkBedarf} mg/Tag. Über Futter ~${zinkTotal} mg gedeckt. Zinkchelat empfohlen — besonders vor Fellwechsel!` });
     }
     if (!hasMineralNamed('selen')) {
-        res.mineralstoffe.push({ name: '✨ Selen', status: 'warning', text: `Deutsche Böden selenarm. Über Heu nur ~${selenViaheu} mg/Tag (Bedarf ~${selenBedarf} mg). ${Math.round(weight * 5 / 600)} Paranüsse täglich oder Selenergänzung.` });
+        res.mineralstoffe.push({ name: '✨ Selen', status: 'warning', text: `Deutsche Böden selenarm. Über Futter nur ~${selenTotal} mg/Tag (Bedarf ~${selenBedarf} mg). ${Math.round(weight * 5 / 600)} Paranüsse täglich oder Selenergänzung.` });
     }
 
     if (cb('feed-weide')) res.hinweise.push('🌿 Weidegang vorhanden — Vitamin A und E teilweise abgedeckt. Zuckeraufnahme im Blick behalten (1 Weidetag ≈ 1 kg Zucker).');
@@ -1109,6 +1885,57 @@ function buildResults(weight, condition, heu) {
 // ============================================================
 function renderResults(r) {
     let html = '';
+
+    // ── NÄHRSTOFFTABELLE ──
+    if (r.naehr && r.naehr.length) {
+        const ampel = (pct, mineral) => {
+            if (pct === null || pct === undefined) return `<span class="ampel ampel-gray" title="Keine Daten"></span>`;
+            if (pct === 0) return `<span class="ampel ampel-gray" title="Keine Daten"></span>`;
+            // Obere Grenze: Kupfer + Selen streng (>200% = rot), Rest tolerant (>300% = rot)
+            const strictAbove = ['Kupfer','Selen'].includes(mineral);
+            const upperRed = strictAbove ? 200 : 300;
+            if (pct >= 90 && pct <= upperRed) return `<span class="ampel ampel-green" title="${pct}%"></span>`;
+            if (pct >= 70) return `<span class="ampel ampel-yellow" title="${pct}%"></span>`;
+            return `<span class="ampel ampel-red" title="${pct}%"></span>`;
+        };
+        const pctText = (pct) => pct !== null && pct !== undefined ? pct + '%' : '—';
+        const secRow = (label) => `<tr><td colspan="5" class="naehr-section-label">${label}</td></tr>`;
+        const minerals  = ['Protein (pcvE)','Calcium','Phosphor','Magnesium','Natrium','Kalium'];
+        const traceIdx  = 6; // ab index 6 kommen Spurenelemente
+
+        html += `<div class="card result-section">
+            <h3>📊 Nährstoffbilanz</h3>
+            <p class="saule-hint" style="margin-bottom:10px;">IST-Werte deiner aktuellen Fütterung (Heu: Empfehlungsmenge) vs. GfE-Tagesbedarf.</p>
+            <table class="naehr-table">
+                <thead><tr>
+                    <th>Nährstoff</th>
+                    <th>SOLL</th>
+                    <th>IST</th>
+                    <th>%</th>
+                    <th></th>
+                </tr></thead>
+                <tbody>
+                    ${secRow('Energie')}`;
+        const SECTIONS = { 'Protein (pcvE)': 'Protein', 'Calcium': 'Mengenelemente', 'Zink': 'Spurenelemente', 'Vitamin E': 'Vitamine' };
+        for (const row of r.naehr) {
+            if (SECTIONS[row.label]) html += secRow(SECTIONS[row.label]);
+            html += `<tr>
+                <td>${row.label}</td>
+                <td>${row.soll} ${row.einheit}</td>
+                <td>${row.ist} ${row.einheit}</td>
+                <td>${pctText(row.pct)}</td>
+                <td>${ampel(row.pct, row.label)}</td>
+            </tr>`;
+        }
+        html += `</tbody></table>
+            <p class="naehr-legend">
+                <span class="ampel ampel-green"></span> 90–300 % &nbsp;
+                <span class="ampel ampel-yellow"></span> 70–89 % &nbsp;
+                <span class="ampel ampel-red"></span> &lt;70 % &nbsp;
+                <span class="ampel ampel-gray"></span> keine Daten
+            </p>
+        </div>`;
+    }
 
     // Säule 1
     html += `<div class="card result-section"><h3>🌿 Säule 1 — Raufutter (Heu)</h3>

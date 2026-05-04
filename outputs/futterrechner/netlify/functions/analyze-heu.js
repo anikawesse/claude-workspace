@@ -22,7 +22,7 @@ exports.handler = async (event) => {
         const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
         const message = await client.messages.create({
-            model: 'claude-haiku-4-5-20251001',
+            model: 'claude-3-5-haiku-20241022',
             max_tokens: 300,
             messages: [{
                 role: 'user',
@@ -37,18 +37,24 @@ exports.handler = async (event) => {
                     },
                     {
                         type: 'text',
-                        text: `Dies ist eine Heuanalyse (z. B. Lufa-Laborbericht). Extrahiere folgende Werte und antworte NUR mit einem JSON-Objekt, ohne Erklärungen:
+                        text: `Dies ist eine Heuanalyse (LUFA-Laborbericht). Lies NUR die Spalte "Berechnet auf die Trockensubstanz". Antworte NUR mit diesem JSON, ohne Erklärungen:
 {
+  "me": <ME-Pferd in MJ/kg oder null>,
   "zucker": <Gesamtzucker in % oder null>,
-  "rohprotein": <Rohprotein in g/kg oder null>,
-  "calcium": <Calcium in g/kg oder null>,
-  "phosphor": <Phosphor in g/kg oder null>,
-  "magnesium": <Magnesium in g/kg oder null>,
-  "zink": <Zink in mg/kg oder null>,
+  "pcvxp": <pcv XP in % oder null>,
+  "calcium": <Calcium in % oder null>,
+  "phosphor": <Phosphor in % oder null>,
+  "magnesium": <Magnesium in % oder null>,
+  "natrium": <Natrium in % oder null>,
+  "kalium": <Kalium in % oder null>,
+  "schwefel": <Schwefel in % oder null>,
   "kupfer": <Kupfer in mg/kg oder null>,
+  "zink": <Zink in mg/kg oder null>,
+  "mangan": <Mangan in mg/kg oder null>,
+  "eisen": <Eisen in mg/kg oder null>,
   "selen": <Selen in mg/kg oder null>
 }
-Wenn ein Wert nicht erkennbar ist: null. Nur JSON, keine weiteren Texte.`
+Wichtig: Mengenelemente (Ca, P, Mg, Na, K, S) in %, Spurenelemente in mg/kg. Nur JSON, keine weiteren Texte.`
                     }
                 ]
             }]
