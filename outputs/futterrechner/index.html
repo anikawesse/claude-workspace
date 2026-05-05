@@ -205,33 +205,16 @@
             padding: 10px 0; border-bottom: 1px solid #f0e8e2;
         }
         .dynamic-item-row:last-child { border-bottom: none; }
-        /* Mode bar */
+        /* Item bar */
         .item-mode-bar { display: flex; gap: 6px; align-items: center; margin-bottom: 8px; }
-        .item-mode-btn {
-            padding: 5px 12px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
-            cursor: pointer; border: 1.5px solid #ddd; background: white; color: var(--text-light);
-            font-family: 'Open Sans', sans-serif; transition: all 0.18s;
-        }
-        .item-mode-btn.active { background: var(--brown); color: white; border-color: var(--brown); }
-        .item-mode-btn:hover:not(.active) { border-color: var(--brown); color: var(--brown); }
         .item-mode-spacer { flex: 1; }
         /* Manual inputs */
         .item-manual-row { display: flex; gap: 8px; align-items: center; }
         .item-name-input { flex: 1; min-width: 0; padding: 7px 10px; font-size: 0.85rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
         .item-name-input:focus { outline: none; border-color: var(--brown); }
-        .item-menge-input { width: 72px; padding: 7px 8px; font-size: 0.84rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
+        .item-menge-input { flex: 0 0 72px; min-width: 0; padding: 7px 8px; font-size: 0.84rem; border: 1.5px solid #ddd; border-radius: 6px; font-family: 'Open Sans', sans-serif; }
         .item-menge-input:focus { outline: none; border-color: var(--brown); }
         .item-einheit-select { padding: 7px 6px; font-size: 0.78rem; border: 1.5px solid #ddd; border-radius: 6px; background: white; color: var(--text); font-family: 'Open Sans', sans-serif; max-width: 80px; }
-        /* Photo area */
-        .item-photo-area { display: flex; flex-direction: column; gap: 8px; }
-        .photo-upload-zone {
-            border: 2px dashed #ddd; border-radius: 8px; padding: 18px 12px;
-            text-align: center; cursor: pointer; color: var(--text-light);
-            font-size: 0.84rem; transition: all 0.2s; background: #fdf8f5;
-        }
-        .photo-upload-zone:hover { border-color: var(--brown); background: #fef5ef; color: var(--brown); }
-        .photo-upload-zone.loading { opacity: 0.6; cursor: default; }
-        .photo-result-row { display: flex; gap: 8px; align-items: center; }
         /* Remove button */
         .btn-item-remove { background: none; border: none; padding: 4px 6px; cursor: pointer; color: #ccc; font-size: 1.1rem; line-height: 1; transition: color 0.2s; }
         .btn-item-remove:hover { color: var(--red); }
@@ -246,7 +229,6 @@
         .btn-add-item:hover { border-color: var(--brown); background: #fef5ef; }
 
         .saule-hint { font-size: 0.77rem; color: var(--text-light); margin-top: 10px; font-style: italic; line-height: 1.5; }
-        .photo-analyze-note { font-size: 0.77rem; color: var(--text-light); text-align: center; margin-top: 6px; }
 
         /* Buttons */
         .btn-row { display: flex; gap: 12px; margin-top: 24px; }
@@ -296,6 +278,7 @@
         .ampel { display: inline-block; width: 11px; height: 11px; border-radius: 50%; vertical-align: middle; }
         .ampel-green  { background: #5a9e5a; }
         .ampel-yellow { background: #d4a017; }
+        .ampel-purple { background: #8b5cf6; }
         .ampel-red    { background: #c0392b; }
         .ampel-gray   { background: #bbb; }
         .naehr-legend { font-size: 0.72rem; color: var(--text-light); margin-top: 9px; line-height: 1.6; }
@@ -589,7 +572,7 @@
                     <div class="lufa-field"><label>Phosphor %</label><input type="number" id="heu-phosphor" value="0.17" step="0.01" min="0"></div>
                     <div class="lufa-field"><label>Magnesium %</label><input type="number" id="heu-magnesium" value="0.13" step="0.01" min="0"></div>
                     <div class="lufa-field"><label>Natrium %</label><input type="number" id="heu-natrium" value="0.10" step="0.01" min="0"></div>
-                    <div class="lufa-field"><label>Kalium %</label><input type="number" id="heu-kalium" value="1.90" step="0.01" min="0"></div>
+
                     <div class="lufa-field"><label>Schwefel %</label><input type="number" id="heu-schwefel" value="0.20" step="0.01" min="0"></div>
 
                     <div class="lufa-field" style="grid-column:1/-1;padding:8px 0 2px;font-size:0.72rem;font-weight:700;color:var(--brown);text-transform:uppercase;letter-spacing:0.04em;">Spurenelemente (mg/kg)</div>
@@ -658,6 +641,7 @@
                 <span class="menge-label-sm">Häufigkeit:</span>
                 <select class="unit-select" id="unit-aeste"><option>nach Bedarf</option><option>täglich</option></select>
             </div>
+
         </div>
 
         <!-- Säule 2 -->
@@ -776,16 +760,6 @@
             <p class="saule-hint">Hake an, was du gibst, und trage die Menge ein. Für weitere Produkte nutze den Button unten.</p>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-pharmox-mg" class="feed-cb">
-                <div class="feed-item-label"><strong>Pharmox Magnesiumcitrat</strong></div>
-            </div>
-            <div class="menge-row" id="menge-pharmox-mg-row">
-                <span class="menge-label-sm">Menge:</span>
-                <input type="number" class="menge-input-sm" id="menge-pharmox-mg" value="10">
-                <select class="unit-select" id="unit-pharmox-mg"><option>g/Tag</option></select>
-            </div>
-
-            <div class="feed-item">
                 <input type="checkbox" id="feed-themineral" class="feed-cb">
                 <div class="feed-item-label"><strong>Kristallkraft TheMineral</strong></div>
             </div>
@@ -806,16 +780,6 @@
             </div>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-okapi-zink" class="feed-cb">
-                <div class="feed-item-label"><strong>OKAPI Zinkchelat Plus</strong></div>
-            </div>
-            <div class="menge-row" id="menge-okapi-zink-row">
-                <span class="menge-label-sm">Menge:</span>
-                <input type="number" class="menge-input-sm" id="menge-okapi-zink" value="32">
-                <select class="unit-select" id="unit-okapi-zink"><option>g/Tag</option></select>
-            </div>
-
-            <div class="feed-item">
                 <input type="checkbox" id="feed-okapi-muskel" class="feed-cb">
                 <div class="feed-item-label"><strong>OKAPI Muskelmineral</strong></div>
             </div>
@@ -826,16 +790,6 @@
             </div>
 
             <div class="feed-item">
-                <input type="checkbox" id="feed-navalis-selen" class="feed-cb">
-                <div class="feed-item-label"><strong>Navalis Orthosal Selen</strong></div>
-            </div>
-            <div class="menge-row" id="menge-navalis-selen-row">
-                <span class="menge-label-sm">Menge:</span>
-                <input type="number" class="menge-input-sm" id="menge-navalis-selen" value="15">
-                <select class="unit-select" id="unit-navalis-selen"><option>g/Tag</option></select>
-            </div>
-
-            <div class="feed-item">
                 <input type="checkbox" id="feed-goldwert" class="feed-cb">
                 <div class="feed-item-label"><strong>Dr. Weyrauch Nr. 4 Goldwert</strong></div>
             </div>
@@ -843,6 +797,36 @@
                 <span class="menge-label-sm">Menge:</span>
                 <input type="number" class="menge-input-sm" id="menge-goldwert" value="30">
                 <select class="unit-select" id="unit-goldwert"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-pharmox-mg" class="feed-cb">
+                <div class="feed-item-label"><strong>Magnesium</strong></div>
+            </div>
+            <div class="menge-row" id="menge-pharmox-mg-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-pharmox-mg" value="10">
+                <select class="unit-select" id="unit-pharmox-mg"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-zink" class="feed-cb">
+                <div class="feed-item-label"><strong>Zink</strong></div>
+            </div>
+            <div class="menge-row" id="menge-zink-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-zink" value="4">
+                <select class="unit-select" id="unit-zink"><option>g/Tag</option></select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-navalis-selen" class="feed-cb">
+                <div class="feed-item-label"><strong>Selen</strong></div>
+            </div>
+            <div class="menge-row" id="menge-navalis-selen-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-navalis-selen" value="15">
+                <select class="unit-select" id="unit-navalis-selen"><option>g/Tag</option></select>
             </div>
 
             <div class="feed-item">
@@ -859,10 +843,61 @@
             <button class="btn-add-item" onclick="addDynamicItem(3)">+ Weiteres Mineralfutter hinzufügen</button>
         </div>
 
-        <!-- Säule 4 — frei -->
+        <!-- Säule 4 — Ergänzungen -->
         <div class="card">
             <div class="card-title">🌿 Säule 4 — Ergänzungen</div>
-            <p class="saule-hint">Kräuter, Algen, Leinsamen-Kuren usw. — alles was du aktuell ergänzt.</p>
+            <p class="saule-hint">Leckerlis, Obst & Gemüse, Kräuter, Algen usw. — alles was du aktuell ergänzt.</p>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-karotten" class="feed-cb">
+                <div class="feed-item-label"><strong>Karotten</strong></div>
+            </div>
+            <div class="menge-row" id="menge-karotten-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-karotten" value="2">
+                <select class="unit-select" id="unit-karotten">
+                    <option>Stück/Tag</option>
+                    <option>g/Tag</option>
+                </select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-aepfel" class="feed-cb">
+                <div class="feed-item-label"><strong>Äpfel</strong></div>
+            </div>
+            <div class="menge-row" id="menge-aepfel-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-aepfel" value="1">
+                <select class="unit-select" id="unit-aepfel">
+                    <option>Stück/Tag</option>
+                    <option>g/Tag</option>
+                </select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-bananen" class="feed-cb">
+                <div class="feed-item-label"><strong>Bananen</strong></div>
+            </div>
+            <div class="menge-row" id="menge-bananen-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-bananen" value="1">
+                <select class="unit-select" id="unit-bananen">
+                    <option>Stück/Tag</option>
+                    <option>g/Tag</option>
+                </select>
+            </div>
+
+            <div class="feed-item">
+                <input type="checkbox" id="feed-hagebutten" class="feed-cb">
+                <div class="feed-item-label"><strong>Hagebutten</strong></div>
+            </div>
+            <div class="menge-row" id="menge-hagebutten-row">
+                <span class="menge-label-sm">Menge:</span>
+                <input type="number" class="menge-input-sm" id="menge-hagebutten" value="50">
+                <select class="unit-select" id="unit-hagebutten">
+                    <option>g/Tag</option>
+                </select>
+            </div>
 
             <div class="dynamic-items" id="saule4-items" style="margin-top:12px;"></div>
 
@@ -962,7 +997,8 @@ const NAEHRWERTE = {
         zink: 25,           // mg/kg TM
         selen: 0.08,        // mg/kg TM
         mangan: 65,         // mg/kg TM
-        eisen: 200          // mg/kg TM
+        eisen: 200,         // mg/kg TM
+        vitA: 40000,        // IE/kg TM (~100 mg Beta-Carotin × 400 IE/mg)
     },
     agrobs: {
         // Werte pro kg Produkt (laut Hersteller Agrobs AlpenGrün Müsli)
@@ -1043,8 +1079,58 @@ const NAEHRWERTE = {
     },
     // ── SÄULE 3 — MINERALFUTTER (Werte pro kg Produkt) ──
     'pharmox-mg': {
-        // 100% Magnesiumcitrat, Quelle: vitstore.de
+        // Magnesiumcitrat, Quelle: vitstore.de
         magnesium: 160              // g/kg (~16% Mg-Anteil in Magnesiumcitrat)
+    },
+    'zink': {
+        // Generisches Zink-Ergänzungsmittel (Zinkchelat/-gluconat, ~15% Zn)
+        // Quelle: Durchschnittswert gängiger Pferde-Zinkpräparate
+        zink: 150000                // mg/kg (~15% Zn → bei 10 g/Tag = 1500 mg Zn)
+    },
+    karotten: {
+        // Möhren frisch, Quelle: BLS / USDA FoodData Central
+        me: 1.3,          // MJ/kg FM
+        pcve: 4,          // g/kg FM
+        calcium: 0.4,     // g/kg FM
+        phosphor: 0.3,    // g/kg FM
+        magnesium: 0.15,  // g/kg FM
+        natrium: 0.4,     // g/kg FM
+        zucker: 60,       // g/kg FM (Zucker beachten!)
+        vitA: 32000,      // IE/kg FM (~80 mg Beta-Carotin × 400 IE/mg)
+    },
+    aepfel: {
+        // Äpfel frisch, Quelle: BLS / USDA FoodData Central
+        me: 2.3,          // MJ/kg FM
+        pcve: 3,          // g/kg FM
+        calcium: 0.7,     // g/kg FM
+        phosphor: 0.9,    // g/kg FM
+        magnesium: 0.5,   // g/kg FM
+        natrium: 0.1,     // g/kg FM
+        kalium: 1.3,      // g/kg FM
+        zucker: 100,      // g/kg FM (Zucker beachten!)
+    },
+    bananen: {
+        // Bananen frisch (ohne Schale), Quelle: BLS / USDA FoodData Central
+        me: 3.8,          // MJ/kg FM
+        pcve: 11,         // g/kg FM
+        calcium: 0.5,     // g/kg FM
+        phosphor: 2.2,    // g/kg FM
+        magnesium: 2.9,   // g/kg FM
+        natrium: 0.1,     // g/kg FM
+        kalium: 3.6,      // g/kg FM
+        zucker: 130,      // g/kg FM (sehr zuckerreich!)
+    },
+    hagebutten: {
+        // Hagebutten frisch, Quelle: BLS / Souci-Fachmann-Kraut
+        me: 3.0,          // MJ/kg FM
+        pcve: 15,         // g/kg FM
+        calcium: 2.6,     // g/kg FM
+        phosphor: 1.6,    // g/kg FM
+        magnesium: 1.4,   // g/kg FM
+        natrium: 0.3,     // g/kg FM
+        kalium: 5.8,      // g/kg FM
+        zucker: 70,       // g/kg FM
+        vitE: 8.0,        // mg/kg FM (gute Vit-E-Quelle)
     },
     themineral: {
         // Kristallkraft TheMineral, Quelle: kristallkraft-pferdefutter.de
@@ -1372,7 +1458,6 @@ function setLufaDefaults() {
     document.getElementById('heu-phosphor').value  = LUFA.phosphor;
     document.getElementById('heu-magnesium').value = LUFA.magnesium;
     document.getElementById('heu-natrium').value   = LUFA.natrium;
-    document.getElementById('heu-kalium').value    = LUFA.kalium;
     document.getElementById('heu-schwefel').value  = LUFA.schwefel;
     document.getElementById('heu-kupfer').value    = LUFA.kupfer;
     document.getElementById('heu-zink').value      = LUFA.zink;
@@ -1457,8 +1542,6 @@ function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag') {
 
     row.innerHTML = `
         <div class="item-mode-bar">
-            <button class="item-mode-btn active" id="mode-manual-${id}" onclick="setItemMode('${id}','manual')">✏️ Manuell</button>
-            <button class="item-mode-btn" id="mode-photo-${id}" onclick="setItemMode('${id}','photo')">📷 Foto</button>
             <span class="item-mode-spacer"></span>
             <button class="btn-item-remove" onclick="removeDynamicItem('${id}')" title="Entfernen">✕</button>
         </div>
@@ -1466,18 +1549,6 @@ function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag') {
             <input type="text" class="item-name-input" id="name-${id}" placeholder="Produktname" value="${name}">
             <input type="text" class="item-menge-input" id="menge-dyn-${id}" placeholder="Menge" value="${menge}">
             <select class="item-einheit-select" id="einheit-${id}">${opts}</select>
-        </div>
-        <div class="item-photo-area" id="photo-area-${id}" style="display:none">
-            <div class="photo-upload-zone" id="photo-zone-${id}" onclick="triggerPhoto('${id}')">
-                📷 Foto der Verpackung aufnehmen oder hochladen<br>
-                <span style="font-size:0.75rem;opacity:0.7">Name und Menge werden automatisch erkannt</span>
-            </div>
-            <input type="file" id="photo-file-${id}" accept="image/*" style="display:none" onchange="analyzeProduct('${id}', this)">
-            <div class="photo-result-row" id="photo-result-${id}" style="display:none">
-                <input type="text" class="item-name-input" id="name-photo-${id}" placeholder="Produktname" readonly style="background:#f5f0eb;">
-                <input type="text" class="item-menge-input" id="menge-photo-${id}" placeholder="Menge" readonly style="background:#f5f0eb;">
-                <select class="item-einheit-select" id="einheit-photo-${id}">${opts}</select>
-            </div>
         </div>
     `;
 
@@ -1601,6 +1672,10 @@ function getKgFM(key) {
     const u = val('unit-' + key);
     if (u === 'g/Tag') return m / 1000;
     if (u === 'kg/Tag') return m;
+    if (u === 'Stück/Tag') {
+        const stueckGewicht = { karotten: 0.1, aepfel: 0.18, bananen: 0.12 };
+        return m * (stueckGewicht[key] || 0.1);  // Karotte 100g, Apfel 180g, Banane 120g
+    }
     return m;
 }
 
@@ -1630,7 +1705,6 @@ function getHeuValues() {
         phosphor:  pct('heu-phosphor',  LUFA.phosphor),
         magnesium: pct('heu-magnesium', LUFA.magnesium),
         natrium:   pct('heu-natrium',   LUFA.natrium),
-        kalium:    pct('heu-kalium',    LUFA.kalium),
         schwefel:  pct('heu-schwefel',  LUFA.schwefel),
         // Spurenelemente: direkt in mg/kg TM
         kupfer:    g('heu-kupfer',    LUFA.kupfer),
@@ -1725,13 +1799,14 @@ function buildResults(weight, condition, heu) {
     // ── MINERALSTOFFE — statische Checkboxen + dynamische Items ──
     res.saule3 = [];
     [
-        ['pharmox-mg',    'Pharmox Magnesiumcitrat'],
+        ['pharmox-mg',    'Magnesium'],
         ['themineral',    'Kristallkraft TheMineral'],
         ['okapi-mineral', 'OKAPI Mineralpellets'],
         ['okapi-zink',    'OKAPI Zinkchelat Plus'],
         ['okapi-muskel',  'OKAPI Muskelmineral'],
-        ['navalis-selen', 'Navalis Orthosal Selen'],
+        ['navalis-selen', 'Selen'],
         ['goldwert',      'Dr. Weyrauch Nr. 4 Goldwert'],
+        ['zink',          'Zink'],
         ['salzleckstein', 'Salzleckstein'],
     ].forEach(([id, name]) => {
         if (!cb('feed-' + id)) return;
@@ -1742,6 +1817,16 @@ function buildResults(weight, condition, heu) {
         name: item.name, menge: item.menge ? item.menge + ' ' + item.einheit : '', einheit: ''
     }));
     res.saule4 = getDynamicItems(4);
+
+    // Extras Säule 1
+    if (cb('feed-karotten'))   res.karotten   = getMenge('karotten');
+    if (cb('feed-aepfel'))     res.aepfel     = getMenge('aepfel');
+    if (cb('feed-bananen'))    res.bananen    = getMenge('bananen');
+    if (cb('feed-hagebutten')) {
+        const kg = getKgFM('hagebutten');
+        res.hagebutten    = getMenge('hagebutten');
+        res.hagebuttenVitE = r2(kg * NAEHRWERTE.hagebutten.vitE);
+    }
 
     // ── NÄHRWERT-BERECHNUNGEN aus Säule 1 Futtermitteln ──
     const strohKgTM        = cb('feed-stroh')          ? getKgFM('stroh')          * NAEHRWERTE.haferstroh.tm    : 0;
@@ -1763,6 +1848,12 @@ function buildResults(weight, condition, heu) {
     const okapiMuskelKg    = cb('feed-okapi-muskel')   ? getKgFM('okapi-muskel')   : 0;
     const navalisSelenKg   = cb('feed-navalis-selen')  ? getKgFM('navalis-selen')  : 0;
     const goldwertKg       = cb('feed-goldwert')       ? getKgFM('goldwert')       : 0;
+    const zinkKg           = cb('feed-zink')           ? getKgFM('zink')           : 0;
+    // Säule 1 — Ergänzungen
+    const karottenKg       = cb('feed-karotten')       ? getKgFM('karotten')       : 0;
+    const aepfelKg         = cb('feed-aepfel')         ? getKgFM('aepfel')         : 0;
+    const bananenKg        = cb('feed-bananen')        ? getKgFM('bananen')        : 0;
+    const hagebuttenKg     = cb('feed-hagebutten')     ? getKgFM('hagebutten')     : 0;
 
     // Hilfsfunktion: Summe eines Nährstoffs über alle Futtermittel
     function nSum(mineral, factor) {
@@ -1786,7 +1877,12 @@ function buildResults(weight, condition, heu) {
             (okapiZinkKg   * n('okapi-zink'))               +
             (okapiMuskelKg * n('okapi-muskel'))             +
             (navalisSelenKg* n('navalis-selen'))            +
-            (goldwertKg    * n('goldwert'))
+            (goldwertKg    * n('goldwert'))                 +
+            (zinkKg        * n('zink'))                     +
+            (karottenKg    * n('karotten'))    +
+            (aepfelKg      * n('aepfel'))      +
+            (bananenKg     * n('bananen'))     +
+            (hagebuttenKg  * n('hagebutten'))
         ) * (factor || 1);
     }
 
@@ -1799,13 +1895,13 @@ function buildResults(weight, condition, heu) {
         phosphor:  { soll: 2.5,   einheit: 'g'  },
         magnesium: { soll: 1.1,   einheit: 'g'  },
         natrium:   { soll: 0.6,   einheit: 'g'  },
-        kalium:    { soll: 2.9,   einheit: 'g'  },
         zink:      { soll: 85,    einheit: 'mg' },
         kupfer:    { soll: 21,    einheit: 'mg' },
         mangan:    { soll: 85,    einheit: 'mg' },
         eisen:     { soll: 85,    einheit: 'mg' },
         selen:     { soll: 0.21,  einheit: 'mg' },
         vitE:      { soll: 106,   einheit: 'mg' },
+        vitA:      { soll: 4000,  einheit: 'IE' },
     };
 
     function naehrRow(label, mineral, sollOverride) {
@@ -1822,18 +1918,18 @@ function buildResults(weight, condition, heu) {
 
     res.naehr = [
         naehrRow('Energie (ME)',   'me',        meSoll),
-        naehrRow('Protein (pcvE)', 'pcve',      r1(1.8 * weight)),
+        naehrRow('Protein (pcvE)', 'pcve',      r1(1.0 * weight)),
         naehrRow('Calcium',        'calcium'),
         naehrRow('Phosphor',       'phosphor'),
         naehrRow('Magnesium',      'magnesium'),
         naehrRow('Natrium',        'natrium'),
-        naehrRow('Kalium',         'kalium'),
         naehrRow('Zink',           'zink'),
         naehrRow('Kupfer',         'kupfer'),
         naehrRow('Mangan',         'mangan'),
         naehrRow('Eisen',          'eisen'),
         naehrRow('Selen',          'selen'),
         naehrRow('Vitamin E',      'vitE'),
+        naehrRow('Vitamin A',      'vitA'),
     ];
 
     // Salzleckstein → Natrium gilt als voll gedeckt
@@ -1857,7 +1953,7 @@ function buildResults(weight, condition, heu) {
         if (res.saule3.some(i => i.name.toLowerCase().includes(t))) return true;
         if (t.includes('salz') || t.includes('natrium') || t.includes('leckstein')) return cb('feed-salzleckstein') || cb('feed-okapi-mineral') || cb('feed-okapi-muskel');
         if (t.includes('magnesium')) return cb('feed-pharmox-mg') || cb('feed-themineral') || cb('feed-okapi-mineral') || cb('feed-okapi-muskel');
-        if (t.includes('zink')) return cb('feed-okapi-zink') || cb('feed-okapi-mineral') || cb('feed-goldwert');
+        if (t.includes('zink')) return cb('feed-okapi-mineral') || cb('feed-goldwert') || cb('feed-zink');
         if (t.includes('selen')) return cb('feed-navalis-selen') || cb('feed-okapi-mineral') || cb('feed-goldwert');
         return false;
     };
@@ -1877,6 +1973,62 @@ function buildResults(weight, condition, heu) {
 
     if (cb('feed-weide')) res.hinweise.push('🌿 Weidegang vorhanden — Vitamin A und E teilweise abgedeckt. Zuckeraufnahme im Blick behalten (1 Weidetag ≈ 1 kg Zucker).');
 
+    // ── UNTERVERSORGUNGSHINWEISE (rote Ampel → konkrete Empfehlung) ──
+    res.defizite = [];
+    for (const row of res.naehr) {
+        if (!row.pct || row.pct >= 70) continue;
+        const gap = r2(row.soll - row.ist);
+        let text = '', rec = '';
+        if (row.label === 'Energie (ME)') {
+            text = `Energieversorgung zu gering (${row.ist} von ${row.soll} MJ/Tag, Lücke: ${gap} MJ).`;
+            rec  = `Mehr Heu anbieten oder kalorienreiches Basisfutter ergänzen (z. B. Hafer, Agrobs).`;
+        } else if (row.label === 'Protein (pcvE)') {
+            const gLuz = Math.round(gap / 0.105); // Luzerne 105 g/kg
+            const gSoja = Math.round(gap / 0.220); // Soja 220 g/kg
+            text = `Proteinversorgung zu gering (${row.ist} von ${row.soll} g/Tag, Lücke: ${gap} g).`;
+            rec  = `z. B. ca. ${gLuz} g Luzernehäcksel ODER ca. ${gSoja} g Sojaschrot täglich ergänzen.`;
+        } else if (row.label === 'Calcium') {
+            const gLuz = Math.round(gap / 0.014); // Luzerne 14 g Ca/kg
+            text = `Calcium-Unterversorgung (${row.ist} von ${row.soll} g/Tag, Lücke: ${gap} g).`;
+            rec  = `ca. ${gLuz} g Luzernehäcksel täglich können die Lücke schließen.`;
+        } else if (row.label === 'Phosphor') {
+            text = `Phosphor zu gering (${row.ist} von ${row.soll} g/Tag, Lücke: ${gap} g).`;
+            rec  = `Kleie oder ein Mineralfutter mit Phosphor ergänzen.`;
+        } else if (row.label === 'Magnesium') {
+            const gMg = Math.round(gap / 0.160); // Magnesiumcitrat 160 g Mg/kg
+            text = `Magnesium-Unterversorgung (${row.ist} von ${row.soll} g/Tag, Lücke: ${gap} g).`;
+            rec  = `ca. ${gMg} g Magnesiumcitrat täglich ergänzen.`;
+        } else if (row.label === 'Natrium') {
+            text = `Natrium-Unterversorgung (${row.ist} von ${row.soll} g/Tag).`;
+            rec  = `Salzleckstein dauerhaft zur freien Verfügung anbieten.`;
+        } else if (row.label === 'Zink') {
+            const gZn = r2(gap / 150); // Zinkchelat ~150 mg Zn/g
+            text = `Zink-Unterversorgung (${row.ist} von ${row.soll} mg/Tag, Lücke: ${gap} mg).`;
+            rec  = `ca. ${gZn} g Zinkchelat täglich ergänzen.`;
+        } else if (row.label === 'Kupfer') {
+            text = `Kupfer-Unterversorgung (${row.ist} von ${row.soll} mg/Tag).`;
+            rec  = `Mineralfutter mit Kupfer ergänzen (z. B. OKAPI Mineralpellets oder Dr. Weyrauch Goldwert).`;
+        } else if (row.label === 'Mangan') {
+            text = `Mangan-Unterversorgung (${row.ist} von ${row.soll} mg/Tag).`;
+            rec  = `Mineralfutter mit Mangan ergänzen.`;
+        } else if (row.label === 'Eisen') {
+            text = `Eisen-Unterversorgung (${row.ist} von ${row.soll} mg/Tag).`;
+            rec  = `Echte Eisenmängel sind selten — Heu-Qualität und Bodenherkunft prüfen.`;
+        } else if (row.label === 'Selen') {
+            const gSe = r2(gap / 0.125); // Navalis Selen ~125 mg Se/kg = 0.125 mg/g
+            const paranuss = Math.round(weight * 5 / 600);
+            text = `Selen-Unterversorgung (${row.ist} von ${row.soll} mg/Tag, Lücke: ${gap} mg).`;
+            rec  = `ca. ${gSe} g Selenergänzung täglich. Alternativ: ${paranuss} Paranuss/Tag als Naturquelle.`;
+        } else if (row.label === 'Vitamin E') {
+            text = `Vitamin-E-Unterversorgung (${row.ist} von ${row.soll} mg/Tag).`;
+            rec  = `Hagebutten, Leinöl oder ein Vitamin-E-Supplement ergänzen.`;
+        } else if (row.label === 'Vitamin A') {
+            text = `Vitamin-A-Unterversorgung (${row.ist} von ${row.soll} IE/Tag).`;
+            rec  = `2–3 Karotten täglich oder ein Vitamin-A-haltiges Mineralfutter ergänzen.`;
+        }
+        if (text) res.defizite.push({ label: row.label, text, rec });
+    }
+
     return res;
 }
 
@@ -1892,15 +2044,14 @@ function renderResults(r) {
             if (pct === null || pct === undefined) return `<span class="ampel ampel-gray" title="Keine Daten"></span>`;
             if (pct === 0) return `<span class="ampel ampel-gray" title="Keine Daten"></span>`;
             // Obere Grenze: Kupfer + Selen streng (>200% = rot), Rest tolerant (>300% = rot)
-            const strictAbove = ['Kupfer','Selen'].includes(mineral);
-            const upperRed = strictAbove ? 200 : 300;
-            if (pct >= 90 && pct <= upperRed) return `<span class="ampel ampel-green" title="${pct}%"></span>`;
+            if (pct > 100) return `<span class="ampel ampel-purple" title="${pct}%"></span>`;
+            if (pct >= 90) return `<span class="ampel ampel-green" title="${pct}%"></span>`;
             if (pct >= 70) return `<span class="ampel ampel-yellow" title="${pct}%"></span>`;
             return `<span class="ampel ampel-red" title="${pct}%"></span>`;
         };
         const pctText = (pct) => pct !== null && pct !== undefined ? pct + '%' : '—';
         const secRow = (label) => `<tr><td colspan="5" class="naehr-section-label">${label}</td></tr>`;
-        const minerals  = ['Protein (pcvE)','Calcium','Phosphor','Magnesium','Natrium','Kalium'];
+        const minerals  = ['Protein (pcvE)','Calcium','Phosphor','Magnesium','Natrium'];
         const traceIdx  = 6; // ab index 6 kommen Spurenelemente
 
         html += `<div class="card result-section">
@@ -1916,7 +2067,7 @@ function renderResults(r) {
                 </tr></thead>
                 <tbody>
                     ${secRow('Energie')}`;
-        const SECTIONS = { 'Protein (pcvE)': 'Protein', 'Calcium': 'Mengenelemente', 'Zink': 'Spurenelemente', 'Vitamin E': 'Vitamine' };
+        const SECTIONS = { 'Protein (pcvE)': 'Protein', 'Calcium': 'Mengenelemente', 'Zink': 'Spurenelemente', 'Vitamin E': 'Vitamine', 'Vitamin A': '' };
         for (const row of r.naehr) {
             if (SECTIONS[row.label]) html += secRow(SECTIONS[row.label]);
             html += `<tr>
@@ -1929,12 +2080,25 @@ function renderResults(r) {
         }
         html += `</tbody></table>
             <p class="naehr-legend">
-                <span class="ampel ampel-green"></span> 90–300 % &nbsp;
+                <span class="ampel ampel-purple"></span> &gt;100 % &nbsp;
+                <span class="ampel ampel-green"></span> 90–100 % &nbsp;
                 <span class="ampel ampel-yellow"></span> 70–89 % &nbsp;
                 <span class="ampel ampel-red"></span> &lt;70 % &nbsp;
                 <span class="ampel ampel-gray"></span> keine Daten
-            </p>
-        </div>`;
+            </p>`;
+        if (r.defizite && r.defizite.length > 0) {
+            html += `<div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0e8e2;">
+                <p style="font-size:0.8rem;font-weight:700;color:var(--red);margin-bottom:8px;">⚠️ Unterversorgung erkannt — Empfehlungen:</p>`;
+            for (const d of r.defizite) {
+                html += `<div class="warning-item error" style="margin-bottom:8px;">
+                    <strong>🔴 ${d.label}</strong>
+                    <p>${d.text}</p>
+                    ${d.rec ? `<p style="margin-top:4px;font-weight:600;color:var(--brown);">→ ${d.rec}</p>` : ''}
+                </div>`;
+            }
+            html += `</div>`;
+        }
+        html += `</div>`;
     }
 
     // Säule 1
@@ -1999,6 +2163,21 @@ function renderResults(r) {
 
     // Säule 4
     html += `<div class="card result-section"><h3>🌿 Säule 4 — Ergänzungen</h3>`;
+    const extras4 = [
+        r.karotten   ? { icon:'🥕', name:'Karotten',   hint:`${r.karotten} — Vitamin A (Beta-Carotin): sehr reich. Zucker beachten!` } : null,
+        r.aepfel     ? { icon:'🍎', name:'Äpfel',       hint:`${r.aepfel} — Leckerei mit Mehrwert. Zuckergehalt beachten (bes. bei IR/EMS)!` } : null,
+        r.bananen    ? { icon:'🍌', name:'Bananen',     hint:`${r.bananen} — Gute Kaliumquelle. Sehr zuckerreich — nur in kleinen Mengen!` } : null,
+        r.hagebutten ? { icon:'🌹', name:'Hagebutten',  hint:`${r.hagebutten} — Reich an Vitamin C & E (~${r.hagebuttenVitE} mg/Tag). Natürliche Ergänzung!` } : null,
+    ].filter(Boolean);
+    for (const e of extras4) {
+        html += `<div class="result-item">
+            <div class="result-item-icon">${e.icon}</div>
+            <div class="result-item-content">
+                <strong>${e.name}</strong>
+                <div class="hint">Deine Menge: ${e.hint}</div>
+            </div>
+        </div>`;
+    }
     if (r.saule4.length > 0) {
         for (const item of r.saule4) {
             html += `<div class="result-item">
@@ -2009,7 +2188,8 @@ function renderResults(r) {
                 </div>
             </div>`;
         }
-    } else {
+    }
+    if (extras4.length === 0 && r.saule4.length === 0) {
         html += `<p class="no-feed-note">Keine Ergänzungen eingetragen.</p>`;
     }
     html += `</div>`;
@@ -2044,56 +2224,68 @@ async function downloadPDF() {
     doc.setFont('helvetica','bold'); doc.setFontSize(17); doc.setTextColor(...WHITE);
     doc.text('Futterplan', margin+32, 17);
     doc.setFont('helvetica','normal'); doc.setFontSize(9); doc.setTextColor(...BEIGE);
-    const cond = r.condition === 'fat' ? 'Zu dick' : r.condition === 'thin' ? 'Zu dünn' : 'Ideal';
+    const cond = r.condition === 'fat' ? 'Zu dick' : r.condition === 'thin' ? 'Zu dünn' : 'Ideal Gewicht';
     doc.text(`für ${r.horseName}  ·  ${r.weight} kg  ·  ${cond}`, margin+32, 25);
     doc.text(`Erstellt am ${new Date().toLocaleDateString('de-DE')} · anikas-pferdeakademie.de`, margin+32, 32);
     y = 50;
 
+    const BOTTOM = 275; // Sicherheitsgrenze vor Footer (der bei 285 beginnt)
     function secHeader(title) {
-        if (y > 255) { doc.addPage(); y = 20; }
+        if (y > BOTTOM - 18) { doc.addPage(); y = 20; }
         doc.setFillColor(...LGRAY); doc.rect(margin, y-5, cW, 10, 'F');
         doc.setFont('helvetica','bold'); doc.setFontSize(10); doc.setTextColor(...RED);
         doc.text(title, margin+3, y+2); y += 13;
     }
     function row(label, value, hint) {
-        if (y > 262) { doc.addPage(); y = 20; }
+        const hlines = hint ? doc.splitTextToSize(hint, cW-6) : [];
+        const needed = 7 + (hlines.length ? hlines.length*4+2 : 0);
+        if (y + needed > BOTTOM) { doc.addPage(); y = 20; }
         doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.setTextColor(...BROWN);
         doc.text(label, margin+3, y);
         if (value) { doc.setFontSize(10); doc.text(value, margin+82, y); }
         y += 5.5;
-        if (hint) {
-            const lines = doc.splitTextToSize(hint, cW-6);
+        if (hlines.length) {
             doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
-            doc.text(lines, margin+3, y); y += lines.length*4+2;
+            doc.text(hlines, margin+3, y); y += hlines.length*4+2;
         }
         y += 2;
     }
     function warnBox(title, text, isError) {
-        const lines = doc.splitTextToSize(text, cW-8);
-        const boxH = 6 + lines.length*4 + 4;
-        if (y + boxH > 265) { doc.addPage(); y = 20; }
-        doc.setFillColor(isError?255:255, isError?240:251, isError?240:230);
+        const indent = 6;
+        const textW = cW - indent - 4;
+        const cleanText = text.replace(/→/g, '>>');
+        const lines = doc.splitTextToSize(cleanText, textW);
+        const boxH = 7 + lines.length * 4 + 4;
+        if (y + boxH > BOTTOM) { doc.addPage(); y = 20; }
+        doc.setFillColor(isError ? 255 : 255, isError ? 240 : 251, isError ? 240 : 230);
         doc.rect(margin, y-4, cW, boxH, 'F');
-        doc.setFillColor(...(isError?RED:GOLD)); doc.rect(margin, y-4, 3, boxH, 'F');
-        doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...(isError?RED:BROWN));
-        doc.text(title.replace(/[🧂💛⭐🟠✨💚]/g,'').trim(), margin+6, y);
-        y += 5;
+        doc.setFillColor(...(isError ? RED : GOLD));
+        doc.rect(margin, y-4, 3, boxH, 'F');
+        doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...(isError ? RED : BROWN));
+        doc.text(pdfStr(title), margin+indent, y);
+        y += 5.5;
         doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TEXT);
-        doc.text(lines, margin+6, y); y += lines.length*4+6;
+        doc.text(lines, margin+indent, y);
+        y += lines.length * 4 + 6;
+    }
+
+    // Hilfsfunktion: Emojis und Sonderzeichen für jsPDF entfernen
+    function pdfStr(s) {
+        return (s||'').replace(/[\u{1F000}-\u{1FFFF}\u{2600}-\u{27BF}\u{FE00}-\u{FEFF}]/gu,'').replace(/[≈·×÷→←↑↓]/g,'-').trim();
     }
 
     secHeader('Säule 1 — Raufutter (Heu)');
-    row('Tagesration Heu:', `${r.results.heu.min} – ${r.results.heu.max} kg/Tag`, r.results.heu.note);
+    row('Tagesration Heu:', `${r.results.heu.min} – ${r.results.heu.max} kg/Tag`, pdfStr(r.results.heu.note));
     if (r.results.heu.deineMenge) row('Deine aktuelle Menge:', r.results.heu.deineMenge, '');
-    const zlines = doc.splitTextToSize(r.results.heu.zuckerHinweis.replace(/[✅⚠️]/g,'').trim(), cW-6);
+    if (y > BOTTOM - 10) { doc.addPage(); y = 20; }
+    const zlines = doc.splitTextToSize(pdfStr(r.results.heu.zuckerHinweis), cW-6);
     doc.setFont('helvetica','italic'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
     doc.text(zlines, margin+3, y); y += zlines.length*4+8;
 
     if (r.results.basisfutter.length > 0) {
         secHeader('Säule 2 — Basisfutter & Protein');
         for (const f of r.results.basisfutter) {
-            const hint = [f.hinweis, f.menge ? 'Deine Menge: ' + f.menge : ''].filter(Boolean).join(' | ');
-            row(f.name+':', f.empfehlung, hint);
+            row(f.name+':', f.menge || f.empfehlung || '', pdfStr(f.hinweis || ''));
         }
         y += 2;
     }
@@ -2108,17 +2300,99 @@ async function downloadPDF() {
         doc.text('Keine Mineralstoffe eingetragen.', margin+3, y); y += 8;
     }
     if (r.results.mineralstoffe.length > 0) {
-        for (const m of r.results.mineralstoffe) warnBox(m.name, m.text, m.status==='error');
+        for (const m of r.results.mineralstoffe) warnBox(pdfStr(m.name), pdfStr(m.text), m.status==='error');
     }
     for (const h of r.results.hinweise) {
+        const hlines = doc.splitTextToSize(pdfStr(h), cW-6);
+        if (y + hlines.length*4 > BOTTOM) { doc.addPage(); y = 20; }
         doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
-        doc.text(h.replace(/[✅🌿]/g,'').trim(), margin+3, y); y += 6;
+        doc.text(hlines, margin+3, y); y += hlines.length*4+4;
     }
 
-    if (r.results.saule4.length > 0) {
+    // Säule 4
+    const extras4PDF = [
+        r.results.karotten   ? `Karotten: ${r.results.karotten}` : null,
+        r.results.aepfel     ? `Äpfel: ${r.results.aepfel}` : null,
+        r.results.bananen    ? `Bananen: ${r.results.bananen}` : null,
+        r.results.hagebutten ? `Hagebutten: ${r.results.hagebutten}` : null,
+    ].filter(Boolean);
+    const hasS4 = extras4PDF.length > 0 || r.results.saule4.length > 0;
+    if (hasS4) {
         y += 2; secHeader('Säule 4 — Ergänzungen');
+        for (const e of extras4PDF) {
+            const [name, menge] = e.split(': ');
+            row(name+':', menge, '');
+        }
         for (const item of r.results.saule4) {
             row(item.name+':', item.menge ? item.menge+' '+item.einheit : '', '');
+        }
+    }
+
+    // Nährstoffbilanz (neue Seite)
+    if (r.results.naehr && r.results.naehr.length) {
+        doc.addPage(); y = 20;
+        secHeader('Nährstoffbilanz (SOLL / IST)');
+        const PURPLE = [139,92,246];
+        const naehrRows = r.results.naehr.map(n => {
+            const pct = n.pct !== null && n.pct !== undefined ? n.pct+'%' : '—';
+            return [n.label, `${n.soll} ${n.einheit}`, `${n.ist} ${n.einheit}`, pct, ''];
+        });
+        doc.autoTable({
+            startY: y,
+            head: [['Nährstoff', 'SOLL', 'IST', '%', '']],
+            body: naehrRows,
+            margin: { left: margin, right: margin },
+            styles: { fontSize: 8.5, cellPadding: 2.5, font: 'helvetica', textColor: TEXT },
+            headStyles: { fillColor: RED, textColor: WHITE, fontStyle: 'bold', fontSize: 9 },
+            columnStyles: {
+                0: { cellWidth: 58 },
+                1: { cellWidth: 35, halign:'right' },
+                2: { cellWidth: 35, halign:'right' },
+                3: { cellWidth: 22, halign:'right' },
+                4: { cellWidth: 10, halign:'center' }
+            },
+            alternateRowStyles: { fillColor: [250,246,242] },
+            didDrawCell: (data) => {
+                if (data.column.index === 4 && data.section === 'body') {
+                    const n = r.results.naehr[data.row.index];
+                    if (!n || n.pct === null || n.pct === undefined || n.pct === 0) return;
+                    let color = [180,180,180];
+                    if (n.pct > 100)      color = PURPLE;
+                    else if (n.pct >= 90) color = [34,139,34];
+                    else if (n.pct >= 70) color = [180,130,0];
+                    else if (n.pct > 0)   color = [180,40,40];
+                    doc.setFillColor(...color);
+                    doc.circle(
+                        data.cell.x + data.cell.width / 2,
+                        data.cell.y + data.cell.height / 2,
+                        2.2, 'F'
+                    );
+                }
+            }
+        });
+        y = doc.lastAutoTable.finalY + 8;
+
+        // Legende mit gezeichneten Kreisen
+        if (y > BOTTOM - 14) { doc.addPage(); y = 20; }
+        const legend = [[PURPLE,'> 100%'],[[34,139,34],'90–100%'],[[180,130,0],'70–89%'],[[180,40,40],'< 70%']];
+        legend.forEach(([c,l], i) => {
+            const lx = margin + i * 42;
+            doc.setFillColor(...c);
+            doc.circle(lx + 2, y - 1, 2, 'F');
+            doc.setFont('helvetica','normal'); doc.setFontSize(7.5); doc.setTextColor(...TEXT);
+            doc.text(l, lx + 6, y);
+        });
+        y += 8;
+
+        // Unterversorgungshinweise
+        if (r.results.defizite && r.results.defizite.length > 0) {
+            y += 4;
+            if (y > BOTTOM - 12) { doc.addPage(); y = 20; }
+            doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.setTextColor(...RED);
+            doc.text('Unterversorgung — Empfehlungen:', margin, y); y += 8;
+            for (const d of r.results.defizite) {
+                warnBox(d.label, d.text + (d.rec ? '\nEmpfehlung: '+d.rec : ''), true);
+            }
         }
     }
 
@@ -2127,7 +2401,7 @@ async function downloadPDF() {
         doc.setPage(i);
         doc.setFillColor(...LGRAY); doc.rect(0, 285, pageW, 12, 'F');
         doc.setFont('helvetica','normal'); doc.setFontSize(7); doc.setTextColor(...TLIGHT);
-        doc.text('Empfehlungen basieren auf dem Futterfahrplan-Kurs von Anika Wesse · anikas-pferdeakademie.de · Ohne Gewaehr', margin, 291, { maxWidth: cW-20 });
+        doc.text('Futterfahrplan-Kurs · Anika Wesse · anikas-pferdeakademie.de · Ohne Gewähr', margin, 291);
         doc.text(`Seite ${i}/${pages}`, pageW-margin, 291, { align: 'right' });
     }
     const safeName = r.horseName.replace(/[^a-zA-Z0-9äöüÄÖÜß\s]/g,'_');
