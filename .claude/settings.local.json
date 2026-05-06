@@ -116,7 +116,8 @@
       "WebFetch(domain:wissen.sanoanimal.de)",
       "WebFetch(domain:sanoanimal.de)",
       "mcp__Claude_in_Chrome__read_console_messages",
-      "mcp__Claude_in_Chrome__get_page_text"
+      "mcp__Claude_in_Chrome__get_page_text",
+      "Bash(powershell -Command \"[Convert]::ToBase64String\\([IO.File]::ReadAllBytes\\('C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\\\\logo.png'\\)\\)\")"
     ]
   }
 }
