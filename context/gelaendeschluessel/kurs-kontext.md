@@ -1,0 +1,98 @@
+# Der Gelände-Schlüssel — Kurs-Kontext
+
+## Basisinfos
+- **Kursname:** Der Gelände-Schlüssel
+- **Zielgruppe:** Freizeitreiterinnen mit eigenem Pferd, die ihr Pferd alleine nicht vom Hof bekommen
+- **Versprechen:** Dein Pferd läuft entspannt mit dir vom Hof ins Gelände — in 2 Wochen
+- **Methode:** Verlasspferd-Methode
+- **Proof:** 500+ Mensch-Pferd-Teams begleitet
+- **Sales Page:** https://aw.anikas-pferdeakademie.de/gs-ads
+- **Preis:** €27 Early Bird (regulär €197)
+
+---
+
+## Zielgruppe — Wünsche, Pains, Einwände
+
+**Wünsche:**
+- Endlich alleine losziehen (ohne Begleitung)
+- Den Kopf freibekommen — Spaziergang als Erholung, nicht Kraftprobe
+- Das Gefühl, ein echtes Team zu sein (Mensch und Pferd)
+
+**Pain Points:**
+- Können nicht spontan losziehen — müssen erst jemanden fragen
+- Fühlen sich hilflos — nichts funktioniert (schimpfen, locken, treiben)
+- Zweifeln an sich selbst — "Bin ich eine schlechte Pferdebesitzerin?"
+
+**Einwände:**
+- Kein stundenlandes Training jeden Tag
+- Nicht das Pferd "brechen" oder unter Druck setzen
+- Nicht abhängig bleiben von anderen
+
+---
+
+## Story: Susannes Geschichte
+Haflinger Amir klebt am Hof, wird hektisch. Schafft es mit der Verlasspferd-Methode schließlich entspannt alleine spazieren zu gehen.
+
+---
+
+## Kurs-Outline (Mini-Kurs, ca. 80 Min.)
+
+**Modul 0 — Willkommen & Schnellstart (5 Min.)**
+- Warum dein Pferd blockiert — und dass es nicht deine Schuld ist
+- Was dich in den nächsten 4 Wochen erwartet
+- Das eine Versprechen: Kein Druck, kein Zwang, keine langen Trainingseinheiten
+
+**Modul 1 — Verstehen, warum dein Pferd nicht mitgeht (15 Min.)**
+- Was wirklich hinter dem Blockieren steckt (Sicherheit, nicht Sturheit)
+- Warum schimpfen, locken und treiben nicht funktionieren
+- Der Unterschied zwischen einem "schwierigen Pferd" und einem Pferd, das noch keinen Schlüssel hat
+
+**Modul 2 — Die Basis: Dein Pferd lernt, dir zu vertrauen (20 Min.)**
+- Die eine Übung, die alles verändert: Vertrauen aufbauen noch auf dem Hof
+- Wie du deinem Pferd zeigst: "Ich führe — du kannst dich anlehnen"
+- Kurz, konkret, sofort umsetzbar — auch mit 15 Minuten am Tag
+
+**Modul 3 — Der Gelände-Schlüssel: Schritt für Schritt raus (25 Min.)**
+- Die 3-Zonen-Methode: Hoftor → erste Meter → freies Gelände
+- Wie du die Schwelle Schritt für Schritt erweiterst — ohne Stress
+- Was tun, wenn dein Pferd doch mal stoppt oder hektisch wird (Notfall-Plan)
+
+**Modul 4 — Dein 2-Wochen-Plan (10 Min.)**
+- Woche 1–2: Was du wann trainierst — konkret und einfach
+- Wie viel Zeit du pro Tag wirklich brauchst (weniger als du denkst)
+- Checkliste: Woran du merkst, dass du bereit bist für den ersten freien Spaziergang
+
+**Abschluss — Dein erster Spaziergang (5 Min.)**
+- Der Moment, auf den du hingearbeitet hast
+- Wie du das Ergebnis festigst — damit es kein Zufall war
+- Nächste Schritte: Was jetzt möglich ist
+
+---
+
+## Order Bumps
+
+**Order Bump 1 — "Ruhig bleiben, wenn es brenzlig wird" (€17)**
+- Videoserie: 3 Videos, je unter 8 Min.
+- Für 3 häufigste Eskalations-Momente: Pferd steigt / zieht weg / bewegt sich gar nicht
+- Ruhig bleiben im Körper, konkrete Handlung im Moment, sichere Auflösung
+
+**Order Bump 2 — "Ich bin an deiner Seite" (€27)**
+- Audio-Trainingsstunde, direkt beim Führen auf Kopfhörern
+- Geführt durch jeden Schritt vom Hof ins Gelände
+- Für den ersten Ausgang: nichts vergessen, ruhig bleiben
+
+---
+
+## Upsell 1 — "Gelände sicher meistern" (€99, ca. 60–75 Min.)
+
+**Modul 0** — Wo ihr jetzt steht
+**Modul 1** — Was dich draußen erwartet (Pferdetypen, Equipment)
+**Modul 2** — Neue Wege sicher erkunden (3-Schritte-Regel)
+**Modul 3** — Wenn dein Pferd draußen plötzlich anders wird (scheuen, einfrieren, hektisch)
+**Modul 4** — Unbekannte Situationen meistern (Hunde, Traktoren, Lärm, Notfallplan)
+**Abschluss** — Ausblick aufs Traumteam-Programm
+
+---
+
+## Upsell 2
+Aktuell nicht aktiv — wird vorerst nicht verfolgt.
