@@ -213,6 +213,20 @@
         .item-naehr-section:first-child { border-top:none; margin-top:0; }
         .item-naehr-field { display:flex; flex-direction:column; gap:2px; }
         .item-naehr-field label { font-size:0.68rem; color:var(--text-light); font-weight:600; }
+        .unit-toggle { display:inline-flex; border:1px solid rgba(137,75,47,0.3); border-radius:4px; overflow:hidden; margin-left:8px; vertical-align:middle; }
+        .utbtn { padding:2px 8px; font-size:0.65rem; border:none; background:white; cursor:pointer; color:var(--text-light); font-weight:600; font-family:'Open Sans',sans-serif; transition:all 0.15s; }
+        .utbtn:hover { background:#fdf0e8; color:var(--brown); }
+        .utbtn.active { background:var(--brown); color:white; }
+        /* Besonderheiten */
+        .besonderheiten-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:8px; }
+        .besonderheit-opt { position:relative; }
+        .besonderheit-opt input[type="checkbox"] { position:absolute; opacity:0; width:0; height:0; }
+        .besonderheit-opt label { display:flex; flex-direction:column; align-items:center; gap:5px; padding:12px 8px; border:2px solid #ddd; border-radius:10px; cursor:pointer; text-align:center; font-size:0.83rem; font-weight:600; color:var(--text-light); transition:all 0.2s; }
+        .besonderheit-opt label .icon { font-size:1.5rem; }
+        .besonderheit-opt label strong { font-size:0.86rem; color:var(--text); }
+        .besonderheit-opt label span { font-weight:400; font-size:0.72rem; }
+        .besonderheit-opt input:checked + label { border-color:var(--gold); background:#fffbef; color:var(--brown); }
+        .besonderheit-opt input:checked + label strong { color:var(--brown); }
         .item-naehr-field input { padding:4px 6px; font-size:0.78rem; border:1px solid #ddd; border-radius:4px; font-family:'Open Sans',sans-serif; width:100%; }
         .item-naehr-field input:focus { outline:none; border-color:var(--brown); }
         /* Remove button */
@@ -554,6 +568,28 @@
                 </small>
             </div>
 
+            <div class="form-group" style="margin-top:18px;">
+                <label style="font-weight:600;font-size:0.88rem;color:var(--text);">Besonderheiten <span style="font-weight:400;color:var(--text-light);font-size:0.78rem;">(optional – beeinflusst die Bedarfswerte)</span></label>
+                <div class="besonderheiten-grid">
+                    <div class="besonderheit-opt">
+                        <input type="checkbox" id="horse-langeshaargear" class="horse-cb">
+                        <label for="horse-langeshaargear">
+                            <span class="icon">🐴</span>
+                            <strong>Viel langes Haar</strong>
+                            <span>Tinker, Friese, Shire</span>
+                        </label>
+                    </div>
+                    <div class="besonderheit-opt">
+                        <input type="checkbox" id="horse-senior" class="horse-cb">
+                        <label for="horse-senior">
+                            <span class="icon">🧡</span>
+                            <strong>Altes Pferd</strong>
+                            <span>Ab ca. 20 Jahren</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
         <div class="btn-row">
             <button class="btn-next" onclick="goToStep(2)">Weiter →</button>
         </div>
@@ -652,10 +688,39 @@
                 <input type="checkbox" id="feed-weide" class="feed-cb">
                 <div class="feed-item-label"><strong>Weide</strong></div>
             </div>
-            <div class="menge-row" id="menge-weide-row">
-                <span class="menge-label-sm">Stunden:</span>
-                <input type="text" class="menge-input-sm" id="menge-weide" placeholder="z. B. 4">
-                <select class="unit-select" id="unit-weide"><option>Std/Tag</option></select>
+            <div class="menge-row" id="menge-weide-row" style="flex-wrap:wrap; gap:6px 10px;">
+                <span class="menge-label-sm">Stunden/Tag:</span>
+                <input type="number" class="menge-input-sm" id="menge-weide" placeholder="z. B. 4" min="0" max="24" step="0.5">
+                <select class="unit-select" id="unit-weide" style="max-width:180px;">
+                    <option value="herbst">🍂 Herbst (Sep–Nov)</option>
+                    <option value="fruehling">🌱 Frühling (März–Mai)</option>
+                    <option value="sommer">☀️ Sommer (Jun–Aug)</option>
+                </select>
+            </div>
+
+            <div id="weide-analyse-wrapper" style="display:none; padding: 0 0 6px 28px;">
+                <button type="button" class="item-naehr-toggle" id="weide-analyse-toggle" onclick="toggleWeideAnalyse()">▼ Eigene Nährwertanalyse eingeben (optional)</button>
+                <div id="weide-analyse-grid" class="item-naehr-grid" style="margin-top:6px;">
+                    <div class="item-naehr-section">Energie &amp; Protein</div>
+                    <div class="item-naehr-field"><label>ME (MJ/kg TM)</label><input type="number" id="weide-me" min="0" step="0.1" placeholder="z. B. 10.5"></div>
+                    <div class="item-naehr-field"><label>pcv XP (%)</label><input type="number" id="weide-pcvxp" min="0" step="0.1" placeholder="z. B. 10.5"></div>
+                    <div class="item-naehr-field"><label>Zucker (%)</label><input type="number" id="weide-zucker" min="0" step="0.1" placeholder="z. B. 15.0"></div>
+                    <div class="item-naehr-section">Mengenelemente (%)</div>
+                    <div class="item-naehr-field"><label>Calcium %</label><input type="number" id="weide-calcium" min="0" step="0.01" placeholder="z. B. 0.50"></div>
+                    <div class="item-naehr-field"><label>Phosphor %</label><input type="number" id="weide-phosphor" min="0" step="0.01" placeholder="z. B. 0.35"></div>
+                    <div class="item-naehr-field"><label>Magnesium %</label><input type="number" id="weide-magnesium" min="0" step="0.01" placeholder="z. B. 0.20"></div>
+                    <div class="item-naehr-field"><label>Natrium %</label><input type="number" id="weide-natrium" min="0" step="0.01" placeholder="z. B. 0.15"></div>
+                    <div class="item-naehr-field"><label>Schwefel %</label><input type="number" id="weide-schwefel" min="0" step="0.01" placeholder="optional"></div>
+                    <div class="item-naehr-field"></div>
+                    <div class="item-naehr-section">Spurenelemente (mg/kg TM)</div>
+                    <div class="item-naehr-field"><label>Kupfer mg/kg</label><input type="number" id="weide-kupfer" min="0" step="0.1" placeholder="z. B. 6"></div>
+                    <div class="item-naehr-field"><label>Zink mg/kg</label><input type="number" id="weide-zink" min="0" step="1" placeholder="z. B. 25"></div>
+                    <div class="item-naehr-field"><label>Mangan mg/kg</label><input type="number" id="weide-mangan" min="0" step="1" placeholder="z. B. 65"></div>
+                    <div class="item-naehr-field"><label>Eisen mg/kg</label><input type="number" id="weide-eisen" min="0" step="1" placeholder="z. B. 200"></div>
+                    <div class="item-naehr-field"><label>Selen mg/kg</label><input type="number" id="weide-selen" min="0" step="0.001" placeholder="z. B. 0.08"></div>
+                    <div class="item-naehr-field"></div>
+                </div>
+                <div class="lufa-note" style="margin-top:6px;">💡 Leer lassen = Standardwerte für die gewählte Saison werden verwendet. Nur ausfüllen wenn du eine eigene Weideanalyse hast.</div>
             </div>
 
             <div class="feed-item">
@@ -1016,24 +1081,26 @@ const NAEHRWERTE = {
         mangan: 55,         // mg/kg TM
         eisen: 145          // mg/kg TM
     },
-    weide: {
-        tmProStunde: 0.7,   // kg TM pro Weidestunde
-        me: 10.5,           // MJ/kg TM
-        pcve: 105,          // g/kg TM
-        rohfaser: 220,      // g/kg TM
-        zucker: 150,        // g/kg TM
-        staerke: 20,        // g/kg TM
-        calcium: 5.0,       // g/kg TM
-        phosphor: 3.5,      // g/kg TM
-        magnesium: 2.0,     // g/kg TM
-        natrium: 1.5,       // g/kg TM
-        kalium: 26,         // g/kg TM
-        kupfer: 6,          // mg/kg TM
-        zink: 25,           // mg/kg TM
-        selen: 0.08,        // mg/kg TM
-        mangan: 65,         // mg/kg TM
-        eisen: 200,         // mg/kg TM
-        vitA: 40000,        // IE/kg TM (~100 mg Beta-Carotin × 400 IE/mg)
+    // Weide — drei Saisonvarianten (Nährwerte pro kg TM, Gruber-Tabelle / GfE 2014)
+    weide_herbst: {
+        me: 10.5, pcve: 105, zucker: 150,
+        calcium: 5.0, phosphor: 3.5, magnesium: 2.0, natrium: 1.5,
+        kupfer: 6, zink: 25, selen: 0.08, mangan: 65, eisen: 200,
+        vitA: 40000,
+    },
+    weide_fruehling: {
+        // Üppig, wasserreich, proteinreich, zuckerreich → Hufrehe-Risiko beachten
+        me: 11.5, pcve: 160, zucker: 200,
+        calcium: 5.5, phosphor: 3.8, magnesium: 2.2, natrium: 1.5,
+        kupfer: 7, zink: 28, selen: 0.07, mangan: 60, eisen: 180,
+        vitA: 55000,
+    },
+    weide_sommer: {
+        // Trockener, spärlicher, weniger Protein und Zucker
+        me: 10.0, pcve: 90, zucker: 100,
+        calcium: 4.5, phosphor: 3.0, magnesium: 1.8, natrium: 1.4,
+        kupfer: 5, zink: 22, selen: 0.09, mangan: 70, eisen: 220,
+        vitA: 30000,
     },
     agrobs: {
         // Werte pro kg Produkt (laut Hersteller Agrobs AlpenGrün Müsli)
@@ -1356,13 +1423,23 @@ function saveState() {
         name:      document.getElementById('horse-name')?.value || '',
         weight:    document.getElementById('horse-weight')?.value || '',
         condition: document.querySelector('input[name="condition"]:checked')?.value || 'ideal',
+        heuMode:   document.querySelector('input[name="heu-mode"]:checked')?.value || 'lufa',
         heu:       {},
+        weide:     {},
         feeds:     {},
-        dynItems:  { 2: getDynamicItems(2), 3: getDynamicItems(3), 4: getDynamicItems(4) }
+        dynItems:  { 2: getDynamicItems(2), 3: getDynamicItems(3), 4: getDynamicItems(4) },
+        extras: {
+            langeshaargear: document.getElementById('horse-langeshaargear')?.checked || false,
+            senior:         document.getElementById('horse-senior')?.checked         || false,
+        }
     };
 
     HEU_FIELDS.forEach(f => {
         state.heu[f] = document.getElementById('heu-' + f)?.value ?? '';
+    });
+
+    WEIDE_FIELDS.forEach(f => {
+        state.weide[f] = document.getElementById('weide-' + f)?.value ?? '';
     });
 
     document.querySelectorAll('.feed-cb').forEach(cb => {
@@ -1393,15 +1470,38 @@ function loadState() {
         if (r) r.checked = true;
     }
 
-    // Heu-Felder
-    if (state.heu) {
-        let hasCustomHeu = false;
+    // Heu-Modus und Felder wiederherstellen
+    const savedHeuMode = state.heuMode || 'lufa';
+    const heuModeRadio = document.querySelector(`input[name="heu-mode"][value="${savedHeuMode}"]`);
+    if (heuModeRadio) heuModeRadio.checked = true;
+
+    if (savedHeuMode === 'manuell') {
+        // "Meine Analyse": erst alle Felder leeren (LUFA-Defaults aus setLufaDefaults entfernen)
         HEU_FIELDS.forEach(f => {
             const el = document.getElementById('heu-' + f);
-            if (el && state.heu[f] !== '') { el.value = state.heu[f]; hasCustomHeu = true; }
+            if (el) el.value = '';
         });
-        if (hasCustomHeu) {
-            document.getElementById('lufa-source-label').textContent = 'Gespeicherte Werte';
+        document.getElementById('lufa-source-label').textContent = 'Meine Analyse';
+        // Dann nur gespeicherte Werte eintragen (leer = wirklich leer lassen)
+        if (state.heu) {
+            HEU_FIELDS.forEach(f => {
+                const el = document.getElementById('heu-' + f);
+                if (el && state.heu[f] !== '' && state.heu[f] !== undefined) {
+                    el.value = state.heu[f];
+                }
+            });
+        }
+    } else {
+        // "Lufa 2025": LUFA-Defaults wurden bereits von setLufaDefaults() gesetzt
+        document.getElementById('lufa-source-label').textContent = 'Lufa 2025 Durchschnitt';
+        // Gespeicherte Abweichungen eintragen (falls Kundin LUFA-Werte manuell angepasst hat)
+        if (state.heu) {
+            HEU_FIELDS.forEach(f => {
+                const el = document.getElementById('heu-' + f);
+                if (el && state.heu[f] !== '' && state.heu[f] !== undefined) {
+                    el.value = state.heu[f];
+                }
+            });
         }
     }
 
@@ -1413,6 +1513,11 @@ function loadState() {
             cb.checked = data.checked;
             const row = document.getElementById('menge-' + key + '-row');
             if (row) row.style.display = data.checked ? 'flex' : 'none';
+            // Weide: Analyse-Wrapper zeigen wenn aktiv
+            if (key === 'weide' && data.checked) {
+                const wrapper = document.getElementById('weide-analyse-wrapper');
+                if (wrapper) wrapper.style.display = 'block';
+            }
             const mengeEl = document.getElementById('menge-' + key);
             if (mengeEl && data.menge) mengeEl.value = data.menge;
             const unitEl = document.getElementById('unit-' + key);
@@ -1420,11 +1525,33 @@ function loadState() {
         });
     }
 
+    // Weide-Analyse Felder wiederherstellen
+    if (state.weide) {
+        let hasWeideValues = false;
+        WEIDE_FIELDS.forEach(f => {
+            const el = document.getElementById('weide-' + f);
+            if (el && state.weide[f] !== '') { el.value = state.weide[f]; hasWeideValues = true; }
+        });
+        // Wenn Weide aktiv war und eigene Werte vorhanden → Grid aufklappen
+        if (hasWeideValues) {
+            const grid = document.getElementById('weide-analyse-grid');
+            const btn  = document.getElementById('weide-analyse-toggle');
+            if (grid) grid.classList.add('open');
+            if (btn)  btn.textContent = '▲ Eigene Nährwertanalyse eingeben (optional)';
+        }
+    }
+
+    // Besonderheiten wiederherstellen
+    if (state.extras) {
+        if (state.extras.langeshaargear) document.getElementById('horse-langeshaargear').checked = true;
+        if (state.extras.senior)         document.getElementById('horse-senior').checked         = true;
+    }
+
     // Dynamische Items wiederherstellen
     if (state.dynItems) {
         [2, 3, 4].forEach(saule => {
             (state.dynItems[saule] || []).forEach(item => {
-                addDynamicItem(saule, item.name, item.menge, item.einheit || 'g/Tag', item.naehrwerte || {});
+                addDynamicItem(saule, item.name, item.menge, item.einheit || 'g/Tag', item.naehrwerte || {}, item.macroUnit || 'gkg', item.traceUnit || 'mgkg');
             });
         });
     }
@@ -1456,12 +1583,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('lufa-source-label').textContent = 'Lufa 2025 Durchschnitt';
             } else {
                 // Meine Analyse: Felder leeren zum selbst Eintragen
-                const HEU_IDS = ['heu-me','heu-zucker','heu-pcvxp','heu-calcium','heu-phosphor',
-                    'heu-magnesium','heu-natrium','heu-schwefel','heu-kupfer','heu-zink',
-                    'heu-mangan','heu-eisen','heu-selen'];
-                HEU_IDS.forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+                HEU_FIELDS.forEach(f => {
+                    const el = document.getElementById('heu-' + f);
+                    if (el) el.value = '';
+                });
                 document.getElementById('lufa-source-label').textContent = 'Meine Analyse';
             }
+            scheduleSave(); // Modus-Wechsel sofort speichern
         });
     });
 
@@ -1470,8 +1598,11 @@ document.addEventListener('DOMContentLoaded', () => {
         cb.addEventListener('change', function () {
             const key = this.id.replace('feed-', '');
             const row = document.getElementById('menge-' + key + '-row');
-            if (row) {
-                row.style.display = this.checked ? 'flex' : 'none';
+            if (row) row.style.display = this.checked ? 'flex' : 'none';
+            // Weide: auch Analyse-Wrapper zeigen/verstecken
+            if (key === 'weide') {
+                const wrapper = document.getElementById('weide-analyse-wrapper');
+                if (wrapper) wrapper.style.display = this.checked ? 'block' : 'none';
             }
         });
     });
@@ -1495,6 +1626,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gespeicherten Stand wiederherstellen
     loadState();
+
+    // Sofort speichern wenn Seite geschlossen wird (Sicherheitsnetz für schnelle Eingaben)
+    window.addEventListener('beforeunload', saveState);
 });
 
 function setLufaDefaults() {
@@ -1522,7 +1656,7 @@ let dynCounters = { 2: 0, 3: 0, 4: 0 };
 const EINHEITEN = ['g/Tag', 'ml/Tag', 'kg/Tag', 'Stück/Tag'];
 const NAEHR_KEYS = ['me','pcve','calcium','phosphor','magnesium','natrium','schwefel','zink','kupfer','mangan','eisen','selen','vitE','vitA'];
 
-function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag', naehrwerte = {}) {
+function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag', naehrwerte = {}, macroUnit = 'gkg', traceUnit = 'mgkg') {
     const id = `s${saule}_${++dynCounters[saule]}`;
     const container = document.getElementById('saule' + saule + '-items');
 
@@ -1548,19 +1682,19 @@ function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag', naehrwe
             <div class="item-naehr-field"><label>ME (MJ/kg)</label><input type="number" id="naehr-me-${id}" min="0" step="0.1" placeholder="0"></div>
             <div class="item-naehr-field"><label>Protein (g/kg)</label><input type="number" id="naehr-pcve-${id}" min="0" step="1" placeholder="0"></div>
             <div class="item-naehr-field"></div>
-            <div class="item-naehr-section">Mengenelemente (g/kg)</div>
-            <div class="item-naehr-field"><label>Calcium</label><input type="number" id="naehr-calcium-${id}" min="0" step="0.1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Phosphor</label><input type="number" id="naehr-phosphor-${id}" min="0" step="0.1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Magnesium</label><input type="number" id="naehr-magnesium-${id}" min="0" step="0.1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Natrium</label><input type="number" id="naehr-natrium-${id}" min="0" step="0.1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Schwefel</label><input type="number" id="naehr-schwefel-${id}" min="0" step="0.1" placeholder="0"></div>
+            <div class="item-naehr-section">Mengenelemente <span class="unit-toggle"><button type="button" class="utbtn macro-utbtn active" data-unit="gkg" onclick="setNaehrUnit('${id}','macro','gkg')">g/kg</button><button type="button" class="utbtn macro-utbtn" data-unit="pct" onclick="setNaehrUnit('${id}','macro','pct')">%</button></span></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-calcium-${id}">Calcium</label><input type="number" id="naehr-calcium-${id}" min="0" step="0.1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-phosphor-${id}">Phosphor</label><input type="number" id="naehr-phosphor-${id}" min="0" step="0.1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-magnesium-${id}">Magnesium</label><input type="number" id="naehr-magnesium-${id}" min="0" step="0.1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-natrium-${id}">Natrium</label><input type="number" id="naehr-natrium-${id}" min="0" step="0.1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-schwefel-${id}">Schwefel</label><input type="number" id="naehr-schwefel-${id}" min="0" step="0.1" placeholder="0"></div>
             <div class="item-naehr-field"></div>
-            <div class="item-naehr-section">Spurenelemente (mg/kg)</div>
-            <div class="item-naehr-field"><label>Zink</label><input type="number" id="naehr-zink-${id}" min="0" step="1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Kupfer</label><input type="number" id="naehr-kupfer-${id}" min="0" step="1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Mangan</label><input type="number" id="naehr-mangan-${id}" min="0" step="1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Eisen</label><input type="number" id="naehr-eisen-${id}" min="0" step="1" placeholder="0"></div>
-            <div class="item-naehr-field"><label>Selen</label><input type="number" id="naehr-selen-${id}" min="0" step="0.01" placeholder="0"></div>
+            <div class="item-naehr-section">Spurenelemente <span class="unit-toggle"><button type="button" class="utbtn trace-utbtn active" data-unit="mgkg" onclick="setNaehrUnit('${id}','trace','mgkg')">mg/kg</button><button type="button" class="utbtn trace-utbtn" data-unit="pct" onclick="setNaehrUnit('${id}','trace','pct')">%</button></span></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-zink-${id}">Zink</label><input type="number" id="naehr-zink-${id}" min="0" step="1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-kupfer-${id}">Kupfer</label><input type="number" id="naehr-kupfer-${id}" min="0" step="1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-mangan-${id}">Mangan</label><input type="number" id="naehr-mangan-${id}" min="0" step="1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-eisen-${id}">Eisen</label><input type="number" id="naehr-eisen-${id}" min="0" step="1" placeholder="0"></div>
+            <div class="item-naehr-field"><label id="naehr-lbl-selen-${id}">Selen</label><input type="number" id="naehr-selen-${id}" min="0" step="0.01" placeholder="0"></div>
             <div class="item-naehr-field"></div>
             <div class="item-naehr-section">Vitamine</div>
             <div class="item-naehr-field"><label>Vit E (mg/kg)</label><input type="number" id="naehr-vitE-${id}" min="0" step="1" placeholder="0"></div>
@@ -1569,21 +1703,33 @@ function addDynamicItem(saule, name = '', menge = '', einheit = 'g/Tag', naehrwe
         </div>
     `;
 
-    // Gespeicherte Nährwerte eintragen
+    // Erst in DOM einfügen, DANN Felder befüllen (getElementById braucht den DOM)
+    container.appendChild(row);
+
+    // Einheiten-Modus wiederherstellen (vor Werte-Eintrag, damit Labels stimmen)
+    if (macroUnit !== 'gkg')  setNaehrUnit(id, 'macro', macroUnit);
+    if (traceUnit !== 'mgkg') setNaehrUnit(id, 'trace', traceUnit);
+
+    // Gespeicherte Nährwerte eintragen (Rückkonvertierung in Anzeigeeinheit)
     NAEHR_KEYS.forEach(k => {
         if (naehrwerte[k]) {
             const el = document.getElementById('naehr-' + k + '-' + id);
-            if (el) { el.value = naehrwerte[k]; }
+            if (el) {
+                let displayVal = naehrwerte[k];
+                // Werte sind immer in Basiseinheiten gespeichert → für %-Anzeige zurückrechnen
+                if (PCT_MACRO_KEYS.includes(k) && macroUnit === 'pct')  displayVal = naehrwerte[k] / 10;
+                if (TRACE_KEYS.includes(k)     && traceUnit === 'pct')  displayVal = naehrwerte[k] / 10000;
+                el.value = displayVal;
+            }
         }
     });
+
     // Grid öffnen wenn Werte vorhanden
     if (Object.values(naehrwerte).some(v => v > 0)) {
         document.getElementById('naehr-grid-' + id)?.classList.add('open');
         const btn = document.getElementById('naehr-toggle-' + id);
         if (btn) btn.textContent = '▲ Nährwerte pro kg eingeben (optional)';
     }
-
-    container.appendChild(row);
 
     // Eingaben in dynamischen Items ebenfalls auto-speichern
     row.querySelectorAll('input, select').forEach(el => {
@@ -1606,6 +1752,34 @@ function toggleNaehr(id) {
     if (btn) btn.textContent = (isOpen ? '▲' : '▼') + ' Nährwerte pro kg eingeben (optional)';
 }
 
+const PCT_MACRO_KEYS = ['calcium','phosphor','magnesium','natrium','schwefel'];
+const TRACE_KEYS     = ['zink','kupfer','mangan','eisen','selen'];
+
+function setNaehrUnit(id, section, unit) {
+    const grid = document.getElementById('naehr-grid-' + id);
+    if (!grid) return;
+    if (section === 'macro') {
+        grid.dataset.macroUnit = unit;
+        grid.querySelectorAll('.macro-utbtn').forEach(b => b.classList.toggle('active', b.dataset.unit === unit));
+        const isPct = unit === 'pct';
+        PCT_MACRO_KEYS.forEach(k => {
+            const lbl = document.getElementById('naehr-lbl-' + k + '-' + id);
+            const name = k.charAt(0).toUpperCase() + k.slice(1);
+            if (lbl) lbl.textContent = isPct ? name + ' (%)' : name;
+        });
+    } else {
+        grid.dataset.traceUnit = unit;
+        grid.querySelectorAll('.trace-utbtn').forEach(b => b.classList.toggle('active', b.dataset.unit === unit));
+        const isPct = unit === 'pct';
+        TRACE_KEYS.forEach(k => {
+            const lbl = document.getElementById('naehr-lbl-' + k + '-' + id);
+            const name = k.charAt(0).toUpperCase() + k.slice(1);
+            if (lbl) lbl.textContent = isPct ? name + ' (%)' : name;
+        });
+    }
+    scheduleSave();
+}
+
 function getDynamicItems(saule) {
     const items = [];
     document.querySelectorAll(`#saule${saule}-items .dynamic-item-row`).forEach(row => {
@@ -1613,15 +1787,23 @@ function getDynamicItems(saule) {
         const name    = (document.getElementById('name-' + id)?.value || '').trim();
         const menge   = (document.getElementById('menge-dyn-' + id)?.value || '').trim();
         const einheit = document.getElementById('einheit-' + id)?.value || 'g/Tag';
+        const grid      = document.getElementById('naehr-grid-' + id);
+        const macroUnit = grid?.dataset.macroUnit || 'gkg';
+        const traceUnit = grid?.dataset.traceUnit || 'mgkg';
         const naehrwerte = {};
         NAEHR_KEYS.forEach(k => {
             const el = document.getElementById('naehr-' + k + '-' + id);
             if (el) {
                 const v = parseFloat(el.value);
-                if (!isNaN(v) && v > 0) naehrwerte[k] = v;
+                if (!isNaN(v) && v > 0) {
+                    let val = v;
+                    if (PCT_MACRO_KEYS.includes(k) && macroUnit === 'pct')  val = v * 10;     // % → g/kg
+                    if (TRACE_KEYS.includes(k)     && traceUnit === 'pct')  val = v * 10000; // % → mg/kg
+                    naehrwerte[k] = val;
+                }
             }
         });
-        if (name) items.push({ name, menge, einheit, naehrwerte });
+        if (name) items.push({ name, menge, einheit, naehrwerte, macroUnit, traceUnit });
     });
     return items;
 }
@@ -1653,20 +1835,78 @@ function getKgFM(key) {
     return m;
 }
 
-// Gibt kg TM für Weide zurück
+const WEIDE_FIELDS = ['me','pcvxp','zucker','calcium','phosphor','magnesium','natrium','schwefel','kupfer','zink','mangan','eisen','selen'];
+
+function toggleWeideAnalyse() {
+    const grid = document.getElementById('weide-analyse-grid');
+    const btn  = document.getElementById('weide-analyse-toggle');
+    if (!grid) return;
+    const isOpen = grid.classList.toggle('open');
+    if (btn) btn.textContent = (isOpen ? '▲' : '▼') + ' Eigene Nährwertanalyse eingeben (optional)';
+}
+
+// Gibt die NAEHRWERTE-Saison-Key für Weide zurück
+function getWeideSaisonKey() {
+    const s = val('unit-weide');
+    if (s === 'fruehling') return 'weide_fruehling';
+    if (s === 'sommer')    return 'weide_sommer';
+    return 'weide_herbst';
+}
+
+// Nicht-lineares Weide-TM-Modell: Pferde fressen bei kurzer Weide intensiver
 function getWeideKgTM() {
     if (!cb('feed-weide')) return 0;
-    const m = parseFloat(val('menge-weide')) || 0;
-    const u = val('unit-weide');
-    if (u === 'Std/Tag') return m * NAEHRWERTE.weide.tmProStunde;
-    if (u === 'halber Tag') return 6 * NAEHRWERTE.weide.tmProStunde;
-    if (u === 'ganzer Tag') return 12 * NAEHRWERTE.weide.tmProStunde;
-    return 0;
+    const h = parseFloat(val('menge-weide')) || 0;
+    if (h <= 0) return 0;
+
+    // Stufenmodell mit abnehmender stündlicher Rate
+    let tm;
+    if      (h <= 2)  tm = h * 0.60;
+    else if (h <= 5)  tm = 1.20 + (h - 2)  * 0.50;
+    else if (h <= 9)  tm = 2.70 + (h - 5)  * 0.40;
+    else if (h <= 14) tm = 4.30 + (h - 9)  * 0.30;
+    else if (h <= 20) tm = 5.80 + (h - 14) * 0.20;
+    else              tm = 7.00 + (h - 20) * 0.10;
+
+    // Maximale physiologische Tagesaufnahme
+    tm = Math.min(tm, 7.5);
+
+    // Saisonfaktor
+    const saison = val('unit-weide');
+    const faktor = saison === 'fruehling' ? 1.35 : saison === 'sommer' ? 0.85 : 1.0;
+
+    return r2(tm * faktor);
+}
+
+// Gibt Nährwerte für Weide zurück: eigene Analyse wenn vorhanden, sonst Saison-Standard
+function getWeideValues() {
+    const seasonal = NAEHRWERTE[getWeideSaisonKey()];
+    const g = (id) => { const v = parseFloat(document.getElementById(id)?.value); return isNaN(v) ? null : v; };
+    const hasAny = WEIDE_FIELDS.some(k => g('weide-' + k) !== null);
+    if (!hasAny) return seasonal; // Kein eigener Wert → Saisondaten verwenden
+    // Eigene Werte: fehlende mit Saisondaten auffüllen, % → g/kg umrechnen
+    const pct = (id, seasonal_val) => { const v = g(id); return v !== null ? v * 10 : seasonal_val; };
+    return {
+        me:        g('weide-me')        ?? seasonal.me,
+        pcve:      pct('weide-pcvxp',      seasonal.pcve),
+        zucker:    pct('weide-zucker',     seasonal.zucker),
+        calcium:   pct('weide-calcium',    seasonal.calcium),
+        phosphor:  pct('weide-phosphor',   seasonal.phosphor),
+        magnesium: pct('weide-magnesium',  seasonal.magnesium),
+        natrium:   pct('weide-natrium',    seasonal.natrium),
+        schwefel:  pct('weide-schwefel',   seasonal.schwefel || 0),
+        kupfer:    g('weide-kupfer')    ?? seasonal.kupfer,
+        zink:      g('weide-zink')      ?? seasonal.zink,
+        mangan:    g('weide-mangan')    ?? seasonal.mangan,
+        eisen:     g('weide-eisen')     ?? seasonal.eisen,
+        selen:     g('weide-selen')     ?? seasonal.selen,
+        vitA:      seasonal.vitA,
+    };
 }
 
 function getHeuValues() {
-    // g() liest Formularwert, fallback = LUFA-Default
-    const g = (id, fallback) => parseFloat(document.getElementById(id)?.value) ?? fallback;
+    // g() liest Formularwert, fallback = LUFA-Default (auch bei leerem Feld)
+    const g = (id, fallback) => { const v = parseFloat(document.getElementById(id)?.value); return isNaN(v) ? fallback : v; };
     const pct = (id, fallback) => g(id, fallback) * 10; // % → g/kg TM
     const pcvxp_pct = g('heu-pcvxp', LUFA.pcvxp);
     return {
@@ -1846,6 +2086,7 @@ function buildResults(weight, condition, heu) {
     });
 
     // Hilfsfunktion: Summe eines Nährstoffs über alle Futtermittel
+    const weideNW = getWeideValues(); // einmalig pro buildResults berechnen
     function nSum(mineral, factor) {
         const n = (key) => (NAEHRWERTE[key] && NAEHRWERTE[key][mineral]) || 0;
         // Beitrag aus manuell eingetragenen Nährwerten dynamischer Items
@@ -1853,7 +2094,7 @@ function buildResults(weight, condition, heu) {
         return r2(
             (heuKg         * (heu[mineral] || 0))          +
             (strohKgTM     * n('haferstroh'))               +
-            (weideKgTM     * n('weide'))                    +
+            (weideKgTM     * (weideNW[mineral] || 0))       +
             (agrobs_kg     * n('agrobs'))                   +
             (haferKgTM     * n('hafer'))                    +
             (sojaKgTM      * n('sojaschrot'))               +
@@ -1907,24 +2148,35 @@ function buildResults(weight, condition, heu) {
         return { label, ist: r2(ist), soll, pct, einheit: bd.einheit };
     }
 
-    // ME-Soll: bei zu dünn +20%
-    const meSollFaktor = condition === 'thin' ? 1.2 : 1.0;
-    const meSoll = r2(BEDARF_100.me.soll * weight / 100 * meSollFaktor);
+    // ── PROFILBEDINGTE SOLL-FAKTOREN ──
+    const isLangesHaar = cb('horse-langeshaargear');
+    const isSenior     = cb('horse-senior');
+    const sollF = {
+        me:        condition === 'thin' ? 1.2 : (isSenior ? 1.1 : 1.0),
+        pcve:      isLangesHaar && isSenior ? 1.35 : isLangesHaar ? 1.15 : isSenior ? 1.25 : 1.0,
+        magnesium: isLangesHaar ? 1.15 : 1.0,
+        schwefel:  isLangesHaar ? 1.20 : 1.0,
+        zink:      isLangesHaar ? 1.25 : 1.0,
+        kupfer:    isLangesHaar ? 1.20 : 1.0,
+        vitE:      isSenior     ? 1.20 : 1.0,
+    };
+
+    const meSoll = r2(BEDARF_100.me.soll * weight / 100 * sollF.me);
 
     res.naehr = [
         naehrRow('Energie (ME)',   'me',        meSoll),
-        naehrRow('Protein (pcvE)', 'pcve',      r1(1.0 * weight)),
+        naehrRow('Protein (pcvE)', 'pcve',      r1(1.0 * weight * sollF.pcve)),
         naehrRow('Calcium',        'calcium'),
         naehrRow('Phosphor',       'phosphor'),
-        naehrRow('Magnesium',      'magnesium'),
+        naehrRow('Magnesium',      'magnesium', sollF.magnesium > 1 ? r2(BEDARF_100.magnesium.soll * weight / 100 * sollF.magnesium) : undefined),
         naehrRow('Natrium',        'natrium'),
-        naehrRow('Schwefel',       'schwefel'),
-        naehrRow('Zink',           'zink'),
-        naehrRow('Kupfer',         'kupfer'),
+        naehrRow('Schwefel',       'schwefel',  sollF.schwefel  > 1 ? r2(BEDARF_100.schwefel.soll  * weight / 100 * sollF.schwefel)  : undefined),
+        naehrRow('Zink',           'zink',      sollF.zink      > 1 ? r2(BEDARF_100.zink.soll      * weight / 100 * sollF.zink)      : undefined),
+        naehrRow('Kupfer',         'kupfer',    sollF.kupfer    > 1 ? r2(BEDARF_100.kupfer.soll    * weight / 100 * sollF.kupfer)    : undefined),
         naehrRow('Mangan',         'mangan'),
         naehrRow('Eisen',          'eisen'),
         naehrRow('Selen',          'selen'),
-        naehrRow('Vitamin E',      'vitE'),
+        naehrRow('Vitamin E',      'vitE',  sollF.vitE > 1 ? r2(BEDARF_100.vitE.soll * weight / 100 * sollF.vitE) : undefined),
         naehrRow('Vitamin A',      'vitA'),
     ];
 
@@ -1967,7 +2219,36 @@ function buildResults(weight, condition, heu) {
         res.mineralstoffe.push({ name: '✨ Selen', status: 'warning', text: `Deutsche Böden selenarm. Über Futter nur ~${selenTotal} mg/Tag (Bedarf ~${selenBedarf} mg). ${Math.round(weight * 5 / 600)} Paranüsse täglich oder Selenergänzung.` });
     }
 
-    if (cb('feed-weide')) res.hinweise.push('🌿 Weidegang vorhanden — Vitamin A und E teilweise abgedeckt. Zuckeraufnahme im Blick behalten (1 Weidetag ≈ 1 kg Zucker).');
+    // ── PROFIL-HINWEISE ──
+    if (isLangesHaar) {
+        res.hinweise.push('🐴 Langhaarpferd: Zink, Kupfer & Schwefel sind besonders wichtig für Keratin-Aufbau in Mähne, Schweif und Fell. SOLL-Werte wurden entsprechend erhöht. MSM (Schwefel/MSM in Säule 3) empfohlen.');
+    }
+    if (isSenior) {
+        res.hinweise.push('🧡 Altes Pferd (20+): Erhöhter Protein- und Energiebedarf durch reduzierte Verdaulichkeit. Leicht verdauliche Eiweißquellen bevorzugen (Sojaschrot, Hanfsamen). Zähne regelmäßig kontrollieren lassen.');
+    }
+
+    if (cb('feed-weide')) {
+        const wStd  = parseFloat(val('menge-weide')) || 0;
+        const wTM   = getWeideKgTM();
+        const sSaison = val('unit-weide');
+        const sLabel = sSaison === 'fruehling' ? 'Frühling (März–Mai)'
+                     : sSaison === 'sommer'    ? 'Sommer (Jun–Aug)'
+                     : 'Herbst (Sep–Nov)';
+        const hufrehe = sSaison === 'fruehling' ? ' ⚠️ Hufrehe-Risiko bei Frühlingsgras beachten!' : '';
+        const hasEigeneWeideNW = WEIDE_FIELDS.some(k => {
+            const v = parseFloat(document.getElementById('weide-' + k)?.value);
+            return !isNaN(v);
+        });
+        const nahrwertQuelle = hasEigeneWeideNW ? ' (eigene Analyse)' : ` (${sLabel} Standard)`;
+        res.basisfutter.push({
+            name: 'Weide',
+            icon: '🌿',
+            menge: `${wStd} Std/Tag · ${sLabel}`,
+            empfehlung: `~${wTM} kg TM/Tag`,
+            hinweis: `Entspricht ca. ${r1(wTM / 0.18)} kg Frischgras/Tag${nahrwertQuelle}. Vitamin A & E teilweise gedeckt.${hufrehe}`
+        });
+        res.hinweise.push('🌿 Weidegang vorhanden — Zuckeraufnahme im Blick behalten.' + hufrehe);
+    }
 
     // ── UNTERVERSORGUNGSHINWEISE (rote Ampel → konkrete Empfehlung) ──
     res.defizite = [];
@@ -2025,6 +2306,39 @@ function buildResults(weight, condition, heu) {
         if (text) res.defizite.push({ label: row.label, text, rec });
     }
 
+    // ── ÜBERVERSORGUNGS-WARNUNGEN (kritische Nährstoffe) ──
+    res.ueberschuss = [];
+    for (const row of res.naehr) {
+        if (!row.pct || row.pct <= 120) continue;
+        let text = '', hinweis = '';
+        if (row.label === 'Selen' && row.pct > 150) {
+            text = `⚠️ Selen-Überversorgung (${row.pct}% des Bedarfs)!`;
+            hinweis = `Selen hat eine sehr enge Toleranzspanne. Ab 150% besteht langfristig Vergiftungsgefahr (Haarverlust, Hufprobleme). Selenhaltige Ergänzungen reduzieren oder absetzen.`;
+        } else if (row.label === 'Eisen' && row.pct > 200) {
+            text = `⚠️ Eisen-Überversorgung (${row.pct}%)`;
+            hinweis = `Zu viel Eisen hemmt die Aufnahme von Zink und Kupfer. Häufige Ursache: eisenreiches Heu oder Weidegras. Zink- und Kupfer-Versorgung besonders im Blick behalten.`;
+        } else if (row.label === 'Energie (ME)' && row.pct > 130) {
+            text = `⚠️ Energieüberversorgung (${row.pct}%)`;
+            hinweis = `Das Pferd nimmt mehr Energie auf als es verbraucht. Risiko für Übergewicht, Hufrehe und Stoffwechselprobleme. Heu- oder Kraftfuttermenge reduzieren.`;
+        } else if (row.label === 'Vitamin A' && row.pct > 300) {
+            text = `ℹ️ Vitamin-A-Überversorgung (${row.pct}%)`;
+            hinweis = `Vitamin A ist fettlöslich und kann sich im Körper anreichern. Bei Weidepferden im Frühling oft sehr hoch — kurzfristig unbedenklich. Bei dauerhafter Überversorgung Mineralfutter mit Vitamin A überprüfen.`;
+        }
+        if (text) res.ueberschuss.push({ label: row.label, text, hinweis });
+    }
+
+    // Ca:P-Verhältnis prüfen
+    const caRow = res.naehr.find(r => r.label === 'Calcium');
+    const pRow  = res.naehr.find(r => r.label === 'Phosphor');
+    if (caRow && pRow && pRow.ist > 0) {
+        const caP = r2(caRow.ist / pRow.ist);
+        if (caP < 1.0) {
+            res.ueberschuss.push({ label: 'Ca:P-Verhältnis', text: `⚠️ Ca:P-Verhältnis ungünstig (${caP}:1)`, hinweis: `Das Verhältnis Calcium zu Phosphor sollte mindestens 1,5:1 betragen. Zu viel Phosphor (z. B. durch viel Getreide) kann zu Knochenproblemen führen. Calciumreiche Futtermittel ergänzen (Luzerne, Kalkstein).` });
+        } else if (caP > 4.0) {
+            res.ueberschuss.push({ label: 'Ca:P-Verhältnis', text: `ℹ️ Ca:P-Verhältnis sehr hoch (${caP}:1)`, hinweis: `Ein Verhältnis über 4:1 kann die Phosphoraufnahme beeinträchtigen. Oft durch viel Luzerne. Solange Phosphorbedarf gedeckt ist, meist unbedenklich.` });
+        }
+    }
+
     return res;
 }
 
@@ -2076,12 +2390,34 @@ function renderResults(r) {
         }
         html += `</tbody></table>
             <p class="naehr-legend">
-                <span class="ampel ampel-purple"></span> &gt;100 % &nbsp;
-                <span class="ampel ampel-green"></span> 90–100 % &nbsp;
-                <span class="ampel ampel-yellow"></span> 70–89 % &nbsp;
-                <span class="ampel ampel-red"></span> &lt;70 % &nbsp;
+                <span class="ampel ampel-purple"></span> &gt;100 % — gut versorgt &nbsp;
+                <span class="ampel ampel-green"></span> 90–100 % — fast erreicht &nbsp;
+                <span class="ampel ampel-yellow"></span> 70–89 % — leichte Unterversorgung &nbsp;
+                <span class="ampel ampel-red"></span> &lt;70 % — Handlungsbedarf &nbsp;
                 <span class="ampel ampel-gray"></span> keine Daten
-            </p>`;
+            </p>
+            <div style="margin-top:12px;padding:10px 14px;background:#f7f3ef;border-radius:8px;border-left:3px solid var(--brown);">
+                <p style="font-size:0.78rem;font-weight:700;color:var(--brown);margin-bottom:6px;">💡 So liest du diese Tabelle</p>
+                <p style="font-size:0.76rem;color:var(--text-light);line-height:1.6;">
+                    <strong>🟣 Lila (über 100%):</strong> Versorgung überschritten — bei den meisten Nährstoffen unbedenklich, da überschüssige Mengen ausgeschieden werden. Ausnahme: <strong>Selen</strong> (enge Toleranz!), <strong>Eisen</strong> (hemmt Zink/Kupfer) und <strong>Energie</strong> (Übergewichtsgefahr).<br>
+                    <strong>🟢 Grün (90–100%):</strong> Fast optimal — kleiner Puffer nach unten ist normal und gut.<br>
+                    <strong>🟡 Gelb (70–89%):</strong> Leichte Unterversorgung — im Blick behalten, Futter ggf. anpassen.<br>
+                    <strong>🔴 Rot (unter 70%):</strong> Deutliche Unterversorgung — hier solltest du konkret ergänzen (siehe Hinweise unten).
+                </p>
+            </div>`;
+
+        if (r.ueberschuss && r.ueberschuss.length > 0) {
+            html += `<div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0e8e2;">
+                <p style="font-size:0.8rem;font-weight:700;color:#7c3aed;margin-bottom:8px;">🟣 Überversorgung — Hinweise:</p>`;
+            for (const u of r.ueberschuss) {
+                html += `<div class="warning-item" style="margin-bottom:8px;border-left:3px solid #7c3aed;padding:8px 12px;background:#faf5ff;border-radius:6px;">
+                    <strong style="color:#7c3aed;">${u.text}</strong>
+                    <p style="font-size:0.78rem;margin-top:4px;color:var(--text-light);">${u.hinweis}</p>
+                </div>`;
+            }
+            html += `</div>`;
+        }
+
         if (r.defizite && r.defizite.length > 0) {
             html += `<div style="margin-top:14px;padding-top:12px;border-top:1px solid #f0e8e2;">
                 <p style="font-size:0.8rem;font-weight:700;color:var(--red);margin-bottom:8px;">⚠️ Unterversorgung erkannt — Empfehlungen:</p>`;
@@ -2094,6 +2430,18 @@ function renderResults(r) {
             }
             html += `</div>`;
         }
+
+        // "Was jetzt?" Abschluss-Box
+        html += `<div style="margin-top:16px;padding:12px 14px;background:linear-gradient(135deg,#fffbef,#fdf8f5);border-radius:8px;border:1px solid var(--beige);">
+            <p style="font-size:0.8rem;font-weight:700;color:var(--brown);margin-bottom:6px;">📋 Was jetzt?</p>
+            <p style="font-size:0.76rem;color:var(--text-light);line-height:1.7;">
+                1. <strong>Rote Punkte zuerst</strong> — Unterversorgungen haben Priorität. Starte mit dem größten Defizit.<br>
+                2. <strong>Einen Nährstoff nach dem anderen</strong> — nicht alles auf einmal ändern, sonst weißt du nicht, was wirkt.<br>
+                3. <strong>4–6 Wochen warten</strong> — der Körper braucht Zeit, um auf Futterumstellungen zu reagieren.<br>
+                4. <strong>Überversorgung bei Selen prüfen</strong> — wenn du mehrere selenhaltige Produkte gibst, addiert sich das schnell.<br>
+                5. <strong>Im Zweifel: Ernährungsberatung</strong> — eine Pferdeernährungsberaterin kann diese Auswertung mit dir durchgehen.
+            </p>
+        </div>`;
         html += `</div>`;
     }
 
@@ -2388,6 +2736,35 @@ async function downloadPDF() {
             doc.text('Unterversorgung — Empfehlungen:', margin, y); y += 8;
             for (const d of r.results.defizite) {
                 warnBox(d.label, d.text + (d.rec ? '\nEmpfehlung: '+d.rec : ''), true);
+            }
+        }
+
+        // Überversorgungs-Warnungen (kritische Nährstoffe)
+        if (r.results.ueberschuss && r.results.ueberschuss.length > 0) {
+            y += 4;
+            if (y > BOTTOM - 12) { doc.addPage(); y = 20; }
+            const PURPLE = [124, 58, 237];
+            doc.setFont('helvetica','bold'); doc.setFontSize(9.5); doc.setTextColor(...PURPLE);
+            doc.text('Ueberversorgung — Kritische Hinweise:', margin, y); y += 8;
+            for (const u of r.results.ueberschuss) {
+                const cleanText = pdfStr(u.text);
+                const cleanHinweis = pdfStr(u.hinweis || '');
+                const fullText = cleanHinweis ? cleanText + '\n' + cleanHinweis : cleanText;
+                const indent = 6;
+                const textW = cW - indent - 4;
+                const lines = doc.splitTextToSize(fullText, textW);
+                const boxH = 7 + lines.length * 4 + 4;
+                if (y + boxH > BOTTOM) { doc.addPage(); y = 20; }
+                doc.setFillColor(250, 245, 255);
+                doc.rect(margin, y - 4, cW, boxH, 'F');
+                doc.setFillColor(...PURPLE);
+                doc.rect(margin, y - 4, 3, boxH, 'F');
+                doc.setFont('helvetica','bold'); doc.setFontSize(9); doc.setTextColor(...PURPLE);
+                doc.text(pdfStr(u.label), margin + indent, y);
+                y += 5.5;
+                doc.setFont('helvetica','normal'); doc.setFontSize(8); doc.setTextColor(...TEXT);
+                doc.text(lines, margin + indent, y);
+                y += lines.length * 4 + 6;
             }
         }
     }

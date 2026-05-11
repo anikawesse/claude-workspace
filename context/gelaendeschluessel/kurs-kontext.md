@@ -96,3 +96,24 @@ Haflinger Amir klebt am Hof, wird hektisch. Schafft es mit der Verlasspferd-Meth
 
 ## Upsell 2
 Aktuell nicht aktiv — wird vorerst nicht verfolgt.
+
+---
+
+## Fertige Deliverables
+
+| Datei | Beschreibung | Status |
+|---|---|---|
+| `outputs/modul1-warum-pferd-nicht-mitgeht.pptx` | Modul 1 PowerPoint (10 Slides, pptxgenjs) | ✅ fertig |
+| `outputs/modul1-folien-bauplan.md` | Textbauplan für Modul 1 Slides | ✅ fertig |
+| `outputs/gelaendeschluessel/checkliste-pferd-signale.pdf` | PDF-Checkliste: subtile & deutliche Stresssignale beim Pferd | ✅ fertig |
+| `outputs/gelaendeschluessel/preview.html` | HTML-Vorschau der Checkliste (A4) | ✅ fertig |
+| `outputs/gelaendeschluessel/build_checklist.js` | pdfkit-Skript zur PDF-Generierung | ✅ fertig |
+| `context/gelaendeschluessel/transkripte-ursachen.md` | Destillierter Content aus 2 YouTube-Transkripten | ✅ fertig |
+
+### Checkliste Design-Details
+- Branding: Beige #FAF6F0, Rust #7B3F28, Rust-Light #C4855A
+- Logo-Kreis oben rechts im Header
+- 2 Spalten: Subtile Signale (orange) / Deutliche Signale (dunkelrost)
+- Abwechselnde Zeilenhintergründe, je 10 Items pro Spalte
+- Farbige CSS/PDF-Kreise statt Emojis (Emoji-Encoding-Problem in pdfkit)
+- PDF neu generieren: `cd outputs/gelaendeschluessel && NODE_PATH="C:/Users/Olive/AppData/Roaming/npm/node_modules" node build_checklist.js`

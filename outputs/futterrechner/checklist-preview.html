@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkliste – Pferd-Signale</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #e8e0d8;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .page {
+    width: 794px;
+    height: 1123px;
+    background: #FAF6F0;
+    position: relative;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .top-bar { height: 6px; background: #7B3F28; flex-shrink: 0; }
+  .header {
+    background: #7B3F28;
+    padding: 18px 40px 18px;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .logo-circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 36px;
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255,255,255,0.35);
+    background: #fff;
+  }
+  .logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .header-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8.5px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    padding-right: 90px;
+  }
+  .header-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    font-style: italic;
+  }
+  .intro {
+    padding: 13px 40px 0;
+    font-size: 10.5px;
+    color: #2C2C2C;
+    line-height: 1.55;
+    flex-shrink: 0;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 12px 40px 0;
+    flex: 1;
+    min-height: 0;
+  }
+  .col { display: flex; flex-direction: column; }
+  .section-head {
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .section-head.subtle { background: #C4855A; }
+  .section-head.clear  { background: #7B3F28; }
+  .items { flex: 1; display: flex; flex-direction: column; }
+  .item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 0 10px;
+    font-size: 10px;
+    color: #2C2C2C;
+    line-height: 1.3;
+  }
+  .item:nth-child(even) { background: #F0E8E0; }
+  .item:nth-child(odd)  { background: #FAF6F0; }
+  .checkbox {
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid;
+    flex-shrink: 0;
+    border-radius: 1px;
+  }
+  .subtle .checkbox { border-color: #C4855A; }
+  .clear  .checkbox { border-color: #7B3F28; }
+  .hint-box {
+    margin: 12px 40px 0;
+    background: #F0E8E0;
+    border-left: 4px solid #7B3F28;
+    padding: 8px 14px 10px;
+    flex-shrink: 0;
+  }
+  .hint-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9.5px;
+    font-weight: 700;
+    color: #7B3F28;
+    margin-bottom: 3px;
+  }
+  .hint-text {
+    font-size: 9.5px;
+    color: #2C2C2C;
+    line-height: 1.5;
+  }
+  .footer {
+    margin-top: 12px;
+    background: #7B3F28;
+    padding: 10px 40px;
+    font-size: 9.5px;
+    color: rgba(255,255,255,0.9);
+    font-style: italic;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  .bottom-bar { height: 5px; background: #C4855A; flex-shrink: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="top-bar"></div>
+
+  <div class="header">
+    <div class="logo-circle">
+      <img src="logo.png" alt="Anikas Pferdeakademie Logo">
+    </div>
+    <div class="header-label">Anikas Pferdeakademie</div>
+    <h1>Woran erkennst du,<br>dass dein Pferd nervös wird?</h1>
+    <div class="header-sub">Checkliste: Subtile und deutliche Signale</div>
+  </div>
+
+  <div class="intro">
+    Pferde zeigen ihre Unsicherheit oft lange, bevor sie wirklich heftig werden. Lerne, die frühen Zeichen zu lesen, dann kannst du beruhigend eingreifen, bevor der Stresspegel zu hoch wird.
+  </div>
+
+  <div class="columns">
+    <div class="col">
+      <div class="section-head subtle"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#F5C518;vertical-align:middle;margin-right:6px;flex-shrink:0;"></span>Subtile Signale — frühe Warnung</div>
+      <div class="items subtle">
+        <div class="item"><span class="checkbox"></span>Ohren aufgestellt, drehen sich angespannt</div>
+        <div class="item"><span class="checkbox"></span>Blick wird starr, Augen weiten sich leicht</div>
+        <div class="item"><span class="checkbox"></span>Nüstern blähen sich auf</div>
+        <div class="item"><span class="checkbox"></span>Hals- und Rückenmuskeln spannen sich an</div>
+        <div class="item"><span class="checkbox"></span>Schaut ständig Richtung Stall oder Herde</div>
+        <div class="item"><span class="checkbox"></span>Schritte werden zögerlicher, Tempo nimmt ab</div>
+        <div class="item"><span class="checkbox"></span>Orientiert sich nur noch am Begleitpferd</div>
+        <div class="item"><span class="checkbox"></span>Schweif angezogen oder nervös schlagend</div>
+        <div class="item"><span class="checkbox"></span>Atmung wird schneller und flacher</div>
+        <div class="item"><span class="checkbox"></span>Kaut nicht mehr, Kiefer pressen aufeinander</div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="section-head clear"><span style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#E03B2B;vertical-align:middle;margin-right:6px;flex-shrink:0;"></span>Deutliche Signale — klare Alarmzeichen</div>
+      <div class="items clear">
+        <div class="item"><span class="checkbox"></span>Bleibt abrupt stehen, lässt sich kaum bewegen</div>
+        <div class="item"><span class="checkbox"></span>Zieht stark in Richtung Stall oder Herde</div>
+        <div class="item"><span class="checkbox"></span>Wiehert laut oder ruft wiederholt</div>
+        <div class="item"><span class="checkbox"></span>Steigt oder macht Versuche zu bocken</div>
+        <div class="item"><span class="checkbox"></span>Läuft rückwärts oder dreht sich weg</div>
+        <div class="item"><span class="checkbox"></span>Versucht sich loszureißen</div>
+        <div class="item"><span class="checkbox"></span>Gibt auf dem Heimweg plötzlich Gas</div>
+        <div class="item"><span class="checkbox"></span>Ist kaum noch ansprechbar und zu bremsen</div>
+        <div class="item"><span class="checkbox"></span>Friert komplett ein — Ochs vorm Berg</div>
+        <div class="item"><span class="checkbox"></span>Schwitzt trotz wenig Bewegung</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hint-box">
+    <div class="hint-title">Dein Gradmesser:</div>
+    <div class="hint-text">Je mehr Signale du gleichzeitig siehst, desto höher der Stresspegel deines Pferdes. Halte an, bevor er kippt — ein kurzer Moment der Ruhe ist wertvoller als ein Meter mehr Strecke.</div>
+  </div>
+
+  <div class="footer">
+    Ein ruhiges Pferd beginnt damit, dass du die Signale verstehst. — Deine Anika ✦
+  </div>
+  <div class="bottom-bar"></div>
+</div>
+</body>
+</html>
