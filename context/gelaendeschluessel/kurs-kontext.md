@@ -108,6 +108,7 @@ Aktuell nicht aktiv — wird vorerst nicht verfolgt.
 | `outputs/gelaendeschluessel/checkliste-pferd-signale.pdf` | PDF-Checkliste: subtile & deutliche Stresssignale beim Pferd | ✅ fertig |
 | `outputs/gelaendeschluessel/preview.html` | HTML-Vorschau der Checkliste (A4) | ✅ fertig |
 | `outputs/gelaendeschluessel/build_checklist.js` | pdfkit-Skript zur PDF-Generierung | ✅ fertig |
+| `outputs/gelaendeschluessel/2-wochen-plan.md` | 2-Wochen-Plan basierend auf 3-Zonen-Methode (Modul 4) | 🟡 Entwurf, in Review |
 | `context/gelaendeschluessel/transkripte-ursachen.md` | Destillierter Content aus 2 YouTube-Transkripten | ✅ fertig |
 
 ### Checkliste Design-Details

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workbook — Der Gelände-Schlüssel</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Dancing+Script:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #ccc0b4;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 40px 20px; gap: 28px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+  width: 794px; height: 1123px;
+  background: #FAF6F0;
+  position: relative;
+  box-shadow: 0 6px 40px rgba(0,0,0,0.20);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+}
+
+.top-bar { height: 5px; background: #7B3F28; flex-shrink: 0; }
+.bot-bar  { height: 4px; background: #C4855A; flex-shrink: 0; }
+
+/* FOOTER */
+.pg-footer {
+  background: #7B3F28; padding: 8px 54px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-shrink: 0;
+}
+.pf-url  { font-size: 11px; color: rgba(255,255,255,0.75); font-style: italic; }
+.pf-num  { font-size: 11px; color: rgba(255,255,255,0.45); font-style: italic; }
+.pf-icons { display: none; }
+
+/* PAGE HEADER */
+.pg-header {
+  background: #7B3F28; padding: 22px 54px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-shrink: 0;
+}
+.ph-module { font-size: 8px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 5px; }
+.ph-title  { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: white; line-height: 1.2; max-width: 560px; }
+.ph-title em { font-weight: 400; }
+.ph-sub    { font-size: 11px; color: rgba(255,255,255,0.65); font-style: italic; margin-top: 4px; }
+.ph-logo   { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.1); flex-shrink: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.ph-logo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* PAGE BODY */
+.pg-body {
+  flex: 1; padding: 26px 54px 22px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+
+/* TYPOGRAPHY */
+.h2   { font-family: 'Playfair Display', serif; font-size: 21px; font-weight: 700; color: #7B3F28; line-height: 1.25; }
+.h3   { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: #2C2C2C; line-height: 1.3; margin-bottom: 10px; }
+.body { font-size: 14px; color: #2C2C2C; line-height: 1.7; }
+.body strong { font-weight: 600; }
+
+/* BOXES */
+.box-beige   { background: #F0E8E0; padding: 18px 22px; }
+.box-rust    { background: #7B3F28; padding: 18px 22px; }
+.box-outline { border: 1.5px solid rgba(196,133,90,0.4); padding: 16px 20px; }
+
+.box-title       { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #7B3F28; margin-bottom: 8px; }
+.box-title-white { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: white; margin-bottom: 8px; }
+.box-text        { font-size: 14px; color: #2C2C2C; line-height: 1.65; }
+.box-text-white  { font-size: 14px; color: rgba(255,255,255,0.9); line-height: 1.65; }
+
+.quote-box  { background: #7B3F28; padding: 20px 26px; text-align: center; }
+.quote-text { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 400; font-style: italic; color: rgba(255,255,255,0.95); line-height: 1.6; }
+.quote-attr { font-size: 8.5px; color: rgba(255,255,255,0.4); margin-top: 8px; letter-spacing: 1px; text-transform: uppercase; }
+
+/* EXERCISE */
+.ex-label { font-size: 8px; font-weight: 600; color: #C4855A; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 10px; }
+.ex-q  { font-family: 'Playfair Display', serif; font-size: 15.5px; font-weight: 600; color: #2C2C2C; line-height: 1.4; margin-bottom: 12px; }
+.lines { display: flex; flex-direction: column; gap: 26px; }
+.line  { height: 1px; background: rgba(123,63,40,0.18); }
+
+/* CHECKLIST */
+.cl { display: flex; flex-direction: column; gap: 9px; }
+.cl-item { display: flex; gap: 10px; align-items: flex-start; font-size: 15.5px; color: #2C2C2C; line-height: 1.5; }
+.cb { width: 12px; height: 12px; border: 1.5px solid #C4855A; flex-shrink: 0; margin-top: 2px; border-radius: 1px; }
+
+/* STEPS */
+.steps { display: flex; flex-direction: column; gap: 12px; }
+.step  { display: flex; gap: 14px; align-items: flex-start; }
+.step-dot   { width: 30px; height: 30px; background: #7B3F28; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 12px; font-weight: 700; color: white; flex-shrink: 0; }
+.step-body  { flex: 1; padding-top: 3px; }
+.step-label { font-size: 14px; font-weight: 600; color: #2C2C2C; margin-bottom: 3px; }
+.step-text  { font-size: 13.5px; color: #5A4842; line-height: 1.55; }
+
+/* HIGHLIGHT LIST */
+.hl-list { display: flex; flex-direction: column; }
+.hl-item { display: flex; align-items: center; gap: 14px; padding: 10px 0; border-bottom: 1px solid rgba(196,133,90,0.15); }
+.hl-item:last-child { border-bottom: none; }
+.hl-n   { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: rgba(196,133,90,0.75); width: 32px; flex-shrink: 0; line-height: 1; }
+.hl-txt { font-size: 14px; color: #2C2C2C; line-height: 1.5; }
+.hl-txt strong { font-weight: 600; color: #7B3F28; }
+
+/* ZONES */
+.three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+.two-col   { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.zone { padding: 14px 16px; border-top: 3px solid; }
+.zone.gruen { border-color: #5A8A4A; background: rgba(90,138,74,0.07); }
+.zone.gelb  { border-color: #D4920A; background: rgba(212,146,10,0.07); }
+.zone.rot   { border-color: #B83A2E; background: rgba(184,58,46,0.07); }
+.zone-name  { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+.zone.gruen .zone-name { color: #3A6A2A; }
+.zone.gelb  .zone-name { color: #8A5800; }
+.zone.rot   .zone-name { color: #8A2A20; }
+.zone-text  { font-size: 12px; color: #2C2C2C; line-height: 1.55; }
+
+/* WEEK PLANNER */
+.week-header      { background: #7B3F28; padding: 10px 16px; }
+.week-header-text { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: white; }
+.week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; background: rgba(123,63,40,0.1); padding: 3px; }
+.day { background: #FAF6F0; padding: 9px 8px; min-height: 106px; display: flex; flex-direction: column; gap: 4px; }
+.day.active { background: #F0E8E0; }
+.day-dn   { font-size: 8px; font-weight: 700; color: #7B3F28; text-transform: uppercase; letter-spacing: 0.5px; }
+.day-task { font-size: 10.5px; color: #5A4842; line-height: 1.4; }
+.day.rest .day-task { color: rgba(90,72,66,0.38); font-style: italic; }
+
+/* NOTFALL */
+.notfall       { background: rgba(196,133,90,0.1); border: 1.5px solid #C4855A; padding: 14px 18px; }
+.notfall-title { font-family: 'Playfair Display', serif; font-size: 13px; font-weight: 700; color: #7B3F28; margin-bottom: 8px; }
+
+/* PROMISE BOX */
+.promise-box    { border: 2px solid #C4855A; padding: 20px 26px; text-align: center; }
+.promise-script { font-family: 'Dancing Script', cursive; font-size: 34px; color: #7B3F28; margin-bottom: 8px; }
+.promise-text   { font-size: 14px; color: #5A4842; line-height: 1.7; }
+
+/* BADGE */
+.badge      { display: inline-block; background: #C4855A; color: white; font-size: 8.5px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 2px; margin-bottom: 8px; }
+.badge.dark { background: #7B3F28; }
+
+/* READY BOX */
+.ready-box   { background: #F0E8E0; padding: 18px 22px; }
+.ready-title { font-family: 'Playfair Display', serif; font-size: 14px; font-weight: 700; color: #7B3F28; margin-bottom: 12px; text-align: center; }
+
+/* DAY-BY-DAY PLAN */
+.tag-pill  { display:inline-block; background:#C4855A; color:white; font-size:9px; font-weight:700; letter-spacing:0.5px; padding:3px 10px; border-radius:2px; margin-bottom:6px; }
+.tag-block { border-bottom:1px solid rgba(196,133,90,0.2); padding-bottom:11px; padding-top:11px; }
+.tag-block:first-child { padding-top:0; }
+.tag-block:last-child  { border-bottom:none; padding-bottom:0; }
+.tag-title { font-size:14px; font-weight:700; color:#2C2C2C; margin-bottom:4px; }
+.tag-body  { font-size:13px; color:#5A4842; line-height:1.6; }
+.tag-body strong { font-weight:700; color:#2C2C2C; }
+.woche-box   { background:#7B3F28; padding:14px 20px; }
+.woche-title { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:white; margin-bottom:4px; }
+.woche-sub   { font-size:12px; color:rgba(255,255,255,0.78); font-style:italic; line-height:1.5; }
+.zone-table  { width:100%; border-collapse:collapse; }
+.zone-table thead tr { background:#7B3F28; }
+.zone-table th { color:white; font-size:9px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; padding:9px 14px; text-align:left; }
+.zone-table td { padding:10px 14px; font-size:13px; color:#2C2C2C; line-height:1.5; border-bottom:1px solid rgba(196,133,90,0.18); vertical-align:top; }
+.zone-table tr:last-child td { border-bottom:none; }
+.zone-table td:first-child { font-weight:700; color:#7B3F28; width:120px; }
+.zone-table tr:nth-child(even) td { background:rgba(196,133,90,0.06); }
+
+/* ══════════════════════════════════
+   COVER PAGE
+══════════════════════════════════ */
+.cover-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #FAF6F0;
+}
+
+/* Rust top area */
+.cover-rust-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 300px;
+  background: #7B3F28;
+  z-index: 0;
+}
+
+/* "Workbook" script + kurs label, sitting in the rust area */
+.cover-top-section {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 300px;
+  z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding-bottom: 80px; /* stay above the logo overlap */
+}
+.cover-script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px; font-weight: 700;
+  color: rgba(255,255,255,0.88);
+  line-height: 1; margin-bottom: 8px;
+}
+.cover-kurs-label {
+  font-size: 8.5px; font-weight: 600;
+  color: rgba(255,255,255,0.48);
+  letter-spacing: 3px; text-transform: uppercase;
+}
+
+/* Logo circle centered at the rust/beige transition */
+.cover-logo-circle {
+  position: absolute;
+  top: 190px; /* 300px center - 110px radius = 190px */
+  left: 50%; transform: translateX(-50%);
+  z-index: 3;
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 5px solid #C4855A;
+  overflow: hidden;
+  background: #D4C0B0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+.cover-logo-circle img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+/* Content below the logo */
+.cover-bottom-section {
+  position: absolute;
+  top: 430px; /* below logo bottom (190+220+20) */
+  left: 54px; right: 54px; bottom: 40px;
+  z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.cover-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 38px; font-weight: 700;
+  color: #7B3F28; text-align: center;
+  line-height: 1.15;
+}
+.cover-rule { width: 60px; height: 2px; background: #C4855A; }
+
+/* Photo area on cover */
+.cover-photo {
+  width: 100%; flex: 1;
+  overflow: hidden;
+  border-radius: 4px;
+  border: 3px solid #C4855A;
+  box-shadow: 0 0 0 7px rgba(196,133,90,0.18), 0 6px 24px rgba(123,63,40,0.18);
+}
+.cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cover-photo-placeholder {
+  width: 100%; height: 100%;
+  background: #E8DDD6;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: rgba(123,63,40,0.3); font-style: italic;
+}
+
+.cover-branding {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding-bottom: 10px;
+}
+.cover-branding-name {
+  font-size: 8.5px; font-weight: 600;
+  color: #9B7A6A; letter-spacing: 2.5px; text-transform: uppercase;
+}
+.cover-branding-logo {
+  width: 56px; height: 56px; border-radius: 50%;
+  border: 2px solid #C4855A; overflow: hidden; background: #E8DDD6;
+}
+.cover-branding-logo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ══════════════════════════════════
+   AGENDA
+══════════════════════════════════ */
+.agenda-body { flex: 1; padding: 46px 54px 24px; position: relative; overflow: hidden; display: flex; flex-direction: column; }
+.agenda-wm { position: absolute; bottom: -20px; right: -10px; font-family: 'Playfair Display', serif; font-size: 190px; font-weight: 700; color: rgba(123,63,40,0.04); white-space: nowrap; pointer-events: none; line-height: 1; }
+.agenda-eyebrow { font-size: 8.5px; font-weight: 600; color: #C4855A; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 6px; }
+.agenda-heading { font-family: 'Playfair Display', serif; font-size: 44px; font-weight: 700; color: #7B3F28; line-height: 1.05; margin-bottom: 30px; }
+.agenda-list { display: flex; flex-direction: column; gap: 0; }
+.ag-item { display: flex; align-items: center; border-bottom: 1px solid rgba(196,133,90,0.18); padding: 16px 0; }
+.ag-item:first-child { border-top: 1px solid rgba(196,133,90,0.18); }
+.ag-num   { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 700; color: rgba(196,133,90,0.65); width: 58px; flex-shrink: 0; line-height: 1; }
+.ag-label { font-size: 8.5px; font-weight: 600; color: #C4855A; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 4px; }
+.ag-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: #2C2C2C; line-height: 1.25; margin-bottom: 3px; }
+.ag-sub   { font-size: 13px; color: #9B7A6A; font-style: italic; line-height: 1.45; }
+
+/* ══════════════════════════════════
+   CLOSING
+══════════════════════════════════ */
+.closing-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly; text-align: center; padding: 36px 64px; position: relative; overflow: hidden; }
+.closing-wm { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-family: 'Dancing Script', cursive; font-size: 210px; color: rgba(123,63,40,0.04); white-space: nowrap; pointer-events: none; font-weight: 700; }
+.closing-script      { font-family: 'Dancing Script', cursive; font-size: 70px; font-weight: 700; color: #7B3F28; line-height: 1; position: relative; z-index: 1; }
+.closing-title       { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; font-style: italic; color: #2C2C2C; line-height: 1.4; position: relative; z-index: 1; max-width: 500px; }
+.closing-rule        { width: 50px; height: 2px; background: #C4855A; }
+.closing-text        { font-size: 14px; color: #5A4842; line-height: 1.8; max-width: 540px; position: relative; z-index: 1; }
+.closing-quote-text  { font-family: 'Dancing Script', cursive; font-size: 26px; color: #C4855A; line-height: 1.3; position: relative; z-index: 1; }
+.closing-attr        { font-size: 8.5px; color: #9B7A6A; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="cover-body">
+    <div class="cover-rust-bg"></div>
+
+    <div class="cover-top-section">
+      <div class="cover-script">Workbook</div>
+      <div class="cover-kurs-label">Der Gelände-Schlüssel · Anikas Pferdeakademie</div>
+    </div>
+
+    <div class="cover-logo-circle">
+      <img src="logo.png" alt="" onerror="this.style.display='none'">
+    </div>
+
+    <div class="cover-bottom-section">
+      <div class="cover-title">Der Gelände-Schlüssel</div>
+      <div class="cover-rule"></div>
+
+      <div class="cover-photo">
+        <img src="cover-foto.jpg" alt="Anika mit Pferd" onerror="this.outerHTML='<div class=\'cover-photo-placeholder\'>Foto folgt</div>'">
+      </div>
+
+    </div>
+  </div>
+  <div class="pg-footer">
+    <span class="pf-url">www.anikas-pferdeakademie.de</span>
+    <span class="pf-num"></span>
+    <div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div>
+  </div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 2 — AGENDA
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar" style="height:48px;"></div>
+  <div class="agenda-body">
+    <div class="agenda-wm">Agenda</div>
+    <div class="agenda-eyebrow">Überblick</div>
+    <div class="agenda-heading">Was dich erwartet</div>
+    <div class="agenda-list">
+      <div class="ag-item"><div class="ag-num">0</div><div><div class="ag-label">Einführung</div><div class="ag-title">Willkommen</div></div></div>
+      <div class="ag-item"><div class="ag-num">1</div><div><div class="ag-label">Modul 1</div><div class="ag-title">Warum dein Pferd nicht mitgeht</div></div></div>
+      <div class="ag-item"><div class="ag-num">2</div><div><div class="ag-label">Modul 2</div><div class="ag-title">Die Basis: Dein Pferd lernt, dir zu vertrauen</div></div></div>
+      <div class="ag-item"><div class="ag-num">3</div><div><div class="ag-label">Modul 3</div><div class="ag-title">Der Gelände-Schlüssel: Schritt für Schritt raus</div></div></div>
+      <div class="ag-item"><div class="ag-num">4</div><div><div class="ag-label">Modul 4</div><div class="ag-title">Dein 2-Wochen-Plan</div></div></div>
+      <div class="ag-item"><div class="ag-num">✦</div><div><div class="ag-label">Abschluss</div><div class="ag-title">Dein erster Spaziergang</div></div></div>
+    </div>
+  </div>
+  <div class="pg-footer">
+    <span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">2</span>
+    <div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div>
+  </div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 3 — MODUL 0
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Einführung · Modul 0</div><div class="ph-title">Willkommen</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body" style="gap:15px; padding-top:20px; padding-bottom:16px;">
+    <div class="promise-box">
+      <div class="promise-script">Mein Versprechen an dich</div>
+      <div class="promise-text">Du bekommst eine effektive und sanfte Strategie an die Hand, ohne Zwang und ohne stundenlange Trainingseinheiten.</div>
+    </div>
+    <div>
+      <div class="h3">Was dich in den nächsten 2 Wochen erwartet</div>
+      <div class="hl-list">
+        <div class="hl-item"><div class="hl-n">1</div><div class="hl-txt">Du verstehst, <strong>warum dein Pferd so reagiert</strong>, und was wirklich dahintersteckt</div></div>
+        <div class="hl-item"><div class="hl-n">2</div><div class="hl-txt">Du baust <strong>Vertrauen auf</strong>, noch auf dem Hof, bevor ihr an das Hoftor denkt</div></div>
+        <div class="hl-item"><div class="hl-n">3</div><div class="hl-txt">Du gehst <strong>Schritt für Schritt raus</strong>, ohne Stress, ohne Zwang</div></div>
+        <div class="hl-item"><div class="hl-n">4</div><div class="hl-txt">Ihr macht <strong>deinen ersten freien Spaziergang</strong>, alleine, ohne Begleitung</div></div>
+      </div>
+    </div>
+    <div class="box-beige">
+      <div class="ex-label">Mein Pferd und ich</div>
+      <div class="ex-q">Wie sieht die Situation gerade bei euch aus und was ist eure größte Herausforderung?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Mein Ziel für diese 2 Wochen</div>
+      <div class="ex-q">Was soll nach diesen 2 Wochen möglich sein?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">3</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 4 — MODUL 1 THEORIE
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 1</div><div class="ph-title">Warum dein Pferd nicht mitgeht</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="quote-box">
+      <div class="quote-text">„Dein Pferd macht es nicht, um dich zu ärgern. Es kann den Schalter nicht einfach umlegen."</div>
+      <div class="quote-attr">Anika · Anikas Pferdeakademie</div>
+    </div>
+    <div>
+      <div class="h2" style="margin-bottom:10px;">Warum dein Pferd blockiert, und dass es nicht deine Schuld ist</div>
+      <div class="body">Pferde sind Herdentiere. Ihr größtes Bedürfnis als Beutetier ist Sicherheit, und diese Sicherheit finden sie in der Gruppe. Wenn dein Pferd am Hoftor nicht weiter möchte, folgt es einem Urinstinkt, der trotz Domestizierung noch tief in ihm steckt. In diesem Kurs zeige ich dir daher eine Strategie, mit der du das Vertrauen deines Pferdes enorm stärkst und zum Sicherheitsanker für dein Pferd wirst.</div>
+    </div>
+    <div class="two-col">
+      <div class="box-beige">
+        <div class="box-title">Das introvertierte Pferd</div>
+        <div class="box-text">Friert ein, bewegt sich kaum, steht wie ein Fels. Wird oft als stur bezeichnet. Auch das ist Angst, nur nach innen gerichtet.</div>
+      </div>
+      <div class="box-beige">
+        <div class="box-title">Das extrovertierte Pferd</div>
+        <div class="box-text">Steigt, zieht weg, macht Theater. Die Angst zeigt sich nach außen, laut und deutlich. Beide Typen brauchen dasselbe: Sicherheit.</div>
+      </div>
+    </div>
+    <div class="box-beige">
+      <div class="ex-label">Meine Beobachtung</div>
+      <div class="ex-q">Wie äußert sich das Blockieren bei meinem Pferd? Was passiert genau?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">4</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 5 — MODUL 2 EQUIPMENT
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 2 · Vorbereitung</div><div class="ph-title">Dein Equipment</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div>
+      <div class="h2" style="margin-bottom:10px;">Was du für eure ersten Ausflüge brauchst</div>
+      <div class="body">Du brauchst kein teures Spezialequipment. Drei Dinge reichen, um sicher und klar mit deinem Pferd zu kommunizieren.</div>
+    </div>
+    <div>
+      <div class="h3">Das Equipment</div>
+      <div class="hl-list">
+        <div class="hl-item"><div class="hl-n">1</div><div class="hl-txt"><strong>Handschuhe</strong>, schützen die Hände beim Führen mit Longe</div></div>
+        <div class="hl-item"><div class="hl-n">2</div><div class="hl-txt"><strong>Longe</strong></div></div>
+        <div class="hl-item"><div class="hl-n">3</div><div class="hl-txt"><strong>Dually-Halfter oder Kappzaum</strong>, für eine klare, faire Kommunikation</div></div>
+      </div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Mein Equipment-Check</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Handschuhe</div>
+        <div class="cl-item"><div class="cb"></div>Longe</div>
+        <div class="cl-item"><div class="cb"></div>Dually-Halfter oder Kappzaum</div>
+      </div>
+    </div>
+    <div class="box-beige">
+      <div class="ex-label">Meine Notiz</div>
+      <div class="ex-q">Was möchte ich mir vor den ersten Übungseinheiten noch besorgen oder vorbereiten?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">5</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 6 — MODUL 2 KOMMUNIKATION
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 2 · Kommunikation</div><div class="ph-title">Gas, Bremse und Hinterhand</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="body">Bevor ihr ins Gelände geht, braucht ihr eine gemeinsame Sprache. Diese drei Hilfen sind dein Werkzeugkasten:</div>
+    <div class="three-col">
+      <div class="box-beige" style="text-align:center;">
+        <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Gas</div>
+        <div class="box-text" style="text-align:left;">Vorwärts-Impuls geben, aber leichtes Touchieren in der Schenkellage.</div>
+      </div>
+      <div class="box-beige" style="text-align:center;">
+        <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Bremse</div>
+        <div class="box-text" style="text-align:left;">Verlangsamen oder anhalten. Körper aufrichten, Longe leicht annehmen, mit dem Körper den Weg machen.</div>
+      </div>
+      <div class="box-beige" style="text-align:center;">
+        <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Lenkung</div>
+        <div class="box-text" style="text-align:left;">Die Hinterhand bewegen oder dein Pferd ein paar Tritte rückwärts richten.</div>
+      </div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Trainingsnotiz</div>
+      <div class="ex-q">Was hat heute gut funktioniert? Was war noch schwierig?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">6</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 7 — MODUL 1 SIGNALE
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 2 · Übung</div><div class="ph-title">Was zeigt dein Pferd?</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="body">Pferde zeigen ihre Unsicherheit oft lange, bevor sie wirklich hektisch werden. Lerne, die frühen Zeichen zu lesen, dann kannst du beruhigend eingreifen, bevor der Stresspegel zu hoch wird.</div>
+    <div class="two-col">
+      <div class="box-beige">
+        <div class="badge">Subtile Signale</div>
+        <div class="cl">
+          <div class="cl-item"><div class="cb"></div>Ohren drehen sich angespannt</div>
+          <div class="cl-item"><div class="cb"></div>Blick wird starr</div>
+          <div class="cl-item"><div class="cb"></div>Nüstern blähen sich auf</div>
+          <div class="cl-item"><div class="cb"></div>Hals und Rückenmuskeln spannen sich an</div>
+          <div class="cl-item"><div class="cb"></div>Schaut ständig Richtung Stall oder Herde</div>
+          <div class="cl-item"><div class="cb"></div>Schritte werden zögerlicher</div>
+          <div class="cl-item"><div class="cb"></div>Orientiert sich nur noch am Begleitpferd</div>
+          <div class="cl-item"><div class="cb"></div>Schweif angezogen oder nervös schlagend</div>
+          <div class="cl-item"><div class="cb"></div>Atmung wird schneller und flacher</div>
+          <div class="cl-item"><div class="cb"></div>Kaut nicht mehr</div>
+        </div>
+      </div>
+      <div class="box-beige">
+        <div class="badge dark">Deutliche Signale</div>
+        <div class="cl">
+          <div class="cl-item"><div class="cb"></div>Bleibt abrupt stehen</div>
+          <div class="cl-item"><div class="cb"></div>Zieht stark in Richtung Stall oder Herde</div>
+          <div class="cl-item"><div class="cb"></div>Wiehert laut oder ruft wiederholt</div>
+          <div class="cl-item"><div class="cb"></div>Steigt oder macht Versuche zu bocken</div>
+          <div class="cl-item"><div class="cb"></div>Läuft rückwärts oder dreht sich weg</div>
+          <div class="cl-item"><div class="cb"></div>Versucht sich loszureißen</div>
+          <div class="cl-item"><div class="cb"></div>Gibt auf dem Heimweg plötzlich Gas</div>
+          <div class="cl-item"><div class="cb"></div>Ist kaum noch ansprechbar</div>
+          <div class="cl-item"><div class="cb"></div>Friert komplett ein</div>
+          <div class="cl-item"><div class="cb"></div>Schwitzt trotz wenig Bewegung</div>
+        </div>
+      </div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Reflexion</div>
+      <div class="ex-q">Welche Signale erkennst du bei deinem Pferd und wann tauchen sie zuerst auf?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Reflexion</div>
+      <div class="ex-q">Wie hast du bisher reagiert und was ist passiert?</div>
+      <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div></div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">7</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 8 — MODUL 2 VERTRAUEN
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 2</div><div class="ph-title">Die Basis: Dein Pferd lernt, dir zu vertrauen</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div>
+      <div class="h2" style="margin-bottom:10px;">Die eine Übung, die alles verändert</div>
+      <div class="body">Vertrauen entsteht nicht draußen im Gelände. Es entsteht auf dem Hof, beim Führen, in den kleinen Momenten, bevor ihr auch nur ans Hoftor denkt. Die Methode dafür: Annäherung und Rückzug.</div>
+    </div>
+    <div>
+      <div class="h3">Wie du deinem Pferd zeigst: Ich führe, du kannst mir vertrauen</div>
+      <div class="steps">
+        <div class="step"><div class="step-dot">1</div><div class="step-body"><div class="step-label">Startpunkt finden</div><div class="step-text">Geh mit deinem Pferd so weit, dass es noch ruhig ist. Das ist deine Komfortzone.</div></div></div>
+        <div class="step"><div class="step-dot">2</div><div class="step-body"><div class="step-label">Einen Schritt weiter</div><div class="step-text">Einen kleinen Schritt in Richtung der herausfordernden Situation. Beobachte den Stresspegel.</div></div></div>
+        <div class="step"><div class="step-dot">3</div><div class="step-body"><div class="step-label">Rückzug als Belohnung</div><div class="step-text">Sobald dein Pferd dies aushalten kann und immer noch ansprechbar ist, ziehst du dich wieder zurück. Das ist die Belohnung.</div></div></div>
+        <div class="step"><div class="step-dot">4</div><div class="step-body"><div class="step-label">Wiederholen und ausweiten</div><div class="step-text">Dieses Muster von Annäherung und Rückzug setzt du immer weiter fort. Gradmesser ist dabei immer das Stresslevel deines Pferdes.</div></div></div>
+      </div>
+    </div>
+    <div class="box-rust">
+      <div class="box-text-white" style="text-align:center;font-style:italic;">Kleine Einheiten von maximal 15 Minuten am Tag reichen schon.</div>
+    </div>
+    <div class="box-beige">
+      <div class="ex-label">Das nehme ich mit</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Ich starte immer in der Komfortzone meines Pferdes</div>
+        <div class="cl-item"><div class="cb"></div>Ich gehe nur einen kleinen Schritt auf die Schwelle zu</div>
+        <div class="cl-item"><div class="cb"></div>Solange mein Pferd ansprechbar ist, ziehe ich mich wieder zurück</div>
+        <div class="cl-item"><div class="cb"></div>Der Rückzug ist die Belohnung</div>
+        <div class="cl-item"><div class="cb"></div>Das Stresslevel meines Pferdes ist mein Gradmesser</div>
+        <div class="cl-item"><div class="cb"></div>Kleine Einheiten von maximal 15 Minuten reichen</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">8</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 8 — MODUL 3 DREI ZONEN
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 3</div><div class="ph-title">Die 3-Zonen-Methode: Hoftor, erste Meter, freies Gelände</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="body">Das Geheimnis liegt darin, die Schwelle immer ein kleines Stück weiterzuschieben.</div>
+    <div class="three-col">
+      <div class="zone gruen"><div class="zone-name">Komfortzone</div><div class="zone-text">Dein Pferd ist entspannt. Ruhiger Schritt, Aufmerksamkeit bei dir, normale Atmung. Das ist dein Startpunkt und dein sicherer Hafen.</div></div>
+      <div class="zone gelb"><div class="zone-name">Schwelle</div><div class="zone-text">Dein Pferd kommt langsam an seine mentalen Grenzen. Hier setzt du nur kurze Reize und ziehst dich dann wieder in die Komfortzone zurück.</div></div>
+      <div class="zone rot"><div class="zone-name">Gefahrenzone</div><div class="zone-text">Das Pferd ist über seine Grenze. Hier lernt es nichts mehr. Sofort zurück in die Komfortzone.</div></div>
+    </div>
+    <div>
+      <div class="h3">Schritt für Schritt raus</div>
+      <div class="steps">
+        <div class="step"><div class="step-dot">1</div><div class="step-body"><div class="step-label">Hoftor</div><div class="step-text">Erst wenn dein Pferd an der magischen Schwelle ruhig ist und keine deutlichen Stresssignale mehr zeigt, geht ihr den nächsten Schritt.</div></div></div>
+        <div class="step"><div class="step-dot">2</div><div class="step-body"><div class="step-label">Erste Meter</div><div class="step-text">Ihr spielt mit Annäherung und Rückzug und verschiebt so die Zonen.</div></div></div>
+        <div class="step"><div class="step-dot">3</div><div class="step-body"><div class="step-label">Freies Gelände</div><div class="step-text">Mit der Zeit werden die Schwellen immer weniger und dein Pferd läuft flüssiger mit dir mit.</div></div></div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="box-outline">
+        <div class="ex-label">Meine Komfortzone heute</div>
+        <div class="ex-q">Wo ist mein Pferd gerade entspannt?</div>
+        <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+      </div>
+      <div class="box-outline">
+        <div class="ex-label">Meine Schwelle heute</div>
+        <div class="ex-q">Wo beginnt die Anspannung?</div>
+        <div class="lines"><div class="line"></div><div class="line"></div><div class="line"></div></div>
+      </div>
+    </div>
+    <div class="box-rust">
+      <div class="box-text-white" style="text-align:center;font-style:italic;">Das Entscheidende: Nicht wie weit ihr heute gekommen seid, sondern wie entspannt dein Pferd dabei war.</div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">9</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 10 — DEIN 2-WOCHEN-PLAN
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div>
+      <div class="ph-module">Der Gelände-Schlüssel</div>
+      <div class="ph-title">Dein 2-Wochen-Plan</div>
+      <div class="ph-sub">Schritt für Schritt vom Hof basierend auf der Drei-Zonen-Methode</div>
+    </div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div>
+      <div class="h2" style="margin-bottom:12px;">Die 4 Prinzipien, an denen du dich orientierst</div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-dot">1</div>
+          <div class="step-body">
+            <div class="step-label">Stresspegel ist der Gradmesser.</div>
+            <div class="step-text">Nicht die Strecke. Nicht die Zeit. Wenn dein Pferd entspannt ist, gehst du weiter. Wenn nicht: eine Stufe zurück.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-dot">2</div>
+          <div class="step-body">
+            <div class="step-label">Annäherung und Rückzug.</div>
+            <div class="step-text">Du näherst dich der magischen Schwelle und ziehst dich zurück, bevor dein Pferd unruhig wird. So lernt es: „Mein Mensch achtet auf mich und ich kann ihm vertrauen."</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-dot">3</div>
+          <div class="step-body">
+            <div class="step-label">Strecke und Zeit dosieren.</div>
+            <div class="step-text">Wenn dein Pferd bei einem Training sehr mutig ist und weit vorausgeht, beende das Training und lobe es ausgiebig. Auch wenn es vielleicht nur fünf Minuten gedauert hat.</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-dot">4</div>
+          <div class="step-body">
+            <div class="step-label">15 Minuten reichen.</div>
+            <div class="step-text">Kurze Trainingseinheiten sind für das effektive Lernen vorteilhaft. Wenn du zeitig nach einem Erfolgserlebnis das Training beendest, ist dein Pferd umso motivierter für das nächste Mal.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box-beige">
+      <div class="box-title">Woran du Fortschritt erkennst</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Dein Pferd läuft auf dem Hof locker mit, ohne ständig Richtung Stall zu schauen</div>
+        <div class="cl-item"><div class="cb"></div>Gas und Bremse funktionieren, dein Pferd reagiert auf leichte Signale</div>
+        <div class="cl-item"><div class="cb"></div>Die Annäherung ans Hoftor ist ohne starke Stressreaktion möglich</div>
+        <div class="cl-item"><div class="cb"></div>Du bleibst ruhig, auch wenn dein Pferd mal kurz spannt</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">10</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 12 — WOCHE 1 TAG 1–4
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Schwelle kennenlernen und sanft erweitern</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="woche-box">
+      <div class="woche-title">Woche 1: Schwelle kennenlernen und sanft erweitern</div>
+      <div class="woche-sub">Wochenziel: Dein Pferd geht entspannt bis zur Schwelle, ein paar Meter darüber hinaus, und kommt ruhig zurück.</div>
+    </div>
+    <div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 1</span>
+        <div class="tag-title">Beziehung auf dem Hof (Komfortzone)</div>
+        <div class="tag-body">10 bis 15 Minuten Führarbeit am Hof: anhalten, rückwärts richten, seitwärts treten lassen.<br><strong>Worauf du achtest:</strong> Dein Pferd ist mit der Aufmerksamkeit bei dir und du kannst alle Übungen mit feinen Hilfen ausführen.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 2</span>
+        <div class="tag-title">Bewusst zur Schwelle</div>
+        <div class="tag-body">Führe dein Pferd über den Hof und nähere dich der magischen Schwelle. Wenn du nicht weißt, wo diese genau ist, gehe so lange, bis du Unsicherheiten deines Pferdes bemerkst. Nimm die ersten Anzeichen von Unsicherheit wahr und bleibe dort zwei Minuten ruhig stehen. Bei stärkeren Stressanzeichen ziehe dich erst ein bisschen zurück.<br><strong>Worauf du achtest:</strong> Schon die kleinsten Anzeichen erkennen und dort ruhig innehalten.<br><strong>Wichtig:</strong> Bei deutlichem Stress baue wieder etwas Abstand auf.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 3</span>
+        <div class="tag-title">Pause oder Wiederholung</div>
+        <div class="tag-body">Entweder freier Tag, oder Tag 2 noch einmal.<br><strong>Faustregel:</strong> Wenn Tag 2 nicht zu 100% entspannt war, wiederholst du ihn. Du gehst noch nicht weiter.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 4</span>
+        <div class="tag-title">Schwelle überschreiten, kurz</div>
+        <div class="tag-body">Bis zur Schwelle und drei bis fünf Schritte darüber hinaus. Stehen bleiben, gemeinsam atmen, auf dein Kommando wieder zurück.<br><strong>Worauf du achtest:</strong> Bleibt dein Pferd beim Stehen entspannt?</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">11</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 13 — WOCHE 1 TAG 5–7 + RÜCKBLICK
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Schwelle kennenlernen und sanft erweitern</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 5</span>
+        <div class="tag-title">Führübungen an der Schwelle</div>
+        <div class="tag-body">Du arbeitest dich sanft aus der Komfortzone an die magische Schwelle heran und setzt dort deine Führübungen fort. Du kannst dein Pferd dort auch gerne etwas grasen lassen.<br><strong>Worauf du achtest:</strong> Die Führübungen ganz selbstverständlich um den Punkt der Schwelle weiter fortsetzen.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 6</span>
+        <div class="tag-title">Wiederholung von Tag 5</div>
+        <div class="tag-body">Du startest wieder ganz selbstverständlich mit Übungen in der Komfortzone bis zur magischen Schwelle und darüber hinaus.<br><strong>Worauf du achtest:</strong> Wiederholung bringt deinem Pferd Sicherheit. Achte darauf, dass dein Pferd vielleicht noch mehr bei dir ist als am Tag zuvor und noch feiner auf deine Hilfen reagiert.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 7</span>
+        <div class="tag-title">Reflexion und Festigung</div>
+        <div class="tag-body">Schau einmal auf die Woche zurück und führe dir vor Augen, was du schon mit deinem Pferd erreicht hast. Konzentriere dich ausschließlich auf die positiven Veränderungen. Dann kannst du ein paar Führübungen in der Komfortzone machen. Der magischen Schwelle widmen wir heute keinerlei Aufmerksamkeit. Damit nimmst du deinem Pferd wiederum Druck und machst es neugieriger.</div>
+      </div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Wochenrückblick · Woche 1</div>
+      <div class="ex-q">Was diese Woche besonders gut geklappt hat:</div>
+      <div class="lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">12</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 14 — WOCHE 2 TAG 8–11
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Schwelle erweitern, Gefahrenzone erkunden</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="woche-box">
+      <div class="woche-title">Woche 2: Schwelle erweitern, Gefahrenzone erkunden</div>
+      <div class="woche-sub">Wochenziel: Die Überwindung der magischen Schwelle wird immer selbstverständlicher und die Komfortzone weitet sich weiter in die frühere Gefahrenzone aus.</div>
+    </div>
+    <div class="box-beige">
+      <div class="box-title">Woran du Fortschritt in Woche 2 erkennst</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Dein Pferd verlässt den Hof ohne starkes Ziehen oder Stoppen</div>
+        <div class="cl-item"><div class="cb"></div>Es kann sich kurz von der Herde entfernen, ohne zu eskalieren</div>
+        <div class="cl-item"><div class="cb"></div>Gas, Bremse und Lenkung funktionieren auch draußen</div>
+        <div class="cl-item"><div class="cb"></div>Du kennst die Stresssignale deines Pferdes und kannst darauf reagieren</div>
+        <div class="cl-item"><div class="cb"></div>Du fühlst dich ruhig, deine Energie stimmt</div>
+      </div>
+    </div>
+    <div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 8</span>
+        <div class="tag-title">Erweiterung der Schwelle</div>
+        <div class="tag-body">Führübungen im Bereich der magischen Schwelle und in die Gefahrenzone hinein. Sollte dein Pferd zu viel Stress haben, ziehe dich wieder in die Komfortzone zurück.<br><strong>Worauf du achtest:</strong> Auch wenn etwas Stress aufkommt, orientiert sich dein Pferd zusehends mehr an dir und setzt deine Hilfen weiter um.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 9</span>
+        <div class="tag-title">Verschiebung der magischen Schwelle</div>
+        <div class="tag-body">Du verschiebst die magische Schwelle an den Punkt, bis zu dem du gestern in der Gefahrenzone gekommen bist und dein Pferd immer noch ansprechbar war. Starte wieder mit Führübungen an der neuen magischen Schwelle und taste dich sachte in die neue Gefahrenzone hinein.<br><strong>Worauf du achtest:</strong> Auch wenn ein bisschen Stress aufkommt, soll dein Pferd mit der Aufmerksamkeit bei dir bleiben und gut kontrollierbar sein.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 10</span>
+        <div class="tag-title">Pause</div>
+        <div class="tag-body">Heute machst du mit deinem Pferd einfach eine Pause oder ein anderes Training. Oder du lässt es in der Komfortzone, ein Stück weit von der Schwelle entfernt, entspannt grasen.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 11</span>
+        <div class="tag-title">Neue Komfortzone festigen</div>
+        <div class="tag-body">Führübungen an der magischen Schwelle bis in die Gefahrenzone hinein. Hier soll eine neue, entspannte Routine entstehen.<br><strong>Worauf du achtest:</strong> Für dein Pferd wird es immer selbstverständlicher, sich weiter vom Hof zu entfernen.</div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">13</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 15 — WOCHE 2 TAG 12–14 + RÜCKBLICK
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Schwelle erweitern, Gefahrenzone erkunden</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 12</span>
+        <div class="tag-title">Zweite Verschiebung der magischen Schwelle</div>
+        <div class="tag-body">Vielleicht merkst du jetzt, dass ein größerer Sprung möglich ist. Falls nicht, ist das überhaupt nicht schlimm. Jedes Pferd ist anders. Verschiebe die magische Schwelle wieder einen Punkt weiter und mache Führübungen, wobei du immer wieder die Entspannung suchst.<br><strong>Worauf du achtest:</strong> Auch hier geht es vor allen Dingen um die Ansprechbarkeit deines Pferdes. Es geht nicht darum, Stress komplett zu vermeiden. Es geht um die Händelbarkeit.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 13</span>
+        <div class="tag-title">Erster „echter" Spaziergang</div>
+        <div class="tag-body">Du kannst die magischen Schwellen immer weiter hinausschieben. Vielleicht gibt es diese deutlichen Punkte aber auch gar nicht mehr. Je weiter du dich nun vom Hof entfernst, desto mehr kommt ihr in die Richtung eines richtigen Spaziergangs.<br><strong>Worauf du achtest:</strong> Baue auch hier das Spiel mit Annäherung und Rückzug immer wieder ein.</div>
+      </div>
+      <div class="tag-block">
+        <span class="tag-pill">Tag 14</span>
+        <div class="tag-title">Drei-Zonen-Methode fortsetzen</div>
+        <div class="tag-body">Fahre einfach nach dem gewohnten Muster fort und setze dir immer nur das Ziel, die Komfortzone langsam zu erweitern.<br><strong>Worauf du achtest:</strong> Denke weiterhin in den drei Zonen und lasse dich nicht verleiten, gleich die ganze Runde als Ziel vorzunehmen.</div>
+      </div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Wochenrückblick · Woche 2</div>
+      <div class="ex-q">Was diese Woche besonders gut geklappt hat:</div>
+      <div class="lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">14</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 16 — NOTFALL-PLAN + BEOBACHTUNG
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Werkzeuge</div><div class="ph-title">Notfall-Plan und tägliche Beobachtung</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="notfall">
+      <div class="notfall-title">Notfall-Plan: Wenn ein Tag schiefgeht</div>
+      <div class="body" style="margin-bottom:10px;font-weight:600;">Dein Pferd wird unruhig, steigt, friert ein, will zurück.</div>
+      <div class="steps" style="gap:8px;">
+        <div class="step">
+          <div class="step-dot" style="width:24px;height:24px;font-size:11px;">1</div>
+          <div class="step-body"><div class="step-text"><strong>Nicht kämpfen.</strong> Kein „jetzt erst recht."</div></div>
+        </div>
+        <div class="step">
+          <div class="step-dot" style="width:24px;height:24px;font-size:11px;">2</div>
+          <div class="step-body"><div class="step-text"><strong>Eine Zone zurück.</strong> Zone 3 → Zone 2. Zone 2 → Zone 1.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-dot" style="width:24px;height:24px;font-size:11px;">3</div>
+          <div class="step-body"><div class="step-text"><strong>Dort warten, bis dein Pferd ruhig atmet.</strong> Nicht weitergehen, nicht ziehen.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-dot" style="width:24px;height:24px;font-size:11px;">4</div>
+          <div class="step-body"><div class="step-text"><strong>Mit einem kleinen Erfolg beenden.</strong> Ein ruhiges Stehen, ein freiwilliger Schritt zu dir.</div></div>
+        </div>
+        <div class="step">
+          <div class="step-dot" style="width:24px;height:24px;font-size:11px;">5</div>
+          <div class="step-body"><div class="step-text"><strong>Am nächsten Tag</strong> langsam bei Zone 1 starten und ausweiten. Das ist kein Rückschritt. Das ist die Methode.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="box-rust">
+      <div class="box-title-white" style="margin-bottom:10px;">Was du beobachtest — jeden Tag, in 30 Sekunden</div>
+      <div class="box-text-white" style="margin-bottom:12px;">Vor jeder steigenden Anforderung frag dich:</div>
+      <div class="cl">
+        <div class="cl-item" style="color:rgba(255,255,255,0.9);"><div class="cb" style="border-color:rgba(255,255,255,0.4);"></div>Atmet mein Pferd ruhig?</div>
+        <div class="cl-item" style="color:rgba(255,255,255,0.9);"><div class="cb" style="border-color:rgba(255,255,255,0.4);"></div>Ist mein Pferd wirklich bei mir und ansprechbar?</div>
+        <div class="cl-item" style="color:rgba(255,255,255,0.9);"><div class="cb" style="border-color:rgba(255,255,255,0.4);"></div>Reagiert mein Pferd fein auf meine Hilfen?</div>
+      </div>
+      <div class="box-text-white" style="margin-top:12px;">Wenn <strong style="color:white;">eins</strong> davon „nein" ist, bleibe auf der jetzigen Stufe. Heute ist nicht der Tag, den nächsten Schritt zu machen.</div>
+    </div>
+    <div class="body" style="font-style:italic;color:#9B7A6A;font-size:13px;">Die Checkliste „Subtile und deutliche Stresssignale" hilft dir hier. Leg sie dir griffbereit hin.</div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">15</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 16 — WAS AM ENDE ANDERS IST
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="pg-header">
+    <div><div class="ph-module">Modul 4 · Abschluss des Plans</div><div class="ph-title">Was am Ende der 2 Wochen anders ist</div></div>
+    <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
+  </div>
+  <div class="pg-body">
+    <div class="box-beige">
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Dein Pferd geht <strong>freiwillig</strong> mit dir vom Hof.</div>
+        <div class="cl-item"><div class="cb"></div>Du erkennst Stresssignale, <em>bevor</em> sie zur Eskalation führen.</div>
+        <div class="cl-item"><div class="cb"></div>Du hast eine klare Strategie, mit der die Situation ruhig bleibt und ihr euch immer sicherer im Gelände fühlt.</div>
+        <div class="cl-item"><div class="cb"></div>Du bist nicht mehr abhängig von Begleitung.</div>
+      </div>
+    </div>
+    <div class="ready-box">
+      <div class="ready-title">Checkliste: Woran du merkst, dass du bereit bist</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Dein Pferd verlässt den Hof ohne starkes Ziehen oder Stoppen</div>
+        <div class="cl-item"><div class="cb"></div>Es kann sich kurz von der Herde entfernen, ohne zu eskalieren</div>
+        <div class="cl-item"><div class="cb"></div>Gas, Bremse und Lenkung funktionieren auch draußen</div>
+        <div class="cl-item"><div class="cb"></div>Du kennst die Stresssignale deines Pferdes und kannst darauf reagieren</div>
+        <div class="cl-item"><div class="cb"></div>Du fühlst dich ruhig, deine Energie stimmt</div>
+      </div>
+    </div>
+    <div class="quote-box">
+      <div class="quote-text">Und wichtig: Du hast nicht „dein Pferd verändert." Du hast souveräne Führungsqualitäten gezeigt und bist in den Augen deines Pferdes viel vertrauenswürdiger geworden.</div>
+    </div>
+    <div class="box-outline">
+      <div class="ex-label">Mein persönlicher Rückblick</div>
+      <div class="ex-q">Was hat sich in den 2 Wochen für mich und mein Pferd verändert?</div>
+      <div class="lines">
+        <div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+    <div class="body" style="font-style:italic;color:#9B7A6A;font-size:13px;text-align:center;">Dieser Plan ist ein Muster. Pass ihn an dein Pferd an. Der Stresspegel entscheidet, nicht der Kalender.</div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">16</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+<!-- ══════════════════════════════════
+     PAGE 17 — ABSCHLUSS
+══════════════════════════════════ -->
+<div class="page">
+  <div class="top-bar"></div>
+  <div class="closing-body">
+    <div class="closing-wm">Geschafft</div>
+    <div class="closing-script">Geschafft!</div>
+    <div class="closing-title">Dein erster Spaziergang. Der Moment, auf den du hingearbeitet hast.</div>
+    <div class="closing-rule" style="margin:0 auto;"></div>
+    <div class="closing-text">
+      Wie du das Ergebnis festigst, damit es kein Zufall war:<br><br>
+      Wiederhole die Ausflüge regelmäßig. Routine festigt das Vertrauen, das ihr aufgebaut habt.<br>
+      Baue die Strecke langsam aus — immer Schritt für Schritt, nicht auf einmal.<br>
+      Schlechte Tage gehören dazu. Sie zeigen dir, wo noch Raum ist.
+    </div>
+    <div style="background:#F0E8E0;padding:22px 32px;max-width:540px;width:100%;position:relative;z-index:1;">
+      <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#7B3F28;margin-bottom:12px;text-align:center;">Nächste Schritte: Was jetzt möglich ist</div>
+      <div class="cl">
+        <div class="cl-item"><div class="cb"></div>Regelmäßige Ausflüge — alleine, ohne Begleitung</div>
+        <div class="cl-item"><div class="cb"></div>Neue Strecken erkunden, wenn die bekannten sitzen</div>
+        <div class="cl-item"><div class="cb"></div>Das Erarbeitete auch unterm Sattel anwenden</div>
+      </div>
+    </div>
+    <div class="closing-quote-text">„Ein ruhiges Pferd beginnt damit, dass du die Signale verstehst."</div>
+    <div class="closing-attr">Deine Anika · Anikas Pferdeakademie</div>
+  </div>
+  <div class="pg-footer"><span class="pf-url">www.anikas-pferdeakademie.de</span><span class="pf-num">17</span><div class="pf-icons"><div class="pf-icon">f</div><div class="pf-icon">&#9632;</div></div></div>
+  <div class="bot-bar"></div>
+</div>
+
+</body>
+</html>

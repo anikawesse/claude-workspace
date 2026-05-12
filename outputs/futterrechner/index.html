@@ -692,9 +692,10 @@
                 <span class="menge-label-sm">Stunden/Tag:</span>
                 <input type="number" class="menge-input-sm" id="menge-weide" placeholder="z. B. 4" min="0" max="24" step="0.5">
                 <select class="unit-select" id="unit-weide" style="max-width:180px;">
-                    <option value="herbst">🍂 Herbst (Sep–Nov)</option>
                     <option value="fruehling">🌱 Frühling (März–Mai)</option>
                     <option value="sommer">☀️ Sommer (Jun–Aug)</option>
+                    <option value="herbst">🍂 Herbst (Sep–Nov)</option>
+                    <option value="winter">❄️ Winter (Dez–Feb)</option>
                 </select>
             </div>
 
@@ -1095,6 +1096,13 @@ const NAEHRWERTE = {
         kupfer: 7, zink: 28, selen: 0.07, mangan: 60, eisen: 180,
         vitA: 55000,
     },
+    weide_winter: {
+        // Winterweide: dormantes/spärliches Gras, geringer Nährwert
+        me: 8.5, pcve: 65, zucker: 80,
+        calcium: 4.0, phosphor: 2.8, magnesium: 1.5, natrium: 1.2,
+        kupfer: 5, zink: 20, selen: 0.07, mangan: 60, eisen: 180,
+        vitA: 15000,
+    },
     weide_sommer: {
         // Trockener, spärlicher, weniger Protein und Zucker
         me: 10.0, pcve: 90, zucker: 100,
@@ -1415,6 +1423,9 @@ function validateStep1() {
 // ============================================================
 const SAVE_KEY = 'futterrechner_v1';
 
+// In-Memory-Cache für eigene Heu-Analysewerte — überlebt Mode-Wechsel unbeschadet
+let _heuCustom = {};
+
 const HEU_FIELDS = ['me','zucker','pcvxp','calcium','phosphor','magnesium',
                     'natrium','kalium','schwefel','kupfer','zink','mangan','eisen','selen'];
 
@@ -1425,6 +1436,7 @@ function saveState() {
         condition: document.querySelector('input[name="condition"]:checked')?.value || 'ideal',
         heuMode:   document.querySelector('input[name="heu-mode"]:checked')?.value || 'lufa',
         heu:       {},
+        heuCustom: {},
         weide:     {},
         feeds:     {},
         dynItems:  { 2: getDynamicItems(2), 3: getDynamicItems(3), 4: getDynamicItems(4) },
@@ -1434,9 +1446,17 @@ function saveState() {
         }
     };
 
+    // Aktuelle Felder in state.heu (für backward compat)
     HEU_FIELDS.forEach(f => {
         state.heu[f] = document.getElementById('heu-' + f)?.value ?? '';
     });
+    // Im manuell-Modus: _heuCustom aktualisieren und separat speichern
+    if (state.heuMode === 'manuell') {
+        HEU_FIELDS.forEach(f => {
+            _heuCustom[f] = state.heu[f];
+        });
+    }
+    state.heuCustom = { ..._heuCustom };
 
     WEIDE_FIELDS.forEach(f => {
         state.weide[f] = document.getElementById('weide-' + f)?.value ?? '';
@@ -1475,34 +1495,19 @@ function loadState() {
     const heuModeRadio = document.querySelector(`input[name="heu-mode"][value="${savedHeuMode}"]`);
     if (heuModeRadio) heuModeRadio.checked = true;
 
+    // _heuCustom wiederherstellen (heuCustom bevorzugt, state.heu als Fallback für alte Saves)
+    _heuCustom = state.heuCustom || (savedHeuMode === 'manuell' ? (state.heu || {}) : {});
+
     if (savedHeuMode === 'manuell') {
-        // "Meine Analyse": erst alle Felder leeren (LUFA-Defaults aus setLufaDefaults entfernen)
+        // "Meine Analyse": Felder leeren, dann eigene Werte eintragen
         HEU_FIELDS.forEach(f => {
             const el = document.getElementById('heu-' + f);
-            if (el) el.value = '';
+            if (el) el.value = _heuCustom[f] || '';
         });
         document.getElementById('lufa-source-label').textContent = 'Meine Analyse';
-        // Dann nur gespeicherte Werte eintragen (leer = wirklich leer lassen)
-        if (state.heu) {
-            HEU_FIELDS.forEach(f => {
-                const el = document.getElementById('heu-' + f);
-                if (el && state.heu[f] !== '' && state.heu[f] !== undefined) {
-                    el.value = state.heu[f];
-                }
-            });
-        }
     } else {
-        // "Lufa 2025": LUFA-Defaults wurden bereits von setLufaDefaults() gesetzt
+        // "Lufa 2025": LUFA-Defaults bleiben (von setLufaDefaults gesetzt)
         document.getElementById('lufa-source-label').textContent = 'Lufa 2025 Durchschnitt';
-        // Gespeicherte Abweichungen eintragen (falls Kundin LUFA-Werte manuell angepasst hat)
-        if (state.heu) {
-            HEU_FIELDS.forEach(f => {
-                const el = document.getElementById('heu-' + f);
-                if (el && state.heu[f] !== '' && state.heu[f] !== undefined) {
-                    el.value = state.heu[f];
-                }
-            });
-        }
     }
 
     // Checkboxen + Mengen
@@ -1579,17 +1584,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('input[name="heu-mode"]').forEach(r => {
         r.addEventListener('change', function () {
             if (this.value === 'lufa') {
+                // Eigene Werte zuerst sichern, bevor LUFA-Defaults überschreiben
+                HEU_FIELDS.forEach(f => {
+                    _heuCustom[f] = document.getElementById('heu-' + f)?.value ?? '';
+                });
                 setLufaDefaults();
                 document.getElementById('lufa-source-label').textContent = 'Lufa 2025 Durchschnitt';
             } else {
-                // Meine Analyse: Felder leeren zum selbst Eintragen
+                // Eigene Werte aus _heuCustom restaurieren
                 HEU_FIELDS.forEach(f => {
                     const el = document.getElementById('heu-' + f);
-                    if (el) el.value = '';
+                    if (el) el.value = _heuCustom[f] || '';
                 });
                 document.getElementById('lufa-source-label').textContent = 'Meine Analyse';
             }
-            scheduleSave(); // Modus-Wechsel sofort speichern
+            scheduleSave();
         });
     });
 
@@ -1850,6 +1859,7 @@ function getWeideSaisonKey() {
     const s = val('unit-weide');
     if (s === 'fruehling') return 'weide_fruehling';
     if (s === 'sommer')    return 'weide_sommer';
+    if (s === 'winter')    return 'weide_winter';
     return 'weide_herbst';
 }
 
@@ -1873,7 +1883,7 @@ function getWeideKgTM() {
 
     // Saisonfaktor
     const saison = val('unit-weide');
-    const faktor = saison === 'fruehling' ? 1.35 : saison === 'sommer' ? 0.85 : 1.0;
+    const faktor = saison === 'fruehling' ? 1.35 : saison === 'sommer' ? 0.85 : saison === 'winter' ? 0.60 : 1.0;
 
     return r2(tm * faktor);
 }
@@ -2233,20 +2243,21 @@ function buildResults(weight, condition, heu) {
         const sSaison = val('unit-weide');
         const sLabel = sSaison === 'fruehling' ? 'Frühling (März–Mai)'
                      : sSaison === 'sommer'    ? 'Sommer (Jun–Aug)'
+                     : sSaison === 'winter'    ? 'Winter (Dez–Feb)'
                      : 'Herbst (Sep–Nov)';
         const hufrehe = sSaison === 'fruehling' ? ' ⚠️ Hufrehe-Risiko bei Frühlingsgras beachten!' : '';
         const hasEigeneWeideNW = WEIDE_FIELDS.some(k => {
             const v = parseFloat(document.getElementById('weide-' + k)?.value);
             return !isNaN(v);
         });
-        const nahrwertQuelle = hasEigeneWeideNW ? ' (eigene Analyse)' : ` (${sLabel} Standard)`;
-        res.basisfutter.push({
-            name: 'Weide',
-            icon: '🌿',
-            menge: `${wStd} Std/Tag · ${sLabel}`,
-            empfehlung: `~${wTM} kg TM/Tag`,
-            hinweis: `Entspricht ca. ${r1(wTM / 0.18)} kg Frischgras/Tag${nahrwertQuelle}. Vitamin A & E teilweise gedeckt.${hufrehe}`
-        });
+        const nahrwertQuelle = hasEigeneWeideNW ? 'eigene Analyse' : `${sLabel} Standard`;
+        res.weide = {
+            std: wStd,
+            sLabel,
+            frischgras: r1(wTM / 0.18),
+            nahrwertQuelle,
+            hufrehe,
+        };
         res.hinweise.push('🌿 Weidegang vorhanden — Zuckeraufnahme im Blick behalten.' + hufrehe);
     }
 
@@ -2457,6 +2468,16 @@ function renderResults(r) {
             </div>
         </div>
         <div class="heu-sugar-note">${r.heu.zuckerHinweis}</div>
+        ${r.weide ? `
+        <div class="result-item" style="margin-top:10px;border-top:1px solid #f0e8e2;padding-top:10px;">
+            <div class="result-item-icon">🌿</div>
+            <div class="result-item-content">
+                <strong>Weide</strong>
+                <div class="amount">~${r.weide.frischgras} kg Frischgras/Tag</div>
+                <div class="hint">${r.weide.std} Std/Tag · ${r.weide.sLabel}</div>
+                <div class="hint">Nährwertbasis: ${r.weide.nahrwertQuelle}.${r.weide.hufrehe}</div>
+            </div>
+        </div>` : ''}
     </div>`;
 
     // Säule 2
@@ -2625,6 +2646,10 @@ async function downloadPDF() {
     const zlines = doc.splitTextToSize(pdfStr(r.results.heu.zuckerHinweis), cW-6);
     doc.setFont('helvetica','italic'); doc.setFontSize(8); doc.setTextColor(...TLIGHT);
     doc.text(zlines, margin+3, y); y += zlines.length*4+8;
+    if (r.results.weide) {
+        const w = r.results.weide;
+        row('Weide:', `~${w.frischgras} kg Frischgras/Tag`, pdfStr(`${w.std} Std/Tag · ${w.sLabel} · Nährwertbasis: ${w.nahrwertQuelle}${w.hufrehe}`));
+    }
 
     if (r.results.basisfutter.length > 0) {
         secHeader('Säule 2 — Basisfutter & Protein');
