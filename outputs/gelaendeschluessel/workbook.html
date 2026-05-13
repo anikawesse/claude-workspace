@@ -294,6 +294,11 @@ body {
 .closing-text        { font-size: 14px; color: #5A4842; line-height: 1.8; max-width: 540px; position: relative; z-index: 1; }
 .closing-quote-text  { font-family: 'Dancing Script', cursive; font-size: 26px; color: #C4855A; line-height: 1.3; position: relative; z-index: 1; }
 .closing-attr        { font-size: 8.5px; color: #9B7A6A; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: none; padding: 0; gap: 0; }
+  .page { box-shadow: none; page-break-after: always; break-after: page; }
+}
 </style>
 </head>
 <body>
@@ -452,16 +457,18 @@ body {
       <div class="h3">Das Equipment</div>
       <div class="hl-list">
         <div class="hl-item"><div class="hl-n">1</div><div class="hl-txt"><strong>Handschuhe</strong>, schützen die Hände beim Führen mit Longe</div></div>
-        <div class="hl-item"><div class="hl-n">2</div><div class="hl-txt"><strong>Longe</strong></div></div>
+        <div class="hl-item"><div class="hl-n">2</div><div class="hl-txt"><strong>Longe</strong>, lang (6–8 m)</div></div>
         <div class="hl-item"><div class="hl-n">3</div><div class="hl-txt"><strong>Dually-Halfter oder Kappzaum</strong>, für eine klare, faire Kommunikation</div></div>
+        <div class="hl-item"><div class="hl-n">4</div><div class="hl-txt"><strong>Gerte</strong>, 1,20–1,40 m</div></div>
       </div>
     </div>
     <div class="box-outline">
       <div class="ex-label">Mein Equipment-Check</div>
       <div class="cl">
         <div class="cl-item"><div class="cb"></div>Handschuhe</div>
-        <div class="cl-item"><div class="cb"></div>Longe</div>
+        <div class="cl-item"><div class="cb"></div>Longe (lang, 6–8 m)</div>
         <div class="cl-item"><div class="cb"></div>Dually-Halfter oder Kappzaum</div>
+        <div class="cl-item"><div class="cb"></div>Gerte (1,20–1,40 m)</div>
       </div>
     </div>
     <div class="box-beige">
@@ -480,7 +487,7 @@ body {
 <div class="page">
   <div class="top-bar"></div>
   <div class="pg-header">
-    <div><div class="ph-module">Modul 2 · Kommunikation</div><div class="ph-title">Gas, Bremse und Hinterhand</div></div>
+    <div><div class="ph-module">Modul 2 · Lenkung</div><div class="ph-title">Gas, Bremse und Lenkung</div></div>
     <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
   </div>
   <div class="pg-body">
@@ -488,15 +495,15 @@ body {
     <div class="three-col">
       <div class="box-beige" style="text-align:center;">
         <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Gas</div>
-        <div class="box-text" style="text-align:left;">Vorwärts-Impuls geben, aber leichtes Touchieren in der Schenkellage.</div>
+        <div class="box-text" style="text-align:left;">Vorwärts-Impuls geben, durch leichtes Touchieren in der Schenkellage.</div>
       </div>
       <div class="box-beige" style="text-align:center;">
         <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Bremse</div>
-        <div class="box-text" style="text-align:left;">Verlangsamen oder anhalten. Körper aufrichten, Longe leicht annehmen, mit dem Körper den Weg machen.</div>
+        <div class="box-text" style="text-align:left;">Verlangsamen oder anhalten. Körper aufrichten, Longe leicht annehmen, mit dem Körper den Weg zumachen.</div>
       </div>
       <div class="box-beige" style="text-align:center;">
         <div style="font-family:'Dancing Script',cursive;font-size:36px;color:#7B3F28;margin-bottom:8px;">Lenkung</div>
-        <div class="box-text" style="text-align:left;">Die Hinterhand bewegen oder dein Pferd ein paar Tritte rückwärts richten.</div>
+        <div class="box-text" style="text-align:left;">Die Hinterhand bewegen oder dein Pferd ein paar Tritte rückwärtsrichten.</div>
       </div>
     </div>
     <div class="box-outline">
@@ -597,7 +604,7 @@ body {
       <div class="ex-label">Das nehme ich mit</div>
       <div class="cl">
         <div class="cl-item"><div class="cb"></div>Ich starte immer in der Komfortzone meines Pferdes</div>
-        <div class="cl-item"><div class="cb"></div>Ich gehe nur einen kleinen Schritt auf die Schwelle zu</div>
+        <div class="cl-item"><div class="cb"></div>Ich gehe nur in kleinen Schritten auf die Schwelle zu</div>
         <div class="cl-item"><div class="cb"></div>Solange mein Pferd ansprechbar ist, ziehe ich mich wieder zurück</div>
         <div class="cl-item"><div class="cb"></div>Der Rückzug ist die Belohnung</div>
         <div class="cl-item"><div class="cb"></div>Das Stresslevel meines Pferdes ist mein Gradmesser</div>
@@ -622,8 +629,8 @@ body {
     <div class="body">Das Geheimnis liegt darin, die Schwelle immer ein kleines Stück weiterzuschieben.</div>
     <div class="three-col">
       <div class="zone gruen"><div class="zone-name">Komfortzone</div><div class="zone-text">Dein Pferd ist entspannt. Ruhiger Schritt, Aufmerksamkeit bei dir, normale Atmung. Das ist dein Startpunkt und dein sicherer Hafen.</div></div>
-      <div class="zone gelb"><div class="zone-name">Schwelle</div><div class="zone-text">Dein Pferd kommt langsam an seine mentalen Grenzen. Hier setzt du nur kurze Reize und ziehst dich dann wieder in die Komfortzone zurück.</div></div>
-      <div class="zone rot"><div class="zone-name">Gefahrenzone</div><div class="zone-text">Das Pferd ist über seine Grenze. Hier lernt es nichts mehr. Sofort zurück in die Komfortzone.</div></div>
+      <div class="zone gelb"><div class="zone-name">Schwelle</div><div class="zone-text">Dein Pferd wird langsam unsicherer. Hier übst du Sicherheit zu geben und die Aufmerksamkeit zu behalten.</div></div>
+      <div class="zone rot"><div class="zone-name">Gefahrenzone</div><div class="zone-text">Dein Pferd kommt langsam an seine mentalen Grenzen. Hier setzt du nur kurze Reize und ziehst dich dann wieder in die Komfortzone zurück.</div></div>
     </div>
     <div>
       <div class="h3">Schritt für Schritt raus</div>
@@ -706,7 +713,7 @@ body {
         <div class="cl-item"><div class="cb"></div>Dein Pferd läuft auf dem Hof locker mit, ohne ständig Richtung Stall zu schauen</div>
         <div class="cl-item"><div class="cb"></div>Gas und Bremse funktionieren, dein Pferd reagiert auf leichte Signale</div>
         <div class="cl-item"><div class="cb"></div>Die Annäherung ans Hoftor ist ohne starke Stressreaktion möglich</div>
-        <div class="cl-item"><div class="cb"></div>Du bleibst ruhig, auch wenn dein Pferd mal kurz spannt</div>
+        <div class="cl-item"><div class="cb"></div>Du bleibst ruhig, auch wenn dein Pferd mal kurz angespannt ist</div>
       </div>
     </div>
   </div>
@@ -720,12 +727,11 @@ body {
 <div class="page">
   <div class="top-bar"></div>
   <div class="pg-header">
-    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Schwelle kennenlernen und sanft erweitern</div></div>
+    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Woche 1: Schwelle kennenlernen und sanft erweitern</div></div>
     <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
   </div>
   <div class="pg-body">
     <div class="woche-box">
-      <div class="woche-title">Woche 1: Schwelle kennenlernen und sanft erweitern</div>
       <div class="woche-sub">Wochenziel: Dein Pferd geht entspannt bis zur Schwelle, ein paar Meter darüber hinaus, und kommt ruhig zurück.</div>
     </div>
     <div>
@@ -761,7 +767,7 @@ body {
 <div class="page">
   <div class="top-bar"></div>
   <div class="pg-header">
-    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Schwelle kennenlernen und sanft erweitern</div></div>
+    <div><div class="ph-module">Modul 4 · Woche 1</div><div class="ph-title">Woche 1: Schwelle kennenlernen und sanft erweitern</div></div>
     <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
   </div>
   <div class="pg-body">
@@ -800,12 +806,11 @@ body {
 <div class="page">
   <div class="top-bar"></div>
   <div class="pg-header">
-    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Schwelle erweitern, Gefahrenzone erkunden</div></div>
+    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Woche 2: Schwelle erweitern, Gefahrenzone erkunden</div></div>
     <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
   </div>
   <div class="pg-body">
     <div class="woche-box">
-      <div class="woche-title">Woche 2: Schwelle erweitern, Gefahrenzone erkunden</div>
       <div class="woche-sub">Wochenziel: Die Überwindung der magischen Schwelle wird immer selbstverständlicher und die Komfortzone weitet sich weiter in die frühere Gefahrenzone aus.</div>
     </div>
     <div class="box-beige">
@@ -851,7 +856,7 @@ body {
 <div class="page">
   <div class="top-bar"></div>
   <div class="pg-header">
-    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Schwelle erweitern, Gefahrenzone erkunden</div></div>
+    <div><div class="ph-module">Modul 4 · Woche 2</div><div class="ph-title">Woche 2: Schwelle erweitern, Gefahrenzone erkunden</div></div>
     <div class="ph-logo"><img src="logo.png" alt="" onerror="this.style.display='none'"></div>
   </div>
   <div class="pg-body">
@@ -908,11 +913,11 @@ body {
         </div>
         <div class="step">
           <div class="step-dot" style="width:24px;height:24px;font-size:11px;">3</div>
-          <div class="step-body"><div class="step-text"><strong>Dort warten, bis dein Pferd ruhig atmet.</strong> Nicht weitergehen, nicht ziehen.</div></div>
+          <div class="step-body"><div class="step-text"><strong>Dort warten, bis dein Pferd ruhig atmet.</strong></div></div>
         </div>
         <div class="step">
           <div class="step-dot" style="width:24px;height:24px;font-size:11px;">4</div>
-          <div class="step-body"><div class="step-text"><strong>Mit einem kleinen Erfolg beenden.</strong> Ein ruhiges Stehen, ein freiwilliger Schritt zu dir.</div></div>
+          <div class="step-body"><div class="step-text"><strong>Mit einem kleinen Erfolg beenden.</strong></div></div>
         </div>
         <div class="step">
           <div class="step-dot" style="width:24px;height:24px;font-size:11px;">5</div>
@@ -921,7 +926,7 @@ body {
       </div>
     </div>
     <div class="box-rust">
-      <div class="box-title-white" style="margin-bottom:10px;">Was du beobachtest — jeden Tag, in 30 Sekunden</div>
+      <div class="box-title-white" style="margin-bottom:10px;">Darauf achtest du bei jedem Training</div>
       <div class="box-text-white" style="margin-bottom:12px;">Vor jeder steigenden Anforderung frag dich:</div>
       <div class="cl">
         <div class="cl-item" style="color:rgba(255,255,255,0.9);"><div class="cb" style="border-color:rgba(255,255,255,0.4);"></div>Atmet mein Pferd ruhig?</div>
@@ -955,7 +960,7 @@ body {
       </div>
     </div>
     <div class="ready-box">
-      <div class="ready-title">Checkliste: Woran du merkst, dass du bereit bist</div>
+      <div class="ready-title">Checkliste: Woran du merkst, dass du bereit bist dich weiter ins Gelände zu trauen</div>
       <div class="cl">
         <div class="cl-item"><div class="cb"></div>Dein Pferd verlässt den Hof ohne starkes Ziehen oder Stoppen</div>
         <div class="cl-item"><div class="cb"></div>Es kann sich kurz von der Herde entfernen, ohne zu eskalieren</div>
@@ -994,7 +999,7 @@ body {
       Wie du das Ergebnis festigst, damit es kein Zufall war:<br><br>
       Wiederhole die Ausflüge regelmäßig. Routine festigt das Vertrauen, das ihr aufgebaut habt.<br>
       Baue die Strecke langsam aus — immer Schritt für Schritt, nicht auf einmal.<br>
-      Schlechte Tage gehören dazu. Sie zeigen dir, wo noch Raum ist.
+      Schlechte Tage gehören dazu.
     </div>
     <div style="background:#F0E8E0;padding:22px 32px;max-width:540px;width:100%;position:relative;z-index:1;">
       <div style="font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#7B3F28;margin-bottom:12px;text-align:center;">Nächste Schritte: Was jetzt möglich ist</div>
