@@ -108,8 +108,16 @@ Aktuell nicht aktiv — wird vorerst nicht verfolgt.
 | `outputs/gelaendeschluessel/checkliste-pferd-signale.pdf` | PDF-Checkliste: subtile & deutliche Stresssignale beim Pferd | ✅ fertig |
 | `outputs/gelaendeschluessel/preview.html` | HTML-Vorschau der Checkliste (A4) | ✅ fertig |
 | `outputs/gelaendeschluessel/build_checklist.js` | pdfkit-Skript zur PDF-Generierung | ✅ fertig |
-| `outputs/gelaendeschluessel/2-wochen-plan.md` | 2-Wochen-Plan basierend auf 3-Zonen-Methode (Modul 4) | 🟡 Entwurf, in Review |
+| `outputs/gelaendeschluessel/2-wochen-plan.md` | 2-Wochen-Plan basierend auf 3-Zonen-Methode (Modul 4) | ✅ fertig |
 | `context/gelaendeschluessel/transkripte-ursachen.md` | Destillierter Content aus 2 YouTube-Transkripten | ✅ fertig |
+| `outputs/gelaendeschluessel/workbook.html` | A4 Workbook (17 Seiten, HTML), PDF auf Desktop | ✅ fertig |
+| `outputs/gelaendeschluessel/audio-training-session1-skript.md` | Audio-Skript Order Bump 2: Session 1 "Magische Schwelle finden" | ✅ fertig |
+| `outputs/gelaendeschluessel/audio-training-session1-skript.docx` | Audio-Skript als Word-Dokument zum Download | ✅ fertig |
+| `outputs/gelaendeschluessel/video1-dein-pferd-steigt.pptx` | Präsentation Video 1 "Dein Pferd steigt" (8 Slides, pptxgenjs) | ✅ fertig |
+| `outputs/gelaendeschluessel/video2-dein-pferd-zieht-weg.pptx` | Präsentation Video 2 "Dein Pferd zieht weg" (8 Slides, pptxgenjs) | ✅ fertig |
+| `outputs/gelaendeschluessel/video3-pferd-bewegt-sich-nicht.pptx` | Präsentation Video 3 "Dein Pferd bewegt sich nicht mehr" (8 Slides, pptxgenjs) | ✅ fertig |
+| `outputs/gelaendeschluessel/emails-kampagne.md` | 4 E-Mails: Teaser, Verkauf, Story, Bonus-Erinnerung (alle finalisiert) | ✅ fertig |
+| `context/gelaendeschluessel/email-learnings.md` | Stil-Learnings aus finalisierten E-Mails | ✅ fertig |
 
 ### Checkliste Design-Details
 - Branding: Beige #FAF6F0, Rust #7B3F28, Rust-Light #C4855A

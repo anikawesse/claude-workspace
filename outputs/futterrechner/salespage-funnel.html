@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dein persönlicher Futterrechner – Anikas Pferdeakademie</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --beige: #e6c5b4;
+            --gold: #d6b923;
+            --brown: #894b2f;
+            --red: #691212;
+            --light-bg: #fdf8f5;
+            --text: #2c1810;
+            --text-light: #6b4c3b;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--light-bg);
+            color: var(--text);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(160deg, #3d0a0a 0%, #691212 60%, #8a2020 100%);
+            padding: 56px 24px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 240px; height: 240px;
+            border-radius: 50%;
+            background: rgba(214,185,35,0.07);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -40px; left: 10%;
+            width: 180px; height: 180px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            pointer-events: none;
+        }
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .hero h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* ── VIDEO PLACEHOLDER ── */
+        .video-wrap {
+            max-width: 700px;
+            margin: 0 auto 32px;
+            padding: 0 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .video-placeholder {
+            background: rgba(0,0,0,0.35);
+            border: 2px solid rgba(214,185,35,0.4);
+            border-radius: 14px;
+            aspect-ratio: 16/9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+        .video-placeholder:hover { border-color: var(--gold); }
+        .play-btn {
+            width: 68px; height: 68px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .play-btn::after {
+            content: '';
+            border-left: 24px solid #2c1810;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            margin-left: 5px;
+        }
+        .video-placeholder p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        /* ── HERO CTA ── */
+        .hero-cta-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .btn-hero {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, #c9ac1a 100%);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+            transition: transform 0.15s, box-shadow 0.15s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        .btn-hero:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .hero-price-note {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.8rem;
+        }
+        .no-thanks {
+            display: block;
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .no-thanks:hover { color: rgba(255,255,255,0.85); }
+        .hero-text {
+            max-width: 620px;
+            margin: 28px auto 0;
+            color: rgba(255,255,255,0.85);
+            font-size: 1rem;
+            line-height: 1.7;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── SECTIONS ── */
+        .section {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 52px 24px;
+        }
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.3rem, 3.5vw, 1.75rem);
+            font-weight: 800;
+            color: var(--red);
+            line-height: 1.25;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section p {
+            font-size: 1rem;
+            line-height: 1.75;
+            color: var(--text);
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .section p.left { text-align: left; }
+        .section p:last-child { margin-bottom: 0; }
+
+        /* ── DIVIDER ── */
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--beige), transparent);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* ── FEATURE LIST ── */
+        .feature-list {
+            list-style: none;
+            margin: 28px 0 0;
+        }
+        .feature-list li {
+            padding: 12px 0 12px 38px;
+            position: relative;
+            font-size: 0.97rem;
+            line-height: 1.55;
+            border-bottom: 1px solid #f0e8e2;
+            text-align: left;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 24px; height: 24px;
+            background: var(--gold);
+            color: var(--text);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: center;
+        }
+        .feature-list li strong {
+            display: block;
+            color: var(--brown);
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .feature-list li span {
+            font-size: 0.88rem;
+            color: var(--text-light);
+        }
+
+        /* ── WHAT'S INSIDE ── */
+        .inside-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 28px;
+        }
+        @media (max-width: 560px) {
+            .inside-grid { grid-template-columns: 1fr; }
+        }
+        .inside-card {
+            background: #fff;
+            border: 1px solid #e8d8d0;
+            border-radius: 12px;
+            padding: 24px 20px;
+        }
+        .inside-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .inside-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+        .inside-card p {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: var(--text-light);
+            margin: 0;
+            text-align: left;
+        }
+
+        /* ── TESTIMONIAL ── */
+        .testimonial-section {
+            background: linear-gradient(135deg, #f9f2ec 0%, #fdf8f5 100%);
+            border-top: 1px solid #e8d8d0;
+            border-bottom: 1px solid #e8d8d0;
+        }
+        .testimonial {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            text-align: center;
+        }
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.75;
+            color: var(--text);
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--brown);
+        }
+
+        /* ── PRICE BOX ── */
+        .price-section {
+            background: linear-gradient(160deg, #3d0a0a 0%, #691212 100%);
+            padding: 60px 24px;
+            text-align: center;
+        }
+        .price-eyebrow {
+            display: inline-block;
+            background: rgba(214,185,35,0.2);
+            color: var(--gold);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(214,185,35,0.4);
+            margin-bottom: 24px;
+        }
+        .price-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        .price-sub {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+        }
+        .price-box {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            padding: 32px 28px;
+            max-width: 420px;
+            margin: 0 auto 32px;
+        }
+        .price-includes {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.65);
+            text-align: left;
+            margin-bottom: 24px;
+            list-style: none;
+        }
+        .price-includes li {
+            padding: 5px 0 5px 20px;
+            position: relative;
+        }
+        .price-includes li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 0.75rem;
+        }
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 14px;
+            margin-bottom: 6px;
+        }
+        .price-old {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: line-through;
+        }
+        .price-new {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gold);
+            line-height: 1;
+        }
+        .price-new sup {
+            font-size: 1.4rem;
+            vertical-align: super;
+        }
+        .price-note {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 24px;
+        }
+        .btn-buy {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold) 0%, #c9ac1a 100%);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 800;
+            padding: 17px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+            transition: transform 0.15s, box-shadow 0.15s;
+            cursor: pointer;
+            border: none;
+            width: 100%;
+        }
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .guarantee-hint {
+            margin-top: 16px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        /* ── GUARANTEE SECTION ── */
+        .guarantee-section {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 52px 24px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+        @media (max-width: 500px) {
+            .guarantee-section { flex-direction: column; align-items: center; text-align: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 36px 18px 40px; }
+            .section { padding: 36px 18px; }
+            .price-section { padding: 40px 18px; }
+            .price-box { padding: 24px 18px; }
+            .btn-hero, .btn-buy { font-size: 0.9rem; padding: 15px 20px; }
+            .testimonial { padding: 36px 18px; }
+            .faq-inner { padding: 36px 18px; }
+        }
+        .guarantee-icon {
+            width: 72px; height: 72px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--brown), var(--red));
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem;
+        }
+        .guarantee-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--red);
+            margin-bottom: 10px;
+        }
+        .guarantee-text p {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text-light);
+            text-align: left;
+        }
+
+        /* ── FAQ ── */
+        .faq-section {
+            background: #fff;
+            border-top: 1px solid #e8d8d0;
+        }
+        .faq-inner {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 52px 24px;
+        }
+        .faq-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--red);
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .faq-item {
+            border-bottom: 1px solid #f0e8e2;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--brown);
+            padding: 18px 36px 18px 0;
+            cursor: pointer;
+            position: relative;
+            user-select: none;
+            list-style: none;
+        }
+        .faq-q::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: var(--brown);
+            transition: transform 0.2s;
+        }
+        .faq-item.open .faq-q::after {
+            content: '×';
+        }
+        .faq-a {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-light);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.2s;
+            padding-bottom: 0;
+        }
+        .faq-item.open .faq-a {
+            max-height: 300px;
+            padding-bottom: 18px;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            text-align: center;
+            padding: 24px 20px 32px;
+            font-size: 0.74rem;
+            color: var(--text-light);
+            border-top: 1px solid #e8d8d0;
+        }
+        .footer a {
+            color: var(--text-light);
+            text-decoration: underline;
+        }
+        .footer a:hover { color: var(--brown); }
+    </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Dein persönlicher Futterrechner</h1>
+    <h2>In 10 Minuten hältst du den idealen Futterplan für dein Pferd in den Händen</h2>
+
+    <div class="video-wrap">
+        <iframe src="https://player.vimeo.com/video/1193968881?h=eb115ed78e&color=d6b923&title=0&byline=0&portrait=0"
+            style="width:100%;aspect-ratio:16/9;border-radius:14px;border:2px solid rgba(214,185,35,0.4);"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <div class="hero-cta-wrap">
+        <a href="https://www.digistore24.com/product/694417" target="_blank" class="btn-hero">→ Ja, ich will den Futterrechner für nur <span style="white-space:nowrap">77 € <s>statt 197 €</s></span></a>
+        <div class="hero-price-note">Einmalige Zahlung · kein Abo · sofortiger Zugang</div>
+        <a href="https://aw.anikas-pferdeakademie.de/ff-2" class="no-thanks">Nein danke, das brauche ich nicht.</a>
+    </div>
+
+    <p class="hero-text">Du weißt jetzt, was dein Pferd braucht. Hier bekommst du das Werkzeug in die Hand, das dir in wenigen Minuten einen konkreten, auf dein Pferd abgestimmten Futterplan erstellt.</p>
+</div>
+
+<!-- PROBLEM / BRIDGE -->
+<div style="background:linear-gradient(160deg,#fdf0e8 0%,#fdf8f5 100%);border-bottom:1px solid #e8d8d0;">
+<div class="section">
+    <h2 class="section-title" style="text-align:left;">Du hast das Wissen. Hier bekommst du den Rechner dazu.</h2>
+    <p class="left">Im Futter-Fahrplan hast du gelernt, worauf es wirklich ankommt.</p>
+    <p class="left">Jetzt kommt der Moment, wo es konkret werden soll. Du sitzt am Tisch, hast die Heuanalyse vor dir und fragst dich: Wie viel braucht mein Pferd genau? Bin ich mit Kalzium im grünen Bereich? Was fehlt noch?</p>
+    <p class="left">Der Futterrechner macht genau das für dich. Du gibst ein, was dein Pferd bekommt und erhältst in Sekunden eine vollständige Auswertung mit farbiger Nährstoffbilanz, klaren Hinweisen und einem fertigen Futterplan als PDF.</p>
+</div>
+</div>
+
+<!-- FEATURES -->
+<div style="background:#fff;border-top:1px solid #e8d8d0;border-bottom:1px solid #e8d8d0;">
+    <div class="section">
+        <h2 class="section-title">Was der Rechner alles kann</h2>
+        <ul class="feature-list">
+            <li>
+                <strong>Gewicht</strong>
+                <span>Einfache Formel zur Berechnung des Pferdegewichts</span>
+            </li>
+            <li>
+                <strong>Heuanalyse einpflegen</strong>
+                <span>Deine eigene Laboranalyse eingeben oder mit hinterlegten Durchschnittswerten der Lufa arbeiten</span>
+            </li>
+            <li>
+                <strong>Weide nach Saison</strong>
+                <span>Inhaltsstoffe der Weide werden nach Jahreszeit und Weidedauer berechnet, optional mit eigener Weidenanalyse</span>
+            </li>
+            <li>
+                <strong>Alle vier Säulen auf einen Blick</strong>
+                <span>Heu, Basisfutter, Mineralstoffe und Ergänzungen übersichtlich zusammengefasst</span>
+            </li>
+            <li>
+                <strong>Farbige Nährstoffbilanz</strong>
+                <span>Sofort sehen, was stimmt, was fehlt und was zu viel ist</span>
+            </li>
+            <li>
+                <strong>Besonderheiten berücksichtigt</strong>
+                <span>Langes Haar (Tinker, Friese, Shire), Senioren ab 20 Jahren sowie Unter- und Übergewicht werden individuell eingerechnet</span>
+            </li>
+            <li>
+                <strong>PDF herunterladen</strong>
+                <span>Deinen fertigen Futterplan als PDF speichern und ggf. mit anderen teilen</span>
+            </li>
+            <li>
+                <strong>Alle Eingaben werden gespeichert</strong>
+                <span>Beim nächsten Aufruf sind alle deine Daten noch da. Kein erneutes Eintippen.</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- WHAT'S INSIDE -->
+<div style="background:#fff7f2;border-top:1px solid #e8d8d0;border-bottom:1px solid #e8d8d0;">
+<div class="section">
+    <h2 class="section-title">Was du bekommst</h2>
+    <div class="inside-grid">
+        <div class="inside-card">
+            <div class="icon">🎬</div>
+            <h3>Einführungsvideo</h3>
+            <p>Anika führt dich Schritt für Schritt durch den Rechner. Nach dem Video weißt du genau, wie du alle Felder richtig befüllst und dein Ergebnis richtig liest.</p>
+        </div>
+        <div class="inside-card">
+            <div class="icon">🧮</div>
+            <h3>Dein Futterrechner</h3>
+            <p>Du bekommst dauerhaften Zugang zu deinem persönlichen Futterrechner. Neue Futtermittel, neue Funktionen und Verbesserungen bekommst du automatisch, ohne nochmal zu zahlen.</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial-section">
+    <div class="testimonial">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Ich hatte meine Stute immer so gefüttert, wie ich dachte, dass es passt. Dann habe ich den Rechner ausprobiert und innerhalb von zehn Minuten schwarz auf weiß gesehen, dass sie bei Kupfer und Zink deutlich unterversorgt war. Das hätte ich nie so schnell herausgefunden."</p>
+        <div class="testimonial-author">Sandra M., Besitzerin der Hannoveranerstute Millie, 12 Jahre</div>
+    </div>
+</div>
+
+<!-- PRICE -->
+<div class="price-section">
+    <div class="price-eyebrow">Der perfekte nächste Schritt nach dem Futter-Fahrplan</div>
+    <h2 class="price-title" style="max-width:680px;margin-left:auto;margin-right:auto;">Du hast bereits das Wissen.<br>Und bald hast du auch den Rechner für individuelle Futterpläne in Minuten.</h2>
+    <p class="price-sub">Du zahlst einmal und hast dauerhaften Zugang inklusive aller zukünftigen Updates.</p>
+
+    <div class="price-box">
+        <ul class="price-includes">
+            <li>Einführungsvideo: So funktioniert der Rechner</li>
+            <li>Persönlicher Futterrechner mit vollem Funktionsumfang</li>
+            <li>Alle zukünftigen Updates automatisch inklusive</li>
+            <li>PDF-Export deines fertigen Futterplans</li>
+        </ul>
+        <div class="price-row">
+            <span class="price-old">197 €</span>
+            <span class="price-new"><sup>€</sup>77</span>
+        </div>
+        <p class="price-note">Einmalzahlung · kein Abo · sofortiger Zugang</p>
+        <a href="https://www.digistore24.com/product/694417" target="_blank" class="btn-buy">→ Ja, ich will den Futterrechner</a>
+        <a href="https://aw.anikas-pferdeakademie.de/ff-2" class="no-thanks">Nein danke, das brauche ich nicht.</a>
+    </div>
+
+</div>
+
+<!-- GUARANTEE -->
+
+
+
+<!-- FOOTER -->
+<div class="footer">
+    &copy; 2025 Anikas Pferdeakademie &nbsp;·&nbsp;
+    <a href="https://anikas-pferdeakademie.de" target="_blank">anikas-pferdeakademie.de</a> &nbsp;·&nbsp;
+    <a href="https://anikas-pferdeakademie.de/impressum" target="_blank" rel="noopener">Impressum</a> &nbsp;·&nbsp;
+    <a href="https://anikas-pferdeakademie.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+</div>
+
+
+</body>
+</html>

@@ -117,7 +117,18 @@
       "WebFetch(domain:sanoanimal.de)",
       "mcp__Claude_in_Chrome__read_console_messages",
       "mcp__Claude_in_Chrome__get_page_text",
-      "Bash(powershell -Command \"[Convert]::ToBase64String\\([IO.File]::ReadAllBytes\\('C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\\\\logo.png'\\)\\)\")"
+      "Bash(powershell -Command \"[Convert]::ToBase64String\\([IO.File]::ReadAllBytes\\('C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\\\\logo.png'\\)\\)\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\\\\salespage.html\")",
+      "Bash(awk '{ print length, NR }' .claude/worktrees/xenodochial-booth-2d4a6a/outputs/sicher-meistern/salespage-final.html)",
+      "Bash(sed -n 1p)",
+      "Bash(awk 'NR==120 { print substr\\($0, 1, 300\\) }' .claude/worktrees/xenodochial-booth-2d4a6a/outputs/sicher-meistern/salespage-final.html)",
+      "Bash(xargs grep -l -i \"geländeschlüssel\\\\|gelaendeschluessel\\\\|verlasspferd\")",
+      "Bash(xargs grep -l \"Vorverkaufspreis\\\\|Vorverkauf\\\\|27 € statt\")",
+      "Bash(awk 'NR==207 { for \\(i=1; i<=length\\($0\\); i+=400\\) print substr\\($0, i, 400\\) }' .claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel/landingpage.html)",
+      "Bash(awk 'NR==207' .claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel/landingpage.html)",
+      "WebFetch(domain:aw.anikas-pferdeakademie.de)",
+      "Bash(curl -sI http://localhost:3004/landingpage.html)",
+      "Bash(curl -s http://localhost:3004/)"
     ]
   }
 }

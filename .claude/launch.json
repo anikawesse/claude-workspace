@@ -13,6 +13,13 @@
       "runtimeArgs": ["serve", "outputs/gelaendeschluessel", "-p", "3003", "--no-clipboard"],
       "port": 3003,
       "autoPort": true
+    },
+    {
+      "name": "gs-salespage-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", ".claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel", "-p", "3004", "--no-clipboard"],
+      "port": 3004,
+      "autoPort": true
     }
   ]
 }

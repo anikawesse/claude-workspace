@@ -302,7 +302,7 @@
         .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(0,0,0,0.15); border-top-color: var(--brown); border-radius: 50%; animation: spin 0.8s linear infinite; vertical-align: middle; margin-right: 4px; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        .footer { text-align: center; padding: 20px; font-size: 0.74rem; color: var(--text-light); }
+        .footer { text-align: center; padding: 24px 20px 28px; font-size: 0.74rem; color: var(--text-light); border-top: 1px solid #e8d8d0; margin-top: 10px; }
 
         /* Video button */
         .video-btn {
@@ -1027,15 +1027,17 @@
             <button class="btn-back" onclick="goToStep(3)">← Zurück</button>
             <button class="btn-pdf" onclick="downloadPDF()">📄 PDF herunterladen</button>
         </div>
-        <p style="margin-top:16px;text-align:center;font-size:0.77rem;color:var(--text-light);line-height:1.5;">
-            Empfehlungen basieren auf dem Futterfahrplan-Kurs von Anika Wesse.<br>
-            Bei gesundheitlichen Fragen bitte immer den Tierarzt konsultieren.
-        </p>
+        <div style="margin-top:20px;padding:14px 18px;background:#f5f0eb;border:1px solid #d9c9be;border-radius:10px;font-size:0.75rem;color:var(--text-light);line-height:1.6;">
+            <strong style="color:var(--brown);display:block;margin-bottom:4px;">⚠️ Haftungsausschluss</strong>
+            Dieser Futterrechner wurde mit größter Sorgfalt auf Basis des Futterfahrplan-Kurses von Anika Wesse und der GfE-Bedarfsempfehlungen (2014) erstellt. Er dient ausschließlich der orientierenden Unterstützung bei der Futterplanung und ersetzt keine tierärztliche oder ernährungsphysiologische Fachberatung. Alle Angaben sind ohne Gewähr. Bei gesundheitlichen Problemen, Erkrankungen oder besonderen Haltungsbedingungen wende dich bitte an deinen Tierarzt oder eine qualifizierte Fachkraft. Anika Wesse und die Anikas Pferdeakademie übernehmen keine Haftung für Entscheidungen, die auf Basis dieses Rechners getroffen werden.
+        </div>
     </div>
 
 </div>
 
-<div class="footer">&copy; Anikas Pferdeakademie · anikas-pferdeakademie.de · Alle Angaben ohne Gewähr</div>
+<div class="footer">
+    &copy; 2025 Anikas Pferdeakademie &nbsp;·&nbsp; <a href="https://anikas-pferdeakademie.de" target="_blank" style="color:var(--text-light);text-decoration:none;">anikas-pferdeakademie.de</a> &nbsp;·&nbsp; Alle Angaben ohne Gewähr
+</div>
 
 <script>
 // ============================================================
