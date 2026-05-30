@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIP Workbook · Wie du lernst, mit deinem Pferd zu sprechen</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bordeaux:#691212;
+    --gold:#d6b923;
+    --rust:#894b2f;
+    --beige:#f5ede2;
+    --babyblue:#e3eef4;
+    --text:#2c1810;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Montserrat',sans-serif;color:var(--text);font-size:15px;line-height:1.65;background:#e8e3d8}
+
+  /* ---------- Seiten-Layout (A4) ---------- */
+  .page{
+    width:210mm;min-height:297mm;
+    background:var(--white);
+    margin:14px auto;
+    padding:24mm 22mm;
+    position:relative;
+    box-shadow:0 4px 24px rgba(0,0,0,0.12);
+    page-break-after:always;
+    overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto}
+
+  /* dezenter Rahmen-Akzent oben */
+  .page::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,var(--bordeaux) 0%,var(--bordeaux) 60%,var(--gold) 60%,var(--gold) 100%);
+  }
+
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--bordeaux);line-height:1.25}
+  .kicker{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:11px;color:var(--rust)}
+  .gold-line{width:54px;height:3px;background:var(--gold);border:none;margin:14px 0 22px}
+
+  p{margin-bottom:12px}
+  .lead{font-size:16px}
+  em,.em{font-style:italic;color:var(--rust)}
+  strong{color:var(--bordeaux)}
+
+  /* ---------- Schreiblinien ---------- */
+  .line{border-bottom:1.5px dotted #c9b48a;height:30px;margin:0 0 4px}
+  .line.short{width:60%}
+  .write-block{margin:10px 0 18px}
+
+  /* ---------- Boxen ---------- */
+  .box{
+    background:var(--beige);
+    border-left:5px solid var(--gold);
+    border-radius:8px;
+    padding:18px 20px;margin:18px 0;
+  }
+  .box.blue{background:var(--babyblue);border-left-color:var(--bordeaux)}
+  .box h3{margin-bottom:8px;font-size:18px}
+
+  .signal-grid{display:flex;gap:18px;margin:14px 0}
+  .signal{flex:1;background:var(--white);border:2px solid var(--gold);border-radius:10px;padding:14px 16px}
+  .signal .tag{display:inline-block;font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;color:var(--white);padding:3px 12px;border-radius:20px;margin-bottom:10px}
+  .signal .tag.ja{background:#5b8a4e}
+  .signal .tag.nein{background:var(--rust)}
+
+  .step{display:flex;gap:14px;margin:12px 0;align-items:flex-start}
+  .step .num{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bordeaux);color:var(--white);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+  .step .txt{padding-top:3px}
+
+  .checkrow{display:flex;align-items:center;gap:10px;margin:8px 0}
+  .checkrow .cb{flex:none;width:20px;height:20px;border:2px solid var(--rust);border-radius:4px}
+
+  /* ---------- 1-10 Skala ---------- */
+  .scale{display:flex;gap:6px;margin:10px 0 6px}
+  .scale .num{flex:1;aspect-ratio:1/1;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--bordeaux)}
+  .scale-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--rust);font-style:italic;margin-bottom:6px}
+  .scale-hint{font-size:11px;color:#a08a6a;text-align:center;margin-top:2px}
+
+  /* ---------- Hinweis-Pill (vor dem Webinar) ---------- */
+  .prefill{display:inline-flex;align-items:center;gap:7px;background:var(--gold);color:var(--bordeaux);font-weight:700;font-size:12.5px;letter-spacing:0.3px;padding:7px 16px;border-radius:30px;margin:2px 0 14px}
+
+  /* ---------- Inspirationsliste ---------- */
+  .inspo{display:flex;flex-direction:column;gap:9px;margin:14px 0 16px}
+  .inspo-cat{background:var(--beige);border-radius:8px;padding:10px 16px}
+  .inspo-cat .chip{display:inline-block;font-weight:800;font-size:13px;color:var(--bordeaux);margin-bottom:5px}
+  .inspo-cat ul{margin:0;padding-left:17px;columns:2;column-gap:22px}
+  .inspo-cat li{font-size:12.5px;line-height:1.45;margin-bottom:2px;break-inside:avoid}
+
+  .footer{position:absolute;bottom:14mm;left:22mm;right:22mm;display:flex;justify-content:space-between;font-size:11px;color:#a08a6a;border-top:1px solid #e4dac8;padding-top:8px}
+
+  /* ---------- Cover ---------- */
+  .cover{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:249mm}
+  .cover-logo{width:150px;height:auto;align-self:center;margin-bottom:26px}
+  .cover .vip-badge{display:inline-block;align-self:center;background:var(--bordeaux);color:var(--gold);font-weight:800;letter-spacing:3px;font-size:13px;text-transform:uppercase;padding:8px 22px;border-radius:30px;margin-bottom:30px}
+  .cover h1{font-size:46px;margin-bottom:10px}
+  .cover .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--rust);margin-bottom:30px}
+  .cover .who{font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--text);margin-top:40px}
+  .cover .horse{font-size:40px;margin:24px 0}
+
+  @media print{
+    body{background:none}
+    .page{margin:0;box-shadow:none;width:auto;min-height:auto}
+    @page{size:A4;margin:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ SEITE 1 · COVER ============ -->
+<section class="page cover">
+  <img src="logo.png" alt="Anika's Pferdeakademie" class="cover-logo">
+  <span class="vip-badge">★ VIP Workbook ★</span>
+  <h1>Wie du lernst,<br>mit deinem Pferd<br>zu sprechen</h1>
+  <div class="horse">🐴✨</div>
+  <p class="sub">Dein persönliches Begleitheft zum Webinar</p>
+  <p class="lead" style="max-width:430px;align-self:center;color:var(--text)">
+    Drucke dir dieses Workbook vor dem Webinar aus, leg dir einen Stift bereit
+    und mach aktiv mit. Genau hier hältst du deine ersten Antworten von deinem Pferd fest.
+  </p>
+  <p class="who">mit Anika Wesse · Anikas Pferdeakademie</p>
+</section>
+
+<!-- ============ SEITE 2 · WILLKOMMEN + MINDSET ============ -->
+<section class="page">
+  <span class="kicker">Bevor es losgeht</span>
+  <h1 style="font-size:32px">Schön, dass du dabei bist</h1>
+  <hr class="gold-line">
+  <p class="lead">
+    Du hältst das VIP Workbook in den Händen. Das bedeutet: Du willst nicht nur zuschauen,
+    du willst es wirklich erleben. Genau dafür ist dieses Heft gemacht.
+  </p>
+  <p>
+    Vielleicht bist du neugierig. Vielleicht noch ein bisschen skeptisch. Vielleicht wünschst
+    du dir einfach nur, dein Pferd endlich besser zu verstehen. Egal wo du stehst, du bist hier genau richtig.
+  </p>
+
+  <div class="box">
+    <h3>So holst du das Maximum heraus</h3>
+    <div class="checkrow"><span class="cb"></span><span>Workbook vorher ausdrucken und Stift bereitlegen</span></div>
+    <div class="checkrow"><span class="cb"></span><span>Ruhigen, ungestörten Ort suchen (Handy lautlos)</span></div>
+    <div class="checkrow"><span class="cb"></span><span>Bei den Übungen wirklich mitmachen, nicht nur lesen</span></div>
+    <div class="checkrow"><span class="cb"></span><span>Alles aufschreiben, dann bleibt es am besten im Gedächtnis</span></div>
+  </div>
+
+  <span class="kicker">Dein Start-Gedanke</span>
+  <h2 style="font-size:24px;margin-top:6px">Ich kenne mein Pferd besser<br>als jeder Experte.</h2>
+  <hr class="gold-line">
+  <span class="prefill">✏️ Diesen Teil füllst du schon VOR dem Webinar aus</span>
+  <p>Halte ganz ehrlich fest, wo du gerade stehst. So siehst du am Ende schwarz auf weiß, was sich verändert hat.</p>
+
+  <p style="margin-bottom:6px;font-weight:600">Was würdest du dein Pferd als Allererstes fragen, wenn es dir antworten könnte?</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <p style="margin-bottom:6px;font-weight:600">Von 1 bis 10: Wie sehr glaubst du gerade, dass das wirklich möglich ist?</p>
+  <div class="scale">
+    <span class="num">1</span><span class="num">2</span><span class="num">3</span><span class="num">4</span><span class="num">5</span><span class="num">6</span><span class="num">7</span><span class="num">8</span><span class="num">9</span><span class="num">10</span>
+  </div>
+  <div class="scale-labels"><span>Glaube ich (noch) nicht</span><span>Davon bin ich überzeugt</span></div>
+  <p class="scale-hint">Kreise die Zahl ein, die gerade für dich stimmt.</p>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 2</span></div>
+</section>
+
+<!-- ============ SEITE 3 · WIE FUNKTIONIERT DAS ============ -->
+<section class="page">
+  <span class="kicker">Teil 1</span>
+  <h1 style="font-size:32px">Wie das Sprechen<br>überhaupt funktioniert</h1>
+  <hr class="gold-line">
+  <p class="lead">
+    Anika erklärt dir jetzt, was wirklich dahintersteckt. Schreib mit, was bei dir hängen bleibt.
+    Deine eigenen Worte helfen dir später, dich zu erinnern.
+  </p>
+
+  <p style="margin-bottom:6px;font-weight:600">Mein wichtigster Aha-Moment aus diesem Teil:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="box blue">
+    <h3>Gut zu wissen</h3>
+    <p style="margin-bottom:0">
+      Du brauchst keine besondere Gabe, um energetisch testen zu können. Es ist eine Fähigkeit,
+      die in jedem von uns steckt und mit Neurowissenschaft und Quantenphysik wissenschaftlich zu erklären ist.
+    </p>
+  </div>
+
+  <p style="margin-bottom:6px;font-weight:600">Diese Frage ist bei mir noch offen:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <p style="margin-bottom:6px;font-weight:600">Notizen:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 3</span></div>
+</section>
+
+<!-- ============ SEITE 4 · ÜBUNG 1 NEIGETEST ============ -->
+<section class="page">
+  <span class="kicker">Mitmach-Übung 1</span>
+  <h1 style="font-size:32px">Der Neigetest <span style="font-size:20px;color:var(--rust)">(im Stehen)</span></h1>
+  <hr class="gold-line">
+  <p>Anika führt dich gleich live Schritt für Schritt durch den Neigetest. Hier hältst du deine Signale und deine ersten Antworten fest.</p>
+
+  <div class="step"><span class="num">1</span><span class="txt">Stell dich locker und entspannt hin, Füße etwa hüftbreit, Augen sanft geschlossen.</span></div>
+  <div class="step"><span class="num">2</span><span class="txt">Folge Anikas Anleitung, um dein <strong>Ja-Signal</strong> und dein <strong>Nein-Signal</strong> herauszufinden.</span></div>
+  <div class="step"><span class="num">3</span><span class="txt">Trag deine Signale unten ein. Das ist deine persönliche Kalibrierung.</span></div>
+
+  <div class="signal-grid">
+    <div class="signal">
+      <span class="tag ja">Mein Ja</span>
+      <p style="font-size:13px;margin-bottom:8px">Wohin neigt sich mein Körper bei Ja?</p>
+      <div class="line short"></div>
+    </div>
+    <div class="signal">
+      <span class="tag nein">Mein Nein</span>
+      <p style="font-size:13px;margin-bottom:8px">Wohin neigt sich mein Körper bei Nein?</p>
+      <div class="line short"></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Meine ersten Test-Fragen</h3>
+    <p style="font-size:13px;margin-bottom:10px">Stell eine einfache Frage über dich oder dein Pferd und halte die Antwort fest.</p>
+    <p style="margin-bottom:4px;font-weight:600">Frage 1:</p><div class="line"></div>
+    <p style="margin:8px 0 4px;font-weight:600">Antwort (Ja / Nein):</p><div class="line short"></div>
+    <p style="margin:14px 0 4px;font-weight:600">Frage 2:</p><div class="line"></div>
+    <p style="margin:8px 0 4px;font-weight:600">Antwort (Ja / Nein):</p><div class="line short"></div>
+  </div>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 4</span></div>
+</section>
+
+<!-- ============ SEITE 5 · ÜBUNG 2 SCHNIPSTEST ============ -->
+<section class="page">
+  <span class="kicker">Mitmach-Übung 2</span>
+  <h1 style="font-size:32px">Der Schnipstest <span style="font-size:20px;color:var(--rust)">(mit den Fingern)</span></h1>
+  <hr class="gold-line">
+  <p>Der Schnipstest ist dein kleiner Test für unterwegs, ganz ohne Hinstellen. Anika zeigt dir live, wie er geht. Halte auch hier deine Signale und Antworten fest.</p>
+
+  <div class="step"><span class="num">1</span><span class="txt">Folge Anikas Anleitung für die Fingerhaltung und das Schnipsen.</span></div>
+  <div class="step"><span class="num">2</span><span class="txt">Achte darauf, wie sich ein <strong>Ja</strong> und ein <strong>Nein</strong> in deinen Fingern unterschiedlich anfühlt.</span></div>
+  <div class="step"><span class="num">3</span><span class="txt">Trag dein Ja- und Nein-Signal unten ein.</span></div>
+
+  <div class="signal-grid">
+    <div class="signal">
+      <span class="tag ja">Mein Ja</span>
+      <p style="font-size:13px;margin-bottom:8px">Wie fühlt sich ein Ja an?</p>
+      <div class="line short"></div>
+    </div>
+    <div class="signal">
+      <span class="tag nein">Mein Nein</span>
+      <p style="font-size:13px;margin-bottom:8px">Wie fühlt sich ein Nein an?</p>
+      <div class="line short"></div>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Meine ersten Test-Fragen</h3>
+    <p style="font-size:13px;margin-bottom:10px">Probiere den Schnipstest mit ein paar einfachen Fragen aus.</p>
+    <p style="margin-bottom:4px;font-weight:600">Frage 1:</p><div class="line"></div>
+    <p style="margin:8px 0 4px;font-weight:600">Antwort (Ja / Nein):</p><div class="line short"></div>
+    <p style="margin:14px 0 4px;font-weight:600">Frage 2:</p><div class="line"></div>
+    <p style="margin:8px 0 4px;font-weight:600">Antwort (Ja / Nein):</p><div class="line short"></div>
+  </div>
+
+  <div class="box blue">
+    <p style="margin-bottom:0;font-size:14px"><strong>Welcher Test liegt dir mehr?</strong> Kreuze an, womit du weiterüben magst:
+    <span style="white-space:nowrap">&nbsp; ☐ Neigetest &nbsp;&nbsp; ☐ Schnipstest &nbsp;&nbsp; ☐ beide</span></p>
+  </div>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 5</span></div>
+</section>
+
+<!-- ============ SEITE 6 · ANWENDUNG + ABSCHLUSS ============ -->
+<section class="page">
+  <span class="kicker">Teil 3</span>
+  <h1 style="font-size:32px">Wofür du das Testen<br>überall nutzen kannst</h1>
+  <hr class="gold-line">
+  <p>
+    Das Testen ist nicht nur etwas für besondere Momente. Ich nutze es fast täglich, vor allem
+    bei meinen Pferden, aber längst nicht nur dort. Hier ein paar Beispiele aus meinem Alltag als Inspiration:
+  </p>
+
+  <div class="inspo">
+    <div class="inspo-cat">
+      <span class="chip">🐴 Bei meinen Pferden</span>
+      <ul>
+        <li>Kommt es genug zur Ruhe?</li>
+        <li>Fühlt es sich in seinem Zuhause wohl?</li>
+        <li>Hat er Stress mit anderen Pferden?</li>
+        <li>Reicht das Mineralfutter, das ich füttere?</li>
+        <li>Hat sie irgendwo Schmerzen?</li>
+        <li>Macht das Training mit mir Spaß?</li>
+      </ul>
+    </div>
+    <div class="inspo-cat">
+      <span class="chip">🐕 Bei anderen Haustieren</span>
+      <ul>
+        <li>Verträgt mein Hund oder meine Katze sein Futter?</li>
+        <li>Hat sie irgendwo Schmerzen?</li>
+        <li>Hat sie Durchfall wegen Würmern?</li>
+        <li>Fühlt sich meine Katze von meinem Kater gestresst?</li>
+        <li>Möchte mein Hund lieber Fahrrad fahren als spazieren gehen?</li>
+      </ul>
+    </div>
+    <div class="inspo-cat">
+      <span class="chip">👨‍👩‍👧 Familie &amp; ich selbst</span>
+      <ul>
+        <li>Brauche ich dieses Nahrungsergänzungsmittel?</li>
+        <li>Fühlt sich diese Entscheidung gerade stimmig an?</li>
+        <li>Tut mir Medizin A gut oder lieber Medizin B?</li>
+        <li>Fühlt sich mein Mann gerade gestresst?</li>
+        <li>Hat sich meine Tochter nach der Toilette die Hände gewaschen? 🙃</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <h3>Meine 3 Fokusbereiche</h3>
+    <p style="font-size:13px;margin-bottom:10px">Wo möchtest du als Erstes anfangen? Wähle deine drei wichtigsten Bereiche.</p>
+    <div class="checkrow"><span style="font-weight:800;color:var(--bordeaux)">1.</span><div class="line" style="flex:1;margin:0"></div></div>
+    <div class="checkrow"><span style="font-weight:800;color:var(--bordeaux)">2.</span><div class="line" style="flex:1;margin:0"></div></div>
+    <div class="checkrow"><span style="font-weight:800;color:var(--bordeaux)">3.</span><div class="line" style="flex:1;margin:0"></div></div>
+  </div>
+
+  <div class="box blue">
+    <h3>Meine wichtigste Frage</h3>
+    <p style="font-size:13px;margin-bottom:10px">Wenn du auf nur eine einzige Frage eine Antwort bekommen könntest, welche wäre das?</p>
+    <div class="line"></div>
+    <div class="line"></div>
+    <p style="font-size:12px;color:var(--rust);font-style:italic;margin:8px 0 0">Tipp: Nimm genau diese Frage mit in deine VIP-Fragerunde. 💞</p>
+  </div>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 6</span></div>
+</section>
+
+<!-- ============ SEITE 7 · ABSCHLUSS ============ -->
+<section class="page">
+  <span class="kicker">Zum Abschluss</span>
+  <h2 style="font-size:24px;margin-top:6px">Meine größte Erkenntnis heute</h2>
+  <hr class="gold-line">
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <p style="margin-bottom:6px;font-weight:600">Von 1 bis 10: Wie sehr glaubst du jetzt, dass das Sprechen mit deinem Pferd möglich ist?</p>
+  <div class="scale">
+    <span class="num">1</span><span class="num">2</span><span class="num">3</span><span class="num">4</span><span class="num">5</span><span class="num">6</span><span class="num">7</span><span class="num">8</span><span class="num">9</span><span class="num">10</span>
+  </div>
+  <div class="scale-labels"><span>Glaube ich (noch) nicht</span><span>Davon bin ich überzeugt</span></div>
+  <p class="scale-hint">Vergleiche deine Zahl mit der von Seite 2. Spürst du den Unterschied?</p>
+
+  <div class="box blue" style="text-align:center">
+    <h3 style="font-size:20px">Das ist erst der Anfang</h3>
+    <p style="margin-bottom:0">
+      Wenn du gespürt hast, dass da wirklich etwas ist, und tiefer mit deinem Pferd ins
+      Gespräch kommen möchtest, dann bleib dran. Genau dorthin nehme ich dich als Nächstes mit. 💞
+    </p>
+  </div>
+
+  <p style="text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-size:18px;color:var(--rust);margin-top:24px">
+    Ich freu mich riesig auf dich. Deine Anika
+  </p>
+
+  <div class="footer"><span>VIP Workbook · Anikas Pferdeakademie</span><span>Seite 7</span></div>
+</section>
+
+</body>
+</html>
