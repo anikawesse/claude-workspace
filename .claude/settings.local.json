@@ -158,7 +158,18 @@
       "PowerShell($src=\"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\User Data\\\\Default\\\\History\"; $tmp=\"$env:TEMP\\\\hist_copy.db\"; Copy-Item $src $tmp -Force -ErrorAction SilentlyContinue; if\\(Test-Path $tmp\\){ \"copied\" } else { \"locked - close Chrome\" })",
       "PowerShell($tmp=\"$env:TEMP\\\\hist_copy.db\"; $bytes=[System.IO.File]::ReadAllBytes\\($tmp\\); $text=[System.Text.Encoding]::ASCII.GetString\\($bytes\\); $matches=[regex]::Matches\\($text,'https?://[A-Za-z0-9\\\\.\\\\-/_\\\\?=&%#]+'\\); $urls=$matches | ForEach-Object { $_.Value } | Where-Object { $_ -match 'sandraholze|bestseller|memberspot|elopage|coachy|holze' } | Sort-Object -Unique; $urls | Select-Object -First 60)",
       "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/energetik/vip-workbook.html\")",
-      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Recurse -Include *logo*,*Logo* -File -ErrorAction SilentlyContinue | Select-Object -First 30 -ExpandProperty FullName\")"
+      "Bash(powershell -NoProfile -Command \"Get-ChildItem -Recurse -Include *logo*,*Logo* -File -ErrorAction SilentlyContinue | Select-Object -First 30 -ExpandProperty FullName\")",
+      "WebFetch(domain:support.thrivecart.com)",
+      "Bash(\"C:/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf=\"vip-workbook.pdf\" \"vip-workbook.html\")",
+      "Bash(ls -la vip-workbook.pdf)",
+      "Bash(\"C:/Program Files/Google/Chrome/Application/chrome.exe\" --headless=new --disable-gpu --no-pdf-header-footer --user-data-dir=\"C:/Users/Olive/AppData/Local/Temp/chrome-pdf-tmp\" --print-to-pdf=\"C:/Users/Olive/Desktop/claude-workspace/outputs/energetik/vip-workbook.pdf\" \"file:///C:/Users/Olive/Desktop/claude-workspace/outputs/energetik/vip-workbook.html\")",
+      "Bash(echo \"EXIT=$?\")",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/energetik/vip-workbook.pdf\")",
+      "Bash(git status *)",
+      "Bash(git branch *)",
+      "Bash(git check-ignore *)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(git add *)"
     ]
   }
 }
