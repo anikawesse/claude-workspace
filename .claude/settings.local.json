@@ -169,7 +169,11 @@
       "Bash(git branch *)",
       "Bash(git check-ignore *)",
       "Bash(awk '{print $5, $9}')",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'Shutdown: VIP-Workbook finalisiert \\(Print-Layout fix, Seite 6 Abstaende\\) + PDF erzeugt *)",
+      "Bash(git push *)",
+      "Bash(py --version)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaendeschluessel\\\\_build-thrivecart.ps1\")"
     ]
   }
 }
