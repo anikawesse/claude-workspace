@@ -186,7 +186,10 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8745/anmeldeseite-ADS-PAGE.html)",
       "Bash(where node *)",
       "Bash(where npx *)",
-      "Bash(node -e \"const http=require\\('http'\\),fs=require\\('fs'\\),p=require\\('path'\\);http.createServer\\(\\(q,r\\)=>{let f=p.join\\(process.cwd\\(\\),decodeURIComponent\\(q.url.split\\('?'\\)[0]\\)\\);if\\(f.endsWith\\('/'\\)\\)f+='index.html';fs.readFile\\(f,\\(e,d\\)=>{if\\(e\\){r.writeHead\\(404\\);r.end\\('nf'\\);}else{r.writeHead\\(200,{'Content-Type':'text/html; charset=utf-8'}\\);r.end\\(d\\);}}\\);}\\).listen\\(8745,\\(\\)=>console.log\\('up'\\)\\);\")"
+      "Bash(node -e \"const http=require\\('http'\\),fs=require\\('fs'\\),p=require\\('path'\\);http.createServer\\(\\(q,r\\)=>{let f=p.join\\(process.cwd\\(\\),decodeURIComponent\\(q.url.split\\('?'\\)[0]\\)\\);if\\(f.endsWith\\('/'\\)\\)f+='index.html';fs.readFile\\(f,\\(e,d\\)=>{if\\(e\\){r.writeHead\\(404\\);r.end\\('nf'\\);}else{r.writeHead\\(200,{'Content-Type':'text/html; charset=utf-8'}\\);r.end\\(d\\);}}\\);}\\).listen\\(8745,\\(\\)=>console.log\\('up'\\)\\);\")",
+      "Bash(git commit -m '@ *)",
+      "Bash(git commit --amend -m 'Shutdown: Ads-Webinar-Anmeldeseite für Kalt-Traffic optimiert' -m '- anmeldeseite-ADS-PAGE.html neu \\(synchrone Kopie der Ads-Variante\\) *)",
+      "Bash(echo \"---PUSH-EXIT: $?---\")"
     ]
   }
 }
