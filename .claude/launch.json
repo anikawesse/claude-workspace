@@ -20,6 +20,13 @@
       "runtimeArgs": ["serve", ".claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel", "-p", "3004", "--no-clipboard"],
       "port": 3004,
       "autoPort": true
+    },
+    {
+      "name": "energetik-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "outputs/energetik", "-p", "3005", "--no-clipboard"],
+      "port": 3005,
+      "autoPort": true
     }
   ]
 }

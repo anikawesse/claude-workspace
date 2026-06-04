@@ -174,7 +174,19 @@
       "Bash(git push *)",
       "Bash(py --version)",
       "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaendeschluessel\\\\_build-thrivecart.ps1\")",
-      "PowerShell($tmp = Join-Path $env:TEMP \"maildocx\"; if \\(Test-Path $tmp\\) { Remove-Item $tmp -Recurse -Force }; New-Item -ItemType Directory -Path $tmp | Out-Null; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Mails Webinareinladungen.docx\", $tmp\\); $xml = Get-Content \\(Join-Path $tmp \"word\\\\document.xml\"\\) -Raw -Encoding UTF8; $xml = $xml -replace '</w:p>', \"`n\"; $xml = $xml -replace '<[^>]+>', ''; [System.Web.HttpUtility]::HtmlDecode\\($xml\\) 2>$null; if \\(-not $?\\) { $xml })"
+      "PowerShell($tmp = Join-Path $env:TEMP \"maildocx\"; if \\(Test-Path $tmp\\) { Remove-Item $tmp -Recurse -Force }; New-Item -ItemType Directory -Path $tmp | Out-Null; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Mails Webinareinladungen.docx\", $tmp\\); $xml = Get-Content \\(Join-Path $tmp \"word\\\\document.xml\"\\) -Raw -Encoding UTF8; $xml = $xml -replace '</w:p>', \"`n\"; $xml = $xml -replace '<[^>]+>', ''; [System.Web.HttpUtility]::HtmlDecode\\($xml\\) 2>$null; if \\(-not $?\\) { $xml })",
+      "mcp__0016fc59-f8a7-4fc0-ac14-dc194cc5de71__notion-get-users",
+      "mcp__0016fc59-f8a7-4fc0-ac14-dc194cc5de71__notion-get-teams",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\energetik\\\\anmeldeseite-ads.html\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\energetik\\\\anmeldeseite-ads.html\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\energetik\\\\anmeldeseite-ADS-PAGE.html\" -Force)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\energetik\\\\anmeldeseite-ADS-PAGE.html\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3005/anmeldeseite-ADS-PAGE.html)",
+      "Bash(netstat -ano)",
+      "Bash(python -m http.server 8745)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8745/anmeldeseite-ADS-PAGE.html)",
+      "Bash(where node *)",
+      "Bash(where npx *)",
+      "Bash(node -e \"const http=require\\('http'\\),fs=require\\('fs'\\),p=require\\('path'\\);http.createServer\\(\\(q,r\\)=>{let f=p.join\\(process.cwd\\(\\),decodeURIComponent\\(q.url.split\\('?'\\)[0]\\)\\);if\\(f.endsWith\\('/'\\)\\)f+='index.html';fs.readFile\\(f,\\(e,d\\)=>{if\\(e\\){r.writeHead\\(404\\);r.end\\('nf'\\);}else{r.writeHead\\(200,{'Content-Type':'text/html; charset=utf-8'}\\);r.end\\(d\\);}}\\);}\\).listen\\(8745,\\(\\)=>console.log\\('up'\\)\\);\")"
     ]
   }
 }
