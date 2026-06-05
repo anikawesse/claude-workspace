@@ -193,7 +193,8 @@
       "PowerShell($f = Get-Command ffmpeg -ErrorAction SilentlyContinue; if \\($f\\) { \"ffmpeg gefunden: \" + $f.Source; ffmpeg -version | Select-Object -First 1 } else { \"ffmpeg NICHT gefunden\" })",
       "PowerShell(winget install --id Gyan.FFmpeg -e --accept-package-agreements --accept-source-agreements --silent 2>&1)",
       "PowerShell($dir = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\"; New-Item -ItemType Directory -Force -Path $dir | Out-Null; $zip = Join-Path $dir \"ffmpeg.zip\"; $url = \"https://github.com/GyanD/codexffmpeg/releases/download/2024-11-28-git-bc991ca048/ffmpeg-2024-11-28-git-bc991ca048-essentials_build.zip\"; try { [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing; \"Download OK: \" + \\(\\(Get-Item $zip\\).Length/1MB\\).ToString\\(\"0.0\"\\) + \" MB\" } catch { \"Fehler: \" + $_.Exception.Message })",
-      "PowerShell($bin = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\\\\ffmpeg-2024-11-28-git-bc991ca048-essentials_build\\\\bin\"; $ffprobe = Join-Path $bin \"ffprobe.exe\"; $dur = & $ffprobe -v error -show_entries format=duration -of csv=p=0 \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Reel.mp4\"; \"Dauer \\(Sek\\): \" + $dur)"
+      "PowerShell($bin = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\\\\ffmpeg-2024-11-28-git-bc991ca048-essentials_build\\\\bin\"; $ffprobe = Join-Path $bin \"ffprobe.exe\"; $dur = & $ffprobe -v error -show_entries format=duration -of csv=p=0 \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Reel.mp4\"; \"Dauer \\(Sek\\): \" + $dur)",
+      "Bash(git commit --amend -m 'Shutdown: Energetik-Webinar-Mails finalisiert \\(4 neue Mails + Karussell\\)' -m '- Mail A '\\\\''Pferd zeigt dir etwas ueber DICH'\\\\'' \\(final\\) *)"
     ]
   }
 }
