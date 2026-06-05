@@ -189,7 +189,11 @@
       "Bash(node -e \"const http=require\\('http'\\),fs=require\\('fs'\\),p=require\\('path'\\);http.createServer\\(\\(q,r\\)=>{let f=p.join\\(process.cwd\\(\\),decodeURIComponent\\(q.url.split\\('?'\\)[0]\\)\\);if\\(f.endsWith\\('/'\\)\\)f+='index.html';fs.readFile\\(f,\\(e,d\\)=>{if\\(e\\){r.writeHead\\(404\\);r.end\\('nf'\\);}else{r.writeHead\\(200,{'Content-Type':'text/html; charset=utf-8'}\\);r.end\\(d\\);}}\\);}\\).listen\\(8745,\\(\\)=>console.log\\('up'\\)\\);\")",
       "Bash(git commit -m '@ *)",
       "Bash(git commit --amend -m 'Shutdown: Ads-Webinar-Anmeldeseite für Kalt-Traffic optimiert' -m '- anmeldeseite-ADS-PAGE.html neu \\(synchrone Kopie der Ads-Variante\\) *)",
-      "Bash(echo \"---PUSH-EXIT: $?---\")"
+      "Bash(echo \"---PUSH-EXIT: $?---\")",
+      "PowerShell($f = Get-Command ffmpeg -ErrorAction SilentlyContinue; if \\($f\\) { \"ffmpeg gefunden: \" + $f.Source; ffmpeg -version | Select-Object -First 1 } else { \"ffmpeg NICHT gefunden\" })",
+      "PowerShell(winget install --id Gyan.FFmpeg -e --accept-package-agreements --accept-source-agreements --silent 2>&1)",
+      "PowerShell($dir = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\"; New-Item -ItemType Directory -Force -Path $dir | Out-Null; $zip = Join-Path $dir \"ffmpeg.zip\"; $url = \"https://github.com/GyanD/codexffmpeg/releases/download/2024-11-28-git-bc991ca048/ffmpeg-2024-11-28-git-bc991ca048-essentials_build.zip\"; try { [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri $url -OutFile $zip -UseBasicParsing; \"Download OK: \" + \\(\\(Get-Item $zip\\).Length/1MB\\).ToString\\(\"0.0\"\\) + \" MB\" } catch { \"Fehler: \" + $_.Exception.Message })",
+      "PowerShell($bin = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\\\\ffmpeg-2024-11-28-git-bc991ca048-essentials_build\\\\bin\"; $ffprobe = Join-Path $bin \"ffprobe.exe\"; $dur = & $ffprobe -v error -show_entries format=duration -of csv=p=0 \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Reel.mp4\"; \"Dauer \\(Sek\\): \" + $dur)"
     ]
   }
 }

@@ -1,7 +1,12 @@
 # Energetik-Webinar — E-Mail-Sequenz (Arbeitsstand / ToDo)
 
-**Status:** offen — morgen weitermachen.
-**Aufgabe:** 3 neue Themen-Mails als Webinar-Einladung schreiben (zusätzlich zu den bestehenden 8).
+**Status:** ✅ erledigt (05.06.26) — 4 Mails final in `energetik-webinar-mails-rewritten.md`:
+- Mail A „Pferd zeigt dir etwas über DICH" (FINAL, von Anika überarbeitet)
+- Mail 7/B „Ohne Kopfkino aufsteigen" (FINAL, von Anika überarbeitet, 2-zeiliger Betreff)
+- Mail C „Dann kann dir keiner mehr reinreden" (Entwurf, Review offen)
+- Mail F „Sie hatte Angst um den Falschen" (Story-Mail Mari-Husten, Entwurf)
+Plus: Karussell zu Mail A vorbereitet (10 Slides + FB-Caption, Codewort „Magie").
+**Aufgabe:** 3 neue Themen-Mails als Webinar-Einladung schreiben (zusätzlich zu den bestehenden 8). → erweitert auf 4.
 
 ---
 
