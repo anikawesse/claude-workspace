@@ -196,7 +196,8 @@
       "PowerShell($bin = \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\\\\ffmpeg-2024-11-28-git-bc991ca048-essentials_build\\\\bin\"; $ffprobe = Join-Path $bin \"ffprobe.exe\"; $dur = & $ffprobe -v error -show_entries format=duration -of csv=p=0 \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Reel.mp4\"; \"Dauer \\(Sek\\): \" + $dur)",
       "Bash(git commit --amend -m 'Shutdown: Energetik-Webinar-Mails finalisiert \\(4 neue Mails + Karussell\\)' -m '- Mail A '\\\\''Pferd zeigt dir etwas ueber DICH'\\\\'' \\(final\\) *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\Desktop\" -File | Where-Object { $_.Extension -match 'png|jpg|jpeg' } | Sort-Object Name | ForEach-Object { \"{0,-34} {1,8:N0}  {2}\" -f $_.Name, $_.Length, $_.Attributes })",
-      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Gelaende-Schluessel_neu.png\")"
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Gelaende-Schluessel_neu.png\")",
+      "Bash(Select-Object -First 50)"
     ]
   }
 }
