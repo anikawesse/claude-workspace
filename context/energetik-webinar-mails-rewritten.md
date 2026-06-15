@@ -301,3 +301,37 @@ Wenn dich das berührt, dann sehen wir uns am 12.06.
 Ich freu mich auf Dich.💞
 
 Deine Anika
+
+---
+
+## Mail (Webinar-Tag) — „12 Gründe, live dabei zu sein" (Reason-Stack, pre-webinar, Methode NICHT verraten)
+Vorbild: KI-Bootcamp-Mail (Emoji + Nutzen + entfernter Schmerz). Webinar 12.06. 20 Uhr.
+
+**Betreff:** Heute um 20 Uhr live: 12 Gründe, warum du dabei sein solltest
+
+Hey {{contact.first_name}},
+
+in wenigen Stunden ist es so weit, heute um 20 Uhr treffen wir uns live via Zoom. 🥳
+
+Deine Zeit ist kostbar, deshalb kommen hier 12 Gründe, warum du heute wirklich live dabei sein solltest:
+
+(Vorab schon mal dein Link zum Zoom-Raum: [LINK])
+
+🐴 Du machst direkt zwei Übungen mit und bekommst noch heute Abend deine ersten klaren Ja/Nein-Antworten von deinem Pferd. Ganz ohne wochenlange Vorbereitung.
+🎁 Nur live: Ich verlose ein paar Plätze und teste dein Tier direkt mit dir zusammen. Egal ob Pferd, Hund oder Meerschweinchen.
+🧐 Du verstehst, warum das nichts mit Hokuspokus oder Esoterik zu tun hat, sondern erklärbar ist. Gerade für Skeptiker und Kopfmenschen.
+🥕 Du hörst auf zu raten, welches Futter deinem Pferd gerade wirklich guttut, und sparst nebenbei Geld für unnötige Mittel.
+❓ Du findest endlich heraus, warum dein Pferd genau dieses eine Verhalten zeigt, statt dich mit Annahmen abzufinden.
+🤕 Du erkennst Schmerzen, die du von außen gar nicht siehst, bevor sie zum großen Problem werden.
+🧘 Du steigst ruhiger auf, weil du dein Pferd vorher fragen kannst, ob heute alles passt. Schluss mit dem mulmigen Kopfkino.
+💞 Du baust eine Verbindung auf, bei der dein Pferd sich endlich wirklich gehört und verstanden fühlt.
+🙅‍♀️ Du wirst unabhängig von zehn Meinungen aus der Stallgasse, weil du die Antworten direkt von deinem Pferd bekommst.
+✨ Live ist es einfach eine ganz andere Energie als jede Aufzeichnung. Du spürst es, kannst Fragen stellen und bist mittendrin.
+⏳ Die nächste Gelegenheit dauert wieder Monate. Heute ist dein Moment.
+🥹 Und du machst den ersten Schritt zu dem, was du dir als kleines Mädchen schon gewünscht hast: einfach mit deinem Pferd zu sprechen.
+
+Hier nochmal dein Link zum Zoom-Raum: [LINK]
+
+Wir sehen uns heute um 20 Uhr! 🐴✨
+
+Deine Anika 💛

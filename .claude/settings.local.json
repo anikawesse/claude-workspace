@@ -197,7 +197,9 @@
       "Bash(git commit --amend -m 'Shutdown: Energetik-Webinar-Mails finalisiert \\(4 neue Mails + Karussell\\)' -m '- Mail A '\\\\''Pferd zeigt dir etwas ueber DICH'\\\\'' \\(final\\) *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\Desktop\" -File | Where-Object { $_.Extension -match 'png|jpg|jpeg' } | Sort-Object Name | ForEach-Object { \"{0,-34} {1,8:N0}  {2}\" -f $_.Name, $_.Length, $_.Attributes })",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Gelaende-Schluessel_neu.png\")",
-      "Bash(Select-Object -First 50)"
+      "Bash(Select-Object -First 50)",
+      "WebFetch(domain:cch-files.edge.live.ds25.io)",
+      "Bash(curl --ssl-no-revoke -s \"https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6a3001baea5c8_export_09233a11-9694-4a15-90ac-c960a13d2309.json\" -o \"C:/Users/Olive/Desktop/claude-workspace/outputs/digibiz-import/export.json\")"
     ]
   }
 }
