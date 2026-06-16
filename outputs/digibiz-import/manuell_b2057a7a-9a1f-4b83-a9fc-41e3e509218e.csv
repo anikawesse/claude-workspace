@@ -1,13 +1,13 @@
-﻿"Email","First_Name","Last_Name"
-"a.lauterjung@web.de","Anke","Lauterjung"
-"betzlydia@gmail.com","Lydia Hildegard","Betz"
-"ute_gerth@gmx.de","Ute","Gerth"
-"babett_dreier@web.de","Babett","Dreier"
-"ch.monaco@t-online.de","Christin","Monaco"
-"vwuerf@gmail.com","Verena","Würf"
-"sabinerieder.mail@gmail.com","Sabine","Rieder"
-"tanjabreu@yahoo.de","Tanja","Gächter"
-"nicola.sperling@icloud.com","Nicola","Sperling"
-"gaby.rupprechter@gmail.com","Gaby","Rupprechter"
-"walehner@aol.com","Birgit","Lehner"
-"sa.bock@online.de","Sabine","Bock"
+name,email
+Anke Lauterjung,a.lauterjung@web.de
+Lydia Hildegard Betz,betzlydia@gmail.com
+Ute Gerth,ute_gerth@gmx.de
+Babett Dreier,babett_dreier@web.de
+Christin Monaco,ch.monaco@t-online.de
+Verena Würf,vwuerf@gmail.com
+Sabine Rieder,sabinerieder.mail@gmail.com
+Tanja Gächter,tanjabreu@yahoo.de
+Nicola Sperling,nicola.sperling@icloud.com
+Gaby Rupprechter,gaby.rupprechter@gmail.com
+Birgit Lehner,walehner@aol.com
+Sabine Bock,sa.bock@online.de

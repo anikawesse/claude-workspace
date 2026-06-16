@@ -1,24 +1,24 @@
-﻿"Email","First_Name","Last_Name"
-"pets23@t-online.de","Nicole","Pohl"
-"betzlydia@gmail.com","Lydia Hildegard","Betz"
-"j.mutzbauer@googlemail.com","Julia","Mutzbauer"
-"melanie.viebrock@web.de","Melanie","Viebrock"
-"limhaeuser@ams-mbt.de","Lara","Imhäuser"
-"jackydanjela@gmail.com","Jaqueline","Hanson"
-"corinna.drave@gmail.com","Corinna","Drave"
-"sa.bock@online.de","Sabine","Bock"
-"bauer.nadine@yahoo.de","Nadine","Bauer"
-"tgoettmann@web.de","Tanja","Göttmann"
-"ivonne.hefele@web.de","Ivonne","Hefele"
-"j_dahinden@hotmail.com","Janine","Schmid"
-"kheigener@aol.com","Katja","Heigener"
-"eva.muehlhaus@gmx.de","Eva","Mühlhaus"
-"s.langguth112@gmail.com","Susanne","Langguth"
-"sarina.surer@bluewin.ch","Sarina","Surer"
-"steffi.gumz@gmx.de","Stefanie","Müller"
-"michele@zurfluh.biz","Michele","Sturny"
-"agatha.egger@gmail.com","Agatha","Egger"
-"flora09@gmx.at","Silke","Schubatzky"
-"magdalena@rm-parts.com","Magdalena","Isanska"
-"isi.kuhn@web.de","Isabelle","Kuhn"
-"riedl_alexandra@gmx.at","Alexandra","Riedl"
+name,email
+Nicole Pohl,pets23@t-online.de
+Lydia Hildegard Betz,betzlydia@gmail.com
+Julia Mutzbauer,j.mutzbauer@googlemail.com
+Melanie Viebrock,melanie.viebrock@web.de
+Lara Imhäuser,limhaeuser@ams-mbt.de
+Jaqueline Hanson,jackydanjela@gmail.com
+Corinna Drave,corinna.drave@gmail.com
+Sabine Bock,sa.bock@online.de
+Nadine Bauer,bauer.nadine@yahoo.de
+Tanja Göttmann,tgoettmann@web.de
+Ivonne Hefele,ivonne.hefele@web.de
+Janine Schmid,j_dahinden@hotmail.com
+Katja Heigener,kheigener@aol.com
+Eva Mühlhaus,eva.muehlhaus@gmx.de
+Susanne Langguth,s.langguth112@gmail.com
+Sarina Surer,sarina.surer@bluewin.ch
+Stefanie Müller,steffi.gumz@gmx.de
+Michele Sturny,michele@zurfluh.biz
+Agatha Egger,agatha.egger@gmail.com
+Silke Schubatzky,flora09@gmx.at
+Magdalena Isanska,magdalena@rm-parts.com
+Isabelle Kuhn,isi.kuhn@web.de
+Alexandra Riedl,riedl_alexandra@gmx.at

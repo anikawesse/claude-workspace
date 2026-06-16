@@ -199,7 +199,28 @@
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Gelaende-Schluessel_neu.png\")",
       "Bash(Select-Object -First 50)",
       "WebFetch(domain:cch-files.edge.live.ds25.io)",
-      "Bash(curl --ssl-no-revoke -s \"https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6a3001baea5c8_export_09233a11-9694-4a15-90ac-c960a13d2309.json\" -o \"C:/Users/Olive/Desktop/claude-workspace/outputs/digibiz-import/export.json\")"
+      "Bash(curl --ssl-no-revoke -s \"https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6a3001baea5c8_export_09233a11-9694-4a15-90ac-c960a13d2309.json\" -o \"C:/Users/Olive/Desktop/claude-workspace/outputs/digibiz-import/export.json\")",
+      "WebFetch(domain:pferdedolmetscherin.com)",
+      "Bash(python -c \"import pypdf; print\\('pypdf ok'\\)\")",
+      "Bash(pdftotext -v)",
+      "Bash(python -c \"import pypdf; print\\('pypdf', pypdf.__version__\\)\")",
+      "Bash(python -c \"import fitz; print\\('pymupdf', fitz.__version__\\)\")",
+      "Bash(pip show *)",
+      "Bash(pdftotext -layout \"Präsi Webinar Energetik alt.pdf\" energetik_webinar_text.txt)",
+      "Bash(node -e \"try{require.resolve\\('pdf-parse'\\);console.log\\('have pdf-parse'\\)}catch\\(e\\){console.log\\('no pdf-parse'\\)}\")",
+      "Bash(pdftotext \"Präsi Webinar Energetik alt.pdf\" -)",
+      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} {gsub\\(/\\\\f/,\"\"\\); if\\($0!~/^[[:space:]]*$/\\) print \"[P\"p\"] \"$0}')",
+      "Bash(which pdftotext *)",
+      "Bash(pdftotext -layout \"C:/Users/Olive/Desktop/2. Version Präsi Webinar Energetik.pdf\" energetik.txt)",
+      "Bash(cygpath -w /tmp/energetik.txt)",
+      "Bash(pdftotext -layout \"C:/Users/Olive/Desktop/2. Version Präsi Webinar Energetik.pdf\" -)",
+      "Bash(awk 'BEGIN{p=1} {gsub\\(/\\\\r/,\"\"\\)} /\\\\f/{p++} {if\\($0 ~ /[A-Za-zÄÖÜäöü]/\\){t[p]=t[p]\" \"$0}} END{for\\(i=1;i<=p;i++\\){line=t[i]; gsub\\(/^ +/,\"\",line\\); if\\(length\\(line\\)>0\\){printf \"P%d: %.90s\\\\n\", i, line}}}')",
+      "Bash(awk 'BEGIN{p=1} /\\\\f/{p++} END{print \"Total pages with FF markers:\", p}')",
+      "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('C:/Users/Olive/Desktop/2. Version Präsi Webinar Energetik.pdf'\\);const s=b.toString\\('latin1'\\);const m=s.match\\(/\\\\/Type\\\\s*\\\\/Page[^s]/g\\);console.log\\('Page objects:', m?m.length:0\\); const c=s.match\\(/\\\\/Count\\\\s+\\(\\\\d+\\)/g\\);console.log\\('Count entries:', c?c.slice\\(0,5\\):'none'\\);\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\salespage.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\thrivecart\\\\import-andrea-levenig.csv\")",
+      "PowerShell(& 'C:\\\\Users\\\\Olive\\\\Desktop\\\\compare-offenstall.ps1')",
+      "Bash(git commit *)"
     ]
   }
 }

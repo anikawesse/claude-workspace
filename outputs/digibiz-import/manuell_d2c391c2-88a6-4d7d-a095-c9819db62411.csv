@@ -1,9 +1,9 @@
-﻿"Email","First_Name","Last_Name"
-"dpenzlin@freenet.de","Dörte","Penzlin"
-"tinimiranda1972@gmail.com","Christina","Miranda"
-"meyer1084@gmx.de","Stefanie","Meyer"
-"tina0610@gmx.net","Kristina","Franzke"
-"yasii@hotmail.de","Yasemin","Halac"
-"daniela-feth@gmx.de","Daniela","Feth"
-"brinjafriedrich@gmx.de","Brinja","Friedrich"
-"tamara.stoeckli88@gmail.com","Tamara","Stöckli"
+name,email
+Dörte Penzlin,dpenzlin@freenet.de
+Christina Miranda,tinimiranda1972@gmail.com
+Stefanie Meyer,meyer1084@gmx.de
+Kristina Franzke,tina0610@gmx.net
+Yasemin Halac,yasii@hotmail.de
+Daniela Feth,daniela-feth@gmx.de
+Brinja Friedrich,brinjafriedrich@gmx.de
+Tamara Stöckli,tamara.stoeckli88@gmail.com
