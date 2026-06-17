@@ -27,6 +27,13 @@
       "runtimeArgs": ["serve", "outputs/energetik", "-p", "3005", "--no-clipboard"],
       "port": 3005,
       "autoPort": true
+    },
+    {
+      "name": "offenstall-freebie-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "outputs", "-p", "3006", "--no-clipboard"],
+      "port": 3006,
+      "autoPort": true
     }
   ]
 }
