@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beziehungs-Check &ndash; Anika's Pferdeakademie</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --purple:#691212;
+  --purple-light:#894b2f;
+  --purple-pale:#f5e8e8;
+  --cream:#fdfaf5;
+  --warm:#f5f0e8;
+  --brown:#4a3828;
+  --brown-mid:#7a6050;
+  --white:#ffffff;
+  --black:#1a1a1a;
+}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--black);max-width:800px;margin:0 auto;font-size:16px;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+.header{background:var(--white);padding:20px 40px;text-align:center;border-bottom:1px solid #ede8e0}
+.logo{max-width:160px;margin:0 auto}
+
+/* HERO */
+.hero{background:var(--white);padding:52px 48px 44px;text-align:center}
+.badge{display:inline-block;background:var(--purple-pale);color:var(--purple);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+h1{font-family:'Playfair Display',serif;font-size:34px;font-weight:800;line-height:1.25;color:var(--black);margin-bottom:24px;letter-spacing:-0.3px}
+h1 span{color:var(--purple)}
+.bekannt{max-width:480px;margin:0 auto 32px}
+
+/* CTA BUTTON */
+.btn-cta{display:inline-block;background:var(--purple);color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:17px;padding:20px 48px;border-radius:6px;text-decoration:none;letter-spacing:0.2px;text-align:center;transition:background 0.2s}
+.btn-cta:hover{background:#352550}
+.btn-cta-wide{display:block;max-width:480px;margin:0 auto}
+
+/* SECTION TITLES */
+.section-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:var(--black);margin-bottom:28px;text-align:center;line-height:1.3}
+
+/* KERNFRAGEN */
+.kernfragen{background:var(--purple-pale);padding:52px 48px}
+.fragen-list{list-style:none;max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.fragen-list li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--brown);line-height:1.65}
+.fragen-icon{color:var(--purple);font-size:20px;flex-shrink:0;margin-top:2px}
+
+/* SCHRITTE */
+.schritte{background:var(--white);padding:52px 48px}
+.schritte-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:620px;margin:0 auto}
+.schritt{background:var(--warm);border-radius:10px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+.schritt-num{width:40px;height:40px;border-radius:50%;background:var(--purple);color:#fff;font-family:'Playfair Display',serif;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.schritt h3{font-size:15px;font-weight:700;color:var(--black);margin-bottom:4px}
+.schritt p{font-size:14px;color:var(--brown-mid);line-height:1.55}
+
+/* GRUENDE */
+.gruende{background:var(--warm);padding:52px 48px}
+.gruende-list{list-style:none;max-width:560px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.gruende-list li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--brown);line-height:1.65}
+.check{color:var(--purple);font-size:18px;font-weight:700;flex-shrink:0;margin-top:2px}
+
+/* MOCKUP */
+.mockup-section{background:var(--white);padding:48px;text-align:center}
+.mockup-section img{max-width:320px;margin:0 auto}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--purple-pale);padding:52px 48px}
+.testi-grid{display:flex;flex-direction:column;gap:24px;max-width:620px;margin:0 auto}
+.testi-item{background:var(--white);border-radius:10px;padding:28px;display:flex;gap:20px;align-items:flex-start;box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+.testi-img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.testi-text blockquote{font-size:15px;color:var(--brown);line-height:1.7;font-style:italic;margin-bottom:10px}
+.testi-name{font-size:14px;font-weight:700;color:var(--purple)}
+
+/* BIO */
+.bio{background:var(--white);padding:52px 48px}
+.bio-inner{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center;max-width:640px;margin:0 auto}
+.bio-img{border-radius:8px;overflow:hidden}
+.bio-img img{width:100%}
+.bio-text p{font-size:15px;color:var(--brown);line-height:1.7}
+
+/* FINAL CTA */
+.final-cta{background:var(--purple);padding:52px 48px;text-align:center}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{background:#f0e8ff}
+
+/* FOOTER */
+footer{background:var(--warm);padding:24px 40px;text-align:center;font-size:12px;color:var(--brown-mid);border-top:1px solid #ede8e0}
+footer img{max-width:100px;margin:0 auto 12px}
+footer a{color:var(--brown-mid);text-decoration:underline}
+.disclaimer{font-size:11px;color:#aaa;margin-top:12px;line-height:1.5}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .header{padding:16px 22px}
+  .hero,.kernfragen,.schritte,.gruende,.mockup-section,.testimonials,.bio,.final-cta{padding:36px 22px}
+  h1{font-size:26px}
+  .schritte-grid{grid-template-columns:1fr}
+  .bio-inner{grid-template-columns:1fr;text-align:center}
+  .bio-img{max-width:180px;margin:0 auto}
+  .testi-item{flex-direction:column;align-items:center;text-align:center}
+  .btn-cta{font-size:15px;padding:16px 24px;display:block}
+  footer{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/634e6f7438d6b_anika-leischl-logo-03.jpg?o=440" alt="Anika's Pferdeakademie" class="logo">
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">Quizz f&uuml;r 0 &euro;</div>
+  <h1>Beziehungs-Check &ndash;<br><span>So wirst du ein unschlagbares<br>Team mit deinem Pferd!</span></h1>
+  <p style="font-size:17px;color:var(--brown-mid);margin-bottom:28px">F&uuml;r Freizeitreiterinnen</p>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/643b0ab1c53af_banner-bekannt-aus-650-70-px-1.png?o=440" alt="Bekannt aus" class="bekannt">
+  <a href="https://link.devinefunnels.de/widget/quiz/FCQosGLCnNY3vGYZlRDP" class="btn-cta btn-cta-wide">Quizz starten!</a>
+</section>
+
+<!-- KERNFRAGEN -->
+<section class="kernfragen">
+  <h2 class="section-title">Das findest du heraus:</h2>
+  <ul class="fragen-list">
+    <li><span class="fragen-icon">&#10067;</span><span>Wie ist der aktuelle Status der Beziehung?</span></li>
+    <li><span class="fragen-icon">&#10067;</span><span>Wie entwickelt man tiefe emotionale Verbindung?</span></li>
+    <li><span class="fragen-icon">&#10067;</span><span>Wie &uuml;berwindet man allt&auml;gliche Probleme beim Reiten?</span></li>
+  </ul>
+</section>
+
+<!-- SCHRITTE -->
+<section class="schritte">
+  <h2 class="section-title">Was dich im Beziehungs-Check erwartet</h2>
+  <div class="schritte-grid">
+    <div class="schritt">
+      <div class="schritt-num">1</div>
+      <div>
+        <h3>&Uuml;berblick verschaffen</h3>
+        <p>Wie bekommst du eine starke Verbindung zu deinem Pferd und warum ist das so wichtig?</p>
+      </div>
+    </div>
+    <div class="schritt">
+      <div class="schritt-num">2</div>
+      <div>
+        <h3>Bestandsaufnahme</h3>
+        <p>Beantworte die Fragen, ganz bequem zum Ankreuzen, direkt im Quizz. Sei ehrlich zu dir selbst.</p>
+      </div>
+    </div>
+    <div class="schritt">
+      <div class="schritt-num">3</div>
+      <div>
+        <h3>Ergebnisse analysieren</h3>
+        <p>Jetzt bekommst du dein Ergebnis und eine klare Einsch&auml;tzung, wo eure Beziehung noch Potential hat.</p>
+      </div>
+    </div>
+    <div class="schritt">
+      <div class="schritt-num">4</div>
+      <div>
+        <h3>Traumteam werden</h3>
+        <p>Du erf&auml;hrst das Geheimnis einer vertrauensvollen Beziehung zu deinem Pferd und wie ihr in 3 Monaten ein Traumteam werdet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRUENDE -->
+<section class="gruende">
+  <h2 class="section-title">Warum solltest du den Test machen?</h2>
+  <ul class="gruende-list">
+    <li><span class="check">&#10004;</span><span><strong>Klarheit gewinnen:</strong> Verstehe, wo ihr als Team steht und welche Bereiche in eurer Beziehung noch Potenzial haben.</span></li>
+    <li><span class="check">&#10004;</span><span><strong>Individuelle Tipps erhalten:</strong> Basierend auf deinem Ergebnis erf&auml;hrst du erste Ans&auml;tze, wie du Vertrauen und Harmonie st&auml;rken kannst.</span></li>
+    <li><span class="check">&#10004;</span><span><strong>Zeit sparen:</strong> Erkenne, worauf es wirklich ankommt, um mit deinem Pferd schneller (Beziehungs-) Fortschritte zu machen.</span></li>
+    <li><span class="check">&#10004;</span><span><strong>Neue Perspektiven:</strong> Du wirst &uuml;berrascht sein, wie kleine Ver&auml;nderungen Gro&szlig;es bewirken k&ouml;nnen!</span></li>
+  </ul>
+</section>
+
+<!-- MOCKUP -->
+<section class="mockup-section">
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/67b2fa26e2c50_mockup-verbindungsformel.png?o=440" alt="Verbindungsformel Mockup">
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testi-grid">
+    <div class="testi-item">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6511853ff1396_img-20230501-wa0007.jpg?o=440" alt="Martina" class="testi-img">
+      <div class="testi-text">
+        <blockquote>&#8222;Was ich mir schon immer gew&uuml;nscht habe, ist eine gute Beziehung mit Respekt und Vertrauen zwischen meiner Stute und mir zu entwickeln. Anika hat einen besonderen Blick f&uuml;r die Interaktionen, die zwischen Pferd und Mensch passieren. Ich habe gelernt, wie ich mein Pferd besser lesen kann und wie ich mein Pferd f&uuml;r unser gemeinsames Training motivieren kann.&#8220;</blockquote>
+        <div class="testi-name">Martina &ndash; Pferdebesitzerin, Alt-Oldenburger</div>
+      </div>
+    </div>
+    <div class="testi-item">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/63aac7a6e7d9d_attila.jpg?o=440" alt="Tanja" class="testi-img">
+      <div class="testi-text">
+        <blockquote>&#8222;DANKE f&uuml;r eine entspannte Verbindung zwischen meinem Pferd und mir. Mit Vertrauen und vor allem wieder Spa&szlig; bei der t&auml;glichen Arbeit.&#8220;</blockquote>
+        <div class="testi-name">Tanja &ndash; Pferdebesitzerin, Kaltblut</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio">
+  <div class="bio-inner">
+    <div class="bio-img">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/63a6d36411928_p1156154-kopie.jpg?o=440" alt="Anika Leischl">
+    </div>
+    <div class="bio-text">
+      <p><strong>Hallo, ich bin Anika! Deine Expertin f&uuml;r die Ausbildung von Pferd und Reiter!</strong></p>
+      <p style="margin-top:12px">Trainerin seit dem 14. Lebensjahr, mehr als 100 Pferde trainiert. In 20 Jahren Einreiten keinen einzigen Buckler. Trainerin, Therapeutin, Ern&auml;hrungsberaterin, Expertin f&uuml;r artgerechte Pferdehaltung.</p>
+      <p style="margin-top:12px">Ich bin ein Pferdemensch durch und durch. W&auml;hrend du auf der Arbeit bist, besch&auml;ftige ich mich den ganzen Tag mit kaum etwas anderem. Dazu geh&ouml;ren unz&auml;hlige Weiterbildungen, Seminare, Webinare und B&uuml;cher zu diversen Themen. Ich m&ouml;chte, dass du von meinem Wissen profitierst! Nutze meine Erkenntnisse aus Fehlern, die ich selber gemacht habe oder meine Aha-Momente aus der t&auml;glichen Ausbildungsarbeit f&uuml;r das Vorankommen von dir und deinem Pferd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:#fff;margin-bottom:28px;line-height:1.3">Wie w&auml;re es wenn...</h2>
+  <ul style="list-style:none;max-width:520px;margin:0 auto 36px;display:flex;flex-direction:column;gap:16px;text-align:left">
+    <li style="display:flex;gap:14px;align-items:flex-start;font-size:16px;color:rgba(255,255,255,0.9);line-height:1.7"><span style="flex-shrink:0;font-size:18px">&#10004;</span><span>...du ein Pferd hast, was wirklich auf dich R&uuml;cksicht nimmt und dich nicht umschubst oder dir auf den Fu&szlig; tritt?</span></li>
+    <li style="display:flex;gap:14px;align-items:flex-start;font-size:16px;color:rgba(255,255,255,0.9);line-height:1.7"><span style="flex-shrink:0;font-size:18px">&#10004;</span><span>...dein Pferd dir wirklich zuh&ouml;rt und ihr euch gegenseitig verstehen und einsch&auml;tzen k&ouml;nnt?</span></li>
+    <li style="display:flex;gap:14px;align-items:flex-start;font-size:16px;color:rgba(255,255,255,0.9);line-height:1.7"><span style="flex-shrink:0;font-size:18px">&#10004;</span><span>...du f&uuml;r dein Pferd interessanter bist als der n&auml;chste Grashalm und dein Pferd schon freudig am Tor auf dich wartet?</span></li>
+  </ul>
+  <a href="https://link.devinefunnels.de/widget/quiz/FCQosGLCnNY3vGYZlRDP" class="btn-cta btn-white btn-cta-wide">Davon tr&auml;ume ich auch!</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/634e6f7438d6b_anika-leischl-logo-03.jpg?o=440" alt="Anika's Pferdeakademie">
+  <p><a href="https://gruppe.anikas-pferdeakademie.de/privacy">Datenschutz</a> &middot; <a href="https://gruppe.anikas-pferdeakademie.de/imprint">Impressum</a></p>
+  <p class="disclaimer">This website is not part of the Facebook&trade; website or Meta Platform Inc. Additionally, this site is NOT endorsed by Facebook&trade; in any way. FACEBOOK&trade; is a trademark of Meta Platform Inc.</p>
+</footer>
+
+</body>
+</html>

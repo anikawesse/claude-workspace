@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gespensterecke &amp; andere Alltagsgruselein &ndash; Anika's Pferdeakademie</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#1a5c6b;
+  --teal-light:#2e8a9e;
+  --teal-pale:#e4f2f5;
+  --cream:#fdfaf5;
+  --warm:#f5f0e8;
+  --brown:#4a3828;
+  --brown-mid:#7a6050;
+  --white:#ffffff;
+  --black:#1a1a1a;
+}
+body{font-family:'Lato',sans-serif;background:var(--cream);color:var(--black);max-width:800px;margin:0 auto;font-size:16px;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+.header{background:var(--white);padding:20px 40px;text-align:center;border-bottom:1px solid #ede8e0}
+.logo{max-width:160px;margin:0 auto}
+
+/* HERO */
+.hero{background:var(--white);padding:52px 48px 44px;text-align:center}
+h1{font-family:'Playfair Display',serif;font-size:30px;font-weight:800;line-height:1.3;color:var(--black);margin-bottom:16px}
+h1 span{color:var(--teal)}
+.hero-sub{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--teal);margin-bottom:28px;line-height:1.3}
+.bekannt{max-width:480px;margin:0 auto 32px}
+
+/* BUTTONS */
+.btn-cta{display:inline-block;background:var(--teal);color:#fff;font-family:'Lato',sans-serif;font-weight:700;font-size:17px;padding:20px 48px;border-radius:6px;text-decoration:none;letter-spacing:0.2px;text-align:center;transition:background 0.2s}
+.btn-cta:hover{background:#124450}
+.btn-cta-wide{display:block;max-width:480px;margin:0 auto}
+.btn-white{background:#fff;color:var(--teal)}
+.btn-white:hover{background:#e4f2f5}
+
+/* SECTION */
+.section-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:var(--black);margin-bottom:24px;line-height:1.3}
+.sec-center{text-align:center}
+
+/* WIE WAERE ES */
+.wie-section{background:var(--teal-pale);padding:52px 48px}
+.wie-list{list-style:none;max-width:580px;margin:0 auto 32px;display:flex;flex-direction:column;gap:16px}
+.wie-list li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--brown);line-height:1.7}
+.wie-icon{color:var(--teal);font-size:20px;flex-shrink:0;margin-top:2px}
+
+/* ZIELGRUPPE */
+.zielgruppe{background:var(--white);padding:52px 48px}
+.ziel-list{list-style:none;max-width:580px;margin:0 auto 32px;display:flex;flex-direction:column;gap:14px}
+.ziel-list li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--brown);line-height:1.65}
+.check{color:var(--teal);font-size:18px;font-weight:700;flex-shrink:0;margin-top:2px}
+
+/* TESTIMONIALS */
+.testimonials{background:var(--teal-pale);padding:52px 48px}
+.testi-grid{display:flex;flex-direction:column;gap:20px;max-width:640px;margin:0 auto}
+.testi-item{background:var(--white);border-radius:10px;padding:22px;box-shadow:0 2px 12px rgba(0,0,0,0.05);display:flex;gap:18px;align-items:flex-start}
+.testi-img{width:80px;height:80px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.testi-text blockquote{font-size:14px;color:var(--brown);line-height:1.7;font-style:italic;margin-bottom:8px}
+.testi-name{font-size:13px;font-weight:700;color:var(--teal)}
+
+/* KURSINHALT */
+.kursinhalt{background:var(--white);padding:52px 48px;text-align:center}
+.kursinhalt p{font-size:16px;color:var(--brown);max-width:580px;margin:0 auto 28px;line-height:1.75}
+.kursinhalt img{max-width:580px;margin:0 auto 28px;border-radius:8px}
+
+/* BIO */
+.bio{background:var(--warm);padding:52px 48px}
+.bio-inner{display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:start;max-width:640px;margin:0 auto}
+.bio-img{border-radius:8px;overflow:hidden}
+.bio-img img{width:100%}
+.bio-text h2{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--black);margin-bottom:4px}
+.bio-text h3{font-size:16px;color:var(--teal);font-weight:700;margin-bottom:14px}
+.bio-text p{font-size:15px;color:var(--brown);line-height:1.7;margin-bottom:10px}
+
+/* BONI */
+.boni{background:var(--white);padding:52px 48px}
+.bonus-item{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center;max-width:640px;margin:0 auto 32px;padding-bottom:32px;border-bottom:1px solid #ede8e0}
+.bonus-item:last-child{border:none;margin-bottom:0;padding-bottom:0}
+.bonus-item img{border-radius:8px}
+.bonus-text h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.bonus-text p{font-size:15px;color:var(--brown);line-height:1.7}
+
+/* ZUSAMMENFASSUNG */
+.zusammen{background:var(--teal);padding:52px 48px;text-align:center}
+.zusammen h2{font-family:'Playfair Display',serif;font-size:26px;font-weight:800;color:#fff;margin-bottom:28px;line-height:1.3}
+.zusammen-list{list-style:none;max-width:560px;margin:0 auto 32px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.zusammen-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:rgba(255,255,255,0.9);line-height:1.65}
+.zusammen-list .val{font-size:13px;color:rgba(255,255,255,0.6);margin-left:4px}
+.preis-box{background:rgba(255,255,255,0.1);border-radius:10px;padding:24px 32px;max-width:400px;margin:0 auto 32px}
+.preis-statt{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:line-through;margin-bottom:4px}
+.preis-jetzt{font-family:'Playfair Display',serif;font-size:42px;font-weight:800;color:#fff}
+.preis-note{font-size:13px;color:rgba(255,255,255,0.7);margin-top:6px}
+
+/* FAQ */
+.faq{background:var(--white);padding:52px 48px}
+.faq-list{max-width:620px;margin:0 auto;display:flex;flex-direction:column;gap:0}
+details{border-bottom:1px solid #ede8e0}
+details:last-child{border:none}
+summary{font-size:16px;font-weight:700;color:var(--black);padding:20px 0;line-height:1.4;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";font-size:20px;color:var(--teal);flex-shrink:0;transition:transform 0.2s}
+details[open] summary::after{content:"－"}
+.faq-a{font-size:15px;color:var(--brown);line-height:1.75;padding:0 0 20px}
+
+footer{background:var(--warm);padding:24px 40px;text-align:center;font-size:12px;color:var(--brown-mid);border-top:1px solid #ede8e0}
+footer img{max-width:100px;margin:0 auto 12px}
+footer a{color:var(--brown-mid);text-decoration:underline}
+
+@media(max-width:600px){
+  .header{padding:16px 22px}
+  .hero,.wie-section,.zielgruppe,.testimonials,.kursinhalt,.bio,.boni,.zusammen,.faq{padding:36px 22px}
+  h1{font-size:24px}
+  .hero-sub{font-size:18px}
+  .bio-inner{grid-template-columns:1fr;text-align:center}
+  .bio-img{max-width:180px;margin:0 auto}
+  .bonus-item{grid-template-columns:1fr}
+  .bonus-item img{max-width:200px;margin:0 auto}
+  .btn-cta{font-size:15px;padding:16px 24px;display:block}
+  footer{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/634e6f7438d6b_anika-leischl-logo-03.jpg?o=440" alt="Anika's Pferdeakademie" class="logo">
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <p style="font-size:16px;color:var(--brown-mid);margin-bottom:16px">Der Selbstlern-Onlinekurs f&uuml;r alle Pferdemenschen, die es satt haben, dass ihr schreckhaftes Pferd immer wieder in der einen Ecke scheut oder im Alltag oft guckig ist.</p>
+  <h1>27 Wege f&uuml;r ein entspannteres Training und mehr Kontrolle in der Gespensterecke!</h1>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6357b8749ae64_p1155910-kopie.jpg?o=440" alt="Gespensterecke" style="max-width:580px;margin:0 auto 28px;border-radius:8px">
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/643b0ab1c53af_banner-bekannt-aus-650-70-px-1.png?o=440" alt="Bekannt aus" class="bekannt">
+  <a href="https://www.digistore24.com/product/505201" class="btn-cta btn-cta-wide">Onlinekurs f&uuml;r 37 &euro; sichern!</a>
+</section>
+
+<!-- WIE WAERE ES -->
+<section class="wie-section">
+  <h2 class="section-title sec-center">Wie w&auml;re es wenn...</h2>
+  <ul class="wie-list">
+    <li><span class="wie-icon">&#10067;</span><span>du dich vor dem Training nicht mehr fragen m&uuml;sstest, wie guckig dein Pferd heute wohl wieder in der Gespensterecke auf dem Reitplatz sein wird?</span></li>
+    <li><span class="wie-icon">&#10067;</span><span>du dir nicht mehr die Frage stellen m&uuml;sstest, ob du dich heute traust zu Reiten oder ob es besser w&auml;re gleich auf Bodenarbeit umzuschwenken, weil es ein bisschen windig ist und dein Pferd dann noch guckiger ist?</span></li>
+    <li><span class="wie-icon">&#10067;</span><span>du einen Haufen verschiedener Strategien an der Hand h&auml;ttest, mit denen du deinem Pferd helfen kannst, entspannter zu werden?</span></li>
+  </ul>
+  <a href="https://www.digistore24.com/product/505201" class="btn-cta btn-cta-wide" style="background:var(--teal)">Das h&ouml;rt sich gut an!</a>
+</section>
+
+<!-- ZIELGRUPPE -->
+<section class="zielgruppe">
+  <h2 class="section-title">Der Onlinekurs &#8222;Gespensterecke &amp; andere Alltagsgruselein&#8220; ist perfekt f&uuml;r dich, wenn...</h2>
+  <ul class="ziel-list">
+    <li><span class="check">&#10004;</span><span>du das Gef&uuml;hl hast, euer Training wird von einer Gespensterecke (Reitplatz, Reithalle) eingeschr&auml;nkt</span></li>
+    <li><span class="check">&#10004;</span><span>dein Pferd im Alltag ein d&uuml;nnes Nervenkost&uuml;m hat</span></li>
+    <li><span class="check">&#10004;</span><span>du aufgrund deines schreckhaften Pferdes selber Angst hast und verunsichert bist. Egal ob am Boden oder beim Reiten</span></li>
+    <li><span class="check">&#10004;</span><span>dein Pferd dich schonmal umgesprungen hat und du vorbeugen m&ouml;chtest, damit das nicht nochmal passiert</span></li>
+    <li><span class="check">&#10004;</span><span>du langsam immer weniger Reitplatz/Reithalle im Training nutzen kannst, weil dein Pferd irgendwie immer guckiger wird und immer mehr Abstand zur Gruselecke ben&ouml;tigt</span></li>
+  </ul>
+  <div style="text-align:center">
+    <a href="https://www.digistore24.com/product/505201" class="btn-cta">Jupp, das passt zu uns!</a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL 1 -->
+<section class="testimonials">
+  <div class="testi-grid">
+    <div class="testi-item">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/649022018732f_img-0274.jpg?o=440" alt="Jana und Zoe" class="testi-img">
+      <div class="testi-text"><blockquote>&#8222;Ich war wirklich verzweifelt. Unsere Gruselecke war DAS Thema f&uuml;r mich, wenn ich in den Stall gekommen bin. Ich wusste nie, ob ich heute vern&uuml;nftig reiten kann oder ob sie zu angespannt sein wird. Mit deiner Hilfe kann ich Zoe viel besser auf mich konzentrieren und habe das Gef&uuml;hl der Kontrolle zur&uuml;ck erlangt. Die Ecke hat immer weniger Einfluss und wir k&ouml;nnen uns endlich mal aufs Training konzentrieren. Vielen Dank daf&uuml;r!&#8220;</blockquote>
+      <div class="testi-name">Jana &ndash; Freizeitreiterin, Zoe</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- KURSINHALT -->
+<section class="kursinhalt">
+  <h2 class="section-title">In diesem Onlinekurs lernst du 27 effektive Strategien, um euren Alltag &amp; euer Training entspannter genie&szlig;en zu k&ouml;nnen!</h2>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/64902948074e0_mockup-verbindungsformel.png?o=440" alt="Kurs Mockup">
+  <p>Vertrauen ist leider nicht alles und Gel&auml;ssenheitstraining ist auch nicht der alleinige Schl&uuml;ssel zum Erfolg. In diesem Video-Kurs findest du 27 einzelne Lektionen, in denen die einzelnen Strategien erkl&auml;rt werden. Manche Tipps sind selbsterkl&auml;rend und sofort umsetzbar. Manche Strategien gehen weiter in die Tiefe und sind ein eigenst&auml;ndiger Themenbereich, mit dem es sich zu besch&auml;ftigen gilt.</p>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/64902d41bba5d_lektionsvorschaue.png?o=440" alt="Lektionsvorschau">
+  <a href="https://www.digistore24.com/product/505201" class="btn-cta btn-cta-wide">Das m&ouml;chte ich auch haben!</a>
+</section>
+
+<!-- TESTIMONIAL 2 -->
+<section class="testimonials">
+  <div class="testi-grid">
+    <div class="testi-item">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/64902f8653ceb_testimonial-2.png?o=440" alt="Tina und Bless" class="testi-img">
+      <div class="testi-text"><blockquote>&#8222;Anika war zum Verladetraining bei uns und innerhalb eines Trainings haben wir es geschafft, dass Bless im H&auml;nger stand. Den positiven "Nebeneffekt" habe ich erst am n&auml;chsten Tag bemerkt. Auf einmal war Bless auch auf dem Reitplatz viel aufmerksamer und viel mehr auf mich fixiert. In unserer Gruselecke habe ich die gelernte Strategie von Ann&auml;herung und R&uuml;ckzug ausprobiert und siehe da, es hat genau wie beim H&auml;nger super funktioniert. (...) Vielen Dank f&uuml;r diese "Trainingsmethode". Du warst zwar nur eine Stunde bei uns, aber wir haben soo viel auch f&uuml;r unser sonstiges Training mitgenommen.&#8220;</blockquote>
+      <div class="testi-name">Tina &ndash; Kutschfahrerin und Freizeitreiterin, Bless</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio">
+  <div class="bio-inner">
+    <div class="bio-img">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6357baaf4b933_p1156434-kopie.jpg?o=440" alt="Anika Leischl">
+    </div>
+    <div class="bio-text">
+      <h2>Hallo, ich bin Anika!</h2>
+      <h3>Deine Expertin f&uuml;r die Ausbildung von Pferd und Reiter!</h3>
+      <p>Trainerin seit dem 14. Lebensjahr, mehr als 100 Pferde trainiert. In 16 Jahren Einreiten keinen einzigen Buckler. Trainerin, Therapeutin, Ern&auml;hrungsberaterin, Expertin f&uuml;r artgerechte Pferdehaltung.</p>
+      <p>Ich bin ein Pferdemensch durch und durch. W&auml;hrend du auf der Arbeit bist, besch&auml;ftige ich mich den ganzen Tag mit kaum etwas anderem. Dazu geh&ouml;ren unz&auml;hlige Weiterbildungen, Seminare, Webinare und B&uuml;cher zu diversen Themen. Ich m&ouml;chte, dass du von meinem Wissen profitierst! Nutze meine Erkenntnisse aus Fehlern, die ich selber gemacht habe oder meine Aha-Momente aus der t&auml;glichen Ausbildungsarbeit f&uuml;r das Vorankommen von dir und deinem Pferd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL 3 -->
+<section class="testimonials">
+  <div class="testi-grid">
+    <div class="testi-item">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/64902f80e7388_testimonial-3.png?o=440" alt="Anna und Monti" class="testi-img">
+      <div class="testi-text"><blockquote>&#8222;Monti hat mich sogar schonmal umgesprungen, weil er oft so schreckhaft ist und dann nicht aufpasst, wo ich stehe. Mit Anika&acute;s Hilfe habe ich es geschafft, dass ich besser erkenne, wenn Monti sich anspannt und ich wei&szlig; auch, wie ich ihn aus diesem Zustand wieder herausbekomme, sodass er wieder h&auml;ndelbar und entspannter wird.&#8220;</blockquote>
+      <div class="testi-name">Anna &ndash; Freizeitreiterin, Monti</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BONI -->
+<section class="boni">
+  <h2 class="section-title sec-center">Diese 5 Boni gibt&acute;s geschenkt obendrauf!</h2>
+
+  <div class="bonus-item">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/649033535e24c_gespensterecke-bilder.png?o=440" alt="Bonus 1">
+    <div class="bonus-text">
+      <h3>Bonus 1: Checkliste</h3>
+      <p>Hier hast du auf einem Blick die &Uuml;bersicht, welche der 27 Strategien du schon ausprobiert hast und wie erfolgreich diese bei deinem Pferd gewesen ist. So hast du immer wieder schnell im Blick, was du nochmal ausprobieren k&ouml;nntest oder du greifst auf einen der altbew&auml;hrten Tipps zur&uuml;ck.</p>
+    </div>
+  </div>
+
+  <div class="bonus-item">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/649035c507195_gespensterecke-bilder-1.png?o=440" alt="Bonus 2">
+    <div class="bonus-text">
+      <h3>Bonus 2: Kursheft</h3>
+      <p>&Uuml;bersichtlich und h&uuml;bsch aufbereitet findest du alle Tipps hier noch einmal als Text zusammengefasst und beschrieben. Vielleicht sitzt du irgendwo und hast nicht die M&ouml;glichkeit dir Videos anzuschauen? Dann kannst du zumindest weiterlernen, indem du dir einfach das Kursheft durchlie&szlig;t.</p>
+    </div>
+  </div>
+
+  <div class="bonus-item">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/64902d41bba5d_lektionsvorschaue.png?o=440" alt="Bonus 3">
+    <div class="bonus-text">
+      <h3>Bonus 3: weitere Videos mit Strategien</h3>
+      <p>Mir fallen w&auml;hrend des Trainings immer noch weitere Tipps ein, wie du mehr Gelassenheit in euer Zusammensein bekommst. Daher habe ich dir als Bonus diese zus&auml;tzliche Rubrik angelegt, die mit Sicherheit in Zukunft auch noch weiter wachsen wird. Einmal gekauft, profitierst du auch zuk&uuml;nftig von allen Updates.</p>
+    </div>
+  </div>
+
+  <div class="bonus-item">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/649061cb19f2a_lavender-1595581-150.jpg?o=440" alt="Bonus 4">
+    <div class="bonus-text">
+      <h3>Bonus 4: Ebook &#8222;Entspannende Kr&auml;uter und Bachbl&uuml;ten&#8220;</h3>
+      <p>Du bekommst eine Liste an die Hand, auf der speziell die 7 Kr&auml;uter und 6 Bachbl&uuml;ten aufgef&uuml;hrt sind, die dein Pferd unterst&uuml;tzen k&ouml;nnen. Dabei liegt der Fokus auf der entspannenden Wirkung und den K&ouml;rper und Geist etwas runterzufahren und wieder in Einklang zu bringen.</p>
+    </div>
+  </div>
+
+  <div class="bonus-item">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/641d5eb01ad18_img-1608.jpg?o=440" alt="Bonus 5">
+    <div class="bonus-text">
+      <h3>Bonus 5: 2 eindrucksvolle Lektionen, die du deinem Pferd in jeweils 5 Minuten beibringen kannst</h3>
+      <p>Diese 2 &Uuml;bungen sehen im Ergebnis sehr eindrucksvoll aus. Beim Erlernen kannst du jedoch super schnell Erfolge erzielen, f&uuml;r die fertige Lektion nur wenige kleine Teilschritte notwendig sind. Beide &Uuml;bungen machen Pferd und Mensch super viel Spa&szlig; und sie k&ouml;nnen die Aufmerksamkeit deines sehr gut an dich binden.</p>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:8px">
+    <a href="https://www.digistore24.com/product/505201" class="btn-cta">Lass uns loslegen!</a>
+  </div>
+</section>
+
+<!-- ZUSAMMENFASSUNG -->
+<section class="zusammen">
+  <h2>Zusammengefasst, das bekommst du im Onlinekurs &#8222;Gespensterecke &amp; andere Alltagsgruselein&#8220;</h2>
+  <ul class="zusammen-list">
+    <li><span style="flex-shrink:0">&#10004;</span><span>27 kurze Videolektionen <span class="val">(Wert 67 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>Bonus 1: &uuml;bersichtliche Checkliste <span class="val">(Wert 7 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>Bonus 2: umfangreiches Kursheft <span class="val">(Wert 19 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>Bonus 3: weitere Videolektionen mit weiteren Strategien <span class="val">(Wert 27 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>Bonus 4: Liste von entspannenden Kr&auml;utern und Bachbl&uuml;ten <span class="val">(Wert 17 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>Bonus 5: 2 eindrucksvolle Lektionen, die du deinem Pferd in 5 Minuten beibringen kannst <span class="val">(Wert 59 &euro;)</span></span></li>
+    <li><span style="flex-shrink:0">&#10004;</span><span>zuk&uuml;nftige, kostenlose Updates des gesamten Kurses <span class="val">(Wert 59 &euro;)</span></span></li>
+  </ul>
+  <div class="preis-box">
+    <div class="preis-statt">statt 255 &euro; inkl. UST</div>
+    <div class="preis-jetzt">37 &euro;</div>
+    <div class="preis-note">inkl. UST</div>
+  </div>
+  <p style="font-size:14px;color:rgba(255,255,255,0.8);max-width:480px;margin:0 auto 28px">Nachdem du die Zahlungsinformationen ausgef&uuml;llt hast, bekommst du sofort per Email den Zugang zur Kursseite geschickt.</p>
+  <a href="https://www.digistore24.com/product/505201" class="btn-cta btn-white btn-cta-wide">Das muss ich haben!</a>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <h2 class="section-title">H&auml;ufig gestellte Fragen</h2>
+  <div class="faq-list">
+    <details>
+      <summary>F&uuml;r wen ist dieser Kurs? Muss ich spezielle Voraussetzungen mitbringen? Pferdealter?</summary>
+      <p class="faq-a">Der Kurs ist f&uuml;r dich geeignet, wenn du Schwierigkeiten mit deinem &auml;ngstlichen Pferd hast. F&uuml;r das Training sollte dein Pferd mindestens 2,5 Jahre alt ist. Nach oben hin sind keine Grenzen gesetzt.</p>
+    </details>
+    <details>
+      <summary>Was f&uuml;r Technik ben&ouml;tige ich?</summary>
+      <p class="faq-a">Du ben&ouml;tigst nur einen Laptop/ PC. Die Technik ist wirklich sehr einfach gemacht. Wenn du dich mit den anderen Teilnehmerinnen austauschen und Videos einschicken m&ouml;chtest, ben&ouml;tigst du WhatsApp auf deinem Handy. Das ist aber kein Muss. Du kannst den Kurs auch ohne Smartphone mitmachen.</p>
+    </details>
+    <details>
+      <summary>Kann man Pferdetraining denn &uuml;berhaupt online lernen?</summary>
+      <p class="faq-a">Das ist eine sehr h&auml;ufig gestellte Frage. Ich habe fr&uuml;her auch etwas gezweifelt, aber nach Jahren in denen ich selber Onlinekurse super gerne f&uuml;r Weiterbildungen genutzt habe, kann ich ganz klar sagen, JA! Pferdeausbildung kann man wirklich super online lernen. Ich gehe sogar soweit und empfehle auch meinen Reitsch&uuml;lerinnen vor Ort eher meinen Onlinekurs. Warum? Weil sie hier viiiel mehr Input und Wissen bekommen als das, was ich in der kurzen Zeit vor Ort vermitteln k&ouml;nnte.<br><br>Au&szlig;erdem spreche ich hier verschiedene Lerntypen an und das Gelernte kann viel besser aufgenommen werden. Die H&auml;lfte vergisst man sowieso, wenn man sie nur h&ouml;rt. Wenn man dann noch sein Pferd neben sich am Strick hat, welches gerade vielleicht herumzappelt, ist unser Gehirn noch unkonzentrierter.<br><br>Ein unschlagbarer Vorteil f&uuml;r meine Sch&uuml;lerinnen ist auch, dass sie das Wissen im Format des Onlinekurses viel g&uuml;nstiger bekommen, als wenn sie meine Zeit bezahlen w&uuml;rde, die ich auf dem Reitplatz stehe und ihnen die Theorie erkl&auml;re.<br><br>Eine Grenze wird erst dann erreicht, wenn man ein stark traumatisiertes Pferd hat oder sich &uuml;berhaupt nicht traut, selber mit seinem Pferd etwas am Boden zu machen. Dann sollte ein Profi vor Ort weiterhelfen.<br><br>Ich bin absoluter Fan des Onlinelernens. Es ist einfach mega flexibel und bequem!</p>
+    </details>
+    <details>
+      <summary>Kann ich alleine im Training etwas falsch machen?</summary>
+      <p class="faq-a">Bisher habe ich in meiner Trainerlaufbahn ausnahmslos nur Pferdemenschen kennengelernt, die eher zu vorsichtig und zur&uuml;ckhaltend mit ihren Pferden waren. Ich gehe davon aus, dass auch du zu dieser Gruppe geh&ouml;rst und da mache ich mir gar keine Sorgen, dass du etwas "kaputtmachen" kannst, wenn du dir vorher die Erkl&auml;rvideos anschaust.</p>
+    </details>
+    <details>
+      <summary>Mein Pferd ist ein Springpferd, Westernpferd, Gangpferd, Einhorn etc. passt der Kurs da trotzdem zu uns?</summary>
+      <p class="faq-a">In diesem Kurs geht es um verschiedene Wege mit der Angst des Pferdes umzugehen und zu einem entspannteren Umgang zu finden. Davon profitiert jede Pferd-Mensch-Beziehung egal, in welcher Disziplin ihr sp&auml;ter schwerpunktm&auml;&szlig;ig unterwegs sein wollt.</p>
+    </details>
+    <details>
+      <summary>Ist dies ein begleiteter Kurs? Habe ich die M&ouml;glichkeit Fragen zu stellen?</summary>
+      <p class="faq-a">Bei diesem Videokurs handelt es sich um einen Selbstlernkurs ohne Support. Du kannst mir nat&uuml;rlich aber trotzdem Verst&auml;ndnisfragen per Mail stellen (hallo@anikas-pferdeakademie.de). Ansonsten kannst du den Kurs in deinem eigenen Tempo durcharbeiten.</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/634e6f7438d6b_anika-leischl-logo-03.jpg?o=440" alt="Anika's Pferdeakademie">
+  <p><a href="https://gruppe.anikas-pferdeakademie.de/privacy">Datenschutz</a> &middot; <a href="https://gruppe.anikas-pferdeakademie.de/imprint">Impressum</a></p>
+</footer>
+
+</body>
+</html>
