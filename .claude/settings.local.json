@@ -220,7 +220,23 @@
       "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\salespage.html\")",
       "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\thrivecart\\\\import-andrea-levenig.csv\")",
       "PowerShell(& 'C:\\\\Users\\\\Olive\\\\Desktop\\\\compare-offenstall.ps1')",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaendeschluessel\\\\landingpage.html\")",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/.claire/worktrees/xenodochial-booth-2d4a6a/outputs/sicher-meistern/salespage-final.html\")",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/.claude/worktrees/xenodochial-booth-2d4a6a/outputs/sicher-meistern/salespage-final.html\")",
+      "PowerShell($file = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\Gelände sicher meistern\\\\salespage-final.html\"; \\(Select-String -Path $file -Pattern \"digistore|thrivecart|href=.https\" | Select-Object -First 10\\).Line)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\Gel�nde sicher meistern\\\\salespage-final.html\")",
+      "PowerShell([System.IO.File]::ReadAllText\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\Gelände sicher meistern\\\\salespage-final.html\", [System.Text.Encoding]::UTF8\\))",
+      "PowerShell(Select-String -Path \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\Gelände sicher meistern\\\\salespage-final.html\" -Pattern \"59|bequem\" | Where-Object { $_.Line -notmatch \"base64\" } | Select-Object Line)",
+      "WebFetch(domain:gruppe.anikas-pferdeakademie.de)",
+      "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\1.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-1.png\")",
+      "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\2.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-2.png\")",
+      "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\3.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-3.png\")",
+      "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\4.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-4.png\")",
+      "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\5.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-5.png\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\salespage.html\" -Raw)",
+      "Bash(Set-Clipboard)",
+      "PowerShell(Set-Clipboard)"
     ]
   }
 }
