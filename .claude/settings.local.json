@@ -236,7 +236,8 @@
       "Bash(cp \"C:\\\\Users\\\\Olive\\\\Desktop\\\\5.png\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\modul-5.png\")",
       "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\salespage.html\" -Raw)",
       "Bash(Set-Clipboard)",
-      "PowerShell(Set-Clipboard)"
+      "PowerShell(Set-Clipboard)",
+      "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall-freebie\\\\landingpage.html\" -Raw)"
     ]
   }
 }
