@@ -49,3 +49,13 @@ Ausgangslage: Webinar 12.06.26, Programm 2.500 €. Ergebnis: 0 Verkäufe aus de
 - „Over-delivered / lange Q&A" (Retention war diesmal besser).
 - Zustellbarkeit / Öffnungsraten / Betreff (gesund).
 - „2-Wege-CTA" (in beiden).
+
+---
+
+## Optimierungen für die Juli-Wiederholung (Stand 17.06.26)
+- Webinar mit Mentorin überarbeitet. Frame zurück auf konkret/Schmerz (kein „Mädchentraum"). „energetische/kinesiologische Tests" als BEGRIFF raus aus Opt-in/Ad/Webinar-Bullets, damit kein Validitäts-Zweifel.
+- Neue „Nach diesem Webinar"-Bullets (outcome-getrieben, ohne Methodenwort): (1) leidet mein Pferd still/überfordert, (2) warum kommen Husten/Hufrehe/Ekzem immer wieder + nachhaltige Lösung, (3) Sattel/Futter/Stall nötig ODER Geld sparen. Plus „Sprechen mit Tieren funktioniert" + „Schmerzen/Tierarztkosten sparen".
+- Neigetest + Fingertest (Live-Übung) komplett aus dem Webinar raus → auch aus VIP-Workbook entfernt (Seiten gelöscht, umnummeriert 1-5, „Teil 2" statt 3, VIP-Fragerunde-Hinweis + „bei Übungen mitmachen"-Checkbox raus). HTML + PDF aktualisiert (outputs/energetik/ + Desktop „VIP-Workbook Energetik.html/.pdf").
+- KEINE VIP-Fragerunde mehr (Teilnehmer nicht „satt" machen).
+- Setup: Opt-in-Formular wiederverwenden, neuer Tag `energetik webinar 07.26`, Selektion/Auswertung über Tag.
+- Offen/Entscheidung: Pricing (evtl. Mid-Tier ~997 als eigenes schlankes Angebot testen; Bestandskunden nicht entwerten); Call-Funnel verworfen (Anika will Direkt-Pitch mit Preis).
