@@ -71,15 +71,15 @@ Haflinger Amir klebt am Hof, wird hektisch. Schafft es mit der Verlasspferd-Meth
 
 ## Order Bumps
 
-**Order Bump 1 — "Ruhig bleiben, wenn es brenzlig wird" (€17)**
-- Videoserie: 3 Videos, je unter 8 Min.
-- Für 3 häufigste Eskalations-Momente: Pferd steigt / zieht weg / bewegt sich gar nicht
-- Ruhig bleiben im Körper, konkrete Handlung im Moment, sichere Auflösung
+**Order Bump 1 — "Ruhig bleiben" (€27)** ⚠️ Preis korrigiert 18.06.26
+- Videoserie: 3 Videos
+- Für 3 häufigste Eskalations-Momente: Pferd steigt / zieht weg oder reißt sich los / bewegt sich gar nicht (Felsen in der Brandung)
+- Ruhig bleiben, konkrete Handlung im Moment, sichere Auflösung ohne Eskalation
 
-**Order Bump 2 — "Ich bin an deiner Seite" (€27)**
+**Order Bump 2 — "Hoftor" (€17)** ⚠️ Preis + Name + Zweck korrigiert 18.06.26
 - Audio-Trainingsstunde, direkt beim Führen auf Kopfhörern
-- Geführt durch jeden Schritt vom Hof ins Gelände
-- Für den ersten Ausgang: nichts vergessen, ruhig bleiben
+- Geführt durch jeden Schritt vom Hoftor bis ins Gelände
+- Für die **allererste Trainingseinheit mit dem Kurs** (nicht für den ersten freien Ausgang!) — Anika leitet einfach durchs Training, du kannst nichts vergessen/falsch machen
 
 ---
 

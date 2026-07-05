@@ -1,0 +1,19 @@
+# Lektion 28: Übung 2 - Hinterhand stärken
+
+So, für die Übung, die ich euch jetzt zeigen möchte, schnalle ich meine Zügel einmal um. Und das Coole bei diesem Reithalfter ist, dass ich die Zügel auch unten drunter festmachen kann. Als ob ich einen Führstrick dran habe im Prinzip. Ja, riecht da was lecker? Ja, du darfst natürlich auch mal am Boden schnuppern. Das ist natürlich erlaubt, Leon.
+
+Warum mache ich das? Ich möchte das Pferd jetzt rückwärts richten und kann das besser und gleichmäßiger, wenn ich einen Strick oder einen Zügel unterm Kinn festgemacht habe. Das Effektive ist, wenn ich jetzt hier den Berg hinaufgehe, ist es ja so, das Pferd hat Schwung, nutzt den Schwung, um den Berg hochzukommen. Wenn ich jetzt immer mal wieder anhalte und rückwärts richte, muss das Pferd sich immer, wenn es bergauf geht, mit Kraft seiner Hinterhand wieder abstoßen und braucht mehr Kraft, um den Berg hoch zu kommen.
+
+Leon, können wir auch mal geradeaus gehen? Achso, Leon ist jetzt noch übrigens im Schenkelweichen-Modus, deshalb läuft er die ganze Zeit jetzt schief. Wir gehen einfach geradeaus. Also auch das ist ganz wichtig, wenn ihr eine Weile schenkelweichen gegangen seid, kann es sein, dass euer Pferd sagt, ich gehe jetzt nur noch schräg und seitwärts. Deshalb geht dann immer mal wieder ein Stück geradeaus, damit das Pferd wieder in den Vorwärtsmodus kommt.
+
+Ich lasse ihn jetzt wieder rückwärts gehen, so dynamisch und fleißig wie möglich und lasse ihn möglichst dynamisch wieder antreten, so dynamisch wie so ein Haflinger das halt macht. Und das mache ich hier an dieser Steigung ein paar Mal hintereinander. Und das könnt ihr sehr gerne auch machen, denn das setzt das Pferd, wie gesagt, immer wieder ein bisschen auf die Hinterhand, und das Pferd braucht noch mehr Kraft, um den Berg raufzukommen.
+
+Bremen, Bremen, gut, ja, super. Und auch beim Wiederantreten, gut, braucht er natürlich mehr Kraft. Jetzt kann ich natürlich, wenn das Pferd das schon gut kann mit dem Schenkelweichen, das auch hier an der Steigung machen. Das kann ich natürlich gut verbinden. Das ist aber wirklich anstrengend. Also macht das bitte nicht mit einem untrainierten Pferd, aber mit einem Pferd, was regelmäßig im Training ist und was es gewöhnt ist, in einer hügeligen Landschaft unterwegs zu sein, könnt ihr das gerne machen.
+
+Und das ist jetzt auch nicht zu steil hier. Das ist eine leichte Steigung. Der Boden ist gut. Deshalb kann ich ihn hier jetzt nochmal ins Schenkelweichen bringen. Jawohl. Super. Guck mal, wie fleißig. Wow. Prima, Leon. Das machst du ja toll. Du bist so ein fleißiger Haflinger. Andere Richtung. Ganz wichtig, merkt euch am besten, wie viele Schritte habt ihr links rum gemacht. Genauso viele macht ihr auch rechts rum.
+
+Ja, wir drehen uns einmal. Jawohl. Auch hier wirke ich wieder etwas mit dem äußeren Zügel ein. Ja, das passt, das passt. Ich habe das Auto im Blick, Leo. Um den Hals gerade zu halten, sodass er sich nicht in der Basis verwirft. Das geht, das passt. Ja, ja. Gut. Gut. Ihr seht, dass der in die Richtung Probleme hat, mit dem rechten Hinterbein richtig über Kreuz zu treten. Das heißt, das kostet ihn echt Kraft und er scheint in dem Hinterbein weniger Kraft zu haben als in dem anderen.
+
+Ihr könnt auch das Pferd, übrigens wenn ihr bergab geht, rückwärts richten. Allerdings ist das wirklich super anstrengend für die Pferde. Deshalb würde ich das nicht übertreiben. Der Leon ist sogar jemand, der seit seinem Sehnschaden immer mal Probleme hat, beziehungsweise sehr langsam bergab geht. Und wenn ich jetzt hier runter gehen würde, ich meine, hier geht es noch, hier ist es nicht zu steil. Aber wenn ich wirklich eine steile Strecke habe, dann drehe ich ihn manchmal sogar um und lasse ihn rückwärts bergab gehen, drehe ihn dann wieder um und gehe wieder geradeaus, so dass ich nicht so viel Last auf der Vorhand habe.
+
+So, Leon, jetzt steigen wir mal auf, oder was meinst du.

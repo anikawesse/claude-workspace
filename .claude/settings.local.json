@@ -237,7 +237,25 @@
       "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall\\\\salespage.html\" -Raw)",
       "Bash(Set-Clipboard)",
       "PowerShell(Set-Clipboard)",
-      "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall-freebie\\\\landingpage.html\" -Raw)"
+      "Bash(Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\offenstall-freebie\\\\landingpage.html\" -Raw)",
+      "Bash(pdftotext -layout \"Gelassen Ausreiten Worbook.pdf\" workbook-extracted.txt)",
+      "Bash(pdftotext -layout -enc UTF-8 \"Gelassen Ausreiten Worbook.pdf\" workbook-extracted-utf8.txt)",
+      "Bash(rm -f \"C:/Users/Olive/Desktop/workbook-extracted.txt\" \"C:/Users/Olive/Desktop/workbook-extracted-utf8.txt\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\kundenreise-gelaende\\\\kundenreise-gelaende-uebersicht.md\")",
+      "WebFetch(domain:help.lexware.de)",
+      "WebFetch(domain:www.quaderno.io)",
+      "PowerShell(powershell -File \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\thrivecart-buchungsexport.ps1\")",
+      "Bash(rm \"C:\\\\Users\\\\Olive\\\\Desktop\\\\ThriveCart Buchungsexport 06-2026 \\(bereinigt\\).csv\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\c937d2a4-850f-4853-8a8a-051545144990\\\\scratchpad\\\\price-preview.html\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterfahrplan\\\\salespage.html\")",
+      "Bash(clip)",
+      "PowerShell($shell = New-Object -ComObject Shell.Application; $pc = $shell.NameSpace\\(17\\); $pc.Items\\(\\) | ForEach-Object { \"{0} | {1}\" -f $_.Name, $_.Path })",
+      "Bash(awk 'length\\($0\\) < 2000' 'C:/Users/Olive/Desktop/claude-workspace/outputs/Gelände sicher meistern/salespage-final.html')",
+      "Bash(python - 'C:/Users/Olive/Desktop/claude-workspace/outputs/Gelände sicher meistern/salespage-final.html')",
+      "Bash(start \"\" \"salespage-final.html\")",
+      "Bash([ -s \"$f\" ])",
+      "PowerShell(powershell.exe -STA -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4fd25986-13a1-4f0b-892b-07bf2f0336cd\\\\scratchpad\\\\delete-private.ps1\")",
+      "PowerShell(powershell.exe -STA -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4fd25986-13a1-4f0b-892b-07bf2f0336cd\\\\scratchpad\\\\check-private.ps1\")"
     ]
   }
 }

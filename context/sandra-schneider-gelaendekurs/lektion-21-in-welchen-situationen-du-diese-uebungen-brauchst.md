@@ -1,0 +1,3 @@
+# Lektion 21: In welchen Situationen du diese Übungen brauchst
+
+Es gibt im Gelände ja einige Übungen, die der Gymnastizierung dienen und es gibt Übungen, die vor allem eurer Sicherheit dienen und der Sicherheit eures Pferdes. Ich möchte euch heute gerne zwei dieser Übungen vorstellen, die euch helfen können, im Gelände die Kontrolle zu behalten, in einer brenzligen Situation gut durchzukommen und vor allem entweder ein Pferd mit Stalldrang zu bremsen oder mit der gleichen Übung ein Pferd an einer schwierigen oder für das Pferd beängstigenden Situation vorbeizulotsen. Der Pepper unterstützt mich dabei.

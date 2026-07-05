@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futter-Fahrplan</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Montserrat',sans-serif;background:#e8edd9;color:#2a2a2a;max-width:960px;margin:0 auto}
+.hero{background:#c5cfb7;padding:32px 24px 28px;text-align:center;border-bottom:3px solid #a0af8a}
+.hero-pre{font-size:13px;font-weight:600;color:#883030;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-size:28px;font-weight:800;line-height:1.25;color:#1a1a1a;margin-bottom:16px}
+.hero h1 span{color:#883030}
+.hero-img{width:100%;max-width:500px;border-radius:10px;margin:16px auto;display:block}
+.cta-btn{display:inline-block;background:#883030;color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;padding:14px 28px;border-radius:6px;text-decoration:none;letter-spacing:0.5px}
+.price-note{font-size:12px;color:#555;margin-top:8px}
+.strike{text-decoration:line-through;color:#888}
+.proof-big{background:#883030;color:#fff;padding:20px 24px;text-align:center}
+.proof-big .num{font-size:38px;font-weight:800;display:block}
+.proof-big .lbl{font-size:14px;opacity:0.85}
+.sec-green{background:#c5cfb7;padding:28px 24px}
+.sec-light{background:#f5f7ef;padding:28px 24px}
+.sec-white{background:#fff;padding:28px 24px}
+.sec-mid{background:#dde4d0;padding:28px 24px}
+.section-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#883030;margin-bottom:8px}
+h2{font-size:22px;font-weight:800;line-height:1.3;color:#1a1a1a;margin-bottom:16px}
+h3{font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:8px}
+p{font-size:15px;line-height:1.7;color:#3a3a3a;margin-bottom:12px}
+.t-full{background:#fff;border:1.5px solid #a0af8a;border-radius:10px;padding:16px;margin-bottom:14px}
+.t-body .quote{font-size:14px;line-height:1.65;color:#333;font-style:italic}
+.t-body .name{font-size:12px;font-weight:700;color:#883030;margin-top:8px}
+.imagine-box{background:#f5f7ef;border-left:4px solid #883030;border-radius:0 8px 8px 0;padding:16px 18px;margin-bottom:12px}
+.imagine-box p{margin:0;font-size:15px;color:#333}
+.check-list{list-style:none}
+.check-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:15px;line-height:1.5;color:#333}
+.check-list li::before{content:"✓";color:#4a7c3f;font-weight:800;font-size:16px;flex-shrink:0;margin-top:1px}
+.cross-list{list-style:none}
+.cross-list li{display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:15px;line-height:1.5;color:#555}
+.cross-list li::before{content:"✗";color:#883030;font-weight:800;font-size:16px;flex-shrink:0;margin-top:1px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+.compare-col{border-radius:10px;padding:18px}
+.compare-col.bad{background:#fff0f0;border:1.5px solid #f7c1c1}
+.compare-col.good{background:#eaf3de;border:1.5px solid #a0af8a}
+.compare-col h3{font-size:15px;margin-bottom:12px}
+.compare-col.bad h3{color:#883030}
+.compare-col.good h3{color:#3b6d11}
+.step{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
+.step-num{background:#883030;color:#fff;font-weight:800;font-size:16px;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-content h3{margin-bottom:4px}
+.step-content p{margin:0}
+.module{background:#fff;border-left:4px solid #c5cfb7;border-radius:0 8px 8px 0;padding:14px 16px;margin-bottom:10px}
+.module h3{color:#883030;font-size:15px;margin-bottom:4px}
+.module p{font-size:14px;margin:0;color:#555}
+.value-list{list-style:none;background:#fff;border-radius:8px;padding:16px;margin-top:16px}
+.value-list li{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed #ccc;font-size:14px}
+.value-list li:last-child{border:none;font-weight:800;font-size:15px;color:#883030}
+.value-strike{text-decoration:line-through;color:#aaa}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.t-card{background:#fff;border:1.5px solid #a0af8a;border-radius:10px;padding:14px}
+.t-card-inner{display:flex;gap:10px;align-items:flex-start;margin-bottom:8px}
+.t-avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid #c5cfb7;flex-shrink:0}
+.t-card .quote{font-size:13px;line-height:1.6;color:#333;font-style:italic}
+.t-card .name{font-size:11px;font-weight:700;color:#883030;margin-top:6px}
+.about-box{display:flex;gap:20px;align-items:flex-start}
+.about-img{width:180px;border-radius:10px;object-fit:cover;border:3px solid #a0af8a;flex-shrink:0}
+.guarantee-box{background:#fff;border:2px solid #a0af8a;border-radius:12px;padding:24px;text-align:center}
+/* FAQ accordion */
+.faq-item{background:#fff;border-radius:8px;border:1px solid #d0d9c0;margin-bottom:8px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;padding:16px;text-align:left;font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.faq-q:hover{background:#f5f7ef}
+.faq-arrow{font-size:18px;transition:transform 0.3s;color:#883030;flex-shrink:0}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s ease;padding:0 16px;font-size:14px;color:#555;line-height:1.6}
+.faq-a.open{max-height:200px;padding:0 16px 14px}
+.cta-section{background:#883030;padding:36px 24px;text-align:center}
+.cta-section h2{color:#fff;margin-bottom:8px}
+.cta-section p{color:rgba(255,255,255,0.85);margin-bottom:20px}
+.cta-btn-white{display:inline-block;background:#fff;color:#883030;font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;padding:14px 28px;border-radius:6px;text-decoration:none}
+.center{text-align:center}
+.mt16{margin-top:16px}
+.mt24{margin-top:24px}
+@media(max-width:600px){
+  .t-grid,.compare{grid-template-columns:1fr}
+  .about-box{flex-direction:column}
+  .about-img{width:100%;max-width:280px;border-radius:10px}
+  .hero{padding:24px 16px 20px}
+  .hero h1{font-size:21px}
+  .hero-pre{font-size:12px}
+  .sec-green,.sec-light,.sec-white,.sec-mid{padding:22px 16px}
+  .cta-section{padding:28px 16px}
+  h2{font-size:19px}
+  h3{font-size:15px}
+  .cta-btn,.cta-btn-white{display:block;width:100%;text-align:center;padding:16px 20px;font-size:14px}
+  .price-note{font-size:11px}
+  .faq-q{font-size:14px;padding:14px 12px;min-height:52px}
+  .faq-a{font-size:13px}
+  .step-num{width:32px;height:32px;font-size:14px}
+  .step-content h3{font-size:15px}
+  .proof-big .num{font-size:30px}
+  .proof-big .lbl{font-size:13px}
+  .value-list li{font-size:13px}
+  .module{padding:12px 14px}
+  .t-card{padding:12px}
+  .t-avatar{width:42px;height:42px}
+  .t-card .quote{font-size:12px}
+  .guarantee-box{padding:18px 14px}
+  .compare-col{padding:14px}
+  .compare-col .cross-list li,.compare-col .check-list li{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-pre">Hole dir den Futter-Fahrplan für nur 47€ statt 197€</div>
+  <h1>In 3 Stunden hast du einen <span>Futterplan für gesunden Muskelaufbau</span>, ohne Geld für falsches Futter zu verschwenden.</h1>
+  <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6960da3d15e9b5452668db41.png" alt="Futter-Fahrplan Kurs Mockup" class="hero-img" />
+  <a href="https://anikas-pferdeakademie.thrivecart.com/ff/" target="_blank" rel="noopener" class="cta-btn">Ja, ich will den Futter-Fahrplan für 47€!</a>
+  <p class="price-note"><span class="strike">197€</span> &rarr; Jetzt nur 47€ &nbsp;|&nbsp; 14 Tage Geld-zurück-Garantie</p>
+</div>
+
+<!-- PROOF STRIP -->
+<div class="proof-big">
+  <span class="num">10 von 10</span>
+  <span class="lbl">Kursteilnehmerinnen würden den Futter-Fahrplan weiterempfehlen ⭐⭐⭐⭐⭐</span>
+</div>
+
+<!-- TESTIMONIALS MIT BILD -->
+<div class="sec-green">
+  <div class="section-label">Stimmen aus dem Kurs</div>
+  <h2>"AH-HAAA-Momente und endlich Klarheit"</h2>
+  <div class="t-grid">
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69e22221b9ee00a7baa31825.jpeg" class="t-avatar" alt="Verena W." />
+        <div><p class="quote">"Sehr verständlich und prägnant erklärt. Hier lernen auch Pferde-Einsteiger ganz schnell und einfach viel."</p><div class="name">— Verena W.</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69e2222150b9a3263a8f3e99.jpg" class="t-avatar" alt="Rieke B." />
+        <div><p class="quote">"Pferdefütterung nicht unnötig verkomplizieren, das war mein größtes Learning. Ich fühle mich jetzt sicherer."</p><div class="name">— Rieke B.</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69e222213353d712d5fe500c.jpeg" class="t-avatar" alt="Daniela L." />
+        <div><p class="quote">"Einige AH-HAAA-Momente dabei. Nicht zu viel, nicht zu wenig, genau richtig und übersichtlich."</p><div class="name">— Daniela L.</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69e22221aa2fdcccf627c8f0.jpg" class="t-avatar" alt="Susanne A." />
+        <div><p class="quote">"Wie einfach es sein kann. Weniger ist mehr. Absolute Empfehlung!"</p><div class="name">— Susanne A.</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69bc26b136eebc4fa10628ca.jpg" class="t-avatar" alt="Lydia B." />
+        <div><p class="quote">"Sehr informativ, leicht verständlich und umfangreich, für jeden Pferdebesitzer absolut empfehlenswert."</p><div class="name">— Lydia B.</div></div>
+      </div>
+    </div>
+    <div class="t-card">
+      <div class="t-card-inner">
+        <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69e2222150b9a3263a8f3e99.jpg" class="t-avatar" alt="Rieke B." />
+        <div><p class="quote">"Die vier Säulen werden so erklärt, dass man kein Biologiestudium braucht. Wirklich toll gemacht."</p><div class="name">— Rieke B.</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WAS DU NICHT BRAUCHST -->
+<div class="sec-light">
+  <div class="section-label">Die gute Nachricht</div>
+  <h2>Das alles brauchst du für gesunden Muskelaufbau nicht:</h2>
+  <ul class="cross-list">
+    <li>Kein ständiges Googeln nach Inhaltsstoffen</li>
+    <li>Kein stures Folgen von Stallmeinungen</li>
+    <li>Keine 10 Produkte gleichzeitig im Schrank</li>
+    <li>Keine komplizierten Excel-Tabellen</li>
+    <li>Kein Biologiestudium oder Ernährungsstudium</li>
+    <li>Keine Blutbilder alle 6 Monate</li>
+  </ul>
+</div>
+
+<!-- STELL DIR VOR -->
+<div class="sec-mid">
+  <div class="section-label">Stell dir vor</div>
+  <h2>Wie wäre es, wenn du bei jeder Fütterung mit einem richtig guten Gefühl an den Futtersack gehst?</h2>
+  <div class="imagine-box"><p>Du greifst zum Futtersack, und du weißt genau warum. Kein Rätselraten, kein Googeln, kein Zweifeln. Dein Pferd baut sichtbar Muskeln auf und du siehst es jeden Tag.</p></div>
+  <div class="imagine-box"><p>Keine endlosen Futterdiskussionen mehr mit deinen Stallkolleginnen. Du hast deinen Plan. Und der funktioniert.</p></div>
+  <div class="imagine-box"><p>Weniger Geld für Produkte, die du gar nicht brauchst, dafür ein Pferd, das sich rundum fit anfühlt.</p></div>
+  <div class="center mt24">
+    <a href="https://anikas-pferdeakademie.thrivecart.com/ff/" target="_blank" rel="noopener" class="cta-btn">Ich will das für mein Pferd!</a>
+  </div>
+</div>
+
+<!-- VORHER NACHHER -->
+<div class="sec-white">
+  <div class="section-label">Der Unterschied</div>
+  <h2>Der alte Weg vs. der Futter-Fahrplan</h2>
+  <div class="compare">
+    <div class="compare-col bad">
+      <h3>Alter Weg</h3>
+      <ul class="cross-list">
+        <li>Im Futterladen stehen und nicht wissen, was kaufen</li>
+        <li>Futterdiskussionen im Stall ohne Ende</li>
+        <li>Futter wechseln und hoffen</li>
+        <li>Viel Geld für Produkte, die nichts bringen</li>
+        <li>Pferd baut keine Muskeln auf</li>
+      </ul>
+    </div>
+    <div class="compare-col good">
+      <h3>Mit dem Futter-Fahrplan</h3>
+      <ul class="check-list">
+        <li>Ein klarer Plan, der zu deinem Pferd passt</li>
+        <li>Sicherheit bei jeder Fütterung</li>
+        <li>Weniger Produkte, dafür gezielter</li>
+        <li>Kein Geld mehr verschwenden</li>
+        <li>Sichtbarer Muskelaufbau</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SO FUNKTIONIERT ES -->
+<div class="sec-green">
+  <div class="section-label">Das System</div>
+  <h2>So funktioniert der Futter-Fahrplan</h2>
+  <div class="step"><div class="step-num">1</div><div class="step-content"><h3>Ehrliche Bestandsaufnahme</h3><p>Du lernst, den aktuellen Fütterungszustand deines Pferdes selbst einzuschätzen, mit einfachen Fragen, die du sofort beantworten kannst.</p></div></div>
+  <div class="step"><div class="step-num">2</div><div class="step-content"><h3>Die ideale Futter-Basis</h3><p>Was jedes Pferd immer braucht, und warum viele gerade hier zu viel oder zu wenig geben. Dazu weitere Faktoren für ganzheitliche Gesundheit.</p></div></div>
+  <div class="step"><div class="step-num">3</div><div class="step-content"><h3>Individuelle Ergänzungen</h3><p>Mein 4 Säulen System zeigt dir gezielt, was genau dein Pferd gerade zusätzlich braucht, und was nicht.</p></div></div>
+  <div class="step"><div class="step-num">4</div><div class="step-content"><h3>Dein klarer Futter-Plan</h3><p>Was, wann, wie viel. Schwarz auf weiß, mit Checklisten, die du direkt im Stall nutzen kannst.</p></div></div>
+</div>
+
+<!-- KURSINHALT -->
+<div class="sec-light">
+  <div class="section-label">Das bekommst du</div>
+  <h2>Alles was drin steckt</h2>
+  <div class="module"><h3>Kompakter Video-Kurs (Schritt für Schritt)</h3><p>Klar erklärt, leicht verständlich, auch wenn du kein Ernährungsexperte bist.</p></div>
+  <div class="module"><h3>Status-Check: Ernährungszustand deines Pferdes</h3><p>Finde sofort heraus, wo dein Pferd gerade steht.</p></div>
+  <div class="module"><h3>Die ideale Futter-Basis und das 4 Säulen System</h3><p>Artgerechte, natürliche Fütterung, die trotzdem Muckis bringt.</p></div>
+  <div class="module"><h3>Eigene App (inkl. Offline-Funktion)</h3><p>Perfekt für schlechtes Stall-WLAN, alles immer griffbereit.</p></div>
+  <div class="module"><h3>Zahlreiche Checklisten</h3><p>Für Muskelaufbau, Futterzusammenstellung und mehr.</p></div>
+  <div class="module"><h3>Bonus: Linkliste zu den besten Futtershops</h3><p>Wo ich seit Jahren meine eigenen Pferde versorge, aus Überzeugung.</p></div>
+  <ul class="value-list">
+    <li><span>Online-Kurs „Futter-Fahrplan"</span><span class="value-strike">180€</span></li>
+    <li><span>Status-Check: Ernährungszustand</span><span class="value-strike">79€</span></li>
+    <li><span>Ideale Basis und 4 Säulen System</span><span class="value-strike">69€</span></li>
+    <li><span>App (inkl. Offline)</span><span class="value-strike">59€</span></li>
+    <li><span>Checklisten</span><span class="value-strike">49€</span></li>
+    <li><span>Bonus: Linkliste</span><span class="value-strike">19€</span></li>
+    <li><span>Gesamtwert</span><span>~450€</span></li>
+    <li><span>Dein Preis heute</span><span style="color:#883030">47€</span></li>
+  </ul>
+  <div class="center mt24">
+    <a href="https://anikas-pferdeakademie.thrivecart.com/ff/" target="_blank" rel="noopener" class="cta-btn">Ja, ich will den Futter-Fahrplan für 47€!</a>
+    <p class="price-note"><span class="strike">197€</span> &rarr; 47€ &nbsp;|&nbsp; 14 Tage Geld-zurück-Garantie</p>
+  </div>
+</div>
+
+<!-- EARLY TESTIMONIALS -->
+<div class="sec-green">
+  <div class="section-label">Was andere sagen</div>
+  <h2>Pferde, die sich wie ausgewechselt anfühlen</h2>
+  <div class="t-full">
+    <div class="t-body">
+      <p class="quote">"Hey Anika, ich wollte dir einfach mal schnell DANKE sagen. Seitdem wir den Futterplan umgestellt haben, ist Mino wie ausgewechselt! Im Training hat er plötzlich richtig Power und dieses triebige, schlappe Gefühl ist komplett weg. Bin total happy, das hat sich echt gelohnt!"</p>
+      <div class="name">— Brigitte, mit Mino</div>
+    </div>
+  </div>
+  <div class="t-full">
+    <div class="t-body">
+      <p class="quote">"Also ganz ehrlich, ich dachte bei dem Preis kommt da so ein Mini-Download oder eine Checkliste. Aber ich war richtig baff, was alles drin ist! Das ist ja wie ein kompletter Kurs! Du hast dir da so viel Mühe gegeben, Videos, Anleitungen, Checklisten, ich bin echt begeistert. Hätte ich nie erwartet."</p>
+      <div class="name">— Monika, mit Balu</div>
+    </div>
+  </div>
+</div>
+
+<!-- ÜBER ANIKA -->
+<div class="sec-white">
+  <div class="section-label">Wer steckt dahinter?</div>
+  <h2>Hi, ich bin Anika</h2>
+  <div class="about-box">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6878f24557dd6031a382a3a2.webp" alt="Anika Wesse" class="about-img" />
+    <div>
+      <p>Ich bin Anika, Coach für Pferd und Reiterausbildung, Therapeutin der traditionellen chinesischen Medizin und Ernährungsberaterin für Pferde. Seit vielen Jahren begleite ich Pferde und ihre Menschen mit Fokus auf artgerechte Haltung, gesundes Training und energetische Arbeit.</p>
+      <p>In meinem Alltag erlebe ich immer wieder, dass der Hebel einer artgerechten und gezielten Fütterung unterschätzt wird. Ja, es ist angekommen, dass die bunten, gut riechenden Müslis für unsere Lieblinge wohl nicht die beste Wahl sind.</p>
+      <p>Doch die Schwierigkeit, die fast alle Pferdebesitzerinnen haben: Es gibt eine Bedarfslücke bei der natürlichen Pferdefütterung, sobald es um Muskelaufbau geht.</p>
+      <p>Deshalb bist du hier, um diese Lücke zu schließen und dein Pferd damit langfristig gesund und fit zu halten. ♥️</p>
+    </div>
+  </div>
+</div>
+
+<!-- GARANTIE -->
+<div class="sec-mid">
+  <div class="guarantee-box">
+    <div style="font-size:48px">🛡️</div>
+    <h2 style="margin-top:12px;margin-bottom:8px">14 Tage Geld-zurück-Garantie</h2>
+    <p>Ich bin überzeugt, dass der Futter-Fahrplan für dich und dein Pferd die entscheidende Veränderung bringt. Wenn du das anders siehst, schreibst du mir einfach eine Mail an <strong>info@anikas-pferdeakademie.de</strong> und bekommst dein Geld zurück. Kein Stress, kein Risiko.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="sec-light">
+  <div class="section-label">Häufige Fragen</div>
+  <h2>Das fragst du dich vielleicht</h2>
+  <div class="faq-item"><button class="faq-q" onclick="toggle(this)">Wann kann ich starten? <span class="faq-arrow">+</span></button><div class="faq-a">Sofort nach dem Kauf! Du bekommst direkt Zugang und kannst loslegen.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggle(this)">Wie lange habe ich Zugang zum Kurs? <span class="faq-arrow">+</span></button><div class="faq-a">So lange, wie ich den Kurs anbiete. Sollte er umziehen, nimmst du deinen Zugang mit.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggle(this)">Für wen passt der Kurs? <span class="faq-arrow">+</span></button><div class="faq-a">Für alle Pferdebesitzerinnen, denen artgerechte, natürliche Ernährung und gesunder Muskelaufbau wichtig sind, egal ob Einsteigerin oder erfahrene Reiterin.</div></div>
+  <div class="faq-item"><button class="faq-q" onclick="toggle(this)">Was, wenn mir der Kurs nicht gefällt? <span class="faq-arrow">+</span></button><div class="faq-a">Dann bekommst du dein Geld zurück, 14 Tage, kein Stress, einfach eine Mail schicken an info@anikas-pferdeakademie.de</div></div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="cta-section">
+  <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/687a20c3a648335f98d36bda.jpeg" alt="Anika mit Pferd" style="width:100%;max-width:400px;border-radius:10px;border:3px solid rgba(255,255,255,0.4);margin-bottom:20px;display:block;margin-left:auto;margin-right:auto" />
+  <h2>Dein Pferd wartet auf diesen Plan.</h2>
+  <p>Schluss mit Rätselraten. Schluss mit Geld verbrennen. Jetzt endlich Klarheit bei der Fütterung und sichtbare Muckis für dein Pferd.</p>
+  <a href="https://anikas-pferdeakademie.thrivecart.com/ff/" target="_blank" rel="noopener" class="cta-btn-white">Ja, ich will den Futter-Fahrplan für 47€!</a>
+  <p style="font-size:12px;color:rgba(255,255,255,0.7);margin-top:10px"><span style="text-decoration:line-through">197€</span> &rarr; 47€ &nbsp;|&nbsp; 14 Tage Geld-zurück-Garantie</p>
+</div>
+
+<script>
+function toggle(btn) {
+  var arrow = btn.querySelector('.faq-arrow');
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(function(a){ a.classList.remove('open'); });
+  document.querySelectorAll('.faq-arrow').forEach(function(a){ a.textContent = '+'; a.style.transform = ''; });
+  if (!isOpen) {
+    answer.classList.add('open');
+    arrow.textContent = '×';
+  }
+}
+</script>
+</body>
+</html>

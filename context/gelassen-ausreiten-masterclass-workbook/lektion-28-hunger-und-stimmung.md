@@ -1,0 +1,13 @@
+# Lektion 28: Bevor dein Pferd zur Diva wird, überlege ob es hungrig ist!
+
+Wie geht es dir, wenn du richtig hungrig bist und dann biegt jemand um die Ecke und fordert dich auf, ihn zum einstündigen Fitnesstraining zu begleiten?
+
+Du kennst hoffentlich die Fütterungszeiten in deinem Stall, wenn nicht, dann wäre jetzt ein guter Zeitpunkt mal nachzufragen....
+
+Hat dein Pferd großen Hunger, wird es nicht in der Stimmung sein, bei einem Geländeritt entspannt die Seele baumeln zu lassen......
+
+Vor allem in der kälteren Jahreszeit, wenn Winterpaddocks mit rationierter Fütterung kombiniert sind, kann das nicht nur hungrig, sondern auch aggressiv machen....
+
+In diesem Sinne:
+
+Kleine Geschenke erhalten die Freundschaft, kleine Futterrationen vor dem Reiten tun das auch......

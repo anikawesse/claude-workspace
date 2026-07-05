@@ -1,0 +1,29 @@
+# Lektion 5: Führpositionen erklärt
+
+Hallo zusammen, ich möchte heute auf einige eurer Fragen zu meinem Online-Ausreitkurs eingehen und wir werden das immer mal wieder machen, dass wir per Videobotschaft sozusagen auf eure Fragen eingehen, denn manche lassen sich einfach leichter per Video beantworten als schriftlich.
+
+Es gab einige Fragen zu den Für-Positionen, die ich sehr gerne noch einmal beantworte. Also es gibt ja verschiedene Für-Positionen, die ich einnehmen kann. Generell gibt es zwei, die Sinn machen. Einmal vor dem Pferd, sodass das Pferd wirklich mit Abstand hinter mir herläuft. Sieht dann wie folgt aus. Bei dieser Für-Position ist das Pferd wirklich deutlich hinter mir und das hat den Vorteil, dass ich sehr stark mit Körpersprache einwirken kann. Ich kann das Pferd mit dem Seil auf Abstand halten bzw. das Pferd daran hindern, mich zu überholen.
+
+Das mache ich gerne, wie ich das auch in dem Kurs gemacht habe, mit jungen, unsicheren Pferden, die gerne überholen wollen, die aber auch überall hinschauen wollen. Die haben ja dann am langen Seil alle Möglichkeiten, wirklich alles anzuschauen, ihren Kopf entsprechend zu drehen und genau zu gucken, was um sie herum passiert im Gelände. Das heißt, ich arbeite hier mit Körpersprache.
+
+Der Odin hört jetzt z.B. gerade nicht zu. Bevor ich jetzt am Seil ziehe, kippe ich ihn einmal mit dem Seilende an der Hinterhand an. Und dann lasse ich ihn mir wieder folgen. Das heißt, er hat genug Abstand. Wie gesagt, er kann seinen Kopf und Hals halten, wie er möchte und hat wenig Einschränkungen.
+
+Wann benutze ich diese Art des Führens? Wie gesagt, einmal bei Jungpferden, die mich überholen wollen, die vielleicht auch mal springen. Und die noch unsicher im Gelände sind. Und wie gesagt, ganz wichtig ist, dass ich auch mit dem Seil dann natürlich sehr weit zur Seite einwirken kann, um das Pferd links und rechts von mir am Überholen zu hindern.
+
+Ich benutze diese Führposition auch bei meinen eigenen Pferden, wenn ich mit denen spazieren gehe. Ich laufe dann einfach, ich gebe die Richtung und die Geschwindigkeit vor. Ich kann einfach laufen, als hätte ich gar kein Pferd bei mir. Ich bin mir ganz entspannt und die Pferde folgen mir, ohne dass ich mich großartig um sie kümmern muss. Das sind so die Situationen, wo ich diese Führposition gerne nutze.
+
+Wenn das Pferd schon angespannt und unsicher ist oder ich beispielsweise an der Straße entlang gehe oder ich weiß, gleich kommt etwas, da könnte das Pferd Sorge haben oder zum Beispiel bei der Gilly, wo ich bei den Schafen mit ihr war, da war sie ja total angespannt. In dem Fall habe ich das Pferd gerne näher bei mir. Warum? Die Pferde sind ja, wenn die so angespannt sind, unsicher und suchen Sicherheit. Und die bekommen oft die Sicherheit, indem sie Körperkontakt mit mir aufnehmen. Das heißt, also auf Deutsch gesagt, die wollen ein bisschen auf dem Schoß.
+
+Man sieht das bei dem Schafvideo auch. Das ist die Gilly. Die sehr stark meine Nähe sucht und da ist es ganz wichtig, dass ich sie jetzt nicht ganz weit von mir wegschicke. Das heißt, keinen Meter fünfzig, sondern ihr nur sage, tritt mir nicht auf die Füße, aber ich bin für dich da.
+
+In dem Fall würde ich das Pferd nicht weit von mir wegschicken, sondern würde so führen, dass ich das Seilende jetzt in dieser Hand habe. So. Ich habe das auch in manchen Situationen bei dem Geländevideo, dass ich die Pferde so führe. Auf den ersten Blick mag es so aussehen, als würde ich die mit der rechten Hand hier ganz kurz halten, aber diese Hand ist nur wie ein Ventil. Diese Hand ist nämlich offen. Das heißt, das Seil liegt locker in dieser Hand. Ich halte das Pferd mit dieser Hand nicht fest.
+
+Ich halte das Seil in dieser Hand, wenn das Pferd aber in dieser Führposition beschließt, es muss ganz dringend weg, oder auch, es muss mal ganz dringend Gras essen. Dann geht diese Hand zu. Das heißt, ich halte das Pferd nicht kurz, sondern es ist einfach so, dass, wie gesagt, diese Hand wie ein Ventil wirkt und kann sich schließen, wenn das Pferd irgendwo hin möchte, wo ich nicht hin möchte. Oder irgendwas tut, um sich von mir zu entfernen. Ich möchte das nicht. Ansonsten ist die Hand offen und ganz freundlich. Und auch wenn ich den Odin jetzt bitte, mit mir zu kommen, ist diese Hand immer noch offen. Ich ziehe nicht, sondern guck mal, die Hand ist immer noch offen und er folgt mir, ohne dass ich ziehen muss.
+
+Dann kam noch öfter die Frage auf, wie weit gehst du denn, wenn du merkst, du möchtest irgendwo hin und das Pferd hat wirklich Sorge bzw. Angst, also zum Beispiel bei den Schafen oder auch, wo wir durch die Siedlung gegangen sind, wo wir die Einfahrt hochgegangen sind. So, ich mache den Odin jetzt mal kurz los. Das ist ein alter Videocrasher, ja.
+
+Das macht bitte von eurem Gefühl und eurer Sicherheit abhängig. Wenn ihr meint, wir können diese Einfahrt hochgehen, das schaffen wir. Und ich bin sehr... Wenn ihr seid sicher, dass wir das überleben, dann macht das bitte. Auch wenn euer Pferd große Bedenken hat, vielleicht auch schon geäppelt hat vor Angst und da wirklich nicht hin möchte, denn es ist ganz einfach, wenn ihr nie einen Schritt weiter geht, dann kommt ihr auch nicht weiter. Ihr müsst dem Pferd ja sagen, ja, ich weiß, du hast Angst, aber wir gehen dahin, wir schaffen das. Und daran wächst ja auch das Pferd und wächst eure Beziehung zum Pferd. Und das Pferd gewinnt immer mehr Sicherheit.
+
+Wichtig ist dann natürlich auch, dass wirklich nichts passiert. Sonst denkt das Pferd natürlich, siehst du, ich hatte Angst und ich habe das geäußert und du hast gesagt, wir können das machen und es ist schiefgegangen. Also seid immer vorsichtig, seid euch selbst ganz sicher bei dem, was ihr tut und dann könnt ihr auch eure Sicherheit ans Pferd übermitteln.
+
+Ich wünsche euch weiterhin ganz viel Freude im Gelände und sage bis bald.

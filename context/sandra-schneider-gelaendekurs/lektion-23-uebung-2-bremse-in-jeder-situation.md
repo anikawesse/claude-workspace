@@ -1,0 +1,23 @@
+# Lektion 23: Übung 2 - Bremse in jeder Situation
+
+Die nächste Übung, die eurer Sicherheit im Gelände dient, ist der berühmte One-Rein-Stop. Wann setzt ihr den ein? Ihr könnt ihn einsetzen, wenn euer Pferd durchgeht, im Begriff ist durchzugehen, umdrehen möchte. Oder es gibt ja auch Pferde, die aus Angst oder auch aus Widersetzlichkeit ganz schnell rückwärts rasen und ihr gar nicht mehr agieren könnt, weil das Pferd sich einfach eurer Einwirkung entzieht. Ihr könnt den One-Rein-Stop auch einsetzen, wenn das Pferd euch komplett über die Schulter wegfliegt.
+
+Ganz wichtig ist, und das bitte ich euch zu beherzigen, den One-Rein-Stop vernünftig und korrekt einzusetzen, weil wenn ihr den falsch einsetzt und anwendet, dann kann es sein, dass ihr alles noch schlimmer macht, weil ihr das Pferd dermaßen aus der Balance werft, dass es sogar stürzen kann.
+
+Ein korrekter One-Rein-Stop beinhaltet immer einen Zügel und das gleichseitige Bein, also eure Hand und euer Bein, um auf die Vorhand, aber auch auf die Hinterhand Einfluss zu nehmen. Ein falscher One-Rein-Stop wäre, wenn ihr das Pferd einfach am einen Zügel rumreißt. Das meine ich mit, das kann gefährlich sein und ihr könnt das Pferd derart aus der Balance werfen, dass es mit euch stürzt. Macht das bitte nicht.
+
+Ansonsten könnt ihr den One-Rein-Stop im Prinzip in jeder Gangart anwenden. Es bietet sich aber an, und das würde ich euch empfehlen, das zu üben, damit ihr sicher werdet in dessen Anwendung, damit euer Pferd das kennt und dass ihr den auch zu beiden Seiten ausführen könnt. Denn im Prinzip ist es nur eine Übung, wo ihr auf die Vorhand und die Hinterhand des Pferdes gleichermaßen einwirkt.
+
+Ich mache das jetzt einmal aus dem Stand. Wir haben ja hier einen relativ engen Weg, das heißt, wenn das Pferd mir auf so einem engen Weg durchgeht, habe ich auch nicht die Möglichkeit, Zirkel zu reiten. Also was mache ich da, um das Pferd zu stoppen? Und der One-Rein-Stop ist wie gesagt ein Zügel. Ich nehme jetzt mal den linken und mein linkes Bein. Der rechte Zügel, wenn ich das übe, ist der rechte Zügel locker. Das ist wichtig, damit das Pferd überhaupt nach links kommen kann.
+
+Und zwar mache ich jetzt wirklich in Zeitlupe: ich nehme den linken Zügel Richtung meine linke Schulter, folgt die Nase des Pferdes, gleichzeitig nehme ich mein linkes Bein nach hinten und schiebe die Hinterhand rum. Ihr seht, was passiert: das Pferd macht eine Biegung, also eine Kurve auf engem Raum. Ich mache es noch mal in Zeitlupe: linker Zügel geht Richtung meine linke Schulter, mein linkes Bein geht nach hinten. Ich drehe mich auch ein, also meine Schultern drehen sich, wie ich die Pferdeschultern drehen möchte und ich kann das Pferd auf der Stelle stoppen, weil man kurz rückwärts in die Mitte des Weges geht.
+
+Danke, super. Noch einmal die andere Richtung hier, jetzt auch wieder relativ eng, das heißt, ich habe keinen Platz großartig Zirkel zu reiten. Rechter Zügel Richtung meine rechte Schulter, rechtes Bein nach hinten, sagt mein Pferd steht.
+
+Ich mache jetzt mal aus der Bewegung, ich gehe noch ein Stück zurück dafür, Pepper. Also auch wenn das Pferd rückwärts rast, könnt ihr jederzeit sagen, inneres Bein, innerer Zügel, zack, Pferd steht. Wenn das Pferd rückwärts rennt, entzieht es sich ja eurer Einwirkung. Also angenommen, ich bin jetzt hier am linken Wegrand, würde ich natürlich nach rechts mein Pferd anhalten, One-Rein-Stop, zack, mein Pferd steht.
+
+Also das heißt, wenn ich die Hinterhand und die Vorhand des Pferdes gleichzeitig kontrolliere, kann ich das Pferd so zum Anhalten bringen. Übt das gerne spielerisch im Gelände und auch mal auf dem Reitplatz im Schritt, Trab und Galopp, damit ihr da sicher werdet. Wie gesagt, es ist immer so: Einzug Richtung eure innere Schulter, gleichseitiges Bein nach hinten. Und dann habt ihr das Pferd wieder in Kontrolle und vor allem könnt ihr es von seinem Weg abbringen.
+
+Auch wenn das Pferd über die Schulter ausbricht oder schnell nach vorne oder nach hinten läuft oder sich ganz steif macht und gar nicht mehr möchte, könnt ihr das Pferd so wieder dazu bringen, eure Hilfen zu akzeptieren. Also ich mache das ganz gerne, wenn ich Gefahr wittere, sage ich mal, und ich bringe das den Pferden aber auch wirklich bei, gerade auch den jungen Pferden, wenn ich die anreite, dass ich da wirklich eine Notbremse habe, wenn ich die mal brauche.
+
+Also, wie gesagt, übt das sehr, sehr gerne in einer ruhigen Phase auf dem Reitplatz, in der Bahn und im Gelände, damit ihr es in einer Gefahrensituation richtig einsetzen könnt. Viel Freude und Erfolg dabei. Pepper, wir üben jetzt auch noch ein bisschen.

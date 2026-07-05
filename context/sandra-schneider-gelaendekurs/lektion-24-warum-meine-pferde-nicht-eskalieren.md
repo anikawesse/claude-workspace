@@ -1,0 +1,13 @@
+# Lektion 24: Warum meine Pferde nicht eskalieren
+
+Ich habe noch eine ganz wichtige Nachricht, die mir sehr am Herzen liegt. Ihr seht ja, dass in unseren Videos zum Geländekurs keine Pferde komplett ausrasten und kontrollierbar und aus Show-Effektgründen wild durch die Gegend springen. Und es kann sein, dass ihr zu Hause sitzt und denkt, ja, okay, das bringt mir nichts. Mein Pferd ist ja im Gelände viel wilder und viel unzähmbarer. Und genau das ist der Knackpunkt, meine Lieben.
+
+Ihr seht, dass ich bei jedem Video immer nur so weit gehe, dass die Pferde vielleicht zwar aufgeregt sind, aber das nicht komplett eskalieren. Und das solltet ihr genauso tun. Ihr solltet vermeiden, dass die Pferde in völliger Panik wild um euch rumspringen. Ihr solltet den Punkt herausfinden, wo sie zwar angespannt sind, aber wo ihr dann sagen könnt, ich mache hier einen Cut und setze hier das nächste Mal an. Gerade bei den Scheierhorses sieht man das sehr, sehr gut, dass wir gar nicht so weit gehen, dass die Pferde sich fürchterlich aufregen und dann eine schlechte Erfahrung machen und wir die erst mal wieder beruhigen müssen.
+
+Das bedeutet, ich möchte noch mal darauf hinweisen, geht immer nur so weit, wie ihr euch selbst sicher fühlt, dass ihr ein gutes Gefühl habt und das nächste Mal geht ihr dann fünf Schritte weiter oder vielleicht auch nur zwei. Das wird euch weiterbringen, als wenn ihr auf Teufel komm raus, unbedingt jetzt schon die große Runde spazieren gehen wollt oder die große Runde ausreiten wollt.
+
+Lasst euch Zeit, tut euch selbst den Gefallen, setzt euch nicht unter Druck, egal was die am Stall sagen oder was euch irgendjemand fragt, wie du gehst, immer nur nicht ausreiten, was ist denn mit denen nicht in Ordnung, lasst euch davon nicht beeinflussen, hört auf euer Bauchgefühl, es geht um eure Sicherheit und um die Sicherheit eures Pferdes und deshalb seid so lieb und dreht um bzw. macht einen Cut, bevor die Pferde sich richtig, richtig aufregen.
+
+Wir müssen natürlich die Grenze langsam erweitern, dass die Pferde immer mutiger werden und sich mehr trauen, aber wir müssen das wirklich sorgfältig und langsam und behutsam machen, so dass die Pferde, wie gesagt, bei jedem Step des Trainings, in jeder Trainingseinheit mit einem guten Gefühl nach Hause gehen und ihr auch vor allem.
+
+Und wie gesagt, deshalb werdet ihr hier keine total eskalierenden Pferde sehen, weil ich es einfach überhaupt nicht so weit kommen lassen möchte und vorher schon deeskalierend einwirke, so dass das Pferd sich möglichst immer in Sicherheit fühlt. Das wollte ich euch gerne noch mit auf den Weg geben.
