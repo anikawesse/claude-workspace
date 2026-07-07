@@ -255,7 +255,8 @@
       "Bash(start \"\" \"salespage-final.html\")",
       "Bash([ -s \"$f\" ])",
       "PowerShell(powershell.exe -STA -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4fd25986-13a1-4f0b-892b-07bf2f0336cd\\\\scratchpad\\\\delete-private.ps1\")",
-      "PowerShell(powershell.exe -STA -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4fd25986-13a1-4f0b-892b-07bf2f0336cd\\\\scratchpad\\\\check-private.ps1\")"
+      "PowerShell(powershell.exe -STA -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4fd25986-13a1-4f0b-892b-07bf2f0336cd\\\\scratchpad\\\\check-private.ps1\")",
+      "Bash(ls -la \"/c/Users/Olive/Desktop/\" | grep -iE \"link|ads|organisch\")"
     ]
   }
 }
