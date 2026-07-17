@@ -266,7 +266,31 @@
       "mcp__claude-in-chrome__computer",
       "mcp__claude-in-chrome__find",
       "mcp__claude-in-chrome__form_input",
-      "mcp__claude-in-chrome__get_page_text"
+      "mcp__claude-in-chrome__get_page_text",
+      "Bash(ls -1 ~/Desktop/*.xlsx ~/Desktop/*.xls ~/Desktop/*.csv ~/Desktop/*.ods 2>/dev/null | head -40)",
+      "Bash(unzip -o -q Cashflowanalyse.xlsx -d /c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/06793ac3-354d-4aef-9cb1-e8d740af3585/scratchpad/cf)",
+      "Read(//c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/06793ac3-354d-4aef-9cb1-e8d740af3585/scratchpad/cf/xl/**)",
+      "WebFetch(domain:developers.thrivecart.com)",
+      "WebFetch(domain:apidocs.thrivecart.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(curl -s --ssl-no-revoke \"https://api.github.com/repos/thrivecart/php-api/git/trees/master?recursive=1\")",
+      "Bash(curl -sL --ssl-no-revoke \"https://api.github.com/repos/thrivecart/php-api/git/trees/master?recursive=1\" -o /tmp/tc.json)",
+      "Bash(curl -sL --ssl-no-revoke \"https://raw.githubusercontent.com/thrivecart/php-api/master/src/Api.php\" -o /tmp/tcapi.php)",
+      "Bash(sed -n '410,470p' /tmp/tcapi.php)",
+      "mcp__432f9c54-60a4-4754-beed-b4befd5bef1c__search_files",
+      "mcp__432f9c54-60a4-4754-beed-b4befd5bef1c__read_file_content",
+      "WebFetch(domain:marketplace.gohighlevel.com)",
+      "mcp__mcp-registry__search_mcp_registry",
+      "Bash(start notepad *)",
+      "PowerShell($env_ = @{}; Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\" | ForEach-Object { $z = $_.Trim\\(\\); if \\($z -and -not $z.StartsWith\\('#'\\) -and $z.Contains\\('='\\)\\) { $i = $z.IndexOf\\('='\\); $env_[$z.Substring\\(0,$i\\).Trim\\(\\)] = $z.Substring\\($i+1\\).Trim\\(\\) } }; try { $r = Invoke-RestMethod -Uri \"https://thrivecart.com/api/external/ping\" -Headers @{ Authorization = \"Bearer $\\($env_['THRIVECART_API_KEY']\\)\"; Accept = 'application/json' } -Method GET; Write-Output \"ERFOLG - ThriveCart antwortet:\"; $r | ConvertTo-Json -Depth 4 } catch { Write-Output \"FEHLER: $\\($_.Exception.Message\\)\"; Write-Output \"Status: $\\($_.Exception.Response.StatusCode.value__\\)\" })",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"; $c = [IO.File]::ReadAllText\\($p, [Text.UTF8Encoding]::new\\($false\\)\\); [IO.File]::WriteAllText\\($p, $c, [Text.UTF8Encoding]::new\\($true\\)\\); Write-Output \"Neu gespeichert mit BOM.\"; $bytes = [IO.File]::ReadAllBytes\\($p\\)[0..2]; Write-Output \"Erste Bytes: $\\($bytes -join ','\\) \\(239,187,191 = BOM vorhanden\\)\")",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"; $c = [IO.File]::ReadAllText\\($p, [Text.UTF8Encoding]::new\\($false\\)\\); [IO.File]::WriteAllText\\($p, $c, [Text.UTF8Encoding]::new\\($true\\)\\); cd \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\"; .\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-10 -Bis 2026-07-17)",
+      "PowerShell($env_ = @{}; Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\" | ForEach-Object { $z = $_.Trim\\(\\); if \\($z -and -not $z.StartsWith\\('#'\\) -and $z.Contains\\('='\\)\\) { $i = $z.IndexOf\\('='\\); $env_[$z.Substring\\(0,$i\\).Trim\\(\\)] = $z.Substring\\($i+1\\).Trim\\(\\) } }; Write-Output \"META_AD_ACCOUNT_ID = '$\\($env_['META_AD_ACCOUNT_ID']\\)'\"; Write-Output \"META_ACCESS_TOKEN gesetzt: $\\(if \\($env_['META_ACCESS_TOKEN'] -and $env_['META_ACCESS_TOKEN'] -ne 'HIER_EINFUEGEN'\\) { 'ja' } else { 'nein \\(kommt noch\\)' }\\)\")",
+      "PowerShell($env_ = @{}; Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\" | ForEach-Object { $z = $_.Trim\\(\\); if \\($z -and -not $z.StartsWith\\('#'\\) -and $z.Contains\\('='\\)\\) { $i = $z.IndexOf\\('='\\); $env_[$z.Substring\\(0,$i\\).Trim\\(\\)] = $z.Substring\\($i+1\\).Trim\\(\\) } }; $id = $env_['META_AD_ACCOUNT_ID']; Write-Output \"META_AD_ACCOUNT_ID = '$id'\"; if \\($id -match '^\\(act_\\)?\\\\d{5,}$'\\) { Write-Output \"Format sieht gut aus.\" } else { Write-Output \"Format stimmt noch nicht - erwartet wird eine reine Zahlenfolge \\(oder act_ davor\\).\" })",
+      "mcp__claude-in-chrome__read_network_requests",
+      "mcp__claude-in-chrome__javascript_tool",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"; $c = [IO.File]::ReadAllText\\($p, [Text.UTF8Encoding]::new\\($false\\)\\); [IO.File]::WriteAllText\\($p, $c, [Text.UTF8Encoding]::new\\($true\\)\\); cd \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\"; .\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-10 -Bis 2026-07-17 | Select-Object -Last 6)"
     ]
   }
 }

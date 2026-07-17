@@ -1,1 +1,6 @@
 .DS_Store
+
+# Zugangsdaten — niemals ins Git/Auto-Backup
+.env
+*.env
+scripts/.env
