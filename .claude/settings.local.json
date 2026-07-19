@@ -290,7 +290,18 @@
       "PowerShell($env_ = @{}; Get-Content \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\" | ForEach-Object { $z = $_.Trim\\(\\); if \\($z -and -not $z.StartsWith\\('#'\\) -and $z.Contains\\('='\\)\\) { $i = $z.IndexOf\\('='\\); $env_[$z.Substring\\(0,$i\\).Trim\\(\\)] = $z.Substring\\($i+1\\).Trim\\(\\) } }; $id = $env_['META_AD_ACCOUNT_ID']; Write-Output \"META_AD_ACCOUNT_ID = '$id'\"; if \\($id -match '^\\(act_\\)?\\\\d{5,}$'\\) { Write-Output \"Format sieht gut aus.\" } else { Write-Output \"Format stimmt noch nicht - erwartet wird eine reine Zahlenfolge \\(oder act_ davor\\).\" })",
       "mcp__claude-in-chrome__read_network_requests",
       "mcp__claude-in-chrome__javascript_tool",
-      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"; $c = [IO.File]::ReadAllText\\($p, [Text.UTF8Encoding]::new\\($false\\)\\); [IO.File]::WriteAllText\\($p, $c, [Text.UTF8Encoding]::new\\($true\\)\\); cd \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\"; .\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-10 -Bis 2026-07-17 | Select-Object -Last 6)"
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"; $c = [IO.File]::ReadAllText\\($p, [Text.UTF8Encoding]::new\\($false\\)\\); [IO.File]::WriteAllText\\($p, $c, [Text.UTF8Encoding]::new\\($true\\)\\); cd \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\"; .\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-10 -Bis 2026-07-17 | Select-Object -Last 6)",
+      "PowerShell(powershell -File .\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-04 -Bis 2026-07-18)",
+      "Bash(rm \"/c/Users/Olive/Desktop/Ads-Auswertung Gelände-Schlüssel.csv\" 2>&1 || echo \"not found or already removed\")",
+      "PowerShell(Remove-Item -Path \"$HOME\\\\Desktop\\\\Ads-Auswertung Gelände-Schlüssel.csv\" -Force -Confirm:$false -ErrorAction Stop)",
+      "Bash(python build_gelaende_xlsx.py)",
+      "PowerShell($c = @\\('python','py','python3'\\) | ForEach-Object { Get-Command $_ -ErrorAction SilentlyContinue }; if \\($c\\) { $c | Select-Object Name, Source } else { \"none on PATH\" }; Get-ChildItem \"$env:LOCALAPPDATA\\\\Programs\\\\Python\" -ErrorAction SilentlyContinue | Select-Object Name)",
+      "PowerShell(node -v; $np = \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\"; Get-ChildItem $np -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'excel|xlsx|sheet' } | Select-Object Name)",
+      "PowerShell($np = \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\"; \"GLOBAL:\"; Get-ChildItem $np -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; \"LOCAL:\"; Get-ChildItem \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\node_modules\" -ErrorAction SilentlyContinue | Where-Object { $_.Name -match 'excel|xlsx' } | Select-Object -ExpandProperty Name)",
+      "PowerShell(npm install -g exceljs 2>&1)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\exceljs\" -ErrorAction SilentlyContinue | Select-Object -First 1 Name; \"exists: $\\(Test-Path 'C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\exceljs'\\)\")",
+      "PowerShell($env:NODE_PATH = \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\"; node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\ff54c4d5-ed4c-4a63-b3a3-d5456fefba02\\\\scratchpad\\\\build_gelaende_xlsx.js\")",
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Geländeprogramm Problem-Lösung-Liste.xlsx\"; if \\(Test-Path $f\\) { \"{0} KB\" -f [math]::Round\\(\\(Get-Item $f\\).Length/1KB,1\\); Start-Process $f } else { \"FEHLT\" })"
     ]
   }
 }

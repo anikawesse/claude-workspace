@@ -55,6 +55,14 @@ $ProduktZeilen = [ordered]@{
 # Welche Zeile ist das Hauptprodukt? Warenkorb, CPA und Conversion rechnen darauf.
 $HauptproduktZeile = 'Gelände-Schlüssel 27€'
 
+# Ab diesem Datum zaehlen NUR noch Ads-Verkaeufe (customer.passthrough.utm_medium=paid).
+# Grund: Die UTM-Uebermittlung an ThriveCart ist erst am 14.07.2026 live gegangen —
+# davor trug KEIN Verkauf eine Markierung (geprueft: bis 12.07. 0% getaggt, ab 14.07.
+# 100% paid). Wuerde man rueckwirkend filtern, faelen echte Ad-Verkaeufe der Fruehzeit
+# faelschlich auf 0 und wuerden bereits eingetragene Tabellenwerte mit Nullen ueberschrieben.
+# Vor dem Stichtag daher weiter "blended" (alle Funnel-Verkaeufe).
+$PaidTrackingAb = [datetime]'2026-07-14'
+
 # Gebuehren fuer die Zeile "Verdienst".
 # ThriveCart liefert die Gebuehren NICHT mit (17.07.2026 geprueft) -> nachgerechnet
 # aus echten Belegen, die Anika herausgesucht hat.
@@ -342,7 +350,17 @@ $verkaeufe = $transaktionen | ForEach-Object {
 $fremd = @($verkaeufe | Where-Object { -not $_.Zeile })
 $verkaeufe = @($verkaeufe | Where-Object { $_.Zeile })   # nur der Gelände-Funnel
 
+# Ab Tracking-Start nur Ads-Verkaeufe; davor blended (s.o. bei $PaidTrackingAb).
+$organischRaus = @($verkaeufe | Where-Object { $_.Tag -ge $PaidTrackingAb -and -not $_.Bezahlt })
+$verkaeufe = @($verkaeufe | Where-Object { $_.Tag -lt $PaidTrackingAb -or $_.Bezahlt })
+
 Write-Host "  $($verkaeufe.Count) Verkauf/Verkaeufe aus dem Gelände-Funnel im Zeitraum." -ForegroundColor Green
+if ($organischRaus.Count -gt 0) {
+    Write-Host "  $($organischRaus.Count) organische(r) Verkauf/Verkaeufe (ohne paid-Markierung) ab $($PaidTrackingAb.ToString('dd.MM.')) ausgeschlossen." -ForegroundColor DarkGray
+}
+if ($vonDatum -lt $PaidTrackingAb) {
+    Write-Host "  Hinweis: Tage vor dem $($PaidTrackingAb.ToString('dd.MM.yyyy')) zaehlen ALLE Verkaeufe (UTM-Tracking war noch nicht aktiv)." -ForegroundColor DarkGray
+}
 if ($fremd.Count -gt 0) {
     Write-Host "  $($fremd.Count) Verkauf/Verkaeufe aus anderen Funnels ignoriert:" -ForegroundColor DarkGray
     $fremd | Group-Object Produkt | Sort-Object Count -Descending |
@@ -602,12 +620,6 @@ if (-not (Test-Path $ordner)) { New-Item -ItemType Directory -Path $ordner -Forc
 $ziel = Join-Path $ordner "auswertung_${Von}_bis_${Bis}.csv"
 [IO.File]::WriteAllLines($ziel, $zeilenCsv, [Text.UTF8Encoding]::new($true))
 
-# Griffbereite Kopie auf dem Desktop — immer derselbe Dateiname, wird ueberschrieben.
-# Excel/Sheets brauchen UTF-8 MIT BOM, sonst werden Umlaute zu Kraut.
-$desktop = Join-Path $HOME 'Desktop\Ads-Auswertung Gelände-Schlüssel.csv'
-[IO.File]::WriteAllLines($desktop, $zeilenCsv, [Text.UTF8Encoding]::new($true))
-
 Write-Host "`nGespeichert:" -ForegroundColor Green
-Write-Host "  Desktop (zum Anschauen): $desktop" -ForegroundColor Green
-Write-Host "  Archiv:                  $ziel" -ForegroundColor DarkGray
+Write-Host "  Archiv: $ziel" -ForegroundColor DarkGray
 Write-Host "(Zeilen = Kennzahlen, Spalten = Tage — passt zum Layout deiner Google-Tabelle.)`n" -ForegroundColor DarkGray
