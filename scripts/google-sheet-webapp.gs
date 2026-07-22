@@ -44,6 +44,7 @@ const ZEILEN_MUSTER = [
   { key: 'Upsell',              praefix: 'upsell',               format: ZAHL },
   { key: 'Bruttoumsatz',        praefix: 'bruttoumsatz',         format: EURO },
   { key: 'Verdienst',           praefix: 'verdienst',            format: EURO },
+  { key: 'Gesamtumsatz organisch', praefix: 'gesamtumsatz organisch', format: EURO },
   { key: 'Adspend',             praefix: 'adspend',              format: EURO },
   { key: 'ROAS',                praefix: 'roas',                 format: KOMMA },
   { key: 'Warenkorb brutto',    praefix: 'warenkorb',            format: EURO },

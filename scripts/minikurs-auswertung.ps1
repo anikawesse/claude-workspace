@@ -224,7 +224,7 @@ function Get-MetaTage($vonDatum, $bisDatum) {
 
     $zeilen = @()
     while ($url) {
-        $antwort = Invoke-RestMethod -Uri $url -Method GET
+        $antwort = Invoke-RestMethod -Uri $url -Method GET -ErrorAction Stop
         $zeilen += @($antwort.data)
         $url = $antwort.paging.next
     }
@@ -372,7 +372,18 @@ if (-not $MetaAktiv) {
     Write-Host "`nMeta-Token fehlt in der .env -> Adspend, ROAS, CPA und Besucher bleiben leer." -ForegroundColor Yellow
 } else {
     Write-Host "`nHole Werbeausgaben von Meta..." -ForegroundColor Cyan
-    $metaRoh = Get-MetaTage $vonDatum $bisDatum
+    try {
+        $metaRoh = Get-MetaTage $vonDatum $bisDatum
+    } catch {
+        $meldung = $_.ErrorDetails.Message
+        Write-Warning "Meta antwortet nicht ($($_.Exception.Message))."
+        if ($meldung -match 'API access blocked') {
+            Write-Host "  -> 'API access blocked': meist eine gesperrte/unverifizierte App auf Meta-Seite." -ForegroundColor Yellow
+            Write-Host "     Adspend/ROAS/CPA bleiben fuer neue Tage leer; Verkaeufe + Conversion werden trotzdem geschrieben." -ForegroundColor Yellow
+        }
+        $MetaAktiv = $false
+        $metaRoh = @()
+    }
     $meta = $metaRoh | Where-Object { $_.campaign_name -like "*$KampagnenFilter*" }
     $ignoriert = $metaRoh | Where-Object { $_.campaign_name -notlike "*$KampagnenFilter*" } |
         Select-Object -ExpandProperty campaign_name -Unique
@@ -433,9 +444,19 @@ foreach ($tag in $tage) {
     $besucherProTag[$tag] = ($tagesMeta | ForEach-Object { Get-LandingPageViews $_ } | Measure-Object -Sum).Sum
 }
 
+# Gesamtumsatz organisch = Bruttoumsatz aller Funnel-Verkaeufe (Mini-Kurs + Bumps +
+# Upsell), die NICHT ueber Ads kamen (last-click != paid). Nur ab Tracking-Start,
+# davor gab es keine UTM-Trennung. $organischRaus enthaelt genau diese Verkaeufe.
+$organischUmsatzProTag = @{}
+foreach ($tag in $tage) {
+    $organischUmsatzProTag[$tag] = ($organischRaus | Where-Object { $_.Tag -eq $tag } | Measure-Object Brutto -Sum).Sum
+}
+
 $ausgabe['Bruttoumsatz']            = $tage | ForEach-Object { if ($bruttoProTag[$_] -gt 0) { Fmt $bruttoProTag[$_] } else { '' } }
 $ausgabe['Verdienst']               = $tage | ForEach-Object { if ($bruttoProTag[$_] -gt 0) { Fmt $verdienstProTag[$_] } else { '' } }
-$ausgabe['(netto abzgl. Gebühren)'] = $tage | ForEach-Object { '' }
+$ausgabe['Gesamtumsatz organisch'] = $tage | ForEach-Object {
+    if ($_ -ge $PaidTrackingAb -and $organischUmsatzProTag[$_] -gt 0) { Fmt $organischUmsatzProTag[$_] } else { '' }
+}
 $ausgabe['Adspend']                 = $tage | ForEach-Object { if ($MetaAktiv) { Fmt $adspendProTag[$_] } else { '' } }
 
 $ausgabe['ROAS'] = $tage | ForEach-Object {
@@ -448,7 +469,8 @@ $ausgabe['Einkaufspreis (CPA)'] = $tage | ForEach-Object {
     if ($MetaAktiv -and $hauptProTag[$_] -gt 0) { Fmt ($adspendProTag[$_] / $hauptProTag[$_]) } else { '' }
 }
 $ausgabe['Gewinn'] = $tage | ForEach-Object {
-    if ($bruttoProTag[$_] -gt 0 -or $adspendProTag[$_] -gt 0) {
+    # Ohne Adspend (Meta aus/blockiert) kein Gewinn ausweisen — waere sonst Scheingewinn.
+    if ($MetaAktiv -and ($bruttoProTag[$_] -gt 0 -or $adspendProTag[$_] -gt 0)) {
         Fmt ($verdienstProTag[$_] - $adspendProTag[$_])
     } else { '' }
 }
@@ -554,6 +576,9 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                     $werte['Bruttoumsatz'] = Rund $bruttoProTag[$tag]
                     $werte['Verdienst']    = Rund $verdienstProTag[$tag]
                 }
+                if ($tag -ge $PaidTrackingAb -and $organischUmsatzProTag[$tag] -gt 0) {
+                    $werte['Gesamtumsatz organisch'] = Rund $organischUmsatzProTag[$tag]
+                }
                 if ($MetaAktiv) {
                     $werte['Adspend'] = Rund $adspendProTag[$tag]
                     if ($adspendProTag[$tag] -gt 0) { $werte['ROAS'] = Rund ($bruttoProTag[$tag] / $adspendProTag[$tag]) }
@@ -563,7 +588,7 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                     $werte['Warenkorb brutto'] = Rund ($bruttoProTag[$tag] / $haupt)
                     $werte['Breakeven (CPA)']  = Rund ($verdienstProTag[$tag] / $haupt)
                 }
-                if ($bruttoProTag[$tag] -gt 0 -or $adspendProTag[$tag] -gt 0) {
+                if ($MetaAktiv -and ($bruttoProTag[$tag] -gt 0 -or $adspendProTag[$tag] -gt 0)) {
                     $werte['Gewinn'] = Rund ($verdienstProTag[$tag] - $adspendProTag[$tag])
                 }
                 if ($devine.ContainsKey($tag) -and $devine[$tag] -gt 0) {
