@@ -301,7 +301,25 @@
       "PowerShell(npm install -g exceljs 2>&1)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\exceljs\" -ErrorAction SilentlyContinue | Select-Object -First 1 Name; \"exists: $\\(Test-Path 'C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\\\\exceljs'\\)\")",
       "PowerShell($env:NODE_PATH = \"C:\\\\Users\\\\Olive\\\\AppData\\\\Roaming\\\\npm\\\\node_modules\"; node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\ff54c4d5-ed4c-4a63-b3a3-d5456fefba02\\\\scratchpad\\\\build_gelaende_xlsx.js\")",
-      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Geländeprogramm Problem-Lösung-Liste.xlsx\"; if \\(Test-Path $f\\) { \"{0} KB\" -f [math]::Round\\(\\(Get-Item $f\\).Length/1KB,1\\); Start-Process $f } else { \"FEHLT\" })"
-    ]
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Geländeprogramm Problem-Lösung-Liste.xlsx\"; if \\(Test-Path $f\\) { \"{0} KB\" -f [math]::Round\\(\\(Get-Item $f\\).Length/1KB,1\\); Start-Process $f } else { \"FEHLT\" })",
+      "Bash(git commit -q -m 'Shutdown: Gelände-Programm Grand-Slam-Offer \\(Problemliste, Lösungen, Angebots-Struktur, Garantie\\) *)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-06 -Bis 2026-07-20)",
+      "Bash(grep -v \"^[[:space:]]*$\")",
+      "Bash(grep -v \"^--$\")",
+      "Bash(grep -v \"^\\\\s*$\")",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "Read(//c/Users/Olive/.claude/scheduled-tasks/ads-auswertung-gelaende/**)",
+      "Read(//c/Users/Olive/.claude/scheduled-tasks/ads-auswertung-gelaende//**)",
+      "Bash(rm -f outputs/ads-auswertung/auswertung_2026-07-20_bis_2026-07-22.csv outputs/ads-auswertung/auswertung_2026-07-21_bis_2026-07-22.csv *)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "PowerShell($ff = Get-ChildItem -Path \"C:\\\\Users\\\\Olive\\\\ffmpeg-tool\" -Recurse -Filter ffmpeg.exe -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName; Write-Output \"ffmpeg: $ff\"; $dl = \\(New-Object -ComObject Shell.Application\\).NameSpace\\('shell:Downloads'\\).Self.Path; Write-Output \"Downloads: $dl\"; Write-Output \"USERPROFILE Downloads: $env:USERPROFILE\\\\Downloads\"; Test-Path \"$env:USERPROFILE\\\\Downloads\")",
+      "PowerShell(Get-Clipboard)",
+      "PowerShell($prefs = Get-ChildItem \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Google\\\\Chrome\\\\User Data\" -Recurse -Filter Preferences -Depth 2 -ErrorAction SilentlyContinue | Select-Object -First 5 -ExpandProperty FullName; foreach\\($p in $prefs\\){ Write-Output \"=== $p ===\"; try{ $j = Get-Content $p -Raw | ConvertFrom-Json; Write-Output \\(\"default_directory: \" + $j.download.default_directory\\); Write-Output \\(\"prompt_for_download: \" + $j.download.prompt_for_download\\); }catch{ Write-Output \"parse-fail\" } })",
+      "Bash(git commit -q -m ' *)",
+      "Bash(pandoc \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\reference\\\\upsell-kursstruktur-vorlage.docx\" -t markdown)",
+      "PowerShell(pandoc \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\reference\\\\upsell-kursstruktur-vorlage.docx\" -t markdown)"
+    ],
+    "defaultMode": "bypassPermissions"
   }
 }
