@@ -1,0 +1,140 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+.ha-up *{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#e6c5b4;
+  --gold:#d6b923;
+  --rust:#894b2f;
+  --red:#691212;
+  --black:#1a1a1a;
+  --white:#ffffff;
+  --beige:#f5ede2;
+  --beige2:#ede0d0;
+  --beige3:#e8d8c4;
+  --text:#1a1a1a;
+  --text-mid:#4a3828;
+  --text-muted:#7a6050;
+}
+.ha-up{
+  font-family:'Montserrat',sans-serif;
+  background:var(--white);
+  color:var(--text);
+  max-width:960px;
+  margin:0 auto;
+  font-size:16px;
+  line-height:1.7;
+}
+.ha-up img{max-width:100%;display:block}
+.ha-up h1{font-size:26px;font-weight:800;line-height:1.2;color:var(--black);margin-bottom:14px;letter-spacing:-0.3px}
+.ha-up h2{font-size:20px;font-weight:800;line-height:1.25;color:var(--black);margin-bottom:10px;letter-spacing:-0.2px}
+.ha-up p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:12px;font-weight:400}
+.ha-up p:last-child{margin-bottom:0}
+.ha-up strong{font-weight:700;color:var(--black)}
+
+/* SECTIONS */
+.ha-up .sec{padding:40px 48px;background:var(--white)}
+.ha-up .sec-beige{padding:40px 48px;background:var(--beige)}
+.ha-up .sec-dark{padding:36px 48px;background:var(--red);text-align:center}
+
+/* HEADER IMAGE */
+.ha-up .header-img{width:100%;margin-bottom:0;overflow:hidden}
+.ha-up .header-img img{width:100%;display:block}
+
+/* PRICE + VERKNAPPUNG */
+.ha-up .price-line{font-size:28px;font-weight:900;color:var(--red);margin:6px 0 2px}
+.ha-up .price-old{font-size:14px;color:var(--text-muted);font-weight:500}
+
+/* CTA */
+.ha-up .btn-yes{display:block;background:var(--red);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;padding:17px 36px;border-radius:4px;text-decoration:none;text-align:center;max-width:480px;margin:20px auto 0;letter-spacing:0.3px}
+.ha-up .btn-yes:hover{background:#550f0f}
+.ha-up .btn-no{display:block;text-align:center;font-size:13px;color:var(--text-muted);text-decoration:underline;margin-top:10px;font-weight:400;cursor:pointer}
+
+/* ERGEBNIS-LISTE */
+.ha-up .result-list{list-style:none;margin:16px 0}
+.ha-up .result-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:15px;line-height:1.7;color:var(--text-mid);font-weight:500}
+.ha-up .result-list li::before{content:"→";color:var(--rust);font-weight:800;flex-shrink:0;margin-top:1px}
+
+/* TESTIMONIAL */
+.ha-up .testimonial{background:var(--beige2);border-left:4px solid var(--rust);border-radius:0 6px 6px 0;padding:22px 26px;margin:24px 0}
+.ha-up .testimonial p{font-size:15px;line-height:1.8;color:var(--text-mid);font-style:italic;font-weight:500;margin-bottom:8px}
+.ha-up .testimonial .attr{font-size:11px;font-weight:700;color:var(--rust);text-transform:uppercase;letter-spacing:1.5px}
+
+/* FINALCALL */
+.ha-up .sec-dark h2{color:#fff;margin-bottom:10px}
+.ha-up .sec-dark p{color:rgba(255,255,255,0.8);font-size:15px}
+.ha-up .sec-dark .btn-final{display:inline-block;background:#fff;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:800;font-size:15px;padding:17px 40px;border-radius:4px;text-decoration:none;margin-top:20px;letter-spacing:0.3px}
+.ha-up .sec-dark .price-note{color:rgba(255,255,255,0.6);font-size:13px;margin-top:10px}
+.ha-up .btn-no-light{display:block;text-align:center;font-size:12px;color:rgba(255,255,255,0.5);text-decoration:underline;margin-top:12px;font-weight:400;cursor:pointer}
+
+@media(max-width:640px){
+  .ha-up .sec,.ha-up .sec-beige,.ha-up .sec-dark{padding:28px 20px}
+  .ha-up h1{font-size:20px}
+  .ha-up h2{font-size:17px}
+  .ha-up .btn-yes{font-size:14px;padding:16px 20px}
+  .ha-up .price-line{font-size:24px}
+}
+</style>
+
+<div class="ha-up">
+
+  <!-- HEADER BILD -->
+  <div class="header-img">
+    <img src="__HEADER_BILD_HANDARBEIT__" alt="Handarbeit für Freizeitpferde" />
+  </div>
+
+  <!-- 1 HEADLINE + 2 TRANSFORMATION -->
+  <div class="sec">
+    <h1>Dein Pferd lernt mit dem Gelände-Schlüssel, ruhig zu bleiben. Aber weißt du, warum viele Pferde trotzdem unruhig im Gelände sind?</h1>
+
+    <p>Weil sie sich in ihrem Körper nicht wohlfühlen.</p>
+
+    <p>Als Beutetier mit einem Reiter auf dem Rücken ist ein Pferd besonders angreifbar. Je unsicherer es sich körperlich fühlt, desto mehr ist sein Nervensystem auf Alarm. <strong>Körperliche Sicherheit ist mentale Ruhe.</strong> Das eine ist ohne das andere kaum möglich.</p>
+
+    <p>Pferde sind nicht von Natur aus dafür gemacht, uns zu tragen. Muskulatur, Balance und Tragkraft müssen gezielt aufgebaut werden, am Boden, bevor wir überhaupt aufsteigen. Wer das überspringt, riskiert ein Pferd, das chronisch verspannt, unruhig und körperlich überlastet ist.</p>
+
+    <p><strong>Handarbeit ist Mentaltraining fürs Pferd durch körperliche Stärke.</strong> Und es ist der nächste entscheidende Hebel für entspannte Geländeausflüge.</p>
+
+    <!-- 3 PREIS + VERKNAPPUNG -->
+    <p style="margin-top:20px">Das Handarbeits-Programm für Freizeitpferde gibt es jetzt hier einmalig als Ergänzung zu deinem Gelände-Schlüssel:</p>
+    <div class="price-line">197 €</div>
+    <div class="price-old"><del>statt 299 €</del> — nur auf dieser Seite, nur jetzt</div>
+
+    <!-- 4 CTA -->
+    <a href="#" class="btn-yes">Ja, ich möchte mein Pferd stark machen für 197 €!</a>
+    <a href="#" class="btn-no">Nein danke, das brauche ich gerade nicht.</a>
+  </div>
+
+  <!-- 5 DESTABILISIERUNG -->
+  <div class="sec-beige">
+    <h2>„Aber mein Pferd ist doch schon ganz okay."</h2>
+
+    <p>Vielleicht. Aber ein Pferd, das nicht aktiv muskulär aufgebaut wurde, kompensiert. Es geht schief, verspannt, weicht aus. Du merkst es erst, wenn die Probleme sichtbar werden.</p>
+
+    <p>Der Gelände-Schlüssel gibt deinem Pferd die mentalen Werkzeuge. Das Handarbeits-Programm gibt ihm den Körper dazu. Beides zusammen macht ein Pferd, das wirklich entspannt neben dir hergeht, weil es sich sicher fühlt, von innen heraus.</p>
+
+    <!-- 6 ERGEBNISSE -->
+    <ul class="result-list">
+      <li>Ein Pferd, das sich in seinem Körper sicher fühlt und dadurch mental ruhiger ist</li>
+      <li>Aufgebaute Muskulatur und Tragkraft für einen gesunden Rücken und lange Reitjahre</li>
+      <li>Natürliche Schiefe ausgleichen und Trageerschöpfung vermeiden</li>
+      <li>Ein Pferd, das alle Hilfen schon vom Boden kennt und noch feiner auf dich reagiert</li>
+      <li>Gutes Gewissen, weil du weißt: Du reitest dein Pferd nicht kaputt</li>
+    </ul>
+
+    <!-- 7 TESTIMONIAL -->
+    <div class="testimonial">
+      <p>„Die Arbeit an der Hand und an der Longe macht riesig Spaß und meine Pferde können nach Erlernen einer soliden Basis nun damit weitermachen. Kurshefte, Workbooks und Quizze helfen mir dabei, die Inhalte aus den Videos noch besser zu verinnerlichen."</p>
+      <span class="attr">Lydia B.</span>
+    </div>
+  </div>
+
+  <!-- 8 FINALCALL -->
+  <div class="sec-dark">
+    <h2>Gib deinem Pferd den Körper, den es braucht, um wirklich loszulassen.</h2>
+    <p>Nur auf dieser Seite für 197 € statt 299 €. Unbegrenzter Zugang inklusive aller Updates.</p>
+    <a href="#" class="btn-final">Ja, für 197 € mitnehmen!</a>
+    <div class="price-note"><del>299 €</del> → 197 € — nur jetzt</div>
+    <a href="#" class="btn-no-light">Nein danke, das brauche ich gerade nicht.</a>
+  </div>
+
+</div>
