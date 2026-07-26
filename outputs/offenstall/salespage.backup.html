@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der Offenstallplaner – Anika's Pferdeakademie</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#e6c5b4;
+  --gold:#d6b923;
+  --rust:#894b2f;
+  --red:#691212;
+  --black:#1a1a1a;
+  --white:#ffffff;
+  --beige:#f5ede2;
+  --beige2:#ede0d0;
+  --beige3:#e8d8c4;
+  --text:#1a1a1a;
+  --text-mid:#4a3828;
+  --text-muted:#7a6050;
+}
+body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--text);max-width:960px;margin:0 auto;font-size:16px;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+
+/* SECTIONS */
+.sec{padding:60px 48px}
+.sec-white{background:var(--white)}
+.sec-beige{background:var(--beige)}
+.sec-beige2{background:var(--beige2)}
+.sec-dark{background:var(--red);color:#fff}
+.sec-rust{background:var(--rust);color:#fff}
+.sec-center{text-align:center}
+
+/* TYPOGRAPHY */
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:10px}
+.eyebrow-light{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:10px}
+h1{font-size:36px;font-weight:900;line-height:1.15;color:var(--black);margin-bottom:14px;letter-spacing:-0.5px}
+h2{font-size:26px;font-weight:800;line-height:1.25;color:var(--black);margin-bottom:16px;letter-spacing:-0.3px}
+h2.light{color:#fff}
+h3{font-size:17px;font-weight:700;color:var(--black);margin-bottom:8px;line-height:1.3}
+p{font-size:15px;line-height:1.85;color:var(--text-mid);margin-bottom:14px}
+p:last-child{margin-bottom:0}
+p.light{color:rgba(255,255,255,0.85)}
+strong{font-weight:700;color:var(--black)}
+strong.light{color:#fff}
+.hero-sub{font-size:18px;color:var(--text-mid);font-weight:500;line-height:1.55;margin-bottom:28px;max-width:680px;margin-left:auto;margin-right:auto;text-align:center}
+.intro-text{font-size:16px;line-height:1.9;color:var(--text-mid);margin-bottom:14px}
+
+/* BUTTONS */
+.btn-red{display:inline-block;background:var(--red);color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;padding:18px 44px;border-radius:4px;text-decoration:none;letter-spacing:0.3px;text-align:center}
+.btn-red:hover{background:#550f0f}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--black);font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;padding:18px 44px;border-radius:4px;text-decoration:none;letter-spacing:0.3px;text-align:center}
+.btn-gold:hover{background:#c0a81f}
+.btn-wide{display:block;width:100%;max-width:480px;margin:0 auto}
+.link-price{font-size:14px;color:var(--rust);font-weight:700;text-decoration:underline}
+.cta-hint{font-size:13px;color:var(--text-muted);margin-top:10px;font-weight:500}
+.cta-hint-light{font-size:12px;color:rgba(255,255,255,0.6);margin-top:10px}
+
+/* HERO */
+.sec-hero{background:var(--beige);padding:52px 48px 0;text-align:center}
+.hero-mockup{margin:32px auto 0;max-width:700px}
+.hero-mockup img{width:100%;border-radius:4px}
+
+/* AWARDS */
+.award-intro{text-align:center;margin-bottom:28px;font-size:15px;color:var(--text-mid);font-weight:500}
+.award-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:center}
+.award-grid img{border-radius:4px}
+
+/* STORY SECTION */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+/* PROBLEM GRID */
+.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:28px}
+.three-grid img{border-radius:8px;width:100%;box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+
+/* QUOTE */
+.quote-block{background:var(--white);border-left:4px solid var(--gold);padding:20px 24px;margin:20px 0;border-radius:0 4px 4px 0}
+.quote-block p{font-size:15px;font-style:italic;color:var(--text-mid);line-height:1.8}
+
+/* PRODUCT MOCKUP */
+.mockup-center{text-align:center;margin:28px 0}
+.mockup-center img{max-width:100%;margin:0 auto;border-radius:4px}
+
+/* MODULE SECTION */
+.module-block{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--beige3)}
+.module-block:last-child{border:none;margin-bottom:0;padding-bottom:0}
+.module-num-badge{display:inline-block;background:var(--rust);color:#fff;font-size:11px;font-weight:800;padding:4px 10px;border-radius:3px;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px}
+.module-bullets{list-style:none;margin-top:12px}
+.module-bullets li{font-size:14px;color:var(--text-mid);line-height:1.7;padding:6px 0 6px 24px;position:relative;border-bottom:1px solid var(--beige3)}
+.module-bullets li:last-child{border:none}
+.module-bullets li::before{content:"✓";position:absolute;left:0;color:var(--rust);font-weight:900}
+
+/* VALUE LIST */
+.value-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.value-item{display:flex;justify-content:space-between;align-items:baseline;padding:12px 14px;background:var(--white);border-radius:4px;border-left:3px solid var(--beige3);gap:12px;font-size:14px;color:var(--text-mid)}
+.value-item .val{font-weight:700;color:var(--black);white-space:nowrap;flex-shrink:0}
+.bonus-section{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bonus-item{display:flex;justify-content:space-between;align-items:baseline;padding:14px 16px;background:var(--beige);border-radius:4px;border-left:3px solid var(--red);gap:12px;font-size:14px;color:var(--text-mid)}
+.bonus-item .val{font-weight:700;color:var(--red);white-space:nowrap;flex-shrink:0}
+.total-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0 0;border-top:2px solid var(--rust);font-size:17px;font-weight:800;color:var(--black);gap:16px;margin-top:20px}
+.your-price{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0 0;font-size:22px;font-weight:900;color:var(--red);gap:16px}
+
+/* TESTIMONIAL */
+.t-card{background:var(--white);border:1px solid var(--beige3);border-radius:6px;padding:28px;border-top:3px solid var(--rust)}
+.t-inner{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px}
+.t-avatar{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--rose);flex-shrink:0;background:var(--beige3)}
+.t-meta h4{font-size:14px;font-weight:700;color:var(--black);margin-bottom:2px}
+.t-meta span{font-size:12px;color:var(--text-muted);font-weight:500}
+.t-quote{font-size:14px;line-height:1.85;color:var(--text-mid);font-style:italic}
+.t-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}
+
+/* BIO */
+.bio-grid{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center;margin-top:28px}
+.bio-img{width:280px;border-radius:6px}
+
+/* GUARANTEE */
+.guarantee-box{display:flex;gap:24px;align-items:flex-start;background:var(--white);border:2px solid var(--rust);border-radius:8px;padding:32px;margin-top:28px}
+.guarantee-icon{width:80px;flex-shrink:0}
+.guarantee-icon img{width:80px}
+.guarantee-text h3{font-size:20px;font-weight:800;margin-bottom:10px}
+
+/* FINAL OFFER BOX */
+.offer-box{background:var(--white);border:2px solid var(--gold);border-radius:8px;padding:36px;text-align:center;max-width:560px;margin:28px auto 0}
+.strike{font-size:15px;color:var(--text-muted);text-decoration:line-through;margin-bottom:4px}
+.price-big{font-size:60px;font-weight:900;color:var(--red);line-height:1;margin:6px 0}
+.price-label{font-size:14px;color:var(--text-muted);margin-bottom:24px;font-weight:500}
+
+/* FOOTER */
+footer{background:var(--beige2);padding:24px 48px;text-align:center;font-size:12px;color:var(--text-muted)}
+footer a{color:var(--text-muted);text-decoration:underline}
+footer img{max-width:120px;margin:0 auto 12px}
+
+/* RESPONSIVE */
+@media(max-width:640px){
+  .sec{padding:36px 20px}
+  .sec-hero{padding:36px 20px 0}
+  h1{font-size:24px}
+  h2{font-size:20px}
+  .hero-sub{font-size:15px}
+  .story-grid,.module-block,.bio-grid,.t-grid{grid-template-columns:1fr}
+  .module-block{gap:20px}
+  .module-block > div:first-child{order:1}
+  .module-block > div:last-child{order:2}
+  .award-grid{grid-template-columns:1fr;max-width:260px;margin:0 auto}
+  .three-grid{grid-template-columns:1fr;gap:14px}
+  .guarantee-box{flex-direction:column}
+  .price-big{font-size:42px}
+  .value-grid,.bonus-section{grid-template-columns:1fr}
+  .offer-box{padding:24px 20px}
+  .btn-red,.btn-gold,.btn-white{font-size:15px;padding:16px 28px}
+  .bio-grid{grid-template-columns:1fr}
+  .bio-img{width:100%;max-width:300px;margin:0 auto}
+  .t-grid{grid-template-columns:1fr}
+  footer{padding:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="sec-hero">
+  <div class="eyebrow">Der Offenstallplaner</div>
+  <h1>Dein fertiges Konzept in nur 24 Stunden.</h1>
+  <p class="hero-sub">So erschaffst du ein Traumzuhause für dein Pferd und sparst dabei Geld und Arbeitszeit.</p>
+  <div class="hero-mockup">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65117abce8f13_bild-1.jpg?o=440" alt="Der Offenstallplaner">
+  </div>
+  <div style="padding:28px 0 0">
+    <p style="font-size:18px;font-weight:700;color:var(--black);margin-bottom:20px">Wie wäre es, wenn du für alle deine Fragen eine Antwort bekommst?</p>
+    <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="btn-red btn-wide">Das will ich!</a>
+    <p style="margin-top:14px;font-size:14px;color:var(--text-muted)">oder <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="link-price">hier geht´s zum Planer für 47€</a></p>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section class="sec sec-white">
+  <p class="award-intro">Unser Paddocktrail wurde bereits mehrfach ausgezeichnet.</p>
+  <div class="award-grid">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e330581e5f1_lag-auszeichnung.jpg?o=440" alt="LAG Auszeichnung">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e33030cae01_banner-schade.jpg?o=440" alt="Auszeichnung">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e33066b9587_buten-und-binnen.jpg?o=440" alt="Buten und Binnen">
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="sec sec-beige">
+  <div>
+    <div>
+      <p class="intro-text">Schon als frisch gebackene Hofbesitzerin habe ich mir gewünscht, dass es jemanden gibt, der mit mir meinen Offenstall bzw. Trail plant.</p>
+      <p class="intro-text">Damit ich sicher sein kann, dass ich an alles denke und es meinen Pferden so richtig gut bei mir geht.</p>
+      <p class="intro-text">Auch wäre es schön gewesen, wichtige Tipps im Hinblick auf Kostensparmöglichkeiten zu bekommen, um sicher zu sein, dass mein geplantes Budget auch ausreicht.</p>
+      <p class="intro-text">Leider habe ich hierfür keine Hilfe, außer einer kompletten Betriebsberatung für mehrere Tausend Euro, gefunden.</p>
+      <p class="intro-text"><strong>Doch das wird sich für dich zukünftig ändern...</strong></p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PROBLEM -->
+<section class="sec sec-white sec-center">
+  <h2>Kennst du das, wenn....</h2>
+  <div class="three-grid">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744cdda86194_11.png?o=440" alt="Problem 1">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744cddac5bdd_12.png?o=440" alt="Problem 2">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744cddae2987_13.png?o=440" alt="Problem 3">
+  </div>
+
+</section>
+
+<!-- FRAGEN + STORIES -->
+<section class="sec sec-beige">
+  <p style="font-size:16px;font-weight:600;color:var(--black);margin-bottom:20px">Durch die ganzen Auszeichnungen für unseren Paddocktrail kam es in den letzten Jahren zu immer mehr Fragen:</p>
+  <div class="quote-block"><p>„Anika, wie machst du das mit der ad libitum Heufütterung? Geht das überhaupt, ohne dass die Pferde zu dick werden?"</p></div>
+  <div class="quote-block"><p>„Welche Arten von Bodenbefestigung hast du? Was sind die Vor- und Nachteile und was kosten die? Geht das auch für Pachtflächen?"</p></div>
+  <div class="quote-block"><p>„Hey Anika, wie viel Platz brauche ich genau? Wie breit müssen die Wege sein? Was brauche ich an Unterständen?"</p></div>
+
+  <div style="margin-top:28px">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/673f2be37c7b2_img-20241001-wa0114.jpg?o=440" alt="Kundenbild" style="border-radius:4px;max-width:560px;margin:0 auto 16px">
+    <p style="font-size:20px;font-weight:700;color:var(--black);margin-top:20px;margin-bottom:24px">Wie wäre es, wenn du für alle deine Fragen eine Antwort bekommst?</p>
+  </div>
+
+  <p class="intro-text"><strong>Lena</strong> weiß jetzt, welche Möglichkeiten es auf ihrer <strong>Pachtfläche</strong> gibt den Paddock <strong>matschfrei</strong> zu bekommen.</p>
+  <p class="intro-text"><strong>Petra</strong> hat ihren bestehenden <strong>Pensionsstall weiter optimiert</strong>, indem sie die Heufütterung umgestellt und auf bewährte Strategien zurückgegriffen hat.</p>
+  <p class="intro-text"><strong>Ulrike</strong> hat für ihr neues Grundstück nun einen ganz <strong>genauen Plan, wie sie ihren Offenstall strukturieren möchte</strong> und weiß ganz sicher, sie hat an alles gedacht. Pferdewohl und Arbeitswirtschaftlichkeit sind perfekt aufeinander abgestimmt.</p>
+  <p class="intro-text"><strong>Und alle wissen, dass sie richtig viel Arbeitszeit im Stallalltag und Geld bei den Anschaffungen sparen werden.</strong></p>
+
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="btn-red">Jetzt freischalten</a>
+  </div>
+</section>
+
+<!-- BRIDGE -->
+<section class="sec sec-white sec-center">
+  <h2>Doch woher bekommst du nun die Antworten zu all deinen Fragen?</h2>
+  <p style="font-size:16px;color:var(--text-mid)">Genau dafür habe ich meinen Offenstallplaner mit Videoworkshop und persönlichem Workbook entwickelt.</p>
+  <h2 style="margin-top:8px"><strong>Darf ich vorstellen?</strong><br>Der Offenstallplaner: Dein fertiges Konzept in nur 24 Stunden.</h2>
+  <div class="mockup-center">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744dad02ec99_mockups-produkte-pesp.png?o=880" alt="Offenstallplaner Mockup">
+  </div>
+</section>
+
+<!-- MODULE 1 -->
+<section class="sec sec-beige">
+  <div class="eyebrow">Die Inhalte</div>
+  <h2>Das erwartet dich im Offenstallplaner.</h2>
+
+  <div class="module-block">
+    <div>
+      <div class="module-num-badge">Modul 1</div>
+      <h3 style="margin-top:10px">Planung der Funktionsbereiche</h3>
+      <ul class="module-bullets">
+        <li>Plane die Funktionsbereiche deines Offenstalls im Hinblick auf das Pferdewohl, aber auch auf örtliche Gegebenheiten und kurze Arbeitswege. Das spart dir später viel Zeit und Körperkraft.</li>
+        <li>So kannst du deinen Trail so naturnah wie möglich gestalten. Ich zeige dir, was du beachten solltest und wie du es genau umsetzt.</li>
+      </ul>
+    </div>
+    <div>
+      <img src="modul-6.png" alt="Modul 1" style="border-radius:4px">
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div>
+      <img src="modul-5.png" alt="Modul 2" style="border-radius:4px">
+    </div>
+    <div>
+      <div class="module-num-badge">Modul 2</div>
+      <h3 style="margin-top:10px">Fütterung &amp; Wasser</h3>
+      <ul class="module-bullets">
+        <li>Du bekommst von mir jahrelange Expertise aus der Praxis, welche Heuraufen für Großballen oder für kleine Ballen besonders haltbar, pferdefreundlich und alltagstauglich sind.</li>
+        <li>Ich erkläre dir genau, wie du Heu ad libitum Fütterung auch bei leichtfuttrigen Pferden umsetzen kannst, ohne dass sie zu dick werden.</li>
+        <li>Wie du deine Pferde ohne großen Aufwand tränken kannst, auch ohne Strom- oder Wasseranschluss.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div>
+      <div class="module-num-badge">Modul 3</div>
+      <h3 style="margin-top:10px">Unterstände</h3>
+      <ul class="module-bullets">
+        <li>Lerne, was es hinsichtlich Ausrichtung, Form, Größe und Beschaffenheit zu beachten gilt. Damit deine Pferde sich auch wirklich wohl fühlen und entspannt hinlegen.</li>
+        <li>Welche Einstreuarten eignen sich am besten. Die Pferde sollen sich wohlfühlen, der Arbeitsaufwand beim Abäppeln und Nachstreuen überschaubar sein. Damit deine Zeit und dein Geldbeutel geschont werden.</li>
+      </ul>
+    </div>
+    <div>
+      <img src="modul-4.png" alt="Modul 3" style="border-radius:4px">
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div>
+      <img src="modul-3.png" alt="Modul 4" style="border-radius:4px">
+    </div>
+    <div>
+      <div class="module-num-badge">Modul 4</div>
+      <h3 style="margin-top:10px">Bodenbefestigung</h3>
+      <ul class="module-bullets">
+        <li>Wo und wie viel befestigte Fläche du benötigst, zeige ich dir ganz genau.</li>
+        <li>Durch ganz viele Beispiele findest du den passenden Boden für deine Pferde. Auch für kleines Budget und Pachtflächen gibt es tolle Möglichkeiten.</li>
+        <li>Ich zeige dir ganz genau den Aufbau und die Vor- und Nachteile verschiedener Varianten. So kannst du Fehlinvestitionen von Anfang an vermeiden.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div>
+      <div class="module-num-badge">Modul 5</div>
+      <h3 style="margin-top:10px">Spezialthemen</h3>
+      <ul class="module-bullets">
+        <li>So machst du das Leben für Atemwegserkrankte oder übergewichtige Pferde leichter und schöner.</li>
+        <li>Ich zeige dir meine bewährte 3-Tages-Integrationsstrategie. Mit der ich es immer schaffe, neue Pferde entspannt in die Herde zu führen.</li>
+        <li>Natürlich darf auch das Thema (Wolfs-)zaun nicht fehlen. Ich zeige dir den ausbruch- und verletzungssichersten Zaun am Markt und wie Wolfszäune gefördert werden.</li>
+      </ul>
+    </div>
+    <div>
+      <img src="modul-2.png" alt="Modul 5" style="border-radius:4px">
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div>
+      <img src="modul-1.png" alt="Modul 6" style="border-radius:4px">
+    </div>
+    <div>
+      <div class="module-num-badge">Modul 6</div>
+      <h3 style="margin-top:10px">Arbeitseffizienz im Alltag</h3>
+      <ul class="module-bullets">
+        <li>Du willst nicht der Sklave deiner eigenen Pferdehaltung werden. Ich zeige dir daher genau, wie du tägliche Aufgaben smart gestalten kannst, um diese schneller und mit weniger Kraft zu erledigen.</li>
+        <li>Ich zeige dir, welche Technik und 2 in 1 Lösungen ich einsetze, um meinen Stall optimal zu nutzen und mir und meinen Pferden das Leben leichter zu machen.</li>
+      </ul>
+    </div>
+  </div>
+
+  <p style="margin-top:20px;font-size:15px;color:var(--text-mid);text-align:center">Diese Module findest du im Videoformat (über 5 Stunden) verpackt. Und damit du sofort abhaken und mitschreiben kannst, hast du dein großartiges Schritt-für-Schritt Workbook dabei.</p>
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="btn-red">Jetzt freischalten</a>
+  </div>
+</section>
+
+<!-- ZIELGRUPPE -->
+<section class="sec sec-white sec-center">
+  <div class="eyebrow">Für wen ist das?</div>
+  <h2>DU bist hier genau richtig, wenn....</h2>
+  <div class="three-grid">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e3270742b1f_8.png?o=440" alt="Zielgruppe 1">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e327073f169_9.png?o=440" alt="Zielgruppe 2">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/65e3270754768_10.png?o=440" alt="Zielgruppe 3">
+  </div>
+
+</section>
+
+<!-- FULL FEATURE LIST -->
+<section class="sec sec-beige2">
+  <h2>Du kannst ganz einfach innerhalb der nächsten 24 Stunden entweder deinen bestehenden Offenstall optimieren oder deinen neuen Offenstall fertig geplant haben.</h2>
+  <p style="font-size:17px;color:var(--text-mid);margin-bottom:32px">Lass mich dir genau zeigen was dich erwartet und wie es funktioniert.</p>
+  <div class="eyebrow">Dein Paket</div>
+  <h2>Das ist alles dabei:</h2>
+  <div class="value-grid">
+    <div class="value-item"><span><strong>Offenstall-Strategie</strong> – Schritt-für-Schritt, damit du <strong>nichts vergisst</strong></span><span class="val">56 €</span></div>
+    <div class="value-item"><span><strong>Flächen &amp; Maße</strong> – Auch auf <strong>kleinen Flächen</strong> den Traumoffenstall</span><span class="val">99 €</span></div>
+    <div class="value-item"><span><strong>Fütterungsguide</strong> – Dicke Pferde, <strong>ad libitum</strong>, Netzgrößen, Kraftfutter in der Herde</span><span class="val">120 €</span></div>
+    <div class="value-item"><span><strong>Wasserversorgung</strong> – Auch <strong>ohne Strom oder festen Anschluss</strong></span><span class="val">47 €</span></div>
+    <div class="value-item"><span><strong>Unterstände</strong> – Ausrichtung, Größe, Einstreu: damit dein Pferd sich <strong>wohlfühlt</strong></span><span class="val">66 €</span></div>
+    <div class="value-item"><span><strong>Abenteuerspielplatz</strong> – Elemente für die <strong>Gesundheit deines Pferdes</strong></span><span class="val">37 €</span></div>
+    <div class="value-item"><span><strong>Bodenbefestigung</strong> – Das teuerste überhaupt. Hier stecken die <strong>größten Spartipps</strong></span><span class="val">150 €</span></div>
+    <div class="value-item"><span><strong>Zaun &amp; Integration</strong> – <strong>3-Tages-Strategie</strong> und wie ich meine Arbeitszeit halbiere</span><span class="val">85 €</span></div>
+  </div>
+
+  <div class="bonus-section">
+    <div class="bonus-item"><span><strong>BONUS: Info-Guide</strong> – Die 10 größten <strong>Fehler in der Offenstallhaltung</strong></span><span class="val">Wert 127 €</span></div>
+    <div class="bonus-item"><span><strong>BONUS: Workbook</strong> – Deinen Offenstall <strong>Schritt für Schritt</strong> durchplanen</span><span class="val">Wert 80 €</span></div>
+  </div>
+  <div class="total-row"><span>Wert gesamt</span><span>867 €</span></div>
+  <div class="your-price"><span>Dein Preis heute</span><span>47 €</span></div>
+  <div style="text-align:center;margin-top:28px">
+    <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="btn-red btn-wide">Jetzt freischalten</a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL 1 -->
+<section class="sec sec-white">
+  <div class="eyebrow">Das sagen andere</div>
+  <div class="t-card" style="max-width:600px;margin:20px auto 0">
+    <div class="t-inner">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744e32d34704_horse-8414296-150.jpg?o=440" alt="Rieke" class="t-avatar">
+      <div class="t-meta">
+        <h4>Rieke</h4>
+        <span>private Pferdehalterin</span>
+      </div>
+    </div>
+    <p class="t-quote">„DANKE für deine tolle Hilfe bei unserer Offenstallplanung. Balu und Feli sind letzte Woche eingezogen und es ist einfach soo schön sie in ihrem Alltag zu beobachten und zu sehen, wie wohl sie sich fühlen."</p>
+  </div>
+</section>
+
+<!-- ANIKA BIO -->
+<section class="sec sec-beige">
+  <div class="eyebrow">Deine Trainerin</div>
+  <h2><strong>Hallo, ich bin Anika!</strong><br><span style="font-weight:600;font-size:20px">Ich habe mir meinen Traum vom eigenen Paddocktrail für meine Pferde und auch einige Einsteller erfüllt.</span></h2>
+  <div class="bio-grid">
+    <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/63a6d36411928_p1156154-kopie.jpg?o=440" alt="Anika" class="bio-img">
+    <div>
+      <p class="intro-text">Schon als Jugendliche kam es mir immer falsch vor, wie viel Zeit die Pferde in Boxen verbracht haben und ich wollte <strong>für mein Pferd eine andere Lösung.</strong></p>
+      <p class="intro-text">Seitdem ich dann vom Prinzip des Aktivstalls und später des <strong>Paddocktrails</strong> gehört hatte, wusste ich genau, das ist es.</p>
+      <p class="intro-text">So soll mein Pferd leben! <strong>Selbstbestimmt und so artgerecht wie möglich.</strong></p>
+      <p class="intro-text">Im Jahr 2017 konnte ich mir meinen <strong>Traum vom eigenen Hof</strong> schließlich erfüllen. Einen Monat lang wurde der alte Kuhstall abgerissen und ein gutes Jahr später haben wir den Stall eröffnet.</p>
+      <p class="intro-text">Seitdem ist es ein stetiges Dazulernen, was gut funktioniert und was nicht. <strong>Wir haben verschiedene Heufütterungsarten, Herdenkonstellationen und Tagesabläufe ausprobiert.</strong></p>
+      <p class="intro-text"><strong>Inzwischen habe ich für uns die perfekte Lösung gefunden.</strong> Die Pferde sind super entspannt und zufrieden und ich kann die tägliche Arbeit so effektiv wie möglich erledigen.</p>
+      <p class="intro-text">Von diesen Erfahrungen möchte ich die profitieren lassen. <strong>Egal, ob du deinen Offenstall erst planst oder einen bestehenden optimierst.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL 2 -->
+<section class="sec sec-white">
+  <div class="t-card" style="max-width:640px;margin:0 auto">
+    <div class="t-inner">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6744e37788199_animal-4701318-150.jpg?o=440" alt="Monika" class="t-avatar">
+      <div class="t-meta">
+        <h4>Monika</h4>
+        <span>private Pferdehalterin</span>
+      </div>
+    </div>
+    <p class="t-quote">„Dank Anika hatte ich einen roten Faden, um meinen Traumoffenstall am Haus zu verwirklichen. 🤗<br><br>Ich wusste gar nicht so richtig, wo ich anfangen sollte und hatte wirklich Angst etwas falsch zu machen und Geld im Sand zu versenken.<br><br>Alleine die Bodenbefestigung ist so teuer und ich bin echt dankbar, dass Anika mir bei der Auswahl geholfen hat und ich dadurch sogar noch viel mehr Fläche befestigen konnte als gedacht. Das macht das Abäppeln im Winter deutlich einfacher."</p>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="sec sec-beige2">
+  <div class="eyebrow">Ohne Risiko</div>
+  <h2>Begeistert oder Geld-zurück-Garantie</h2>
+  <div class="guarantee-box">
+    <div class="guarantee-icon">
+      <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/6745724ddbbb5_money-1820932-150.png?o=440" alt="Garantie">
+    </div>
+    <div class="guarantee-text">
+      <h3>14 Tage Geld-zurück-Garantie</h3>
+      <p>Du hast 14 Tage Zeit den Offenstallplaner zurückzugeben, falls du nicht begeistert sein solltest.</p>
+      <p>Dazu schreibst du mir einfach eine Mail und dann überweise ich dir dein Geld zurück und schließe deinen Zugang.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL OFFER -->
+<section class="sec sec-dark sec-center">
+  <div class="eyebrow-light">Dein Angebot</div>
+  <h2 class="light">Darf ich vorstellen?<br>Der Offenstallplaner: Dein fertiges Konzept in nur 24 Stunden.</h2>
+  <p class="light" style="font-size:16px;margin-top:8px">Nur für kurze Zeit kannst du den Planer <strong class="light">für unglaubliche 47€</strong> bekommen.</p>
+  <div class="offer-box">
+    <p class="strike">Gesamtwert: 867 €</p>
+    <div class="price-big">47 €</div>
+    <p class="price-label">Einmalige Investition · Sofortiger Zugang</p>
+    <a href="https://anikas-pferdeakademie.thrivecart.com/offenstallplaner/" class="btn-red btn-wide">Das will ich!</a>
+    <p class="cta-hint">14 Tage Geld-zurück-Garantie · inkl. Workbook + Bonus Info-Guide</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://cch-files.edge.live.ds25.io/cch/v/d8d94521-6dfb-4a49-8a8e-43e435b60fa3/files/634e6f7438d6b_anika-leischl-logo-03.jpg?o=440" alt="Anika's Pferdeakademie Logo">
+  <p><a href="https://gruppe.anikas-pferdeakademie.de/privacy">Datenschutz</a> · <a href="https://gruppe.anikas-pferdeakademie.de/imprint">Impressum</a></p>
+  <p style="margin-top:6px">©2022 Digistore24 GmbH, alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
