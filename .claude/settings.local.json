@@ -347,7 +347,13 @@
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1000,900 --screenshot=C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/18be6f34-a5bf-4af2-ace2-f8ce50550554/scratchpad/raw.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/18be6f34-a5bf-4af2-ace2-f8ce50550554/scratchpad/upsell-banner.html)",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=400,340 --screenshot=\"C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/18be6f34-a5bf-4af2-ace2-f8ce50550554/scratchpad/mobiletest.png\" \"file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/18be6f34-a5bf-4af2-ace2-f8ce50550554/scratchpad/mobiletest.html\")",
       "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/gelaendeschluessel/upsell-header.png\")",
-      "PowerShell(Set-Clipboard -Value $t)"
+      "PowerShell(Set-Clipboard -Value $t)",
+      "Read(//c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/86da1d3f-8a69-4b73-82f2-e62a2fbaab20/scratchpad/**)",
+      "Bash(unzip -o \"/c/Users/Olive/Desktop/Zielgruppe Zusammenfassung.docx\" word/document.xml -d zg_extract)",
+      "Bash(perl -0777 -pe 's{</w:p>}{\\\\n}g' zg_extract/word/document.xml)",
+      "Bash(perl -pe 's{<[^>]+>}{}g')",
+      "Bash(perl -CS -pe 's/&amp;/&/g; s/&lt;/</g; s/&gt;/>/g; s/&#\\(\\\\d+\\);/chr\\($1\\)/ge')",
+      "Bash(start \"\" \"Avatar-Tina.html\")"
     ],
     "defaultMode": "bypassPermissions"
   }
