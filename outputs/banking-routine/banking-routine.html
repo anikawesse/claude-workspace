@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking-Routine — Anika</title>
+<style>
+  :root{
+    --beige:#f6f0e8; --card:#fffdfa; --ink:#3a2f2a; --muted:#8a7a6d;
+    --rose:#c98a7a; --gold:#c9a24b; --rust:#a85a3c; --red:#9e3b2e;
+    --green:#5f7d54; --line:#e7dccc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Montserrat','Segoe UI',sans-serif;background:var(--beige);color:var(--ink);line-height:1.55;padding:32px 18px;}
+  .wrap{max-width:960px;margin:0 auto;}
+  h1{font-size:30px;font-weight:800;letter-spacing:-.3px;}
+  .sub{color:var(--muted);font-size:15px;margin-top:4px;margin-bottom:28px;}
+  h2{font-size:20px;font-weight:700;margin:34px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--line);}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:16px;box-shadow:0 2px 8px rgba(120,90,60,.05);}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;}
+  .kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;}
+  .kpi .lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+  .kpi .val{font-size:26px;font-weight:800;margin-top:6px;}
+  .kpi .note{font-size:12px;color:var(--muted);margin-top:4px;}
+  table{width:100%;border-collapse:collapse;font-size:14px;}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;font-weight:600;}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;color:#fff;}
+  .t-priv{background:var(--rose);} .t-biz{background:var(--gold);} .t-hof{background:var(--rust);}
+  .flow{counter-reset:step;list-style:none;}
+  .flow li{position:relative;padding:14px 16px 14px 56px;margin-bottom:10px;background:var(--card);border:1px solid var(--line);border-radius:12px;}
+  .flow li::before{counter-increment:step;content:counter(step);position:absolute;left:14px;top:14px;width:30px;height:30px;border-radius:50%;background:var(--rust);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px;}
+  .flow b{font-weight:700;}
+  .pill{display:inline-block;background:var(--beige);border:1px solid var(--line);border-radius:8px;padding:1px 8px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;}
+  .split{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px;}
+  .split .box{border-radius:12px;padding:14px;color:#fff;}
+  .b1{background:var(--red);} .b2{background:var(--green);} .b3{background:var(--gold);}
+  .split .box .p{font-size:24px;font-weight:800;}
+  .split .box .t{font-size:13px;opacity:.95;}
+  .callout{background:#fbf3e4;border-left:4px solid var(--gold);border-radius:8px;padding:14px 16px;margin:12px 0;font-size:14px;}
+  .warn{background:#faece8;border-left:4px solid var(--red);}
+  .good{background:#eef3e9;border-left:4px solid var(--green);}
+  ul.clean{margin:6px 0 0 18px;font-size:14px;} ul.clean li{margin-bottom:6px;}
+  .foot{color:var(--muted);font-size:12px;margin-top:30px;text-align:center;}
+  .goose{font-size:15px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🪿 Deine Banking-Routine</h1>
+  <div class="sub">Einnahmen segmentieren, Kosten decken, die goldene Gans füttern. Stand Juli 2026, Basis: April–Juni 2026 (4 Konten) + deine Kostenaufstellung.</div>
+
+  <h2>Deine Zahlen auf einen Blick</h2>
+  <div class="grid">
+    <div class="kpi"><div class="lbl">Ø Einnahmen (Qonto)</div><div class="val">~8.440 €</div><div class="note">was aufs Konto kommt; echter Umsatz höher (s.u.)</div></div>
+    <div class="kpi"><div class="lbl">Monatlicher Bedarf</div><div class="val">~9.235 €</div><div class="note">Business 3.670 + Hof 2.565 + Gehalt 3.000, vor Steuer</div></div>
+    <div class="kpi"><div class="lbl">Befristet</div><div class="val" style="color:var(--green)">−149 €</div><div class="note">wenn Fortbildungen Julia + Kenzie auslaufen</div></div>
+    <div class="kpi"><div class="lbl">Erledigt</div><div class="val" style="color:var(--green)">✅</div><div class="note">Steuer-Konto vorhanden · Wespa-Dispo ausgeglichen</div></div>
+  </div>
+  <div class="callout"><b>Wichtig zur Einordnung:</b> Die ~8.440 € sind das, was auf Qonto ankommt. Ein Teil deiner Umsätze läuft über PayPal und Stripe und bezahlt dort direkt Ausgaben (Fortbildungen, teils Werbung), bevor der Rest wöchentlich aufs Konto fließt. Dein <b>echter Umsatz liegt also höher</b> als 8.440 €. Für die genaue Überschuss-Rechnung brauchen wir deinen Gesamtumsatz (ThriveCart/Digistore + PayPal + Stripe). Genau das übernimmt der <b>Monats-Tracker</b>: du tippst den echten Monatsumsatz ein, und er rechnet Steuer, Kosten und die Gänse-Verteilung automatisch aus.</div>
+
+  <h2>Deine 3 Bereiche mit allen Posten</h2>
+  <div class="sub" style="margin-top:-6px">Übernommen aus deiner Kostenaufstellung. Jahres-/Quartalsposten sind auf den Monat umgerechnet (Spalte „mtl.").</div>
+
+  <div class="card">
+    <div style="margin-bottom:10px"><span class="tag t-priv">Privat</span> <span style="color:var(--muted);font-size:13px">brutto</span></div>
+    <table>
+      <tr><th>Bezeichnung</th><th>Kategorie</th><th style="text-align:right">mtl.</th><th style="text-align:right">Betrag</th><th>Turnus</th></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Monatlich</td></tr>
+      <tr><td>Hausraten, Lebenshaltung</td><td>Wohnen</td><td class="num">1.200,00</td><td class="num">1.200,00</td><td>monatlich</td></tr>
+      <tr><td>Kfz Versicherung</td><td>Auto</td><td class="num">48,00</td><td class="num">48,00</td><td>monatlich</td></tr>
+      <tr><td>Autokredit</td><td>Kredit</td><td class="num">400,00</td><td class="num">400,00</td><td>monatlich</td></tr>
+      <tr><td>Spritkosten</td><td>Auto</td><td class="num">40,00</td><td class="num">40,00</td><td>monatlich</td></tr>
+      <tr><td>Sparpläne</td><td>Dekafonds</td><td class="num">–</td><td class="num">–</td><td>monatlich</td></tr>
+      <tr><td>Altersvorsorge</td><td>Sparen AV</td><td class="num">40,00</td><td class="num">40,00</td><td>monatlich</td></tr>
+      <tr><td>Selbstbeteiligung KV</td><td>Absicherung</td><td class="num">–</td><td class="num">100,00</td><td>monatlich</td></tr>
+      <tr><td>Versicherungen (KV, KT)</td><td>Absicherung</td><td class="num">360,00</td><td class="num">360,00</td><td>monatlich</td></tr>
+      <tr><td>Urlaub</td><td></td><td class="num">–</td><td class="num">50,00</td><td>monatlich</td></tr>
+      <tr><td>Spotify Premium</td><td></td><td class="num">12,99</td><td class="num">12,99</td><td>monatlich</td></tr>
+      <tr><td>Audible</td><td></td><td class="num">9,95</td><td class="num">9,95</td><td>monatlich</td></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Jährlich</td></tr>
+      <tr><td>KFZ Steuer</td><td>Auto</td><td class="num">9,50</td><td class="num">114,00</td><td>jährlich</td></tr>
+      <tr style="border-top:2px solid var(--rose)"><td colspan="2"><b>Summe mtl. Belastung</b></td><td class="num"><b>2.120,44</b></td><td></td><td></td></tr>
+    </table>
+    <div class="note" style="font-size:13px;color:var(--muted);margin-top:8px">Dein Gehalt/Privatentnahme: 3.000 €.</div>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom:10px"><span class="tag t-biz">Online Business</span> <span style="color:var(--muted);font-size:13px">netto</span></div>
+    <table>
+      <tr><th>Bezeichnung</th><th>Kategorie</th><th style="text-align:right">mtl.</th><th style="text-align:right">Betrag</th><th>Turnus</th></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Monatlich</td></tr>
+      <tr><td>Werbung</td><td></td><td class="num">2.000,00</td><td class="num">2.000,00</td><td>monatlich</td></tr>
+      <tr><td>United Media</td><td>Beiträge</td><td class="num">529,00</td><td class="num">529,00</td><td>monatlich</td></tr>
+      <tr><td>Fortbildung <span style="color:var(--muted);font-size:12px">(auxmoney-Kredit)</span></td><td>Fortbildung</td><td class="num">406,00</td><td class="num">406,00</td><td>monatlich</td></tr>
+      <tr><td>Devine Funnels <span style="color:var(--muted);font-size:12px">(Laura Guvener)</span></td><td>Beiträge</td><td class="num">97,00</td><td class="num">97,00</td><td>monatlich</td></tr>
+      <tr><td>Julia Trost <span style="color:var(--muted);font-size:12px">(Fortbildung, bis 03/2027)</span></td><td>Fortbildung</td><td class="num">84,00</td><td class="num">84,00</td><td>monatlich</td></tr>
+      <tr><td>Kenzie Dysli <span style="color:var(--muted);font-size:12px">(Fortbildung, bis Jahresende)</span></td><td>Fortbildung</td><td class="num">65,00</td><td class="num">65,00</td><td>monatlich</td></tr>
+      <tr><td>Kontoführung</td><td>Beiträge</td><td class="num">35,00</td><td class="num">35,00</td><td>monatlich</td></tr>
+      <tr><td>Lexware Office XL</td><td>Beiträge</td><td class="num">32,90</td><td class="num">32,90</td><td>monatlich</td></tr>
+      <tr><td>ManyChat <span style="color:var(--muted);font-size:12px">(25 USD)</span></td><td></td><td class="num">21,50</td><td class="num">21,50</td><td>monatlich</td></tr>
+      <tr><td>Claude (Pro)</td><td></td><td class="num">21,42</td><td class="num">21,42</td><td>monatlich</td></tr>
+      <tr><td>Handy</td><td>Telekommunikation</td><td class="num">12,00</td><td class="num">12,00</td><td>monatlich</td></tr>
+      <tr><td>Slack</td><td></td><td class="num">10,00</td><td class="num">10,00</td><td>monatlich</td></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Jährlich / quartalsweise</td></tr>
+      <tr><td>Steuerberater</td><td></td><td class="num">250,00</td><td class="num">3.000,00</td><td>jährlich</td></tr>
+      <tr><td>Webinarkit</td><td>Beiträge</td><td class="num">28,00</td><td class="num">337,00</td><td>jährlich</td></tr>
+      <tr><td>Qonto</td><td>Beiträge</td><td class="num">17,00</td><td class="num">208,00</td><td>jährlich</td></tr>
+      <tr><td>Thrivecart (Learn)</td><td>Beiträge</td><td class="num">16,67</td><td class="num">200,00</td><td>jährlich</td></tr>
+      <tr><td>Vimeo</td><td>Beiträge</td><td class="num">16,80</td><td class="num">201,68</td><td>jährlich</td></tr>
+      <tr><td>All Inkl</td><td>Beiträge</td><td class="num">10,00</td><td class="num">–</td><td>quartalsweise</td></tr>
+      <tr><td>Zoom</td><td>Beiträge</td><td class="num">9,79</td><td class="num">117,56</td><td>jährlich</td></tr>
+      <tr><td>Canva</td><td>Beiträge</td><td class="num">7,70</td><td class="num">92,43</td><td>jährlich</td></tr>
+      <tr style="border-top:2px solid var(--gold)"><td colspan="2"><b>Summe mtl. Belastung</b></td><td class="num"><b>3.669,78</b></td><td></td><td></td></tr>
+    </table>
+    <div class="note" style="font-size:13px;color:var(--muted);margin-top:8px">Julia Trost &amp; Kenzie Dysli sind befristete Fortbildungen und fallen später wieder weg (dann −149 €/Monat).</div>
+  </div>
+
+  <div class="card">
+    <div style="margin-bottom:10px"><span class="tag t-hof">Hof</span> <span style="color:var(--muted);font-size:13px">läuft geschäftlich, absetzbar</span></div>
+    <table>
+      <tr><th>Bezeichnung</th><th>Kategorie</th><th style="text-align:right">mtl.</th><th style="text-align:right">Betrag</th><th>Turnus</th></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Monatlich</td></tr>
+      <tr><td>Darlehen <span style="color:var(--muted);font-size:12px">(inkl. ~103 € USt, durchlaufend)</span></td><td>Kredit</td><td class="num">1.843,00</td><td class="num">1.843,00</td><td>monatlich</td></tr>
+      <tr><td>Pferde (Schmied, Futter)</td><td></td><td class="num">330,00</td><td class="num">330,00</td><td>monatlich</td></tr>
+      <tr><td>Strom</td><td></td><td class="num">50,00</td><td class="num">50,00</td><td>monatlich</td></tr>
+      <tr><td>Unfallversicherung</td><td>Beiträge</td><td class="num">22,00</td><td class="num">22,00</td><td>monatlich</td></tr>
+      <tr><td>Rechtsschutz Pferd <span style="color:var(--muted);font-size:12px">(Uelzener)</span></td><td>Absicherung</td><td class="num">4,70</td><td class="num">4,70</td><td>monatlich</td></tr>
+      <tr><td colspan="5" style="background:var(--beige);font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700">Jährlich</td></tr>
+      <tr><td>Heu <span style="color:var(--muted);font-size:12px">(4 Pferde)</span></td><td>Pension</td><td class="num">160,00</td><td class="num">1.900,00</td><td>jährlich</td></tr>
+      <tr><td>Treckerinspektion</td><td>Pension</td><td class="num">59,00</td><td class="num">700,00</td><td>jährlich</td></tr>
+      <tr><td>Betriebshaftpflicht</td><td>Absicherung</td><td class="num">46,33</td><td class="num">556,00</td><td>jährlich</td></tr>
+      <tr><td>Einstreu</td><td>Pension</td><td class="num">16,67</td><td class="num">200,00</td><td>jährlich</td></tr>
+      <tr><td>Versicherung Anhänger, Trecker</td><td></td><td class="num">13,00</td><td class="num">157,00</td><td>jährlich</td></tr>
+      <tr><td>Steuern Trecker/Anhänger</td><td>Pension</td><td class="num">12,50</td><td class="num">150,00</td><td>jährlich</td></tr>
+      <tr><td>Diesel</td><td>Pension</td><td class="num">8,00</td><td class="num">100,00</td><td>jährlich</td></tr>
+      <tr style="border-top:2px solid var(--rust)"><td colspan="2"><b>Summe mtl. Belastung</b></td><td class="num"><b>2.565,20</b></td><td></td><td></td></tr>
+      <tr><td>Abschreibungen</td><td>Abschreibungen</td><td class="num">460,00</td><td class="num">1.481,00</td><td>monatlich</td></tr>
+    </table>
+    <div class="note" style="font-size:13px;color:var(--muted);margin-top:8px">Hof läuft übers Business, Pferde als Darsteller für Lehrvideos/Marketing → Kosten absetzbar.</div>
+  </div>
+
+  <h2>Deine Konten-Landkarte</h2>
+  <div class="card">
+    <table>
+      <tr><th>Konto</th><th>Aufgabe in der Routine</th></tr>
+      <tr><td><b>Qonto</b></td><td>Sammel- &amp; Verteilkonto. Hier landen ALLE Einnahmen, von hier wird verteilt.</td></tr>
+      <tr><td><b>PayPal + Stripe</b></td><td>Zahlen automatisch jeden Montag auf Qonto aus. Kein Schattenkonto, das Geld sammelt sich von selbst am Sammelkonto.</td></tr>
+      <tr><td><b>Wespa</b></td><td>Nur bewusste Posten: Kreditraten (groß + klein), Meta-Werbung, Hufbearbeiterin (Karte). Dispo ausgeglichen. ✅</td></tr>
+      <tr><td><b>DKB Privat</b></td><td>Hier landet dein Gehalt = dein privates Leben.</td></tr>
+      <tr><td><b>DKB Gemeinschaft</b></td><td>Haushalt mit Oliver (er zahlt mit ein).</td></tr>
+      <tr><td><b style="color:var(--green)">Steuer ✅</b></td><td>Hast du schon. Jede Einnahme sofort anteilig hierher. Nie wieder Steuer-Schreck.</td></tr>
+      <tr><td><b style="color:var(--rust)">NEU: Rücklagen</b></td><td>Für Jahreszahlungen: Heu 1.900, Versicherungen, Fortbildung, Technik.</td></tr>
+      <tr><td><b style="color:var(--green)">NEU: Goldene Gans</b></td><td>Depot/Sparen. Wird gefüttert, nie geschlachtet.</td></tr>
+    </table>
+    <div class="callout">Qonto bietet kostenlose Unterkonten. Steuer &amp; Rücklagen können dort als eigene „Spaces" liegen, ohne dass du neue Bankkonten brauchst. Die Gans gehört idealerweise in ein separates Depot.</div>
+  </div>
+
+  <h2>Die monatliche Routine</h2>
+  <div class="sub" style="margin-top:-6px">Am Haupt-Zahltag (z.B. Monatsanfang), in fester Reihenfolge, BEVOR du etwas ausgibst:</div>
+  <ol class="flow">
+    <li><b>Einnahmen sind schon da</b> → PayPal und Stripe zahlen jeden Montag automatisch auf Qonto aus. Kein manuelles Leeren nötig, du siehst die Monatseinnahmen direkt.</li>
+    <li><b>Steuer abzweigen</b> → <span class="pill">Startwert 20%</span> der Einnahmen sofort auf das Steuer-Konto. Genauen Satz mit Steuerberater fixieren.</li>
+    <li><b>Gehalt auszahlen</b> → fester Betrag <span class="pill">z.B. 3.000 €</span> auf DKB Privat. Dein Leben läuft von einem festen Gehalt, nicht von Bauch-Entnahmen.</li>
+    <li><b>Haushalt</b> → dein fester Anteil auf DKB Gemeinschaft.</li>
+    <li><b>Business + Werbung</b> → Fixkosten und Werbebudget (~2.000) bleiben eingeplant auf Qonto/Wespa.</li>
+    <li><b>Hof-Budget</b> → <span class="pill">~2.565 €</span> für Darlehen, Futter, Schmied bereitstellen.</li>
+    <li><b>Rücklagen füttern</b> → fester kleiner Betrag für die Jahreszahlungen (damit Heu &amp; Versicherungen dich nie überraschen).</li>
+    <li><b>Was JETZT übrig ist = Gänse-Überschuss</b> → nach der Regel unten aufteilen.</li>
+  </ol>
+
+  <h2>Der Überschuss-Verteiler</h2>
+  <div class="card">
+    <div class="goose">Nur was nach Schritt 1–7 übrig ist, wird verteilt. Du wolltest <b>parallel</b> Schulden abbauen UND die Gans füttern. Startvorschlag (jederzeit anpassbar):</div>
+    <div class="split">
+      <div class="box b1"><div class="p">40%</div><div class="t">Schulden tilgen (verbleibende Kredite, z.B. auxmoney / Autokredit)</div></div>
+      <div class="box b2"><div class="p">40%</div><div class="t">Goldene Gans (Depot/Sparen)</div></div>
+      <div class="box b3"><div class="p">20%</div><div class="t">Träume / Wünsche (bewusst ausgeben)</div></div>
+    </div>
+    <div class="callout good"><b>Wespa-Dispo ist ausgeglichen. ✅</b> Der teure ~10,5%-Dispo ist weg, dieser Druck ist raus. Der „Schulden"-Anteil kann jetzt auf verbleibende Kredite (auxmoney, Autokredit) gehen oder stärker in die Gans fließen. Sag Bescheid, wenn wir den Verteiler neu gewichten sollen.</div>
+  </div>
+
+  <h2>Nächste Schritte</h2>
+  <div class="card">
+    <ul class="clean">
+      <li><b>Steuer-Satz klären:</b> mit deinem Steuerberater den realistischen Rücklagen-Satz festlegen (USt ist durchlaufend, für Gewinnsteuer brauchst du eine echte Zahl).</li>
+      <li><b>Rücklagen-Topf anlegen:</b> in Qonto einen „Rücklagen"-Space einrichten (Steuer-Konto hast du schon).</li>
+      <li><b>Gans-Gefäß wählen:</b> du hast bereits Dekafonds-Sparpläne und Altersvorsorge. Das Instrument für die Gans mit deinem Berater festlegen (ich gebe keine Anlageberatung).</li>
+      <li><b>Feste Zahlen fixieren:</b> Gehalt, Haushalts-Anteil und Rücklagen-Rate als konkrete Beträge festzurren, dann wird die Routine ein 15-Minuten-Ritual.</li>
+      <li><b>Monats-Tracker:</b> auf Wunsch baue ich dir eine einfache Tabelle, in die du jeden Monat die Einnahme eintippst und die dir die Verteilung automatisch ausrechnet.</li>
+    </ul>
+  </div>
+
+  <div class="foot">Interne Planungshilfe, keine Steuer- oder Anlageberatung. Zahlen sind Richtwerte aus 3 Monaten Kontoauszügen + deiner Kostenaufstellung.</div>
+
+</div>
+</body>
+</html>

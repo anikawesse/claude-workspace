@@ -5,14 +5,12 @@
  * EINBAU (einmalig):
  *   1. Tabelle oeffnen -> Menue Erweiterungen -> Apps Script
  *   2. Diesen Code komplett hineinkopieren (vorhandenes ersetzen)
- *   3. Unten GEHEIM durch den Wert aus scripts\.env (SHEET_SECRET) ersetzen
- *   4. Speichern -> Bereitstellen -> Neue Bereitstellung -> Typ "Web-App"
+ *   3. Speichern -> Bereitstellen -> Neue Bereitstellung -> Typ "Web-App"
  *      Ausfuehren als: Ich   |   Zugriff: Jeder
- *   5. Web-App-URL kopieren -> in scripts\.env bei SHEET_WEBAPP_URL eintragen
+ *   4. Web-App-URL kopieren -> in scripts\.env bei SHEET_WEBAPP_URL eintragen
  *
- * SICHERHEIT: Die URL ist oeffentlich erreichbar, deshalb prueft das Skript das
- * Passwort. Ohne passendes Passwort passiert nichts. URL + Passwort zusammen
- * nicht weitergeben.
+ * SICHERHEIT: Die URL ist oeffentlich erreichbar und wird ohne Passwort-Pruefung
+ * angenommen (bewusste Entscheidung — URL nicht weitergeben).
  *
  * WIE ES SCHREIBT: Die Tabelle hat MEHRERE BLAETTER (April, Mai, Juli ...), je Monat
  * eins. Deshalb werden ALLE Blaetter durchsucht — nicht nur das erste.
@@ -22,8 +20,6 @@
  * Zeilen, die nicht geliefert werden (z.B. "Änderungen", Stornostatistik), bleiben
  * unangetastet — Anikas eigene Notizen werden nie ueberschrieben.
  */
-
-const GEHEIM = 'GEHEIM';   // <- durch SHEET_SECRET aus der .env ersetzen
 
 // Welche gelieferte Kennzahl gehoert in welche Tabellenzeile?
 // Gesucht wird per "faengt an mit", weil die Beschriftungen je Monatsblock
@@ -41,7 +37,10 @@ const ZEILEN_MUSTER = [
   { key: 'Audiotraining',       praefix: 'audiotraining',        format: ZAHL },
   { key: 'Videoreihe',          praefix: 'videoserie',           format: ZAHL },  // heisst in der Tabelle "Videoserie"
   { key: 'Videoreihe',          praefix: 'videoreihe',           format: ZAHL },  // falls doch mal so benannt
-  { key: 'Upsell',              praefix: 'upsell',               format: ZAHL },
+  { key: 'Upsell Gelände',      praefix: 'upsell gelände',       format: ZAHL },
+  { key: 'Upsell Kopfkino',     praefix: 'upsell kopfkino',      format: ZAHL },
+  { key: 'Upsell Handarbeit',   praefix: 'upsell handarbeit',    format: ZAHL },
+  { key: 'Upsell Offenstallplaner', praefix: 'upsell offenstallplaner', format: ZAHL },
   { key: 'Bruttoumsatz',        praefix: 'bruttoumsatz',         format: EURO },
   { key: 'Verdienst',           praefix: 'verdienst',            format: EURO },
   { key: 'Gesamtumsatz organisch', praefix: 'gesamtumsatz organisch', format: EURO },
@@ -58,7 +57,6 @@ const ZEILEN_MUSTER = [
 function doPost(e) {
   try {
     const daten = JSON.parse(e.postData.contents);
-    if (daten.secret !== GEHEIM) return antwort({ ok: false, fehler: 'Falsches Passwort' });
 
     // Alle Blaetter einlesen (ein Blatt pro Monat)
     const blaetter = SpreadsheetApp.getActiveSpreadsheet().getSheets().map(function (b) {
@@ -115,6 +113,16 @@ function findeSpalte(werte, datumText) {
   return null;
 }
 
+// Entfernt Umlaute/Akzente fuer den Vergleich (ä/ü -> a/u usw.). Noetig, weil
+// Copy&Paste (z.B. Zwischenablage -> Apps-Script-Editor) Sonderzeichen manchmal
+// in eine andere Unicode-Form umwandelt (zerlegt statt zusammengesetzt) — dann
+// liefert ein simpler String-Vergleich still ein "kein Treffer", obwohl beide
+// Texte gleich aussehen. Durch das Entfernen der Akzente ist der Vergleich
+// unabhaengig von der jeweiligen Unicode-Form.
+function normalisiere(s) {
+  return String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 /**
  * Sucht ab der Datum-Zeile abwaerts die Zeile zur Kennzahl (bis zum naechsten Block).
  * Gibt { zeile, format } zurueck oder null.
@@ -122,15 +130,15 @@ function findeSpalte(werte, datumText) {
  * unter "Stornostatistik"). Der erste Treffer ist der richtige — deshalb sofort return.
  */
 function findeZeile(werte, datumZeile, kennzahl) {
-  const muster = ZEILEN_MUSTER.filter(function (m) { return m.key === kennzahl; });
+  const muster = ZEILEN_MUSTER.filter(function (m) { return normalisiere(m.key) === normalisiere(kennzahl); });
   if (!muster.length) return null;
 
   for (let z = datumZeile + 1; z < werte.length; z++) {
-    const beschriftung = String(werte[z][0]).trim().toLowerCase();
+    const beschriftung = normalisiere(String(werte[z][0]).trim().toLowerCase());
     if (beschriftung === 'datum') break;                 // naechster Monatsblock -> Schluss
     if (!beschriftung) continue;
     for (let i = 0; i < muster.length; i++) {
-      if (beschriftung.indexOf(muster[i].praefix) === 0) {
+      if (beschriftung.indexOf(normalisiere(muster[i].praefix)) === 0) {
         return { zeile: z, format: muster[i].format };
       }
     }

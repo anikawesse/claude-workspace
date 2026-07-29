@@ -46,10 +46,13 @@ $MetaApiVersion = 'v21.0'
 # item_type ist wichtig: "Gelände sicher meistern" gibt es als 'upsell' (aus
 # diesem Funnel) UND als 'product' (eigene Salespage) — nur der Upsell zaehlt hier.
 $ProduktZeilen = [ordered]@{
-    'Gelände-Schlüssel 27€'    = @{ Name = 'Gelände-Schlüssel';        Typ = 'product' }
-    'Audiotraining 17€'        = @{ Name = 'Audiotraining Hoftor';     Typ = 'bump'    }
-    'Videoreihe 27€'           = @{ Name = 'Videoreihe';               Typ = 'bump'    }
-    'Upsell Gelände s.m. 99€'  = @{ Name = 'Gelände sicher meistern';  Typ = 'upsell'  }
+    'Gelände-Schlüssel 27€'      = @{ Name = 'Gelände-Schlüssel';        Typ = 'product' }
+    'Audiotraining 17€'          = @{ Name = 'Audiotraining Hoftor';     Typ = 'bump'    }
+    'Videoreihe 27€'             = @{ Name = 'Videoreihe';               Typ = 'bump'    }
+    'Upsell Gelände s.m. 99€'    = @{ Name = 'Gelände sicher meistern';  Typ = 'upsell'  }
+    'Upsell Kopfkino 97€'        = @{ Name = 'Schluss mit Kopfkino';     Typ = 'upsell'  }
+    'Upsell Handarbeit 197€'     = @{ Name = 'Handarbeits-Programm';     Typ = 'upsell'  }
+    'Upsell Offenstallplaner 47€'= @{ Name = 'Offenstallplaner';         Typ = 'upsell'  }
 }
 
 # Welche Zeile ist das Hauptprodukt? Warenkorb, CPA und Conversion rechnen darauf.
@@ -555,7 +558,6 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
     function Rund($v) { if ($null -eq $v) { return $null }; [math]::Round([decimal]$v, 2) }
 
     $nutzlast = @{
-        secret = $env_['SHEET_SECRET']
         tage   = @(
             foreach ($tag in $tage) {
                 $werte = @{}
@@ -566,7 +568,10 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                     @{ K = 'Gelände-Schlüssel'; Z = 'Gelände-Schlüssel 27€' },
                     @{ K = 'Audiotraining';     Z = 'Audiotraining 17€' },
                     @{ K = 'Videoreihe';        Z = 'Videoreihe 27€' },
-                    @{ K = 'Upsell';            Z = 'Upsell Gelände s.m. 99€' }
+                    @{ K = 'Upsell Gelände';    Z = 'Upsell Gelände s.m. 99€' },
+                    @{ K = 'Upsell Kopfkino';   Z = 'Upsell Kopfkino 97€' },
+                    @{ K = 'Upsell Handarbeit'; Z = 'Upsell Handarbeit 197€' },
+                    @{ K = 'Upsell Offenstallplaner'; Z = 'Upsell Offenstallplaner 47€' }
                 )) {
                     $n = @($verkaeufe | Where-Object { $_.Tag -eq $tag -and $_.Zeile -eq $paar.Z }).Count
                     if ($n -gt 0) { $werte[$paar.K] = $n }
