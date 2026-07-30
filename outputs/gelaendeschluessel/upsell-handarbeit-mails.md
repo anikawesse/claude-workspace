@@ -2,7 +2,7 @@
 **Für:** Käufer von Gelände-Schlüssel (die die Upsell-Seite nicht sofort gekauft haben)
 **Angebot:** Handarbeits-Programm für 197€ statt 299€ (Preisvorteil 102€)
 **Timer:** 72h / 48h / 24h (separate Bild-Timer in Devine)
-**Status:** in Arbeit
+**Status:** ✅ alle 3 Mails in Devine umgesetzt (2026-07-30)
 
 ---
 
