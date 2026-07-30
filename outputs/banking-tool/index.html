@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deine Geld-Töpfe</title>
+<style>
+  :root{
+    --beige:#f6f0e8; --card:#fffdfa; --ink:#3a2f2a; --muted:#8a7a6d;
+    --rose:#c98a7a; --gold:#c9a24b; --rust:#a85a3c; --red:#9e3b2e;
+    --green:#5f7d54; --line:#e7dccc; --track:#ece2d3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Montserrat','Segoe UI',sans-serif;background:var(--beige);color:var(--ink);line-height:1.5;padding:22px 14px 60px;}
+  .wrap{max-width:720px;margin:0 auto;}
+  h1{font-size:26px;font-weight:800;letter-spacing:-.3px;}
+  .sub{color:var(--muted);font-size:14px;margin-top:3px;}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px;box-shadow:0 2px 10px rgba(120,90,60,.05);}
+  .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+  .between{justify-content:space-between;}
+  label{font-size:13px;color:var(--muted);font-weight:600;}
+  input,select{font-family:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;width:100%;}
+  input:focus,select:focus{outline:none;border-color:var(--gold);}
+  .btn{font-family:inherit;font-size:15px;font-weight:700;color:#fff;background:var(--rust);border:none;border-radius:10px;padding:11px 18px;cursor:pointer;white-space:nowrap;}
+  .btn:hover{background:#94502f;}
+  .btn.ghost{background:transparent;color:var(--rust);border:1px solid var(--rust);}
+  .month-nav{display:flex;align-items:center;gap:12px;}
+  .month-nav button{background:var(--card);border:1px solid var(--line);border-radius:10px;width:38px;height:38px;font-size:18px;cursor:pointer;color:var(--ink);}
+  .month-nav .m{font-size:17px;font-weight:800;min-width:130px;text-align:center;}
+  .bigtotal{font-size:34px;font-weight:800;letter-spacing:-.5px;}
+  .hint{font-size:13px;color:var(--muted);}
+  .topf{margin-top:14px;}
+  .topf .th{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:5px;}
+  .topf .tname{font-weight:700;font-size:15px;}
+  .topf .tamt{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;}
+  .bar{height:16px;background:var(--track);border-radius:20px;overflow:hidden;}
+  .bar > span{display:block;height:100%;border-radius:20px;transition:width .5s ease;}
+  .full-badge{font-size:11px;font-weight:800;color:var(--green);}
+  .sec-title{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);font-weight:800;margin:22px 0 2px;}
+  .potgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:12px;}
+  .pot{border-radius:14px;padding:14px;color:#fff;position:relative;overflow:hidden;}
+  .pot .pl{font-size:13px;font-weight:700;opacity:.95;}
+  .pot .pv{font-size:23px;font-weight:800;margin-top:3px;font-variant-numeric:tabular-nums;}
+  .pot .pp{font-size:11px;opacity:.9;margin-top:2px;}
+  .p-steuer{background:#6b6f76;} .p-schulden{background:var(--red);} .p-gans{background:var(--green);} .p-traeume{background:var(--gold);}
+  .entry{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;}
+  .entry:last-child{border-bottom:none;}
+  .entry .del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:4px;}
+  .entry .del:hover{color:var(--red);}
+  details{margin-top:6px;}
+  details summary{cursor:pointer;font-size:12px;color:var(--muted);list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary:before{content:"▸ ";}
+  details[open] summary:before{content:"▾ ";}
+  .lineitem{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);padding:2px 0;}
+  .setgrid{display:grid;grid-template-columns:1fr auto;gap:8px 12px;align-items:center;margin-top:10px;}
+  .setgrid input{width:110px;text-align:right;}
+  .callout{background:#fbf3e4;border-left:4px solid var(--gold);border-radius:8px;padding:12px 14px;margin-top:14px;font-size:13.5px;}
+  .callout.good{background:#eef3e9;border-left-color:var(--green);}
+  .foot{color:var(--muted);font-size:11px;margin-top:26px;text-align:center;}
+  @media(max-width:520px){ .bigtotal{font-size:28px;} h1{font-size:22px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="row between">
+    <div>
+      <h1>🪿 Deine Geld-Töpfe</h1>
+      <div class="sub">Trag deine Einnahmen ein, sieh deine Töpfe füllen.</div>
+    </div>
+    <div class="row" style="gap:8px">
+      <button class="btn ghost" id="exportBtn" style="padding:8px 12px;font-size:13px">⬇ Sichern</button>
+      <button class="btn ghost" id="importBtn" style="padding:8px 12px;font-size:13px">⬆ Laden</button>
+      <input type="file" id="importFile" accept="application/json,.json" style="display:none">
+    </div>
+  </div>
+
+  <!-- Monat + Gesamt -->
+  <div class="card">
+    <div class="row between">
+      <div class="month-nav">
+        <button id="prevM">‹</button>
+        <div class="m" id="monthLabel">–</div>
+        <button id="nextM">›</button>
+      </div>
+      <div style="text-align:right">
+        <div class="hint">Eingegangen diesen Monat (netto)</div>
+        <div class="bigtotal" id="incomeTotal">0 €</div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:12px;gap:14px;flex-wrap:wrap;align-items:flex-start">
+      <span class="hint">Eingegangen: <b id="sumIncome" style="color:var(--ink)">0 €</b></span>
+      <span class="hint" style="display:inline-flex;flex-direction:column;gap:2px">
+        <span>− monatliche Fixkosten: <b id="sumFix" style="color:var(--red)">0 €</b></span>
+        <span id="bruttoZiel" style="font-size:11px;color:var(--rust);font-weight:600"></span>
+      </span>
+      <span class="hint">− zusätzliche Ausgaben: <b id="sumExp" style="color:var(--red)">0 €</b></span>
+      <span class="hint">− Steuer-Rücklage: <b id="sumSteuer" style="color:var(--red)">0 €</b></span>
+      <span class="hint">= frei verfügbar: <b id="sumUeber" style="color:var(--ink)">0 €</b></span>
+    </div>
+    <div id="statusLine" class="callout" style="margin-top:12px"></div>
+    <div id="prognose" style="margin-top:10px;display:none"></div>
+  </div>
+
+  <!-- Eintragen -->
+  <div class="card">
+    <label>Neue Einnahme eintragen (alle Quellen, brutto — USt wird automatisch abgezogen)</label>
+    <div class="row" style="margin-top:8px">
+      <input type="number" id="amt" placeholder="z. B. 1500" inputmode="decimal" style="flex:2;min-width:120px">
+      <select id="incStatus" style="flex:1;min-width:150px">
+        <option value="ein">✓ eingegangen</option>
+        <option value="erw">◷ erwartet</option>
+      </select>
+      <input type="date" id="date" style="flex:1;min-width:150px">
+      <button class="btn" id="addBtn">Hinzufügen</button>
+    </div>
+    <div id="entries"></div>
+  </div>
+
+  <!-- Weitere Ausgaben -->
+  <div class="card">
+    <label>Zusätzliche Ausgabe eintragen (außer den Fixkosten unten)</label>
+    <div class="row" style="margin-top:8px">
+      <input type="text" id="expLabel" placeholder="wofür? z. B. Tierarzt" style="flex:2;min-width:120px">
+      <input type="number" id="expAmt" placeholder="Betrag" inputmode="decimal" style="flex:1;min-width:90px">
+      <select id="expBrutto" style="flex:1;min-width:130px">
+        <option value="19">brutto 19%</option>
+        <option value="7">brutto 7%</option>
+        <option value="0">netto</option>
+      </select>
+      <input type="date" id="expDate" style="flex:1;min-width:150px">
+      <button class="btn" id="addExpBtn">Hinzufügen</button>
+    </div>
+    <div id="expEntries"></div>
+  </div>
+
+  <!-- Kostentöpfe -->
+  <div class="card">
+    <div class="sec-title" style="margin-top:0">1. Kostentöpfe — werden zuerst gefüllt</div>
+    <div id="costPots"></div>
+  </div>
+
+  <!-- Überschuss-Plan: Olli → Puffer → Gans -->
+  <div class="card" style="background:linear-gradient(180deg,#eef3e9,var(--card))">
+    <div class="sec-title" style="margin-top:0">2. Überschuss-Plan: Olli → Puffer → Gans</div>
+    <div class="row between" style="align-items:flex-end;margin-top:4px">
+      <div>
+        <div class="hint">frei verfügbar gesamt (über alle Monate)</div>
+        <div class="bigtotal" id="freiTotal" style="color:var(--green)">0 €</div>
+      </div>
+      <div style="text-align:right">
+        <div class="hint">dieser Monat</div>
+        <div style="font-size:22px;font-weight:800;color:var(--green)" id="freiMonth">0 €</div>
+      </div>
+    </div>
+    <div id="seqPots" style="margin-top:16px"></div>
+    <div class="hint" id="seqLine" style="margin-top:10px"></div>
+  </div>
+
+  <!-- Einstellungen -->
+  <div class="card">
+    <details>
+      <summary style="font-size:14px;font-weight:700;color:var(--ink)">⚙️ Einstellungen (Beträge &amp; Aufteilung)</summary>
+      <div class="setgrid">
+        <label>Gehalt / Privat (Ziel)</label><input type="number" id="s_gehalt">
+        <label>Business-Kosten (Ziel)</label><input type="number" id="s_business">
+        <label>Hof-Kosten (Ziel)</label><input type="number" id="s_hof">
+        <label>USt-Satz für Brutto→Netto (%)</label><input type="number" id="s_ust">
+        <label>Steuer-Rücklage (% vom Gewinn)</label><input type="number" id="s_steuer">
+        <label>Anteil Schulden/Puffer/Gans (%)</label><input type="number" id="s_schiene">
+        <label>Anteil Träume (%)</label><input type="number" id="s_traeume">
+        <label>Olli zurückzahlen (€)</label><input type="number" id="s_olli">
+        <label>Puffer-Ziel (€)</label><input type="number" id="s_puffer">
+      </div>
+      <div class="row" style="margin-top:12px">
+        <button class="btn" id="saveSet">Speichern</button>
+        <button class="btn ghost" id="resetSet">Zurücksetzen</button>
+      </div>
+      <div class="hint" style="margin-top:8px">Steuersatz auf den Gewinn ist ein Startwert. Mit Steuerberaterin abstimmen.</div>
+    </details>
+  </div>
+
+  <div class="foot">Deine Daten bleiben nur in diesem Browser (localStorage). Keine Steuer- oder Anlageberatung.</div>
+
+</div>
+
+<script>
+const DEFAULTS = {
+  gehalt: 3000, business: 3697, hof: 2369, steuer: 30, ust: 19,
+  olli: 1500, puffer: 10000, schiene: 60, traeume: 40
+};
+// Was in jedem Kostentopf steckt (monatlich gerechnet)
+const BREAKDOWN = {
+  privat: [['Leben / Hausrate',1200],['Autokredit',400],['Versicherungen KV/KT',360],['Kfz-Versicherung',48],['Sprit',40],['Altersvorsorge',40],['Spotify + Audible',22.94],['(dein Gehalt deckt das + Puffer)','']],
+  business: [['Werbung (Ø, keine USt)',2000],['United Media (netto)',529],['Steuerberater (netto)',210.08],['Darlehen (keine USt)',109.35],['Fortbildung/auxmoney (keine USt)',406],['Julia Trost (keine USt)',84],['Devine Funnels (netto)',81.51],['Kenzie (netto)',54.62],['Lexware Office XL (netto)',32.9],['Kontoführung (netto)',29.41],['Webinarkit',28],['ManyChat (RC)',21.5],['Claude Pro (netto)',18],['Qonto (netto)',14.29],['Thrivecart',16.67],['Vimeo',16.8],['Handy (netto)',10.08],['Zoom',9.79],['Slack (netto)',8.4],['All-Inkl (netto)',8.4],['Canva',7.7]],
+  hof: [['Darlehen (netto)',1738.5],['Pferde (Schmied, Futter) netto',277.31],['Strom',50],['Unfallversicherung',22],['Rechtsschutz Pferd',4.7],['Heu (4 Pferde) netto',134.45],['Treckerinspektion netto',49.58],['Betriebshaftpflicht',46.33],['Einstreu netto',14.01],['Vers. Anhänger/Trecker',13],['Steuern Trecker',12.5],['Diesel netto',6.72]]
+};
+const COSTPOTS = [
+  {key:'privat', label:'🐴 Privat / Gehalt', color:'var(--rose)', cfg:'gehalt'},
+  {key:'business', label:'💻 Business', color:'var(--gold)', cfg:'business'},
+  {key:'hof', label:'🏡 Hof', color:'var(--rust)', cfg:'hof'}
+];
+
+let cfg = Object.assign({}, DEFAULTS, load('geldtoepfe_config', {}));
+let data = load('geldtoepfe_data', {});
+let dataExp = load('geldtoepfe_expenses', {});
+let month = todayMonth();
+
+function load(k, def){ try{ const v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch(e){ return def; } }
+function save(){ localStorage.setItem('geldtoepfe_config', JSON.stringify(cfg)); localStorage.setItem('geldtoepfe_data', JSON.stringify(data)); localStorage.setItem('geldtoepfe_expenses', JSON.stringify(dataExp)); }
+function todayMonth(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'); }
+function eur(n){ return (Math.round(n*100)/100).toLocaleString('de-DE',{minimumFractionDigits:0,maximumFractionDigits:0})+' €'; }
+function eur2(n){ return (Math.round(n*100)/100).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' €'; }
+function monthName(m){ const [y,mo]=m.split('-'); const names=['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']; return names[+mo-1]+' '+y; }
+
+function rateOf(e){ return (e.ust!==undefined && e.ust!==null) ? +e.ust : (e.brutto ? ((+cfg.ust)||0) : 0); }
+function netAmount(e){ const r=rateOf(e); return r>0 ? e.amount/(1+r/100) : e.amount; }
+function incNet(e){ const r=(+cfg.ust)||0; return r>0 ? e.amount/(1+r/100) : e.amount; }
+function rateSelect(e){
+  const r=rateOf(e);
+  return '<select class="rate" data-id="'+e.id+'" title="USt-Satz" style="font-size:11px;padding:2px 4px;border:1px solid var(--line);border-radius:6px;margin:0 6px">'+
+    [19,7,0].map(v=>'<option value="'+v+'"'+(v===r?' selected':'')+'>'+(v===0?'netto':'br '+v+'%')+'</option>').join('')+
+  '</select>';
+}
+function entriesFor(m){ return data[m]||[]; }
+function confirmedFor(m){ return entriesFor(m).filter(e=>e.status!=='erw').reduce((s,e)=>s+incNet(e),0); }
+function expectedFor(m){ return entriesFor(m).filter(e=>e.status==='erw').reduce((s,e)=>s+incNet(e),0); }
+function expensesFor(m){ return dataExp[m]||[]; }
+function expenseSum(m){ return expensesFor(m).reduce((s,e)=>s+netAmount(e),0); }
+
+function compute(income, expenses){
+  const business=+cfg.business, hof=+cfg.hof, gehalt=+cfg.gehalt;
+  let rem = income - expenses;
+  const pots = COSTPOTS.map(p=>{
+    const target = +cfg[p.cfg];
+    const filled = Math.max(0, Math.min(rem, target));
+    rem -= filled;
+    return {...p, target, filled, pct: target>0?Math.min(100, filled/target*100):100};
+  });
+  const costTotal = business + hof + gehalt;
+  // Einzelunternehmen: Einkommensteuer auf den Gewinn VOR der Privatentnahme
+  const gewinn = Math.max(income - expenses - business - hof, 0);
+  const steuer = gewinn * (+cfg.steuer/100);
+  // frei = nach Betriebskosten (Business+Hof), Steuer UND Gehalt
+  const frei = (income - expenses - business - hof) - steuer - gehalt;
+  return {pots, costTotal, gewinn, steuer, frei};
+}
+
+function render(){
+  document.getElementById('monthLabel').textContent = monthName(month);
+  const confirmed = confirmedFor(month);
+  const expected = expectedFor(month);
+  const expenses = expenseSum(month);
+  const avail = confirmed - expenses;
+  const r = compute(confirmed, expenses);
+  document.getElementById('incomeTotal').textContent = eur(confirmed);
+  document.getElementById('sumIncome').textContent = eur(confirmed);
+  document.getElementById('sumFix').textContent = eur(r.costTotal);
+  document.getElementById('sumExp').textContent = eur(expenses);
+  document.getElementById('sumSteuer').textContent = eur(r.steuer);
+  const ue = document.getElementById('sumUeber');
+  ue.textContent = eur(r.frei);
+  ue.style.color = r.frei>0 ? 'var(--green)' : (r.frei<0 ? 'var(--red)' : 'var(--muted)');
+  const needed = r.costTotal + expenses;
+  const bruttoZiel = r.costTotal * (1 + ((+cfg.ust)||0)/100);
+  document.getElementById('bruttoZiel').textContent = '🎯 dafür '+eur(bruttoZiel)+' Umsatz brutto';
+
+  // Prognose (erwartete Auszahlungen, zählen NICHT in die Töpfe)
+  const prog = document.getElementById('prognose');
+  if(expected > 0){
+    const rP = compute(confirmed + expected, expenses);
+    prog.style.display='block';
+    prog.className='callout';
+    prog.style.borderLeftColor='var(--muted)';
+    prog.style.background='#f0eadf';
+    prog.innerHTML='◷ <b>Prognose:</b> Noch <b>'+eur(expected)+'</b> erwartet. Wenn die kommen, hättest du <b>'+eur(avail+expected)+'</b> zu verteilen'+(rP.frei>0?' und <b>'+eur(rP.frei)+'</b> frei für den Plan':'')+'. <span style="color:var(--muted)">(zählt noch nicht in die Töpfe)</span>';
+  } else { prog.style.display='none'; }
+
+  // Statuszeile
+  const sl = document.getElementById('statusLine');
+  if(confirmed <= 0){
+    sl.className='callout'; sl.innerHTML='Trag deine erste Einnahme ein, dann füllen sich die Töpfe.';
+  } else if(avail < r.costTotal){
+    sl.className='callout'; sl.innerHTML='Noch <b>'+eur(needed - confirmed)+'</b> Einnahmen bis Fixkosten + Ausgaben gedeckt sind (Ziel '+eur(needed)+'). Danach folgen Steuer &amp; Gehalt.';
+  } else if(r.frei < 0){
+    sl.className='callout'; sl.innerHTML='Fixkosten gedeckt, aber die Steuer-Rücklage (<b>'+eur(r.steuer)+'</b>) ist noch nicht ganz drin: <b>'+eur(-r.frei)+'</b> fehlen bis zum echten Plus.';
+  } else {
+    sl.className='callout good'; sl.innerHTML='Alles gedeckt inkl. <b>'+eur(r.steuer)+'</b> Steuer-Rücklage. 🎉 <b>'+eur(r.frei)+'</b> frei für Olli/Puffer/Gans.';
+  }
+
+  // Einträge
+  const ent = document.getElementById('entries');
+  const list = entriesFor(month);
+  ent.innerHTML = list.length ? list.map(e=>{
+    const erw = e.status==='erw';
+    return '<div class="entry" style="'+(erw?'opacity:.6':'')+'">'+
+      '<span>'+new Date(e.date).toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})+'</span>'+
+      '<span style="flex:1;padding-left:10px;font-size:12px;color:var(--muted)">'+(erw?'◷ erwartet':'✓ eingegangen')+(((+cfg.ust)||0)>0?' · brutto '+cfg.ust+'% → '+eur(incNet(e))+' netto':'')+'</span>'+
+      '<span style="font-weight:700;font-variant-numeric:tabular-nums">'+eur2(e.amount)+'</span>'+
+      (erw?'<button class="conf" data-id="'+e.id+'" title="als eingegangen markieren" style="background:none;border:1px solid var(--green);color:var(--green);border-radius:8px;font-size:12px;padding:3px 8px;cursor:pointer;margin-left:6px">ist da</button>':'')+
+      '<button class="del" data-id="'+e.id+'" title="löschen">✕</button></div>';
+  }).join('') : '<div class="hint" style="margin-top:10px">Noch keine Einnahmen in '+monthName(month)+'.</div>';
+
+  // Ausgaben-Liste
+  const expList = expensesFor(month);
+  document.getElementById('expEntries').innerHTML = expList.length ? expList.map(e=>
+    '<div class="entry"><span>'+new Date(e.date).toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'})+'</span>'+
+    '<span style="flex:1;padding-left:10px">'+(e.label||'')+' <span style="font-size:11px;color:var(--muted)">'+(rateOf(e)>0?'· brutto '+rateOf(e)+'% → '+eur(netAmount(e))+' netto':'· '+eur(netAmount(e))+' netto')+'</span></span>'+
+    '<span style="font-weight:700;color:var(--red);font-variant-numeric:tabular-nums">−'+eur2(e.amount)+'</span>'+
+    '<button class="del" data-id="'+e.id+'" title="löschen">✕</button></div>'
+  ).join('') : '';
+
+  // Kostentöpfe
+  const cp = document.getElementById('costPots');
+  cp.innerHTML = r.pots.map(p=>{
+    const full = p.pct>=100;
+    const items = (BREAKDOWN[p.key]||[]).map(it=>'<div class="lineitem"><span>'+it[0]+'</span><span>'+(it[1]===''?'':eur2(it[1]))+'</span></div>').join('');
+    return '<div class="topf">'+
+      '<div class="th"><span class="tname">'+p.label+(full?' <span class="full-badge">✓ voll</span>':'')+'</span>'+
+      '<span class="tamt">'+eur(p.filled)+' / '+eur(p.target)+'</span></div>'+
+      '<div class="bar"><span style="width:'+p.pct+'%;background:'+p.color+'"></span></div>'+
+      '<details><summary>Was steckt drin?</summary>'+items+'</details>'+
+    '</div>';
+  }).join('');
+
+  // Überschuss-Plan (kumulativ): Olli → Puffer → Gans
+  const allM = Array.from(new Set([...Object.keys(data), ...Object.keys(dataExp)])).sort();
+  let totalFrei = 0;
+  allM.forEach(mm=>{ totalFrei += Math.max(compute(confirmedFor(mm), expenseSum(mm)).frei, 0); });
+  const olliZiel=+cfg.olli, pufferZiel=+cfg.puffer;
+  const schienePct=(+cfg.schiene)||0, traeumePct=(+cfg.traeume)||0;
+  const splitTot=(schienePct+traeumePct)||1;
+  const traeumeProz=Math.round(traeumePct/splitTot*100);
+  const traeumeTotal = totalFrei * traeumePct/splitTot;  // parallel
+  const schiene = totalFrei * schienePct/splitTot;       // Olli → Puffer → Gans
+  const olli = Math.min(schiene, olliZiel);
+  const puffer = Math.min(Math.max(schiene-olliZiel,0), pufferZiel);
+  const gans = Math.max(schiene-olliZiel-pufferZiel, 0);
+  document.getElementById('freiTotal').textContent = eur(totalFrei);
+  document.getElementById('freiMonth').textContent = eur(Math.max(r.frei,0));
+  const seq=[
+    {l:'💳 Olli zurückzahlen', v:olli, ziel:olliZiel, color:'var(--red)'},
+    {l:'🛟 Puffer (Notgroschen)', v:puffer, ziel:pufferZiel, color:'var(--rose)'},
+    {l:'🪿 Goldene Gans', v:gans, ziel:0, color:'var(--green)'},
+    {l:'✨ Träume ('+traeumeProz+'% parallel)', v:traeumeTotal, ziel:0, color:'var(--gold)'}
+  ];
+  document.getElementById('seqPots').innerHTML = seq.map(p=>{
+    const full = p.ziel>0 && p.v>=p.ziel;
+    const pct = p.ziel>0 ? Math.min(100, p.v/p.ziel*100) : (p.v>0?100:0);
+    return '<div class="topf">'+
+      '<div class="th"><span class="tname">'+p.l+(full?' <span class="full-badge">✓ voll</span>':'')+'</span>'+
+      '<span class="tamt">'+eur(p.v)+(p.ziel>0?' / '+eur(p.ziel):' (wächst)')+'</span></div>'+
+      '<div class="bar"><span style="width:'+pct+'%;background:'+p.color+'"></span></div>'+
+    '</div>';
+  }).join('');
+  const aktiv = schiene < olliZiel ? 'Olli' : (schiene < olliZiel+pufferZiel ? 'den Puffer' : 'die Gans');
+  const schieneProz = 100-traeumeProz;
+  document.getElementById('seqLine').innerHTML = totalFrei>0
+    ? 'Aktuell: <b>'+schieneProz+'%</b> deines Überschusses gehen an <b>'+aktiv+'</b>, <b>'+traeumeProz+'%</b> in die Träume. Ist ein Topf der '+schieneProz+'%-Schiene voll, geht es automatisch weiter (Olli → Puffer → Gans).'
+    : 'Sobald Überschuss da ist: '+schieneProz+'% in die Schiene (Olli → Puffer → Gans), '+traeumeProz+'% in die Träume.';
+
+  // Settings-Felder
+  document.getElementById('s_gehalt').value=cfg.gehalt;
+  document.getElementById('s_business').value=cfg.business;
+  document.getElementById('s_hof').value=cfg.hof;
+  document.getElementById('s_steuer').value=cfg.steuer;
+  document.getElementById('s_ust').value=cfg.ust;
+  document.getElementById('s_schiene').value=cfg.schiene;
+  document.getElementById('s_traeume').value=cfg.traeume;
+  document.getElementById('s_olli').value=cfg.olli;
+  document.getElementById('s_puffer').value=cfg.puffer;
+}
+
+// Events
+document.getElementById('addBtn').onclick = ()=>{
+  const a=parseFloat(document.getElementById('amt').value.replace(',','.'));
+  const d=document.getElementById('date').value || new Date().toISOString().slice(0,10);
+  if(!a||a<=0){ return; }
+  const m=d.slice(0,7);
+  if(!data[m]) data[m]=[];
+  data[m].push({id:Date.now(), date:d, amount:a, status:document.getElementById('incStatus').value, ust:(+cfg.ust)||19});
+  data[m].sort((x,y)=>x.date.localeCompare(y.date));
+  month=m; save();
+  document.getElementById('amt').value='';
+  render();
+};
+document.getElementById('entries').onclick = (e)=>{
+  const id=+e.target.dataset.id;
+  if(e.target.classList.contains('del')){
+    data[month]=entriesFor(month).filter(x=>x.id!==id); save(); render();
+  } else if(e.target.classList.contains('conf')){
+    const it=entriesFor(month).find(x=>x.id===id); if(it){ it.status='ein'; save(); render(); }
+  }
+};
+document.getElementById('addExpBtn').onclick = ()=>{
+  const a=parseFloat((document.getElementById('expAmt').value||'').replace(',','.'));
+  const d=document.getElementById('expDate').value || new Date().toISOString().slice(0,10);
+  const lbl=document.getElementById('expLabel').value.trim();
+  if(!a||a<=0){ return; }
+  const m=d.slice(0,7);
+  if(!dataExp[m]) dataExp[m]=[];
+  dataExp[m].push({id:Date.now(), date:d, amount:a, label:lbl, ust:+document.getElementById('expBrutto').value});
+  dataExp[m].sort((x,y)=>x.date.localeCompare(y.date));
+  month=m; save();
+  document.getElementById('expAmt').value=''; document.getElementById('expLabel').value='';
+  render();
+};
+document.getElementById('expEntries').onclick = (e)=>{
+  if(e.target.classList.contains('del')){
+    const id=+e.target.dataset.id;
+    dataExp[month]=expensesFor(month).filter(x=>x.id!==id);
+    save(); render();
+  }
+};
+document.getElementById('prevM').onclick=()=>{ month=shiftMonth(month,-1); render(); };
+document.getElementById('nextM').onclick=()=>{ month=shiftMonth(month,1); render(); };
+function shiftMonth(m,d){ const [y,mo]=m.split('-').map(Number); const dt=new Date(y,mo-1+d,1); return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0'); }
+
+document.getElementById('saveSet').onclick=()=>{
+  ['gehalt','business','hof','steuer','ust','schiene','traeume','olli','puffer'].forEach(k=>{
+    const v=parseFloat(document.getElementById('s_'+k).value); if(!isNaN(v)) cfg[k]=v;
+  });
+  save(); render();
+};
+document.getElementById('resetSet').onclick=()=>{ cfg={...DEFAULTS}; save(); render(); };
+
+document.getElementById('exportBtn').onclick=()=>{
+  const payload={ config:cfg, data:data, expenses:dataExp, exportedAt:new Date().toISOString() };
+  const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url; a.download='geld-toepfe-backup-'+new Date().toISOString().slice(0,10)+'.json';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+document.getElementById('importBtn').onclick=()=>document.getElementById('importFile').click();
+document.getElementById('importFile').onchange=(ev)=>{
+  const file=ev.target.files[0]; if(!file) return;
+  const reader=new FileReader();
+  reader.onload=()=>{
+    try{
+      const p=JSON.parse(reader.result);
+      if(!confirm('Gesicherte Daten laden und die aktuellen überschreiben?')){ ev.target.value=''; return; }
+      if(p.config) cfg=p.config;
+      if(p.data) data=p.data;
+      if(p.expenses) dataExp=p.expenses;
+      save(); render();
+      alert('Daten geladen ✓');
+    }catch(e){ alert('Datei konnte nicht gelesen werden.'); }
+    ev.target.value='';
+  };
+  reader.readAsText(file);
+};
+
+document.getElementById('date').value=new Date().toISOString().slice(0,10);
+document.getElementById('expDate').value=new Date().toISOString().slice(0,10);
+render();
+</script>
+</body>
+</html>

@@ -379,7 +379,12 @@
       "Bash(node -e \"const m=require\\('pdf-parse'\\); console.log\\('type:',typeof m\\); console.log\\('keys:',Object.keys\\(m\\)\\); console.log\\(m\\)\")",
       "Bash(node extract.js \"C:/Users/Olive/Documents/Kontoauszüge/Konto 2026/Qonto/April.pdf\")",
       "Bash(node readxlsx.js \"C:/Users/Olive/Documents/Anika/Gewerbe/Businesscoaching/Kostenberechnungen/Kostenaufstellung.xlsx\")",
-      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-routine/banking-routine.html\")"
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-routine/banking-routine.html\")",
+      "Bash(node build-tracker.js)",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-routine/monats-tracker.xlsx\")",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-tool/index.html\")",
+      "Bash(explorer \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\banking-tool\")",
+      "WebFetch(domain:unique-dieffenbachia-dcf390.netlify.app)"
     ],
     "defaultMode": "bypassPermissions"
   }
