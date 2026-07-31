@@ -10,6 +10,11 @@
  *   3. Original-ThriveCart-PDF an den Beleg haengen
  * Danach schlaegt Lexware den Beleg unter "Umsaetze zuordnen" als Treffer vor.
  *
+ * Am Ende jedes Laufs zusaetzlich: Zusammenfassung nach Land/USt-Satz (Basis fuer die
+ * OSS-Meldung, die Lexware selbst nicht liefert) -- als Tabelle in der Konsole UND als
+ * CSV auf dem Desktop. Zaehlt alle echten Rechnungen im Ordner, unabhaengig davon, ob sie
+ * in diesem Lauf neu gebucht oder schon vorher gebucht waren.
+ *
  * DOPPELBUCHUNGS-SCHUTZ: Rechnungen, die in Lexware schon als Beleg existieren
  * (egal ob manuell als "000000099" oder automatisch als "TC-99"), werden uebersprungen.
  *
@@ -23,6 +28,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
 
 // ---------- .env laden ----------
 const env = {};
@@ -99,6 +105,7 @@ async function attachPdf(voucherId, filePath, tries = 5) {
   }
 }
 const round2 = n => Math.round(n * 100) / 100;
+const fmtDE = n => n.toFixed(2).replace('.', ',');
 
 // voucherNumber -> ThriveCart-Rechnungsnummer (int) normalisieren; sonst null
 function invNumFromVoucherNumber(vn) {
@@ -168,13 +175,13 @@ function invNumFromVoucherNumber(vn) {
   if (!nums.length) { console.error('Keine passenden Rechnungsnummern im Ordner gefunden.'); process.exit(1); }
 
   const stats = { gebucht: 0, uebersprungen: 0, fehler: 0 };
+  const summary = {}; // Land|Satz -> { land, rate, anzahl, netto, ust, brutto }
   console.log(`\n${dryRun ? '[VORSCHAU – es wird NICHTS gebucht]\n' : ''}${nums.length} Rechnung(en) im Ordner, ${alreadyBooked.size} bereits in Lexware gebucht.\n`);
 
   for (const num of nums) {
     const items = byInv[num];
     const file = num2file[num];
     if (!items) { console.log(`Nr ${num}: kein ThriveCart-Treffer -> uebersprungen`); stats.uebersprungen++; continue; }
-    if (alreadyBooked.has(num)) { console.log(`Nr ${num}: bereits gebucht -> uebersprungen`); stats.uebersprungen++; continue; }
 
     const first = items[0];
     const c = first.customer || {};
@@ -197,6 +204,16 @@ function invNumFromVoucherNumber(vn) {
       stats.uebersprungen++;
       continue;
     }
+
+    // OSS-Zusammenfassung: jede echte Rechnung zaehlt, auch wenn sie in Lexware schon vorher gebucht wurde
+    const sumKey = `${land}|${rate}`;
+    const s = summary[sumKey] || (summary[sumKey] = { land, rate, anzahl: 0, netto: 0, ust: 0, brutto: 0 });
+    s.anzahl++;
+    s.netto = round2(s.netto + (totalGross - totalTax));
+    s.ust = round2(s.ust + totalTax);
+    s.brutto = round2(s.brutto + totalGross);
+
+    if (alreadyBooked.has(num)) { console.log(`Nr ${num}: bereits gebucht -> uebersprungen`); stats.uebersprungen++; continue; }
 
     let name = `${(c['first name'] || '').trim()} ${(c['last name'] || '').trim()}`.trim();
     if (!name) name = `⚠ Name fehlt (${c.email || 'keine E-Mail'})`;
@@ -233,4 +250,22 @@ function invNumFromVoucherNumber(vn) {
   }
 
   console.log(`\nFertig. Gebucht: ${stats.gebucht}${dryRun ? ' (Vorschau)' : ''} | Uebersprungen: ${stats.uebersprungen} | Fehler: ${stats.fehler}`);
+
+  // ---------- OSS-Zusammenfassung: Konsole + CSV auf dem Desktop ----------
+  const rows = Object.values(summary).sort((x, y) => x.land.localeCompare(y.land) || x.rate - y.rate);
+  if (rows.length) {
+    console.log('\n--- Zusammenfassung nach Land/USt-Satz (Basis fuer OSS-Meldung, Lexware bucht nur pro Beleg) ---');
+    let gesamtBrutto = 0;
+    for (const r of rows) {
+      gesamtBrutto += r.brutto;
+      console.log(`${r.land.padEnd(4)} ${String(r.rate + '%').padStart(4)} | ${String(r.anzahl).padStart(3)} Rechn. | Netto ${fmtDE(r.netto)}€ | USt ${fmtDE(r.ust)}€ | Brutto ${fmtDE(r.brutto)}€`);
+    }
+    console.log(`Gesamt Brutto: ${fmtDE(round2(gesamtBrutto))}€`);
+
+    const csvLines = ['Land;USt-Satz;Anzahl;Netto (EUR);USt (EUR);Brutto (EUR)'];
+    for (const r of rows) csvLines.push(`${r.land};${r.rate}%;${r.anzahl};${fmtDE(r.netto)};${fmtDE(r.ust)};${fmtDE(r.brutto)}`);
+    const outPath = path.join(os.homedir(), 'Desktop', `OSS-Zusammenfassung ${path.basename(dir)}.csv`);
+    fs.writeFileSync(outPath, csvLines.join('\r\n'), 'utf8');
+    console.log(`\nZusammenfassung gespeichert: ${outPath}`);
+  }
 })().catch(e => { console.error(e); process.exit(1); });

@@ -4,6 +4,8 @@
 
 **Aufwand:** ca. 2 Minuten deiner Zeit + ein Skript-Lauf.
 
+**Automatisch:** Die lokale Aufgabe "buchhaltung-thrivecart-lexware" läuft jeden 1. des Monats von selbst — findet sie schon einen Export-Ordner auf dem Desktop, bucht sie direkt; findet sie keinen, erinnert sie dich an Schritt 1. Du kannst sie jederzeit auch manuell starten. (Die frühere separate Cloud-Erinnerung wurde deaktiviert, da redundant.)
+
 ---
 
 ## Schritt 1 — ThriveCart-Rechnungen exportieren
@@ -46,6 +48,9 @@ Lexware bietet bei „Umsätze zuordnen" nur Kategorien der passenden Richtung a
 ## Worauf du achten solltest
 - **Fehlender Kundenname:** Steht in den ThriveCart-Daten kein Name, wird der Kontakt nach der E-Mail benannt und im Skript-Log mit „⚠ Name fehlt" markiert. → Namen in Lexware nachtragen.
 - **Rückerstattungen** werden (noch) nicht automatisch als Gutschrift gebucht — die musst du separat behandeln.
+
+## OSS-Zusammenfassung
+Lexware bucht nur pro Beleg und liefert keine eigene OSS-Meldung. Deshalb schreibt `lexware-import.js` bei jedem Lauf zusätzlich eine Datei `OSS-Zusammenfassung <Ordnername>.csv` auf den Desktop — Summen nach Land/USt-Satz (Netto/USt/Brutto), Basis für deine externe OSS-Meldung. Ersetzt das frühere separate Skript `thrivecart-buchungsexport.ps1` (entfernt, 2026-07-31), das dafür noch einen manuellen CSV-Export brauchte.
 
 ## Voraussetzungen
 - `scripts/.env` mit `THRIVECART_API_KEY` und `LEXWARE_API_KEY` (liegt lokal, gitignored)

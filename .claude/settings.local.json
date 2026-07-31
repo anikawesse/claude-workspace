@@ -384,7 +384,10 @@
       "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-routine/monats-tracker.xlsx\")",
       "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/banking-tool/index.html\")",
       "Bash(explorer \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\banking-tool\")",
-      "WebFetch(domain:unique-dieffenbachia-dcf390.netlify.app)"
+      "WebFetch(domain:unique-dieffenbachia-dcf390.netlify.app)",
+      "Bash(ls -la \"C:/Users/Olive/.claude/scheduled-tasks/\" 2>&1)",
+      "Bash(crontab -l)",
+      "Bash(schtasks /query /fo LIST)"
     ],
     "defaultMode": "bypassPermissions"
   }
