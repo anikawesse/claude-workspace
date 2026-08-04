@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>0 € Webinar: Entspannte Geländespaziergänge – Anika's Pferdeakademie</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:1000;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal-box{background:#fff;border-radius:12px;padding:32px;max-width:520px;width:90%;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:12px;right:16px;font-size:22px;cursor:pointer;color:var(--text-muted);background:none;border:none;line-height:1}
+.modal-box h3{font-size:20px;font-weight:800;color:var(--red);margin-bottom:6px}
+.modal-box p{font-size:13px;color:var(--text-muted);margin-bottom:20px}
+:root{
+  --rose:#e6c5b4;
+  --gold:#b8922a;
+  --rust:#894b2f;
+  --red:#691212;
+  --black:#1a1a1a;
+  --white:#ffffff;
+  --beige:#f5ede2;
+  --beige2:#ede0d0;
+  --beige3:#e8d8c4;
+  --text:#1a1a1a;
+  --text-mid:#4a3828;
+  --text-muted:#7a6050;
+}
+body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--text);max-width:1200px;margin:0 auto;font-size:16px;line-height:1.7}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* TOP BANNER */
+.top-banner{background:var(--red);color:#fff;text-align:center;padding:13px 24px;font-size:13px;font-weight:700;letter-spacing:0.3px;line-height:1.5}
+.top-banner em{color:var(--rose);font-style:normal}
+
+/* ===================== HERO ===================== */
+.sec-hero{background:var(--beige);padding:32px 64px 56px}
+.hero-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;padding:8px 20px;border-radius:4px;margin-bottom:22px}
+.hero-headline{font-size:34px;font-weight:900;line-height:1.18;color:var(--black);margin-bottom:10px;letter-spacing:-0.5px;max-width:740px;margin-left:auto;margin-right:auto}
+.hero-sub{font-size:16px;color:var(--text-mid);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:580px;margin-left:auto;margin-right:auto;font-style:italic}
+.hero-cols{display:grid;grid-template-columns:3fr 2fr;gap:40px;align-items:center}
+.hero-mockup img{width:100%;display:block}
+.hero-mockup-ph{width:100%;aspect-ratio:4/3;background:var(--beige2);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:13px;font-weight:600}
+.hero-bullets{display:flex;flex-direction:column;gap:20px}
+.hero-bullet{display:flex;gap:14px;align-items:flex-start}
+.hero-bullet-icon{width:28px;height:28px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.hero-bullet-icon svg{width:14px;height:14px}
+.hero-bullet-text{font-size:15px;color:var(--text-mid);line-height:1.65;font-weight:500}
+.hero-bullet-text strong{color:var(--black);font-weight:700}
+.hero-cta-wrap{margin-top:36px;text-align:center}
+.date-pill{display:inline-flex;align-items:center;gap:14px;background:var(--white);border:2px solid var(--gold);border-radius:40px;padding:12px 28px 12px 18px;margin-bottom:16px}
+.date-pill .dp-icon{width:36px;height:36px;flex-shrink:0}
+.date-pill .dp-text{font-size:16px;font-weight:700;color:var(--red);line-height:1.3}
+.date-pill .dp-sub{font-size:13px;color:var(--text-muted);font-weight:500}
+
+/* CTA Button */
+.btn-red{display:inline-block;background:var(--red);color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;padding:20px 52px;border-radius:50px;text-decoration:none;text-align:center;border:none;cursor:pointer;letter-spacing:0.3px}
+.btn-red:hover{background:#550f0f}
+.btn-arrows-above{display:block;text-align:center;margin-bottom:14px}
+.btn-arrows-above svg{width:80px;height:28px}
+.btn-red:hover{background:#550f0f}
+.btn-note{font-size:11px;color:var(--text-muted);text-align:center;margin-top:8px}
+
+/* ===================== QUALIFIKATION ===================== */
+.sec-quali{background:var(--white);padding:56px 48px;text-align:center}
+.sec-quali h2{font-size:26px;font-weight:800;color:var(--black);margin-bottom:40px;line-height:1.25;letter-spacing:-0.3px}
+.sec-quali h2 strong{color:var(--red)}
+.quali-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:36px}
+.quali-card{background:var(--beige);border-radius:10px;padding:32px 24px;text-align:center}
+.quali-card-icon{width:44px;height:44px;border-radius:50%;background:var(--red);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.quali-card-icon svg{width:20px;height:20px}
+.quali-card p{font-size:14px;color:var(--text-mid);line-height:1.75;font-weight:500;text-align:left}
+.quali-card p strong{color:var(--black);font-weight:700}
+.quali-ein-klick{font-size:16px;font-weight:700;color:var(--black);margin-bottom:16px}
+@media(max-width:700px){.quali-cards{grid-template-columns:1fr}}
+
+/* ===================== AHA-MOMENTE ===================== */
+.sec-aha{background:var(--beige);padding:56px 48px}
+.section-pre{font-size:10px;font-weight:700;color:var(--rust);letter-spacing:3.5px;text-transform:uppercase;margin-bottom:12px;text-align:center}
+.section-h2{font-size:24px;font-weight:800;line-height:1.25;color:var(--black);margin-bottom:36px;letter-spacing:-0.3px;text-align:center}
+.aha-list{display:flex;flex-direction:column;gap:20px}
+.aha-item{background:var(--white);border-radius:8px;padding:28px 28px 28px 24px;display:grid;grid-template-columns:52px 1fr;gap:20px;align-items:start}
+.aha-num{font-size:38px;font-weight:900;color:var(--rose);line-height:1;text-align:center}
+.aha-item p{font-size:15px;color:var(--text-mid);line-height:1.75;font-weight:500;padding-top:6px}
+
+/* ===================== FORM SECTION ===================== */
+.sec-form{background:var(--red);padding:52px 48px;text-align:center}
+.sec-form h2{font-size:24px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.25}
+.sec-form .form-sub{font-size:14px;color:rgba(255,255,255,0.75);margin-bottom:28px;font-weight:400}
+.form-wrap{max-width:480px;margin:0 auto}
+.fake-input{display:block;width:100%;padding:14px 18px;border:2px solid rgba(255,255,255,0.3);border-radius:6px;font-family:'Montserrat',sans-serif;font-size:15px;color:var(--text);margin-bottom:12px;background:#fff;font-weight:500}
+.fake-input::placeholder{color:var(--text-muted)}
+.btn-white{display:block;width:100%;background:#fff;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:800;font-size:16px;padding:18px 24px;border-radius:6px;text-decoration:none;text-align:center;border:none;cursor:pointer;letter-spacing:0.2px;margin-top:4px}
+.btn-white:hover{background:var(--beige)}
+.btn-gold{display:inline-block;background:var(--gold);color:var(--red);font-family:'Montserrat',sans-serif;font-weight:800;font-size:17px;padding:20px 52px;border-radius:50px;text-decoration:none;text-align:center;border:none;cursor:pointer;letter-spacing:0.3px}
+.btn-gold:hover{background:#c4a71f}
+.form-privacy{font-size:11px;color:rgba(255,255,255,0.55);margin-top:12px;line-height:1.5}
+
+/* ===================== TESTIMONIALS ===================== */
+.sec-testimonials{background:var(--white);padding:56px 48px}
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.tcard{background:var(--beige);border-radius:8px;padding:24px}
+.tcard-top{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.tcard-photo{width:48px;height:48px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--beige2);border:2px solid var(--rose)}
+.tcard-photo img{width:100%;height:100%;object-fit:cover}
+.tcard-photo-ph{width:48px;height:48px;border-radius:50%;background:var(--beige2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--text-muted);font-weight:700;flex-shrink:0;border:2px solid var(--rose);text-align:center;line-height:1.2}
+.tcard-name{font-size:13px;font-weight:700;color:var(--black)}
+.tcard-sub{font-size:11px;color:var(--text-muted);font-weight:500}
+.tcard-quote{font-size:14px;color:var(--text-mid);line-height:1.8;font-style:italic;font-weight:500}
+
+/* ===================== ANIKA ===================== */
+.sec-anika{background:var(--beige2);padding:56px 48px}
+.anika-wrap{display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:start}
+.anika-img{border-radius:10px;overflow:hidden;box-shadow:0 6px 24px rgba(105,18,18,0.10)}
+.anika-img img{width:100%;display:block}
+.anika-img-ph{width:240px;aspect-ratio:3/4;background:var(--beige3);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:13px;font-weight:600}
+.anika-pre{font-size:10px;font-weight:700;color:var(--rust);letter-spacing:3.5px;text-transform:uppercase;margin-bottom:10px}
+.anika-name{font-size:26px;font-weight:900;color:var(--black);margin-bottom:16px;line-height:1.15}
+.anika-body{font-size:14px;color:var(--text-mid);line-height:1.85}
+.anika-body p{margin-bottom:12px}
+.anika-body p:last-child{margin-bottom:0}
+
+/* ===================== COUNTDOWN ===================== */
+.sec-countdown{background:var(--red);padding:28px 48px;text-align:center}
+.countdown-label{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.countdown-title{font-size:16px;font-weight:800;color:#fff;margin-bottom:18px;line-height:1.3}
+.countdown-timer{display:flex;justify-content:center;gap:12px;margin-bottom:24px}
+.ct-block{text-align:center}
+.ct-num{font-size:28px;font-weight:900;color:var(--red);display:block;line-height:1;background:var(--gold);border-radius:6px;padding:8px 14px;min-width:54px}
+.ct-lbl{font-size:9px;color:rgba(255,255,255,0.75);text-transform:uppercase;letter-spacing:2px;margin-top:5px;display:block;font-weight:600}
+.ct-sep{font-size:24px;font-weight:900;color:#fff;align-self:center;margin-bottom:16px}
+
+/* ===================== BOTTOM CTA ===================== */
+.sec-cta{background:var(--beige);padding:52px 48px;text-align:center}
+.sec-cta h2{font-size:24px;font-weight:800;color:var(--black);margin-bottom:8px;line-height:1.25}
+.sec-cta p{font-size:15px;color:var(--text-muted);margin-bottom:28px}
+.cta-form-wrap{max-width:480px;margin:0 auto}
+
+/* FOOTER */
+.footer{background:var(--beige2);padding:20px 48px;text-align:center;font-size:11px;color:var(--text-muted)}
+.footer a{color:var(--text-muted)}
+
+/* ===================== RESPONSIVE ===================== */
+@media(max-width:700px){
+  .hero-inner{grid-template-columns:1fr;min-height:auto}
+  .hero-photo{order:-1}
+  .hero-photo-placeholder{min-height:280px}
+  .hero-text{padding:32px 24px}
+  .sec-quali,.sec-aha,.sec-form,.sec-testimonials,.sec-anika,.sec-countdown,.sec-cta{padding:36px 24px}
+  .testimonials-grid{grid-template-columns:1fr}
+  .anika-wrap{grid-template-columns:1fr}
+  .anika-img-ph{width:100%}
+  .countdown-timer{gap:8px}
+  .ct-num{font-size:28px;padding:8px 12px;min-width:54px}
+  .top-banner{font-size:11px;padding:12px 16px}
+  .section-h2,.sec-quali h2,.sec-cta h2,.sec-form h2{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BANNER -->
+<div class="top-banner">
+  <em>0 € Live-Webinar</em> &nbsp;·&nbsp; 23. August 2026 &nbsp;·&nbsp; 19 Uhr &nbsp;·&nbsp; Für Freizeitreiterinnen
+</div>
+
+<!-- ====== HERO ====== -->
+<div class="sec-hero" style="text-align:center">
+  <div class="hero-pre" style="margin-bottom:16px">0 € Live-Webinar für Freizeitreiterinnen</div>
+  <h1 class="hero-headline">Wie du in 2 Monaten alleine entspannte Spaziergänge genießt, ganz ohne Pferdekumpel.</h1>
+  <p class="hero-sub">Auch wenn dein Pferd im Moment noch im Gelände sehr gestresst ist oder nicht vom Hof möchte.</p>
+
+  <div class="hero-cols">
+    <!-- Mockup links -->
+    <div class="hero-mockup">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856df32aa3e16cd9238.png" alt="0 € Gelände Webinar mit Anika Wesse">
+    </div>
+
+    <!-- Bullets rechts -->
+    <div class="hero-bullets" style="text-align:left">
+      <p style="font-size:14px;font-weight:700;color:var(--rust);margin-bottom:10px;margin-top:0;line-height:1.4">Diese großartigen Aha-Momente erwarten dich im Webinar:</p>
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 6,11 12,3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hero-bullet-text"><strong>Die einfachste Strategie,</strong> damit dein Pferd ALLEINE mit dir vom Hof geht, ganz ohne Pferdekumpel. Auch wenn dein Pferd bisher noch am Hof klebt.</div>
+      </div>
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 6,11 12,3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hero-bullet-text"><strong>Zwei konkrete Notfallstrategien,</strong> um dein Pferd im Gelände zu beruhigen und zu verhindern, dass es sich losreißt oder einer sich verletzt.</div>
+      </div>
+      <div class="hero-bullet">
+        <div class="hero-bullet-icon">
+          <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 6,11 12,3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="hero-bullet-text"><strong>Dein roter Faden</strong> von den Voraussetzungen fürs Gelände bis zum entspannten Spaziergang. Damit du die Meilensteine kennst und genau weißt, wie du dein Ziel erreichst.</div>
+      </div>
+
+      <div class="date-pill" style="margin-top:8px">
+        <div>
+          <div class="dp-text">Live &nbsp;·&nbsp; 23. August 2026 &nbsp;·&nbsp; 19 Uhr &nbsp;·&nbsp; 0 €</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button unter beiden Spalten, volle Breite mittig -->
+  <div style="text-align:center;margin-top:36px">
+    <span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856eaa4719b5cf5f374.png" alt="Testimonial Sarina" style="width:100%;border-radius:8px">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856670a4ee7830c97ad.png" alt="Testimonial Henriette" style="width:100%;border-radius:8px">
+  </div>
+</div>
+
+<!-- ====== QUALIFIKATION ====== -->
+<div class="sec-quali">
+  <h2>Dieses Webinar ist <strong>dein Game-Changer,</strong> wenn...</h2>
+  <div class="quali-cards">
+    <div class="quali-card">
+      <div class="quali-card-icon"><svg viewBox="0 0 20 20" fill="none"><polyline points="4,10 8,14 16,6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p>...dein Pferd <strong>am Hof klebt</strong> und du schon aufgehört hast zu zählen, wie viele Male ihr versucht habt alleine ins Gelände zu kommen. Also gehst du <strong>nur noch mit Begleitpferd</strong> raus, weil du sonst nicht weißt, wie du die Situation händeln sollst.</p>
+    </div>
+    <div class="quali-card">
+      <div class="quali-card-icon"><svg viewBox="0 0 20 20" fill="none"><polyline points="4,10 8,14 16,6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p>...dein Pferd ins Gelände geht, aber du <strong>nie weißt, ob ihr sicher wieder Zuhause ankommt.</strong> Du hast Angst, dass dein Pferd sich (wieder) losreißt und das sich jemand von euch verletzt.</p>
+    </div>
+    <div class="quali-card">
+      <div class="quali-card-icon"><svg viewBox="0 0 20 20" fill="none"><polyline points="4,10 8,14 16,6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p>...du einfach wissen möchtest, wie du <strong>dein Pferd im Gelände beruhigen kannst</strong> und die Kontrolle behältst. Damit du dich draußen <strong>sicher fühlst</strong> und ihr beide die Ausflüge genießen könnt.</p>
+    </div>
+  </div>
+  <p class="quali-ein-klick">Ein Klick, und du bist am 23. August dabei.</p>
+  <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a></div>
+</div>
+
+<!-- ====== FORMULAR ANKER ====== -->
+<div class="sec-form" id="anmeldung" style="padding:40px 48px">
+  <div style="max-width:380px;margin:0 auto">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6878f29b7cef1e65e6d389c2.webp" alt="Jetzt anmelden" style="width:100%;border-radius:8px;display:block">
+  </div>
+</div>
+
+
+<!-- ====== ANIKA ====== -->
+<div class="sec-anika">
+  <div class="anika-wrap">
+    <div>
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/687a20c3a648335f98d36bda.jpeg" alt="Anika Wesse" class="anika-img-ph" style="object-fit:cover;border-radius:8px">
+    </div>
+    <div>
+      <div class="anika-pre">Wer ist eigentlich die Gastgeberin?</div>
+      <div class="anika-name">Anika Wesse</div>
+      <div class="anika-body">
+        <p>Ich bin Pferdetrainerin und Gründerin von Anika´s Pferdeakademie. Seit Jahren begleite ich <strong>weltweit Freizeitreiterinnen</strong> dabei, mit ihrem Pferd <strong>entspannt ins Gelände zu kommen</strong>, ganz ohne Trainer vor Ort.</p>
+        <p>Ich weiß, wie es sich anfühlt, wenn dein Pferd am Tor stehen bleibt und du <strong>nicht weißt, was du tun sollst.</strong> Und ich weiß, was wirklich hilft, weil ich es mit <strong>hunderten Pferdemenschen</strong> schon umgesetzt habe.</p>
+        <p>Wenn du erstmal ins Gelände gekommen bist, warten dort <strong>die nächsten Herausforderungen</strong> auf dich. Traktoren, die um die Ecke schießen oder Jungbullen, die dich am Zaun verfolgen.</p>
+        <p>Ich kenne die <strong>Notfallstrategien</strong>, die du in diesen Momenten brauchst, um dein Pferd wieder herunterzufahren und <strong>die Situation unter Kontrolle zu behalten.</strong></p>
+        <p>In diesem Webinar zeige ich dir, <strong>wie das auch bei deinem Pferd möglich ist.</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ====== COUNTDOWN ====== -->
+<div class="sec-countdown">
+  <div class="countdown-label">Das Webinar startet in</div>
+  <div class="countdown-title">23. August 2026 &nbsp;·&nbsp; 19 Uhr &nbsp;·&nbsp; Live mit Anika</div>
+  <div class="countdown-timer">
+    <div class="ct-block"><span class="ct-num" id="ct-d">00</span><span class="ct-lbl">Tage</span></div>
+    <div class="ct-sep">:</div>
+    <div class="ct-block"><span class="ct-num" id="ct-h">00</span><span class="ct-lbl">Stunden</span></div>
+    <div class="ct-sep">:</div>
+    <div class="ct-block"><span class="ct-num" id="ct-m">00</span><span class="ct-lbl">Minuten</span></div>
+    <div class="ct-sep">:</div>
+    <div class="ct-block"><span class="ct-num" id="ct-s">00</span><span class="ct-lbl">Sekunden</span></div>
+  </div>
+  <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#anmeldung" class="btn-gold">Jetzt für 0 € anmelden</a></div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal-overlay" id="anmeldung-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Jetzt für 0 € anmelden</h3>
+    <p>23. August 2026 · 19 Uhr · Live mit Anika</p>
+    <iframe src="https://link.devinefunnels.de/widget/form/YmGLIdUURgPTDtMvD66k" style="width:100%;border:none;min-height:320px" scrolling="no" id="inline-YmGLIdUURgPTDtMvD66k"></iframe>
+    <script src="https://link.devinefunnels.de/js/form_embed.js"></script>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Anikas Pferdeakademie &nbsp;·&nbsp; anikas-pferdeakademie.de &nbsp;·&nbsp;
+  <a href="#">Impressum</a> &nbsp;·&nbsp; <a href="#">Datenschutz</a>
+</div>
+
+<!-- COUNTDOWN SCRIPT -->
+<script>
+(function(){
+  var target = new Date('2026-08-23T19:00:00');
+  function pad(n){return n<10?'0'+n:n}
+  function tick(){
+    var now = new Date(), diff = target - now;
+    if(diff <= 0){
+      document.getElementById('ct-d').textContent='00';
+      document.getElementById('ct-h').textContent='00';
+      document.getElementById('ct-m').textContent='00';
+      document.getElementById('ct-s').textContent='00';
+      return;
+    }
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor((diff%86400000)/3600000);
+    var m = Math.floor((diff%3600000)/60000);
+    var s = Math.floor((diff%60000)/1000);
+    document.getElementById('ct-d').textContent=pad(d);
+    document.getElementById('ct-h').textContent=pad(h);
+    document.getElementById('ct-m').textContent=pad(m);
+    document.getElementById('ct-s').textContent=pad(s);
+  }
+  tick();
+  setInterval(tick,1000);
+})();
+
+function openModal(){
+  document.getElementById('anmeldung-modal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('anmeldung-modal').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.getElementById('anmeldung-modal').addEventListener('click', function(e){
+  if(e.target === this) closeModal();
+});
+</script>
+
+</body>
+</html>

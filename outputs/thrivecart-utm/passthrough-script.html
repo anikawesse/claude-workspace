@@ -1,45 +1,32 @@
 <!--
-  ThriveCart UTM-Passthrough-Script
-  Einbau: Custom-HTML/Code-Element auf der Devine-Salespage.
-  Liest utm_* aus der Seiten-URL und hängt sie als passthrough[] an
-  alle ThriveCart-Checkout-Links an.
+  LIVE Footer-Tracking-Script der Ads-Salespage (Devine Funnel → Tracking Code → Footer).
+  Setzt die UTMs fest (paid) in plain UND passthrough-Format und hängt seit 03.08.2026
+  zusätzlich die Meta-Klick-ID (fbclid) an alle ThriveCart-Checkout-Links.
 
-  >>> PRO SEITE ANPASSEN: die "defaults" unten. <<<
-  - Ads-Salespage B:     { utm_source: 'facebook', utm_medium: 'paid' }
-  - Organische Salespage A: { utm_source: 'direct',  utm_medium: 'organic' }
-    (greift nur, wenn jemand OHNE UTM direkt auf die Seite kommt;
-     Mail/Post bringen ihre eigene UTM mit und überschreiben den Default)
+  Warum fbclid: ThriveCart macht daraus fbc für die Conversions API.
+  Zuvor kam die Klick-ID nie bei ThriveCart an → im Events Manager fbc = 0 %,
+  Match Quality 5,7/10. Mit fbclid schließt sich die Attributions-Lücke.
+
+  Die einzige Änderung ggü. der Vorversion: die beiden mit >>> markierten Zeilen.
 -->
 <script>
 (function () {
-  // 1) Fallback, falls Besucher ohne UTM ankommt — PRO SEITE anpassen:
-  var defaults = { utm_source: 'direct', utm_medium: 'organic' };
-
-  // 2) UTMs aus der aktuellen Seiten-URL lesen
-  var params  = new URLSearchParams(window.location.search);
-  var utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
-  var utms = {};
-  utmKeys.forEach(function (k) {
-    var v = params.get(k);
-    if (v)                 utms[k] = v;
-    else if (defaults[k])  utms[k] = defaults[k];
-  });
-
-  // 3) UTMs an alle ThriveCart-Checkout-Links hängen
+  var fbclid = new URLSearchParams(window.location.search).get('fbclid'); // >>> neu
   function decorate() {
     document.querySelectorAll('a[href*="thrivecart.com"]').forEach(function (a) {
       try {
         var url = new URL(a.href, window.location.origin);
-        Object.keys(utms).forEach(function (k) {
-          url.searchParams.set('passthrough[' + k + ']', utms[k]);
-        });
+        url.searchParams.set('utm_source', 'facebook');
+        url.searchParams.set('utm_medium', 'paid');
+        url.searchParams.set('passthrough[utm_source]', 'facebook');
+        url.searchParams.set('passthrough[utm_medium]', 'paid');
+        if (fbclid) url.searchParams.set('fbclid', fbclid); // >>> neu
         a.href = url.toString();
       } catch (e) {}
     });
   }
-
   if (document.readyState !== 'loading') decorate();
   else document.addEventListener('DOMContentLoaded', decorate);
-  setTimeout(decorate, 1500); // falls Buttons dynamisch nachladen
+  setTimeout(decorate, 1500);
 })();
 </script>

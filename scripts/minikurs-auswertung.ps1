@@ -557,7 +557,15 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
     # Conversion als Bruch (0,0519), weil Google daraus 5,19% macht.
     function Rund($v) { if ($null -eq $v) { return $null }; [math]::Round([decimal]$v, 2) }
 
+    # Monatsblaetter, die im Zeitraum vorkommen -> deren "Insgesamt"-Spalte wird
+    # danach mit Formeln gefuellt (=SUMME ueber die Tagesspalten, Verhaeltnisse
+    # wie ROAS aus den Summen gerechnet). Formeln statt Zahlen, damit die Spalte
+    # auch stimmt, wenn spaeter noch Tage nachgetragen werden.
+    $deDe = [Globalization.CultureInfo]::GetCultureInfo('de-DE')
+    $monatsblaetter = @($tage | ForEach-Object { $deDe.DateTimeFormat.GetMonthName($_.Month) } | Select-Object -Unique)
+
     $nutzlast = @{
+        gesamt = $monatsblaetter
         tage   = @(
             foreach ($tag in $tage) {
                 $werte = @{}
@@ -618,16 +626,34 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
     }
 
     try {
+        # ⚠️ Body als UTF-8-BYTES verschicken, nicht als String!
+        # PowerShell 5.1 kodiert einen String-Body ohne charset-Angabe als ASCII —
+        # aus "Gelände-Schlüssel" wird unterwegs "Gel?nde-Schl?ssel". Die Webapp
+        # findet die Zeile dann nicht und ueberspringt sie STILL. Genau das war der
+        # Grund, warum die Stueckzahl-Zeilen ("Gelände-Schlüssel", "Upsell Gelände")
+        # von Ende Juli bis 03.08.2026 leer blieben, waehrend alle Zeilen ohne
+        # Umlaut normal weiterliefen. Am 03.08.2026 gegen die echte Webapp geprueft:
+        # String-Body -> 0 Werte geschrieben, Byte-Body -> 1 Wert geschrieben.
+        $koerper = [Text.Encoding]::UTF8.GetBytes(($nutzlast | ConvertTo-Json -Depth 5 -Compress))
+
         # Apps Script antwortet mit 302 auf googleusercontent.com -> Redirect folgen lassen
         $antwort = Invoke-RestMethod -Uri $env_['SHEET_WEBAPP_URL'] -Method POST `
-            -Body ($nutzlast | ConvertTo-Json -Depth 5 -Compress) `
-            -ContentType 'application/json' -MaximumRedirection 5
+            -Body $koerper `
+            -ContentType 'application/json; charset=utf-8' -MaximumRedirection 5
 
         if ($antwort.ok) {
             Write-Host "  Eingetragen: $($antwort.geschrieben -join ', ')" -ForegroundColor Green
+            if ($antwort.summen) {
+                Write-Host "  Monatssumme: $($antwort.summen -join ' | ')" -ForegroundColor Green
+            }
             if ($antwort.datum_nicht_gefunden) {
                 Write-Warning "  Diese Tage haben keine Spalte in der Tabelle: $($antwort.datum_nicht_gefunden -join ', ')"
                 Write-Host "  -> In der Tabelle fehlt die Spalte. Entweder anlegen oder ignorieren." -ForegroundColor DarkGray
+            }
+            # Frueher wurde das still verschluckt -> Zeilen blieben wochenlang leer.
+            if ($antwort.kennzahl_ohne_zeile) {
+                Write-Warning "  Fuer diese Kennzahlen wurde KEINE Tabellenzeile gefunden: $($antwort.kennzahl_ohne_zeile -join ', ')"
+                Write-Host "  -> Zeilenbeschriftung in der Tabelle geaendert? Oder Umlaute unterwegs kaputt?" -ForegroundColor DarkGray
             }
         } else {
             Write-Warning "  Die Tabelle meldet: $($antwort.fehler)"
