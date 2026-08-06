@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Content-Maschine · Anikas Pferdeakademie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF7F1; --beige:#EDE3D6; --beige-dk:#DccaB4;
+    --rose:#D3A398; --rose-dk:#C0897C;
+    --gold:#C29A4B; --rust:#A6572F; --red:#8C3B2E;
+    --ink:#3A2E27; --muted:#8a7a6d; --line:#E4D8C8; --white:#fff;
+    --ok:#5b8c5a;
+    --shadow:0 4px 18px rgba(58,46,39,.10); --radius:16px;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;padding:0;}
+  body{font-family:'Montserrat',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--cream);color:var(--ink);font-size:15px;line-height:1.5;padding-bottom:80px;}
+  h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.01em;}
+  button{font-family:inherit;cursor:pointer;border:none;}
+  input,select,textarea{font-family:inherit;font-size:15px;}
+
+  header{position:sticky;top:0;z-index:40;background:linear-gradient(135deg,var(--red),var(--rust));color:var(--cream);padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));box-shadow:var(--shadow);}
+  .head-row{display:flex;align-items:center;gap:12px;max-width:1100px;margin:0 auto;}
+  .brand{display:flex;flex-direction:column;line-height:1.15;}
+  .brand strong{font-size:18px;font-weight:800;}
+  .brand span{font-size:11px;opacity:.85;letter-spacing:.04em;text-transform:uppercase;}
+  .head-actions{margin-left:auto;display:flex;gap:8px;}
+  .icon-btn{background:rgba(255,255,255,.15);color:var(--cream);border-radius:10px;padding:8px 10px;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;}
+  .icon-btn:active{background:rgba(255,255,255,.28);}
+
+  nav{position:sticky;top:0;z-index:30;background:var(--cream);border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .tabs{display:flex;gap:4px;padding:8px 12px;max-width:1100px;margin:0 auto;width:max-content;min-width:100%;}
+  .tab{white-space:nowrap;background:transparent;color:var(--muted);padding:9px 14px;border-radius:999px;font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:7px;}
+  .tab.active{background:var(--ink);color:var(--cream);}
+  .tab .cnt{font-size:11px;background:rgba(0,0,0,.08);border-radius:999px;padding:1px 7px;}
+  .tab.active .cnt{background:rgba(255,255,255,.22);}
+
+  main{max-width:1100px;margin:0 auto;padding:16px;}
+  .view{display:none;} .view.active{display:block;animation:fade .2s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+  .view-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+  .view-head h2{font-size:20px;}
+  .view-head .sub{color:var(--muted);font-size:13px;width:100%;}
+  .add-btn{margin-left:auto;background:var(--gold);color:#fff;font-weight:700;padding:9px 15px;border-radius:999px;font-size:14px;display:inline-flex;align-items:center;gap:6px;box-shadow:var(--shadow);}
+  .add-btn:active{transform:scale(.97);}
+
+  .filters{display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
+  .search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;align-items:center;}
+  .chip{background:var(--white);border:1px solid var(--line);color:var(--muted);padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:600;}
+  .chip.active{background:var(--rose);border-color:var(--rose-dk);color:#fff;}
+  .chip.tog{border-style:dashed;}
+  .chip.tog.active{background:var(--ink);border-color:var(--ink);}
+  .chip-group-label{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-right:2px;font-weight:700;}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:12px;}
+  @media(min-width:640px){.grid{grid-template-columns:1fr 1fr;}}
+  @media(min-width:980px){.grid.three{grid-template-columns:1fr 1fr 1fr;}}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;gap:8px;}
+  .card.arch{opacity:.72;background:#f6f1ea;}
+  .card h3{font-size:15.5px;line-height:1.3;padding-right:52px;}
+  .card .hook{font-size:13.5px;background:var(--beige);border-radius:10px;padding:8px 10px;font-style:italic;}
+  .card .notes{font-size:13px;color:var(--muted);white-space:pre-wrap;}
+  .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
+  .badge{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap;}
+  .b-prod{background:#efe6f5;color:#6b4a86;} .b-kat{background:#e6f0ec;color:#3f7359;}
+  .b-status{background:var(--beige);color:var(--rust);} .b-plat{background:#fdeee0;color:#a6572f;}
+  .b-date{background:#eef1f5;color:#5b6b7d;} .b-flag{background:#fce9e6;color:var(--red);}
+  .b-typ{background:#e7eefc;color:#3a5a9b;} .b-format{background:#e2f3f1;color:#2b6b66;}
+  .b-cta{background:#f6edd6;color:#8a6d1f;} .b-kind{background:#f7e7e3;color:#b0503c;}
+  .b-zweck{background:#efe8f7;color:#6b4a86;} .b-phase{background:#eef1f5;color:#5b6b7d;}
+  .b-quelle{background:#f0e8dd;color:#7a6248;}
+  .card-actions{position:absolute;top:10px;right:10px;display:flex;gap:4px;}
+  .mini{background:var(--beige);color:var(--ink);border-radius:8px;width:30px;height:30px;font-size:14px;display:flex;align-items:center;justify-content:center;}
+  .mini:active{background:var(--beige-dk);} .mini.del:active{background:#f3c9c1;}
+  .empty{text-align:center;color:var(--muted);padding:40px 20px;border:2px dashed var(--line);border-radius:var(--radius);}
+  .empty .big{font-size:34px;margin-bottom:8px;}
+
+  .dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;}
+  @media(min-width:720px){.dash-grid{grid-template-columns:repeat(4,1fr);}}
+  .stat{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);}
+  .stat .num{font-size:28px;font-weight:800;color:var(--rust);line-height:1;}
+  .stat .lbl{font-size:12px;color:var(--muted);margin-top:6px;font-weight:600;}
+  .panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin-bottom:14px;}
+  .panel h3{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .reel-goal{display:flex;align-items:center;gap:12px;}
+  .ring{--p:0;width:74px;height:74px;border-radius:50%;flex:0 0 auto;background:conic-gradient(var(--gold) calc(var(--p)*1%),var(--beige) 0);display:flex;align-items:center;justify-content:center;}
+  .ring span{width:56px;height:56px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;}
+  .meter-row{margin-bottom:11px;}
+  .meter-top{display:flex;justify-content:space-between;font-size:12.5px;font-weight:600;margin-bottom:4px;}
+  .meter-top .muted{color:var(--muted);font-weight:500;}
+  .bar{height:9px;background:var(--beige);border-radius:999px;overflow:hidden;position:relative;}
+  .bar i{display:block;height:100%;border-radius:999px;}
+  .bar .target{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink);opacity:.55;}
+  .k-Identität i{background:var(--rose);} .k-Problem i{background:var(--rust);}
+  .k-Wahrheit i{background:var(--gold);} .k-Lösung i{background:var(--ok);}
+
+  .ref-block{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow);margin-bottom:12px;}
+  .ref-block h3{font-size:16px;color:var(--rust);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .ref-block p{margin:6px 0;font-size:14px;} .ref-block ul{margin:8px 0;padding-left:20px;} .ref-block li{margin:5px 0;font-size:14px;}
+  .pill{display:inline-block;background:var(--beige);border-radius:999px;padding:3px 11px;font-size:12.5px;font-weight:600;margin:3px 4px 3px 0;}
+  .rule{background:#fce9e6;border-left:3px solid var(--red);padding:8px 12px;border-radius:8px;margin:6px 0;font-size:13.5px;}
+  .reftable{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .reftable th,.reftable td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);}
+  .reftable th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.04em;}
+  .reftable code{background:var(--beige);padding:2px 7px;border-radius:6px;font-weight:700;}
+  .htype{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:8px 0;}
+  .htype b{color:var(--rust);}
+  .htype .meta{font-size:12px;color:var(--muted);margin-top:3px;}
+  details.argq{border:1px solid var(--line);border-radius:12px;margin:8px 0;overflow:hidden;}
+  details.argq>summary{cursor:pointer;padding:11px 13px;font-weight:700;background:var(--beige);list-style:none;}
+  details.argq>summary::-webkit-details-marker{display:none;}
+  details.argq .argbody{padding:6px 14px 12px;}
+  details.argq h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:10px 0 4px;}
+  details.argq li{font-size:13.5px;margin:4px 0;}
+
+  .overlay{position:fixed;inset:0;background:rgba(58,46,39,.5);z-index:60;display:none;align-items:flex-end;justify-content:center;}
+  .overlay.open{display:flex;}
+  @media(min-width:640px){.overlay{align-items:center;}}
+  .modal{background:var(--cream);width:100%;max-width:560px;max-height:92vh;overflow-y:auto;border-radius:20px 20px 0 0;padding:18px;box-shadow:0 -6px 30px rgba(0,0,0,.25);}
+  @media(min-width:640px){.modal{border-radius:20px;}}
+  .modal-head{display:flex;align-items:center;margin-bottom:14px;}
+  .modal-head h3{font-size:18px;}
+  .modal-head .close{margin-left:auto;background:var(--beige);border-radius:10px;width:34px;height:34px;font-size:18px;}
+  .field{margin-bottom:13px;}
+  .field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em;}
+  .field input,.field select,.field textarea{width:100%;padding:11px 13px;border-radius:11px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
+  .field textarea{min-height:76px;resize:vertical;}
+  .seg{display:flex;flex-wrap:wrap;gap:6px;}
+  .seg button{background:var(--white);border:1px solid var(--line);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px;font-weight:600;}
+  .seg button.on{background:var(--ink);color:var(--cream);border-color:var(--ink);}
+  .switch{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--line);border-radius:11px;padding:11px 13px;}
+  .switch input{width:auto;transform:scale(1.3);}
+  .save-btn{width:100%;background:var(--red);color:#fff;font-weight:700;padding:14px;border-radius:12px;font-size:16px;margin-top:6px;}
+  .save-btn:active{background:var(--rust);}
+  .del-link{width:100%;text-align:center;color:var(--red);background:none;padding:10px;font-weight:600;font-size:13px;margin-top:4px;}
+  .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--cream);padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;z-index:80;transition:transform .3s;box-shadow:var(--shadow);}
+  .toast.show{transform:translateX(-50%) translateY(0);}
+  .hint{font-size:12px;color:var(--muted);margin-top:4px;}
+  input[type=file]{display:none;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-row">
+    <div class="brand"><strong>🎬 Content-Maschine</strong><span>Anikas Pferdeakademie</span></div>
+    <div class="head-actions">
+      <button class="icon-btn" onclick="exportData()">⬇︎ Backup</button>
+      <label class="icon-btn" for="importFile">⬆︎ Laden</label>
+      <input type="file" id="importFile" accept="application/json" onchange="importData(event)">
+    </div>
+  </div>
+</header>
+
+<nav><div class="tabs" id="tabs"></div></nav>
+
+<main>
+  <section class="view active" id="view-dashboard">
+    <div class="view-head"><h2>Übersicht</h2><div class="sub">Dein Content auf einen Blick — Vorrat, Verteilung, nächste Schritte.</div></div>
+    <div class="panel" style="background:linear-gradient(135deg,var(--gold),var(--rust));color:var(--cream);display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;"><h3 style="color:var(--cream);margin:0 0 4px;">✨ Content erstellen</h3><div style="font-size:13px;opacity:.92;">Wähle Produkt, Kategorie und Ziel. Die Maschine baut dir mit Tina, deinen Hook-Typen und Frameworks den fertigen Auftrag.</div></div>
+      <button onclick="openCreate()" style="background:var(--cream);color:var(--rust);font-weight:800;padding:12px 22px;border-radius:999px;font-size:15px;">Los geht's</button>
+    </div>
+    <div class="dash-grid" id="statGrid"></div>
+    <div class="panel">
+      <h3>🎯 Reel-Ziel: 60 Kern-Reels</h3>
+      <div class="reel-goal">
+        <div class="ring" id="reelRing"><span id="reelRingTxt">0</span></div>
+        <div style="flex:1">
+          <div id="reelGoalTxt" style="font-weight:700;margin-bottom:4px;"></div>
+          <div class="hint">Ein Vorrat von ~60 Reels, die du immer wieder reposten kannst. Aus jedem Reel lässt sich zusätzlich ein Karussell machen — so wird aus wenig Aufwand viel Content.</div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>📊 Content-Mix vs. deine Strategie (50 / 20 / 20 / 10)</h3>
+      <div id="mixMeters"></div>
+      <div class="hint" style="margin-top:8px;">Der schwarze Strich ist dein Zielwert. Zählt Reels, Karussells &amp; Ideen zusammen.</div>
+    </div>
+    <div class="panel">
+      <h3>🔁 Reif fürs Recycling</h3>
+      <div id="recycleList"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-reels"></section>
+  <section class="view" id="view-karussells"></section>
+  <section class="view" id="view-hooks"></section>
+  <section class="view" id="view-vorlagen"></section>
+  <section class="view" id="view-ideen"></section>
+  <section class="view" id="view-planer"></section>
+
+  <section class="view" id="view-referenzen">
+    <div class="view-head"><h2>Referenzen</h2><div class="sub">Deine Marketing-Grundlagen — immer griffbereit beim Schreiben.</div></div>
+    <div id="refContent"></div>
+  </section>
+</main>
+
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="modal-head"><h3 id="modalTitle">Neu</h3><button class="close" onclick="closeModal()">✕</button></div>
+    <form id="modalForm" onsubmit="saveItem(event)">
+      <div id="modalFields"></div>
+      <button type="submit" class="save-btn">Speichern</button>
+      <button type="button" class="del-link" id="modalDel" onclick="deleteCurrent()" style="display:none">Diesen Eintrag löschen</button>
+    </form>
+  </div>
+</div>
+<div class="overlay" id="createOverlay">
+  <div class="modal">
+    <div class="modal-head"><h3>✨ Content erstellen</h3><button class="close" onclick="closeCreate()">✕</button></div>
+    <div id="createFields"></div>
+    <button class="save-btn" onclick="genPrompt()">✨ Prompt erzeugen</button>
+    <div id="createResult" style="display:none"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===== Konstanten ===== */
+const PRODUKTBEREICHE = ["Gelände-Schlüssel","Auto-Webinar","Live-Webinar","Weitere Produkte"];
+const UNTERTHEMEN = ["BBP","Offenstall","Futter","Traumteam","Energetik","Sonstiges"];
+const KATEGORIEN = ["Identität","Problem","Wahrheit","Lösung"];
+const KAT_ZIEL = {"Identität":50,"Problem":20,"Wahrheit":20,"Lösung":10};
+const HOOK_TYPEN = ["Eingeständnis","Kontrast","Geheimnis","Empörung","Tabu","Bedauern"];
+const REEL_FORMATE = ["Persönliche Story","Quick Tipp","Yapping","Reaction/Stitch","Kundenerfolge","Talking Head","B-Roll","Trend/Audio"];
+const CTA_ZIELE = ["—","Gelände-Schlüssel · Gelände/Schlüssel (27€)","Live-Webinar (Anmeldung)","Auto-Webinar · Verlasspferd/Videotraining","Futter-Fahrplan · Futterplan (47€)","Offenstall-Planer · Konzept (47€)","Masterclass · Muskeln/Masterclass"];
+const STATUS_REEL = ["Idee","Entwurf","Gedreht","Gepostet"];
+const STATUS_ALLG = ["Idee","Entwurf","Fertig","Geplant","Gepostet"];
+const VORLAGEN_ART = ["Hook-Formel","Story-Framework","Content-Idee","Launch-Post"];
+const ZWECKE = ["Neugierde","Engagement","Expertenstatus","Sales","Persönlich"];
+const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch","Launch"];
+const opt = a => ["—",...a];
+
+const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
+
+/* ===== Schema ===== */
+const COLLECTIONS = {
+  reels:{label:"Reels",icon:"🎬",single:"Reel",three:false,fields:[
+    {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
+    {key:"hook",label:"Hook (erster Satz)",type:"textarea",card:"hook"},
+    {key:"reelText",label:"Reel-Text (Text im Video)",type:"textarea",card:"notes"},
+    {key:"caption",label:"Caption",type:"textarea",card:"notes"},
+    {key:"medien",label:"🎬 Video-Link (Canva)",type:"text",card:"link"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
+    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
+    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
+    {key:"status",label:"Status",type:"seg",options:STATUS_REEL,card:"badge"},
+    {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
+    {key:"karussell",label:"Karussell daraus schon gemacht?",type:"bool",card:"flag",flagText:"🎠 Karussell ✓"},
+    {key:"favorit",label:"⭐ Best Performer",type:"bool",card:"flag",flagText:"⭐ Best Performer"},
+  ]},
+  karussells:{label:"Karussells",icon:"🎠",single:"Karussell",three:false,fields:[
+    {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
+    {key:"hook",label:"Slide 1 / Hook",type:"textarea",card:"hook"},
+    {key:"slides",label:"Slides (je Zeile = 1 Slide)",type:"textarea",card:"notes"},
+    {key:"medien",label:"🖼 Slides-Link (Canva)",type:"text",card:"link"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
+    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
+    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
+    {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
+    {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
+  ]},
+  hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,fields:[
+    {key:"text",label:"Hook-Text",type:"textarea",required:true,card:"title"},
+    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
+    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
+    {key:"archiv",label:"🗄 Archiv (nicht aktiv bewerben)",type:"bool",card:"flag",flagText:"🗄 Archiv"},
+  ]},
+  vorlagen:{label:"Vorlagen",icon:"📋",single:"Vorlage",three:true,fields:[
+    {key:"text",label:"Text / Formel",type:"textarea",required:true,card:"title"},
+    {key:"kind",label:"Art",type:"seg",options:VORLAGEN_ART,card:"badge"},
+    {key:"hookTyp",label:"Hook-Typ (bei Hook-Formel)",type:"select",options:opt(HOOK_TYPEN),card:"badge"},
+    {key:"zweck",label:"Zweck",type:"select",options:opt(ZWECKE),card:"badge"},
+    {key:"phase",label:"Launch-Phase",type:"select",options:opt(PHASEN),card:"badge"},
+    {key:"quelle",label:"Quelle",type:"text",card:"badge"},
+  ]},
+  ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
+    {key:"text",label:"Idee",type:"textarea",required:true,card:"title"},
+    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
+    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
+    {key:"status",label:"Status",type:"seg",options:["Roh","In Arbeit","Umgesetzt"],card:"badge"},
+  ]},
+  planer:{label:"Planer",icon:"🗓️",single:"Eintrag",three:false,fields:[
+    {key:"titel",label:"Was wird gepostet?",type:"text",required:true,card:"title"},
+    {key:"datum",label:"Datum",type:"date",required:true,card:"date"},
+    {key:"typ",label:"Format",type:"seg",options:["Reel","Karussell","Story","Mail","Live"],card:"badge"},
+    {key:"plattform",label:"Plattform",type:"seg",options:["Instagram","FB-Gruppe","Beides"],card:"badge"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
+    {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
+    {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
+    {key:"notiz",label:"Notiz",type:"textarea",card:"notes"},
+  ]},
+};
+
+/* ===== Filter-Definitionen ===== */
+const UNT={key:'unterthema',label:'Unterthema',options:UNTERTHEMEN};
+const PD={key:'produktbereich',label:'Bereich',options:PRODUKTBEREICHE,nested:{whenValue:'Weitere Produkte',def:UNT}};
+const KD={key:'kategorie',label:'Kategorie',options:KATEGORIEN};
+const FILTERS={
+  reels:[PD,KD], karussells:[PD,KD], ideen:[PD,KD],
+  hooks:[KD,PD],
+  vorlagen:[{key:'kind',label:'Art',options:VORLAGEN_ART},{key:'hookTyp',label:'Hook-Typ',options:HOOK_TYPEN},{key:'zweck',label:'Zweck',options:ZWECKE}],
+  planer:[{key:'typ',label:'Format',options:["Reel","Karussell","Story","Mail","Live"]},PD],
+};
+
+const DEFAULT_DB={reels:[],karussells:[],hooks:[],vorlagen:[],ideen:[],planer:[],argumente:[]};
+
+/* ===== State ===== */
+let DB = load();
+let current={collection:null,id:null};
+let filters={};
+
+function load(){
+  try{const raw=localStorage.getItem("content-maschine-v2");if(raw)return Object.assign({},DEFAULT_DB,JSON.parse(raw));}catch(e){}
+  return Object.assign({},DEFAULT_DB);
+}
+function save(){localStorage.setItem("content-maschine-v2",JSON.stringify(DB));}
+function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+function activeCount(col){return (DB[col]||[]).filter(x=>!x.archiv).length;}
+
+/* ===== Navigation ===== */
+const NAV=["dashboard","reels","karussells","hooks","vorlagen","ideen","planer","referenzen"];
+const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},referenzen:{icon:"👤",label:"Referenzen"}};
+function renderTabs(){
+  document.getElementById("tabs").innerHTML=NAV.map(id=>{
+    const m=NAV_META[id]||COLLECTIONS[id];
+    const cnt=COLLECTIONS[id]?`<span class="cnt">${activeCount(id)}</span>`:"";
+    const active=(document.querySelector(`.tab[data-nav="${id}"]`)?.classList.contains('active'))||id==='dashboard'&&!document.querySelector('.tab.active');
+    return `<button class="tab ${id==='dashboard'?'active':''}" data-nav="${id}" onclick="go('${id}')">${m.icon} ${m.label}${cnt}</button>`;
+  }).join("");
+}
+function go(id){
+  document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
+  document.getElementById("view-"+id).classList.add("active");
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.nav===id));
+  window.scrollTo({top:0,behavior:"smooth"});
+  if(id==="dashboard")renderDashboard();
+  else if(id==="referenzen")renderReferenzen();
+  else renderCollection(id);
+}
+
+/* ===== Collection Views ===== */
+function renderCollection(col){
+  const cfg=COLLECTIONS[col];
+  const f=filters[col]||(filters[col]={search:"",archiv:false});
+  const view=document.getElementById("view-"+col);
+  let items=DB[col].slice().reverse();
+  if(!f.archiv) items=items.filter(it=>!it.archiv);
+  if(f.search){const q=f.search.toLowerCase();items=items.filter(it=>JSON.stringify(it).toLowerCase().includes(q));}
+  (FILTERS[col]||[]).forEach(def=>{
+    if(f[def.key]) items=items.filter(it=>it[def.key]===f[def.key]);
+    if(def.nested&&f[def.nested.def.key]) items=items.filter(it=>it[def.nested.def.key]===f[def.nested.def.key]);
+  });
+
+  const chip=(def,val)=>`<button class="chip ${f[def.key]===val?'active':''}" onclick="setFilter('${col}','${def.key}','${f[def.key]===val?'':val.replace(/'/g,"\\'")}')">${val}</button>`;
+  const rowFor=def=>`<div class="chips"><span class="chip-group-label">${def.label}</span>${def.options.map(o=>chip(def,o)).join("")}</div>`;
+  const filterRows=(FILTERS[col]||[]).map(def=>{
+    let html=rowFor(def);
+    if(def.nested&&f[def.key]===def.nested.whenValue) html+=rowFor(def.nested.def);
+    return html;
+  }).join("");
+  const archivChip=cfg.hasArchiv?`<div class="chips"><button class="chip tog ${f.archiv?'active':''}" onclick="setFilter('${col}','archiv',${!f.archiv})">🗄 Archiv ${f.archiv?'sichtbar':'ausgeblendet'}</button></div>`:"";
+
+  view.innerHTML=`
+    <div class="view-head">
+      <h2>${cfg.icon} ${cfg.label}</h2>
+      <button class="add-btn" onclick="openModal('${col}')">＋ ${cfg.single}</button>
+      <div class="sub">${activeCount(col)} aktiv${cfg.hasArchiv&&DB[col].length-activeCount(col)>0?` · ${DB[col].length-activeCount(col)} im Archiv`:''} · ${items.length} angezeigt</div>
+    </div>
+    <div class="filters">
+      <input class="search" placeholder="🔍 Suchen…" value="${escAttr(f.search)}" oninput="setFilter('${col}','search',this.value)">
+      ${filterRows}${archivChip}
+    </div>
+    <div class="grid ${cfg.three?'three':''}">
+      ${items.length?items.map(it=>cardHTML(col,it)).join(""):`<div class="empty"><div class="big">${cfg.icon}</div>Nichts hier.<br>Tippe auf „＋ ${cfg.single}".</div>`}
+    </div>`;
+}
+
+function cardHTML(col,it){
+  const cfg=COLLECTIONS[col];
+  let title="",body="",tags=[];
+  cfg.fields.forEach(fl=>{
+    const v=it[fl.key];
+    if(fl.card==="title") title=escHTML(v||"(ohne Titel)");
+    else if(fl.card==="hook"&&v) body+=`<div class="hook">„${escHTML(v)}"</div>`;
+    else if(fl.card==="notes"&&v) body+=`<div class="notes">${escHTML(v)}</div>`;
+    else if(fl.card==="date"&&v) tags.push(`<span class="badge b-date">🗓 ${fmtDate(v)}</span>`);
+    else if(fl.card==="link"&&v) tags.push(`<a class="badge b-cta" href="${escAttr(v)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">🔗 Medien öffnen</a>`);
+    else if(fl.card==="flag"&&v===true) tags.push(`<span class="badge b-flag">${fl.flagText}</span>`);
+    else if(fl.card==="badge"&&v&&v!=="—") tags.push(`<span class="badge ${BADGE_CLASS[fl.key]||'b-status'}">${escHTML(v)}</span>`);
+  });
+  return `<div class="card ${it.archiv?'arch':''}">
+    <div class="card-actions">
+      <button class="mini" onclick="openModal('${col}','${it.id}')">✎</button>
+      <button class="mini del" onclick="quickDelete('${col}','${it.id}')">🗑</button>
+    </div>
+    <h3>${title}</h3>${body}
+    ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
+  </div>`;
+}
+function setFilter(col,key,val){filters[col]=filters[col]||{search:"",archiv:false};filters[col][key]=val;renderCollection(col);}
+
+/* ===== Modal ===== */
+function openModal(col,id){
+  current={collection:col,id:id||null};
+  const cfg=COLLECTIONS[col];
+  const item=id?DB[col].find(x=>x.id===id):{};
+  document.getElementById("modalTitle").textContent=(id?"✎ ":"＋ ")+cfg.single;
+  document.getElementById("modalDel").style.display=id?"block":"none";
+  document.getElementById("modalFields").innerHTML=cfg.fields.map(fl=>{
+    const v=item[fl.key];
+    if(fl.type==="text") return field(fl,`<input name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
+    if(fl.type==="date") return field(fl,`<input type="date" name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
+    if(fl.type==="textarea") return field(fl,`<textarea name="${fl.key}">${escHTML(v||'')}</textarea>`);
+    if(fl.type==="select"){const cur=v||fl.options[0];return field(fl,`<select name="${fl.key}">${fl.options.map(o=>`<option ${o===cur?'selected':''}>${o}</option>`).join("")}</select>`);}
+    if(fl.type==="bool") return `<div class="field"><div class="switch"><input type="checkbox" name="${fl.key}" ${v?'checked':''}><label style="margin:0;text-transform:none;letter-spacing:0;">${fl.label}</label></div></div>`;
+    if(fl.type==="seg"){const cur=v||fl.options[0];return `<div class="field"><label>${fl.label}</label><div class="seg" data-seg="${fl.key}">${fl.options.map(o=>`<button type="button" class="${o===cur?'on':''}" onclick="pickSeg(this)">${o}</button>`).join("")}<input type="hidden" name="${fl.key}" value="${escAttr(cur)}"></div></div>`;}
+    return "";
+  }).join("");
+  document.getElementById("overlay").classList.add("open");
+}
+function field(fl,inner){return `<div class="field"><label>${fl.label}${fl.required?' *':''}</label>${inner}</div>`;}
+function pickSeg(btn){const w=btn.closest(".seg");w.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");w.querySelector("input[type=hidden]").value=btn.textContent;}
+function closeModal(){document.getElementById("overlay").classList.remove("open");}
+function saveItem(e){
+  e.preventDefault();
+  const col=current.collection,cfg=COLLECTIONS[col],form=e.target,data={};
+  cfg.fields.forEach(fl=>{
+    if(fl.type==="bool") data[fl.key]=form.querySelector(`[name="${fl.key}"]`).checked;
+    else data[fl.key]=form.querySelector(`[name="${fl.key}"]`).value.trim();
+  });
+  if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
+  else{DB[col].push({id:uid(),createdAt:Date.now(),...data});}
+  save();closeModal();renderTabs();renderCollection(col);toast(current.id?"Gespeichert ✓":"Angelegt ✓");
+}
+function deleteCurrent(){if(current.id)quickDelete(current.collection,current.id,true);}
+function quickDelete(col,id,fromModal){
+  if(!confirm("Diesen Eintrag wirklich löschen?"))return;
+  DB[col]=DB[col].filter(x=>x.id!==id);save();if(fromModal)closeModal();
+  renderTabs();renderCollection(col);toast("Gelöscht");
+}
+
+/* ===== Dashboard ===== */
+function renderDashboard(){
+  document.getElementById("statGrid").innerHTML=[
+    ["🎬",activeCount("reels"),"Reels"],["📋",DB.vorlagen.length,"Vorlagen"],
+    ["🪝",activeCount("hooks"),"Hooks aktiv"],["💡",DB.ideen.length,"Ideen"],
+  ].map(([i,n,l])=>`<div class="stat"><div class="num">${n}</div><div class="lbl">${i} ${l}</div></div>`).join("");
+
+  const n=DB.reels.length,pct=Math.min(100,Math.round(n/60*100));
+  document.getElementById("reelRing").style.setProperty("--p",pct);
+  document.getElementById("reelRingTxt").textContent=n;
+  document.getElementById("reelGoalTxt").textContent=`${n} von 60 Reels angelegt · ${60-n>0?`noch ${60-n} bis zum Vorrat`:"Vorrat komplett! 🎉"}`;
+
+  const all=[...DB.reels,...DB.karussells,...DB.ideen].filter(x=>!x.archiv);
+  const counts={};KATEGORIEN.forEach(k=>counts[k]=0);
+  all.forEach(x=>{if(counts[x.kategorie]!=null)counts[x.kategorie]++;});
+  const sum=all.length||1;
+  document.getElementById("mixMeters").innerHTML=KATEGORIEN.map(k=>{
+    const p=Math.round(counts[k]/sum*100),ziel=KAT_ZIEL[k];
+    return `<div class="meter-row k-${k}"><div class="meter-top"><span>${k} <span class="muted">(${counts[k]})</span></span><span class="muted">${p}% · Ziel ${ziel}%</span></div><div class="bar"><i style="width:${p}%"></i><span class="target" style="left:${ziel}%"></span></div></div>`;
+  }).join("");
+
+  const recycle=DB.reels.filter(r=>r.letztesPost||r.status==="Gepostet").sort((a,b)=>(a.letztesPost||"").localeCompare(b.letztesPost||"")).slice(0,4);
+  const noCarousel=DB.reels.filter(r=>!r.karussell&&(r.favorit||r.status==="Gepostet")).slice(0,3);
+  const rl=document.getElementById("recycleList");
+  if(!recycle.length&&!noCarousel.length){
+    rl.innerHTML=`<div class="hint">Sobald du Reels als „gepostet" markierst, schlage ich dir hier vor, welche du reposten oder in ein Karussell verwandeln kannst.</div>`;
+  }else{
+    rl.innerHTML=recycle.map(r=>`<div class="rule" style="background:#eef1f5;border-color:#5b6b7d">🔁 <b>${escHTML(r.titel)}</b> — zuletzt ${r.letztesPost?fmtDate(r.letztesPost):"gepostet"} · Zeit fürs Repost?</div>`).join("")
+      +noCarousel.map(r=>`<div class="rule">🎠 <b>${escHTML(r.titel)}</b> — daraus noch <b>kein Karussell</b> gemacht.</div>`).join("");
+  }
+}
+
+/* ===== Referenzen ===== */
+const HOOK_TYP_INFO=[
+  ["Eingeständnis","Solidarität + unbequeme Wahrheit","Persönliche Story",`Sprich eine Wahrheit aus, die viele spüren, aber keiner offen ausspricht (z.B. „Bin ich die Einzige, die gemerkt hat, dass …?").`],
+  ["Kontrast","Erwartungsbruch, Gegenthese zum Mainstream","Quick Tipp",`Gegenthese zum Mainstream (z.B. „Je mehr du X machst, desto weniger Y."). Zuspitzen, aber glaubwürdig bleiben.`],
+  ["Geheimnis","Informationslücke + Neugier","Yapping",`Neugier-Gap öffnen. Die Antwort NIE in den Hook, die kommt erst im Reel oder auf Slide 2.`],
+  ["Empörung","Emotion + direkte Identifikation","Reaction/Stitch",`Emotion wecken („Genau das erlebe ich auch."). Gegen die Situation, nie gegen die Person.`],
+  ["Tabu","Verbotenes ist attraktiv + unfairer Vorteil","Kundenerfolge",`Geheimtipp / unfairer Vorteil („müsste eigentlich verboten sein"), danach muss der Content liefern.`],
+  ["Bedauern","Authentizität + Abkürzung für andere","Talking Head",`Eigenen Fehler eingestehen = sofort glaubwürdig. Du hast ihn gemacht, deine Kundin muss es nicht.`],
+];
+const HF_FRAMEWORKS=[
+  {n:"01",name:"Der direkte Pitch",g:"Heart-Sell",ablauf:"Hook → Symptome → Der Preis → Der Shift → Das Angebot → CTA → Proof",steps:["Hook / Slide 1: Selfie oder In-the-Moment-Foto mit scharfem Opener (Win, Meinung, Statement).","Symptome: Was die meisten tun und warum es nicht klappt, so erkennt sie sich.","Der Preis: Was es kostet, hier zu bleiben (Zeit, Umsatz, Anerkennung).","Der Shift: Dein Mechanismus/Genius, der die Lücke wirklich schließt.","Das Angebot: Klar sagen, was es ist, was drin ist, was sich ändert.","CTA: Story mit dem Angebot verbinden und einladen.","Proof: Screenshots von DMs, Sales, Echtzeit-Reaktionen."]},
+  {n:"02",name:"Kundenergebnis → Angebot",g:"Heart-Sell",ablauf:"Hook (Kunden-Win) → Wo sie startete → Was sich änderte → Der Mechanismus dahinter → Das Angebot → CTA",steps:["Hook: Öffne mit dem Ergebnis selbst, gekoppelt an eine echte/ideal-passende Kundin.","Wo sie startete: Ihr Vorher in der Sprache deiner Zielgruppe.","Was sich änderte: Die Transformation, konkret und spezifisch.","Der Mechanismus: Der Teil deines Frameworks, der es möglich machte (replizierbar, nicht Glück).","Das Angebot: Das hier hat es möglich gemacht.","CTA: Direkt einladen."]},
+  {n:"03",name:"Dein Ergebnis → Angebot",g:"Heart-Sell",ablauf:"Hook (dein Win) → Der alte Weg → Warum er nicht mehr funktioniert → Was du stattdessen gebaut hast → Das Angebot → CTA",steps:["Hook: Dein eigenes Ergebnis/Meilenstein als Fakt.","Der alte Weg: Was du früher getan hast, das nicht mehr funktioniert.","Warum er nicht mehr funktioniert: Der Shift im Markt oder in ihrem Level.","Was du stattdessen gebaut hast: Dein Mechanismus, weil du ihn selbst gebraucht hast.","Das Angebot: Wie sie Zugang zu genau diesem System bekommt.","CTA: Direkte Einladung."]},
+  {n:"04",name:"Belief Shift",g:"Soft-Sell",ablauf:"Hook (Überzeugung als Fakt) → Warum alle das glauben → Warum es falsch ist → Was stattdessen wahr ist → Leise Erwähnung → Optionaler CTA",steps:["Hook: Eine verbreitete Überzeugung so sagen, dass sie nickt.","Warum alle das glauben: Die Logik akkurat beschreiben, nicht lächerlich machen.","Warum es falsch ist: Die Wende, den Denkfehler benennen, sanft aber klar.","Was stattdessen wahr ist: Dein echter Mechanismus als korrigierte Überzeugung.","Leise Erwähnung: z.B. das ist das Erste, was wir in [Programm] fixen.","Optionaler CTA: Keyword-DM statt Link."]},
+  {n:"05",name:"Die Muster-Beobachtung",g:"Soft-Sell",ablauf:"Hook (ein Muster) → Bei wem es auftaucht → Warum es passiert → Wofür es ein Zeichen ist → Leise Erwähnung",steps:["Hook: Ich sehe das gerade bei fast jeder Frau, mit der ich spreche.","Bei wem es auftaucht: Den Typ Mensch so beschreiben, dass sie sich erkennt.","Warum es passiert: Als Insight positioniert, nicht als Diagnose.","Wofür es ein Zeichen ist: Reframe als Beweis für etwas Größeres.","Leise Erwähnung: Muster mit dem verbinden, womit du hilfst."]},
+  {n:"06",name:"Die unpopuläre Meinung",g:"Soft-Sell",ablauf:"Hook (Meinung gegen den Standard) → Was alle raten → Warum der Rat unvollständig ist → Was du stattdessen sagst → Lass es wirken",steps:["Hook: Die konträre Meinung klar sagen, ohne zu hedgen.","Was alle raten: Der übliche, erwartbare Rat in deinem Feld.","Warum er unvollständig ist: Wo er zu kurz greift, speziell für ihr Level.","Was du stattdessen sagst: Deine echte POV.","Lass es wirken: Auf der Meinung enden, reiner Autoritätsaufbau."]},
+  {n:"07",name:"Hinter den Kulissen",g:"Soft-Sell",ablauf:"Hook (Blick in deinen Prozess) → Die Entscheidung → Wie du sie durchdacht hast → Was du gewählt hast → Was das verrät",steps:["Hook: Ein echter Moment (Entscheidung, fast nicht geposteter Beitrag, Kundengespräch).","Die Entscheidung: Setz die Szene ehrlich.","Wie du sie durchdacht hast: Dein Gedankengang zeigt nebenbei dein Framework.","Was du gewählt hast und warum: Das Ergebnis.","Was das verrät: Was es über deine Herangehensweise zeigt, sie zieht die Verbindung selbst."]},
+  {n:"08",name:"Future Pacing",g:"Soft-Sell",ablauf:"Hook (Bild ihres Zukunfts-Zustands) → Was vorher wahr sein muss → Was im Weg steht → Der eine Shift → Leise Erwähnung",steps:["Hook: Die gewünschte Zukunft lebendig malen.","Was vorher wahr sein muss: Die Voraussetzung dafür.","Was im Weg steht: Die aktuelle Lücke ehrlich benennen.","Der eine Shift: Dein Mechanismus als Brücke zwischen Jetzt und Zukunft.","Leise Erwähnung: Leicht, optional, ein Verweis auf den Ort, wo das passiert."]},
+  {n:"09",name:"Der Einwand-Reframe",g:"Soft-Sell",ablauf:"Hook (ein Einwand als ihrer) → Warum er Sinn ergibt → Wovor er sie schützt → Das echte Risiko → Leise Erwähnung",steps:["Hook: Den Einwand direkt aussprechen (Ich hab schon X, warum sollte das anders sein?).","Warum er Sinn ergibt: Validieren, ihre Skepsis nicht wegwischen.","Wovor er sie schützt: Die Angst darunter benennen (Geld verschwenden, sich falsch fühlen).","Das echte Risiko: Umdrehen, vorsichtig bleiben kostet meist mehr.","Leise Erwähnung: Leichter Schluss, gefolgt von einem CTA."]},
+];
+function renderReferenzen(){
+  const argByQ={};
+  (DB.argumente||[]).forEach(a=>{(argByQ[a.quelle]=argByQ[a.quelle]||{})[a.gruppe]=(argByQ[a.quelle]||{})[a.gruppe]||[];argByQ[a.quelle][a.gruppe].push(a.text);});
+  const argHTML=Object.keys(argByQ).map(q=>`<details class="argq"><summary>${q} (${Object.values(argByQ[q]).reduce((s,a)=>s+a.length,0)})</summary><div class="argbody">${Object.keys(argByQ[q]).map(g=>`<h4>${escHTML(g)}</h4><ul>${argByQ[q][g].map(t=>`<li>${escHTML(t)}</li>`).join("")}</ul>`).join("")}</div></details>`).join("");
+
+  document.getElementById("refContent").innerHTML=`
+  <div class="ref-block"><h3>👤 Avatar Tina — deine ideale Kundin</h3>
+    <p>${escHTML(BRAND.tina.kurz)}</p>
+    <div class="rule" style="background:#fdeee0;border-color:var(--rust)"><b>Kern-Einwand:</b> ${escHTML(BRAND.tina.kernEinwand)}</div>
+    <details class="argq"><summary>Status quo</summary><div class="argbody"><p>${escHTML(BRAND.tina.statusQuo)}</p></div></details>
+    <details class="argq"><summary>Wünsche &amp; Träume</summary><div class="argbody"><ul>${BRAND.tina.wuensche.map(x=>`<li>${escHTML(x)}</li>`).join('')}</ul></div></details>
+    <details class="argq"><summary>Schmerzen</summary><div class="argbody"><ul>${BRAND.tina.schmerzen.map(x=>`<li>${escHTML(x)}</li>`).join('')}</ul></div></details>
+    <details class="argq"><summary>Ängste</summary><div class="argbody"><ul>${BRAND.tina.aengste.map(x=>`<li>${escHTML(x)}</li>`).join('')}</ul></div></details>
+    <details class="argq"><summary>O-Töne (ihre Sprache)</summary><div class="argbody"><ul>${BRAND.tina.oToene.map(x=>`<li>„${escHTML(x)}"</li>`).join('')}</ul><p class="hint">Kosenamen fürs Pferd: ${BRAND.tina.kosenamen.join(', ')}.</p></div></details>
+    <details class="argq"><summary>Glaubenssätze (Denkfehler → Wahrheit)</summary><div class="argbody"><ul>${BRAND.tina.glaubenssaetze.map(x=>`<li><b>Sie glaubt:</b> „${escHTML(x.g)}"<br><b>Wahrheit:</b> ${escHTML(x.w)}</li>`).join('')}</ul></div></details>
+    <details class="argq"><summary>Kaufmoment &amp; Tabus</summary><div class="argbody"><p>${escHTML(BRAND.tina.kaufmoment)}</p><p>${escHTML(BRAND.tina.triggerTabus)}</p></div></details>
+  </div>
+
+  <div class="ref-block"><h3>🧭 Deine Produktbereiche</h3>
+    <p class="hint">Frontend (IG + FB-Gruppe) = ausschließlich Gelände. Andere Themen nur im Backend, auf Gelände gemünzt. Roter Faden über allem: die Verlasspferd-Methode.</p>
+    ${Object.keys(BRAND.produkte).map(k=>{const p=BRAND.produkte[k];return `<details class="argq"><summary>${escHTML(k)} · ${escHTML(p.preis)}</summary><div class="argbody"><p><b>Codewort:</b> ${escHTML(p.codewort)}</p><p><b>Rolle:</b> ${escHTML(p.rolle)}</p><p><b>Inhalt:</b> ${escHTML(p.inhalt)}</p></div></details>`;}).join('')}</div>
+
+  <div class="ref-block"><h3>🪝 Die 6 Hook-Typen (Caroline Preuss)</h3>
+    <p class="hint">Ein Hook hat 3 Aufgaben: Scroll stoppen · eine Frage offen lassen · die richtige Person ansprechen. Rotiere die Typen — nie zweimal denselben hintereinander. Fertige Formeln liegen im Bereich <b>Vorlagen</b> (Art = Hook-Formel).</p>
+    ${HOOK_TYP_INFO.map((h,i)=>`<div class="htype"><b>#${i+1} ${h[0]}</b> — ${h[1]}<div class="meta">🎬 Reel-Format: ${h[2]}</div><div class="meta">${h[3]}</div></div>`).join("")}
+  </div>
+
+  <div class="ref-block"><h3>✅ Hook-Schnellcheck (3 Fragen)</h3>
+    <ul><li>Würde ich selbst weiterschauen? (Pointe nicht schon im Hook verraten)</li>
+    <li>Bleibt eine Frage offen? (nicht zu generisch — die Richtige soll sich angesprochen fühlen)</li>
+    <li>Weiß meine Wunschkundin, dass das für sie ist?</li></ul>
+    <p class="hint">Alle 3 mit Ja → posten. 2 von 3 → meist fehlt Nr. 2 (Gap öffnen, nicht schließen). Weniger → 3 Varianten schreiben, Typ wechseln.</p></div>
+
+  <div class="ref-block"><h3>📖 9 Story-Frameworks (Heartfluencer · Lazy Story Selling)</h3>
+    <p class="hint">Ganze Post-Strukturen: Preuss liefert den Hook, diese die Story drumherum. <b>Heart-Sell</b> = direkter Verkauf · <b>Soft-Sell</b> = Belief-Shift/Aufwärmen. Liegen auch im Bereich <b>Vorlagen</b> (Art = Story-Framework). Aufklappen:</p>
+    ${HF_FRAMEWORKS.map(fw=>`<details class="argq"><summary>${fw.n} ${fw.name} · ${fw.g}</summary><div class="argbody"><div class="meta" style="font-size:12.5px;color:var(--rust);font-weight:600;margin:4px 0 6px;">ABLAUF: ${escHTML(fw.ablauf)}</div><ul>${fw.steps.map(s=>`<li>${escHTML(s)}</li>`).join("")}</ul></div></details>`).join("")}
+    <div class="rule" style="background:#f6edd6;border-color:#C29A4B">Prinzip unter allen neun: Kaufentscheidungen werden emotional getroffen und rational begründet. Dein Content spricht die Emotion an, dein Angebot liefert die Rationalisierung. Der beste Verkaufs-Content fühlt sich an wie „Endlich jemand, der das versteht."</div></div>
+
+  <div class="ref-block"><h3>💬 ManyChat-Codewörter</h3>
+    <table class="reftable"><tr><th>Angebot</th><th>Preis</th><th>Codewort</th></tr>
+    <tr><td>Mini-Kurs Gelände-Schlüssel</td><td>27 €</td><td><code>Gelände</code> / <code>Schlüssel</code></td></tr>
+    <tr><td>Auto-Webinar / Video-Training</td><td>0 €</td><td><code>Verlasspferd</code> / <code>Videotraining</code></td></tr>
+    <tr><td>Futter-Fahrplan</td><td>47 €</td><td><code>Futterplan</code></td></tr>
+    <tr><td>Offenstall-Planer</td><td>47 €</td><td><code>Konzept</code></td></tr>
+    <tr><td>Masterclass (BBP)</td><td>0 €</td><td><code>Muskeln</code> / <code>Masterclass</code></td></tr></table></div>
+
+  <div class="ref-block"><h3>📊 Content-Strategie 50 / 20 / 20 / 10</h3>
+    <ul><li><b>50 % Identität</b> — wer deine Kundin ist / sein will.</li>
+    <li><b>20 % Problem</b> — Schmerzpunkte konkret benennen.</li>
+    <li><b>20 % Wahrheit</b> — überraschende Reframes.</li>
+    <li><b>10 % Lösung</b> — Ausschnitte deiner Methode.</li></ul>
+    <p class="hint">Pitch ist keine eigene Kategorie — jeder Post bekommt einen CTA (Feld „CTA / Codewort").</p></div>
+
+  <div class="ref-block"><h3>🔁 Das 60-Reels-Prinzip</h3>
+    <p>Du brauchst im Grunde nur <b>~60 gute Reels</b>. Immer wieder <b>reposten</b>. Aus <b>jedem Reel</b> zusätzlich ein <b>Karussell</b> machen.</p></div>
+
+  <div class="ref-block"><h3>💰 Verkaufsargumente (Gründe · Probleme · Traumzustände)</h3>
+    <p class="hint">Deine Munition fürs Pitchen — aus Traumteam, BBP &amp; Offenstall. Aufklappen:</p>
+    ${argHTML||'<p class="hint">Noch keine Argumente geladen.</p>'}</div>
+
+  <div class="ref-block"><h3>✍️ Wording-Regeln</h3>
+    <div class="rule">Keine Gedankenstriche / Pausenstriche — wirkt wie KI.</div>
+    <div class="rule">Vollständige Sätze, keine abgehackten Fragmente.</div>
+    <div class="rule">„Preisvorteil" statt „Rabatt", „Teilzahlungen" statt „Ratenzahlung".</div>
+    <div class="rule">Nur echte, von dir genannte Kundenfälle — nichts erfinden.</div>
+    <div class="rule">CTA: „Kommentiere mit [CODEWORT]". Captions nicht mit „Ehrlich?" starten.</div></div>
+
+  <div class="ref-block"><h3>📐 Karussell-Format</h3>
+    <p>Format <b>4:5 = 1080 × 1350 px</b>. Kein Logo, Erdtöne, wenig Text pro Slide → lieber mehr Slides. ⚠️ Meta Business Suite max. 10 Slides — bei mehr direkt in der IG-App posten.</p></div>`;
+}
+
+/* ===== Backup / Restore ===== */
+function exportData(){
+  const blob=new Blob([JSON.stringify(DB,null,2)],{type:"application/json"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=`content-maschine-backup-${new Date().toISOString().slice(0,10)}.json`;a.click();
+  URL.revokeObjectURL(url);toast("Backup heruntergeladen ✓");
+}
+function importData(ev){
+  const file=ev.target.files[0];if(!file)return;
+  const r=new FileReader();
+  r.onload=()=>{try{const data=JSON.parse(r.result);
+    if(!confirm("Aktuelle Daten mit dem Backup ERSETZEN?"))return;
+    DB=Object.assign({},DEFAULT_DB,data);save();renderTabs();go("dashboard");toast("Backup geladen ✓");
+  }catch(e){alert("Diese Datei konnte ich nicht lesen.");}};
+  r.readAsText(file);ev.target.value="";
+}
+
+/* ===== Helpers ===== */
+function escHTML(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function escAttr(s){return String(s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");}
+function fmtDate(s){if(!s)return"";const p=s.split("-");return p.length===3?`${p[2]}.${p[1]}.${p[0].slice(2)}`:s;}
+let toastTimer;
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),1800);}
+
+/* ===== Marken-Wissen (das Gehirn) ===== */
+const BRAND = {
+  marke:`Anikas Pferdeakademie`,
+  positionierung:`Ausschließlich Gelände: Tina soll mit ihrem Pferd sicher und entspannt ins Gelände (erst am Boden spazieren, später reiten), allein und mit anderen. Sanfte, freundliche Methode ohne Dominanz oder Hauruck.`,
+  verlasspferdMethode:`Anikas roter Faden über alle Produkte: 1) Beziehungsaufbau (Fundament), 2) körperliche Vorbereitung des Pferdes, 3) der Gelände-Part. Alles unter dem Siegel der Verlasspferd-Methode. Einzelprodukte immer als Teile EINES stimmigen Weges rahmen, nie als lose Kurse.`,
+  tina:{
+    kurz:`Tina, Mitte 50, gut situiert (Geld und Zeit sind da), fünfmal die Woche am Stall. Hat sich den Lebenstraum vom ersten eigenen Pferd erfüllt und eine junge, unerfahrene Stute (5 Jahre) gewählt, die sie oft überfordert. Pferd erst seit 2 Monaten. Reflektiert, achtsam, naturverbunden, alternativ interessiert. Lehnt Dominanz/Hauruck ab, will immer freundlich und sanft.`,
+    statusQuo:`Traut sich aktuell nicht ins Gelände, weil sie unsicher ist, ob sie ihr junges Pferd händeln kann. Fokus auf Bodenarbeit, Reiten zurückgestellt. Auf dem Platz klappt es so einigermaßen, mit Missverständnissen. Alltag nicht gefestigt (zappelt am Putzplatz und beim Schmied). Mit Trainerin an der Seite kein Problem, allein kommen die Selbstzweifel.`,
+    kernEinwand:`NICHT Preis/Alter/Zeit, sondern „Kann ich das online, allein, aus der Ferne wirklich umsetzen?" Immer kleinschrittige, begleitete Umsetzung betonen: ich lasse dich nicht allein.`,
+    wuensche:[`Aus der Stute ein echtes Verlass- und Seelenpferd machen, unabhängig und sicher ins Gelände (allein und mit anderen).`,`Traumszene: die Stute kommt ihr entgegen, Putzen in Freiheit, gemeinsam vom Hof ohne Kleben, entspannt am langen Zügel reiten, Aufmerksamkeit immer bei ihr, später allein verladen und zu Kursen/in den Urlaub.`,`Als Mensch vom klein/unerfahren zu sicher und souverän, Anerkennung im Stall, das Gefühl ich weiß, was ich tue.`,`Tiefste Sehnsucht: mit dem Tier verschmelzen, echte Verbundenheit, gemeinsam Zeit in der Natur. Gelände und Sicherheit sind Mittel, das Ziel ist Verbundenheit und Freiheit.`],
+    schmerzen:[`Die Reise ist länger als erhofft (junges statt erfahrenes Pferd), Gefühl auf der Stelle zu treten.`,`Rückschläge: die Stute tritt ihr auf den Fuß, zieht am Strick (was sie bei der Trainerin nie tut).`,`Gefühl von fehlendem Respekt, insgeheim der Wunsch, dass mehr Liebe zurückkommt.`,`Scham vor anderen, wenn die Stute zappelt, und Enttäuschung vor allem von sich selbst.`,`Kein roter Faden trotz viel Wissen aus Büchern/Videos, sie sucht DIE eine Methode/Linie.`],
+    aengste:[`Körperliche Verletzung mit realer Konsequenz (kann sich Arbeitsausfall nicht leisten).`,`Angst ums Pferd und die Angst, etwas zu vermurksen (schuld an bleibendem Schaden).`,`Beziehungs-Angst (Herzstück): Wird sie mir je wirklich vertrauen? Werden wir je das echte Team?`,`Endlichkeit: erstes und wahrscheinlich letztes eigenes Pferd, letzte Chance auf den Mädchentraum. Behutsam einsetzen, nie ausbeuten.`],
+    oToene:[`Ich will einfach, dass sie mir vertraut.`,`Ich möchte mit ihr wie beste Freunde verbunden sein.`,`Ich will mein Seelenpferd wirklich spüren.`,`Ich will einfach vom Hof runter und losgehen, ohne dass sie klebt oder sich umdreht.`,`Ich gebe ihr so viel, und manchmal frage ich mich, ob genug zurückkommt.`,`Mit der Trainerin klappt alles, nur allein trau ich mich nicht.`],
+    kosenamen:[`mein Liebling`,`mein Schatz`,`Mausi`],
+    kaufmoment:`Frust baut sich zyklisch auf, Höhepunkt, dann Resignationsphase (denkt heimlich ans Abgeben/Verkaufen). Genau dann ist Tina kaufbereit und braucht einen Hoffnungs-/Schlüsselmoment. Der stille Gedanke „soll ich abgeben / bin ich der falsche Mensch?" ist ein sehr starker, entlastender Einstiegs-Hook.`,
+    triggerTabus:`„Abgeben/zurückgeben" ist fast Tabu, sei der wertfreie, sichere Raum („du darfst das sogar denken"). Dominanz-Sprache („dein Pferd verarscht dich") macht sie wütend, meiden. Das Wort „Angst" vorsichtig framen (lieber „mulmiges Gefühl/Unsicherheit"). Kosenamen fürs Pferd sind erwünscht.`,
+    glaubenssaetze:[
+      {g:`Ich muss strenger/dominanter werden, dann respektiert sie mich.`,w:`Nicht härter, sondern klar und konsequent. Respekt entsteht durch verlässliche Führung, nicht durch Druck.`},
+      {g:`Wenn ich nur genug Liebe gebe, kommt das Vertrauen von selbst.`,w:`Liebe allein reicht nicht. Vertrauen entsteht durch Klarheit und Sicherheit, die du gibst.`},
+      {g:`Sie tritt mir auf den Fuß, weil sie mich nicht respektiert.`,w:`Nicht Respektlosigkeit, sondern fehlende Aufmerksamkeit/Führung. Das ist trainierbar.`},
+      {g:`Mein Pferd braucht einfach Zeit, dann wird das von allein.`,w:`Zeit allein löst nichts, es braucht die richtigen Schritte in der richtigen Reihenfolge.`},
+      {g:`Ins Gelände geht man nur zu zweit, allein ist zu gefährlich.`,w:`Sicherheit kommt nicht von der Begleitperson, sondern davon, dass du dein Pferd lesen und runterfahren kannst.`},
+      {g:`Bevor ich rausgehe, muss auf dem Reitplatz erst alles perfekt sitzen.`,w:`Am Platz lernst du die Basis. Die eigentliche Absicherung im Gelände ist die Beziehung, die du dir vorher am Boden aufgebaut hast.`},
+      {g:`Wenn mein Pferd sich erschreckt, habe ich keine Kontrolle mehr.`,w:`Du kannst lernen, Adrenalin früh zu erkennen und runterzuregeln, bevor etwas eskaliert.`},
+      {g:`So etwas kann man online / allein gar nicht wirklich lernen.`,w:`Mit kleinschrittiger Schritt-für-Schritt-Begleitung schon. Du bist nicht allein.`},
+    ],
+  },
+  produkte:{
+    "Gelände-Schlüssel":{preis:`27€ (Frühbucher) / 197€`,codewort:`Gelände / Schlüssel`,rolle:`Frontend-/Einstiegsprodukt mit niedriger Hürde, oft Tinas erster Kauf.`,inhalt:`Entspannt vom Hof kommen. Das Pferd richtig lesen und einschätzen (wann wird es zu viel?), viel Adrenalin früh erkennen und runterfahren, wieder kontrollierbar machen. Schritt für Schritt, ohne das Pferd zu überfordern. Greift auch, wenn die Stute gar nicht klebt (dann Fokus Lesen/Einschätzen). Etwa 2 Wochen.`},
+    "Auto-Webinar":{preis:`0€`,codewort:`Verlasspferd / Videotraining`,rolle:`Kostenloses, immer verfügbares Video-Training, das Leads aufwärmt.`,inhalt:`Die perfekte gelernte Vorbereitung rund um die Verlasspferd-Methode. Einstieg in Anikas Welt, bevor ein Angebot kommt.`},
+    "Live-Webinar":{preis:`0€`,codewort:`—`,rolle:`Monatliches Live-Webinar rund ums Gelände, laufende Anmeldung möglich.`,inhalt:`Live-Training und Interaktion zum Thema Gelände, warmes Aufwärmen für die Angebote.`},
+    "Weitere Produkte":{preis:`unterschiedlich`,codewort:`je Produkt`,rolle:`Backend und weitere Themen, auf Gelände gemünzt.`,inhalt:`Traumteam-Programm (~700€, Beziehungs-Fundament) · Bauch-Bein-Po (Pferd tragfähig machen) · Gelände sicher meistern (die Spaziergänge selbst) · Schluss mit Kopfkino (Selbstzweifel) · Futter-Fahrplan (47€) · Offenstall-Planer (47€).`},
+  },
+  wordingRegeln:[
+    `Keine Gedankenstriche/Pausenstriche, wirkt wie KI.`,
+    `Vollständige Sätze, keine abgehackten Fragment-Halbsätze, keine unrealistischen Floskeln.`,
+    `Nicht mit „Ehrlich?" einsteigen.`,
+    `Nur echte, von Anika genannte Kundenfälle, nichts erfinden.`,
+    `Bildhafte, konkrete Sprache statt Floskeln.`,
+    `CTA: „Kommentiere mit [CODEWORT]". „Preisvorteil" statt „Rabatt", „Teilzahlungen" statt „Ratenzahlung".`,
+  ],
+};
+const KAT_GUIDE={
+  "Identität":`Wer Tina sein will bzw. wovon sie sich abgrenzt. Selbstbild, Werte, Zugehörigkeit. (50% des Contents.)`,
+  "Problem":`Tinas konkrete Schmerzpunkte so benennen, dass sie sich sofort erkennt. (20%.)`,
+  "Wahrheit":`Überraschende Reframes: einen Denkfehler/eine halbe Wahrheit aufbrechen (Tina glaubt A, echter Hebel ist B). (20%.)`,
+  "Lösung":`Konkrete Ausschnitte der Methode, Schritt für Schritt. (10%.)`,
+};
+
+/* ===== Prompt-Generator (Fundament der späteren KI-Erstellung) ===== */
+function buildPrompt(c){
+  const prod=BRAND.produkte[c.prod]||{}, t=BRAND.tina;
+  const code=prod.codewort&&prod.codewort!=='—'?prod.codewort:'CODEWORT';
+  const gl=(c.kat==='Wahrheit'||c.kat==='Problem')?`\n\nTINAS GLAUBENSSÄTZE (Denkfehler zu echtem Hebel):\n`+t.glaubenssaetze.map(x=>`• Sie glaubt „${x.g}" → Wahrheit: ${x.w}`).join(`\n`):``;
+  let fwLine=``;
+  if(c.fw&&c.fw.indexOf('automatisch')<0){const f=HF_FRAMEWORKS.find(x=>`${x.n} ${x.name}`===c.fw);if(f)fwLine=`\n\nNUTZE DIESES STORY-FRAMEWORK (Heartfluencer): ${f.n} ${f.name} (${f.g})\nABLAUF: ${f.ablauf}`;}
+  const typLine=(c.typ&&c.typ.indexOf('alle')<0)?`Nutze bevorzugt den Hook-Typ „${c.typ}".`:`Nutze verschiedene Hook-Typen und rotiere sie.`;
+  const themaLine=c.thema?`Thema/Idee: ${c.thema}`:`Wähle selbst ein konkretes, starkes Thema, das zu Kategorie und Produkt passt.`;
+  const output=c.format==='Karussell'
+    ?`1. 5 Hook-Varianten (Slide 1) in verschiedenen Hook-Typen, den Typ jeweils dazuschreiben.\n2. Markiere die stärkste und begründe in 1 Satz.\n3. Für die empfohlene: 6 bis 8 Karussell-Slides (Slide 1 max. 8 Wörter) und eine Caption mit CTA „Kommentiere mit ${code}".`
+    :`1. 5 Hook-Varianten in verschiedenen Hook-Typen, den Typ jeweils dazuschreiben.\n2. Markiere die stärkste und begründe in 1 Satz.\n3. Für die empfohlene: den Reel-Text (die Text-Overlays im Video) und eine Caption mit CTA „Kommentiere mit ${code}".`;
+  return `Du bist mein Hook- und Reel-Coach für Instagram. Erstelle mir ${c.format}-Content für meine Pferdeakademie. Bewerte streng, kein Weichspülen, klinge nach mir und nach meiner Kundin, nicht nach KI.
+
+FORMAT: ${c.format}
+KATEGORIE: ${c.kat} — ${KAT_GUIDE[c.kat]||''}
+${themaLine}
+CTA-ZIEL: ${c.cta} (Codewort: ${prod.codewort||'—'})
+${typLine}${fwLine}
+
+=== MEINE MARKE ===
+${BRAND.marke}. ${BRAND.positionierung}
+Roter Faden: ${BRAND.verlasspferdMethode}
+
+=== PRODUKT-KONTEXT: ${c.prod} ===
+Preis: ${prod.preis||'-'} · Codewort: ${prod.codewort||'-'}
+Rolle: ${prod.rolle||'-'}
+Inhalt: ${prod.inhalt||'-'}
+
+=== MEINE KUNDIN TINA ===
+${t.kurz}
+Status quo: ${t.statusQuo}
+Kern-Einwand: ${t.kernEinwand}
+Wünsche: ${t.wuensche.join(' ')}
+Schmerzen: ${t.schmerzen.join(' ')}
+Ängste: ${t.aengste.join(' ')}
+O-Töne (ihre Sprache): ${t.oToene.map(o=>`„${o}"`).join(' ')}
+Kosenamen fürs Pferd: ${t.kosenamen.join(', ')}.
+Kaufmoment: ${t.kaufmoment}
+Trigger und Tabus: ${t.triggerTabus}${gl}
+
+=== HOOK-TYPEN (Preuss, zum Rotieren) ===
+${HOOK_TYP_INFO.map((h,i)=>`${i+1}. ${h[0]}: ${h[1]}`).join('\n')}
+
+=== WORDING-REGELN (nicht verhandelbar) ===
+${BRAND.wordingRegeln.map(r=>`• ${r}`).join('\n')}
+
+=== WAS ICH VON DIR WILL ===
+${output}
+4. Halte dich strikt an die Wording-Regeln und sprich durchgängig in Tinas Welt.`;
+}
+
+function openCreate(){
+  document.getElementById("createFields").innerHTML=`
+    <div class="field"><label>Format</label><select id="cr_format"><option>Reel</option><option>Karussell</option></select></div>
+    <div class="field"><label>Produktbereich</label><select id="cr_prod">${PRODUKTBEREICHE.map(p=>`<option>${p}</option>`).join('')}</select></div>
+    <div class="field"><label>Kategorie</label><select id="cr_kat">${KATEGORIEN.map(k=>`<option>${k}</option>`).join('')}</select></div>
+    <div class="field"><label>CTA / Codewort</label><select id="cr_cta">${CTA_ZIELE.map(x=>`<option>${x}</option>`).join('')}</select></div>
+    <div class="field"><label>Hook-Typ (optional)</label><select id="cr_typ"><option>— alle rotieren</option>${HOOK_TYPEN.map(x=>`<option>${x}</option>`).join('')}</select></div>
+    <div class="field"><label>Story-Framework (optional)</label><select id="cr_fw"><option>— automatisch</option>${HF_FRAMEWORKS.map(f=>`<option>${f.n} ${f.name}</option>`).join('')}</select></div>
+    <div class="field"><label>Thema / Idee (optional)</label><input id="cr_thema" placeholder="z.B. allein vom Hof starten (leer = Vorschlag)"></div>`;
+  const res=document.getElementById("createResult");res.style.display="none";res.innerHTML="";
+  document.getElementById("createOverlay").classList.add("open");
+}
+function closeCreate(){document.getElementById("createOverlay").classList.remove("open");}
+function genPrompt(){
+  const g=id=>document.getElementById(id).value;
+  const c={format:g('cr_format'),prod:g('cr_prod'),kat:g('cr_kat'),cta:g('cr_cta'),typ:g('cr_typ'),fw:g('cr_fw'),thema:g('cr_thema').trim()};
+  const p=buildPrompt(c);window._lastPrompt=p;window._lastCfg=c;
+  const res=document.getElementById("createResult");res.style.display="block";
+  res.innerHTML=`
+    <div style="font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin:14px 0 6px;">Dein fertiger Prompt</div>
+    <textarea id="cr_out" readonly style="width:100%;min-height:190px;padding:11px 13px;border-radius:11px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:12.5px;">${escHTML(p)}</textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
+      <button class="save-btn" style="flex:1;min-width:150px;margin:0;" onclick="copyPrompt()">📋 Prompt kopieren</button>
+      <button class="save-btn" style="flex:1;min-width:150px;margin:0;background:var(--gold);" onclick="createDraft()">➕ Als ${c.format}-Entwurf</button>
+    </div>
+    <div class="hint" style="margin-top:8px;">Füge den Prompt bei Claude ein. Das Ergebnis trägst du dann in den ${c.format}-Entwurf ein. Später generiert die App das direkt hier.</div>`;
+}
+function copyPrompt(){
+  const t=document.getElementById("cr_out");t.focus();t.select();
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(window._lastPrompt).then(()=>toast("Prompt kopiert ✓"),()=>{document.execCommand('copy');toast("Prompt kopiert ✓");});}
+  else{document.execCommand('copy');toast("Prompt kopiert ✓");}
+}
+function createDraft(){
+  const c=window._lastCfg,col=c.format==='Karussell'?'karussells':'reels';
+  DB[col].push({id:uid(),createdAt:Date.now(),titel:c.thema||`Neuer ${c.format}-Entwurf`,produktbereich:c.prod,kategorie:c.kat,cta:c.cta,status:"Idee"});
+  save();renderTabs();closeCreate();go(col);toast(`${c.format}-Entwurf angelegt ✓`);
+}
+
+/* ===== Init ===== */
+renderTabs();renderDashboard();
+document.getElementById("overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeModal();});
+document.getElementById("createOverlay").addEventListener("click",e=>{if(e.target.id==="createOverlay")closeCreate();});
+</script>
+</body>
+</html>

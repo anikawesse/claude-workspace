@@ -408,7 +408,17 @@
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\webinar-einwaende-gelaendespaziergang.html\")",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaendespaziergang\\\\optin.html\")",
       "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaendespaziergang\\\\optin.html\")",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\Desktop\" -File | Where-Object { $_.Extension -match \"\\\\.\\(png|jpg|jpeg\\)\" } | Sort-Object LastWriteTime -Descending | Select-Object -First 10 | Select-Object Name, LastWriteTime)"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\Desktop\" -File | Where-Object { $_.Extension -match \"\\\\.\\(png|jpg|jpeg\\)\" } | Sort-Object LastWriteTime -Descending | Select-Object -First 10 | Select-Object Name, LastWriteTime)",
+      "Bash(start \"\" \"C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine/index.html\")",
+      "Bash(node parse-hooks.js)",
+      "Bash(node -e \"const d=require\\('./content-maschine-import.json'\\); console.log\\('Keys:',Object.keys\\(d\\)\\); console.log\\('Hooks:',d.hooks.length,'| Reels:',d.reels.length\\); console.log\\('Beispiel Hook:',JSON.stringify\\(d.hooks[0]\\)\\); console.log\\('Letzter Hook:',JSON.stringify\\(d.hooks[d.hooks.length-1]\\)\\); const ids=new Set\\(d.hooks.map\\(h=>h.id\\)\\); console.log\\('IDs eindeutig:', ids.size===d.hooks.length\\);\")",
+      "Bash(python -c \"import openpyxl; print\\('openpyxl ok'\\)\")",
+      "Bash(node dump-xlsx.js)",
+      "Bash(node parse-v2.js)",
+      "Bash(node -e \"const d=require\\('C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine/content-maschine-import.json'\\); console.log\\('hook sample:',JSON.stringify\\(d.hooks[0]\\)\\); const u={};d.hooks.forEach\\(h=>u[h.unterthema]=\\(u[h.unterthema]||0\\)+1\\);console.log\\('unterthemen:',JSON.stringify\\(u\\)\\);\")",
+      "Bash(node --check check.js)",
+      "Bash(node -e \"const d=require\\('C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine/content-maschine-import.json'\\); const p={};d.hooks.forEach\\(h=>p[h.produktbereich]=\\(p[h.produktbereich]||0\\)+1\\); const k={};d.vorlagen.forEach\\(v=>k[v.kind]=\\(k[v.kind]||0\\)+1\\); console.log\\('hook-bereiche:',JSON.stringify\\(p\\)\\); console.log\\('vorlagen-arten:',JSON.stringify\\(k\\)\\);\")",
+      "Bash(xargs cat)"
     ],
     "defaultMode": "bypassPermissions"
   }

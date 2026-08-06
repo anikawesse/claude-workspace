@@ -1,0 +1,5215 @@
+{
+  "reels": [
+    {
+      "id": "xfsmshksf7p",
+      "createdAt": 1786024358917,
+      "titel": "Der Moment, in dem mein Pferd zum ersten Mal allein stehen blieb",
+      "hook": "Ich dachte, ich brauche ein mutiges Pferd fürs Gelände. Falsch.",
+      "caption": "Lange dachte ich, ich brauche einfach ein mutigeres Pferd. Bis ich verstanden habe: Ein Verlasspferd entsteht durch Training, nicht durch Charakter. Kommentiere mit GELÄNDE und ich schicke dir den ersten Schritt.",
+      "produktbereich": "Gelände-Schlüssel",
+      "kategorie": "Identität",
+      "cta": "Gelände-Schlüssel · Gelände/Schlüssel (27€)",
+      "status": "Idee",
+      "karussell": false,
+      "favorit": true
+    },
+    {
+      "id": "xftmshksf7p",
+      "createdAt": 1786024358917,
+      "titel": "3 Fehler, die fast jede beim ersten Geländeausritt macht",
+      "hook": "Wenn dein Pferd am Hoftor kleben bleibt, liegt es meistens nicht am Pferd.",
+      "caption": "Wenn dein Pferd am Hoftor kleben bleibt, liegt es fast nie am Pferd. Diese 3 Fehler machen fast alle am Anfang. Kommentiere mit GELÄNDE für die Auflösung.",
+      "produktbereich": "Gelände-Schlüssel",
+      "kategorie": "Problem",
+      "cta": "Gelände-Schlüssel · Gelände/Schlüssel (27€)",
+      "status": "Idee",
+      "karussell": false,
+      "favorit": false
+    }
+  ],
+  "karussells": [
+    {
+      "id": "xfumshksf7p",
+      "createdAt": 1786024358917,
+      "titel": "Warum Losreiten der falsche erste Schritt ist",
+      "hook": "Sicher ins Gelände beginnt nicht im Sattel.",
+      "slides": "Slide 1: Sicher ins Gelände beginnt nicht im Sattel.\nSlide 2: Sondern am Boden.\nSlide 3: ...",
+      "produktbereich": "Gelände-Schlüssel",
+      "kategorie": "Wahrheit",
+      "cta": "—",
+      "status": "Entwurf"
+    }
+  ],
+  "hooks": [
+    {
+      "id": "x1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Die Art von Pferdefrau, bei der sich ihr Pferd wirklich sicher fühlt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will für mein Pferd nicht stressig sein, sondern ein sicherer Hafen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht die Reiterin sein, die ständig zweifelt, sondern die, die Klarheit ausstrahlt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte eine Frau sein, auf die sich mein Pferd verlassen kann",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht nur mein Pferd lieben, sondern ihm auch wirklich helfen können",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mich mit meinem Pferd endlich kompetent statt hilflos fühlen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will die Reiterin werden, die auch in schwierigen Momenten bei sich bleibt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht ständig Angst haben, etwas falsch zu machen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich als Pferdebesitzerin sicher fühlen – nicht nur nach außen so tun",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte stolz auf uns als Team sein",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xbmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht die sein, die sich im Stall ständig klein fühlt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xcmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich nicht länger von anderen verunsichern lassen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xdmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mich nicht mehr fühlen, als wäre ich „zu ängstlich\" oder „nicht gut genug\"",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht dauernd so tun, als hätte ich alles im Griff",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xfmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd nicht härter anfassen müssen, nur weil andere das sagen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xgmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich nicht mehr zwischen lieb sein und konsequent sein zerreißen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xhmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht jedes Problem direkt als mein Versagen sehen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "ximshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht mehr mit schlechtem Gewissen zum Stall fahren",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xjmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht ständig an mir zweifeln, nur weil es mal nicht läuft",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xkmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich als Reiterin nicht länger von Rückschlägen definieren lassen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xlmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will keine Härte zwischen mir und meinem Pferd",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xmmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will eine Beziehung, in der mein Pferd mir vertraut und nicht nur funktioniert",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xnmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd verstehen, statt immer nur Symptome zu bekämpfen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mit meinem Pferd fein, klar und fair umgehen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xpmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir eine Partnerschaft statt ständiges Korrigieren",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will meinem Pferd Orientierung geben, nicht zusätzlichen Druck",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xrmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte, dass sich unser Miteinander leicht und sicher anfühlt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xsmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will kein Drama im Alltag – ich will Ruhe, Klarheit und Verbindung",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xtmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mit meinem Pferd gemeinsam wachsen statt ständig kämpfen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will eine Pferdefrau sein, die ihrem Gefühl trauen darf",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xvmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich mit meinem Pferd endlich angekommen fühlen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xwmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir, dass mein Pferd mich wirklich als Orientierung wahrnimmt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xxmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte diese Frau sein, die ruhig bleibt und ihrem Pferd Sicherheit gibt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will, dass unser Pferdealltag sich nicht mehr schwer, sondern schön anfühlt",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "xzmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir gemeinsame Zeit, auf die ich mich wirklich freue",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x10mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will wieder mit einem guten Gefühl zum Stall fahren",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x11mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht nur reiten, sondern meinem Pferd wirklich gerecht werden",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x12mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will das Gefühl haben: Wir schaffen das zusammen",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x13mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir, dass aus Unsicherheit echte Verbindung wird",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x14mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte, dass mein Pferd und ich uns gegenseitig vertrauen können",
+      "kategorie": "Identität",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x15mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd im Gelände plötzlich stehen bleibt und nicht weiter will",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x16mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd in neuen Situationen sofort unter Strom steht",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x17mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du im Stall oft schon mit einem komischen Gefühl ankommst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x18mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd draußen viel unsicherer ist als auf dem Platz",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x19mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd bei gruseligen Dingen sofort die Nerven verliert",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du ständig das Gefühl hast, auf alles reagieren zu müssen",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd manchmal nicht richtig auf dich hört, obwohl du dir Mühe gibst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du im Alltag oft nicht weißt, was du in dem Moment tun sollst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd an anderen klebt und sich nicht gut von ihnen lösen kann",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du dich mit deinem Pferd draußen oft nicht wirklich sicher fühlst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum kleine Situationen mit deinem Pferd plötzlich riesengroß werden",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du manchmal Angst hast, dass dein Pferd jederzeit explodieren könnte",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd dich in stressigen Momenten scheinbar komplett ausblendet",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du bei deinem Pferd oft zwischen lieb sein und konsequent sein schwankst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd bei Unsicherheit eher nach außen als zu dir schaut",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du oft schon vorher Kopfkino hast, bevor überhaupt etwas passiert",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du dich nach schwierigen Situationen oft fragst, ob du schuld bist",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd im Alltag oft unruhig, hektisch oder angespannt wirkt",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du manchmal das Gefühl hast, deinem Pferd keine echte Sicherheit geben zu können",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ihr im Gelände nicht als Team unterwegs seid, sondern eher nebeneinander her",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd bei Tierarzt, Hufschmied oder Anhänger sofort Stress bekommt",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du in brenzligen Momenten oft zu spät reagierst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd in manchen Situationen lieb ist – und in anderen plötzlich gar nicht mehr",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dich andere mit ihrem entspannten Pferd manchmal frustrieren",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du trotz vieler Tipps immer noch keinen klaren roten Faden hast",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du dich mit deinem Pferd oft überfordert statt verbunden fühlst",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du manchmal gar nicht weißt, ob dein Pferd Angst hat, dich nicht versteht oder dich ignoriert",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd draußen aufmerksamer für alles andere ist als für dich",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du oft versuchst, die Situation irgendwie zu retten, statt sie wirklich zu lösen",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum sich euer Alltag oft schwerer anfühlt, als du es dir mit Pferd je vorgestellt hast",
+      "kategorie": "Problem",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x1zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du keine schlechte Reiterin bist, nur weil du Angst hast",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x20mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd nicht das Problem ist, wenn du dich unsicher fühlst",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x21mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Frauen nicht zu wenig lieben, sondern zu viel Verantwortung auf ihren Schultern tragen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x22mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum „reiß dich zusammen\" keiner Freizeitreiterin wirklich hilft",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x23mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein schlechtes Gewissen dich nicht zu einer besseren Pferdebesitzerin macht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x24mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht härter werden musst, um deinem Pferd Sicherheit zu geben",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x25mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Angst im Sattel nicht Schwäche ist, sondern ein Signal",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x26mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd dich nicht verarscht, wenn es in stressigen Situationen nicht mitmacht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x27mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum fehlende Fortschritte dich nicht automatisch unfähig machen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x28mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Probleme nicht an mangelnder Liebe, sondern an fehlender Klarheit liegen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x29mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht erst „perfekt\" sein musst, damit dein Pferd dir vertrauen kann",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum so viele Frauen im Stall still leiden, obwohl sie nach außen funktionieren",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd keine dominante Hand braucht, sondern einen sicheren Rahmen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht allein bist, wenn du manchmal mit mulmigem Gefühl zum Stall fährst",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum man Angst nicht einfach wegtrainieren kann",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Druck von außen viele Pferdefrauen kleiner macht, statt stärker",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum das eigentliche Problem oft nicht das Gelände ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Kopfkino nicht einfach nur „übertrieben\" ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du trotz Liebe zu deinem Pferd überfordert sein darfst",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ein Pferd-Mensch-Team nicht durch mehr Disziplin entsteht, sondern durch mehr Verständnis",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Wunsch nach Harmonie nichts mit Schwäche zu tun hat",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Frauen sich im Stall nicht trauen zu zeigen, wie unsicher sie wirklich sind",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ausbleibende Fortschritte oft am fehlenden roten Faden liegen, nicht an dir",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Sicherheit nicht bedeutet, dass nie etwas passiert – sondern dass ihr als Team damit umgehen könnt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd dich erst dann als Orientierung wahrnehmen kann, wenn du selbst Klarheit hast",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht versagt hast, wenn es sich gerade schwer anfühlt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Reiten für viele Frauen wieder schön werden darf – statt nur anstrengend",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd keine perfekte Reiterin braucht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Freizeitreiterinnen nicht mehr Tipps brauchen, sondern einen Weg, der wirklich zu ihnen passt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum wahre Stärke mit dem Pferd oft viel leiser aussieht, als viele denken",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd in stressigen Momenten mehr Sicherheit geben kannst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie aus Unsicherheit Schritt für Schritt mehr Vertrauen wird",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du für dein Pferd zu einem echten Orientierungspunkt wirst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du ruhiger bleibst, wenn dein Pferd angespannt ist",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du beginnst, dein Pferd wirklich zu lesen und besser zu verstehen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du im Alltag die Basis für ein entspanntes Geländepony legst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x2zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder mehr Sicherheit im Umgang mit deinem Pferd aufbaust",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x30mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du kleine Erfolgserlebnisse mit deinem Pferd bewusst erzeugst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x31mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder mit einem besseren Gefühl zum Stall fahren kannst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x32mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd Klarheit gibst, ohne hart zu werden",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x33mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie ihr lernt, euch in schwierigen Situationen gegenseitig zu vertrauen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x34mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus Kopfkino wieder mehr Ruhe in dir aufbaust",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x35mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd zeigst: „Du kannst dich an mir orientieren\"",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x36mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du im Alltag mehr Verbindung statt nur Funktion erzeugst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x37mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd Sicherheit vermittelst, wenn draußen alles spannend ist",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x38mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du die ersten Schritte zu einem echten Traumteam gehst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x39mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus „irgendwie überstehen\" wieder gemeinsames Genießen machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd besser durch neue oder gruselige Situationen begleitest",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mehr Klarheit bekommst, was dein Pferd gerade von dir braucht",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du die Beziehung zu deinem Pferd im Alltag stärkst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder Vertrauen in dich selbst als Pferdefrau aufbaust",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd sicher führst, ohne ständig kämpfen zu müssen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus lauter Einzelproblemen endlich einen roten Faden machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder das Gefühl bekommst: Wir schaffen das zusammen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mit deinem Pferd Schritt für Schritt entspannter ins Gelände kommst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was du tun kannst, wenn du dir einfach wieder Leichtigkeit mit deinem Pferd wünschst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd Halt gibst, wenn du selbst oft ins Zweifeln kommst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du die Verbindung zu deinem Pferd stärkst, ohne dich ständig durchsetzen zu müssen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mit kleinen Veränderungen im Alltag viel für euer Vertrauen tun kannst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie aus einem unsicheren Gefühl wieder echte Freude mit deinem Pferd werden kann",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aufhörst, nur zu reagieren, und anfängst, dein Pferd wirklich zu führen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd hilfst, in schwierigen Momenten bei dir zu bleiben",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mehr Sicherheit bekommst, ohne dich verbiegen zu müssen",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder stolz auf euch als Team sein kannst",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x3rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd zeigst, dass es sich bei dir sicher fühlen darf",
+      "kategorie": "Lösung",
+      "produktbereich": "Auto-Webinar",
+      "unterthema": "",
+      "archiv": false
+    },
+    {
+      "id": "x4mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will die Pferdebesitzerin sein, die ihr Pferd gesund aufbaut – nicht kaputt trainiert",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd mit gutem Gewissen reiten können",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht irgendwas machen, sondern wirklich wissen, was meinem Pferd guttut",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte die Frau sein, die ihr Pferd körperlich sinnvoll vorbereitet",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mein Pferd nicht nur beschäftigen, sondern wirklich fördern",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mich kompetent fühlen, wenn es um Training und Muskelaufbau geht",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will die Besitzerin sein, die früh erkennt, was ihr Pferd braucht",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte meinem Pferd gerecht werden – nicht nur mein eigenes Reitbedürfnis stillen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mein Pferd stark machen, statt es irgendwie durch den Alltag zu bringen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte stolz darauf sein, wie gesund sich mein Pferd entwickelt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht einfach reiten – ich will mein Pferd gesund erhalten",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mir ist wichtig, dass mein Pferd mich auch langfristig gut tragen kann",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte Training, das wirklich Sinn macht",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x4zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will Qualität statt planlosem Rumprobieren",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x50mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd fair und gesundheitsfördernd trainieren",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x51mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will lieber langsam und richtig als schnell und falsch",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x52mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte verstehen, warum mein Pferd etwas kann – oder eben noch nicht kann",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x53mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht nur Symptome kaschieren, sondern an die Basis gehen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x54mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte, dass mein Pferd körperlich in Balance kommt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x55mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will ein Training, das meinem Pferd wirklich dient",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x56mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht mehr einfach nach Gefühl irgendwas trainieren",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x57mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mich nicht länger von Stallmeinungen verrückt machen lassen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x58mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht ständig Angst haben, etwas falsch zu machen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x59mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd nicht reiten, obwohl es mich eigentlich noch nicht gesund tragen kann",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich nicht mehr fragen, ob ich meinem Pferd gerade schade",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht planlos Übungen sammeln, ohne echten Fortschritt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mein Pferd nicht überfordern, nur weil „man das halt so macht\"",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht mehr neidisch auf Pferde schauen, die so schön bemuskelt sind",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht ständig zweifeln, ob unser Training überhaupt etwas bringt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht mehr dieses schlechte Gewissen haben, wenn mein Pferd körperlich nicht so aussieht, wie ich es mir wünsche",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir ein Pferd, das gesund, kräftig und zufrieden wirkt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte sehen, dass unser Training wirklich etwas verändert",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will dieses Gefühl haben: Wir sind auf dem richtigen Weg",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir, dass mein Pferd sich unter mir leicht und kraftvoll anfühlt",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte mein Pferd anschauen und denken: Ja, genau so soll gesunder Aufbau aussehen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will mich sicher fühlen in dem, was ich mit meinem Pferd tue",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir sichtbare Fortschritte statt ewiges Rätselraten",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte Komplimente bekommen, weil mein Pferd sich so toll entwickelt hat",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will, dass mein Pferd fit aussieht – nicht irgendwie müde, instabil oder untrainiert",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte das Gefühl haben, meinem Pferd wirklich etwas Gutes zu tun",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd trotz Training einfach keine Muskeln aufbaut",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd zwar bewegt wird, aber körperlich trotzdem nicht stärker wird",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du das Gefühl hast, alles zu geben – und trotzdem nichts richtig vorangeht",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd auf der Vorhand läuft und sich nicht gut tragen kann",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du beim Reiten oft ein schlechtes Gewissen hast",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nie so ganz sicher bist, ob dein Training deinem Pferd wirklich guttut",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd zwar „funktioniert\", aber körperlich trotzdem nicht gesund aufgebaut ist",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum es so frustrierend ist, wenn andere Fortschritte sehen und du nicht",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd instabil, schief oder unausbalanciert wirkt",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x5zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du ständig Angst hast, etwas falsch zu machen",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x60mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum sich dein Pferd beim Reiten fest, schwer oder nicht durchlässig anfühlt",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x61mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du das Gefühl hast, deinem Pferd körperlich nicht wirklich helfen zu können",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x62mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd trotz Mühe nicht so aussieht, wie du es dir wünschst",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x63mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht weißt, welche Übungen wirklich sinnvoll sind",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x64mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du von all den Trainingsmeinungen nur noch verwirrter wirst",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x65mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du keinen klaren Plan hast, was du wann trainieren sollst",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x66mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd beim Muskelaufbau immer wieder auf der Stelle zu treten scheint",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x67mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du dein Pferd nicht einfach „mehr arbeiten\" lassen willst, aus Angst es zu überfordern",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x68mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd unter dem Sattel noch nicht so tragfähig ist, wie du es gern hättest",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x69mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum es dich innerlich stresst, wenn dein Pferd körperlich nicht in guter Form ist",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will meinem Pferd helfen – aber ich weiß nicht genau wie",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe Angst, meinem Pferd mit falschem Training eher zu schaden",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich sehe, dass meinem Pferd etwas fehlt – aber ich kriege es nicht richtig zu fassen",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich gebe mir Mühe, aber mein Pferd verändert sich kaum",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wünsche mir so sehr, dass mein Pferd mich gesund tragen kann",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin unsicher, ob ich überhaupt auf dem richtigen Weg bin",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe keine Lust mehr auf planloses Ausprobieren",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht immer andere fragen müssen, was ich tun soll",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte endlich verstehen, warum mein Pferd körperlich nicht weiterkommt",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd nicht mehr Training braucht, sondern das richtige Training",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum „viel machen\" nicht automatisch zu mehr Muskulatur führt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd trotz Mühe nicht vorankommt, wenn die Basis fehlt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Muskelaufbau nicht bei der Übung beginnt, sondern bei der körperlichen Voraussetzung",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ein Pferd auch bewegt sein kann – und trotzdem nicht gesund aufgebaut",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du deinem Pferd mit gut gemeintem Training trotzdem im Weg stehen kannst",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum fehlende Muskulatur kein Schönheitsproblem ist, sondern ein Gesundheitsthema",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd dich nicht automatisch gesund tragen kann, nur weil es lieb mitläuft",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum „der läuft doch ganz okay\" oft trügerisch ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Freizeitpferde erst auffallen, wenn es eigentlich schon zu spät ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Muskelaufbau nicht kompliziert sein muss – aber planlos eben auch nicht funktioniert",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht noch mehr Tipps brauchst, sondern einen klaren roten Faden",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum es nicht an deiner Liebe zum Pferd fehlt, sondern an Struktur und Klarheit",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Frauen nicht zu wenig tun, sondern zu viel Unterschiedliches ausprobieren",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd keine härtere Arbeit braucht, sondern sinnvollere Reize",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum „mehr vorwärts\" oft nicht die Lösung ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x6zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Stolpern, Vorhandlastigkeit und Instabilität keine Kleinigkeiten sind",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x70mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nicht erst dann handeln solltest, wenn dein Pferd schon Probleme hat",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x71mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum gesundes Training immer auch Prävention ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x72mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ein tragfähiges Pferd nicht zufällig entsteht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x73mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du dein Pferd nicht kaputt trainieren musst, damit es Muskeln aufbaut",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x74mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum langsamer oft der schnellere Weg zu echtem Fortschritt ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x75mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum sichtbare Fortschritte meist dann kommen, wenn endlich System ins Training kommt",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x76mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum falsches oder fehlendes Training langfristig teurer werden kann als gute Anleitung",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x77mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein schlechtes Gewissen ein Zeichen von Verantwortung ist – aber noch kein Trainingsplan",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x78mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum viele Pferdebesitzerinnen heimlich zweifeln, ob sie alles richtig machen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x79mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd nicht einfach „schwach\" ist, sondern gezielte Unterstützung braucht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum nicht jedes Freizeitpferd automatisch bereit ist für entspannte Ausritte",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ein Pferd erst dann losgelassen laufen kann, wenn es sich körperlich auch tragen kann",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum es beim Muskelaufbau nicht darum geht, dein Pferd müde zu machen, sondern stärker",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd beim Muskelaufbau endlich einen klaren roten Faden gibst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du erkennst, was dein Pferd körperlich gerade wirklich braucht",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd gesund aufbaust, ohne es zu überfordern",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mit deinem Pferd sinnvoll Muskulatur, Balance und Tragkraft entwickelst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus planlosem Training ein System machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du die Basis schaffst, damit dein Pferd dich gesünder tragen kann",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd Schritt für Schritt stärker und stabiler machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du Training so gestaltest, dass es deinem Pferd wirklich guttut",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd förderst, ohne es einfach nur müde zu machen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mit kleinen Veränderungen im Training mehr Wirkung erzielst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du erkennst, ob dein Pferd schon bereit für den nächsten Schritt ist",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd hilfst, mehr Balance und Körpergefühl zu entwickeln",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd so trainierst, dass es langfristig gesünder läuft",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder Sicherheit in dein Training bekommst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mit deinem Pferd sichtbarere Fortschritte erzielst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du endlich das Gefühl bekommst: Wir sind auf dem richtigen Weg",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd stärkst, ohne ständig Angst zu haben, etwas falsch zu machen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus Unsicherheit mehr Klarheit im Training machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd wirklich hilfst, statt nur „irgendwas\" zu machen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd gesund aufbaust, auch wenn du bisher keinen roten Faden hattest",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd die körperlichen Voraussetzungen fürs Reiten schaffst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd sinnvoll vorbereitest, statt es einfach nur zu bewegen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x7zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du wieder mit besserem Gefühl reitest, weil dein Pferd tragfähiger wird",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x80mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du aus vielen Fragezeichen endlich einen machbaren Plan machst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x81mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd zu mehr Kraft verhilfst, ohne Druck und Überforderung",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x82mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie dein Pferd Schritt für Schritt mehr Oberlinie aufbauen kann",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x83mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dafür sorgst, dass dein Pferd nicht nur läuft, sondern sich besser trägt",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x84mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du die Voraussetzungen schaffst, damit dein Pferd lockerer und durchlässiger wird",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x85mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd so aufbaust, dass Reiten sich wieder besser anfühlt",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x86mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd hilfst, kraftvoller aus der Hinterhand zu arbeiten",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x87mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du mehr Stabilität in den Pferdekörper bekommst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x88mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du Trainingsfehler vermeidest, die echten Fortschritt ausbremsen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x89mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du dein Pferd gesünder und nachhaltiger auf seinen Job als Reitpferd vorbereitest",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x8amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinem Pferd hilfst, sich körperlich besser zu organisieren",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x8bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie aus einem instabilen Pferd Schritt für Schritt ein tragfähigeres Pferd wird",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "BBP",
+      "archiv": true
+    },
+    {
+      "id": "x96mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du öffnest morgens die Stalltür. Dein Paddock ist eine Matschwüste. Dritter Winter in Folge.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x97mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du reduzierst das Heu schon wieder — weil dein Pferd zunimmt. Aber es steht nur rum und hat nichts zu tun.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x98mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Dein Pferd wird in die Herde integriert. Am dritten Tag: Bisse, Jagerei, Tierarzt.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x99mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du wachst nachts auf und denkst: \"Liegt gerade jemand fest?\"",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du kaufst eine zweite Heuraufe. Wieder falsche Größe. Wieder Geld weg.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du planst deinen Offenstall. Drei Monate später stehst du vor dem Bauamt. Überraschung.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Der Tierarzt schaut die Hufe an und fragt: \"Wie ist euer Boden?\"",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du äppelst ab. 45 Minuten. Im Regen. Mit dem falschen Gerät. Wieder.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Dein Pferd steht 22 Stunden am Tag still, obwohl es einen Paddock hat.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Die Herde zieht immer denselben Weg — genau dort, wo kein Boden befestigt ist.",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Paddock im Winter immer zur Matschwüste wird",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd sich kaum bewegt, obwohl es Auslauf hat",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum immer wieder Streit an der Heuraufe entsteht",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum dein Pferd trotz Offenstall Hufprobleme hat",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum die Integration neuer Pferde meistens im Chaos endet",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du Jahr für Jahr mehr Geld ausgibst und trotzdem etwas fehlt",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du nachts nicht schlafen kannst, obwohl deine Pferde draußen sind",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du mehr arbeitest als dein Pferd läuft",
+      "kategorie": "Problem",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum \"mehr Platz\" allein keinen artgerechten Offenstall macht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Offenstall nicht automatisch gesünder für dein Pferd ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum Pferde im Offenstall oft weniger Bewegung haben als gedacht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ad libitum Fütterung bei leichtfuttrigen Pferden trotzdem funktioniert — wenn man es richtig macht",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum die teuerste Bodenbefestigung nicht immer die beste ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum du mit einem schlechten Plan dreimal so viel ausgibst wie mit einem guten",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum die meisten Offenstall-Probleme schon bei der Planung entstehen",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum \"Pferde müssen draußen sein\" kein Plan ist",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum ein ausgezeichneter Offenstall nicht teurer sein muss als ein normaler",
+      "kategorie": "Wahrheit",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinen Offenstall so planst, dass Pferde sich wirklich bewegen",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du Matschprobleme von Anfang an vermeidest",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "x9zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du ad libitum Heufütterung auch bei leichtfuttrigen Pferden umsetzt",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du neue Pferde entspannt in die Herde integrierst",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du deinen Stallalltag so strukturierst, dass er in 30 Minuten erledigt ist",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du Fehlinvestitionen vermeidest, bevor das Geld weg ist",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du in 24 Stunden einen fertigen Plan für deinen Traumoffenstall hast",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie du weißt, ob dein Pferd wirklich genug Platz hat",
+      "kategorie": "Lösung",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will, dass meine Pferde sich in ihrem Zuhause wirklich wohlfühlen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht jede Nacht grübeln, ob alles in Ordnung ist",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will einen Offenstall, auf den ich stolz bin",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte nicht ständig umbauen und nachrüsten müssen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xa9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will meinen Stallalltag in der Zeit schaffen, die ich habe",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xaamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte verstehen, was meine Pferde wirklich brauchen",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    },
+    {
+      "id": "xabmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich will nicht zum Sklaven meiner Pferdehaltung werden",
+      "kategorie": "Identität",
+      "produktbereich": "Weitere Produkte",
+      "unterthema": "Offenstall",
+      "archiv": false
+    }
+  ],
+  "vorlagen": [
+    {
+      "id": "xakmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Bin ich die Einzige, die gemerkt hat, dass [verbreiteter Ansatz in deiner Nische] einfach nicht mehr funktioniert?",
+      "kind": "Hook-Formel",
+      "hookTyp": "Eingeständnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xalmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich hab mir jahrelang eingeredet, dass [falscher Glaubenssatz]. Bis ich gemerkt habe, dass es der teuerste Fehler war.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Eingeständnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xammshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Darf ich mal ehrlich sein? Ich habe jahrelang [Fehler] gemacht und niemand hat mir gesagt, dass es einen einfacheren Weg gibt.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Eingeständnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xanmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich muss mal was loswerden: [Die unbequeme Wahrheit] über deine Nische.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Eingeständnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xaomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Bin ich die Einzige, der es reicht, dass alle so tun, als ob [falscher Standard] normal wäre?",
+      "kind": "Hook-Formel",
+      "hookTyp": "Eingeständnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xapmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Klingt heftig, aber gerade weil du [häufige Handlung] machst, wirst du [gewünschtes Ergebnis] nie erreichen.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Kontrast",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xaqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Je mehr du [Sache X] machst, desto weniger [Ergebnis Y] bekommst du. Hier ist warum.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Kontrast",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xarmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "[Verbreiteter Ratschlag] ist der dümmste Tipp, den ich je gehört habe. Und fast alle folgen ihm.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Kontrast",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xasmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Alle reden über [X]. Niemand redet über [Y], dabei ist [Y] der eigentliche Hebel.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Kontrast",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xatmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du denkst, [Annahme A] hilft dir. In Wirklichkeit kostet sie dich [konkreter Verlust].",
+      "kind": "Hook-Formel",
+      "hookTyp": "Kontrast",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xaumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es gibt einen simplen Grund, warum [häufiges Problem] und er hat nichts mit [naheliegender Vermutung] zu tun.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Geheimnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xavmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es gibt genau einen Unterschied zwischen [Gruppe A die Erfolg hat] und [Gruppe B die kämpft]. Ich zeige ihn dir.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Geheimnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xawmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Der echte Grund, warum [Ergebnis X] bei den meisten nicht funktioniert, ist nicht das, was du denkst.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Geheimnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xaxmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es gibt eine Sache, die ich seit [Zeitraum] mache und die fast niemand in deiner Nische kennt.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Geheimnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xaymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Niemand spricht über diesen einen Schritt in [Prozess/Thema]. Dabei ist er der entscheidende.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Geheimnis",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xazmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich kann nicht fassen, wie viele [Zielgruppe] immer noch [Fehler] machen, obwohl die Lösung so nahe liegt.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Empörung",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es bricht mir das Herz, wie viele [Zielgruppe] [Situation] erleben, nur weil niemand ihnen [Lösung] gezeigt hat.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Empörung",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin es leid zu sehen, wie [Zielgruppe] [Fehler] machen und dann denken, sie sind das Problem.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Empörung",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich komme nicht drüber hinweg: [Zielgruppe] investieren Zeit/Geld/Energie in [X] und wundern sich dann, warum [schlechtes Ergebnis].",
+      "kind": "Hook-Formel",
+      "hookTyp": "Empörung",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich hab genug von [nervigem Standard in deiner Nische]. Es gibt einen besseren Weg.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Empörung",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "[Dieser Tipp / Diese Methode] müsste eigentlich verboten werden, sie bringt übertriebenes, aber [glaubwürdiges Ergebnis].",
+      "kind": "Hook-Formel",
+      "hookTyp": "Tabu",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das hier werden [Wettbewerber / andere in deiner Nische] hassen: [kurze Andeutung].",
+      "kind": "Hook-Formel",
+      "hookTyp": "Tabu",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das ist der unfairste Vorteil in [deiner Nische] und er ist kostenlos.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Tabu",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Diese eine [Methode / Strategie] hat mir mehr [Ergebnis] gebracht als aufwendige Alternative. Kaum jemand nutzt sie.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Tabu",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "[Ansatz X] klingt zu einfach, um zu funktionieren. Tut er aber. Hier ist warum.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Tabu",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xb9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "[Diese Sache] habe ich [Zeitraum] lang falsch gemacht und würde sie sofort ändern, wenn ich nochmal bei null starten würde.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Bedauern",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xbamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn ich meiner Vergangenheits-Version einen einzigen Ratschlag geben könnte: [Andeutung].",
+      "kind": "Hook-Formel",
+      "hookTyp": "Bedauern",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xbbmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe [Zeitraum] damit verschwendet, [falschen Ansatz] zu verfolgen. Das hier wäre der Shortcut gewesen.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Bedauern",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xbcmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Der teuerste Fehler in meiner [Selbstständigkeit / Zeit auf Instagram / Karriere]: [Andeutung], kein Spoiler.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Bedauern",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xbdmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe [Ergebnis] erst erreicht, als ich aufgehört habe, [Sache X] zu tun.",
+      "kind": "Hook-Formel",
+      "hookTyp": "Bedauern",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Caroline Preuss"
+    },
+    {
+      "id": "xbemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "01 Der direkte Pitch (Heart-Sell) · ABLAUF: Hook → Symptome → Der Preis → Der Shift → Das Angebot → CTA → Proof",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbfmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "02 Kundenergebnis → Angebot (Heart-Sell) · ABLAUF: Hook (Kunden-Win) → Wo sie startete → Was sich änderte → Der Mechanismus dahinter → Das Angebot → CTA",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbgmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "03 Dein Ergebnis → Angebot (Heart-Sell) · ABLAUF: Hook (dein Win) → Der alte Weg → Warum er nicht mehr funktioniert → Was du stattdessen gebaut hast → Das Angebot → CTA",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbhmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "04 Belief Shift (Soft-Sell) · ABLAUF: Hook (Überzeugung als Fakt) → Warum alle das glauben → Warum es falsch ist → Was stattdessen wahr ist → Leise Erwähnung der Arbeit → Optionaler CTA",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "05 Die Muster-Beobachtung (Soft-Sell) · ABLAUF: Hook (ein Muster) → Bei wem es auftaucht → Warum es passiert → Wofür es ein Zeichen ist → Leise Erwähnung der Arbeit",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbjmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "06 Die unpopuläre Meinung (Soft-Sell) · ABLAUF: Hook (Meinung gegen den Standard) → Was alle raten → Warum der Rat unvollständig ist → Was du stattdessen sagst → Lass es wirken",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbkmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "07 Hinter den Kulissen (Soft-Sell) · ABLAUF: Hook (Blick in deinen Prozess) → Die Entscheidung → Wie du sie durchdacht hast → Was du gewählt hast und warum → Was das verrät",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xblmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "08 Future Pacing (Soft-Sell) · ABLAUF: Hook (Bild ihres Zukunfts-Zustands) → Was vorher wahr sein muss → Was im Weg steht → Der eine Shift → Leise Erwähnung der Arbeit",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbmmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "09 Der Einwand-Reframe (Soft-Sell) · ABLAUF: Hook (ein Einwand als ihrer) → Warum der Einwand Sinn ergibt → Wovor er sie schützt → Das echte Risiko → Leise Erwähnung der Arbeit",
+      "kind": "Story-Framework",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "",
+      "quelle": "Heartfluencer"
+    },
+    {
+      "id": "xbnmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Sieh mal woran ich arbeite [Bild/Video einfügen]. Soll ich dir sagen, wann es fertig ist? [Umfrage einfügen]",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hast du dieses Meme gesehen?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbpmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "So hab ich mein Business angefangen. Mittlerweile hat sich ______ geändert",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stell mir all deine Fragen zu m Produkt",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbrmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich arbeite daran, x zu erstellen. Welche Dinge würdest du gerne bei mir sehen?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbsmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was bringt dir Freude?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbtmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wusstest du, dass ich für gewöhnlich mit einem ______ arbeuite?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es ist mehr als nur das ...\n\nNenn mir das, was deine idealen Kunden wollen (z.B. einen Bikinikörper), aber grabe dann noch tiefer, weil es nie \"nur\" um dieses Oberflächenergebnis geht. Was ist die große Sache, die sie wirklich motiviert, was ist die wahre Transformation? Ist es dieses eine KLeid, um wieder sexy für den Mann zu sein? Wird mehr Zeit mit geliebten Menschen verbracht? In der Lage sein, mit den Kindern zu Hause zu bleiben?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbvmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Fügen deiner Geschichte einen Frageaufkleber hinzu, damit die Leute dir Fragen zu deinem Angebot stellen können. Dies ist etwas, das du gegen Ende des Launhces tust, um die Einwände zu behandeln. Manchmal werden die Leute fragen, manchmal nicht, je nachdem, wie heiß dein Publikum ist.\n\nWENN du keine Fragen erhältst, füll einen FAQ Bereich auf deiner Website aus und teil ihn in der Story und frag ob sich jemand darin wiederspiegel.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Persönlich",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbwmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was ist das Schwierigste an x ​​UND wie kann ich helfen?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbxmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was gibt es heute Morgen zum Frühstück?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Okay, habe gerade die Nummer gezählt. Ich habe mit x Kunden in x Zeit gearbeitet. Verrückt!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xbzmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Meine inspiratuion das Podukt zu erstellen war________",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es ist mehr als nur das ...\n\nNenne das, was deine idealen Kunden wollen (z.B. einen Bikinikörper), aber grab dann noch tiefer, weil es nie \"nur\" um dieses Oberflächenergebnis geht. Was ist die große Sache, die sie wirklich motiviert, was ist die wahre Transformation? Ist es Selbstliebe? Wird mehr Zeit mit geliebten Menschen verbracht? In der Lage sein, mit den Kindern zu Hause zu bleiben?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Persönlich",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es bleiben nur noch x Tage, bis ich anfange, Leute in [Produkt] zu lassen!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Würdest du lieber _____ oder _____?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mein Lieblingsteil meiner letzten x Jahre Erfahrung ist",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es hat mich ganze 9 Monate gebraucht das Produkt zu erschaffen. Die Zeit war abr super gut invetsiert. Meine Kudnen haben wunderbare ERGEBNISSSE",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie fühlst du dich, wenn du an [Problem] denkst?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Umfrage – Dies oder Das?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Eine wichtige Lektion, die ich über x gelernt habe, ist y",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Lies  einfach dieses erstaunliche Buch über x - du musst es dir ansehen",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xc9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Habe gerade mit meinem Team telefoniert! Wir kreieren etwas super Spannendes für dich!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was gibst du jeden Morgen in deinen Kaffee?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcbmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Eine Sache, die Sie wissen müssen, um in x erfolgreich zu sein, ist y",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xccmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Jemand hat mir eine Nachricht geschickt, in der ich darum gebeten wurde folgnde Frage zu beantworten:",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcdmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Dinge von meiner To-Do-Liste abhaken! Beschlossen, einen Workshop zu x Thema zu veranstalten! Plane  jetzt den Inhalt. Soll ich dir eine Nachricht senden, wenn die kostenlose Anmeldung live geht?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mac oder PC?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcfmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das hat mir wirklich geholfen, Fortschritte in meinem Geschäft zu machen.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcgmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Frag dein Publikum (mit dem Quiz-Sticker): Was ist Ihre größte Herausforderung, wenn es um [Thema] geht? Gib ihnen einige Ideen, indem du Schlüsselwörter um den Quiz-Sticker platzierst (z. B. was ist die größte Herausforderung mit IG Stories? -> Verwende den Quiz-Sticker, damit die Leute ihre Antworten eintragen können; lasse um den Sticker herum einige Wortblasen mit ideen wie: \"was posten, ich möchte mein Gesicht nicht im Video zeigen, wie man verkauft usw.)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xchmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Möchtest du lieber, dass ich eine 5-tägige Herausforderung oder ein Webinar/Workshop zum Thema [Schmerzpunkt/Problem überwinden] veranstalte?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Teile ein Bild von deinem Haustier!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcjmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich brauchte eine Weile, um x zu überwinden, aber als ich y geschafft hatte, begannen sich die Dinge wirklich zu ändern.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xckmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Kannst du deinem Publikum eine leichte, lustige Geschichte über dich erzählen? Entweder  „Wie ich hierher gekommen bin“-Geschichte oder etwas, das im letzten Jahr oder in der letzten Woche passiert ist? Mach dich so nahbar wie möglich, je mehr Menschen das Gefühl haben „OMG, ich auch!“ desto besser. Auch gut: der Überraschungsfaktor. Wenn du eine Geschichte erzählen kannst, die eine völlig unerwartete Wendung hat (z. B. ich erzähle gerne, dass ich jung Mutter geworden bin)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xclmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du nicht mehr mit [Thema/Problem] zu kämpfen hättest, was würde sich bei dir im Leben ändern?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcmmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Teilen Sie ein Bild Ihrer Workstation",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcnmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Die meisten meiner Kunden denken, dass sie mit x zu kämpfen haben, wenn sie zum ersten Mal mit mir arbeiten, aber oft ist das eigentliche Problem y.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du dich fragst, ob [Produkt] etwas für dich ist, hier ist, für wen ich es gemacht habe",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcpmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe mich gerade mit [Name/Marke] zusammengetan – sie springen in mein Launch-Team, um zu helfen, und ich bin begeistert!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was hält dich #1 von x ab?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcrmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Früher brauchte ich x Zeit, um XYZ zu tun. Jetzt braucht es mich XYZ. Harte Arbeit zahlt sich aus!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcsmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mein Lieblingsteil von [Produkt] ist x [dann zeig es]",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xctmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich arbeite daran, einige BOMBEN-Boni zu erstellen, die [Produkt] beim Kauf hinzugefügt werden können. Stimm ab, welchen Bonus du am liebsten magst- A, B oder C!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was ist das Schwierigste an x?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcvmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich wurde gerade auf x Podcast/Blog/Website interviewt - ich fühle mich geehrt! Würde mich freuen, wenn Sie lesen und Ihre Gedanken teilen!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcwmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Möchte jemand einen Blick hinter die Kulissen von [Produkt]? Hier ist ein kurzes Video, das ich für dich aufgenommen habe!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcxmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Videos für meinen Kurs aufnehmen – was würdest du mir lieber machen? Lange Videos, die alles abdecken, oder kürzere, mundgerechte?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xcymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Auf der Suche nach einem neuen Buch. Teilen Sie unten Ihre neueste Lieblingslektüre!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xczmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Glückseligkeit nach diesem erstaunlichen Anruf mit meinem Kunden (Teilen Sie ein Bild).",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du fragst dich , welche Art von Ergebnissen mit [Produkt] möglich sind? Hier ist, was du erwarten kannst. [zeig testimonilas]",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich erstelle ein MockUp für [Produkt] – welches gefällt dir am besten? A oder B?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Lass uns albern werden. Wann war dein erster Kuss?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wie ich mich fühle, nachdem ich alle meine Wochenziele bis Dienstag erreicht habe (share a meme)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "So wird es sein, wenn du [Produkt] beitrittst",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "AHHHH Ich bin so aufgeregt! Gearde die Sales page für [Produkt] beendet und es knallt!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Okay - was war das Letzte, was deine Kinder zu dir heute  gesagt haben",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wusstest du x?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich habe eine Menge verrückter, wertvoller Bonusse hineingestopft, um [Produkt] noch süßer zu machen – hier sind nur einige der besten.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xd9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin nur hier, um zu sagen, dass ich liebe, was ich tue, und ich bin so aufgeregt, [Produkt] mit dir zu teilen. Ich weiß, dass es einen so großen Einfluss auf das Leben so vielen Menschen haben wird!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wohin in aller Welt bist du gereist?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdbmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin dabei, dich umzuhauen – dieser Mythos muss gesprengt werden!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdcmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du [Produkt] kaufst, wirst du es wirklich lieben, sich auf [x Strategie zur Lösung von y Problem] zu konzentrieren.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xddmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Schönen Montag! Ich liebe es, eine neue Arbeitswoche zu beginnen, vor allem, weil ich nur noch x Tage vom Start entfernt bin!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Erzähle eine Geschichte über dein Leben",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdfmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "X Gründe, warum Menschen mit y scheitern",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdgmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ob du gern mit mir arbeiten wirst?  Hier ist, was Du über mich und meinen Stil wissen musst",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdhmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte etwas SPASS in den sozialen Medien machen, um neue Kunden bei [Produkt] willkommen zu heißen – teil doch mal hier unter dem Post deine verrückten Ideen!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Irgendwelche Lieblings-Workout-Routinen? Teile einige Aufnahmen!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdjmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Quick TIPP!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdkmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Machst du dir Sorgen darüber, wie wenig Zeit du fürs Business hast? Es dauert nur x Zeit pro Tag/Woche, um [Produkt] fertigzustellen",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdlmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du mit x zu kämpfen hast, bin ich genau bei dir (Geschichte teilen)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdmmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was hat dich zuletzt zum Weinen gebracht?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdnmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Lass mich diese Strategie für dich aufschlüsseln!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin dabei, die Türen zu [Produkt] zu öffnen! YAYYY!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdpmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "SO AUFGEREGT, endlich den Namen des Projekts zu enthüllen, an dem ich so lange gearbeitet habe … es heißt [Produktname]. Füge unten ein Emoji hinzu, wenn dir der name auch gefällt.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Neugierde",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was ist der beste Ratschlag, den du je erhalten hast?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdrmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Der Grund, warum wir x STATT y machen, ist, weil ...",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdsmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich mache etwas Verrücktes und gebe dir eine kostenlose Vorschau auf eines der Module von [product]. Hör zu!!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdtmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was ist der schlimmste Ratschlag, den du je erhalten hast?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "x Fragen, über die sich jeder wundern sollte y",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdvmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn einer dieser Punkte auf dich zutrifft, kaufe das [Produkt] NICHT!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdwmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Teile einfach zum Spaß dein Bild vom Abschlussball!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdxmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Warum spricht niemand über x? Es ist wahnsinnig wichtig, aber jeder scheint es zu ignorieren. Lass uns diskutieren",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Expertenstatus",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hier ist alles in [Produkt] enthalten (gib den Wert jedes Artikels ein, dann den Gesamtwert des Preises, dann den TATSÄCHLICHEN Preis, um zu zeigen, wie großartig dein Angebot ist)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xdzmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich stehe in letzter Zeit wirklich auf x, hast du es schon probiert?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Der Hauptgrund, warum [Produkt] fantastisch ist, ist, weil es ...",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Gestehe, ich fühle mich in letzter Zeit wirklich niedergeschlagen. Hier ist der Grund.",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Leute fragen mich immer, wie ich x erreiche ... Ich teile meine Methode in [Produkt]!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich steh in letzter Zeit wirklich auf x, hast du es schon probiert?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich muss (Kunde) noch gratulieren, dass er mit [Produkt] so unglaubliche Ergebnisse erzielt hat. Du bist unglaublich und beweist, dass es sich auszahlt, wenn du die Arbeit machst! - (Kunde markieren)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Meine persönliche Meinung zu x ist y. Was denkst du?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stell dir vor, du müsstest dich nicht mehr mit x herumschlagen – wie toll wäre das? Das ist einer der Hauptgründe, warum ich [Produkt] entwickelt habe ... Du solltets nicht mit x kämpfen müssen und musst es jetzt auch nicht mehr!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Bist du ein würziger oder süßer Essenstyp?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Beantworten Sie einen der Haupteinwände, die Menschen beim Kauf haben",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xe9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Lieblings-TV-Show aus der Kindheit ... los!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xeamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Schließe eine Wissenslücke (einige Leute denken, dass x, aber y tatsächlich wahr ist)",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xebmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Brauche ein paar Musikempfehlungen zum Anhören, während ich an x ​​arbeite. Jemand Vorschläge für mich?",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xecmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich weiß, dass du dir wahrscheinlich Sorgen machst, dass [Produkt] bei dir nicht funktioniert ... schreib mir einfach eine DM, damit wir darüber sprechen können, ob es gut passt oder nicht. Ich verspreche, dass ich Sie wegschicken werde, wenn Sie kein guter Kandidat sind!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xedmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Erzähle eine Geschichte über dein Leben",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Engagement",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xeemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hurra x Leute haben sich uns gestern Abend in [product] angeschlossen!",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xefmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Schau dir an was die Leute sagen, die JETZT schon beigetreten sind [Produkt]",
+      "kind": "Content-Idee",
+      "hookTyp": "",
+      "zweck": "Sales",
+      "phase": "Evergreen",
+      "quelle": "99 Ideen"
+    },
+    {
+      "id": "xegmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "In wenigen Wochen öffnen die Tore zu XYZ",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xehmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Heute verrate ich wie ich mein Business began und womit ich am meisten Probleme hatte ( Pain point - passend zum Produkt)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xeimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "YEAHHH MEIN BABY IST ONLINE - daran habe ich die letzten 3 Monate gearbeitet und bin mega glücklich, dass ich dir mein neues Baby endlich zeigen darf.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xejmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wisst ihr, was ich mir überlegt hab? Wie fändet ihr es, wenn ich dem Produkt noch einen fetten Bonus einpacken würde? so ein richtig schönes (ETWAS DAS ALLE LIEBEN)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xekmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Welches war dein schlechtester Experten Tipp, den du bekommen hast?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xelmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stell dir mal vor wie das wäre, wenn du einafch mit deinen Lieben im Garten sitzen würdest, während auf deinem Telefon die Käufe einfach so eintrudeln.... Katsching:-) (Story Sequenz mit Secret Pre Pre Sale - Für Infos schick mir eine DM)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xemmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Testimonail zeigen +. Early Bird für alle droppen",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xenmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "ZIEG SOCIAL PROOF - Willkommen liebe*r - es ist so schön dich im Produkt zu begrüßen",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xeomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin so gespannt, was du zu der neuen Landingpage sagen wirst.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xepmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Happy Day - Nur noch 5 Tage läuft der Pre PRe Sale, danach steigt der Preis auf XYZ",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xeqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Anfangs haben mich die Dinge Wochen gekostet - dank XYZ sind es nur noch wenige Tage",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xermshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Heute muss ich euch Uschi vorstellen, sie sie nutzt mein Produkt bereits und hat damit schon diese Erfolge gehabt.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xesmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Eine wichtige Lektion die ich lernte zum Thema XYZ",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xetmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was macht dir in deinem Business am meisten Spaß?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xeumshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Zeig ein Produktbezogenes Testimonial",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xevmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hast du die neuen Boni geshen ?OMG , ich kann nicht glauben, dass ich die da einfach so kostenfrei hinein gatan hab. ZEIG DIE BONI",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xewmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Gute Laune in the House - ich liebe meinen Job -  das neue Produkt XYZ wird dir so einen großen Mehrwert liefern",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xexmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es wird so verrückt, hier kommt ein Einblick ins PRODUKT",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xeymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich möchte etwas total verrücktes tun, um die neuen Mitglieder in dem Produkt zu begrüßen.... Wer hat Ideen?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xezmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich hab unermüdlich gearbeitet, um das Produkt für dich so gut wie nur möglich zu machen. Es ist für alle (Zielgruppe) die sich (Transformation)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf0mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ein paar Podcast Empfehlungen zum Thema",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf1mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wußtest du, dass Verkaufen schon viel früher anfängt, als das Produkt zu zeigen? + HINWEIS: nur noch bis Morgen ost der Secret pre pre Sale Deal per DM zu haben. Danach steigt der Preis",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf2mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Die häufigsten 5 Gründe, weshlab die meisten scheitern",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf3mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du hast mich gefragt ob.... (frage zum produkt) + VERKAUFSHEBEL",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf4mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Eine Sache die du wissen solltest über Erfolg",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf5mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Die meisten Meiner kunden denken, sie strugglen mit XYZ - doch in Wahrheit liegt es an XYZ + HINWEIS nur ncoh heute kannst du den Secret pre pre Sale Deal ergattern. Ab Morgen liegt der Preis bei XYZ Euro.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf6mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du dich fragst, welche Ergebnisse mit XYZ möglich sind... Hier ist was du erwarten kannst",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Pre-Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf7mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Willkommen liebe*r - es ist so schön dich im Produkt zu begrüßen",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf8mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "ich arbeite gerade an dem Mock-Up für mein XYZ",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xf9mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "FOMO - schon 8765 Ladies sind dabei - nur du fehlst",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfamshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hat noch jemand mal probleme gehabt mit Pain Point (zum Produkt) oder nur ich ?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfbmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Einblicke in ein Modul zu dem am meisten begehrten Thema in deinem Produkt.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfcmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Beantworte einen der größten Sorgen, die deine Wunschkunden haben",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfdmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Nur noch 4 Tage, dann ist das Produkt geschlossen + VERKAUFSHEBEL",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Meine größten Learnings meiner Selbständigkeit",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xffmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Zeig die Posi It Wand  - feier die Ladies und zeig einen Auschnitt aus deinem Leben mit Leichtigkeit. Wenn du Lust hat, ein bisschen von deinem LUXUS (das kann Freizeit sein, ein Kaffee in einem Cafe´, ein Glas Wein am Strand oder etwas das für dich Luxux ist. ES MUSS KEINE ROLEX ODER CHANEL sein)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfgmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "OMG, es werden bomben Boni dabei sein. Ihr werdet ausrasten",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfhmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Salespage zeigen und den Kaufprozess visualisieren - geh einaml durch dengeamten Prozess, damit jeder gesehen hat wie das funktioniert + HYPE NUR NOCH MORGEN OFFEN- wenn du drüber schlafen willst, dann ist heute ein guter Zeitpunkt dazu.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Welches war dein bester Experten Tipp, den du je bekommen hast?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfjmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Letzter Tag - heiße einen Kunden Willkommen",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfkmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Was du über mich wissen solltest, wenn du mit mir arbeitest.",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xflmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Checke meine To Do Liste, hab beschlossen einen Workshop anzubieten. Soll ich dir bescheid geben wenn er ready ist?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfmmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Frag mich alles über das Produkt",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfnmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Diese eine Sache half mir so sehr in meinem Business",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfomshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Erzähl eine Story über dich und einen pain Point zum Produkt (I-Story)",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfpmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Dies oder das ?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfqmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wenn du nie wieder mit (Pain Point) strugglest, wie wäre dein Leben dann?",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    },
+    {
+      "id": "xfrmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hast du schon die ganzen Boni gesehen? Zeige Einblicke",
+      "kind": "Launch-Post",
+      "hookTyp": "",
+      "zweck": "",
+      "phase": "Launch-Vorbereitung",
+      "quelle": "47 Launch"
+    }
+  ],
+  "ideen": [
+    {
+      "id": "xfvmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Story: Wie ich mit Fjora das erste Mal allein ins Gelände bin, inkl. der Angst davor.",
+      "kategorie": "Identität",
+      "produktbereich": "Gelände-Schlüssel",
+      "status": "Roh"
+    }
+  ],
+  "planer": [],
+  "argumente": [
+    {
+      "id": "x3smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Endlich alleine entspannt ins Gelände – ohne dass jedes Rausgehen zur Mutprobe wird",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ein klarer roter Faden, statt ständig neue Tipps zu sammeln und trotzdem nicht weiterzukommen",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du wirst zum Sicherheitsanker: weniger Kopfkino, mehr Ruhe, mehr Handlungsfähigkeit in kritischen Momenten",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du verstehst dein Pferd besser (seine Signale, Reaktionen, Lernlogik) – dadurch entstehen weniger Missverständnisse",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Feine Hilfen statt Druck: bremsen/treiben wird klar, dein Pferd reagiert williger – ohne Chef-Gehabe, ohne Ziehen",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Klebendes/stehendes Verhalten wird lösbar, weil du nicht mehr „wartest, bis es bereit ist\", sondern gezielt Sicherheit + Führung aufbaust",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mehr Vertrauen in beide Richtungen: dein Pferd orientiert sich an dir – und du fühlst dich nicht mehr ausgeliefert",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x3zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd kommt lieber zu dir / Beziehung wird enger (Pferdemagnet-Gefühl, weil die Zusammenarbeit leichter wird)",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x40mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du kannst im eigenen Tempo lernen: Videos + Materialien, jederzeit abrufbar (und per App auch praktisch im Stall)",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x41mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Du bist nicht allein: durch Begleitung/Fragerunden bekommst du Rückhalt, wenn's hakt",
+      "quelle": "Traumteam",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x42mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Kopfkino & Angst vorm Alleine-Rausgehen",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x43mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Pferd klebt am Stall/an der Herde und wird beim Weggehen fest oder blockiert",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x44mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stehenbleiben im Gelände – und die Reiterin weiß nicht was sie tun soll",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x45mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Hektik/Schreckhaftigkeit unterwegs",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x46mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Unklare Hilfen / fehlende Basis: bremsen & treiben nicht zuverlässig",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x47mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Zu viel „Rumprobieren\" ohne Plan",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x48mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Druck vs. Beschwichtigen-Pendel",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x49mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Unsicherheit in der eigenen Rolle",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x4amshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Brüchiges Vertrauen / fehlende Verbindung",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x4bmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Frust, Scham & Rückzug",
+      "quelle": "Traumteam",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x4cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich gehe alleine ins Gelände – ruhig im Kopf. Kein Zittern, kein Bauchweh.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mein Pferd orientiert sich an mir, auch wenn's draußen spannend wird.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wir kommen selbstverständlich vom Hof, ohne Kleben, ohne Diskussion.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich kann fein bremsen und fein treiben – mein Pferd reagiert prompt.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Seele baumeln lassen: Ich genieße den Ausritt wirklich.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ich bin diese souveräne Pferdefrau, die andere anschauen und denken: Wow, die zwei sind ein Team.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Mein Pferd kommt gerne zu mir – auf der Weide, im Paddock, im Stall.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Neue Situationen fühlen sich leicht an: Anhänger, Tierarzt, neue Wege.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Echte Herzensbindung: Nähe, Vertrauen, dieses warme Gefühl von „Wir zwei gegen den Rest der Welt\".",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x4lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stolz & Freiheit: Ich muss niemandem mehr etwas beweisen.",
+      "quelle": "Traumteam",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x8cmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit ihr endlich einen klaren roten Faden habt",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8dmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit dein Pferd gesund Muskulatur aufbaut (gezielter Aufbau Bauch, Rücken, Hinterhand)",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8emshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit dein Pferd dich gesund tragen kann",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8fmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit Balance und Tragkraft besser werden",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8gmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit sie keine Angst mehr haben, etwas falsch zu machen",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8hmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit Training endlich sichtbar etwas bringt",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8imshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit sie ihr Pferd sinnvoll aufs Reitpferdeleben vorbereiten können",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8jmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit sie nicht nur trainieren, sondern ihr Pferd wirklich verstehen",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8kmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit gemeinsame Zeit wieder leicht und schön wird",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8lmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Damit entspannte Ausritte überhaupt möglich werden",
+      "quelle": "BBP",
+      "gruppe": "10 Gründe"
+    },
+    {
+      "id": "x8mmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd baut trotz Training kaum Muskulatur auf",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8nmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Sie wissen nicht, welches Training wirklich sinnvoll ist",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8omshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Angst, das Pferd falsch zu trainieren oder zu überfordern",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8pmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd läuft auf der Vorhand und trägt sich nicht richtig",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8qmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Es fehlt ein klarer Plan, was sie wann und wie trainieren sollen",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8rmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd ist unausbalanciert, stolpert oder wirkt körperlich instabil",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8smshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Verunsicherung durch zu viele unterschiedliche Meinungen von außen",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8tmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Keine sichtbaren Fortschritte",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8umshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Schlechtes Gewissen beim Reiten",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8vmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Wunsch nach gesundem Freizeitpferd ohne zu wissen wie",
+      "quelle": "BBP",
+      "gruppe": "Kernprobleme"
+    },
+    {
+      "id": "x8wmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd hat sichtbar Muskulatur aufgebaut (Rücken, Bauch, Hinterhand)",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x8xmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd trägt den Reiter gesund und stabil",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x8ymshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd läuft in schöner Balance",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x8zmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd wirkt fit, kraftvoll und trotzdem locker",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x90mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Endlich ein klarer Trainingsplan",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x91mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Echte Fortschritte und Komplimente von anderen",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x92mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Das Pferd ist perfekt auf seinen Job als Reitpferd vorbereitet",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x93mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Reiten fühlt sich plötzlich viel besser an",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x94mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Ruhiges Gewissen – ich tue meinem Pferd wirklich etwas Gutes",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "x95mshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Stolz auf sich und ihr Pferd: Wir haben das gemeinsam geschafft",
+      "quelle": "BBP",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xacmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Info-Guide: Die 10 größten Fehler in der Offenstallhaltung",
+      "quelle": "Offenstall",
+      "gruppe": "Bonus"
+    },
+    {
+      "id": "xadmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Persönliches Workbook: Schritt für Schritt jeden Bereich durchplanen",
+      "quelle": "Offenstall",
+      "gruppe": "Bonus"
+    },
+    {
+      "id": "xaemshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Fertiger Plan in 24 Stunden — \"Ich hab's, jetzt kann ich loslegen\"",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xafmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Pferde bewegen sich von selbst, weil der Trail Anreize bietet",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xagmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Kein Matsch mehr im Winter",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xahmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Nachts ruhig schlafen — \"Ich weiß, dass alles stimmt\"",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xaimshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Abäppeln in 30 Minuten statt 2 Stunden",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    },
+    {
+      "id": "xajmshksf7p",
+      "createdAt": 1786024358917,
+      "text": "Keine Fehlinvestitionen mehr (Heuraufe passt, Boden hält)",
+      "quelle": "Offenstall",
+      "gruppe": "Traumzustände"
+    }
+  ]
+}
