@@ -62,7 +62,8 @@
   @media(min-width:980px){.grid.three{grid-template-columns:1fr 1fr 1fr;}}
   .card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;gap:8px;}
   .card.arch{opacity:.72;background:#f6f1ea;}
-  .card h3{font-size:15.5px;line-height:1.3;padding-right:52px;}
+  .card h3{font-size:15.5px;line-height:1.3;padding-right:66px;}
+  .card.card3 h3{padding-right:100px;}
   .card .hook{font-size:13.5px;background:var(--beige);border-radius:10px;padding:8px 10px;font-style:italic;}
   .card .notes{font-size:13px;color:var(--muted);white-space:pre-wrap;}
   .card-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px;}
@@ -77,6 +78,13 @@
   .card-actions{position:absolute;top:10px;right:10px;display:flex;gap:4px;}
   .mini{background:var(--beige);color:var(--ink);border-radius:8px;width:30px;height:30px;font-size:14px;display:flex;align-items:center;justify-content:center;}
   .mini:active{background:var(--beige-dk);} .mini.del:active{background:#f3c9c1;}
+  .mini.star{color:var(--muted);} .mini.star.on{background:var(--gold);color:#fff;}
+  .mini.check{color:var(--muted);} .mini.check.on{background:var(--ok);color:#fff;}
+  .card.done{opacity:.5;}
+  .makerow{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px;border-top:1px dashed var(--line);padding-top:9px;}
+  .makerow span{font-size:11.5px;color:var(--muted);font-weight:600;}
+  .makerow button{background:var(--beige);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:5px 12px;font-size:12.5px;font-weight:600;}
+  .makerow button:active{background:var(--gold);color:#fff;}
   .empty{text-align:center;color:var(--muted);padding:40px 20px;border:2px dashed var(--line);border-radius:var(--radius);}
   .empty .big{font-size:34px;margin-bottom:8px;}
 
@@ -130,6 +138,14 @@
   .field label{display:block;font-size:12.5px;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.03em;}
   .field input,.field select,.field textarea{width:100%;padding:11px 13px;border-radius:11px;border:1px solid var(--line);background:var(--white);color:var(--ink);}
   .field textarea{min-height:76px;resize:vertical;}
+  .field textarea.tall{min-height:200px;line-height:1.5;}
+  .slides-editor{display:flex;flex-direction:column;gap:8px;}
+  .slide-row{display:flex;align-items:flex-start;gap:8px;}
+  .slide-num{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:8px;}
+  .slide-inp{flex:1;min-height:48px;padding:9px 11px;border-radius:10px;border:1px solid var(--line);background:var(--white);color:var(--ink);font-size:14px;line-height:1.45;resize:vertical;font-family:inherit;}
+  .slide-del{flex:0 0 auto;background:var(--beige);color:var(--ink);border-radius:8px;width:30px;height:30px;font-size:13px;margin-top:6px;}
+  .slide-del:active{background:#f3c9c1;}
+  .add-slide{margin-top:10px;background:var(--beige);border:1px dashed var(--beige-dk);color:var(--ink);border-radius:10px;padding:9px 14px;font-size:13px;font-weight:600;width:100%;}
   .seg{display:flex;flex-wrap:wrap;gap:6px;}
   .seg button{background:var(--white);border:1px solid var(--line);color:var(--muted);padding:8px 12px;border-radius:999px;font-size:13px;font-weight:600;}
   .seg button.on{background:var(--ink);color:var(--cream);border-color:var(--ink);}
@@ -244,8 +260,8 @@ const COLLECTIONS = {
   reels:{label:"Reels",icon:"🎬",single:"Reel",three:false,fields:[
     {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
     {key:"hook",label:"Hook (erster Satz)",type:"textarea",card:"hook"},
-    {key:"reelText",label:"Reel-Text (Text im Video)",type:"textarea",card:"notes"},
-    {key:"caption",label:"Caption",type:"textarea",card:"notes"},
+    {key:"reelText",label:"Reel-Text (Text im Video)",type:"textarea",big:true},
+    {key:"caption",label:"Caption",type:"textarea",card:"notes",big:true},
     {key:"medien",label:"🎬 Video-Link (Canva)",type:"text",card:"link"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
@@ -259,7 +275,8 @@ const COLLECTIONS = {
   karussells:{label:"Karussells",icon:"🎠",single:"Karussell",three:false,fields:[
     {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
     {key:"hook",label:"Slide 1 / Hook",type:"textarea",card:"hook"},
-    {key:"slides",label:"Slides (je Zeile = 1 Slide)",type:"textarea",card:"notes"},
+    {key:"slides",label:"Slides (ein Satz pro Slide, einzeln bearbeitbar)",type:"slides",card:"notes"},
+    {key:"caption",label:"Caption",type:"textarea",big:true},
     {key:"medien",label:"🖼 Slides-Link (Canva)",type:"text",card:"link"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
@@ -268,11 +285,13 @@ const COLLECTIONS = {
     {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
     {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
   ]},
-  hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,fields:[
+  hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,hasDone:true,fields:[
     {key:"text",label:"Hook-Text",type:"textarea",required:true,card:"title"},
     {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
+    {key:"bearbeitet",label:"✅ Bearbeitet (überarbeitet/fertig)",type:"bool",card:"flag",flagText:"✅ Bearbeitet"},
+    {key:"favorit",label:"⭐ Best Performer (Vorbild fürs Gehirn)",type:"bool",card:"flag",flagText:"⭐ Best Performer"},
     {key:"archiv",label:"🗄 Archiv (nicht aktiv bewerben)",type:"bool",card:"flag",flagText:"🗄 Archiv"},
   ]},
   vorlagen:{label:"Vorlagen",icon:"📋",single:"Vorlage",three:true,fields:[
@@ -356,6 +375,7 @@ function renderCollection(col){
   const view=document.getElementById("view-"+col);
   let items=DB[col].slice().reverse();
   if(!f.archiv) items=items.filter(it=>!it.archiv);
+  if(cfg.hasDone&&f.hideDone) items=items.filter(it=>!it.bearbeitet);
   if(f.search){const q=f.search.toLowerCase();items=items.filter(it=>JSON.stringify(it).toLowerCase().includes(q));}
   (FILTERS[col]||[]).forEach(def=>{
     if(f[def.key]) items=items.filter(it=>it[def.key]===f[def.key]);
@@ -369,7 +389,7 @@ function renderCollection(col){
     if(def.nested&&f[def.key]===def.nested.whenValue) html+=rowFor(def.nested.def);
     return html;
   }).join("");
-  const archivChip=cfg.hasArchiv?`<div class="chips"><button class="chip tog ${f.archiv?'active':''}" onclick="setFilter('${col}','archiv',${!f.archiv})">🗄 Archiv ${f.archiv?'sichtbar':'ausgeblendet'}</button></div>`:"";
+  const archivChip=cfg.hasArchiv?`<div class="chips"><button class="chip tog ${f.archiv?'active':''}" onclick="setFilter('${col}','archiv',${!f.archiv})">🗄 Archiv ${f.archiv?'sichtbar':'ausgeblendet'}</button>${cfg.hasDone?`<button class="chip tog ${f.hideDone?'active':''}" onclick="setFilter('${col}','hideDone',${!f.hideDone})">✅ Erledigte ${f.hideDone?'ausgeblendet':'sichtbar'}</button>`:''}</div>`:"";
 
   view.innerHTML=`
     <div class="view-head">
@@ -393,20 +413,68 @@ function cardHTML(col,it){
     const v=it[fl.key];
     if(fl.card==="title") title=escHTML(v||"(ohne Titel)");
     else if(fl.card==="hook"&&v) body+=`<div class="hook">„${escHTML(v)}"</div>`;
-    else if(fl.card==="notes"&&v) body+=`<div class="notes">${escHTML(v)}</div>`;
+    else if(fl.card==="notes"&&v){const full=String(v).trim();let snip=full.split('\n')[0];const cut=snip.length>150;if(cut)snip=snip.slice(0,150).trim();body+=`<div class="notes">${escHTML(snip)}${(cut||snip.length<full.length)?'…':''}</div>`;}
     else if(fl.card==="date"&&v) tags.push(`<span class="badge b-date">🗓 ${fmtDate(v)}</span>`);
     else if(fl.card==="link"&&v) tags.push(`<a class="badge b-cta" href="${escAttr(v)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">🔗 Medien öffnen</a>`);
     else if(fl.card==="flag"&&v===true) tags.push(`<span class="badge b-flag">${fl.flagText}</span>`);
     else if(fl.card==="badge"&&v&&v!=="—") tags.push(`<span class="badge ${BADGE_CLASS[fl.key]||'b-status'}">${escHTML(v)}</span>`);
   });
-  return `<div class="card ${it.archiv?'arch':''}">
+  const hasFav=cfg.fields.some(f=>f.key==='favorit');
+  const favOn=it.favorit===true;
+  const hasDone=cfg.fields.some(f=>f.key==='bearbeitet');
+  const doneOn=it.bearbeitet===true;
+  const check=hasDone?`<button class="mini check ${doneOn?'on':''}" title="${doneOn?'Als unbearbeitet markieren':'Als bearbeitet abhaken'}" onclick="toggleDone('${col}','${it.id}')">${doneOn?'✅':'☑'}</button>`:'';
+  const star=hasFav?`<button class="mini star ${favOn?'on':''}" title="${favOn?'Best-Performer-Markierung entfernen':'Als Best Performer markieren (Vorbild fürs Gehirn)'}" onclick="toggleFav('${col}','${it.id}')">${favOn?'★':'☆'}</button>`:'';
+  const nBtns=2+(hasFav?1:0)+(hasDone?1:0);
+  return `<div class="card ${it.archiv?'arch':''} ${doneOn?'done':''}">
     <div class="card-actions">
-      <button class="mini" onclick="openModal('${col}','${it.id}')">✎</button>
+      ${check}${star}<button class="mini" onclick="openModal('${col}','${it.id}')">✎</button>
       <button class="mini del" onclick="quickDelete('${col}','${it.id}')">🗑</button>
     </div>
-    <h3>${title}</h3>${body}
+    <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
+    ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
+    ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus (Satz für Satz)</button></div>`:""}
+    ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
+}
+function makeFrom(hookId,toCol){
+  const src=DB.hooks.find(x=>x.id===hookId);if(!src)return;
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(src.text||'').slice(0,60),hook:src.text||'',kategorie:src.kategorie||'',produktbereich:src.produktbereich||'',unterthema:src.unterthema||''};
+  DB[toCol].push(item);save();renderTabs();go(toCol);openModal(toCol,item.id);
+  toast(toCol==='reels'?'🎬 Reel-Entwurf aus Hook erstellt':'🎠 Karussell-Entwurf aus Hook erstellt');
+}
+function splitSentences(t){
+  return String(t||'').split(/\n+/).flatMap(l=>l.split(/(?<=[.!?…])\s+/)).map(s=>s.trim()).filter(s=>s.length>1);
+}
+function makeKarussellFromReel(id){
+  const r=DB.reels.find(x=>x.id===id);if(!r)return;
+  const src=(r.reelText&&r.reelText.trim())?r.reelText:(r.caption||'');
+  const lines=[];if(r.hook)lines.push(r.hook.trim());splitSentences(src).forEach(s=>lines.push(s));
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:r.titel||(r.hook||'').slice(0,60),hook:r.hook||'',slides:lines.join('\n'),caption:r.caption||'',produktbereich:r.produktbereich||'',unterthema:r.unterthema||'',kategorie:r.kategorie||'',cta:r.cta||''};
+  DB.karussells.push(item);r.karussell=true;
+  save();renderTabs();go('karussells');openModal('karussells',item.id);
+  toast('🎠 Karussell aus Reel erstellt, Slides aufgeteilt');
+}
+function copyKarussell(id){
+  const k=DB.karussells.find(x=>x.id===id);if(!k)return;
+  const slides=String(k.slides||'').split('\n').map(s=>s.trim()).filter(Boolean);
+  let t='SLIDES (ein Satz pro Slide):\n'+slides.map((s,i)=>`${i+1}. ${s}`).join('\n');
+  if(k.caption&&k.caption.trim()) t+='\n\nCAPTION:\n'+k.caption.trim();
+  const meta=[k.produktbereich&&('Produktbereich: '+k.produktbereich),k.kategorie&&('Kategorie: '+k.kategorie),k.cta&&k.cta!=='—'&&('CTA: '+k.cta)].filter(Boolean).join(' | ');
+  if(meta) t+='\n\n'+meta;
+  const fallback=()=>{const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);toast('📋 Für Canva kopiert ✓');};
+  if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(()=>toast('📋 Für Canva kopiert ✓'),fallback); else fallback();
+}
+function toggleFav(col,id){
+  const it=DB[col].find(x=>x.id===id);if(!it)return;
+  it.favorit=!it.favorit;save();renderCollection(col);
+  toast(it.favorit?'⭐ Als Best Performer markiert':'Markierung entfernt');
+}
+function toggleDone(col,id){
+  const it=DB[col].find(x=>x.id===id);if(!it)return;
+  it.bearbeitet=!it.bearbeitet;save();renderCollection(col);
+  toast(it.bearbeitet?'✅ Als bearbeitet abgehakt':'Haken entfernt');
 }
 function setFilter(col,key,val){filters[col]=filters[col]||{search:"",archiv:false};filters[col][key]=val;renderCollection(col);}
 
@@ -421,22 +489,28 @@ function openModal(col,id){
     const v=item[fl.key];
     if(fl.type==="text") return field(fl,`<input name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
     if(fl.type==="date") return field(fl,`<input type="date" name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
-    if(fl.type==="textarea") return field(fl,`<textarea name="${fl.key}">${escHTML(v||'')}</textarea>`);
+    if(fl.type==="textarea") return field(fl,`<textarea name="${fl.key}" class="${fl.big?'tall':''}">${escHTML(v||'')}</textarea>`);
     if(fl.type==="select"){const cur=v||fl.options[0];return field(fl,`<select name="${fl.key}">${fl.options.map(o=>`<option ${o===cur?'selected':''}>${o}</option>`).join("")}</select>`);}
     if(fl.type==="bool") return `<div class="field"><div class="switch"><input type="checkbox" name="${fl.key}" ${v?'checked':''}><label style="margin:0;text-transform:none;letter-spacing:0;">${fl.label}</label></div></div>`;
     if(fl.type==="seg"){const cur=v||fl.options[0];return `<div class="field"><label>${fl.label}</label><div class="seg" data-seg="${fl.key}">${fl.options.map(o=>`<button type="button" class="${o===cur?'on':''}" onclick="pickSeg(this)">${o}</button>`).join("")}<input type="hidden" name="${fl.key}" value="${escAttr(cur)}"></div></div>`;}
+    if(fl.type==="slides"){let arr=String(v||'').split('\n').map(s=>s.trim()).filter(Boolean);if(!arr.length)arr=[''];return `<div class="field"><label>${fl.label}</label><div class="slides-editor" id="slidesEditor">${arr.map((s,i)=>slideRowHTML(i+1,s)).join('')}</div><button type="button" class="add-slide" onclick="addSlideRow()">＋ Slide hinzufügen</button></div>`;}
     return "";
   }).join("");
   document.getElementById("overlay").classList.add("open");
 }
 function field(fl,inner){return `<div class="field"><label>${fl.label}${fl.required?' *':''}</label>${inner}</div>`;}
+function slideRowHTML(num,text){return `<div class="slide-row"><span class="slide-num">${num}</span><textarea class="slide-inp" rows="2">${escHTML(text)}</textarea><button type="button" class="slide-del" title="Slide löschen" onclick="removeSlideRow(this)">✕</button></div>`;}
+function addSlideRow(){const ed=document.getElementById('slidesEditor');const d=document.createElement('div');d.className='slide-row';d.innerHTML=`<span class="slide-num"></span><textarea class="slide-inp" rows="2"></textarea><button type="button" class="slide-del" title="Slide löschen" onclick="removeSlideRow(this)">✕</button>`;ed.appendChild(d);renumberSlides();d.querySelector('textarea').focus();}
+function removeSlideRow(btn){const r=btn.closest('.slide-row');r.parentNode.removeChild(r);renumberSlides();}
+function renumberSlides(){document.querySelectorAll('#slidesEditor .slide-num').forEach((el,i)=>el.textContent=i+1);}
 function pickSeg(btn){const w=btn.closest(".seg");w.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");w.querySelector("input[type=hidden]").value=btn.textContent;}
 function closeModal(){document.getElementById("overlay").classList.remove("open");}
 function saveItem(e){
   e.preventDefault();
   const col=current.collection,cfg=COLLECTIONS[col],form=e.target,data={};
   cfg.fields.forEach(fl=>{
-    if(fl.type==="bool") data[fl.key]=form.querySelector(`[name="${fl.key}"]`).checked;
+    if(fl.type==="slides"){data[fl.key]=[...document.querySelectorAll('#slidesEditor .slide-inp')].map(t=>t.value.trim()).filter(Boolean).join('\n');}
+    else if(fl.type==="bool") data[fl.key]=form.querySelector(`[name="${fl.key}"]`).checked;
     else data[fl.key]=form.querySelector(`[name="${fl.key}"]`).value.trim();
   });
   if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
@@ -639,6 +713,16 @@ const BRAND = {
     `CTA: „Kommentiere mit [CODEWORT]". „Preisvorteil" statt „Rabatt", „Teilzahlungen" statt „Ratenzahlung".`,
   ],
 };
+/* Anikas eigene Hook-Ideen als Stil-Vorbilder (NICHT getestet, geben die Richtung vor) */
+const STIL_HOOKS={
+  "Gelände-Schlüssel":[
+    `Es macht mich fast wütend, wie oft Pferdebesitzerinnen wie du hören: Solange dein Pferd am Kumpel klebt, brauchst du gar nicht ans Gelände denken.`,
+    `Ohne ein zweites Pferd vom Hof zu gehen klingt für viele fast fahrlässig. Aber für dein Pferd ist es der Moment, in dem es dich zum ersten Mal als sicheren Anker erlebt.`,
+    `Eigentlich willst du gar nicht die „strenge Chefin am Strick" sein. Du willst einfach, dass dein Pferd dir vertraut.`,
+    `Alle raten dir erst mit einem ruhigen Begleitpferd spazieren zu gehen. Das ist, was ich machen würde…`,
+    `Die meisten glauben, dass ihr Pferd nicht alleine vom Hof will, weil ein anderes Pferd fehlt. In Wahrheit fehlt etwas ganz anderes…`,
+  ],
+};
 const KAT_GUIDE={
   "Identität":`Wer Tina sein will bzw. wovon sie sich abgrenzt. Selbstbild, Werte, Zugehörigkeit. (50% des Contents.)`,
   "Problem":`Tinas konkrete Schmerzpunkte so benennen, dass sie sich sofort erkennt. (20%.)`,
@@ -655,6 +739,13 @@ function buildPrompt(c){
   if(c.fw&&c.fw.indexOf('automatisch')<0){const f=HF_FRAMEWORKS.find(x=>`${x.n} ${x.name}`===c.fw);if(f)fwLine=`\n\nNUTZE DIESES STORY-FRAMEWORK (Heartfluencer): ${f.n} ${f.name} (${f.g})\nABLAUF: ${f.ablauf}`;}
   const typLine=(c.typ&&c.typ.indexOf('alle')<0)?`Nutze bevorzugt den Hook-Typ „${c.typ}".`:`Nutze verschiedene Hook-Typen und rotiere sie.`;
   const themaLine=c.thema?`Thema/Idee: ${c.thema}`:`Wähle selbst ein konkretes, starkes Thema, das zu Kategorie und Produkt passt.`;
+  const stil=(STIL_HOOKS[c.prod]||[]).slice();
+  const tested=[];
+  DB.reels.forEach(r=>{if(r.favorit&&r.produktbereich===c.prod&&r.hook)tested.push(r.hook);});
+  DB.hooks.forEach(h=>{if(h.favorit&&h.produktbereich===c.prod&&h.text)tested.push(h.text);});
+  let exBlock=``;
+  if(stil.length)exBlock+=`\n\n=== SO KLINGT MEIN STIL (meine eigenen Hook-Ideen als Richtung, NICHT kopieren) ===\n`+stil.map((h,i)=>`${i+1}. ${h}`).join('\n');
+  if(tested.length)exBlock+=`\n\n=== HOOKS, DIE BEI MIR NACHWEISLICH FUNKTIONIERT HABEN (Best Performer) ===\n`+tested.map((h,i)=>`${i+1}. ${h}`).join('\n');
   const output=c.format==='Karussell'
     ?`1. 5 Hook-Varianten (Slide 1) in verschiedenen Hook-Typen, den Typ jeweils dazuschreiben.\n2. Markiere die stärkste und begründe in 1 Satz.\n3. Für die empfohlene: 6 bis 8 Karussell-Slides (Slide 1 max. 8 Wörter) und eine Caption mit CTA „Kommentiere mit ${code}".`
     :`1. 5 Hook-Varianten in verschiedenen Hook-Typen, den Typ jeweils dazuschreiben.\n2. Markiere die stärkste und begründe in 1 Satz.\n3. Für die empfohlene: den Reel-Text (die Text-Overlays im Video) und eine Caption mit CTA „Kommentiere mit ${code}".`;
@@ -688,7 +779,7 @@ Kaufmoment: ${t.kaufmoment}
 Trigger und Tabus: ${t.triggerTabus}${gl}
 
 === HOOK-TYPEN (Preuss, zum Rotieren) ===
-${HOOK_TYP_INFO.map((h,i)=>`${i+1}. ${h[0]}: ${h[1]}`).join('\n')}
+${HOOK_TYP_INFO.map((h,i)=>`${i+1}. ${h[0]}: ${h[1]}`).join('\n')}${exBlock}
 
 === WORDING-REGELN (nicht verhandelbar) ===
 ${BRAND.wordingRegeln.map(r=>`• ${r}`).join('\n')}

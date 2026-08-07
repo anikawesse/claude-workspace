@@ -418,7 +418,11 @@
       "Bash(node -e \"const d=require\\('C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine/content-maschine-import.json'\\); console.log\\('hook sample:',JSON.stringify\\(d.hooks[0]\\)\\); const u={};d.hooks.forEach\\(h=>u[h.unterthema]=\\(u[h.unterthema]||0\\)+1\\);console.log\\('unterthemen:',JSON.stringify\\(u\\)\\);\")",
       "Bash(node --check check.js)",
       "Bash(node -e \"const d=require\\('C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine/content-maschine-import.json'\\); const p={};d.hooks.forEach\\(h=>p[h.produktbereich]=\\(p[h.produktbereich]||0\\)+1\\); const k={};d.vorlagen.forEach\\(v=>k[v.kind]=\\(k[v.kind]||0\\)+1\\); console.log\\('hook-bereiche:',JSON.stringify\\(p\\)\\); console.log\\('vorlagen-arten:',JSON.stringify\\(k\\)\\);\")",
-      "Bash(xargs cat)"
+      "Bash(xargs cat)",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__search-folders",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__read-design",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__copy-design",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__edit-design"
     ],
     "defaultMode": "bypassPermissions"
   }
