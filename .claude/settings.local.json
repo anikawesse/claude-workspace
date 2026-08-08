@@ -422,7 +422,21 @@
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__search-folders",
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__read-design",
       "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__copy-design",
-      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__edit-design"
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__edit-design",
+      "PowerShell($bis = Get-Date -Format \"yyyy-MM-dd\"; $von = \\(Get-Date\\).AddDays\\(-14\\).ToString\\(\"yyyy-MM-dd\"\\); Write-Output \"Von: $von  Bis: $bis\"; Test-Path \".\\\\scripts\\\\minikurs-auswertung.ps1\"; Test-Path \".\\\\scripts\\\\.env\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-25 -Bis 2026-08-08)",
+      "Bash(unzip -p \"Webinar Masterclass 5_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 7_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 8_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 9_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 10_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 11_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 12_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 13_14.docx\" word/document.xml)",
+      "Bash(unzip -p \"Webinar Masterclass 14_14.docx\" word/document.xml)",
+      "Bash(python -c \"import pandas\")",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__create-design-from-candidate",
+      "Bash(xargs ls -lt)"
     ],
     "defaultMode": "bypassPermissions"
   }
