@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Koffer voller Notfallstrategien</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Montserrat',sans-serif;color:var(--text);font-size:15px;line-height:1.6;background:#e8e3d8}
+  .page{
+    width:210mm;min-height:297mm;background:var(--white);
+    margin:14px auto;padding:22mm 22mm;position:relative;
+    box-shadow:0 4px 24px rgba(0,0,0,0.12);page-break-after:always;overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto}
+  .page::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,var(--rust) 0%,var(--rust) 60%,var(--caramel) 60%,var(--caramel) 100%);
+  }
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--rust);line-height:1.25}
+  .gold-line{width:54px;height:3px;background:var(--caramel);border:none;margin:12px 0 16px}
+  p{margin-bottom:11px}
+  .lead{font-size:15.5px}
+  strong{color:var(--rust)}
+
+  .box{background:var(--boxbeige);border-left:5px solid var(--caramel);border-radius:8px;padding:16px 20px;margin:26px 0}
+  .box.sage{background:var(--sage);border-left-color:var(--rust)}
+  .box h3{margin-bottom:4px;font-size:19px}
+  .box .subttl{font-style:italic;color:var(--rust);font-size:13px;margin-bottom:12px}
+  .box ul.cols{list-style:none;columns:2;column-gap:26px}
+  .box ul.cols li{margin-bottom:9px;font-size:12.5px;line-height:1.45;break-inside:avoid;-webkit-column-break-inside:avoid}
+  .box ul.cols li b{color:var(--rust)}
+  .box ul.simple{list-style:none}
+  .box ul.simple li{margin-bottom:8px;font-size:13px;line-height:1.45}
+  .box ol.steps{margin:0;padding-left:22px}
+  .box ol.steps li{margin-bottom:9px;font-size:13px;line-height:1.5;padding-left:4px}
+  .box ol.steps li::marker{color:var(--rust);font-weight:800}
+
+  /* Problemblock */
+  .prob{padding:12px 0;border-bottom:1px solid #e4dac8}
+  .prob:last-child{border-bottom:none}
+  .prob .p-problem{font-family:'Playfair Display',serif;color:var(--rust);font-size:16px;font-weight:700;margin-bottom:4px}
+  .prob .p-strat{font-size:12.5px;line-height:1.5;margin:0}
+  .prob .p-strat b{color:var(--rust)}
+  .prob ul.plist{list-style:disc;padding-left:18px;margin:5px 0 7px}
+  .prob ul.plist li{font-size:12px;line-height:1.4;margin-bottom:4px}
+
+  .footer{position:absolute;bottom:12mm;left:22mm;right:22mm;display:flex;justify-content:space-between;font-size:11px;color:#a08a6a;border-top:1px solid #e4dac8;padding-top:8px}
+
+  .cover{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:253mm}
+  .cover .cover-logo{width:158px;height:auto;align-self:center;margin-bottom:24px}
+  .cover .badge{display:inline-block;align-self:center;background:var(--rust);color:var(--beige);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase;padding:8px 22px;border-radius:30px;margin-bottom:28px}
+  .cover h1{font-size:44px;margin-bottom:10px}
+  .cover .horse{font-size:40px;margin:20px 0}
+  .cover .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:22px;color:var(--caramel);margin-bottom:26px}
+  .cover .who{font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--text);margin-top:36px}
+  .closing{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--rust);text-align:center;margin-top:22px}
+
+  .cta{background:var(--rust);color:var(--beige);border-radius:10px;padding:22px 26px;margin:28px 0 0;text-align:center}
+  .cta h3{color:var(--beige);font-size:21px;margin-bottom:10px}
+  .cta p{color:var(--beige);font-size:13.5px;line-height:1.55;margin-bottom:9px}
+  .cta .mail{display:inline-block;font-weight:800;color:var(--white);background:rgba(255,255,255,0.16);padding:8px 18px;border-radius:22px;font-size:14px;letter-spacing:0.3px;margin:2px 0 4px}
+  .cta .sign{font-family:'Playfair Display',serif;font-style:italic;margin-top:12px;margin-bottom:0}
+
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @media print{
+    html,body{background:none}
+    .page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;overflow:hidden;page-break-after:always}
+    .page:last-child{page-break-after:auto}
+    @page{size:A4;margin:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="page cover">
+  <img src="logo.png" alt="Anika's Pferdeakademie" class="cover-logo">
+  <span class="badge">🎁 Dein Geschenk</span>
+  <h1>Dein Koffer voller<br>Notfallstrategien</h1>
+  <div class="horse">🐴🌳</div>
+  <p class="sub">Wenn’s draußen brenzlig wird, wähle aus diesen Strategien</p>
+  <p class="lead" style="max-width:440px;align-self:center">
+    Druck dir diese Notfallstrategien gerne aus und lese sie dir immer wieder durch. So hast du
+    in jedem Moment die passende Strategie zur Hand, um dein Pferd wieder zur Ruhe zu bringen.
+  </p>
+  <p class="who">mit Anika Wesse · Anikas Pferdeakademie</p>
+</section>
+
+<!-- SEITE 2 · Einleitung -->
+<section class="page">
+  <h1 style="font-size:30px">Was du in diesem Koffer findest</h1>
+  <hr class="gold-line">
+  <p class="lead">
+    In diesem Koffer findest du vier Kategorien mit Notfallstrategien, mit denen du dein Pferd im
+    Gelände wieder beruhigen kannst. Das ist erst einmal eine Übersicht, damit du weißt: Du hast in
+    jedem Moment viele Werkzeuge zur Hand und bist der Situation nie hilflos ausgeliefert.
+  </p>
+  <p>
+    Im Programm schauen wir uns dann gemeinsam an, welche Strategien am besten zu dir und deinem
+    Pferd passen. Und du bekommst natürlich mein Feedback dazu, damit du sie im richtigen Moment
+    sicher anwenden kannst.
+  </p>
+
+  <div class="box">
+    <h3>So nutzt du diesen Koffer</h3>
+    <ol class="steps">
+      <li>Du lernst auf den nächsten Seiten die vier Kategorien mit ihren Strategien kennen.</li>
+      <li>Du schaust in die Liste mit den häufigsten Problemen und suchst dort deine im Moment größte Herausforderung.</li>
+      <li>Du schaust dir die passenden Strategien dazu an und verinnerlichst diese, damit du im Notfall genau weißt, was du tun kannst.</li>
+    </ol>
+  </div>
+
+  <div class="footer"><span>Koffer voller Notfallstrategien · Anikas Pferdeakademie</span><span>2</span></div>
+</section>
+
+<!-- SEITE 3 · Kategorie A + B -->
+<section class="page">
+  <h1 style="font-size:26px">Die 4 Kategorien im Überblick</h1>
+  <hr class="gold-line">
+
+  <div class="box">
+    <h3>A · Fang bei dir selbst an</h3>
+    <div class="subttl">Dein Pferd spürt jede deiner Emotionen und Bewegungen.</div>
+    <ul class="cols">
+      <li><b>Atmen:</b> Atme bewusst tief und langsam, das nimmt Spannung aus euch beiden.</li>
+      <li><b>Summen oder singen:</b> Deine ruhige Stimme sagt „alles gut“.</li>
+      <li><b>In deine Mitte kommen:</b> Steh fest, Schultern locker, Blick nach vorn.</li>
+      <li><b>Dein Tempo halten:</b> Werde nicht unbewusst schneller, nur weil dein Pferd schneller wird.</li>
+      <li><b>Erwartung runter:</b> Ziel ist nicht z. B. bis zum Waldrand, sondern dass dein Pferd wieder runterfährt.</li>
+      <li><b>Pause machen:</b> Kurz anhalten, durchatmen, neu starten.</li>
+    </ul>
+  </div>
+
+  <div class="box sage">
+    <h3>B · Einwirkung &amp; Hilfen am Pferd</h3>
+    <div class="subttl">Gib klare, sanfte Grenzen und fordere Aufmerksamkeit.</div>
+    <ul class="cols">
+      <li><b>Schritte verlangsamen:</b> Mach deine eigenen Schritte kleiner und langsamer.</li>
+      <li><b>Absatz schlurfen:</b> Ein schlurfendes Geräusch bremst und erdet.</li>
+      <li><b>Arm heben:</b> Heb bremsend den Arm wie eine Bahnschranke, wenn dein Pferd nach vorn drängt.</li>
+      <li><b>Gerte als Abstandhalter:</b> Nutz die Gerte, um deine Bahnschranke zu verstärken.</li>
+      <li><b>Kopfsenken:</b> Bitte dein Pferd im Stand, den Kopf zu senken, das beruhigt das Nervensystem.</li>
+      <li><b>Mähnenkamm schütteln:</b> Löst ein erstarrtes Pferd und bringt es zum Abschnauben.</li>
+      <li><b>Schenkelweichen:</b> Lass die Hinterhand weichen, so kannst du die Vorwärtsbewegung besser abfangen.</li>
+      <li><b>Vorwärts-Rückwärts-Schaukel:</b> Ein paar Schritte vor, anhalten, rückwärtsrichten und wiederholen. Dein Pferd schenkt dir wieder Aufmerksamkeit und reagiert durchlässiger.</li>
+      <li><b>Kopf zu dir nehmen:</b> Nimm den Kopf leicht zu dir, wenn ihr an der Gefahr vorbeigeht.</li>
+      <li><b>Nach hinten schauen lassen:</b> Baue Abstand auf und lass zu, dass dein Pferd leicht nach hinten schaut, wenn es Angst von hinten hat.</li>
+    </ul>
+  </div>
+
+  <div class="footer"><span>Koffer voller Notfallstrategien · Anikas Pferdeakademie</span><span>3</span></div>
+</section>
+
+<!-- SEITE 4 · Kategorie C + D -->
+<section class="page">
+  <div class="box">
+    <h3>C · Bewegung und Laufmuster anpassen</h3>
+    <div class="subttl">Wenn dein Pferd stehen bleibt, einfriert oder gar nicht weiter will.</div>
+    <ul class="cols">
+      <li><b>In Bögen laufen:</b> Ovale, Volten, Slalom statt stur geradeaus.</li>
+      <li><b>Anhalten und grasen:</b> Schüttet Glückshormone aus und beruhigt das vegetative Nervensystem.</li>
+      <li><b>Gucken lassen:</b> Gib ihm Zeit, das Gruselige in Ruhe anzuschauen.</li>
+      <li><b>Atmen und Pause machen:</b> Halte dein Pferd kurz an und lass es zur Ruhe kommen (gerne mit Kopfsenken kombinieren).</li>
+      <li><b>Ein Schritt, anhalten:</b> Ein Schritt vor, anhalten, wiederholen. Ihr bleibt in Bewegung auch auf kleinem Raum und dein Pferd erstarrt nicht komplett.</li>
+    </ul>
+  </div>
+
+  <div class="box sage">
+    <h3>D · Schaff Abstand und Raum</h3>
+    <div class="subttl">Wenn die Bedrohung von außen kommt (Trecker, Schweine, Kühe, Spaziergänger, Kinder etc.).</div>
+    <ul class="cols">
+      <li><b>Abstand aufbauen:</b> Bring so viel Raum wie möglich zwischen Pferd und Auslöser.</li>
+      <li><b>Bei Verkehr mittig bleiben:</b> Bleib ruhig mittig auf der Straße, bis der Fahrer wirklich bremst. Dann erst auf den Seitenstreifen ausweichen. Dabei immer freundlich lächeln.</li>
+      <li><b>Dein Pferd abschirmen:</b> Stell dich zwischen dein Pferd und die Gefahr und schirm es ab.</li>
+      <li><b>Im Bogen ausweichen:</b> Lauf nicht direkt auf die Gefahr zu, sondern drum herum oder im Slalom darauf zu.</li>
+      <li><b>Annäherung und Rückzug:</b> Ran, wieder weg, einmal atmen, wiederholen. So erkundet dein Pferd mutig neue Schreckgespenster wie z. B. Mülltonnen.</li>
+      <li><b>Zurück in die Komfortzone:</b> Wenn nichts hilft, zieht euch dahin zurück, wo dein Pferd sich sicher fühlt und ansprechbar für dich ist.</li>
+    </ul>
+  </div>
+
+  <div class="footer"><span>Koffer voller Notfallstrategien · Anikas Pferdeakademie</span><span>4</span></div>
+</section>
+
+<!-- SEITE 5 · Problemblock (Teil 1) -->
+<section class="page">
+  <h1 style="font-size:28px">Welches ist im Moment deine Herausforderung?</h1>
+  <hr class="gold-line">
+  <p class="lead">Such dir deine im Moment größte Herausforderung heraus und schau dir die passenden Strategien dazu an. Oft hilft mehr als eine, probier aus, was zu euch passt.</p>
+
+  <div class="prob">
+    <p class="p-problem">1 · Bei dir selbst</p>
+    <ul class="plist">
+      <li>Dein Kopfkino „was, wenn er steigt, durchgeht, sich losreißt?“, deine Angst überträgt sich aufs Pferd</li>
+      <li>Du wirst unbewusst schneller und hektischer, sobald dein Pferd es wird</li>
+      <li>Du erkennst die Stresssignale deines Pferdes zu spät</li>
+      <li>Im Ernstfall weißt du nicht, wie du reagieren sollst (kein Notfallplan)</li>
+      <li>Du fällst in Starre und wirst passiv, dann übernimmt dein Pferd die Führung</li>
+    </ul>
+    <p class="p-strat"><b>Das hilft:</b> Atmen · In deine Mitte kommen · Dein Tempo halten · Erwartung runter · Pause machen · Mentaltraining · Wissen über Strategien aneignen</p>
+  </div>
+
+  <div class="prob">
+    <p class="p-problem">2 · Schreck von außen (Tiere, Dinge, Geräusche)</p>
+    <ul class="plist">
+      <li>Tiere: Schweine, Kühe, Schafe, Hunde („Wenn mein Pferd auf Schweine trifft, panische Angst und lässt sich nicht mehr beruhigen“)</li>
+      <li>Objekte und Geräusche: Mülltonnen, flatternde Planen, Fahnen, laute Geräusche</li>
+    </ul>
+    <p class="p-strat"><b>Das hilft:</b> Abstand aufbauen · Dein Pferd abschirmen · Im Bogen ausweichen · Annäherung und Rückzug · Kopfsenken · Mähnenkamm schütteln · Grasen lassen</p>
+  </div>
+
+  <div class="prob">
+    <p class="p-problem">3 · Verkehr &amp; Straße</p>
+    <ul class="plist">
+      <li>Autos, Radfahrer, Motorräder („getunte Motorräder mit 100 Sachen“)</li>
+      <li>Landmaschinen und Mähdrescher, an denen man nicht vorbeikommt („ein riesiger Traktor mit Anhänger donnert ohne zu bremsen an uns vorbei“)</li>
+      <li>schmale Wege ohne Ausweichmöglichkeit</li>
+    </ul>
+    <p class="p-strat"><b>Das hilft:</b> Bei Verkehr mittig bleiben · Abstand aufbauen · Dein Pferd abschirmen · Kopf zu dir nehmen · Grasen lassen</p>
+  </div>
+
+  <div class="footer"><span>Koffer voller Notfallstrategien · Anikas Pferdeakademie</span><span>5</span></div>
+</section>
+
+<!-- SEITE 6 · Problemblock (Teil 2) -->
+<section class="page">
+  <div class="prob">
+    <p class="p-problem">4 · Dein Pferd macht dicht / friert ein (introvertiert)</p>
+    <ul class="plist">
+      <li>bleibt stehen wie ein Fels, geht keinen Meter (wird oft als „stur“ missverstanden)</li>
+      <li>guckt sich in der Ferne fest (z. B. Spaziergänger, Reh)</li>
+      <li>will an einer bestimmten Stelle nicht weiter</li>
+    </ul>
+    <p class="p-strat"><b>Das hilft:</b> Schenkelweichen · In Bögen laufen · Gucken lassen · Ein Schritt, anhalten · Mähnenkamm schütteln · Annäherung und Rückzug · Grasen lassen</p>
+  </div>
+
+  <div class="prob">
+    <p class="p-problem">5 · Dein Pferd fährt hoch / wird zu schnell (extrovertiert)</p>
+    <ul class="plist">
+      <li>steigt, drängelt, tänzelt, reißt sich los</li>
+      <li>wird hektisch, sobald der Hof außer Sicht ist</li>
+      <li>bei Druck: bockt, rennt rückwärts (bis in den Graben)</li>
+      <li>Stalldrang: gibt ab einem Punkt Gas Richtung Heimweg, kaum zu bremsen („ICE nach Hause“)</li>
+    </ul>
+    <p class="p-strat"><b>Das hilft:</b> Schritte verlangsamen · Absatz schlurfen · Arm heben · Gerte als Abstandhalter · Schenkelweichen · Vorwärts-Rückwärts-Schaukel · Dein Tempo halten · In Bögen laufen · Grasen lassen</p>
+  </div>
+
+  <p class="closing">Du hast alles dabei, was du brauchst. Genieß die Zeit mit deinem Pferd. 💛</p>
+
+  <div class="cta">
+    <h3>Möchtest du die Abkürzung?</h3>
+    <p>Alleine ist es immer am schwersten, seine Ziele zu erreichen. Ich nehme dich gerne an die Hand, und mit meiner Unterstützung wirst du deinen entspannten Spaziergang mit deinem Liebling schon bald von deiner Wunschliste abhaken können.</p>
+    <p>Schreib mir einfach eine Nachricht und schildere mir gerne, was dir im Moment noch im Weg steht zum entspannten Spaziergang mit deinem Liebling:</p>
+    <span class="mail">info@anikas-pferdeakademie.de</span>
+    <p class="sign">Ich freu mich auf dich. Deine Anika 💛</p>
+  </div>
+
+  <div class="footer"><span>Koffer voller Notfallstrategien · Anikas Pferdeakademie</span><span>6</span></div>
+</section>
+
+</body>
+</html>

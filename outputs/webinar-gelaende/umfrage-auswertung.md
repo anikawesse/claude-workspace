@@ -76,3 +76,35 @@
    - Die **eigene Angst / das Kopfkino** ist so präsent, dass sie im Intro (Brandstiftung/Hoffnung) und in Schritt 1 (Kontext/Vision) klar vorkommen sollte. „Mein Pferd ist gar nicht das Problem, eher ich" ist ein perfekter O-Ton.
 
 4. **Sie wollen greifbar-Praktisches.** Erics „Schaltwagen zeigen" (echter Lernmoment im Content) trifft genau diese Erwartung.
+
+---
+
+## UPDATE 2026-08-09 — 2. Umfrage-Welle (jetzt ~90 Antworten, vorher ~35)
+
+Die bisherigen Muster bestätigen sich alle. NEU/stärker in der zweiten Welle:
+
+**1. Die EIGENE ANGST ist jetzt das dominante Thema (viel stärker als vorher).** Sehr viele nennen sich selbst als Kern-Hürde. Gold-O-Töne (wortwörtlich):
+- „Meine eigene Angst das etwas schief gehen könnte, ich falle runter, breche mir was oder mein Pferd bricht sich was."
+- „dass mein Pferd nicht mental bei mir ist, sondern ständig im Außen nach Gefahren sucht."
+- „mich weiter … momentan finde immer andere Ausreden."
+- Erfolgs-Wunsch dazu: „ich lerne, mich nicht von der Nervosität / vom Stress meines Pferdes anstecken zu lassen." · „mich auf mich selbst verlassen."
+→ Bestätigt die Betonung „erst DU, dann dein Pferd" und den Sicherheitsanker-Fokus.
+
+**2. „Losreißen" ist eine der häufigsten konkreten Ängste.** O-Töne:
+- „ich große Angst habe, dass sie sich losreisst."
+- „dass sich meine Pferde … losreißen oder neben mir völlig kopflos werden."
+- „steht wie ein Fels, sich losreißt und weg rennt."
+→ Perfekt für Content-Schritt 2 (Notfallstrategien) + Opt-in-Bullet „losreißt".
+
+**3. Einfrieren / rückwärts / steht wie ein Fels** weiter sehr häufig:
+- „Das mein Pferd nicht wie angekurbelt stehen bleibt." · „Das mein Pferd einfriert und steht." · „alleine nur Rückwärts geht."
+
+**4. Verkehr/Fahrzeuge bestätigt** (passt zur Verkehrsstrategie in Schritt 2):
+- „die Ängste über große und laute Fahrzeuge wie Busse, Trecker, LKW einfangen zu können." · „Angst zu haben wenn er hochfährt, dass er auf die Straße rennt."
+
+**5. Neue Erfolgs-O-Töne (gut für Vision / roten Faden Schritt 3):**
+- „Wir gemeinsam wieder ein paar Schritte weiter richtung Freiheit kommen."
+- „ich lerne, eine mentale Verbindung zwischen mir und meinem Pferd aufrecht zu erhalten."
+- „ich einige Schlüssel erhalte, wie ich in Stresssituationen zu reagieren habe, bzw. die Reaktion meines Pferdes bereits im Keim voraussehen und entspannen."
+
+⚠️ **Sensibel behandeln (nicht öffentlich als Beispiel nutzen ohne Rücksprache):** einzelne sehr persönliche Antworten (z.B. Reiterin mit inoperablem Hirntumor, arbeitet vom Boden; Pferd mit angerissenem Unterstützungsband/Losreißer). Wertvoll fürs Verständnis, aber privat.

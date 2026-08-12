@@ -29,6 +29,10 @@ param(
     [string]$Von,
     [string]$Bis,
     [string]$KampagnenFilter = 'Gelände',   # nur Kampagnen, deren Name das enthaelt
+    # ... aber NICHT, wenn der Name das hier enthaelt. Grund: "Gelände Webinar
+    # Sandkasten August" sammelt Webinar-Anmeldungen, keine Kurs-Kaeufe. Ihr
+    # Budget wuerde den Gewinn des Mini-Kurses kuenstlich ins Minus druecken.
+    [string]$KampagnenAusschluss = 'Webinar',
     [switch]$FelderZeigen,
     [switch]$NichtSenden,                   # Google-Tabelle NICHT beschreiben (nur CSV)
     [string]$EnvDatei = "$PSScriptRoot\.env",
@@ -292,10 +296,11 @@ if ($FelderZeigen) {
         $test | Group-Object campaign_name | ForEach-Object {
             $summe = ($_.Group | ForEach-Object { [decimal]$_.spend } | Measure-Object -Sum).Sum
             $lpv   = ($_.Group | ForEach-Object { Get-LandingPageViews $_ } | Measure-Object -Sum).Sum
-            $passt = if ($_.Name -like "*$KampagnenFilter*") { 'JA ' } else { 'nein' }
+            $passt = if ($_.Name -like "*$KampagnenFilter*" -and
+                         (-not $KampagnenAusschluss -or $_.Name -notlike "*$KampagnenAusschluss*")) { 'JA ' } else { 'nein' }
             Write-Host ("  [Filter: {0}] {1} — {2:N2} EUR, {3} Landing Page Views" -f $passt, $_.Name, $summe, $lpv)
         }
-        Write-Host "`n  (Filter aktuell: '$KampagnenFilter' — nur 'JA' fliesst in die Auswertung.)" -ForegroundColor DarkGray
+        Write-Host "`n  (Filter aktuell: '$KampagnenFilter', ohne '$KampagnenAusschluss' — nur 'JA' fliesst in die Auswertung.)" -ForegroundColor DarkGray
     } catch {
         Write-Host "FEHLER: $($_.Exception.Message)" -ForegroundColor Red
         Write-Host "Pruefe META_ACCESS_TOKEN (ads_read) und META_AD_ACCOUNT_ID." -ForegroundColor Yellow
@@ -313,7 +318,7 @@ $vonDatum = ([datetime]$Von).Date
 $bisDatum = ([datetime]$Bis).Date
 
 Write-Host "`nZeitraum: $($vonDatum.ToString('dd.MM.yyyy')) bis $($bisDatum.ToString('dd.MM.yyyy'))" -ForegroundColor Cyan
-Write-Host "Kampagnen-Filter: '$KampagnenFilter'`n" -ForegroundColor Cyan
+Write-Host "Kampagnen-Filter: '$KampagnenFilter' (ohne '$KampagnenAusschluss')`n" -ForegroundColor Cyan
 
 Write-Host "Hole Verkaeufe von ThriveCart..." -ForegroundColor Cyan
 $transaktionen = Get-ThriveCartTransaktionen $vonDatum
@@ -387,11 +392,16 @@ if (-not $MetaAktiv) {
         $MetaAktiv = $false
         $metaRoh = @()
     }
-    $meta = $metaRoh | Where-Object { $_.campaign_name -like "*$KampagnenFilter*" }
-    $ignoriert = $metaRoh | Where-Object { $_.campaign_name -notlike "*$KampagnenFilter*" } |
-        Select-Object -ExpandProperty campaign_name -Unique
+    $meta = $metaRoh | Where-Object {
+        $_.campaign_name -like "*$KampagnenFilter*" -and
+        (-not $KampagnenAusschluss -or $_.campaign_name -notlike "*$KampagnenAusschluss*")
+    }
+    $ignoriert = $metaRoh | Where-Object {
+        $_.campaign_name -notlike "*$KampagnenFilter*" -or
+        ($KampagnenAusschluss -and $_.campaign_name -like "*$KampagnenAusschluss*")
+    } | Select-Object -ExpandProperty campaign_name -Unique
     if ($ignoriert) {
-        Write-Host "  Nicht mitgezaehlt (Filter '$KampagnenFilter'): $($ignoriert -join ', ')" -ForegroundColor DarkGray
+        Write-Host "  Nicht mitgezaehlt: $($ignoriert -join ', ')" -ForegroundColor DarkGray
     }
     Write-Host "  $($meta.Count) Tageszeile(n)." -ForegroundColor Green
 }
