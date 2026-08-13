@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dein Begleitheft zum Gelände-Webinar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --white:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:'Montserrat',sans-serif;color:var(--text);font-size:15px;line-height:1.65;background:#e8e3d8}
+
+  .page{
+    width:210mm;min-height:297mm;background:var(--white);
+    margin:14px auto;padding:22mm 22mm;position:relative;
+    box-shadow:0 4px 24px rgba(0,0,0,0.12);page-break-after:always;overflow:hidden;
+  }
+  .page:last-child{page-break-after:auto}
+  .page::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:8px;
+    background:linear-gradient(90deg,var(--rust) 0%,var(--rust) 60%,var(--caramel) 60%,var(--caramel) 100%);
+  }
+
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--rust);line-height:1.25}
+  .kicker{font-weight:700;letter-spacing:2.5px;text-transform:uppercase;font-size:11px;color:var(--caramel)}
+  .gold-line{width:54px;height:3px;background:var(--caramel);border:none;margin:12px 0 18px}
+  p{margin-bottom:11px}
+  .lead{font-size:15.5px}
+  strong{color:var(--rust)}
+
+  /* Schreiblinien */
+  .line{border-bottom:1.6px dotted #c9b48a;height:30px;margin:0 0 4px}
+  .write-block{margin:8px 0 16px}
+
+  /* Boxen */
+  .box{background:var(--boxbeige);border-left:5px solid var(--caramel);border-radius:8px;padding:16px 20px;margin:16px 0}
+  .box.sage{background:var(--sage);border-left-color:var(--rust)}
+  .box h3{margin-bottom:6px;font-size:18px}
+  .box p{margin-bottom:0;font-size:13.5px;line-height:1.6}
+  .box ol,.box ul{margin:6px 0 0 18px}
+  .box li{font-size:13.5px;line-height:1.6;margin-bottom:4px}
+
+  .q{font-weight:600;margin-bottom:6px}
+
+  /* 1-10 Skala */
+  .scale{display:flex;gap:6px;margin:10px 0 6px}
+  .scale .num{flex:1;aspect-ratio:1/1;border:2px solid var(--caramel);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:var(--rust)}
+  .scale-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--caramel);font-style:italic;margin-bottom:6px}
+  .scale-hint{font-size:11px;color:#a08a6a;text-align:center;margin-top:2px}
+
+  /* Checkrows */
+  .checkrow{display:flex;align-items:flex-start;gap:12px;margin:9px 0;font-size:13.5px;line-height:1.5}
+  .checkrow .cb{flex:none;width:20px;height:20px;border:2px solid var(--rust);border-radius:5px;margin-top:1px}
+  .checkrow b{color:var(--rust)}
+
+  .prefill{display:inline-flex;align-items:center;gap:7px;background:var(--caramel);color:var(--white);font-weight:700;font-size:12px;letter-spacing:0.3px;padding:6px 14px;border-radius:30px;margin:2px 0 12px}
+  .prefill.live{background:var(--rust)}
+
+  .footer{position:absolute;bottom:12mm;left:22mm;right:22mm;display:flex;justify-content:space-between;font-size:11px;color:#a08a6a;border-top:1px solid #e4dac8;padding-top:8px}
+
+  /* Cover */
+  .cover{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:253mm}
+  .cover .cover-logo{width:158px;height:auto;align-self:center;margin-bottom:24px}
+  .cover .badge{display:inline-block;align-self:center;background:var(--rust);color:var(--beige);font-weight:800;letter-spacing:2px;font-size:13px;text-transform:uppercase;padding:8px 22px;border-radius:30px;margin-bottom:26px}
+  .cover h1{font-size:40px;margin-bottom:10px}
+  .cover .horse{font-size:38px;margin:18px 0}
+  .cover .sub{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--caramel);margin-bottom:24px}
+  .cover .lead{max-width:430px;align-self:center}
+  .cover .who{font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;color:var(--text);margin-top:34px}
+  .closing{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--rust);text-align:center;margin-top:18px}
+
+  /* Über-mich-Seite */
+  .about{display:flex;gap:32px;align-items:center;min-height:225mm}
+  .about .photo{flex:none;width:64mm}
+  .about .photo-frame{width:100%;aspect-ratio:3/4;border-radius:16px;overflow:hidden;background:var(--sage);border:2px dashed var(--caramel);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--rust);padding:14px}
+  .about .photo-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;border-radius:14px}
+  .about .photo-frame.filled{padding:0;border:none;background:none;box-shadow:0 8px 22px rgba(0,0,0,0.18)}
+  .about .photo-frame .ph-ico{font-size:34px;margin-bottom:8px}
+  .about .photo-frame .ph-txt{font-size:12px;font-weight:600;line-height:1.4}
+  .about .txt{flex:1}
+  .about .txt h1{font-size:34px;margin-bottom:2px}
+  .about .txt p{font-size:14.5px}
+  .about .sign{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--rust);margin-top:16px}
+
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @media print{
+    html,body{background:none}
+    .page{margin:0;box-shadow:none;width:210mm;height:297mm;min-height:297mm;overflow:hidden;page-break-after:always}
+    .page:last-child{page-break-after:auto}
+    @page{size:A4;margin:0}
+  }
+</style>
+</head>
+<body>
+
+<!-- SEITE 1 · COVER -->
+<section class="page cover">
+  <img src="logo.png" alt="Anika's Pferdeakademie" class="cover-logo">
+  <span class="badge">📓 Workbook</span>
+  <h1>Dein Begleitheft<br>zum Gelände-Webinar</h1>
+  <div class="horse">🐴🌳</div>
+  <p class="sub">Entspannte Spaziergänge mit deinem Pferd, ganz ohne Pferdekumpel</p>
+  <p class="lead">
+    Druck dir dieses Heft vor dem Webinar aus, leg dir einen Stift bereit und mach aktiv mit.
+    Genau hier hältst du deine wichtigsten Aha-Momente fest.
+  </p>
+  <p class="who">mit Anika Wesse · Anikas Pferdeakademie</p>
+</section>
+
+<!-- SEITE 2 · ICH BIN ANIKA -->
+<section class="page">
+  <div class="about">
+    <div class="photo">
+      <div class="photo-frame filled">
+        <img src="anika.jpg" alt="Anika Wesse">
+      </div>
+    </div>
+    <div class="txt">
+      <span class="kicker">Schön, dass wir uns kennenlernen</span>
+      <h1>Ich bin Anika</h1>
+      <hr class="gold-line">
+      <p>Schön, dass du da bist. Mein Herzensthema ist es, dass du mit deinem Pferd sicher und
+      entspannt ins Gelände kommst, ganz ohne Pferdekumpel an der Seite und ganz in eurem eigenen
+      Tempo.</p>
+      <p>Heute gehe ich mit jedem meiner Pferde jederzeit entspannt alleine ins Gelände. Und ich
+      durfte schon über 500 Pferd-Mensch-Teams auf genau diesem Weg begleiten.</p>
+      <p>Mein Schlüssel dahin ist die Verlasspferd-Methode. Du wirst zum sicheren Anker deines
+      Pferdes, ganz ohne Druck und ohne Dominanzgehabe. Denn ich bin überzeugt: Jedes Pferd kann
+      ein Verlasspferd werden. Wirklich jedes.</p>
+      <p class="sign">Genau das zeige ich dir heute. Schön, dass du dabei bist. Deine Anika 💛</p>
+    </div>
+  </div>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 2</span></div>
+</section>
+
+<!-- SEITE 3 · BEVOR ES LOSGEHT -->
+<section class="page">
+  <span class="kicker">Bevor es losgeht</span>
+  <h1 style="font-size:30px">Schön, dass du dabei bist</h1>
+  <hr class="gold-line">
+  <p class="lead">
+    Du hältst dein Begleitheft in den Händen. Das bedeutet: Du willst nicht nur zuschauen,
+    du willst es wirklich umsetzen. Genau dafür ist dieses Heft gemacht.
+  </p>
+
+  <div class="box">
+    <h3>Dein Start-Gedanke</h3>
+    <p>Sicher ins Gelände zu kommen ist kein Talent und keine Frage von Mut. Du kannst der sichere
+    Anker für dein Pferd werden. Das ist eine Strategie, die du lernen kannst.</p>
+  </div>
+
+  <span class="prefill">✏️ Diesen Teil füllst du schon VOR dem Webinar aus</span>
+
+  <p class="q">Was ist gerade deine größte Herausforderung im Gelände?</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <p class="q">Wie sicher fühlst du dich gerade, alleine mit deinem Pferd ins Gelände zu gehen?</p>
+  <div class="scale">
+    <span class="num">1</span><span class="num">2</span><span class="num">3</span><span class="num">4</span><span class="num">5</span><span class="num">6</span><span class="num">7</span><span class="num">8</span><span class="num">9</span><span class="num">10</span>
+  </div>
+  <div class="scale-labels"><span>Gar nicht sicher</span><span>Voll und ganz</span></div>
+  <p class="scale-hint">Kreise die Zahl ein, die gerade für dich stimmt.</p>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 3</span></div>
+</section>
+
+<!-- SEITE 3 · SCHRITT 1 -->
+<section class="page">
+  <span class="kicker">Schritt 1</span>
+  <h1 style="font-size:30px">Alleine vom Hof</h1>
+  <hr class="gold-line">
+  <p class="lead">Du wirst zum Sicherheitsanker deines Pferdes. Schreib mit, was bei dir hängen bleibt.</p>
+
+  <span class="prefill live">✏️ Ab hier füllst du live während des Webinars aus</span>
+
+  <p class="q">Mein wichtigster Aha-Moment aus diesem Teil:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="box sage">
+    <h3>Gut zu wissen</h3>
+    <p>Dein Pferd bleibt am Hoftor stehen, weil noch die Herde sein Sicherheitsanker ist, nicht du.
+    Mit der 3-Zonen-Methode (Komfortzone, magische Schwelle, Gefahrenzone) und dem Prinzip
+    „Annäherung und Rückzug" wirst du selbst zu diesem Anker, ganz ohne Druck.</p>
+  </div>
+
+  <p class="q">Meine Notizen:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 4</span></div>
+</section>
+
+<!-- SEITE 4 · SCHRITT 2 -->
+<section class="page">
+  <span class="kicker">Schritt 2</span>
+  <h1 style="font-size:30px">Notfallstrategien</h1>
+  <hr class="gold-line">
+  <p class="lead">So beruhigst du dein Pferd, wenn draußen etwas passiert, und behältst die Kontrolle.</p>
+
+  <p class="q">Mein wichtigster Aha-Moment aus diesem Teil:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="box">
+    <h3>Deine Verkehrsstrategie in 3 Schritten</h3>
+    <ol>
+      <li><b>Abstand aufbauen:</b> so viel Raum wie möglich zwischen Pferd und Fahrzeug.</li>
+      <li><b>Raum einnehmen:</b> mittig bleiben und Handzeichen geben, bis der Fahrer wirklich bremst.</li>
+      <li><b>Pferd abschirmen:</b> dich dazwischenstellen, Kopf leicht zu dir, ruhig atmen.</li>
+    </ol>
+  </div>
+
+  <p class="q">Meine Top-3-Situationen, für die ich eine Strategie brauche:</p>
+  <div class="write-block">
+    <div class="checkrow"><span style="font-weight:800;color:var(--rust)">1.</span><div class="line" style="flex:1;margin:0"></div></div>
+    <div class="checkrow"><span style="font-weight:800;color:var(--rust)">2.</span><div class="line" style="flex:1;margin:0"></div></div>
+    <div class="checkrow"><span style="font-weight:800;color:var(--rust)">3.</span><div class="line" style="flex:1;margin:0"></div></div>
+  </div>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 5</span></div>
+</section>
+
+<!-- SEITE 5 · SCHRITT 3 -->
+<section class="page">
+  <span class="kicker">Schritt 3</span>
+  <h1 style="font-size:30px">Deine Meilensteine ins Gelände</h1>
+  <hr class="gold-line">
+  <p class="lead">
+    Der entspannte Weg ins Gelände hat klare Meilensteine, an denen du dich orientieren kannst.
+    Er beginnt damit, dass du dein Pferd kennenlernst und eine echte Basis am Boden aufbaust.
+    Danach kommen die Schritte, die dich
+    vorbereitend und begleitend nach draußen bringen, bis hin zum sicheren Ausritt. Wenn du diese
+    Meilensteine kennst, weißt du in jedem Moment, wo du gerade stehst und was als Nächstes dran ist.
+  </p>
+  <p style="margin-bottom:14px">
+    Manches davon hast du vielleicht längst geschafft, anderes liegt noch vor dir. Beides ist
+    völlig in Ordnung.
+  </p>
+
+  <div class="box">
+    <h3>Wo stehst du gerade? Was kannst du schon abhaken?</h3>
+    <p style="margin-bottom:10px">Kreuze an, was bei dir schon erledigt ist:</p>
+    <div class="checkrow"><span class="cb"></span><span><b>1 · Vertrauensvolle Beziehung</b> – Ihr werdet ein Team am Boden, über Führtraining, Freiarbeit und echtes Vertrauen.</span></div>
+    <div class="checkrow"><span class="cb"></span><span><b>2 · Souveräne Führungsperson</b> – Du hast dein Kopfkino im Griff und dein Pferd verlässt sich auf dich, nicht mehr auf die Herde.</span></div>
+    <div class="checkrow"><span class="cb"></span><span><b>3 · Entspannt vom Hof</b> – Mit der 3-Zonen-Methode wirst du der Sicherheitsanker, und ihr kommt alleine raus.</span></div>
+    <div class="checkrow"><span class="cb"></span><span><b>4 · Sicher im Gelände unterwegs</b> – Du erkennst Stress früh, nutzt deine Notfallstrategien und behältst die Kontrolle.</span></div>
+    <div class="checkrow"><span class="cb"></span><span><b>5 · Routine und kleine Abenteuer</b> – Ihr steigert Strecke und Zeit, meistert Rückschläge, und der Alleinspaziergang wird eure Routine.</span></div>
+    <div class="checkrow"><span class="cb"></span><span><b>6 · Ab in den Sattel</b> – Ihr genießt entspannte Ausritte, weil die Basis am Boden längst sitzt.</span></div>
+  </div>
+
+  <p class="q">Mein nächster kleiner Schritt ist:</p>
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 6</span></div>
+</section>
+
+<!-- SEITE 6 · ABSCHLUSS -->
+<section class="page">
+  <span class="kicker">Zum Abschluss</span>
+  <h1 style="font-size:30px">Meine größte Erkenntnis heute</h1>
+  <hr class="gold-line">
+  <div class="write-block">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+
+  <p class="q">Wie zuversichtlich bist du jetzt, dass du mit den passenden Strategien und der richtigen Begleitung auch alleine mit deinem Pferd ins Gelände gehen kannst?</p>
+  <div class="scale">
+    <span class="num">1</span><span class="num">2</span><span class="num">3</span><span class="num">4</span><span class="num">5</span><span class="num">6</span><span class="num">7</span><span class="num">8</span><span class="num">9</span><span class="num">10</span>
+  </div>
+  <div class="scale-labels"><span>Noch unsicher</span><span>Total zuversichtlich</span></div>
+  <p class="scale-hint">Diese Zuversicht ist dein Startpunkt. Von hier aus gehen wir den Weg gemeinsam weiter.</p>
+
+  <div class="box sage" style="text-align:center">
+    <h3 style="font-size:20px">Das ist erst der Anfang</h3>
+    <p>Wenn du diesen Weg wirklich gehen und aus einzelnen guten Tagen eure entspannte Routine
+    machen möchtest, dann nehme ich dich dabei gerne an die Hand.</p>
+  </div>
+
+  <p class="closing">Ich freu mich riesig auf dich. Deine Anika 💛</p>
+
+  <div class="footer"><span>Begleitheft · Anikas Pferdeakademie</span><span>Seite 7</span></div>
+</section>
+
+</body>
+</html>

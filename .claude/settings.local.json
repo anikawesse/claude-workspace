@@ -478,7 +478,14 @@
       "Bash(awk -F';' '{print $4}')",
       "Bash(awk -F';' '$4==\"\\\\\"Unklar\\\\\"\"{print $9\" || \"$7\" || \"$8}')",
       "Bash(node scripts/devine-retag.js)",
-      "Bash(node scripts/devine-retag-fix.js)"
+      "Bash(node scripts/devine-retag-fix.js)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\3a4b340e-80ec-4687-830e-3e8121608ee1\\\\scratchpad\\\\kampagnen-check.ps1\")",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\3a4b340e-80ec-4687-830e-3e8121608ee1\\\\scratchpad\\\\videos1-verlauf.ps1\")",
+      "Bash(\"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Begleitheft Gelände-Webinar.pdf\" --no-pdf-header-footer \"file:///C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/workbook-gelaende.html\")",
+      "Bash(rm -f \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Begleitheft Gelände-Webinar.pdf\")",
+      "Bash(\"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Workbook Gelände-Webinar.pdf\" --no-pdf-header-footer \"file:///C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/workbook-gelaende.html\")",
+      "Bash(ls -la \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\\" | grep -iE '\\\\.\\(jpg|jpeg|png|webp\\)$')",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\3a4b340e-80ec-4687-830e-3e8121608ee1\\\\scratchpad\\\\anzeigen-status.ps1\")"
     ],
     "defaultMode": "bypassPermissions"
   }
