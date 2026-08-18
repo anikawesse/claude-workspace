@@ -100,6 +100,11 @@ Stack: 3 Boni + exklusiver VIP-Zugang. Eine Folie pro Bonus (Name oben, Beschrei
 > Über 27 Strategien für jede Schreck- und Gruselsituation, plus das Anleitungspaket mit den genauen Videos zu jeder Technik. Ursprünglich für die Gruselecke am Reitplatz, funktioniert draußen genauso, wenn dein Pferd nicht vorbei will.
 > Wert: 399 €
 
+**Folie — Bonus 4: Deine Natur-Apotheke für ein entspanntes Pferd**
+> Subtitel: Sanfte Unterstützung von innen, damit dein Pferd von Natur aus gelassener wird.
+> In diesem E-Book bekommst du meine 7 beruhigenden Kräuter und 6 Bachblüten, die deinem Pferd helfen, ruhiger und ausgeglichener durchs Gelände zu gehen. Natürlich, sanft und sofort einsetzbar. (aus dem Gespensterecke-Material)
+> Wert: 37 €
+
 **Folie — Bonus ⭐: Exklusiver VIP-Zugang vor Ort**
 > Nur als Programm-Teilnehmerin bekommst du die Möglichkeit, einen persönlichen VIP-Aufenthalt mit deinem Pferd bei mir vor Ort zu buchen. Beritt- oder Ausbildungsplätze biete ich sonst gar nicht mehr an.
 > (extra buchbar, exklusiv für Mitglieder)
@@ -109,12 +114,41 @@ Stack: 3 Boni + exklusiver VIP-Zugang. Eine Folie pro Bonus (Name oben, Beschrei
 > + Wöchentliche Live-Calls … 497 €
 > + Begleit-Community … 197 €
 > + Anti-Schreck-Paket … 399 €
+> + Natur-Apotheke (E-Book) … 37 €
 > + Exklusiver VIP-Zugang … exklusiv
-> = über 1.000 € Mehrwert
+> = über 1.100 € Mehrwert
 > Dein Preis heute: einmalig 549 € (oder 4 × 165 €)
 
-## TEIL 13 — Garantie
-„Entspannt-vom-Hof-Garantie" (konditionale Service-Garantie), siehe outputs/gelaende-programm/garantie.md.
+## TEIL 13 — Garantie (gestapelt, Hormozi)
+Zwei Schutzschichten. Die 14-Tage-Geld-zurück ist als B2C-Verkäuferin gesetzliche Pflicht (Widerruf) → wird bewusst als Vertrauens-Element genutzt, nicht weggelassen. Siehe [[feedback-garantien-b2c]].
 
-## TEIL 14 — Verknappung  *(offen: Plätze + Deadline mit Anika)*
-Doppelte Verknappung: begrenzte Pilot-Plätze + Deadline (Eric: fixe Frist ein paar Tage nach dem Webinar).
+**Folie — Deine „14-Tage-Zufriedenheits-Garantie"** (kurzfristig, ohne Risiko starten)
+> Wenn du innerhalb der ersten zwei Wochen merkst, dass das Programm wider Erwarten doch nichts für dich ist, sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.
+
+**Folie — Deine „Entspannt-vom-Hof-Garantie"** (langfristig, ich bringe dich ans Ziel)
+> Wenn du in den 8 Wochen deine vier Erfolgstracker ausfüllst und die Inhalte Schritt für Schritt umsetzt, begleite ich dich in unseren Calls so lange kostenlos weiter, bis du es geschafft hast: bis du mit deinem Pferd rund 10 Minuten alleine im Gelände unterwegs warst, dabei das Gefühl hattest, die Kontrolle zu behalten, und ihr gemeinsam wieder entspannt am Hof angekommen seid.
+> Du musst nur zwei Dinge tun: dranbleiben und dich in den Calls zeigen. Solange du dabei bist, bin ich es auch.
+
+🗣️ Zwei Schichten: kurzfristig „starte ohne Risiko", langfristig „ich bleibe dran, bis du am Ziel bist".
+
+## TEIL 14 — Verknappung (final)
+Ansatz: KEINE öffentliche Platzzahl (Anikas Entscheidung — kein Fake-Druck). Dringlichkeit über Zeit + Kapazität + Pilot/Saison.
+Timing: Webinar So 23.08. abends · Frühbucher 24 h bis Mo 24.08. · Cart-Close Do 27.08. 23:59 Uhr.
+
+**Folie — Warum jetzt starten und nicht später? (1)**
+> Das ist der allererste Durchgang des Gelände-Programms. Du bekommst den Pilot-Preis und gestaltest die Inhalte mit. Zu diesem Preis gibt es das Programm nie wieder.
+> Außerdem ist jetzt jahreszeitlich der perfekte Zeitpunkt: Sommerhitze und Insekten sind vorbei, der Winter noch in der Ferne. Ideale Trainingsbedingungen fürs Gelände.
+
+**Folie — Warum jetzt starten und nicht später? (2)**
+> Weil ich jede Teilnehmerin eng in den Calls begleite und wir uns gemeinsam eure Videos anschauen, kann ich nur eine begrenzte Anzahl aufnehmen. Ist die Runde voll, ist sie voll.
+> Die Türen sind bis Donnerstag, 27.08., 23:59 Uhr geöffnet. Danach schließt das Angebot.
+
+**Folie — Frühbucher-Geschenk (nur 24 h, bis Mo 24.08.)**
+> Einführungsangebot: 549 € einmalig oder 4 × 165 €.
+> Bis Montag, 24.08., bekommst du zusätzlich mein Frühbucher-Geschenk: den leicht verständlichen Schmerzguide mit Videoanleitung und Checkliste. Damit erkennst du an klaren Zeichen, ob dein Pferd Schmerzen hat und sich vielleicht deshalb verweigert.
+
+**Folie — So funktioniert's / CTA**
+> 1. Du klickst auf den Link zur Infoseite und sicherst dir dort über einen der Buttons das Programm.
+> 2. Nach der Bestellung bekommst du sofort Zugang zum Mitgliederbereich und kannst direkt starten.
+> Die Zugänge zu den Boni bekommst du in der Willkommensmail.
+> 👉 [Checkout-Link]

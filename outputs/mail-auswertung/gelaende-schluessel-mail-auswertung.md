@@ -39,31 +39,34 @@ Und weil Devine die Prozente gerundet anzeigt, sind die absoluten Öffnungs- und
 
 ---
 
-## Basis-Stand 03.08.2026 (kumuliert, all time)
+## Strukturänderung 18.08.2026: Mail 2 gelöscht, Nummerierung angepasst
 
-Erster Snapshot. Hier gibt es noch keinen Monatswert, weil der Vergleichswert fehlt. Ab der nächsten Erhebung im September rechnet Claude die Monatswerte aus.
+Mail 2 (Umsetzungsdeal gesehen? + OB) wurde aus dem Funnel gelöscht. Mail 1 bleibt unverändert mit ihren ursprünglichen Statistiken. Alle folgenden Mails rücken um einen Tag vor. Der Funnel hat damit jetzt **14 statt 15 Mails**.
+
+---
+
+## Basis-Stand 03.08.2026 (kumuliert, all time) — Nummerierung ab 18.08.2026
+
+Erster Snapshot. Hier gibt es noch keinen Monatswert, weil der Vergleichswert fehlt. Ab der nächsten Erhebung rechnet Claude die Monatswerte aus.
 
 | Mail | Thema | Zweck | Empfänger kum. | Geöffnet % kum. | Geklickt % kum. | Klicks abs. | Käufe |
 |------|-------|-------|----------------|-----------------|-----------------|-------------|-------|
 | Tag 1 | Kurszugang + Videotraining | Zugang / Service | 108 | 78,70 % | 41,67 % | 45 | — |
-| Tag 2 | Umsetzungsdeal gesehen? + OB | Mehrwert + Order Bump | 93 | 50,54 % | 6,45 % | 6 | 0 |
-| Tag 3 | Aha Moment mitgeben + OB | Mehrwert + Order Bump (Audiotraining 17 €) | 87 | 49,43 % | 9,20 % | 8 | 0 |
-| Tag 4 | Losreißen, Sicherheit geben + OB | Mehrwert + Order Bump (Videoreihe 27 €) | 84 | 53,57 % | 8,33 % | 7 | **1** (27 €) |
-| Tag 5 | Vorankommen + Upsell | Upsell „sicher meistern" 72h | 97 | 49,48 % | 2,06 % | 2 | **1** (99 €) |
-| Tag 6 | Geschichte + Upsell | Upsell „sicher meistern" 48h | 75 | 44,00 % | 0,00 % | 0 | 0 |
-| Tag 7 | Geschichte + Upsell | Upsell „sicher meistern" 24h | 71 | 42,25 % | 4,23 % | 3 | 0 |
-| Tag 8 | Kopfkino 1 (Testimonial + Details) | Upsell „Kopfkino" 72h | 69 | 46,38 % | 0,00 % | 0 | 0 |
-| Tag 9 | Kopfkino 2 (Testimonial + Erinnerung) | Upsell „Kopfkino" 48h | 61 | 47,54 % | 0,00 % | 0 | 0 |
-| Tag 10 | Kopfkino 3 (Mehrwert + Erinnerung) | Upsell „Kopfkino" 24h | 50 | 48,00 % | 2,00 % | 1 | 0 |
-| Tag 11 | Video Trageerschöpfung | Mehrwert / Überleitung | 43 | 53,49 % | 9,30 % | 4 | — |
-| Tag 12 | Umsetzungsdeal | Hinweis (kein Verkauf) | 61 | 52,46 % | 16,39 % | 10 | — |
-| Tag 13 | Geschichte + Handarbeit | Upsell „Handarbeit" 72h | 30 | 46,67 % | 6,67 % | 2 | **1** (197 €) |
-| Tag 14 | Testimonial + Handarbeit | Upsell „Handarbeit" 48h | 17 | 64,71 % | 0,00 % | 0 | 0 |
-| Tag 15 | FAQ + Handarbeit | Upsell „Handarbeit" 24h | 11 | 36,36 % | 0,00 % | 0 | 0 |
+| Tag 2 | Aha Moment mitgeben + OB | Mehrwert + Order Bump (Audiotraining 17 €) | 87 | 49,43 % | 9,20 % | 8 | 0 |
+| Tag 3 | Losreißen, Sicherheit geben + OB | Mehrwert + Order Bump (Videoreihe 27 €) | 84 | 53,57 % | 8,33 % | 7 | **1** (27 €) |
+| Tag 4 | Vorankommen + Upsell | Upsell „sicher meistern" 72h | 97 | 49,48 % | 2,06 % | 2 | **1** (99 €) |
+| Tag 5 | Geschichte + Upsell | Upsell „sicher meistern" 48h | 75 | 44,00 % | 0,00 % | 0 | 0 |
+| Tag 6 | Geschichte + Upsell | Upsell „sicher meistern" 24h | 71 | 42,25 % | 4,23 % | 3 | 0 |
+| Tag 7 | Kopfkino 1 (Testimonial + Details) | Upsell „Kopfkino" 72h | 69 | 46,38 % | 0,00 % | 0 | 0 |
+| Tag 8 | Kopfkino 2 (Testimonial + Erinnerung) | Upsell „Kopfkino" 48h | 61 | 47,54 % | 0,00 % | 0 | 0 |
+| Tag 9 | Kopfkino 3 (Mehrwert + Erinnerung) | Upsell „Kopfkino" 24h | 50 | 48,00 % | 2,00 % | 1 | 0 |
+| Tag 10 | Video Trageerschöpfung | Mehrwert / Überleitung | 43 | 53,49 % | 9,30 % | 4 | — |
+| Tag 11 | Umsetzungsdeal | Hinweis (kein Verkauf) | 61 | 52,46 % | 16,39 % | 10 | — |
+| Tag 12 | Geschichte + Handarbeit | Upsell „Handarbeit" 72h | 30 | 46,67 % | 6,67 % | 2 | **1** (197 €) |
+| Tag 13 | Testimonial + Handarbeit | Upsell „Handarbeit" 48h | 17 | 64,71 % | 0,00 % | 0 | 0 |
+| Tag 14 | FAQ + Handarbeit | Upsell „Handarbeit" 24h | 11 | 36,36 % | 0,00 % | 0 | 0 |
 
-*(Spalte „Zweck" abgeleitet aus den Mail-Entwürfen in `outputs/gelaendeschluessel/` (post-purchase-mails.md, upsell-sicher-meistern-mails.md, upsell-kopfkino-mails.md, upsell-handarbeit-mails.md). Von Anika noch zu bestätigen. Spalte „Klicks abs." = Empfänger × Klickrate, wegen Rundung auf ±1 genau. Käufe von Anika gemeldet (03.08.2026): Tag 4, Tag 5 und Tag 13 je 1 Kauf. Tag 4 und Tag 5 war dieselbe Person, Tag 13 eine zweite. Also 3 Käufe von 2 Käuferinnen.)*
-
-*(Vollständig erfasst am 03.08.2026 aus Anikas Screenshots. Der frühere Wert vom 31.07.2026, der als Tag 14 abgelegt war (100 Empfänger, 76 % geöffnet, 40 % geklickt), gehörte tatsächlich zu Tag 1. Tag 14 hat nur 17 Empfänger und kann diese Zahlen nicht gehabt haben, während Tag 1 mit 108 / 78,70 % / 41,67 % genau dazu passt. Korrigiert.)*
+*(Käufe von Anika gemeldet (03.08.2026): Tag 3, Tag 4 und Tag 12. Tag 3 und Tag 4 war dieselbe Person, Tag 12 eine zweite. Also 3 Käufe von 2 Käuferinnen.)*
 
 **Zur sinkenden Empfängerzahl:** Die Zahlen werden von Tag 1 nach hinten kleiner, weil Anika die Mails nach und nach in den Workflow gebaut hat. Die späteren Mails sind also schlicht kürzer im Einsatz. Das ist kein Ausstieg von Kontakten und kein Fehler. Wichtig für die Auswertung: Die Empfängerzahlen der einzelnen Tage sind untereinander nicht direkt vergleichbar. Die Öffnungs- und Klickraten dagegen schon, weil die sich jeweils auf die eigene Empfängerzahl beziehen.
 
@@ -81,28 +84,27 @@ Erster Snapshot. Hier gibt es noch keinen Monatswert, weil der Vergleichswert fe
 
 | Mail | Angebot | Geklickt |
 |------|---------|----------|
-| Tag 3 | Order Bump | 9,20 % |
-| Tag 4 | Order Bump | 8,33 % |
-| Tag 2 | Order Bump | 6,45 % |
-| Tag 7 | Upsell | 4,23 % |
-| Tag 5 | Upsell | 2,06 % |
-| Tag 6 | Upsell | 0,00 % |
+| Tag 2 | Order Bump | 9,20 % |
+| Tag 3 | Order Bump | 8,33 % |
+| Tag 6 | Upsell | 4,23 % |
+| Tag 4 | Upsell | 2,06 % |
+| Tag 5 | Upsell | 0,00 % |
 
-Die drei Order-Bump-Mails liegen geschlossen zwischen 6 und 9 %, die Upsell-Mails deutlich darunter.
+Die Order-Bump-Mails liegen geschlossen zwischen 8 und 9 %, die Upsell-Mails deutlich darunter.
 
 **Die drei Upsell-Strecken im Vergleich:**
 
 | Strecke | Angebot | Sendungen | Klicks | Käufe | Klick → Kauf | Umsatz |
 |---------|---------|-----------|--------|-------|--------------|--------|
-| Tag 2–4 | Order Bumps (17 / 27 €) | 264 | 21 | 1 | 5 % | 27 € |
-| Tag 5–7 | Gelände sicher meistern (99 €) | 243 | 5 | 1 | 20 % | 99 € |
-| Tag 8–10 | Schluss mit Kopfkino (97 €) | 180 | 1 | 0 | 0 % | 0 € |
-| Tag 13–15 | Handarbeit (197 €) | 58 | 2 | 1 | 50 % | 197 € |
+| Tag 2–3 | Order Bumps (17 / 27 €) | 171 | 15 | 1 | 7 % | 27 € |
+| Tag 4–6 | Gelände sicher meistern (99 €) | 243 | 5 | 1 | 20 % | 99 € |
+| Tag 7–9 | Schluss mit Kopfkino (97 €) | 180 | 1 | 0 | 0 % | 0 € |
+| Tag 12–14 | Handarbeit (197 €) | 58 | 2 | 1 | 50 % | 197 € |
 
 **Gesamt: 3 Käufe von 2 verschiedenen Personen, 323 € Umsatz** (Anika, 03.08.2026):
 
-- **Käuferin A:** Videoreihe 27 € (Tag 4) **und** Gelände sicher meistern 99 € (Tag 5) = 126 €
-- **Käuferin B:** Handarbeit 197 € (Tag 13)
+- **Käuferin A:** Videoreihe 27 € (Tag 3) **und** Gelände sicher meistern 99 € (Tag 4) = 126 €
+- **Käuferin B:** Handarbeit 197 € (Tag 12)
 
 Bezogen auf die rund 108 Käuferinnen des Gelände-Schlüssels haben also nur etwa 1,9 % über die Mailstrecke noch etwas nachgekauft. Die Reichweite der Sequenz ist damit schmaler als die reine Kaufzahl vermuten lässt.
 
@@ -110,11 +112,11 @@ Bezogen auf die rund 108 Käuferinnen des Gelände-Schlüssels haben also nur et
 
 **Die Klickrate misst Neugier, nicht Kaufabsicht.** Die Order-Bump-Mails haben mit 6 bis 9 % die mit Abstand besten Klickraten, aber nur einer von 21 Klicks wurde ein Kauf. Bei den teuren Upsells ist es genau umgekehrt: kaum jemand klickt, aber wer klickt, kauft auffällig oft (Tag 13: 2 Klicks, 1 Kauf). Ein 17-Euro-Angebot lädt zum neugierigen Klicken ein, ein 197-Euro-Angebot klickt nur an, wer es ernst meint. Deshalb taugt die Klickrate nicht als Erfolgsmaß der Sequenz und Klickraten verschiedener Preisklassen dürfen nicht gegeneinander gestellt werden.
 
-**Die Kopfkino-Strecke ist die schwächste.** Drei Mails, 180 Sendungen, insgesamt ein einziger Klick und kein Kauf. Die Mails werden dabei mit 46 bis 48 % ganz normal geöffnet. Gelesen wird also, nur das Thema zündet an dieser Stelle nicht. Zum Vergleich: Die Handarbeit-Strecke hat bei nur 58 Sendungen schon einen Kauf erzielt, obwohl sie mit 197 € doppelt so teuer ist.
+**Die Kopfkino-Strecke ist die schwächste.** Drei Mails (jetzt Tag 7–9), 180 Sendungen, insgesamt ein einziger Klick und kein Kauf. Die Mails werden dabei mit 46 bis 48 % ganz normal geöffnet. Gelesen wird also, nur das Thema zündet an dieser Stelle nicht. Zum Vergleich: Die Handarbeit-Strecke hat bei nur 58 Sendungen schon einen Kauf erzielt, obwohl sie mit 197 € doppelt so teuer ist.
 
-**Zur Einordnung der Handarbeit-Strecke:** Tag 13 bis 15 haben mit 30, 17 und 11 Empfängern noch sehr kleine Fallzahlen. Der eine Kauf ist ein gutes Zeichen, aber noch kein belastbarer Trend. Das klärt sich in den nächsten Monaten.
+**Zur Einordnung der Handarbeit-Strecke:** Tag 12 bis 14 (früher Tag 13–15) haben mit 30, 17 und 11 Empfängern noch sehr kleine Fallzahlen. Der eine Kauf ist ein gutes Zeichen, aber noch kein belastbarer Trend. Das klärt sich in den nächsten Monaten.
 
-**Kleine Fallzahlen beachten:** Tag 13 (30), Tag 14 (17) und Tag 15 (11) haben so wenige Empfänger, dass ein einzelner Klick die Prozentzahl stark bewegt. Diese drei Zeilen werden erst in den kommenden Monaten aussagekräftig.
+**Kleine Fallzahlen beachten:** Tag 12 (30), Tag 13 (17) und Tag 14 (11) haben so wenige Empfänger, dass ein einzelner Klick die Prozentzahl stark bewegt. Diese drei Zeilen werden erst in den kommenden Monaten aussagekräftig.
 
 ---
 
@@ -126,10 +128,10 @@ Bezogen auf die rund 108 Käuferinnen des Gelände-Schlüssels haben also nur et
 
 | Strecke | Eingetreten | Käufe | Kaufrate | Umsatz pro Person |
 |---------|-------------|-------|----------|-------------------|
-| Handarbeit (197 €) | 30 | 1 | 3,3 % | 6,57 € |
-| Gelände sicher meistern (99 €) | 97 | 1 | 1,0 % | 1,02 € |
-| Order Bumps (17 / 27 €) | 93 | 1 | 1,1 % | 0,29 € |
-| Schluss mit Kopfkino (97 €) | 69 | 0 | 0 % | 0 € |
+| Handarbeit / Tag 12–14 (197 €) | 30 | 1 | 3,3 % | 6,57 € |
+| Gelände sicher meistern / Tag 4–6 (99 €) | 97 | 1 | 1,0 % | 1,02 € |
+| Order Bumps / Tag 2–3 (17 / 27 €) | 87 | 1 | 1,1 % | 0,31 € |
+| Schluss mit Kopfkino / Tag 7–9 (97 €) | 69 | 0 | 0 % | 0 € |
 
 **Gesamt über alle Strecken: 323 € Zusatzumsatz bei rund 108 Käuferinnen, also etwa 3 € pro Käuferin.** Gegen einen Anzeigenpreis von rund 12,38 € pro Kauf gerechnet trägt die Mailstrecke damit schon jetzt rund ein Viertel der Akquisekosten mit.
 

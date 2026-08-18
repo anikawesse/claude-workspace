@@ -485,7 +485,20 @@
       "Bash(rm -f \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Begleitheft Gelände-Webinar.pdf\")",
       "Bash(\"C:\\\\Program Files \\(x86\\)\\\\Microsoft\\\\Edge\\\\Application\\\\msedge.exe\" --headless --disable-gpu --print-to-pdf=\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Workbook Gelände-Webinar.pdf\" --no-pdf-header-footer \"file:///C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/workbook-gelaende.html\")",
       "Bash(ls -la \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\\" | grep -iE '\\\\.\\(jpg|jpeg|png|webp\\)$')",
-      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\3a4b340e-80ec-4687-830e-3e8121608ee1\\\\scratchpad\\\\anzeigen-status.ps1\")"
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\3a4b340e-80ec-4687-830e-3e8121608ee1\\\\scratchpad\\\\anzeigen-status.ps1\")",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4bd23618-0e08-4c79-a40c-7a2eae7bf56a\\\\scratchpad\\\\herkunft3.ps1\")",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\4bd23618-0e08-4c79-a40c-7a2eae7bf56a\\\\scratchpad\\\\ads-tage.ps1\")",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\ads-pro-anzeige.ps1\" -Von 2026-08-03 -Bis 2026-08-17)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\ads-pro-anzeige.ps1\" -Von 2026-08-11 -Bis 2026-08-17)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\ads-pro-anzeige.ps1\" -Von 2026-08-03 -Bis 2026-08-10)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\ads-pro-anzeige.ps1\" -Von 2026-08-14 -Bis 2026-08-17)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\webinar-leads.ps1\" -Von 2026-08-10 -Bis 2026-08-17)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\aced5e85-d232-4961-a190-5955fe5fbe35\\\\scratchpad\\\\webinar-anmeldungen-pro-tag.js\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-04 -Bis 2026-08-18)",
+      "Bash(unzip -p \"Deal_ Gelände-Schlüssel \\(Antworten\\).xlsx\" xl/sharedStrings.xml)",
+      "Bash(grep -v '^$')",
+      "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,620 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-ute.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card4.html)",
+      "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,700 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-katrin.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card5.html)"
     ],
     "defaultMode": "bypassPermissions"
   }
