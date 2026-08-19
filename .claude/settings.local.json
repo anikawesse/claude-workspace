@@ -498,7 +498,8 @@
       "Bash(unzip -p \"Deal_ Gelände-Schlüssel \\(Antworten\\).xlsx\" xl/sharedStrings.xml)",
       "Bash(grep -v '^$')",
       "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,620 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-ute.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card4.html)",
-      "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,700 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-katrin.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card5.html)"
+      "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,700 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-katrin.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card5.html)",
+      "Bash(start \"\" \"salespage.html\")"
     ],
     "defaultMode": "bypassPermissions"
   }

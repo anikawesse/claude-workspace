@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Das Gelände-Programm</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --red:#691212; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--beige);line-height:1.65;font-size:18px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--rust);line-height:1.2}
+  h1{font-size:40px;margin-bottom:18px}
+  h2{font-size:30px;margin-bottom:16px}
+  h3{font-size:22px;margin-bottom:10px}
+  p{margin-bottom:16px}
+  section{padding:54px 0}
+  .center{text-align:center}
+  .kicker{font-family:'Montserrat';font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--caramel);margin-bottom:12px}
+  .accent{height:6px;background:linear-gradient(90deg,var(--rust),var(--caramel));width:100%}
+  /* Hero */
+  .hero{background:var(--boxbeige);text-align:center;padding:64px 0 56px}
+  .hero .logo{height:80px;margin-bottom:22px}
+  .hero-mockup{max-width:940px;width:100%;height:auto;display:block;margin:30px auto 12px}
+  .topbar{background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:9px 16px;font-weight:700;letter-spacing:1.5px;font-size:13px;text-transform:uppercase;text-align:center}
+  .topbar img{height:26px;width:auto}
+  .bekannt-aus{width:100%;max-width:1080px;height:auto;display:block;margin:26px auto 0;padding:0 16px}
+  .content-img{width:100%;max-width:640px;height:auto;display:block;margin:8px auto 28px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .pullquote{background:var(--rust);color:#fff;text-align:center;padding:60px 0}
+  .pullquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:30px;line-height:1.4;max-width:800px;margin:0 auto;color:#fff}
+  @media(max-width:640px){.pullquote p{font-size:23px}}
+  .hero .sub{font-size:20px;max-width:760px;margin:0 auto 26px}
+  /* Buttons */
+  .cta{display:inline-block;background:var(--rust);color:var(--white)!important;text-decoration:none;font-weight:700;font-size:19px;padding:18px 40px;border-radius:40px;box-shadow:0 8px 20px rgba(123,63,40,.25);transition:transform .15s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta.big{font-size:22px;padding:22px 52px}
+  .subcta{font-size:14px;color:var(--caramel);margin-top:12px}
+  /* boxes */
+  .box{background:var(--white);border-left:6px solid var(--caramel);border-radius:10px;padding:26px 30px;margin:18px 0;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .box.sage{background:var(--sage);border-left-color:var(--rust)}
+  .box.red{border-left-color:var(--red)}
+  .grid3{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:22px}
+  .grid3 .item{flex:1;min-width:250px;background:var(--white);border-radius:10px;padding:26px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .grid3 .item .ic{font-size:36px;margin-bottom:8px}
+  ul.check{list-style:none;margin:10px 0}
+  ul.check li{position:relative;padding-left:34px;margin-bottom:12px}
+  ul.check li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--rust);font-weight:700;font-size:20px}
+  ul.cross li:before{content:"\2717";color:var(--red)}
+  .phase{background:var(--white);border-radius:10px;padding:24px 28px;margin:16px 0;box-shadow:0 4px 14px rgba(0,0,0,.05);border-top:4px solid var(--caramel)}
+  .phase .no{font-family:'Playfair Display',serif;color:var(--caramel);font-size:34px;font-weight:700;line-height:1}
+  .testi{display:flex;gap:20px;flex-wrap:wrap;justify-content:center}
+  .testi img{width:100%;max-width:460px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .price{background:var(--rust);color:var(--white);border-radius:16px;padding:40px;text-align:center}
+  .price .big{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--white);margin:6px 0}
+  .price .strike{text-decoration:line-through;opacity:.7}
+  .price .cta{background:var(--white);color:var(--rust)!important;margin-top:18px}
+  .anchor{max-width:560px;margin:0 auto 8px;text-align:left}
+  .anchor div{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.25)}
+  .bonus{display:flex;align-items:flex-start;gap:16px;background:var(--white);border-radius:10px;padding:20px 24px;margin:14px 0;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .bonus .val{margin-left:auto;white-space:nowrap;font-weight:700;color:var(--rust)}
+  .stack-total{text-align:center;font-size:22px;font-weight:700;color:var(--rust);margin-top:18px}
+  .about{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+  .about img{width:230px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .about .txt{flex:1;min-width:280px}
+  .scarcity{background:var(--red);color:var(--white);text-align:center;padding:16px;font-weight:600}
+  .faq-q{font-weight:700;color:var(--rust);margin-top:18px}
+  .guarantee{background:var(--sage);border-radius:14px;padding:30px;margin:18px 0}
+  .final{background:var(--boxbeige);text-align:center}
+  .footer{background:var(--rust);color:#e9d9cb;text-align:center;padding:30px;font-size:14px}
+  em{font-style:italic;color:var(--rust)}
+  @media(max-width:640px){h1{font-size:30px}h2{font-size:24px}body{font-size:17px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><img src="logo.png" alt="Anikas Pferdeakademie"><span>Pilotrunde zum Einführungspreis</span></div>
+<div class="accent"></div>
+
+<!-- 1 HERO: Problem + Zielgruppe + Lösung + CTA -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Wie du in 8 Wochen mit deinem Pferd alleine und entspannt durchs Gelände spazierst, ganz ohne Pferdekumpel</h1>
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a858bd5d8b5c2f24d48a2bd.png" alt="Das Gelände-Programm" class="hero-mockup">
+    <p class="sub">Auch wenn dein Pferd heute noch nicht vom Hof will, draußen sehr schreckhaft ist oder du selbst dein Kopfkino einfach nicht loswirst.</p>
+    <a href="#angebot" class="cta big">Ja, ich will entspannt ins Gelände</a>
+  </div>
+  <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a8584bcd8b5c2f24d3a11d3.png" alt="Bekannt aus" class="bekannt-aus">
+</section>
+
+<!-- PROBLEM / REGENINSEL (nach Money-Pages-Vorlage) -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Verbringst du den schönsten Teil des Jahres auf dem Reitplatz, weil ihr euch alleine einfach nicht ins Gelände traut?</h2>
+    <p class="center" style="max-width:720px;margin:0 auto 30px">Du versuchst so vieles, um endlich entspannt mit deinem Pferd rauszukommen. Und machst dabei vielleicht, ohne es zu ahnen, <b>genau den einen Fehler, den fast alle machen.</b></p>
+
+    <p>Du willst nach Feierabend einfach nur eine kleine Runde um den Hof gehen. Doch dein Pferd ist schon voll gestresst, dreht sich immer wieder Richtung Herde um und möchte <b>am liebsten den Hof gar nicht erst verlassen.</b> Dein Herz klopft schon schneller, bevor ihr überhaupt die ersten Meter ins Gelände gekommen seid.</p>
+
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85915ccf3baae49e52485b.jfif" alt="Pferd am Hoftor" class="content-img">
+
+    <p>Und je öfter es schiefgeht, desto tiefer sitzt die Unsicherheit. Du gehst seltener raus, findest immer wieder eine Ausrede, und heimlich wächst die Angst, dass beim nächsten Mal wirklich etwas passiert.</p>
+    <p><b>Dabei ist oft gar nicht das Pferd das Größte, sondern das eigene Kopfkino</b>, das dir vorher schon alle Schreckszenarien ausmalt. So verstreicht eine Saison nach der anderen, und der Wunsch vom entspannten gemeinsamen Spaziergang bleibt ein Wunsch.</p>
+
+  </div>
+</section>
+
+<!-- PROBLEM-BULLETS (eigener Block, abgesetzter Hintergrund) -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <div class="box">
+      <h3>Welches Problem hast du mit deinem Pferd?</h3>
+      <ul class="check" style="margin-bottom:0">
+        <li>Dein Pferd geht keinen Schritt ohne seinen Kumpel und klebt förmlich an der Herde.</li>
+        <li>Ihr kommt zwar los, aber irgendwann bleibt dein Pferd stehen wie angewurzelt und geht keinen Meter weiter.</li>
+        <li>Draußen erschrickt dein Pferd, wird hektisch oder will nur noch zurück zum Stall, und du bekommst es kaum wieder ruhig.</li>
+        <li>Verkehr, Landmaschinen oder Kühe/Schweine lassen dein Herz jedes Mal höherschlagen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ZITAT / PILOT-DEAL -->
+<section class="pullquote">
+  <div class="wrap">
+    <p>Dies ist die allererste Runde im Gelände-Programm und damit der beste Deal aller Zeiten. Du profitierst nicht nur vom Einführungspreis, sondern kannst auch die Kursinhalte mitbestimmen.</p>
+  </div>
+</section>
+
+<!-- ERSEHNTE ZUKUNFT (nach Money-Pages-Vorlage) -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Stell dir einen ganz normalen Feierabend vor</h2>
+    <p>Es ist so ein ganz normaler Abend nach der Arbeit. Du kommst zum Stall, holst dein Pferd entspannt von der Weide und hängst ihm in aller Ruhe den Strick ein. Gemeinsam schlendert ihr durchs Hoftor, dein Pferd geht gelassen an deiner Seite und selbst als die anderen aus der Herde nach ihm rufen, bleibt dein Liebling mit seiner Aufmerksamkeit weiter bei dir.</p>
+    <p>Langsam lauft ihr euren vertrauten Weg über die Feldwege. Als euch an der nächsten Ecke ein Auto entgegenkommt, bleibst du ganz ruhig und weil dein Pferd deine Gelassenheit spürt, lasst ihr den Wagen einfach an euch vorbeifahren. Eine halbe Stunde später kommt ihr beide zufrieden und entspannt wieder am Hof an. Und erst da fällt dir auf, dass du auf dem ganzen Weg nicht ein einziges Mal Angst hattest.</p>
+
+    <h3 class="center" style="margin-top:36px">Wie würde dein Leben mit deinem Pferd aussehen, wenn…</h3>
+    <div class="box">
+      <ul class="check" style="margin-bottom:0">
+        <li>du jederzeit alleine mit deinem Pferd losgehen kannst, ohne vorher zu überlegen, ob heute ein guter Tag dafür ist?</li>
+        <li>dein Pferd auch ohne seinen Kumpel ruhig neben dir bleibt?</li>
+        <li>du in jeder Schrecksituation genau weißt, was zu tun ist, und die Kontrolle behältst?</li>
+        <li>der entspannte Spaziergang zu zweit euer ganz normaler Feierabend wird?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 5 DAS VERSPRECHEN -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap center">
+    <p class="kicker">Das Versprechen</p>
+    <h2>Sogar wenn dein Pferd heute am Hof klebt und du selbst unsicher bist, wirst du zum ruhigen Anker, dem dein Pferd nach draußen folgt.</h2>
+    <p>Ohne Druck, ohne Dominanzgehabe, ohne Begleitpferd. In deinem eigenen Tempo.</p>
+  </div>
+</section>
+
+<!-- 6 PRODUKTVORSTELLUNG + CTA -->
+<section id="programm">
+  <div class="wrap center">
+    <p class="kicker">Darf ich vorstellen</p>
+    <h1 style="font-size:44px">Das Gelände-Programm</h1>
+    <p class="sub" style="margin:0 auto 20px">In 8 Wochen begleite ich dich Woche für Woche vom Hoftor bis zum entspannten Alleinspaziergang. Du wirst zum ruhigen Sicherheitsanker deines Pferdes, löst dich sicher von Hof und Herde, hast für jede Situation draußen deine Notfallstrategien parat und machst euren gemeinsamen Spaziergang Schritt für Schritt zur Routine.</p>
+    <a href="#angebot" class="cta big">Ja, ich will dabei sein</a>
+  </div>
+</section>
+
+<!-- 7 TESTIMONIALS -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Das sagen Pferdemenschen, die den Weg schon gehen</h2>
+    <div class="testi">
+      <img src="testimonial-1.png" alt="Testimonial Christine D.">
+      <img src="testimonial-2.png" alt="Testimonial Eva K.">
+      <img src="testimonial-ute.png" alt="Testimonial Ute G.">
+      <img src="testimonial-katrin.png" alt="Testimonial Katrin S.">
+    </div>
+  </div>
+</section>
+
+<!-- 8 PRODUKTTOUR: DIE 4 PHASEN -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Dein Weg in 4 Phasen</h2>
+    <p class="center" style="max-width:620px;margin:0 auto 24px">Jede Phase dauert rund zwei Wochen. So weißt du immer genau, wo du stehst und was als Nächstes dran ist.</p>
+    <div class="phase"><span class="no">1</span><h3>Dein Selbstbewusstsein stärken</h3><p>Du bekommst dein Kopfkino in den Griff, bleibst ruhig und lässt dich von der Nervosität deines Pferdes nicht mehr anstecken. Auch in brenzligen Momenten bleibst du handlungsfähig.</p></div>
+    <div class="phase"><span class="no">2</span><h3>Alleine vom Hof kommen</h3><p>Dein Pferd löst sich ruhig von Herde und Hof, ohne Theater. Ihr geht die ersten Meter alleine, und du wirst für dein Pferd wichtiger als die Herde.</p></div>
+    <div class="phase"><span class="no">3</span><h3>Notfallstrategien kennen und anwenden</h3><p>Du kennst deine Strategien für Verkehr, fremde Tiere und Schreckmomente, erkennst Stress früh und behältst in jeder Situation die Kontrolle, statt dich hilflos zu fühlen.</p></div>
+    <div class="phase"><span class="no">4</span><h3>Strecke ausweiten und Routine entwickeln</h3><p>Eure Runden werden Schritt für Schritt länger, ein Schreckmoment wirft dich nicht mehr aus der Bahn, und der entspannte Alleinspaziergang wird eure ganz normale Routine.</p></div>
+  </div>
+</section>
+
+<!-- 9 + 10 INVESTITION/PREIS + BONI -->
+<section id="angebot" style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Was ist das Gelände-Programm wert?</h2>
+    <p class="center" style="max-width:640px;margin:0 auto 22px">Um dieses Ziel mit einer Trainerin vor Ort zu erreichen, brauchst du realistisch 15 bis 20 Einzelstunden. Bei 50 bis 100 Euro pro Stunde bist du schnell bei 1.000 bis 2.000 Euro, und nach jeder Stunde ist die Trainerin wieder weg. Ein Beritt kostet dich für zwei Monate sogar 2.000 bis 3.000 Euro, und am Ende kann es dein Pferd mit dem Profi, aber nicht mit dir.</p>
+
+    <h3 class="center" style="margin-top:30px">Und das ist alles dabei</h3>
+    <div class="bonus"><div><b>Das komplette Gelände-Programm</b><br>4 Phasen, 8 Wochen, Schritt für Schritt vom Hoftor zum Alleinspaziergang.</div></div>
+    <div class="bonus"><div><b>Bonus 1: Wöchentliche Live-Calls mit mir</b><br>Zu wechselnden Zeiten, wir schauen gemeinsam auf deine Situation und analysieren deine Videos.</div><div class="val">497 €</div></div>
+    <div class="bonus"><div><b>Bonus 2: Begleit-Community</b><br>Deine Gruppe für alle Fragen zwischendurch, ich antworte dir persönlich.</div><div class="val">197 €</div></div>
+    <div class="bonus"><div><b>Bonus 3: Das Anti-Schreck-Paket</b><br>Über 27 Strategien plus Anleitungen, damit dein Pferd an jeder Schreck- und Gruselstelle gelassen bleibt.</div><div class="val">399 €</div></div>
+    <div class="bonus"><div><b>Bonus 4: Die chill-Rezepturen</b><br>Mein E-Book mit 7 beruhigenden Kräutern und 6 Bachblüten für ein Pferd, das von Natur aus gelassener wird.</div><div class="val">37 €</div></div>
+    <div class="bonus"><div><b>Bonus 5: Exklusiver VIP-Zugang vor Ort</b><br>Als Teilnehmerin kannst du einen persönlichen Aufenthalt mit deinem Pferd bei mir buchen. Etwas, das ich sonst gar nicht mehr anbiete.</div><div class="val">exklusiv</div></div>
+    <p class="stack-total">Gesamtwert über 1.100 Euro</p>
+
+    <div class="price" style="margin-top:26px">
+      <p style="margin:0">Heute in der Pilot-Runde:</p>
+      <div class="anchor" style="margin-top:14px">
+        <div>Nicht 2.000 Euro wie beim Beritt</div>
+        <div>Nicht 15 bis 20 Einzelstunden</div>
+      </div>
+      <div class="big">549 €</div>
+      <p style="margin:0">einmalig, oder in 4 Teilzahlungen à 165 €</p>
+      <a href="#" class="cta big">Ja, ich sichere mir meinen Platz</a>
+    </div>
+  </div>
+</section>
+
+<!-- 11 ÜBER MICH (Ausbildungen subtil) -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Schön, dass wir uns kennenlernen</h2>
+    <div class="about">
+      <img src="anika.jpg" alt="Anika Wesse">
+      <div class="txt">
+        <p>Ich bin Anika, und Pferde sind mein Leben. Seit über 20 Jahren arbeite ich mit ihnen, als Trainerin für klassisch-barocke Reiterei, als TCM-Therapeutin und als Ernährungsberaterin für Pferde. Ich schaue also immer aufs ganze Pferd, nicht nur auf ein einzelnes Symptom.</p>
+        <p>Aber verändert hat wirklich alles nicht die Theorie, sondern Leroy, der partout nicht vom Hof wollte. Als ich lernte, sein ruhiger Sicherheitsanker zu werden, wurde daraus die Verlasspferd-Methode, mit der ich heute über 500 Pferd-Mensch-Teams begleitet habe.</p>
+        <p>Meine Überzeugung: Jedes Pferd kann ein Verlasspferd werden. Wirklich jedes. Nicht durch Druck, sondern durch Sicherheit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 QUALIFIZIERUNG -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Das Gelände-Programm ist perfekt für dich, wenn…</h2>
+    <ul class="check" style="max-width:680px;margin:0 auto">
+      <li>du dir nichts mehr wünschst, als mit deinem Pferd alleine und entspannt spazieren zu gehen.</li>
+      <li>dein Pferd noch am Hof klebt, stehen bleibt, erschrickt oder sich losreißt.</li>
+      <li>du selbst ruhiger und sicherer werden willst, statt dich vom Stress deines Pferdes anstecken zu lassen.</li>
+      <li>du bereit bist, in deinem Tempo dranzubleiben, auch wenn es mal einen Rückschlag gibt.</li>
+    </ul>
+    <p class="center" style="margin-top:22px"><a href="#angebot" class="cta">Ja, das bin ich</a></p>
+  </div>
+</section>
+
+<!-- 13 ANGEBOTS-RECAP / VISION -->
+<section>
+  <div class="wrap center">
+    <p class="kicker">Stell dir vor</p>
+    <h2>In ein paar Wochen schaust du auf euren ersten entspannten Alleinspaziergang zurück</h2>
+    <p style="max-width:680px;margin:0 auto">Ihr geht los, dein Pferd an deiner Seite, die Ohren weich, der Blick bei dir. Und du weißt: Ihr seid ein Team, das auch draußen zusammenhält. Genau darauf arbeiten wir gemeinsam hin.</p>
+  </div>
+</section>
+
+<!-- 14 GARANTIEN -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Dein Einstieg ist rundum abgesichert</h2>
+    <div class="guarantee">
+      <h3>Deine 14-Tage-Zufriedenheits-Garantie</h3>
+      <p style="margin:0">Wenn du in den ersten zwei Wochen merkst, dass das Programm doch nichts für dich ist, sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.</p>
+    </div>
+    <div class="guarantee">
+      <h3>Deine „Entspannt-vom-Hof"-Garantie</h3>
+      <p style="margin:0">Wenn du in den 8 Wochen deine Erfolgstracker ausfüllst und die Inhalte Schritt für Schritt umsetzt, begleite ich dich in unseren Calls so lange kostenlos weiter, bis du es geschafft hast: bis du mit deinem Pferd rund 10 Minuten alleine im Gelände unterwegs warst und ihr gemeinsam entspannt wieder am Hof angekommen seid.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 16 FAQ -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Häufige Fragen</h2>
+    <p class="faq-q">Kann ich das wirklich alleine und online umsetzen?</p>
+    <p>Ja. Du bist nicht allein: wöchentliche Live-Calls, meine persönlichen Antworten in der Community und die gemeinsame Videoanalyse begleiten dich Schritt für Schritt. Deshalb funktioniert es online oft sogar schneller.</p>
+    <p class="faq-q">Ich habe wenig Zeit. Schaffe ich das?</p>
+    <p>Schon rund 15 Minuten am Tag reichen. Du gehst dein Tempo, es gibt keinen festen Takt, den du verpassen kannst.</p>
+    <p class="faq-q">Funktioniert das auch bei meinem Pferd?</p>
+    <p>Ja, egal ob jung, alt oder besonders schreckhaft. Die Methode arbeitet mit Vertrauen und Sicherheit, nicht mit Alter oder Kraft.</p>
+    <p class="faq-q">Ich habe schon so viel probiert. Warum sollte es jetzt klappen?</p>
+    <p>Weil es nicht daran lag, dass du zu wenig versucht hast, sondern an der Herangehensweise. Genau die änderst du hier, Schritt für Schritt und mit mir an deiner Seite.</p>
+    <p class="faq-q">Ich möchte gar nicht reiten, nur spazieren gehen. Bin ich hier richtig?</p>
+    <p>Absolut. Das ganze Programm findet am Boden statt. Der entspannte Spaziergang ist das Ziel, Reiten höchstens ein Horizont für später.</p>
+    <p class="faq-q">Kann ich in Teilzahlungen zahlen?</p>
+    <p>Ja, entweder einmalig 549 Euro oder in 4 Teilzahlungen à 165 Euro.</p>
+  </div>
+</section>
+
+<!-- FINAL CALL -->
+<section class="final">
+  <div class="wrap">
+    <h2>Beende das Theater am Hoftor ein für alle Mal</h2>
+    <p style="max-width:640px;margin:0 auto 24px">Du kennst jetzt den Weg, das Programm, die Boni und meine Garantien. Der nächste Schritt ist ganz bei dir. Ich nehme dich gerne an die Hand und bringe dich und dein Pferd sicher nach draußen.</p>
+    <a href="#" class="cta big">Ja, ich will entspannt ins Gelände</a>
+  </div>
+</section>
+
+<div class="footer">
+  Anikas Pferdeakademie · anikas-pferdeakademie.de
+</div>
+
+</body>
+</html>
