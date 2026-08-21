@@ -499,7 +499,16 @@
       "Bash(grep -v '^$')",
       "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,620 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-ute.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card4.html)",
       "Bash('C:/Program Files \\(x86\\)/Microsoft/Edge/Application/msedge.exe' --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=2 --window-size=1080,700 --screenshot=C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende/testimonial-katrin.png file:///C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/card5.html)",
-      "Bash(start \"\" \"salespage.html\")"
+      "Bash(start \"\" \"salespage.html\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-06 -Bis 2026-08-20)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage.html\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-07 -Bis 2026-08-21)",
+      "Bash(git mv *)",
+      "Bash(python -c \"import sys; print\\(sys.version\\)\")",
+      "Bash(python -c \"import fitz; print\\('pymupdf ok'\\)\")",
+      "Bash(npm --version)",
+      "Bash(mkdir -p C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/4dad4b35-fdec-43bf-8c84-287ca24e88a2/scratchpad/pdfx)",
+      "Bash(npm init *)"
     ],
     "defaultMode": "bypassPermissions"
   }

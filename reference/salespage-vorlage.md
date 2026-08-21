@@ -83,6 +83,11 @@ Reden wir über die wirklich wichtigen Dinge. · Aber es gibt auch eine gute Nac
 - Produktnamen konkret, nicht kryptisch.
 - Testimonials immer in Ergebnissen formulieren.
 
+### Umsetzungs-Regeln (Anika)
+- **FAQ immer als Dropdown/Akkordeon** (aufklappbar), nie als offene Frage-Antwort-Liste.
+- Nach den Garantien die „Was ist drin?"-Sektion 1:1 wiederholen (Überschrift bis roter Kauf-Block) — Angebots-Recap.
+- Footer mit Impressum + Datenschutz.
+
 ---
 
 ---

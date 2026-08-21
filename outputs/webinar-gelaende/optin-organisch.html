@@ -10,7 +10,8 @@
 /* MODAL */
 .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:1000;align-items:center;justify-content:center}
 .modal-overlay.active{display:flex}
-.modal-box{background:#fff;border-radius:12px;padding:32px;max-width:520px;width:90%;position:relative;max-height:90vh;overflow-y:auto}
+.modal-box{background:#fff;border-radius:12px;padding:40px 48px;max-width:780px;width:92%;position:relative;max-height:90vh;overflow-y:auto}
+@media(max-width:600px){.modal-box{padding:28px 20px;width:94%}}
 .modal-close{position:absolute;top:12px;right:16px;font-size:22px;cursor:pointer;color:var(--text-muted);background:none;border:none;line-height:1}
 .modal-box h3{font-size:20px;font-weight:800;color:var(--red);margin-bottom:6px}
 .modal-box p{font-size:13px;color:var(--text-muted);margin-bottom:20px}
@@ -39,6 +40,7 @@ a{color:inherit}
 /* ===================== HERO ===================== */
 .sec-hero{background:var(--beige);padding:32px 64px 56px}
 .hero-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;padding:8px 20px;border-radius:4px;margin-bottom:22px}
+.hero-pre{font-size:11px;font-weight:700;color:var(--rust);letter-spacing:3px;text-transform:uppercase;line-height:1.5}
 .hero-headline{font-size:34px;font-weight:900;line-height:1.18;color:var(--black);margin-bottom:10px;letter-spacing:-0.5px;max-width:740px;margin-left:auto;margin-right:auto}
 .hero-sub{font-size:16px;color:var(--text-mid);font-weight:500;line-height:1.65;margin-bottom:36px;max-width:580px;margin-left:auto;margin-right:auto;font-style:italic}
 .hero-cols{display:grid;grid-template-columns:3fr 2fr;gap:40px;align-items:center}
@@ -143,6 +145,17 @@ a{color:inherit}
 .footer{background:var(--beige2);padding:20px 48px;text-align:center;font-size:11px;color:var(--text-muted)}
 .footer a{color:var(--text-muted)}
 
+/* ===================== TEILNAHMEGESCHENK ===================== */
+.sec-geschenk{background:var(--beige);padding:48px}
+.geschenk-card{background:#fff;border:2px solid var(--gold);border-radius:14px;padding:40px 44px;max-width:780px;margin:0 auto;text-align:center}
+.geschenk-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:9px 22px;border-radius:40px;margin-bottom:22px}
+.geschenk-title{font-size:26px;font-weight:900;color:var(--red);margin-bottom:16px;line-height:1.2;letter-spacing:-0.3px}
+.geschenk-mockup{max-width:360px;margin:0 auto 24px}
+.geschenk-mockup img{width:100%;display:block;border-radius:10px}
+.geschenk-text{font-size:15px;color:var(--text-mid);line-height:1.8;font-weight:500;margin-bottom:14px}
+.geschenk-text strong{color:var(--black);font-weight:700}
+.geschenk-note{font-size:15px;color:var(--text-mid);font-weight:600;margin-bottom:26px}
+
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:700px){
   .hero-inner{grid-template-columns:1fr;min-height:auto}
@@ -157,6 +170,52 @@ a{color:inherit}
   .ct-num{font-size:28px;padding:8px 12px;min-width:54px}
   .top-banner{font-size:11px;padding:12px 16px}
   .section-h2,.sec-quali h2,.sec-cta h2,.sec-form h2{font-size:20px}
+}
+
+/* ===================== HANDY FEINSCHLIFF ===================== */
+@media(max-width:700px){
+  .top-banner{font-size:11px;padding:12px 14px;line-height:1.6}
+  .sec-hero{padding:24px 20px 40px}
+  .hero-pre{font-size:10px;letter-spacing:2px}
+  .hero-headline{font-size:21px;line-height:1.3;letter-spacing:-0.1px}
+  .hero-sub{font-size:15px;margin-bottom:26px}
+  .hero-cols{grid-template-columns:1fr;gap:28px}
+  .hero-bullets{gap:16px}
+  .hero-bullet-text{font-size:15px;line-height:1.6}
+  .date-pill{width:100%;justify-content:center;padding:14px 16px;border-radius:16px}
+  .date-pill .dp-text{font-size:14px;text-align:center}
+  .btn-red,.btn-gold{display:block;width:100%;padding:18px 14px;font-size:16px;border-radius:16px;letter-spacing:0.2px}
+  .btn-arrows-above svg{width:64px;height:22px}
+  .hero-social{grid-template-columns:1fr;gap:14px;margin-top:32px}
+  .sec-quali,.sec-aha,.sec-form,.sec-testimonials,.sec-anika,.sec-cta{padding:36px 20px}
+  .quali-card{padding:26px 20px}
+  .aha-item{padding:22px 20px;grid-template-columns:40px 1fr;gap:14px}
+  .aha-num{font-size:30px}
+  .aha-item p{font-size:15px;padding-top:2px;line-height:1.7}
+  .form-wrap,.cta-form-wrap{max-width:100%}
+  .sec-countdown{padding:26px 16px}
+  .countdown-title{font-size:15px}
+  .countdown-timer{gap:6px}
+  .ct-num{font-size:22px;padding:7px 8px;min-width:46px}
+  .ct-lbl{font-size:8px;letter-spacing:1.2px}
+  .ct-sep{font-size:18px;margin-bottom:14px}
+  .sec-geschenk{padding:36px 20px}
+  .geschenk-card{padding:28px 20px}
+  .geschenk-badge{font-size:10px;letter-spacing:1.5px;padding:8px 16px}
+  .geschenk-title{font-size:20px}
+  .geschenk-mockup{max-width:100%;margin-bottom:20px}
+  .geschenk-text,.geschenk-note{font-size:14px;line-height:1.75}
+  .footer{padding:22px 20px;line-height:2.2}
+  .modal-box{padding:26px 18px;width:94%;max-height:92vh;border-radius:16px}
+  .modal-box h3{font-size:18px}
+}
+
+@media(max-width:400px){
+  .hero-headline{font-size:19px}
+  .btn-red,.btn-gold{font-size:15px;padding:17px 10px}
+  .ct-num{font-size:19px;min-width:38px;padding:6px}
+  .ct-sep{display:none}
+  .countdown-timer{gap:8px}
 }
 </style>
 </head>
@@ -192,7 +251,7 @@ a{color:inherit}
         <div class="hero-bullet-icon">
           <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 6,11 12,3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="hero-bullet-text"><strong>Zwei konkrete Notfallstrategien,</strong> um dein Pferd im Gelände zu beruhigen und zu verhindern, dass es sich losreißt oder einer sich verletzt.</div>
+        <div class="hero-bullet-text"><strong>Konkrete Notfallstrategien,</strong> um dein Pferd im Gelände zu beruhigen und zu verhindern, dass es sich losreißt oder einer sich verletzt (am Beispiel meiner 3-Schritte Strategie für Treckerbegegnungen).🚜</div>
       </div>
       <div class="hero-bullet">
         <div class="hero-bullet-icon">
@@ -215,7 +274,7 @@ a{color:inherit}
     <a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a>
   </div>
 
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px">
+  <div class="hero-social" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px">
     <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856eaa4719b5cf5f374.png" alt="Testimonial Sarina" style="width:100%;border-radius:8px">
     <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856670a4ee7830c97ad.png" alt="Testimonial Henriette" style="width:100%;border-radius:8px">
   </div>
@@ -240,6 +299,18 @@ a{color:inherit}
   </div>
   <p class="quali-ein-klick">Ein Klick, und du bist am 23. August dabei.</p>
   <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a></div>
+</div>
+
+<!-- ====== TEILNAHMEGESCHENK ====== -->
+<div class="sec-geschenk">
+  <div class="geschenk-card">
+    <div class="geschenk-badge">&#127873; Dieses Geschenk bekommst du live im Webinar</div>
+    <h2 class="geschenk-title">Der Koffer voller Notfallstrategien</h2>
+    <div class="geschenk-mockup"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a7854bc9994d35aa0e6592e.png" alt="Koffer voller Notfallstrategien"></div>
+    <p class="geschenk-text">Als Geschenk bekommst du meinen <strong>Koffer voller Notfallstrategien</strong> mit <strong>27 konkreten L&ouml;sungen</strong>, wie du dein Pferd im Gel&auml;nde wieder beruhigst und die Kontrolle beh&auml;ltst. &Uuml;bersichtlich nach Situationen sortiert (Verkehr, zu schnell sein, nicht mehr weiter wollen, Angst vor anderen Tieren, usw.), damit du im Ernstfall sofort wei&szlig;t, was zu tun ist.</p>
+    <p class="geschenk-note">Nur f&uuml;r alle, die beim Webinar live dabei sind.</p>
+    <span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt f&uuml;r 0 &euro; anmelden</a>
+  </div>
 </div>
 
 <!-- ====== FORMULAR ANKER ====== -->
@@ -283,7 +354,7 @@ a{color:inherit}
     <div class="ct-sep">:</div>
     <div class="ct-block"><span class="ct-num" id="ct-s">00</span><span class="ct-lbl">Sekunden</span></div>
   </div>
-  <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#anmeldung" class="btn-gold">Jetzt für 0 € anmelden</a></div>
+  <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-gold">Jetzt für 0 € anmelden</a></div>
 </div>
 
 
@@ -301,7 +372,7 @@ a{color:inherit}
 <!-- FOOTER -->
 <div class="footer">
   Anikas Pferdeakademie &nbsp;·&nbsp; anikas-pferdeakademie.de &nbsp;·&nbsp;
-  <a href="#">Impressum</a> &nbsp;·&nbsp; <a href="#">Datenschutz</a>
+  <a href="https://www.anikas-pferdeakademie.de/impressum" target="_blank" rel="noopener">Impressum</a> &nbsp;·&nbsp; <a href="https://www.anikas-pferdeakademie.de/datenschutzerklaerung" target="_blank" rel="noopener">Datenschutz</a>
 </div>
 
 <!-- COUNTDOWN SCRIPT -->

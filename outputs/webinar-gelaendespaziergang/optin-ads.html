@@ -125,16 +125,6 @@ a{color:inherit}
 .anika-body p{margin-bottom:12px}
 .anika-body p:last-child{margin-bottom:0}
 
-/* ===================== GESCHENK / KOFFER ===================== */
-.sec-gift{background:var(--beige2);padding:52px 48px}
-.gift-inner{max-width:760px;margin:0 auto;background:var(--white);border:2px solid var(--gold);border-radius:14px;padding:36px 40px;text-align:center;box-shadow:0 6px 24px rgba(105,18,18,0.08)}
-.gift-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:8px 20px;border-radius:30px;margin-bottom:18px}
-.gift-inner h2{font-size:24px;font-weight:900;color:var(--red);margin-bottom:12px;line-height:1.2}
-.gift-inner p{font-size:15px;color:var(--text-mid);line-height:1.7;font-weight:500;max-width:600px;margin:0 auto 10px}
-.gift-inner p strong{color:var(--black);font-weight:700}
-.gift-note{font-size:12px;color:var(--text-muted);font-weight:700;margin-top:14px}
-@media(max-width:700px){.sec-gift{padding:36px 20px}.gift-inner{padding:28px 20px;border-radius:14px}.gift-inner h2{font-size:20px}}
-
 /* ===================== COUNTDOWN ===================== */
 .sec-countdown{background:var(--red);padding:28px 48px;text-align:center}
 .countdown-label{font-size:10px;font-weight:700;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
@@ -154,6 +144,17 @@ a{color:inherit}
 /* FOOTER */
 .footer{background:var(--beige2);padding:20px 48px;text-align:center;font-size:11px;color:var(--text-muted)}
 .footer a{color:var(--text-muted)}
+
+/* ===================== TEILNAHMEGESCHENK ===================== */
+.sec-geschenk{background:var(--beige);padding:48px}
+.geschenk-card{background:#fff;border:2px solid var(--gold);border-radius:14px;padding:40px 44px;max-width:780px;margin:0 auto;text-align:center}
+.geschenk-badge{display:inline-block;background:var(--gold);color:var(--black);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:9px 22px;border-radius:40px;margin-bottom:22px}
+.geschenk-title{font-size:26px;font-weight:900;color:var(--red);margin-bottom:16px;line-height:1.2;letter-spacing:-0.3px}
+.geschenk-mockup{max-width:360px;margin:0 auto 24px}
+.geschenk-mockup img{width:100%;display:block;border-radius:10px}
+.geschenk-text{font-size:15px;color:var(--text-mid);line-height:1.8;font-weight:500;margin-bottom:14px}
+.geschenk-text strong{color:var(--black);font-weight:700}
+.geschenk-note{font-size:15px;color:var(--text-mid);font-weight:600;margin-bottom:26px}
 
 /* ===================== RESPONSIVE ===================== */
 @media(max-width:700px){
@@ -198,6 +199,12 @@ a{color:inherit}
   .ct-num{font-size:22px;padding:7px 8px;min-width:46px}
   .ct-lbl{font-size:8px;letter-spacing:1.2px}
   .ct-sep{font-size:18px;margin-bottom:14px}
+  .sec-geschenk{padding:36px 20px}
+  .geschenk-card{padding:28px 20px}
+  .geschenk-badge{font-size:10px;letter-spacing:1.5px;padding:8px 16px}
+  .geschenk-title{font-size:20px}
+  .geschenk-mockup{max-width:100%;margin-bottom:20px}
+  .geschenk-text,.geschenk-note{font-size:14px;line-height:1.75}
   .footer{padding:22px 20px;line-height:2.2}
   .modal-box{padding:26px 18px;width:94%;max-height:92vh;border-radius:16px}
   .modal-box h3{font-size:18px}
@@ -244,7 +251,7 @@ a{color:inherit}
         <div class="hero-bullet-icon">
           <svg viewBox="0 0 14 14" fill="none"><polyline points="2,7 6,11 12,3" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div class="hero-bullet-text"><strong>Konkrete Notfallstrategien,</strong> um dein Pferd im Gelände zu beruhigen und zu verhindern, dass es sich losreißt oder einer sich verletzt.</div>
+        <div class="hero-bullet-text"><strong>Konkrete Notfallstrategien,</strong> um dein Pferd im Gelände zu beruhigen und zu verhindern, dass es sich losreißt oder einer sich verletzt (am Beispiel meiner 3-Schritte Strategie für Treckerbegegnungen).🚜</div>
       </div>
       <div class="hero-bullet">
         <div class="hero-bullet-icon">
@@ -294,14 +301,15 @@ a{color:inherit}
   <div style="text-align:center"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a></div>
 </div>
 
-<!-- ====== GESCHENK / KOFFER ====== -->
-<div class="sec-gift">
-  <div class="gift-inner">
-    <div class="gift-badge">🎁 Dein Geschenk fürs Live-Dabeisein</div>
-    <h2>Der Koffer voller Notfallstrategien</h2>
-    <p>Als Geschenk bekommst du meinen <strong>Koffer voller Notfallstrategien</strong> mit <strong>27 konkreten Strategien</strong>, mit denen du dein Pferd im Gelände wieder beruhigst. Übersichtlich nach Situationen sortiert, damit du im Ernstfall sofort weißt, was zu tun ist.</p>
-    <p class="gift-note">Nur für alle, die beim Webinar live dabei sind.</p>
-    <div style="margin-top:22px"><span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt für 0 € anmelden</a></div>
+<!-- ====== TEILNAHMEGESCHENK ====== -->
+<div class="sec-geschenk">
+  <div class="geschenk-card">
+    <div class="geschenk-badge">&#127873; Dieses Geschenk bekommst du live im Webinar</div>
+    <h2 class="geschenk-title">Der Koffer voller Notfallstrategien</h2>
+    <div class="geschenk-mockup"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a7854bc9994d35aa0e6592e.png" alt="Koffer voller Notfallstrategien"></div>
+    <p class="geschenk-text">Als Geschenk bekommst du meinen <strong>Koffer voller Notfallstrategien</strong> mit <strong>27 konkreten L&ouml;sungen</strong>, wie du dein Pferd im Gel&auml;nde wieder beruhigst und die Kontrolle beh&auml;ltst. &Uuml;bersichtlich nach Situationen sortiert (Verkehr, zu schnell sein, nicht mehr weiter wollen, Angst vor anderen Tieren, usw.), damit du im Ernstfall sofort wei&szlig;t, was zu tun ist.</p>
+    <p class="geschenk-note">Nur f&uuml;r alle, die beim Webinar live dabei sind.</p>
+    <span class="btn-arrows-above"><svg viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg" fill="none"><line x1="20" y1="4" x2="20" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="13,17 20,26 27,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="60" y1="4" x2="60" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="53,17 60,26 67,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="100" y1="4" x2="100" y2="24" stroke="#894b2f" stroke-width="2" stroke-linecap="round"/><polyline points="93,17 100,26 107,17" stroke="#894b2f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><a href="#" onclick="openModal();return false;" class="btn-red">Jetzt f&uuml;r 0 &euro; anmelden</a>
   </div>
 </div>
 
@@ -356,7 +364,7 @@ a{color:inherit}
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h3>Jetzt für 0 € anmelden</h3>
     <p>23. August 2026 · 19 Uhr · Live mit Anika</p>
-    <iframe src="https://link.devinefunnels.de/widget/form/YmGLIdUURgPTDtMvD66k" style="width:100%;border:none;min-height:320px" scrolling="no" id="inline-YmGLIdUURgPTDtMvD66k"></iframe>
+    <iframe src="https://link.devinefunnels.de/widget/form/QoaCgvYnHryGMHvhh4c5" style="width:100%;border:none;min-height:320px" scrolling="no" id="inline-QoaCgvYnHryGMHvhh4c5"></iframe>
     <script src="https://link.devinefunnels.de/js/form_embed.js"></script>
   </div>
 </div>
