@@ -1,41 +1,41 @@
-# Verkaufsmail 6 — Einwand/Zweifel entkräften (Gelände-Programm)
+# Verkaufsmail 6 — Zweifel „alleine nur mit Online-Begleitung?" + Testimonials (Gelände-Programm)
 
 **Timing:** Donnerstag 27.08. vormittags (Cart schließt heute 23:59)
-**Ziel:** den Kern-Einwand „kann ich das online und allein?" drehen + Cart-Close-Dringlichkeit
-**Basis:** Lena-DPS 04/07. ⚠️ Donnerstag = KEIN Telefonat mehr anbieten, nur aufs Programm pitchen.
+**Ziel:** den Zweifel „schaffe ich das alleine, nur mit Online-Begleitung?" ausräumen, mit 2 echten Testimonials Vertrauen aufbauen + Cart-Close
+**Basis:** Lena-DPS 07 (Einwände drehen). ⚠️ Donnerstag = KEIN Telefonat mehr, nur aufs Programm pitchen. Testimonials ECHT.
 
 ---
 
-**Betreff:** Kann ich das online und alleine überhaupt umsetzen?
-**Alternativen:** „Der eine Fehler, der dich im Gelände ausbremst" · „Bei meinem Pferd klappt das eh nicht?"
+**Betreff:** Schaffe ich das wirklich alleine, {{contact.first_name}}?
+**Alternativen:** „Nur mit Online-Begleitung, geht das?" · „Der Zweifel, der dich noch zurückhält"
 
 ---
 
 Hey {{contact.first_name}},
 
-heute schließen die Türen zum Gelände-Programm. Und vielleicht geht dir seit dem Webinar ein Gedanke nicht aus dem Kopf: „Das klingt alles toll, aber kann ich das online und ganz alleine überhaupt umsetzen? Gerade bei meinem Pferd?"
+heute Abend schließen die Türen zum Gelände-Programm. Und ich merke, dass viele von euch noch mit einem Gedanken hadern:
 
-Diese Frage verstehe ich total. Und weil sie so wichtig ist, möchte ich heute ganz ehrlich mit dir darüber sprechen.
+„Schaffe ich das wirklich alleine, nur mit einer Online-Begleitung? Gerade bei meinem Pferd?"
 
-Denn es gibt einen Fehler, den ich immer wieder sehe. Und der hält so viele davon ab, endlich entspannt ins Gelände zu kommen.
+Diese Frage verstehe ich total. Und sie ist auch viel zu wichtig, um sie nur kurz abzutun.
 
-**Der Fehler: Du gehst nur noch mit einem Begleitpferd raus.**
+Deshalb ganz ehrlich: Ja, online funktioniert das wunderbar. Das siehst du schon daran, dass mein Minikurs „Gelände-Schlüssel" ein reiner Selbstlernkurs ist und trotzdem so viele Frauen damit alleine ihren Weg ins Gelände gefunden haben.
 
-Das fühlt sich im ersten Moment sicher an. Aber dein Pferd lernt dabei nie, sich an DIR zu orientieren. Es verlässt sich weiter auf das andere Pferd und ihr kommt allein keinen Schritt weiter. Die Unsicherheit bleibt und wächst mit jeder Saison.
+Und im Gelände-Programm bist du sogar noch besser aufgehoben. Denn hier bist du eben nicht allein. Ich bin in den wöchentlichen Live-Calls an deiner Seite, beantworte deine Fragen persönlich in der Community und wir schauen uns deine Videos gemeinsam an.
 
-Dabei liegt es nicht daran, dass dein Pferd ein besonders schwieriger Fall ist. Es liegt daran, dass ihm der ruhige Sicherheitsanker fehlt. Und genau den kannst du lernen zu sein, Schritt für Schritt.
+Aber ich sage heute nicht mehr so viel. Lass einfach die sprechen, die genau diesen Zweifel hatten und ihn hinter sich gelassen haben:
 
-„Aber schaffe ich das wirklich online und alleine?"
+🗣️ „Ich bin nicht alleine mit meinem Problem. Mit dem tollen Werkzeug und den Videos kann auch ich es schaffen. Die Videos sind sehr verständlich und empathisch, man fasst Vertrauen und Mut."
+**Sandra Z.**
 
-Weißt du was? Genau das haben schon so viele vor dir geschafft.
+🗣️ „Ich habe lediglich etwa 2x die Woche geübt, aber ich habe trotzdem nach etwa 2 Wochen unseren ersten Minispaziergang geschafft."
+**Sarina S.**
 
-Christine, Eva, Ute und Sarina, deren Erfolge ich dir gezeigt habe, haben all das mit meinem Selbstlernkurs erreicht. Alleine, nur mit meinen Anleitungen, ohne dass wir je persönlich gesprochen haben.
+Sandra und Sarina haben all das ganz alleine erreicht, nur mit meinen Anleitungen, ohne dass wir je persönlich gesprochen haben.
 
-Und im **Gelände-Programm** bekommst du genau diese Anleitungen, plus alle weiteren Trainingsschritte UND meine persönliche Betreuung.
+Und du bekommst im Gelände-Programm genau diese Anleitungen, plus alle weiteren Trainingsschritte UND meine persönliche Begleitung.
 
 Da kann eigentlich nichts mehr schiefgehen. 🥰
-
-Warte also nicht länger auf den perfekten Moment. Der kommt nicht von allein, aber dein erster entspannter Spaziergang schon, wenn du jetzt startest.
 
 ➡️ **Ja, ich sichere mir meinen Platz im Gelände-Programm:** [Checkout-Link]
 
