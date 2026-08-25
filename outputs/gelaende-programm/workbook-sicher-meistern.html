@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Workbook — Gelände sicher meistern</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --red:#691212; --line:#d9c9b6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#e9e2d8}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.6;font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;background:#fff;margin:0 auto 8mm;padding:20mm 20mm 16mm;position:relative;page-break-after:always;overflow:hidden}
+  h1{font-family:'Playfair Display',serif;color:var(--rust);font-size:26px;line-height:1.15;margin-bottom:4px}
+  h2{font-family:'Playfair Display',serif;color:var(--rust);font-size:20px;margin:0 0 10px}
+  h3{font-size:14px;color:var(--red);font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:9px}
+  ul{list-style:none;margin:4px 0 10px}
+  li{position:relative;padding-left:22px;margin-bottom:6px}
+  li::before{content:"›";position:absolute;left:4px;top:-1px;color:var(--caramel);font-weight:700;font-size:15px}
+  b,strong{color:var(--red)}
+  .kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:8px}
+  .rule{height:2px;background:linear-gradient(90deg,var(--caramel),transparent);margin:12px 0 16px;max-width:100%}
+  .video{display:inline-block;background:var(--sage);color:var(--rust);font-weight:700;font-size:11px;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+  .merke{background:var(--boxbeige);border-left:4px solid var(--rust);border-radius:8px;padding:12px 16px;margin:12px 0}
+  .merke .t{font-family:'Playfair Display',serif;font-style:italic;color:var(--rust);font-size:15px}
+  .box{background:var(--beige);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .page-img{display:block;margin:18px auto 0;max-width:76%;max-height:118mm;border-radius:14px;box-shadow:0 6px 20px rgba(123,63,40,.16)}
+  .page.haspic{display:flex;flex-direction:column;height:297mm}
+  .haspic .page-img{margin-top:auto;margin-bottom:auto}
+  .grid2{display:flex;gap:18px}
+  .grid2>div{flex:1}
+  .reflect{margin-top:14px}
+  .reflect .q{font-weight:700;color:var(--red);margin-bottom:6px;font-size:12.5px}
+  .write{background-image:repeating-linear-gradient(transparent,transparent 25px,var(--line) 25px,var(--line) 26px);}
+  .w2{height:52px}.w3{height:78px}.w4{height:104px}.w5{height:130px}
+  .check li{padding-left:26px;margin-bottom:14px;line-height:1.5}
+  .check li::before{content:"";position:absolute;left:3px;top:1px;width:14px;height:14px;border:1.5px solid var(--caramel);border-radius:3px;background:#fff}
+  .page.cover{padding:0;display:flex;height:297mm}
+  .cover-inner{flex:1;display:flex;flex-direction:column;background:var(--boxbeige)}
+  .band-top{height:16mm;background:var(--rust);flex:none}
+  .band-bottom{height:22mm;background:var(--rust);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.3px}
+  .cover-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:20mm 28mm 36mm}
+  .cover-top{display:flex;flex-direction:column;align-items:center}
+  .logo-circle{width:158px;height:158px;border-radius:50%;background:#fff;border:3px solid var(--caramel);box-shadow:0 8px 24px rgba(123,63,40,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:26px}
+  .logo-circle img{width:80%;height:80%;object-fit:contain}
+  .cover-center h1{font-size:42px;color:var(--rust);margin-bottom:10px;line-height:1.1}
+  .cover-center .sub{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-size:21px;margin-bottom:28px}
+  .cover-center .badge{display:inline-block;background:var(--rust);color:#fff;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;padding:11px 34px;border-radius:8px}
+  .cover-img{width:84%;border-radius:14px;box-shadow:0 8px 24px rgba(123,63,40,.20);display:block}
+  .pnum{position:absolute;bottom:12mm;right:20mm;font-size:10px;color:var(--caramel)}
+  .toolgrid{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+  .tool{flex:1 1 46%;background:var(--beige);border-radius:8px;padding:10px 14px}
+  .tool .n{font-weight:700;color:var(--red);font-size:12.5px;margin-bottom:2px}
+  .tool .d{font-size:11.5px;color:var(--text)}
+  .track th,.track td{border:1px solid var(--line);padding:8px 6px;font-size:11.5px;text-align:center}
+  .track{border-collapse:collapse;width:100%;margin-top:10px;table-layout:fixed}
+  .track th{background:var(--sage);color:var(--rust);font-weight:700}
+  .goal{background:var(--rust);color:#fff;border-radius:12px;padding:18px 22px;text-align:center;margin-top:16px}
+  .goal .big{font-family:'Playfair Display',serif;font-size:17px;line-height:1.4}
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0;width:auto;min-height:auto;box-shadow:none;padding:16mm 18mm}
+    @page{size:A4;margin:0}
+    .merke,.box,.tool,.goal,.reflect{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-inner">
+    <div class="band-top"></div>
+    <div class="cover-center">
+      <div class="cover-top">
+        <div class="logo-circle"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/abc20024-8fe2-473b-b6e9-f002cd2b923d.webp" alt="Anikas Pferdeakademie"></div>
+        <div class="cover-titles">
+          <h1>Gelände sicher meistern</h1>
+          <div class="sub">Dein Workbook zum Kurs</div>
+          <div class="badge">Alle Strategien Schritt für Schritt</div>
+        </div>
+      </div>
+      <img class="cover-img" src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6981fe3a6860b82e2f1f975d.jpg" alt="Anika mit Pferd im Gelände">
+    </div>
+    <div class="band-bottom">www.anikas-pferdeakademie.de</div>
+  </div>
+</div>
+
+<!-- WILLKOMMEN -->
+<div class="page haspic">
+  <div class="kicker">Willkommen</div>
+  <h1>So nutzt du dieses Workbook</h1>
+  <div class="rule"></div>
+  <p>Schön, dass du dabei bist. In diesem Workbook findest du <b>alle wichtigen Strategien aus den Videos gesammelt</b>, damit du sie immer griffbereit hast. Und noch wichtiger: Du füllst es für dich und dein Pferd aus.</p>
+  <p>So gehst du am besten vor:</p>
+  <ul>
+    <li>Schau dir die Videos an.</li>
+    <li>Lies parallel dazu das Workbook, damit sich die Strategien noch besser festigen.</li>
+    <li>Fülle die <b>Reflexionsfelder</b> aus: Was nimmst du mit, was übst du, wie lief dein erster Versuch?</li>
+    <li>Halte deine Fortschritte in der <b>Tabelle</b> am Ende fest.</li>
+  </ul>
+  <div class="box">
+    <h3 style="margin-top:0">Bevor du startest</h3>
+    <p style="margin-bottom:0">Voraussetzung ist ein ausführliches <b>Führtraining auf dem Reitplatz</b>. Du solltest dein Pferd schon ein bisschen einschätzen können. Und arbeite lieber in kleinen Schritten mit <b>Annäherung und Rückzug</b>, statt dir ein festes Ziel beim Spaziergang (z. B. die Hofrunde) zu setzen und es durchzuziehen.</p>
+  </div>
+  <img class="page-img" src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6932bbde1d466e1ad4c8243c.jpg" alt="Anika mit Pferd">
+  <div class="pnum">2</div>
+</div>
+
+<!-- BAUKASTEN -->
+<div class="page">
+  <div class="kicker">Dein Werkzeugkasten</div>
+  <h1>Der Strategie-Baukasten</h1>
+  <div class="rule"></div>
+  <p>Das sind deine Werkzeuge, um dein Pferd herunterzufahren und in jeder Situation die Kontrolle zu behalten. Lese dir diese Strategien immer wieder durch, um sie zu verinnerlichen:</p>
+
+  <h3>1 · Fang bei dir selbst an</h3>
+  <div class="toolgrid">
+    <div class="tool"><div class="n">Ruhig atmen &amp; Raum einnehmen</div><div class="d">Deine Ruhe überträgt sich. Nimm dir bewusst Raum, du bist souverän.</div></div>
+    <div class="tool"><div class="n">„Zur Seite huschen" ablegen</div><div class="d">Nicht hektisch zur Seite huschen, wenn ein Auto kommt. Langsam und kontrolliert dein Pferd zur Seite dirigieren.</div></div>
+    <div class="tool"><div class="n">Eigensicherung zuerst</div><div class="d">Erst deine Sicherheit, dann die vom Pferd (wie im Flugzeug).</div></div>
+    <div class="tool"><div class="n">Ziel verändern</div><div class="d">„Ich unterstütze mein Pferd, seine Emotionen zu regulieren" statt „wir müssen die Runde schaffen".</div></div>
+  </div>
+
+  <h3>2 · Wirke ruhig auf dein Pferd ein</h3>
+  <div class="toolgrid">
+    <div class="tool"><div class="n">Bahnschranke (Gerte)</div><div class="d">Gerte vor/seitlich neben deinem Pferd halten, um dich abzugrenzen.</div></div>
+    <div class="tool"><div class="n">Füße schlurfen</div><div class="d">Bremst das Tempo, ohne vorne zu ziehen (fester Untergrund).</div></div>
+    <div class="tool"><div class="n">Kopf senken</div><div class="d">Dein Pferd lässt den Hals fallen und die Anspannung wird abgebaut.</div></div>
+    <div class="tool"><div class="n">Mähnenkamm schütteln</div><div class="d">Löst erstarrte Pferde, bringt sie zurück ins Atmen.</div></div>
+    <div class="tool"><div class="n">Nachgeben im Hals</div><div class="d">Drosselrinne sanft lösen, Hals wird weich statt Giraffe.</div></div>
+    <div class="tool"><div class="n">Unterer Halfterhaken nutzen</div><div class="d">Bremst das Pferd gerade ab, wenn es eilig wird. Kappzaum zieht oft zur Seite rum.</div></div>
+  </div>
+
+  <h3>3 · Variiere deine Laufwege</h3>
+  <div class="toolgrid">
+    <div class="tool"><div class="n">Ovallaufen / Volten</div><div class="d">Annäherung und Rückzug in Bewegung, um Stress vorzubeugen und runterzufahren.</div></div>
+    <div class="tool"><div class="n">Slalom &amp; Seitengänge</div><div class="d">Bieten Abwechslung, die Aufmerksamkeit ist bei dir, nehmen das Tempo raus und fördern großartig die Durchlässigkeit auf deine Hilfen.</div></div>
+    <div class="tool"><div class="n">Anhalten &amp; umdrehen</div><div class="d">Reize im Halten verarbeiten lassen, immer mal wieder Richtung Heimat laufen, das beruhigt.</div></div>
+    <div class="tool"><div class="n">Grasen lassen</div><div class="d">Fährt das Nervensystem runter (bitte nur auf Kommando).</div></div>
+  </div>
+  <div class="pnum">3</div>
+</div>
+
+<!-- BAUKASTEN 2 -->
+<div class="page haspic">
+  <div class="kicker">Dein Werkzeugkasten</div>
+  <h1>Der Strategie-Baukasten</h1>
+  <div class="rule"></div>
+  <h3 style="margin-top:0">4 · Schaffe Raum &amp; schirme ab</h3>
+  <div class="toolgrid">
+    <div class="tool"><div class="n">Platz nutzen / einparken</div><div class="d">Regel Nr. 1: Raum zwischen Pferd und Angstauslöser bringen.</div></div>
+    <div class="tool"><div class="n">Abschirmen / der „Hahn"</div><div class="d">Vor das Pferd stellen, aufplustern: „Ich beschütze dich."</div></div>
+    <div class="tool"><div class="n">Schauen lassen</div><div class="d">Kopf Richtung Schreckobjekt, nicht mit dem Rücken Richtung Objekt drehen.</div></div>
+    <div class="tool"><div class="n">Positiv verknüpfen</div><div class="d">Am gruseligen Ort grasen / einen Apfel fressen lassen.</div></div>
+  </div>
+  <img class="page-img" src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a86ae2e67ecc8731d58df56.png" alt="Anika mit Pferd im Gelände">
+  <div class="pnum">4</div>
+</div>
+
+<!-- ETAPPE 1 -->
+<div class="page">
+  <div class="kicker">Etappe 1</div>
+  <h1>Start ins Gelände</h1>
+  <span class="video">🎥 Video: Start ins Gelände</span>
+  <div class="rule"></div>
+  <h3>Das Wichtigste</h3>
+  <ul>
+    <li><b>Equipment:</b> Kappzaum (mehr Einwirkung, bei nervösen Pferden) oder stabiles Stallhalfter (Knotenhalfter, Duallyhalfter, beim Losreißer vielleicht auch die Trense), kleine Gerte als Bahnschranke, lange Longe statt kurzem Führstrick.</li>
+    <li><b>Führseite:</b> Lauf auf der Seite, zu der dein Pferd hinguckt (dort hat es Angst). Springt es weg, springt es von dir weg. Oder: laufe dort, wo mehr Platz ist.</li>
+    <li><b>Vorausschauend planen:</b> Wo kann ich ausweichen? Gehe die ersten Male zu verkehrsarmen Zeiten ins Gelände.</li>
+    <li><b>Spielerisch starten:</b> kein festes Ziel. Ein Stück gehen, anhalten, zurück. Zeit lassen. Achte auf Zeichen deines Pferdes, dass Spannung abfällt und es sich wohlfühlt.</li>
+    <li><b>Abschirmen:</b> an den Rand parken, vor das Pferd stellen, Kopf zu dir und selbst ruhig bleiben.</li>
+    <li><b>Der Wächter:</b> Zeig deinem Pferd „ich habe es auch gesehen, aber die Verantwortung liegt bei mir" (zeigen, abstreichen bis zur Hüfte).</li>
+  </ul>
+  <div class="merke"><span class="t">Wenn dein Pferd stehen bleibt, gib ihm kurz Zeit und entscheide dann selbst, wann ihr weitergeht.</span></div>
+  <div class="reflect">
+    <div class="q">Wo verläuft gerade eure „magische Schwelle"? Bis wohin kommt ihr entspannt?</div>
+    <div class="write w3"></div>
+    <div class="q" style="margin-top:12px">Das nehme ich mir aus dieser Etappe mit:</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">5</div>
+</div>
+
+<!-- ETAPPE 2 -->
+<div class="page">
+  <div class="kicker">Etappe 2</div>
+  <h1>Führmethoden &amp; Bremsstrategien</h1>
+  <span class="video">🎥 Video: Führmethoden und Bremsstrategien</span>
+  <div class="rule"></div>
+  <h3>Das Wichtigste</h3>
+  <ul>
+    <li><b>Führposition:</b> von „ein Stück hinter dir" bis „auf Schulterhöhe" ist ok. Anfangs nicht überholen lassen, sonst wird das Bremsen schwer.</li>
+    <li><b>Ansprechbar halten:</b> Ziel ist nicht, dass dein Pferd nie erschrickt, sondern dass es beim Erschrecken ansprechbar bleibt und deine Hilfengebung immer durchlässt.</li>
+    <li><b>Platz einfordern:</b> Gerte als seitliche Bahnschranke, wenn dein Pferd dich anrempelt.</li>
+    <li><b>Kein „Nur vorwärts"-Denken:</b> nicht in Runden/Zeit denken. Pferde grasen, machen Pausen, schauen sich um. Genau das greifst du auf und gestaltest euren Weg genau so.</li>
+    <li><b>Grasen auf Kommando:</b> fährt das Nervensystem runter. Muss auf Kommando abrufbar sein. Sonst in Ruhe Zuhause üben.</li>
+    <li><b>Umdrehen Richtung Heim:</b> beruhigt Pferde, die am Hof/Herde kleben.</li>
+  </ul>
+  <div class="box">
+    <h3 style="margin-top:0">Deine Brems-Strategien</h3>
+    <p style="margin-bottom:0">Bahnschranke · Füße schlurfen · unteren Halfterhaken nutzen · Slalom · Schenkelweichen · umdrehen/Volte · Grasen · Tempounterschiede.</p>
+  </div>
+  <div class="reflect">
+    <div class="q">Welche 2–3 Bremsstrategien möchte ich als Erstes üben?</div>
+    <div class="write w3"></div>
+    <div class="q" style="margin-top:12px">So lief mein erster Versuch damit:</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">6</div>
+</div>
+
+<!-- ETAPPE 3 -->
+<div class="page">
+  <div class="kicker">Etappe 3</div>
+  <h1>Strategie Autobegegnungen</h1>
+  <span class="video">🎥 Video: Strategie Autobegegnungen</span>
+  <div class="rule"></div>
+  <h3>Deine 3 Strategien für Fahrzeuge</h3>
+  <ul>
+    <li><b>1 · Anhalten + Abschirmen:</b> vor das Pferd stellen, Gerte als Abstandhalter. Kopf ggf. leicht zur Seite nehmen, damit dein Pferd alles sieht. Bei Erstarrung: Mähnenkamm schütteln.</li>
+    <li><b>2 · Komplett umdrehen:</b> bei Auto von hinten, wenn du Zeit hast: Pferd umdrehen, abschirmen und Auto vorbeilassen.</li>
+    <li><b>3 · Weiterlaufen + Kopf sehen lassen:</b> Kopf seitlich herum, damit dein Pferd das Auto sieht. Braucht Balance/Training, wenn das schwierig ist, lieber anhalten.</li>
+  </ul>
+  <div class="merke"><span class="t">Regel Nr. 1: Wenn Platz da ist, nutze ihn. Park dich ein und schaffe Raum zwischen euch und der Gefahr.</span></div>
+  <p><b>Führseite:</b> Pferden fällt es leichter, Dinge mit dem <b>linken Auge</b> wahrzunehmen und einzuordnen. Stell dich so, dass dein Pferd dich und den Verkehr gut sehen kann.</p>
+  <div class="reflect">
+    <div class="q">Welche Auto-Strategie liegt mir am meisten und wo will ich sie üben?</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">7</div>
+</div>
+
+<!-- ETAPPE 3b: Treckerbegegnungen -->
+<div class="page">
+  <div class="kicker">Etappe 3 · Spezial</div>
+  <h1>Die 3-Schritte-Treckerstrategie</h1>
+  <span class="video">🎥 Video: Die 3-Schritte-Treckerstrategie</span>
+  <div class="rule"></div>
+  <p style="margin-bottom:10px">Diese Strategie gilt nicht nur für Trecker, sondern für <b>alles, wovor dein Pferd Panik hat</b> (Auto, Kastenwagen, Schulbus, E-Roller). Ziel: die Situation entschärfen, bevor es eskaliert.</p>
+  <h3 style="margin-top:6px">Schritt 1 · Raum &amp; Abstand schaffen</h3>
+  <ul style="margin-bottom:8px">
+    <li>Zuerst umschauen: <b>Wo kann ich Raum zwischen uns und das Fahrzeug bringen?</b> Wiese, Hofeinfahrt, breite Stelle, Feldrand.</li>
+    <li>Über den Abstand steuerst du viel. Ist genug Platz da kann der Trecker in seinem Tempo weiterfahren und dein Pferd hat dennoch keine Angst.</li>
+  </ul>
+  <h3>Schritt 2 · Kein Platz? Mittig bleiben &amp; aktiv ausbremsen</h3>
+  <ul style="margin-bottom:8px">
+    <li><b>Bleib kurz mittig</b> auf dem Weg, damit der Fahrer dich sieht.</li>
+    <li><b>Lächeln &amp; winken</b> (Hallo), Zeichen „bitte langsamer", dann „danke", und erst dann langsam zur Seite.</li>
+    <li>99 % der Fahrer sind keine Rüpel, sie unterschätzen nur Tempo und Wirkung. Gehst du zu schnell beiseite, düsen sie einfach weiter.</li>
+  </ul>
+  <h3>Schritt 3 · An der Seite abschirmen</h3>
+  <ul style="margin-bottom:8px">
+    <li>Pferd ggf. umdrehen: <b>Kopf zum Trecker, Popo weg</b>, im 45-Grad-Winkel (wie Schenkelweichen).</li>
+    <li>Stell dich mit dem <b>Rücken zum Trecker</b> vor dein Pferd und schirme ab. Nicht selbst hinstarren, das macht dich angespannt.</li>
+    <li>Groß machen / Gerte seitlich, Kopf leicht zu dir. Ruhig atmen und dir eine <b>Schutzmauer</b> um euch vorstellen.</li>
+  </ul>
+  <div class="merke"><span class="t">Anhalten und Abschirmen klappt immer sehr gut, gerade wenn wenig Platz ist.</span></div>
+  <div class="reflect">
+    <div class="q">Wie viel Abstand braucht mein Pferd zum Trecker, damit es keine Angst mehr hat?</div>
+    <div class="write w2"></div>
+    <div class="q" style="margin-top:12px">Auf welcher Strecke kann ich Treckerbegegnungen gut üben, wo ich ausreichend Platz zum Ausweichen habe?</div>
+    <div class="write w2"></div>
+  </div>
+  <div class="pnum">8</div>
+</div>
+
+<!-- ETAPPE 4 -->
+<div class="page">
+  <div class="kicker">Etappe 4</div>
+  <h1>Spaziergang im Ort</h1>
+  <span class="video">🎥 Video: Spaziergang im Ort</span>
+  <div class="rule"></div>
+  <div class="merke"><span class="t">Leg die „Husch-zur-Seite"-Energie ab. Bleib ruhig, nimm dir Raum, sieh das Auto neutral. So wirst du der Sicherheitsanker und selbst die Autofahrer bremsen eher ab.</span></div>
+  <h3>Das Wichtigste</h3>
+  <ul>
+    <li><b>Kreise / Volten z. B. am Ortseingang:</b> nimmt den Vorwärts-Druck raus, dein Pferd kann alles in Ruhe anschauen und verarbeiten.</li>
+    <li><b>Schenkelweichen am Schreckobjekt vorbei:</b> das Pferd hat die Gefahr im Blick und bleibt trotzdem bei dir.</li>
+    <li><b>Der „Hahn":</b> bei engen Stellen, wo dein Pferd sich auch von hinten gruselt: vor dein Pferd stellen, aufplustern und den Weg nach vorne freimachen. Auch wenn du dich affig fühlst, es hilft (besonders wenn du kleiner bist).</li>
+    <li><b>Anhalten gegen Reizüberflutung:</b> im Halten kann dein Pferd die Reize verarbeiten, statt Bewegung und Verarbeitung gleichzeitig zu meistern.</li>
+  </ul>
+  <div class="reflect">
+    <div class="q">Welche Reize sind für mein Pferd im Ort am schwierigsten?</div>
+    <div class="write w2"></div>
+    <div class="q" style="margin-top:12px">Wo habe ich gemerkt, dass ich selbst ruhiger werden darf?</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">9</div>
+</div>
+
+<!-- ETAPPE 5 -->
+<div class="page">
+  <div class="kicker">Etappe 5</div>
+  <h1>Spaziergang an der Landstraße</h1>
+  <span class="video">🎥 Video: Spaziergang an der Landstraße</span>
+  <div class="rule"></div>
+  <div class="merke"><span class="t">Eigensicherung zuerst: Bei bekannten Angst-Grundstücken läufst du bewusst auf der Angstseite. Erst deine Sicherheit, dann die deines Pferdes.</span></div>
+  <h3>Das Wichtigste</h3>
+  <ul>
+    <li><b>Ventil rechtzeitig öffnen:</b> Volten, Ausweichstellen, kurz umdrehen, bevor es zur Eskalation kommt. In der Bewegung baut dein Pferd Stress ab und bleibt besser ansprechbar.</li>
+    <li><b>Startort klug wählen:</b> reizarm starten, oder mit dem Hänger woanders hin (kein Heimatgefühl, keine schreiende Herde).</li>
+    <li><b>Gewöhnung:</b> wenn möglich, dein Pferd auf eine Weide an der Straße stellen.</li>
+    <li><b>Übertragung aufs Reiten:</b> alle Strategien gelten auch im Sattel (Variationen, Volten, Hand auflegen, notfalls absteigen).</li>
+  </ul>
+  <div class="reflect">
+    <div class="q">Mein idealer Startweg (reizarm) sieht so aus:</div>
+    <div class="write w3"></div>
+    <div class="q" style="margin-top:12px">Das hat auf unserem ersten Spaziergang schon gut geklappt:</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">10</div>
+</div>
+
+<!-- RUNTERFAHR-ÜBUNGEN -->
+<div class="page">
+  <div class="kicker">Deine Übungen</div>
+  <h1>So fährst du dein Pferd herunter</h1>
+  <div class="rule"></div>
+  <p>Diese Übungen kennst du aus den Extra-Videos. Übe sie so oft, dass sie zum <b>Automatismus</b> werden, dann sind sie im Ernstfall sofort abrufbar. Hake ab, was ihr schon sicher könnt:</p>
+
+  <ul class="check">
+    <li><b>Kopf senken („tief"):</b> Strick sanft schräg nach unten, oder Hand aufs Genick. Aktiviert die Entspannung. Wortkommando mit üben.</li>
+    <li><b>Nachgeben im Hals:</b> Drosselrinne sanft massieren, bis das Pferd nachgibt, leckt und kaut. Hals wird weich.</li>
+    <li><b>Mähnenkamm schütteln:</b> löst erstarrte Pferde, sie fangen wieder an zu atmen. Reine Geduldsfrage.</li>
+    <li><b>Ovallaufen:</b> abwechselnd Richtung Stressor und wieder weg. Öffnet das Ventil, hält dein Pferd ansprechbar.</li>
+    <li><b>Desensibilisierung auf Reize:</b> in kleinen Schritten an Geräusche, Verkehr und Co. gewöhnen.</li>
+    <li><b>Annäherung &amp; Rückzug:</b> spielerisch ran, wieder weg, atmen. Kann immer wieder angewendet werden.</li>
+  </ul>
+  <div class="reflect">
+    <div class="q">Welche zwei Strategien möchte ich diese Woche üben?</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">11</div>
+</div>
+
+<!-- FORTSCHRITT -->
+<div class="page">
+  <div class="kicker">Mein Fortschritt</div>
+  <h1>Dein Weg ins Gelände</h1>
+  <div class="rule"></div>
+  <p>Trag hier nach jeder Trainingseinheit kurz ein, wie es lief. Ganz rechts kannst du auf einer Skala von 1 (panisch) bis 10 (total entspannt) eintragen, wie dein Pferd den Weg gemeistert hat.</p>
+  <table class="track">
+    <tr><th style="width:15%">Datum</th><th style="width:34%">Wie weit / wie lange</th><th style="width:35%">Was lief gut?</th><th style="width:16%;font-size:10px;line-height:1.25">Entspannungs&shy;faktor<br>1–10</th></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+    <tr><td style="height:34px"></td><td></td><td></td><td></td></tr>
+  </table>
+  <div class="goal">
+    <div class="big">Dein großes Ziel:<br>Rund 10 Minuten alleine mit deinem Pferd im Gelände unterwegs und gemeinsam entspannt wieder am Hof angekommen. 🐴💛</div>
+  </div>
+  <p style="text-align:center;margin-top:18px;font-family:'Playfair Display',serif;font-style:italic;color:var(--rust);font-size:15px">Ich bin so stolz auf jeden Schritt, den ihr geht. Deine Anika</p>
+  <div class="pnum">12</div>
+</div>
+
+</body>
+</html>
