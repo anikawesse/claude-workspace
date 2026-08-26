@@ -576,7 +576,13 @@
       "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-sicher-meistern-v26.pdf\")",
       "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-sicher-meistern-v27.pdf\")",
       "Bash(explorer \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\content-maschine\\\\deploy\")",
-      "Bash(start \"\" \"https://supabase.com/dashboard/sign-up\")"
+      "Bash(start \"\" \"https://supabase.com/dashboard/sign-up\")",
+      "Bash(start \"\" \"https://supabase.com/dashboard/project/cmeusofrxqzewhtbpszw/sql/new\")",
+      "Bash(start \"\" \"https://supabase.com/dashboard/project/cmeusofrxqzewhtbpszw/auth/providers\")",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" \"https://cmeusofrxqzewhtbpszw.supabase.co/rest/v1/content_store?select=user_id&limit=1\" -H \"apikey: sb_publishable_NMRqZrismuTZD-b8ieYGxA_Q9zwG3Jj\" -H \"Authorization: Bearer sb_publishable_NMRqZrismuTZD-b8ieYGxA_Q9zwG3Jj\")",
+      "Bash(curl -s \"https://cmeusofrxqzewhtbpszw.supabase.co/rest/v1/content_store?select=user_id&limit=1\" -H \"apikey: sb_publishable_NMRqZrismuTZD-b8ieYGxA_Q9zwG3Jj\" -H \"Authorization: Bearer sb_publishable_NMRqZrismuTZD-b8ieYGxA_Q9zwG3Jj\")",
+      "Bash(curl -s \"https://contentanika.netlify.app/\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-12 -Bis 2026-08-26)"
     ],
     "defaultMode": "bypassPermissions"
   }
