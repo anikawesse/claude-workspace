@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Das Geländepaket</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --red:#691212; --white:#fff;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);background:var(--beige);line-height:1.65;font-size:18px}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:'Playfair Display',serif;color:var(--rust);line-height:1.2}
+  h1{font-size:40px;margin-bottom:18px}
+  h2{font-size:30px;margin-bottom:16px}
+  h3{font-size:22px;margin-bottom:10px}
+  p{margin-bottom:16px}
+  section{padding:54px 0}
+  .center{text-align:center}
+  .kicker{font-family:'Montserrat';font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--caramel);margin-bottom:12px}
+  .accent{height:6px;background:linear-gradient(90deg,var(--rust),var(--caramel));width:100%}
+  .hero{background:var(--boxbeige);text-align:center;padding:64px 0 56px}
+  .hero .logo{height:80px;margin-bottom:22px}
+  .hero-mockup{max-width:940px;width:100%;height:auto;display:block;margin:30px auto 12px}
+  .topbar{background:var(--rust);color:#fff;display:flex;align-items:center;justify-content:center;gap:14px;padding:9px 16px;font-weight:700;letter-spacing:1.5px;font-size:13px;text-transform:uppercase;text-align:center}
+  .topbar img{height:26px;width:auto}
+  .bekannt-aus{width:100%;max-width:1080px;height:auto;display:block;margin:26px auto 0;padding:0 16px}
+  .content-img{width:100%;max-width:640px;height:auto;display:block;margin:8px auto 28px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  .pullquote{background:var(--rust);color:#fff;text-align:center;padding:60px 0}
+  .pullquote p{font-family:'Playfair Display',serif;font-style:italic;font-size:30px;line-height:1.4;max-width:800px;margin:0 auto;color:#fff}
+  @media(max-width:640px){.pullquote p{font-size:23px}}
+  .hero .sub{font-size:20px;max-width:760px;margin:0 auto 26px}
+  .cta{display:inline-block;background:var(--rust);color:var(--white)!important;text-decoration:none;font-weight:700;font-size:19px;padding:18px 40px;border-radius:40px;box-shadow:0 8px 20px rgba(123,63,40,.25);transition:transform .15s}
+  .cta:hover{transform:translateY(-2px)}
+  .cta.big{font-size:22px;padding:22px 52px}
+  .subcta{font-size:14px;color:var(--caramel);margin-top:12px}
+  .box{background:var(--white);border-left:6px solid var(--caramel);border-radius:10px;padding:26px 30px;margin:18px 0;box-shadow:0 4px 14px rgba(0,0,0,.05)}
+  .box.sage{background:var(--sage);border-left-color:var(--rust)}
+  .box.red{border-left-color:var(--red)}
+  ul.check{list-style:none;margin:10px 0}
+  ul.check li{position:relative;padding-left:34px;margin-bottom:12px}
+  ul.check li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--rust);font-weight:700;font-size:20px}
+  ul.cross li:before{content:"\2717";color:var(--red)}
+  .modcard{display:flex;gap:26px;align-items:center;background:var(--white);border-radius:14px;padding:26px;margin:22px 0;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+  .modcard.rev{flex-direction:row-reverse}
+  .modcard .modimg{flex:0 0 300px;aspect-ratio:4/3;background:var(--sage);border:2px solid var(--red);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--rust);font-weight:600;text-align:center;overflow:hidden}
+  .modcard .modimg img{width:100%;height:100%;object-fit:cover}
+  .modcard .modtxt{flex:1;min-width:0}
+  .modcard .modtxt ul{margin:6px 0 0}
+  @media(max-width:700px){.modcard,.modcard.rev{flex-direction:column}.modcard .modimg{flex:none;width:100%}}
+  @media(max-width:640px){
+    h1{font-size:30px!important}
+    section{padding:40px 0}
+    .wrap{padding:0 18px}
+    .guarantee.shield{flex-direction:column;text-align:center;gap:10px}
+    .topbar{font-size:11px;letter-spacing:.8px;gap:8px}
+    .topbar img{height:22px}
+    .price{padding:28px 20px}
+    .price .big{font-size:40px}
+    .about{gap:18px}
+    .about img{width:170px}
+    .box{padding:22px 20px}
+    .modcard{padding:20px}
+    .cta.big{font-size:17px;padding:15px 24px}
+    .cta{font-size:15px;padding:12px 20px}
+    .mbr{display:block;margin-top:14px}
+  }
+  .testi{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:940px;margin:0 auto}
+  .testi.wide{max-width:1140px}
+  .testi img{width:100%;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+  @media(max-width:640px){.testi{grid-template-columns:1fr}}
+  .price{background:var(--rust);color:var(--white);border-radius:16px;padding:40px;text-align:center}
+  .price .big{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--white);margin:6px 0}
+  .price .strike{text-decoration:line-through;opacity:.7}
+  .price .cta{background:var(--white);color:var(--rust)!important;margin-top:18px}
+  .stack-total{text-align:center;font-size:22px;font-weight:700;color:var(--rust);margin-top:18px}
+  .whatsin{display:flex;gap:34px;flex-wrap:wrap;max-width:920px;margin:22px auto 0}
+  .whatsin ul{flex:1;min-width:290px;list-style:none;margin:0;padding:0}
+  .whatsin li{margin-bottom:16px;line-height:1.5}
+  .whatsin .w{color:var(--rust);font-weight:700;white-space:nowrap}
+  .about{display:flex;gap:30px;align-items:center;flex-wrap:wrap}
+  .about img{width:230px;border-radius:14px;box-shadow:0 8px 22px rgba(0,0,0,.18)}
+  .about .txt{flex:1;min-width:280px}
+  .faq-q{font-weight:700;color:var(--rust);margin-top:18px}
+  .faq{max-width:760px;margin:0 auto}
+  .faq details{background:var(--white);border-radius:10px;margin:12px 0;box-shadow:0 3px 10px rgba(0,0,0,.05);overflow:hidden}
+  .faq summary{cursor:pointer;list-style:none;padding:18px 48px 18px 22px;font-weight:700;color:var(--rust);position:relative}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";position:absolute;right:20px;top:14px;font-size:26px;color:var(--caramel)}
+  .faq details[open] summary::after{content:"\2013"}
+  .faq details p{padding:0 22px 18px;margin:0}
+  .guarantee{background:var(--sage);border-radius:14px;padding:30px;margin:18px 0}
+  .guarantee.shield{display:flex;gap:22px;align-items:center}
+  .guarantee.shield .ic{font-size:60px;flex:none;line-height:1}
+  .final{background:var(--boxbeige);text-align:center}
+  .footer{background:var(--rust);color:#e9d9cb;text-align:center;padding:30px;font-size:14px}
+  em{font-style:italic;color:var(--rust)}
+  @media(max-width:640px){h1{font-size:30px}h2{font-size:24px}body{font-size:17px}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/abc20024-8fe2-473b-b6e9-f002cd2b923d.webp" alt="Anikas Pferdeakademie"><span>Nur bis Mittwoch, 02.09.2026 um Mitternacht</span></div>
+<div class="accent"></div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <h1>Endlich entspannte Geländespaziergänge mit deinem Pferd genießen und dich jederzeit sicher fühlen!</h1>
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a966fd6e68555d6d5fe18c2.png" alt="Das Geländepaket" class="hero-mockup">
+    <p class="sub">Du kommst <b>entspannt vom Hof</b> und hast <b>in jeder Situation die Kontrolle</b> und <b>fühlst dich sicher</b>. Auch wenn dein Pferd heute noch gar nicht mit dir alleine vom Hof gehen will oder ihr im Gelände sehr schwierige Situationen erlebt habt.</p>
+    <a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta big">Ja, ich will das Geländepaket</a>
+  </div>
+  <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a8584bcd8b5c2f24d3a11d3.png" alt="Bekannt aus" class="bekannt-aus">
+</section>
+
+<!-- PROBLEM / REGENINSEL -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Verbringst du den schönsten Teil des Jahres auf dem Reitplatz, weil ihr euch alleine einfach nicht ins Gelände traut?</h2>
+    <p class="center" style="max-width:720px;margin:0 auto 30px">Du versuchst so vieles, um endlich entspannt mit deinem Pferd rauszukommen. Und machst dabei vielleicht, ohne es zu ahnen, <b>genau den einen Fehler, den fast alle machen.</b></p>
+
+    <p>Du willst nach Feierabend einfach nur eine kleine Runde um den Hof gehen. Doch dein Pferd ist schon voll gestresst, dreht sich immer wieder Richtung Herde um und möchte <b>am liebsten den Hof gar nicht erst verlassen.</b> <span class="mbr">Dein Herz klopft schon schneller, bevor ihr überhaupt die ersten Meter ins Gelände gekommen seid.</span></p>
+
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85915ccf3baae49e52485b.jfif" alt="Pferd am Hoftor" class="content-img">
+
+    <p>Und je öfter es schiefgeht, desto tiefer sitzt die Unsicherheit. <span class="mbr">Du gehst seltener raus, findest immer wieder eine Ausrede und heimlich wächst die Angst, dass beim nächsten Mal wirklich etwas passiert.</span></p>
+    <p><b>Dabei ist oft gar nicht das Pferd das Größte, sondern das eigene Kopfkino</b>, das dir vorher schon alle Schreckszenarien ausmalt. <span class="mbr">So verstreicht eine Saison nach der anderen und der Wunsch vom entspannten gemeinsamen Spaziergang bleibt ein Wunsch.</span></p>
+  </div>
+</section>
+
+<!-- PROBLEM-BULLETS -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <div class="box">
+      <h3>Welches Problem hast du mit deinem Pferd?</h3>
+      <ul class="check" style="margin-bottom:0">
+        <li>Dein Pferd geht keinen Schritt ohne seinen Kumpel und klebt förmlich an der Herde.</li>
+        <li>Ihr kommt zwar los, aber irgendwann bleibt dein Pferd stehen wie angewurzelt und geht keinen Meter weiter.</li>
+        <li>Draußen erschrickt dein Pferd, wird hektisch oder will nur noch zurück zum Stall und du bekommst es kaum wieder ruhig.</li>
+        <li>Verkehr, Landmaschinen oder Kühe/Schweine lassen dein Herz jedes Mal höherschlagen.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ZITAT -->
+<section class="pullquote">
+  <div class="wrap">
+    <p>Du brauchst keinen Pferdekumpel und keine Begleitung. Du brauchst den richtigen Fahrplan, und genau den bekommst du hier.</p>
+  </div>
+</section>
+
+<!-- ERSEHNTE ZUKUNFT -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Stell dir einen ganz normalen Feierabend vor</h2>
+    <p>Es ist so ein ganz normaler Abend nach der Arbeit. Du kommst zum Stall, holst dein Pferd entspannt von der Weide und hängst ihm in aller Ruhe den Strick ein.</p>
+    <p>Gemeinsam schlendert ihr durchs Hoftor, dein Pferd <b>gelassen an deiner Seite</b>. Und selbst als die anderen aus der Herde nach ihm rufen, <b>bleibt dein Liebling mit seiner Aufmerksamkeit weiter bei dir.</b></p>
+
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85f7268bea83db8d3f4c11.jfif" alt="Entspannt im Gelände" class="content-img">
+    <p>Langsam lauft ihr euren vertrauten Weg über die Feldwege. Als euch an der nächsten Ecke ein Auto entgegenkommt, <b>bleibst du ganz ruhig.</b> <span class="mbr">Und weil dein Pferd deine Gelassenheit spürt, lasst ihr den Wagen einfach an euch vorbeifahren.</span></p>
+    <p>Eine halbe Stunde später kommt ihr beide <b>zufrieden und entspannt</b> wieder am Hof an. Und erst da fällt dir auf, dass du auf dem ganzen Weg <b>nicht ein einziges Mal Angst hattest.</b></p>
+
+    <h3 class="center" style="margin-top:36px">Wie würde dein Leben mit deinem Pferd aussehen, wenn…</h3>
+    <div class="box">
+      <ul class="check" style="margin-bottom:0">
+        <li>der entspannte Spaziergang zu zweit euer ganz normaler Feierabend wird?</li>
+        <li>dein Pferd auch ohne seinen Kumpel ruhig neben dir bleibt?</li>
+        <li>du in jeder Schrecksituation genau weißt, was zu tun ist und die Kontrolle behältst?</li>
+        <li>du jederzeit alleine mit deinem Pferd losgehen kannst, ohne vorher zu überlegen, ob heute ein guter Tag dafür ist?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUKTVORSTELLUNG -->
+<section id="paket">
+  <div class="wrap center">
+    <h2>Ich möchte, dass genau diese Situationen für dich zum normalen Alltag gehören. Deshalb habe ich dir etwas mitgebracht…</h2>
+    <p class="kicker" style="margin-top:22px">Darf ich vorstellen</p>
+    <h1 style="font-size:44px">Das Geländepaket</h1>
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a966fd6e68555d6d5fe18c2.png" alt="Das Geländepaket" class="hero-mockup">
+    <p class="sub" style="margin:0 auto 14px">Zwei Kurse, die dich <b>vom ersten Schritt am Hoftor bis zur sicheren Geländerunde</b> führen, ganz in deinem eigenen Tempo.</p>
+    <p class="sub" style="margin:0 auto 20px">Mit dem <b>Gelände-Schlüssel</b> kommst du überhaupt erst allein und entspannt vom Hof. Dann lernst du mit <b>Gelände sicher meistern</b> die ganzen Notfall-Strategien, um im Gelände jede Situation souverän unter Kontrolle zu behalten.</p>
+  </div>
+</section>
+
+<!-- WAS IST DRIN + PREIS -->
+<section id="angebot" style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Was ist drin?</h2>
+    <div class="whatsin">
+      <ul>
+        <li>✅ <b>Video-Kurs „Der Gelände-Schlüssel" (4 Module):</b> dein Fundament, um alleine vom Hof zu kommen. <span class="w">Wert 197 €</span></li>
+        <li>✅ <b>Die 3-Zonen-Methode mit Schritt-für-Schritt-Plan</b>, damit ihr euch ruhig von Hof und Herde lösen könnt. <span class="w">Wert 79 €</span></li>
+        <li>✅ <b>Dein 2-Wochen-Trainingsplan</b>, um fokussiert in kurzer Zeit alleine vom Hof zu kommen. <span class="w">Wert 49 €</span></li>
+        <li>✅ <b>Umsetzungs-Workbook:</b> damit du am Ball bleibst und deine Fortschritte festhältst. <span class="w">Wert 39 €</span></li>
+        <li>✅ <b>Checkliste „Bereit für den ersten Spaziergang":</b> so weißt du genau, wann es losgehen kann. <span class="w">Wert 29 €</span></li>
+        <li>🎁 <b>Bonus: Anleitung „Aufsitzen an fester Aufstiegshilfe":</b> wie du dein Pferd im Gelände an festen Gegenständen so einparkst, dass du entspannt aufsteigen kannst. <span class="w">Wert 29 €</span></li>
+      </ul>
+      <ul>
+        <li>✅ <b>Video-Kurs „Gelände sicher meistern":</b> um dein Pferd draußen jederzeit unter Kontrolle zu haben. <span class="w">Wert 197 €</span></li>
+        <li>✅ <b>Deine Notfallstrategien:</b> für Verkehr, fremde Tiere und Schreckmomente wie Losreißen, Steigen und Co. <span class="w">Wert 79 €</span></li>
+        <li>✅ <b>Checkliste Stress-Signale</b>, damit du frühzeitig erkennst, wann dein Pferd sich anspannt und du es herunterfahren kannst. <span class="w">Wert 29 €</span></li>
+        <li>✅ <b>Kurshefte zu beiden Kursen:</b> die wichtigsten Inhalte aus den Videos noch einmal übersichtlich zusammengefasst. <span class="w">Wert 79 €</span></li>
+        <li>🎁 <b>Bonus: Akupressur-Anleitung mit 5 Punkten</b> für mehr Entspannung bei deinem Pferd. <span class="w">Wert 29 €</span></li>
+        <li>🎁 <b>Bonus: Umsetzung beim Reiten:</b> wie du die „entspannt vom Hof"-Strategie nicht nur am Boden, sondern auch geritten umsetzt, wenn dein Pferd unter dem Reiter nicht vom Hof möchte. <span class="w">Wert 39 €</span></li>
+      </ul>
+    </div>
+    <p class="stack-total">Gesamtwert: über 870 €</p>
+
+    <div class="price" style="margin-top:30px">
+      <p style="margin:0">Diese zwei Kernkurse aus meinem Gelände-Programm bekommst du im Geländepaket für:</p>
+      <div class="big">einmalig 199 €</div>
+      <p style="margin:0">👉 nur bis Mittwoch, 02.09.2026 um Mitternacht</p>
+      <a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta" style="font-size:17px;padding:13px 30px">Ja, ich sichere mir das Geländepaket</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Solche Erfolge feiern meine Schülerinnen regelmäßig</h2>
+    <div class="testi">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856eaa4719b5cf5f374.png" alt="Testimonial">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a71f856670a4ee7830c97ad.png" alt="Testimonial">
+    </div>
+  </div>
+</section>
+
+<!-- DEINE ZWEI KURSE IM DETAIL -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Deine zwei Kurse im Detail</h2>
+    <p class="center" style="max-width:640px;margin:0 auto 26px">Sie bauen aufeinander auf: erst kommst du allein und entspannt vom Hof, dann wirst du draußen für jede Situation sicher.</p>
+
+    <div class="modcard">
+      <div class="modimg"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a86ae2ead59e6cfed46502b.png" alt="Der Gelände-Schlüssel"></div>
+      <div class="modtxt">
+        <h3>Kurs 1: Der Gelände-Schlüssel</h3>
+        <p><b>So kommst du überhaupt erst allein vom Hof:</b></p>
+        <ul class="check">
+          <li>Die 3-Zonen-Methode, mit der ihr euch ruhig von Hof und Herde löst.</li>
+          <li>Was du tust, wenn dein Pferd stehen bleibt wie der Ochs vorm Berg.</li>
+          <li>Ihr geht die ersten Meter alleine vom Hof und du fühlst dich sicher dabei.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modcard rev">
+      <div class="modimg"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a86ae2e67ecc8731d58df56.png" alt="Gelände sicher meistern"></div>
+      <div class="modtxt">
+        <h3>Kurs 2: Gelände sicher meistern</h3>
+        <p><b>So behältst du draußen in jeder Situation die Kontrolle:</b></p>
+        <ul class="check">
+          <li>Deine Führ- und Bremsstrategien, mit denen du dein Pferd jederzeit wieder herunterfährst.</li>
+          <li>Was du tust, wenn dein Pferd scheut, einfriert oder hektisch wird, plus Notfallplan für Hunde, Lärm und enge Stellen.</li>
+          <li>Du kennst Strategien für große Trecker, Schweine oder einfach, wenn dein Pferd schnell nach Hause möchte.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="center" style="margin-top:10px"><a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta big">Ja, ich sichere mir das Geländepaket</a></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS UTE + EVA -->
+<section>
+  <div class="testi wide" style="padding:0 22px">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85f5155113a1715f0ca9d0.png" alt="Testimonial Ute">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85f515949d6f49c37b0553.png" alt="Testimonial Eva">
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Schön, dass wir uns kennenlernen</h2>
+    <div class="about">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/691dc2a4e171b8570130b922.jpg" alt="Anika Wesse">
+      <div class="txt">
+        <p>Hi, ich bin Anika und <b>Pferde sind mein Leben.</b> <span class="mbr">Seit über 20 Jahren arbeite ich mit ihnen, als Trainerin für klassisch-barocke Reiterei, Therapeutin für traditionelle chinesische Medizin, Ernährungsberaterin für Pferde und als Haltungsexpertin.</span></p>
+        <p>Ich schaue also immer <b>aufs ganze Pferd</b>, nicht nur auf ein einzelnes Symptom.</p>
+        <p>Aber wirklich alles verändert und geprägt haben mich nicht nur meine ganzen Ausbildungen, sondern vor allem mein Pflegepferd <b>Leroy</b>, der damals partout nicht vom Hof wollte. <span class="mbr">Als ich lernte, sein ruhiger Sicherheitsanker zu werden, wurde daraus die <b>Verlasspferd-Methode</b>, mit der ich heute <b>über 500 Pferd-Mensch-Teams</b> begleitet habe.</span></p>
+        <p>Meine Überzeugung: <b>Jedes Pferd kann ein Verlasspferd werden</b>, wenn du es liebevoll und kleinschrittig begleitest.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EINZEL-TESTIMONIAL -->
+<section>
+  <div class="wrap center">
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a86b088eb4fcc289dc2b80d.png" alt="Testimonial" style="width:100%;max-width:860px;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.12)">
+  </div>
+</section>
+
+<!-- QUALIFIZIERUNG -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Das Geländepaket ist perfekt für dich, wenn…</h2>
+    <ul class="check" style="max-width:680px;margin:0 auto">
+      <li>du dir nichts mehr wünschst, als mit deinem Pferd alleine und entspannt spazieren zu gehen.</li>
+      <li>dein Pferd noch am Hof oder an der Herde klebt und dann stehen bleibt oder sich losreißen will.</li>
+      <li>du selbst ruhiger und sicherer werden willst, statt dich vom Stress deines Pferdes anstecken zu lassen.</li>
+      <li>du gern in deinem eigenen Tempo und ohne feste Termine lernst.</li>
+    </ul>
+    <p class="center" style="margin-top:22px"><a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta">Ja, das will ich!</a></p>
+  </div>
+</section>
+
+<!-- GARANTIE -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h2 class="center">Dein Einstieg ist rundum abgesichert</h2>
+    <div class="guarantee shield">
+      <div class="ic">🛡️</div>
+      <div>
+        <h3>Deine 14-Tage-Zufriedenheits-Garantie</h3>
+        <p style="margin:0">Wenn du in den ersten zwei Wochen merkst, dass das Geländepaket doch nichts für dich ist, sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ANGEBOTS-RECAP -->
+<section style="background:var(--boxbeige)">
+  <div class="wrap">
+    <h1 class="center" style="font-size:44px">Das Geländepaket</h1>
+    <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a966fd6e68555d6d5fe18c2.png" alt="Das Geländepaket" class="hero-mockup">
+    <p style="max-width:720px;margin:0 auto 26px;text-align:center;font-size:19px">Zwei Kurse, die dich <b>vom ersten Schritt am Hoftor bis zur sicheren Geländerunde</b> führen, ganz in deinem eigenen Tempo.</p>
+    <div class="whatsin">
+      <ul>
+        <li>✅ <b>Video-Kurs „Der Gelände-Schlüssel" (4 Module):</b> dein Fundament, um alleine vom Hof zu kommen. <span class="w">Wert 197 €</span></li>
+        <li>✅ <b>Die 3-Zonen-Methode mit Schritt-für-Schritt-Plan</b>, damit ihr euch ruhig von Hof und Herde lösen könnt. <span class="w">Wert 79 €</span></li>
+        <li>✅ <b>Dein 2-Wochen-Trainingsplan</b>, um fokussiert in kurzer Zeit alleine vom Hof zu kommen. <span class="w">Wert 49 €</span></li>
+        <li>✅ <b>Umsetzungs-Workbook:</b> damit du am Ball bleibst und deine Fortschritte festhältst. <span class="w">Wert 39 €</span></li>
+        <li>✅ <b>Checkliste „Bereit für den ersten Spaziergang":</b> so weißt du genau, wann es losgehen kann. <span class="w">Wert 29 €</span></li>
+        <li>🎁 <b>Bonus: Anleitung „Aufsitzen an fester Aufstiegshilfe":</b> wie du dein Pferd im Gelände an festen Gegenständen so einparkst, dass du entspannt aufsteigen kannst. <span class="w">Wert 29 €</span></li>
+      </ul>
+      <ul>
+        <li>✅ <b>Video-Kurs „Gelände sicher meistern":</b> um dein Pferd draußen jederzeit unter Kontrolle zu haben. <span class="w">Wert 197 €</span></li>
+        <li>✅ <b>Deine Notfallstrategien:</b> für Verkehr, fremde Tiere und Schreckmomente wie Losreißen, Steigen und Co. <span class="w">Wert 79 €</span></li>
+        <li>✅ <b>Checkliste Stress-Signale</b>, damit du frühzeitig erkennst, wann dein Pferd sich anspannt und du es herunterfahren kannst. <span class="w">Wert 29 €</span></li>
+        <li>✅ <b>Kurshefte zu beiden Kursen:</b> die wichtigsten Inhalte aus den Videos noch einmal übersichtlich zusammengefasst. <span class="w">Wert 79 €</span></li>
+        <li>🎁 <b>Bonus: Akupressur-Anleitung mit 5 Punkten</b> für mehr Entspannung bei deinem Pferd. <span class="w">Wert 29 €</span></li>
+        <li>🎁 <b>Bonus: Umsetzung beim Reiten:</b> wie du die „entspannt vom Hof"-Strategie nicht nur am Boden, sondern auch geritten umsetzt, wenn dein Pferd unter dem Reiter nicht vom Hof möchte. <span class="w">Wert 39 €</span></li>
+      </ul>
+    </div>
+    <p class="stack-total">Gesamtwert: über 870 €</p>
+
+    <div class="price" style="margin-top:30px">
+      <p style="margin:0">Im Geländepaket bekommst du beide Kurse für:</p>
+      <div class="big">einmalig 199 €</div>
+      <p style="margin:0">👉 nur bis Mittwoch, 02.09.2026 um Mitternacht</p>
+      <a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta" style="font-size:17px;padding:13px 30px">Ja, ich sichere mir das Geländepaket</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <h2 class="center">Häufige Fragen</h2>
+    <div class="faq">
+      <details><summary>Kann ich das wirklich alleine und online umsetzen?</summary><p><b>Ja, online funktioniert das ganz wunderbar.</b> Beide Kurse sind reine Selbstlernkurse, die du in deinem eigenen Tempo durchgehst. Genau daraus stammen die ganzen Kundenerfolge auf dieser Seite. Du bekommst Schritt für Schritt alles an die Hand, was du brauchst.</p></details>
+      <details><summary>Ich habe wenig Zeit. Schaffe ich das?</summary><p>Die Einheiten im Training brauchen wirklich nicht lang sein. Gerade zu Beginn sind <b>15 Minuten völlig ausreichend.</b> <b>Mindestens 3 mal pro Woche</b> solltest du dir zum Üben einplanen.</p></details>
+      <details><summary>Kann ich mein normales Training mit meinem Pferd weitermachen?</summary><p>Du kannst deinen Trainingsalltag ganz normal weitermachen. Die kleinen Übungen fürs oder im Gelände baust du dann einfach als Ergänzung zwischendurch mit ein.</p></details>
+      <details><summary>Funktioniert das auch bei meinem Pferd?</summary><p>Ja, egal ob jung, alt oder besonders schreckhaft. Die Verlasspferd-Methode arbeitet mit Vertrauen und Sicherheit und kann aufgrund der kleinen Schritte <b>von jedem Pferd gut umgesetzt werden.</b></p></details>
+      <details><summary>Ich habe schon so viel probiert. Warum sollte es jetzt klappen?</summary><p>Weil es nicht daran lag, dass du zu wenig versucht hast, sondern an der Herangehensweise. Genau die änderst du hier, Schritt für Schritt.</p></details>
+      <details><summary>Ich möchte eigentlich reiten und spazieren gehen. Bin ich hier richtig?</summary><p>Absolut. Beide Kurse finden am Boden statt mit dem entspannten Spaziergang als Ziel. Die Strategien, die du hier lernst, kannst du genauso im Sattel umsetzen.</p></details>
+      <details><summary>Wie bekomme ich Zugang?</summary><p>Direkt nach dem Kauf bekommst du deinen Zugang zu beiden Kursen und kannst sofort starten. Du kannst dir alle Materialien herunterladen und behältst sie.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CALL -->
+<section class="final">
+  <div class="wrap">
+    <h2>Beende das Theater am Hoftor und im Gelände ein für alle Mal!</h2>
+    <p style="max-width:640px;margin:0 auto 10px">Du kennst jetzt den Weg, die zwei Kurse und meine Garantie. Der nächste Schritt ist ganz bei dir.</p>
+    <p style="max-width:640px;margin:0 auto 24px"><b>👉 Das Geländepaket gibt es nur bis Mittwoch, 02.09.2026 um Mitternacht.</b></p>
+    <a href="https://anikas-pferdeakademie.thrivecart.com/gelaende-paket/" target="_blank" rel="noopener" class="cta big">Ja, ich will das Geländepaket</a>
+    <div class="testi" style="margin-top:34px">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a86b04567ecc8731d5e892d.png" alt="Testimonial">
+      <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6a85f515f3581ea3ef827352.png" alt="Testimonial">
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  Anikas Pferdeakademie · anikas-pferdeakademie.de<br>
+  <a href="https://anikas-pferdeakademie.de/impressum" style="color:#e9d9cb;text-decoration:underline">Impressum</a> · <a href="https://anikas-pferdeakademie.de/datenschutz" style="color:#e9d9cb;text-decoration:underline">Datenschutz</a>
+</div>
+
+</body>
+</html>

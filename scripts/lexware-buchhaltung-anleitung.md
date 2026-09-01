@@ -25,6 +25,26 @@ node scripts/lexware-import.js "C:/Users/Olive/Desktop/Buchungen August" --all
 ```
 (Ordnernamen jeweils anpassen.)
 
+## Notweg — wenn der ThriveCart-Download-Link kaputt ist
+ThriveCart verschickt den Download über das Tracking von Postmark, und diese Adresse wird bei **2048 Zeichen hart abgeschnitten**. Ist der Sicherheits-Token darin lang, fehlt am Ende ein Stück der AWS-Signatur und der Link ist unbrauchbar (Chrome meldet `ERR_INVALID_RESPONSE`). Ein neuer Export hilft dann nicht, weil er dasselbe Limit trifft. Erstmals aufgetreten am 01.09.2026 beim August-Export.
+
+In dem Fall ohne PDF-Ordner buchen. Die Rechnungsliste kommt dann aus dem Rechnungsdatum der ThriveCart-Transaktionen:
+```bash
+node scripts/lexware-import.js --month 2026-08 --all --dry-run
+```
+```bash
+node scripts/lexware-import.js --month 2026-08 --all
+```
+Die Belege sind inhaltlich identisch (Kontakt, Steuerfall, Beträge, Doppelbuchungs-Schutz, OSS-CSV), es fehlt nur das angehängte Original-PDF.
+
+Taucht der Export später doch noch auf, die PDFs einfach nachtragen. Belege, die schon eine Datei haben, werden übersprungen:
+```bash
+node scripts/lexware-pdf-nachtragen.js "C:/Users/Olive/Desktop/Buchungen August" --dry-run
+```
+```bash
+node scripts/lexware-pdf-nachtragen.js "C:/Users/Olive/Desktop/Buchungen August"
+```
+
 ## Schritt 3 — In Lexware bestätigen
 **Finanzen → Umsätze → Umsätze zuordnen:** Die Belege werden dir als Vorschlag zu den Zahlungen angezeigt → bestätigen.
 

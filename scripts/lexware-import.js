@@ -22,6 +22,11 @@
  *   node scripts/lexware-import.js "<PDF-Ordner>" --all            # alle PDFs im Ordner
  *   node scripts/lexware-import.js "<PDF-Ordner>" 126 106 109      # nur diese Rechnungsnummern
  *   node scripts/lexware-import.js "<PDF-Ordner>" --all --dry-run  # nur Vorschau, nichts buchen
+ *   node scripts/lexware-import.js --month 2026-08 --all           # ohne PDF-Ordner, Liste aus der API
+ *
+ * --month YYYY-MM ist der Notweg, wenn der ThriveCart-Rechnungsexport nicht verfuegbar ist:
+ * die Rechnungsliste kommt dann aus dem Rechnungsdatum der ThriveCart-Transaktionen.
+ * Die Belege werden inhaltlich identisch gebucht, nur ohne angehaengtes Original-PDF.
  *
  * Voraussetzung: scripts/.env mit THRIVECART_API_KEY und LEXWARE_API_KEY
  */
@@ -50,18 +55,24 @@ const KAT = {
 
 // ---------- Args ----------
 const args = process.argv.slice(2);
-const dir = args[0];
-if (!dir || !fs.existsSync(dir)) { console.error('Bitte PDF-Ordner als erstes Argument angeben.'); process.exit(1); }
 const dryRun = args.includes('--dry-run');
 const wantAll = args.includes('--all');
-const wantNums = new Set(args.slice(1).filter(a => /^\d+$/.test(a)).map(a => String(parseInt(a, 10))));
+const monthIdx = args.indexOf('--month');
+const month = monthIdx >= 0 ? args[monthIdx + 1] : null;
+if (monthIdx >= 0 && !/^\d{4}-\d{2}$/.test(month || '')) { console.error('--month braucht einen Monat im Format 2026-08.'); process.exit(1); }
+const dir = month ? null : args[0];
+if (!month && (!dir || !fs.existsSync(dir))) { console.error('Bitte PDF-Ordner als erstes Argument angeben, oder --month YYYY-MM verwenden.'); process.exit(1); }
+const label = month || path.basename(dir);
+const wantNums = new Set(args.filter(a => /^\d+$/.test(a)).map(a => String(parseInt(a, 10))));
 
 // ---------- PDFs im Ordner: Rechnungsnummer -> Dateiname ----------
 const num2file = {};
-for (const f of fs.readdirSync(dir)) {
-  if (!/\.pdf$/i.test(f)) continue;
-  const m = f.match(/(\d{4,})/);
-  if (m) num2file[String(parseInt(m[1], 10))] = path.join(dir, f);
+if (dir) {
+  for (const f of fs.readdirSync(dir)) {
+    if (!/\.pdf$/i.test(f)) continue;
+    const m = f.match(/(\d{4,})/);
+    if (m) num2file[String(parseInt(m[1], 10))] = path.join(dir, f);
+  }
 }
 
 // ---------- HTTP-Helfer ----------
@@ -171,12 +182,15 @@ function invNumFromVoucherNumber(vn) {
   }
 
   // ---------- 3) Zu verarbeitende Rechnungsnummern ----------
-  const nums = Object.keys(num2file).filter(n => wantAll || wantNums.has(n)).sort((x, y) => x - y);
-  if (!nums.length) { console.error('Keine passenden Rechnungsnummern im Ordner gefunden.'); process.exit(1); }
+  const quelle = month
+    ? Object.keys(byInv).filter(n => (byInv[n] || []).some(t => String(t.date || '').startsWith(month)))
+    : Object.keys(num2file);
+  const nums = quelle.filter(n => wantAll || wantNums.has(n)).sort((x, y) => x - y);
+  if (!nums.length) { console.error(month ? `Keine ThriveCart-Rechnungen im Monat ${month} gefunden.` : 'Keine passenden Rechnungsnummern im Ordner gefunden.'); process.exit(1); }
 
   const stats = { gebucht: 0, uebersprungen: 0, fehler: 0 };
   const summary = {}; // Land|Satz -> { land, rate, anzahl, netto, ust, brutto }
-  console.log(`\n${dryRun ? '[VORSCHAU – es wird NICHTS gebucht]\n' : ''}${nums.length} Rechnung(en) im Ordner, ${alreadyBooked.size} bereits in Lexware gebucht.\n`);
+  console.log(`\n${dryRun ? '[VORSCHAU – es wird NICHTS gebucht]\n' : ''}${nums.length} Rechnung(en) in ${label}${month ? ' (Quelle: ThriveCart-API, ohne PDF)' : ''}, ${alreadyBooked.size} bereits in Lexware gebucht.\n`);
 
   for (const num of nums) {
     const items = byInv[num];
@@ -239,8 +253,11 @@ function invNumFromVoucherNumber(vn) {
         voucherItems,
       });
       if (vc.status >= 300) throw new Error(`Beleg-Fehler ${vc.status}: ${JSON.stringify(vc.json)}`);
-      const at = await attachPdf(vc.json.id, file);
-      const pdf = at.status < 300 ? 'PDF ✓' : `PDF-FEHLER ${at.status}`;
+      let pdf = 'ohne PDF';
+      if (file) {
+        const at = await attachPdf(vc.json.id, file);
+        pdf = at.status < 300 ? 'PDF ✓' : `PDF-FEHLER ${at.status}`;
+      }
       console.log(`Nr ${num} | ${fall} ${rate}% | ${name} (${land}) | ${totalGross}€ / ${totalTax}€ USt | ${pdf}`);
       stats.gebucht++;
     } catch (e) {
@@ -262,10 +279,16 @@ function invNumFromVoucherNumber(vn) {
     }
     console.log(`Gesamt Brutto: ${fmtDE(round2(gesamtBrutto))}€`);
 
-    const csvLines = ['Land;USt-Satz;Anzahl;Netto (EUR);USt (EUR);Brutto (EUR)'];
-    for (const r of rows) csvLines.push(`${r.land};${r.rate}%;${r.anzahl};${fmtDE(r.netto)};${fmtDE(r.ust)};${fmtDE(r.brutto)}`);
-    const outPath = path.join(os.homedir(), 'Desktop', `OSS-Zusammenfassung ${path.basename(dir)}.csv`);
-    fs.writeFileSync(outPath, csvLines.join('\r\n'), 'utf8');
-    console.log(`\nZusammenfassung gespeichert: ${outPath}`);
+    // Nur beim Gesamtlauf schreiben: ein Lauf fuer einzelne Rechnungsnummern deckt den
+    // Monat nicht ab und wuerde die vollstaendige Datei sonst ueberschreiben.
+    if (wantAll) {
+      const csvLines = ['Land;USt-Satz;Anzahl;Netto (EUR);USt (EUR);Brutto (EUR)'];
+      for (const r of rows) csvLines.push(`${r.land};${r.rate}%;${r.anzahl};${fmtDE(r.netto)};${fmtDE(r.ust)};${fmtDE(r.brutto)}`);
+      const outPath = path.join(os.homedir(), 'Desktop', `OSS-Zusammenfassung ${label}.csv`);
+      fs.writeFileSync(outPath, csvLines.join('\r\n'), 'utf8');
+      console.log(`\nZusammenfassung gespeichert: ${outPath}`);
+    } else {
+      console.log('\n(Einzellauf: OSS-Datei nicht ueberschrieben. Fuer die Monatsdatei mit --all laufen lassen.)');
+    }
   }
 })().catch(e => { console.error(e); process.exit(1); });

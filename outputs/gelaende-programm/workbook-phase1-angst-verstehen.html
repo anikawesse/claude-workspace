@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Phase I — Angst verstehen</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --red:#691212; --line:#d9c9b6; --mut:#8a6a4f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#e9e2d8}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.6;font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;background:#fff;margin:0 auto 8mm;padding:20mm 20mm 16mm;position:relative;page-break-after:always;overflow:hidden}
+  h1{font-family:'Playfair Display',serif;color:var(--rust);font-size:26px;line-height:1.15;margin-bottom:4px}
+  h3{font-size:14px;color:var(--red);font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:9px}
+  ul{list-style:none;margin:4px 0 10px}
+  li{position:relative;padding-left:22px;margin-bottom:6px}
+  li::before{content:"›";position:absolute;left:4px;top:-1px;color:var(--caramel);font-weight:700;font-size:15px}
+  b,strong{color:var(--red)}
+  .kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:8px}
+  .rule{height:2px;background:linear-gradient(90deg,var(--caramel),transparent);margin:12px 0 16px}
+  .merke{background:var(--boxbeige);border-left:4px solid var(--rust);border-radius:8px;padding:12px 16px;margin:14px 0}
+  .merke .t{font-family:'Playfair Display',serif;font-style:italic;color:var(--rust);font-size:15px}
+  .box{background:var(--beige);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .lead{font-size:13.5px}
+  .reflect{margin-top:12px}
+  .reflect .q{font-weight:700;color:var(--red);margin-bottom:6px;font-size:12.5px}
+  .subq{font-weight:600;color:var(--rust);font-size:11.5px;margin:8px 0 2px}
+  .write{background-image:repeating-linear-gradient(transparent,transparent 25px,var(--line) 25px,var(--line) 26px);margin-bottom:14px}
+  .w1{height:26px}.w2{height:52px}.w3{height:78px}.w4{height:104px}.w5{height:130px}
+  .step{display:flex;gap:12px;align-items:flex-start;margin-top:12px}
+  .step-badge{width:30px;height:30px;flex:none;border-radius:50%;background:var(--rust);color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .step-body{flex:1}
+  .step-body .q{font-weight:700;color:var(--red);font-size:12.5px;margin-bottom:3px}
+  .pnum{position:absolute;bottom:12mm;right:20mm;font-size:10px;color:var(--caramel)}
+  .page.cover{padding:0;display:flex;height:297mm}
+  .cover-inner{flex:1;display:flex;flex-direction:column;background:var(--boxbeige)}
+  .band-top{height:16mm;background:var(--rust);flex:none}
+  .band-bottom{height:22mm;background:var(--rust);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.3px}
+  .cover-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:22mm 28mm 34mm}
+  .cover-top{display:flex;flex-direction:column;align-items:center}
+  .logo-circle{width:158px;height:158px;border-radius:50%;background:#fff;border:3px solid var(--caramel);box-shadow:0 8px 24px rgba(123,63,40,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:26px}
+  .logo-circle img{width:80%;height:80%;object-fit:contain}
+  .cover-center h1{font-size:44px;color:var(--rust);margin-bottom:10px;line-height:1.1}
+  .cover-center .sub{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-size:21px;margin-bottom:28px}
+  .cover-center .badge{display:inline-block;background:var(--rust);color:#fff;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;padding:11px 30px;border-radius:8px}
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0;width:auto;min-height:auto;box-shadow:none;padding:16mm 18mm}
+    @page{size:A4;margin:0}
+    .merke,.box,.reflect,.step{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-inner">
+    <div class="band-top"></div>
+    <div class="cover-center">
+      <div class="cover-top">
+        <div class="logo-circle"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/abc20024-8fe2-473b-b6e9-f002cd2b923d.webp" alt="Anikas Pferdeakademie"></div>
+        <div class="cover-titles">
+          <h1>Selbstbewusstsein stärken</h1>
+          <div class="sub">Dein Workbook zu Phase I</div>
+          <div class="badge">Werde zum Sicherheitsanker für dein Pferd</div>
+        </div>
+      </div>
+    </div>
+    <div class="band-bottom">www.anikas-pferdeakademie.de</div>
+  </div>
+</div>
+
+<!-- 1 · ZUSAMMENFASSUNG -->
+<div class="page">
+  <div class="kicker">Das Wichtigste aus Video 1</div>
+  <h1>Angst verstehen</h1>
+  <div class="rule"></div>
+  <p class="lead">Bevor wir an Strategien arbeiten, packen wir das Problem bei der Wurzel. Hier die wichtigsten Punkte aus dem Video zum Nachlesen:</p>
+
+  <ul>
+    <li>Angst ist eine sehr mächtige und <b>nicht rationale</b> Emotion. Sie meldet Gefahr, auch wenn gerade gar nichts Brenzliges passiert. Stichwort Kopfkino.</li>
+    <li>Dein Kopf geht in den <b>Autopilot</b>, dein Körper reagiert: erhöhter Puls, Schwitzen, weiche Knie, schlecht Luft bekommen.</li>
+    <li>Angst hat eine <b>Daseinsberechtigung</b>. Ein gewisses Maß an Vorsicht und Respekt schützt dich und ist mit wachsender Verantwortung völlig normal.</li>
+    <li>Sie <b>kippt</b>, sobald aus dieser gesunden Vorsicht die Angst vor Kontrollverlust wird und plötzlich gar nichts mehr geht. Dann schützt sie nicht mehr, sie belastet nur noch.</li>
+    <li><b>Angst vor Kontrollverlust</b> heißt: die Angst, das Pferd oder die Umgebung nicht kontrollieren zu können (der Trecker, das Losreißen), ausgeliefert und handlungsunfähig zu sein.</li>
+    <li>Sie entsteht durch ein <b>schlimmes Erlebnis</b> oder einfach durch die Vorstellung und das, was man gehört oder gesehen hat.</li>
+    <li>Deine Angst <b>überträgt sich aufs Pferd</b>. Es bekommt das Signal Gefahr, wird umweltorientiert, keiner sorgt mehr für Sicherheit. Ein Teufelskreis.</li>
+    <li>Jeder Angst-Moment bucht von deinem <b>Selbstvertrauenskonto</b> ab. Genau das drehen wir um.</li>
+  </ul>
+
+  <div class="merke"><span class="t">Die Auslöser sind erst der Startpunkt. Jetzt schauen wir uns an, was der Mechanismus dahinter ist, der dafür sorgt, dass die Angst immer mehr wird.</span></div>
+  <div class="pnum">2</div>
+</div>
+
+<!-- 2 · ÜBUNG 1 TEIL 1 -->
+<div class="page">
+  <div class="kicker">Übung 1 · Teil 1</div>
+  <h1>Was läuft in dir ab?</h1>
+  <div class="rule"></div>
+
+  <div class="step">
+    <div class="step-badge">1</div>
+    <div class="step-body">
+      <div class="q">Nimm dir eine typische Situation vor, in der du regelmäßig von der Angst vor Kontrollverlust übermannt wirst.</div>
+      <p style="margin-bottom:6px">Das kann zum Beispiel sein:</p>
+      <ul style="margin-top:0">
+        <li>Schon das Losgehen vom Hof („Was, wenn mein Pferd nicht stehen bleibt oder sich losreißt?")</li>
+        <li>Der Weg ins Gelände („Was, wenn mein Pferd vor einem Trecker, Hund oder Vogel erschrickt und durchgeht?")</li>
+        <li>Eine enge Stelle, an der du nicht ausweichen kannst</li>
+      </ul>
+      <div class="subq">Welches ist deine „Horrorsituation"?</div>
+      <div class="write w2"></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-badge">2</div>
+    <div class="step-body">
+      <div class="q">Lass die Erinnerung daran ablaufen wie einen inneren Film.</div>
+      <p style="margin-bottom:4px">Schau ihn dir bewusst an und versetze dich hinein, so als ob du es gerade tatsächlich erleben würdest. Spür dann nach:</p>
+      <div class="subq">Was kommen dir für Gedanken?</div>
+      <div class="write w3"></div>
+      <div class="subq">Wie reagiert dein Körper?</div>
+      <div class="write w3"></div>
+      <div class="subq">Welche Gefühle nimmst du wahr?</div>
+      <div class="write w3"></div>
+      <div class="subq">Wie verhältst du dich dadurch?</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+  <div class="pnum">3</div>
+</div>
+
+<!-- 3 · ÜBUNG 1 TEIL 2 -->
+<div class="page">
+  <div class="kicker">Übung 1 · Teil 2</div>
+  <h1>Was läuft in dir ab?</h1>
+  <div class="rule"></div>
+
+  <div class="step">
+    <div class="step-badge">3</div>
+    <div class="step-body">
+      <div class="q">Wie bewertest du das alles?</div>
+      <p style="margin-bottom:4px">Kommen dir Begriffe wie „gefährlich" oder „nicht zu schaffen" in den Sinn?</p>
+      <div class="write w2"></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-badge">4</div>
+    <div class="step-body">
+      <div class="q">Wenn diese Bewertungen da sind, spüre noch einmal nach.</div>
+      <div class="subq">Wie reagieren darauf deine Gedanken, dein Körper, deine Gefühle und dein Verhalten?</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-badge">5</div>
+    <div class="step-body">
+      <div class="q">Wie sehr unterstützt dich das alles, wenn du eine Lösung finden willst?</div>
+      <p style="margin-bottom:4px">Wie beeinflusst es deinen gesunden Menschenverstand, dein realistisches Denken, deine Kreativität und deine Fähigkeit, sinnvoll zu handeln und gute Lösungen zu finden?</p>
+      <div class="write w3"></div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-badge">6</div>
+    <div class="step-body">
+      <div class="q">Was hat das alles mit der realen Situation zu tun?</div>
+      <p style="margin-bottom:4px">Tritt innerlich einen Moment zurück und schau klar auf die Situation, in der du dich tatsächlich befindest. Wie viel hat sie mit der Geschichte zu tun, die dir deine Angst gerade mal wieder erzählt?</p>
+      <div class="write w3"></div>
+    </div>
+  </div>
+  <div class="pnum">4</div>
+</div>
+
+<!-- 4 · ÜBUNG 2 -->
+<div class="page">
+  <div class="kicker">Übung 2</div>
+  <h1>Was wäre wenn?</h1>
+  <div class="rule"></div>
+
+  <div class="merke"><span class="t">Es geht nie darum, deine Angst „wegzumachen". Das geht auch gar nicht. Wichtig ist zu verstehen: Auch die Angst ist immer eine Entscheidung. Du kannst dich und dein Leben jederzeit wieder selbst in die Hand nehmen.</span></div>
+
+  <div class="step">
+    <div class="step-badge">1</div>
+    <div class="step-body">
+      <div class="q">Nimm dir einen Moment Zeit und stell dir vor:</div>
+      <ul style="margin-top:4px">
+        <li>Du hast alles, was du brauchst, um jede Situation für dich und dein Pferd zu lösen.</li>
+        <li>Du weißt sofort, was zu tun ist.</li>
+        <li>Du überblickst die Situation souverän.</li>
+        <li>Du handelst kompetent.</li>
+        <li>Du regelst die Reaktionen deines Pferdes problemlos und fast automatisch.</li>
+        <li>Du bleibst ruhig und gelassen an der Seite deines Pferdes.</li>
+        <li>Du weißt intuitiv, wie dein Pferd reagieren wird.</li>
+        <li>Du setzt einfach und lösungsorientiert um, was du kannst und weißt.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-badge">2</div>
+    <div class="step-body">
+      <div class="q">Drehe daraus einen inneren Film und lass ihn ein paar Mal ablaufen.</div>
+      <p style="margin-bottom:4px">Mal angenommen, du hast all das direkt und automatisch zur Verfügung, genau im passenden Moment:</p>
+      <div class="subq">Welche Gedanken kommen in dir hoch? Wie reagiert dein Körper? Welche Gefühle löst das aus? Wie ändert sich dein Verhalten?</div>
+      <div class="write w5"></div>
+    </div>
+  </div>
+
+  <div class="box"><b>Wichtig:</b> Schick deinen inneren Kritiker kurz auf die Wartebank. Wenn ein „Ja, aber…" kommt, ignoriere es vorerst. Stell dir das Bild einfach vor und nimm die Veränderung wahr.</div>
+
+  <div class="reflect">
+    <div class="q">Die wichtigste Frage zum Schluss: Welche Chance hat deine Angst noch, wenn du all das aktivierst und abrufst?</div>
+    <div class="write w4"></div>
+  </div>
+  <div class="pnum">5</div>
+</div>
+
+<!-- 5 · ZUSAMMENFASSUNG VIDEO 2 -->
+<div class="page">
+  <div class="kicker">Das Wichtigste aus Video 2</div>
+  <h1>Deine Angst und dein Pferd</h1>
+  <div class="rule"></div>
+  <p class="lead">Deine innere Verfassung landet direkt bei deinem Pferd. Hier die Kernpunkte:</p>
+
+  <ul>
+    <li>An <b>guten Tagen</b> (weniger Druck, leiseres Kopfkino) ist dein Pferd ruhiger und hört dir besser zu. An <b>schlechten Tagen</b> (Sorgen, Grübeleien) kommst du schon mit hohem Stresslevel beim Pferd an.</li>
+    <li>Typische Zeichen: lässt sich nicht einfangen, legt beim Putzen die Ohren an, will sich nicht satteln lassen, wirkt schlecht gelaunt, will beim Führen weg oder überholen, geht beim Reiten mit viel Dampf.</li>
+    <li>Dein Pferd reguliert Stress über <b>Bewegung</b>: erst Flucht (von dir weg), dann Abbau in der Bewegung. Es ist ja ein Fluchttier.</li>
+    <li>Es weiß nicht, dass deine Anspannung nichts mit ihm zu tun hat. Es nimmt dich als <b>Stressquelle</b> wahr und will dir gerade nicht so gern nah sein.</li>
+    <li>Pferde lesen unsere Emotionen und Energie sehr fein (Hormone). Sie leben im <b>Hier und Jetzt</b>, wir hängen in Vergangenheit und Zukunft.</li>
+  </ul>
+
+  <div class="merke"><span class="t">Der Realitätskreislauf: Gedanke → Emotion → Körperreaktion → Ergebnis (bei dir und beim Pferd) → und wieder von vorne. Setzen wir bei den Gedanken an, drehen wir den Kreislauf ins Positive.</span></div>
+
+  <div class="box"><b>Wichtig:</b> Dein Gehirn unterscheidet nicht zwischen real erlebt und nur vorgestellt. Schon der bloße Gedanke löst die Körperreaktion aus. Du bist <b>nicht schuld</b> daran, dass dein Kopfkino anspringt. Genau diese Macht der Vorstellung nutzen wir für dich.</div>
+  <div class="pnum">6</div>
+</div>
+
+<!-- ÜBUNG NACH VIDEO 2 · KRAFT DER GEDANKEN TEIL 1 -->
+<div class="page">
+  <div class="kicker">Übung nach Video 2</div>
+  <h1>Die Kraft der Gedanken</h1>
+  <div class="rule"></div>
+  <p>Setz dich an einen ruhigen Ort, wo dich niemand stört. Diese Übung hat zwei Durchläufe. Starte mit <b>drei tiefen Atemzügen</b>: durch die Nase ein, kurz halten, durch den Mund aus. Das erdet dich und bringt dich ins Hier und Jetzt.</p>
+
+  <h3>Teil 1 · Eine Situation, die dich geärgert hat</h3>
+  <p style="margin-bottom:6px">Stell dir eine Alltagssituation vor, die dich geärgert hat oder die dir unangenehm war. Nicht die schlimmste Angst, sondern etwas, wo du Ärger aufkommen spürst (Arbeitskollege, Partner, Pferd). Geh gedanklich hinein und erlebe sie noch einmal. Dann beantworte:</p>
+  <div class="reflect">
+    <div class="q">Welche Gefühle oder Emotionen löst diese Situation in dir aus?</div>
+    <div class="write w2"></div>
+    <div class="q">Wie reagiert dein Körper darauf?</div>
+    <div class="write w2"></div>
+    <div class="q">Was würdest du jetzt am liebsten tun?</div>
+    <div class="write w2"></div>
+    <div class="q">Welche Erkenntnis ziehst du daraus?</div>
+    <div class="write w2"></div>
+  </div>
+  <div class="pnum">7</div>
+</div>
+
+<!-- ÜBUNG NACH VIDEO 2 · KRAFT DER GEDANKEN TEIL 2 -->
+<div class="page">
+  <div class="kicker">Übung nach Video 2</div>
+  <h1>Die Kraft der Gedanken</h1>
+  <div class="rule"></div>
+
+  <h3>Teil 2 · Eine richtig schöne Situation</h3>
+  <p style="margin-bottom:6px">Jetzt drehen wir es um. Denk an eine schöne Situation, ein tolles Erlebnis mit deinem Pferd oder deiner Familie, etwas, das dir die Sonne im Herzen aufgehen lässt. Steig richtig tief ein und erlebe sie noch einmal. Dann beantworte:</p>
+  <div class="reflect">
+    <div class="q">Welche Gefühle spürst du?</div>
+    <div class="write w2"></div>
+    <div class="q">Wie reagiert dein Körper darauf?</div>
+    <div class="write w2"></div>
+    <div class="q">Was würdest du jetzt am liebsten tun?</div>
+    <div class="write w2"></div>
+    <div class="q">Welche Erkenntnis ziehst du aus dieser Übung insgesamt?</div>
+    <div class="write w2"></div>
+  </div>
+
+  <div class="merke"><span class="t">Du hast die Kraft der Gedanken jetzt am eigenen Leib gespürt, einmal mit einer negativen und einmal mit einer positiven Emotion. Genau das wollen wir mit deinem Pferd erreichen: Wenn ein negativer Gedanke kommt, das Ganze zu drehen. Wiederhole die Übung gern immer wieder.</span></div>
+  <div class="pnum">8</div>
+</div>
+
+<!-- 6 · ZUSAMMENFASSUNG VIDEO 3 -->
+<div class="page">
+  <div class="kicker">Das Wichtigste aus Video 3</div>
+  <h1>Emotionen und die 3 Pferdetypen</h1>
+  <div class="rule"></div>
+  <p class="lead">Jetzt schauen wir genauer auf die Emotionen und darauf, wie du wieder ans Steuer kommst:</p>
+
+  <ul>
+    <li>Basisemotionen (Angst, Wut, Ärger, Trauer, auch Freude) wird man nicht einfach los. Sie überfluten uns in Sekunden, der Autopilot geht an und die Realitätswahrnehmung eher aus.</li>
+    <li>Angst ist <b>Emotion pur</b>. Sie nimmt dir Selbstsicherheit und Selbstvertrauen und schadet der Beziehung zu deinem Pferd.</li>
+    <li>So entsteht eine Emotion: <b>Wahrnehmung</b> (Trigger) → <b>Bewertung</b> (subjektiv, oft überbewertet = Kopfkino) → <b>Emotion</b> → <b>Körperreaktion</b> → <b>Verhalten</b> (oft Vermeidung).</li>
+    <li>Raus aus der Emotion: Die Kontrolle zurückzugewinnen ist eine <b>bewusste, aktive Entscheidung</b>. Du fokussierst auf etwas Positives, wirst wieder Herrscherin über deinen inneren Zustand, dein Stress sinkt rapide.</li>
+  </ul>
+
+  <div class="box">
+    <h3 style="margin-top:0">Die drei Pferdetypen</h3>
+    <p style="margin-bottom:4px"><b>Die coole Socke:</b> in sich gefestigt, Leader-Typ, lässt sich kaum anstecken und gibt dir Sicherheit.</p>
+    <p style="margin-bottom:4px"><b>Die Drama Queen:</b> geht gern mit in die Angst, schaukelt sich hoch, braucht jemanden zur Orientierung.</p>
+    <p style="margin-bottom:0"><b>Das Sensibelchen:</b> reagiert stark auf Druck und Stress, will flüchten. Der Trend in der Zucht geht zu diesen Pferden.</p>
+  </div>
+
+  <div class="reflect">
+    <div class="q">Welcher Typ ist dein Pferd? (coole Socke · Drama Queen · Sensibelchen)</div>
+    <div class="write w2"></div>
+  </div>
+
+  <div class="merke"><span class="t">Den Anfang macht nicht dein Pferd. Gib ihm einen Vertrauensvorschuss, gib ein Stück Kontrolle ab und geh bewusst in eine Situation, die du bisher vermieden hast.</span></div>
+  <div class="pnum">9</div>
+</div>
+
+<!-- ÜBUNG NACH VIDEO 3 · ANGST-RANGLISTE -->
+<div class="page">
+  <div class="kicker">Übung</div>
+  <h1>Deine Angst-Rangliste</h1>
+  <div class="rule"></div>
+  <p>Jetzt erstellen wir eine Rangliste deiner Angstmomente. Denk an <b>drei konkrete Situationen</b> mit deinem Pferd, vor denen du bisher noch Angst hast und die du deshalb gerade vermeidest.</p>
+  <p>Wir ordnen sie von <b>Platz 1</b> (dein kleiner erster Schritt) bis <b>Platz 3</b> (deine größte Hürde). Wir fangen bewusst nicht mit dem größten Angstmoment an. Ein kleiner Schritt kann schon sein, allein den Hof zu verlassen. Du wirst dabei nicht allein gelassen und bekommst deine Strategien an die Hand.</p>
+
+  <div class="step">
+    <div class="step-badge">1</div>
+    <div class="step-body">
+      <div class="q">Mein kleiner erster Schritt (die kleinste Hürde)</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-badge">2</div>
+    <div class="step-body">
+      <div class="q">Der nächste Schritt</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+  <div class="step">
+    <div class="step-badge">3</div>
+    <div class="step-body">
+      <div class="q">Meine größte Hürde</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+
+  <div class="merke"><span class="t">Wir arbeiten diese Situationen chronologisch durch: erst die kleinste, dann die zweite, dann die größte. So näherst du dich Schritt für Schritt deinem entspannten und sicheren Geländeausflug.</span></div>
+  <div class="pnum">10</div>
+</div>
+
+<!-- ÜBUNG · SITUATIONSANALYSE (WIEDERVERWENDBAR) -->
+<div class="page">
+  <div class="kicker">Übung zum Wiederholen</div>
+  <h1>Situationsanalyse</h1>
+  <div class="rule"></div>
+  <p>Dieses Schema kannst du immer wieder nutzen, wenn du eine Situation mit deinem Pferd erlebt hast, die dir Angst gemacht hat oder unangenehm war. <b>Tipp:</b> Druck dir diese Seite mehrmals aus oder kopiere sie, du wirst sie öfter brauchen.</p>
+
+  <h3>1 · Die Situation analysieren</h3>
+  <div class="reflect">
+    <div class="q">Was ist passiert? Beschreibe die Situation.</div>
+    <div class="write w2"></div>
+    <div class="q">Welche Gedanken hattest du in diesem Moment?</div>
+    <div class="write w2"></div>
+    <div class="q">Welche Emotionen sind entstanden und wie hast du dich verhalten?</div>
+    <div class="write w2"></div>
+  </div>
+
+  <h3>2 · Die Gedanken hinterfragen</h3>
+  <div style="display:flex;gap:16px;margin-bottom:4px">
+    <div style="flex:1">
+      <div class="subq">Beweise DAFÜR, dass dein Gedanke stimmt</div>
+      <div class="write w3"></div>
+    </div>
+    <div style="flex:1">
+      <div class="subq">Beweise, die DAGEGEN sprechen</div>
+      <div class="write w3"></div>
+    </div>
+  </div>
+  <div class="reflect">
+    <div class="q">Welche alternativen Gedanken könntest du stattdessen denken?</div>
+    <div class="write w2"></div>
+    <div class="q">Wie könntest du dich beim nächsten Mal stattdessen verhalten?</div>
+    <div class="write w2"></div>
+  </div>
+
+  <div class="merke"><span class="t">Je öfter du das schriftlich machst, desto mehr verinnerlichst du das Schema und kannst mitten in einer Situation eine Helikopterperspektive auf dich selbst einnehmen.</span></div>
+  <div class="pnum">11</div>
+</div>
+
+<!-- ÜBUNG · GLAUBENSSÄTZE -->
+<div class="page" style="display:flex;flex-direction:column;height:297mm">
+  <div class="kicker">Übung zum Wiederholen</div>
+  <h1>Deine Glaubenssätze umschreiben</h1>
+  <div class="rule"></div>
+  <p>Glaubenssätze begleiten uns den ganzen Tag, mit und ohne Pferd. Die negativen sitzen wie ein kleines Teufelchen auf der Schulter („Ich schaffe das nie allein", „Ich bin nicht die Richtige für mein Pferd"). Nimm die Gedanken aus deiner Situationsanalyse und <b>formuliere sie ins Positive um</b>.</p>
+
+  <div class="box"><b>So formulierst du um:</b>
+    <ul style="margin-bottom:0">
+      <li><b>Keine Verneinungen</b> („nicht", „kein"). Sag, was du willst, nicht was du nicht willst.</li>
+      <li>Ruhig <b>überspitzt und selbstbewusst</b>, sodass es dich beim Lesen ein bisschen triggert. Du bist die Queen.</li>
+      <li>Schreib den Satz auf ein <b>Post-it</b> und häng ihn dort auf, wo du oft vorbeikommst (Spiegel, Nachttisch). So fütterst du dein Unterbewusstsein.</li>
+    </ul>
+  </div>
+
+  <div class="merke"><span class="t">Beispiel: „Mein Pferd reißt sich bestimmt gleich los." wird zu „Ich habe mein Pferd jederzeit unter Kontrolle und fühle mich dabei sicher."</span></div>
+
+  <div style="display:flex;gap:16px;margin-top:8px">
+    <div style="flex:1"><div class="subq">Negativer Glaubenssatz</div></div>
+    <div style="flex:1"><div class="subq">Positive Umformulierung</div></div>
+  </div>
+  <div style="display:flex;gap:16px;flex:1;margin-bottom:6mm">
+    <div style="flex:1;display:flex"><div class="write" style="margin-bottom:0;flex:1"></div></div>
+    <div style="flex:1;display:flex"><div class="write" style="margin-bottom:0;flex:1"></div></div>
+  </div>
+  <div class="pnum">12</div>
+</div>
+
+<!-- WERKZEUGE · LÖSCHANKER & ABSCHNEIDEN -->
+<div class="page">
+  <div class="kicker">Zwei Werkzeuge</div>
+  <h1>Löschanker &amp; Abschneiden</h1>
+  <div class="rule"></div>
+  <p>Zwei energetische Tools. Lass dich einfach darauf ein, auch wenn es sich zuerst komisch anfühlt. Wir nutzen ja täglich Dinge, ohne genau zu wissen, wie sie funktionieren (Auto, Medikamente). Hauptsache, sie tun uns gut.</p>
+
+  <h3>1 · Der Löschanker</h3>
+  <p style="margin-bottom:6px">Kommt aus dem NLP (Neurolinguistische Programmierung). Nutz ihn, wenn dein Kopf ungefragt mit dem Kopfkino startet oder wenn jemand etwas sagt, was du nicht glauben möchtest. Er setzt einen <b>Riegel</b>, damit die Information nicht in dein Unterbewusstsein sickert. Denn dein Unterbewusstsein filtert nicht, es nimmt alles als wahr auf.</p>
+  <ul style="margin-bottom:8px">
+    <li>Drück zum Beispiel <b>Daumen und Zeigefinger</b> aufeinander. Oder fass dein Ohrläppchen, reib dir kurz die Nase, irgendetwas Unauffälliges, das du auch in der Öffentlichkeit machen kannst.</li>
+    <li>Dazu innerlich: „Nein, nicht meins." Beispiele: negative Nachrichten, „im Winter werden alle Kinder krank", „an der Grusel-Ecke wird er sich bestimmt erschrecken".</li>
+  </ul>
+  <div class="reflect">
+    <div class="q">Mein persönlicher Löschanker ist:</div>
+    <div class="write w2"></div>
+  </div>
+
+  <h3>2 · Das Abschneiden</h3>
+  <p style="margin-bottom:6px">Für belastende Gedanken, ein Gedankenkarussell, Sorgen oder fremde Energien, die du bei dir spürst (Energieräuber).</p>
+  <ul style="margin-bottom:8px">
+    <li>Stell dir vor, deine Gedanken liegen wie <b>Spinnweben</b> um deinen Kopf.</li>
+    <li>Sammel sie ein, knülle sie zu einem Ball zusammen und wirf ihn in deinen imaginären <b>Feuereimer</b> (nicht Mülleimer). Lass ihn verbrennen.</li>
+    <li>Wiederhole es so oft, bis du dich leichter fühlst und es dich nicht mehr runterzieht.</li>
+  </ul>
+
+  <div class="merke"><span class="t">Nutz beide Tools nicht nur im Pferdealltag, sondern im ganzen Leben. Dann fühlt sich vieles leichter an und du gehst fröhlicher durch den Tag.</span></div>
+  <div class="pnum">13</div>
+</div>
+
+</body>
+</html>

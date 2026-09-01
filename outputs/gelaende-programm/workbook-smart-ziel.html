@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Dein SMART-Ziel — Gelände</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#7B3F28; --caramel:#C58B5C; --beige:#F5EDE2; --boxbeige:#F1E4D3;
+    --sage:#E4EADD; --text:#2C2C2C; --red:#691212; --line:#d9c9b6; --mut:#8a6a4f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#e9e2d8}
+  body{font-family:'Montserrat',sans-serif;color:var(--text);line-height:1.6;font-size:13px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .page{width:210mm;min-height:297mm;background:#fff;margin:0 auto 8mm;padding:20mm 20mm 16mm;position:relative;page-break-after:always;overflow:hidden}
+  h1{font-family:'Playfair Display',serif;color:var(--rust);font-size:26px;line-height:1.15;margin-bottom:4px}
+  h3{font-size:14px;color:var(--red);font-weight:700;margin:16px 0 6px}
+  p{margin-bottom:9px}
+  ul{list-style:none;margin:4px 0 10px}
+  li{position:relative;padding-left:22px;margin-bottom:6px}
+  li::before{content:"›";position:absolute;left:4px;top:-1px;color:var(--caramel);font-weight:700;font-size:15px}
+  b,strong{color:var(--red)}
+  .kicker{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--caramel);font-weight:700;margin-bottom:8px}
+  .rule{height:2px;background:linear-gradient(90deg,var(--caramel),transparent);margin:12px 0 16px}
+  .merke{background:var(--boxbeige);border-left:4px solid var(--rust);border-radius:8px;padding:12px 16px;margin:14px 0}
+  .merke .t{font-family:'Playfair Display',serif;font-style:italic;color:var(--rust);font-size:15px}
+  .box{background:var(--beige);border-radius:10px;padding:14px 18px;margin:12px 0}
+  .lead{font-size:13.5px}
+  .reflect{margin-top:14px}
+  .reflect .q{font-weight:700;color:var(--red);margin-bottom:6px;font-size:12.5px}
+  .write{background-image:repeating-linear-gradient(transparent,transparent 25px,var(--line) 25px,var(--line) 26px);margin-bottom:16px}
+  .w2{height:52px}.w3{height:78px}.w4{height:104px}.w5{height:130px}
+  .pnum{position:absolute;bottom:12mm;right:20mm;font-size:10px;color:var(--caramel)}
+  /* Beispiel-Transformationen */
+  .exbox{background:var(--beige);border-radius:9px;padding:12px 16px;margin:10px 0}
+  .exbox .bad{display:block;color:var(--mut);font-size:11.5px;margin-bottom:5px}
+  .exbox .good{display:block;color:var(--red);font-weight:600;font-size:12.5px}
+  .tag{font-weight:700;letter-spacing:.4px;margin-right:5px}
+  /* SMART-Zeilen */
+  .smartrow{display:flex;gap:12px;align-items:flex-start;margin-bottom:11px}
+  .smart-badge{width:34px;height:34px;flex:none;border-radius:50%;background:var(--rust);color:#fff;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+  .smart-body{flex:1}
+  .smart-q{font-size:12.5px;margin-bottom:2px}
+  .smart-ex{font-size:11px;color:var(--mut);font-style:italic;margin-bottom:5px}
+  .write.wl{height:52px;margin-bottom:2px}
+  /* Ziel-Box */
+  .zielbox{background:var(--boxbeige);border:2px solid var(--rust);border-radius:12px;padding:16px 20px;margin:14px 0}
+  .zielbox .lbl{font-family:'Playfair Display',serif;color:var(--rust);font-size:16px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:10px}
+  /* Cover */
+  .page.cover{padding:0;display:flex;height:297mm}
+  .cover-inner{flex:1;display:flex;flex-direction:column;background:var(--boxbeige)}
+  .band-top{height:16mm;background:var(--rust);flex:none}
+  .band-bottom{height:22mm;background:var(--rust);color:#fff;flex:none;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:15px;letter-spacing:.3px}
+  .cover-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:20mm 28mm 34mm}
+  .cover-top{display:flex;flex-direction:column;align-items:center}
+  .logo-circle{width:158px;height:158px;border-radius:50%;background:#fff;border:3px solid var(--caramel);box-shadow:0 8px 24px rgba(123,63,40,.18);display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:26px}
+  .logo-circle img{width:80%;height:80%;object-fit:contain}
+  .cover-center h1{font-size:44px;color:var(--rust);margin-bottom:10px;line-height:1.1}
+  .cover-center .sub{font-family:'Playfair Display',serif;font-style:italic;color:var(--red);font-size:21px;margin-bottom:28px}
+  .cover-center .badge{display:inline-block;background:var(--rust);color:#fff;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:12px;padding:11px 30px;border-radius:8px}
+  .cover-img{width:84%;border-radius:14px;box-shadow:0 8px 24px rgba(123,63,40,.20);display:block}
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0;width:auto;min-height:auto;box-shadow:none;padding:16mm 18mm}
+    @page{size:A4;margin:0}
+    .merke,.box,.exbox,.zielbox,.smartrow,.reflect{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<div class="page cover">
+  <div class="cover-inner">
+    <div class="band-top"></div>
+    <div class="cover-center">
+      <div class="cover-top">
+        <div class="logo-circle"><img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/abc20024-8fe2-473b-b6e9-f002cd2b923d.webp" alt="Anikas Pferdeakademie"></div>
+        <div class="cover-titles">
+          <h1>Dein SMART-Ziel</h1>
+          <div class="sub">Finde dein Ziel fürs Gelände</div>
+          <div class="badge">In 5 Schritten souverän ans Ziel</div>
+        </div>
+      </div>
+      <img class="cover-img" src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/6981fe3a6860b82e2f1f975d.jpg" alt="Anika mit Pferd im Gelände">
+    </div>
+    <div class="band-bottom">www.anikas-pferdeakademie.de</div>
+  </div>
+</div>
+
+<!-- 1 · HINFÜHRUNG -->
+<div class="page">
+  <div class="kicker">Los geht's</div>
+  <h1>Definiere dein Ziel</h1>
+  <div class="rule"></div>
+  <p class="lead">Schön, dass du dir jetzt einen Moment nimmst. Bevor du ins Training startest, schauen wir gemeinsam, <b>wohin die Reise überhaupt gehen soll</b>.</p>
+
+  <div class="merke"><span class="t">Wenn du nicht genau weißt, wohin du willst, wirst du auch nie dort ankommen, wo du eigentlich hin möchtest.</span></div>
+
+  <p>Wir gehen das gemeinsam in <b>3 Schritten</b> durch:</p>
+  <ul>
+    <li><b>Erst träumen:</b> Was wünschst du dir wirklich, und warum ist es dir so wichtig?</li>
+    <li><b>Dann schärfen:</b> Aus dem Wunsch machen wir ein klares, greifbares SMART-Ziel.</li>
+    <li><b>Dann planen:</b> Wir schauen, was dir im Weg stehen könnte, und wie du es aus dem Weg räumst.</li>
+  </ul>
+
+  <div class="box"><b>So arbeitest du damit:</b> Nimm dir für jede Seite ein paar ruhige Minuten. Zu jedem Schritt findest du ein Beispiel, an dem du dich orientieren kannst. Am Ende des Kurses darfst du auf diese Seiten zurückblicken und sehen, wie weit ihr gekommen seid.</p></div>
+  <div class="pnum">2</div>
+</div>
+
+<!-- 2 · SCHRITT 1 TRÄUMEN -->
+<div class="page">
+  <div class="kicker">Schritt 1 · Träumen &amp; Klarheit</div>
+  <h1>Was wünschst du dir wirklich?</h1>
+  <div class="rule"></div>
+  <p>Bevor wir konkret werden, darfst du erst einmal groß denken. Schreib aus dem Bauch heraus, was willst du wirklich?</p>
+
+  <div class="reflect">
+    <div class="q">Was ist dein größter Wunsch mit deinem Pferd im Gelände? Was wäre für dich das idealste Ergebnis?</div>
+    <div class="write w4"></div>
+    <div class="q">Warum ist dir genau das so wichtig?</div>
+    <div class="write w3"></div>
+    <div class="q">Wie würdest du dich fühlen, wenn du es erreicht hast?</div>
+    <div class="write w3"></div>
+    <div class="q">Und was wäre, wenn sich nichts ändert? Wie fühlt sich das an?</div>
+    <div class="write w3"></div>
+  </div>
+  <div class="pnum">3</div>
+</div>
+
+<!-- 3 · SCHRITT 2 VOM WUNSCH ZUM KONKRETEN ZIEL -->
+<div class="page">
+  <div class="kicker">Schritt 2 · Vom Wunsch zum konkreten Ziel</div>
+  <h1>Mach dein Ziel greifbar</h1>
+  <div class="rule"></div>
+  <p>Ein Wunsch ist oft noch schwammig. Je konkreter du beschreibst, <b>was du können möchtest und wie sich das anfühlt</b>, desto besser weiß dein Gehirn, wohin es dich steuern soll. Schau dir an, wie aus schwammig konkret wird:</p>
+
+  <div class="exbox">
+    <span class="bad"><span class="tag">Schwammig:</span>„Ich möchte, dass mein Pferd im Gelände entspannter ist."</span>
+    <span class="good"><span class="tag">Konkret:</span>„Ich kann mein Pferd jederzeit im Gelände herunterfahren, wenn es sich aufregt, und habe das Gefühl, die Kontrolle über die Situation zu haben."</span>
+  </div>
+
+  <div class="exbox">
+    <span class="bad"><span class="tag">Schwammig:</span>„Ich will sicherer werden."</span>
+    <span class="good"><span class="tag">Konkret:</span>„Ich meistere eine Autobegegnung, ohne in Panik zu geraten, weil ich weiß, wie ich mein Pferd ansprechbar halte."</span>
+  </div>
+
+  <p style="margin-top:8px"><b>Merk dir:</b> Es geht nicht darum, eine bestimmte Runde zu schaffen. Es geht darum, dass dein Pferd in jeder Situation <b>ansprechbar und durchlässig</b> bleibt und du dich sicher fühlst.</p>
+
+  <div class="reflect">
+    <div class="q">Formuliere deinen Wunsch jetzt selbst etwas konkreter:</div>
+    <div class="write w4"></div>
+  </div>
+  <div class="pnum">4</div>
+</div>
+
+<!-- 4 · SCHRITT 3 SMART BUCHSTABE FÜR BUCHSTABE -->
+<div class="page">
+  <div class="kicker">Schritt 3 · Dein SMART-Ziel</div>
+  <h1>Buchstabe für Buchstabe</h1>
+  <div class="rule"></div>
+  <p>Jetzt schärfen wir dein Ziel. Fülle jeden Buchstaben für dich aus. Das Beispiel zeigt dir, wie es gemeint ist.</p>
+
+  <div class="smartrow">
+    <div class="smart-badge">S</div>
+    <div class="smart-body">
+      <div class="smart-q"><b>Spezifisch</b> — Was genau möchte ich können?</div>
+      <div class="smart-ex">Beispiel: „Ich kann mein Pferd im Gelände jederzeit kontrollieren und wieder herunterfahren, wenn es sich aufregt."</div>
+      <div class="write wl"></div>
+    </div>
+  </div>
+
+  <div class="smartrow">
+    <div class="smart-badge">M</div>
+    <div class="smart-body">
+      <div class="smart-q"><b>Messbar</b> — Woran erkenne ich, dass ich es erreicht habe?</div>
+      <div class="smart-ex">Beispiel: „Nach einem Schreck reagiert mein Pferd wieder auf mich, senkt den Kopf und atmet weiter, und ich bleibe dabei ruhig."</div>
+      <div class="write wl"></div>
+    </div>
+  </div>
+
+  <div class="smartrow">
+    <div class="smart-badge">A</div>
+    <div class="smart-body">
+      <div class="smart-q"><b>Attraktiv</b> — Warum zieht mich dieses Ziel an?</div>
+      <div class="smart-ex">Beispiel: „Weil ich mich seit Langem danach sehne, ohne Angst mit meinem Pferd rauszugehen."</div>
+      <div class="write wl"></div>
+    </div>
+  </div>
+
+  <div class="smartrow">
+    <div class="smart-badge">R</div>
+    <div class="smart-body">
+      <div class="smart-q"><b>Realistisch</b> — Ist das für uns machbar?</div>
+      <div class="smart-ex">Beispiel: „Ich übe die Strategien aus dem Kurs dreimal pro Woche und steigere mich in kleinen Schritten."</div>
+      <div class="write wl"></div>
+    </div>
+  </div>
+
+  <div class="smartrow">
+    <div class="smart-badge">T</div>
+    <div class="smart-body">
+      <div class="smart-q"><b>Terminiert</b> — Bis wann will ich es erreicht haben?</div>
+      <div class="smart-ex">Beispiel: „In den nächsten 8 Wochen, bis zum ______________ (Datum)."</div>
+      <div class="write wl"></div>
+    </div>
+  </div>
+  <div class="pnum">5</div>
+</div>
+
+<!-- 5 · SCHRITT 4 IN EINEM SATZ -->
+<div class="page">
+  <div class="kicker">Schritt 4 · Dein SMART-Ziel in einem Satz</div>
+  <h1>Bring alles zusammen</h1>
+  <div class="rule"></div>
+  <p>Jetzt fügst du deine Bausteine aus Schritt 3 zu <b>einem einzigen Satz</b> zusammen. So brennt sich dein Ziel richtig ein. Zwei Beispiele, wie das klingen kann:</p>
+
+  <div class="box"><b>Beispiel 1:</b> „Bis zum ____________ gehe ich rund 10 Minuten allein mit meinem Pferd entspannt ins Gelände und komme mit ihm ruhig wieder am Hof an."</div>
+  <div class="box"><b>Beispiel 2:</b> „Innerhalb der nächsten 8 Wochen meistere ich mit meinem Pferd eine Auto- und eine Treckerbegegnung, ohne dass einer von uns die Nerven verliert."</div>
+
+  <div class="zielbox">
+    <div class="lbl">Mein SMART-Ziel</div>
+    <div class="write w4"></div>
+  </div>
+
+  <div class="reflect">
+    <div class="q">Wie fühlt es sich an, diesen Satz jetzt schwarz auf weiß vor dir zu sehen?</div>
+    <div class="write w2"></div>
+  </div>
+  <div class="pnum">6</div>
+</div>
+
+<!-- 6 · SCHRITT 5 HINDERNISSE & MASSNAHMEN -->
+<div class="page">
+  <div class="kicker">Schritt 5 · Dranbleiben</div>
+  <h1>Hindernisse &amp; Maßnahmen</h1>
+  <div class="rule"></div>
+  <p>Jetzt, wo dein Ziel steht, machen wir es <b>krisensicher</b>. Wer seine Stolpersteine vorher kennt, lässt sich unterwegs viel weniger aus der Bahn werfen.</p>
+
+  <div class="reflect">
+    <div class="q">Welche Hindernisse könnten sich dir in den Weg stellen?</div>
+    <div class="write w3"></div>
+    <div class="q">Welche Maßnahmen ergreifst du von Anfang an, um sie aus dem Weg zu räumen?</div>
+    <div class="write w3"></div>
+    <div class="q">Deine nächsten drei konkreten Schritte zur Verwirklichung:</div>
+    <div class="write w3"></div>
+  </div>
+
+  <p style="text-align:center;margin-top:14px;font-family:'Playfair Display',serif;font-style:italic;color:var(--rust);font-size:15px">Ich bin so stolz auf jeden Schritt, den ihr geht. Deine Anika 🐴💛</p>
+  <div class="pnum">7</div>
+</div>
+
+</body>
+</html>
