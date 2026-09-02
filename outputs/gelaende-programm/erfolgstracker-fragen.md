@@ -1,14 +1,30 @@
 # Erfolgstracker Gelände-Programm — Fragen je Phase (für Google Forms)
 
 Format nach Anikas Traumteam-Tracker: Name → Completion-Checks (Ja/Nein) → phasenspezifische Fragen → Übungshäufigkeit → Reflexion (Absätze) → Meilenstein → Selbsteinschätzung (Skala).
-Pro Phase ein eigenes Google-Formular. **Phase 1 (Selbstbewusstsein stärken) = noch offen**, sobald die Inhalte stehen (Platzhalter unten).
+Pro Phase ein eigenes Google-Formular.
 
 Fragetypen: KA = Kurzantwort · ABS = Absatz · MC = Multiple Choice · SKALA = linear.
 
 ---
 
-## PHASE 1 — Dein Selbstbewusstsein stärken  ⏳ (Inhalte noch nicht fertig)
-Kommt, sobald die Modul-Inhalte stehen. Voraussichtliche Bausteine wie unten (Name, Completion, Übungshäufigkeit, Reflexion, Skala „Wie sehr hast du dein Kopfkino im Griff?").
+## PHASE 1 — Dein Selbstbewusstsein stärken  ✅ Formular live: https://forms.gle/AL1DTXEoR7vAa6QH8
+**Formulartitel:** Erfolgstracker Phase 1 – Dein Selbstbewusstsein stärken
+**Beschreibung:** Halte hier fest, wie dein Selbstvertrauen wächst und deine Angst kleiner wird. Das hilft dir, dranzubleiben, und mir, dich gezielt zu unterstützen. 💛
+
+1. Dein Name (Vor- und Nachname) — **KA**
+2. Hast du alle Videos zu dieser Phase angeschaut? — **MC** (Ja / Teilweise / Nein)
+3. Hast du deine Situationsanalyse und deine Angst-Rangliste (Skala 1–10) ausgefüllt? — **MC** (Beides / Teilweise / Noch nicht)
+4. Führst du dein Erfolgstagebuch? — **MC** (Ja, täglich / Ab und zu / Noch nicht)
+5. An welcher Situation von deiner Angst-Rangliste arbeitest du gerade (deine kleinste Hürde)? — **ABS**
+6. Welchen einschränkenden Glaubenssatz hast du entlarvt und wie lautet dein neuer, stärkender Satz? — **ABS**
+7. An wie vielen Tagen pro Woche arbeitest du an dir und mit deinem Pferd? — **MC** (1 / 2 / 3 / 4 / 5 / 6 / 7)
+8. Was hast du in deinen Selbstvertrauens-Rucksack gepackt? Dein stärkster Beweis, dass du das kannst. — **ABS**
+9. Was ist dir in dieser Phase besonders gut gelungen? — **ABS**
+10. Dein größter Aha-Moment aus dieser Phase — **ABS**
+11. Wo hakt es noch und wobei brauchst du meine Unterstützung? — **ABS**
+12. Euer Meilenstein: Hast du deine kleinste Angst-Situation schon spürbar entspannter erlebt? — **MC** (Ja, geschafft 🎉 / Teilweise, wir arbeiten dran / Noch nicht)
+13. Wie sehr hast du dein Kopfkino (deine ängstlichen Gedanken) inzwischen im Griff? — **SKALA** 1–10 (1 = übernimmt komplett, 10 = ich steuere es)
+14. Wie sicher und selbstbewusst fühlst du dich aktuell im Zusammensein mit deinem Pferd? — **SKALA** 1–10 (1 = gar nicht sicher, 10 = ganz sicher)
 
 ---
 

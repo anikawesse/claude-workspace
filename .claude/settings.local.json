@@ -627,7 +627,25 @@
       "Bash(pdftotext -layout \"Tiermoor.pdf\" -)",
       "Bash(node scripts/lexware-pdf-nachtragen.js \"C:/Users/Olive/Desktop/Buchungen August\")",
       "Bash(node scripts/lexware-pdf-nachtragen.js \"C:/Users/Olive/Desktop/Buchungen August\" --dry-run)",
-      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Zuordnung August 2026.html\")"
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Zuordnung August 2026.html\")",
+      "PowerShell($bis = \\(Get-Date\\).ToString\\('yyyy-MM-dd'\\); $von = \\(Get-Date\\).AddDays\\(-14\\).ToString\\('yyyy-MM-dd'\\); Write-Output \"Von: $von Bis: $bis\"; .\\\\scripts\\\\minikurs-auswertung.ps1 -Von $von -Bis $bis)",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v14.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v15.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v16.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v17.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v18.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v19.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v20.pdf\")",
+      "Bash(start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v21.pdf\")",
+      "PowerShell(Invoke-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-programm\\\\workbook-phase1-angst-verstehen-v23.pdf\")",
+      "Bash(cd \"C:/Users/Olive/Desktop/claude-workspace\" && sed -E 's/=\\(.{0,8}\\).*/=\\\\1…/' scripts/.env)",
+      "mcp__claude-in-chrome__browser_batch",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-01 -Bis 2026-09-02)",
+      "mcp__claude-in-chrome__tabs_close_mcp",
+      "Bash(find \"/c/Users/Olive/Desktop\" \"/c/Users/Olive/Downloads\" -maxdepth 3 -type f \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -newermt \"2026-08-20\" 2>/dev/null | head -50)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\06e02070-12c1-44de-8f6d-290d87bc6113\\\\scratchpad\\\\meta-adsets.ps1\" -Von 2026-07-01 -Bis 2026-09-02 -Level adset)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\06e02070-12c1-44de-8f6d-290d87bc6113\\\\scratchpad\\\\meta-adsets2.ps1\" -Von 2026-07-01 -Bis 2026-09-02 -Level adset -Kampagne 'Videos 1' -ProTag)",
+      "PowerShell($s = \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\06e02070-12c1-44de-8f6d-290d87bc6113\\\\scratchpad\\\\meta-summe.ps1\"; & $s -Von 2026-07-22 -Bis 2026-08-19 -Level adset -Kampagne 'Videos 1'; & $s -Von 2026-08-20 -Bis 2026-09-02 -Level adset -Kampagne 'Videos 1'; & $s -Von 2026-08-01 -Bis 2026-09-02 -Level ad -Kampagne 'Videos 1')"
     ],
     "defaultMode": "bypassPermissions"
   }

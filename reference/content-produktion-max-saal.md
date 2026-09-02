@@ -218,6 +218,20 @@ Wörtlich aus dem Finanz-Video: "Hook, das heißt das, was du am Anfang sagst. B
 
 Diese Definition gilt für längere Talking-Head-Videos oder für Ads mit gesprochenem Text. Bei den kurzen B-Roll-Reels mit reinem Text-Overlay-Format spielt der Body im Video keine Rolle mehr. Der "Body" wandert komplett in die Caption.
 
+## Yapping-Video-Struktur (Anikas Erweiterung des YPing-Konzepts)
+
+Yapping ist ein US-Trend und beschreibt einen quatschenden Talking Head, der frei in die Kamera spricht. Es ist die Weiterentwicklung von Max Saals YPing-Konzept (frei sprechen ohne ablesen) und hat eine klare Bauanleitung.
+
+**Die 5 Elemente in fester Reihenfolge:**
+
+1. **Hook** — der Aufhänger am Anfang, der zum Weiterschauen zieht.
+2. **Hero Story** — Warum erzähle ich das? Persönlicher Anker, eigene Erfahrung, eigene Autorität.
+3. **Kontext** — Worum geht es eigentlich? Rahmen setzen, damit die Zuschauerin einordnen kann.
+4. **Learning** — Was kann sie daraus mitnehmen? Der eigentliche Value.
+5. **Call to Action (optional)** — Handlungs-Aufforderung, wenn thematisch passend.
+
+**Wichtig:** Wie beim YPing frei sprechen, nicht ablesen. Mit Bullet Points als Orientierung, aber authentisch und ohne Skript-Anmutung.
+
 ## YPing (frei in die Kamera sprechen)
 
 Nach Max Saal wirkt Content dann am besten, wenn er möglichst unprofessionell und authentisch daherkommt. Deshalb nicht wortwörtlich vom Skript ablesen, sondern mit Bullet Points arbeiten und frei in die Kamera sprechen.
