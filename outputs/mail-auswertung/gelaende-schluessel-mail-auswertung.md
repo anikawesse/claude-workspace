@@ -68,6 +68,10 @@ Erster Snapshot. Hier gibt es noch keinen Monatswert, weil der Vergleichswert fe
 
 *(Käufe von Anika gemeldet (03.08.2026): Tag 3, Tag 4 und Tag 12. Tag 3 und Tag 4 war dieselbe Person, Tag 12 eine zweite. Also 3 Käufe von 2 Käuferinnen.)*
 
+> **Ergänzung September 2026 — Traumteam-Attribution über Funnel:**
+> Katrin Stephens (Tag-12-Käuferin, Handarbeit 197€) kam am 28.08.2026 über den Webinar-Link aus der Gelände-Schlüssel-Willkommens-Sequenz (UTM: `utm_campaign=gelaendeschluessel-welcome`) ins Traumteam-Webinar, sah es zu 80 %, klickte das Webinar-Angebot und kaufte Traumteam (697€) am 29.08.2026. Der Funnel hat also über die Handarbeit-Mail (Tag 12) hinaus eine größere Folgeinvestition ausgelöst.
+> Annette Ziutelis (Käuferin aus ThriveCart 14.08.) kam ohne UTM direkt über die Anmeldungsseite — kein Funnel-Zusammenhang.
+
 **Zur sinkenden Empfängerzahl:** Die Zahlen werden von Tag 1 nach hinten kleiner, weil Anika die Mails nach und nach in den Workflow gebaut hat. Die späteren Mails sind also schlicht kürzer im Einsatz. Das ist kein Ausstieg von Kontakten und kein Fehler. Wichtig für die Auswertung: Die Empfängerzahlen der einzelnen Tage sind untereinander nicht direkt vergleichbar. Die Öffnungs- und Klickraten dagegen schon, weil die sich jeweils auf die eigene Empfängerzahl beziehen.
 
 ---
@@ -140,6 +144,90 @@ Bezogen auf die rund 108 Käuferinnen des Gelände-Schlüssels haben also nur et
 **Nicht auf monatliche Schwankungen reagieren.** Bei 30 bis 97 Personen pro Strecke ist eine Kaufrate von 1 % statistisch nicht von 3 % zu unterscheiden. Ein einziger zusätzlicher Kauf verschiebt die Zahl um mehrere Punkte. Mails umzuschreiben, weil eine Rate gefallen ist, heißt Rauschen hinterherlaufen (gleiche Logik wie beim vermeintlichen „Abschmieren" der Anzeigen). Erst wenn eine Strecke einige hundert Personen gesehen hat, wird die Kaufrate belastbar.
 
 **Was schon jetzt aussagekräftig ist, ist die Größenordnung zwischen den Strecken.** Kopfkino: 180 Sendungen, 1 Klick, 0 Käufe. Handarbeit: 58 Sendungen, 2 Klicks, 1 Kauf. Das ist kein Feinschliff-Unterschied.
+
+---
+
+## August 2026 — Monatswerte (CSV-Auswertung, 01.–31.08.2026)
+
+> Methodik: Jede Mail wurde als CSV exportiert (Kontakt-Export aus Devine Funnels). Gefiltert nach „Updated At" im August 2026. Anika-Testadresse (anikawesse@...) ausgeschlossen. „Empfänger" = alle Kontakte mit Aktivität in August (Zugestellt + Geöffnet + Geklickt + Abmeldung). „Geöffnet" schließt Geklickt ein (wer geklickt hat, hat auch geöffnet).
+
+| Mail | Thema | Empfänger | Geöffnet abs. | Geöffnet % | Geklickt abs. | Geklickt % | Käufe |
+|------|-------|-----------|---------------|------------|---------------|------------|-------|
+| Tag 1 | Kurszugang + Deal | 63 | 41 | 65,1 % | 20 | 31,7 % | — |
+| Tag 2 | Aha Moment + OB | 65 | 34 | 52,3 % | 11 | 16,9 % | — |
+| Tag 3 | Losreißen + OB | 67 | 33 | 49,3 % | 10 | 14,9 % | — |
+| Tag 4 | Vorankommen + Upsell | 71 | 30 | 42,3 % | 4 | 5,6 % | **1** (99 €) |
+| Tag 5 | Geschichte + Upsell | 67 | 24 | 35,8 % | 2 | 3,0 % | — |
+| Tag 6 | Geschichte + Upsell | 65 | 29 | 44,6 % | 2 | 3,1 % | — |
+| Tag 7 | Kopfkino 1 | 65 | 28 | 43,1 % | 2 | 3,1 % | **1** (97 €) |
+| Tag 8 | Kopfkino 2 | 66 | 25 | 37,9 % | 0 | 0 % | — |
+| Tag 9 | Kopfkino 3 | 71 | 36 | 50,7 % | 0 | 0 % | — |
+| Tag 10 | Video Trageerschöpfung | 77 | 29 | 37,7 % | 3 | 3,9 % | — |
+| Tag 11 | Umsetzungsdeal | 83 | 33 | 39,8 % | 7 | 8,4 % | — |
+| Tag 12 | Geschichte + Handarbeit | 85 | 31 | 36,5 % | 3 | 3,5 % | — |
+| Tag 13 | Testimonial + Handarbeit | 89 | 33 | 37,1 % | 2 | 2,2 % | — |
+| Tag 14 | FAQ + Handarbeit | 99 | 34 | 34,3 % | 0 | 0 % | — |
+| Tag 15 | Webinareinladung | 86 | 31 | 36,0 % | 9 | 10,5 % | **1** (697 €) |
+
+---
+
+## September 2026 — Snapshot (all-time, Startwert für Oktober-Delta)
+
+> All-time kumulierte Zahlen aus den Devine-Screenshots (Stand ~04.09.2026). Diese Zahlen dienen als Baseline: Im Oktober wird der neue Snapshot gemacht und die Differenz ergibt die September-Monatswerte.
+
+| Mail | Thema | Zugestellt | Geöffnet abs. | Geöffnet % | Geklickt abs. | Geklickt % |
+|------|-------|-----------|--------------|------------|--------------|------------|
+| Tag 1 | Kurszugang + Deal | 64 | 46 | 71,9 % | 24 | 37,5 % |
+| Tag 2 | Aha Moment + OB | 66 | 35 | 53,0 % | 11 | 16,7 % |
+| Tag 3 | Losreißen + OB | 69 | 35 | 50,7 % | 11 | 15,9 % |
+| Tag 4 | Vorankommen + Upsell | 73 | 36 | 49,3 % | 4 | 5,5 % |
+| Tag 5 | Geschichte + Upsell | 74 | 30 | 40,5 % | 2 | 2,7 % |
+| Tag 6 | Geschichte + Upsell | 74 | 35 | 47,3 % | 3 | 4,1 % |
+| Tag 7 | Kopfkino 1 | 78 | 34 | 43,6 % | 3 | 3,8 % |
+| Tag 8 | Kopfkino 2 | 78 | 29 | 37,2 % | 1 | 1,3 % |
+| Tag 9 | Kopfkino 3 | 80 | 43 | 53,8 % | 1 | 1,3 % |
+| Tag 10 | Video Trageerschöpfung | 83 | 31 | 37,3 % | 3 | 3,6 % |
+| Tag 11 | Umsetzungsdeal | 88 | 37 | 42,0 % | 10 | 11,4 % |
+| Tag 12 | Geschichte + Handarbeit | 89 | 34 | 38,2 % | 4 | 4,5 % |
+| Tag 13 | Testimonial + Handarbeit | 95 | 37 | 38,9 % | 3 | 3,2 % |
+| Tag 14 | FAQ + Handarbeit | 105 | 39 | 37,1 % | 1 | 1,0 % |
+| Tag 15 | Webinareinladung | 93 | 35 | 37,6 % | 10 | 10,8 % |
+
+### Käufe August 2026 — aus ThriveCart (Funnel-Attribution)
+
+**Neue GS-Käufer im August (= neue Funnel-Eintritte):** 79 Käufe, 2.133 €
+
+**Tag 4–6 (Gelände sicher meistern 99 €):**
+- vinurfarm@gmail.com (02.08.) → Upsell-Typ, direkt aus Funnel ✓
+
+**Tag 7–9 (Schluss mit Kopfkino 97 €):**
+- t.tomczak@gmx.de (05.08.) → GS-Kauf 29.07. = Tag 7 danach, Timing exakt ✓
+- karin.loeschenberger@gmx.net (26.08.) → GS-Kauf 20.07. = Tag 37 danach → nicht Funnel
+
+**Tag 12–14 (Handarbeit 197 €): 0 Käufe**
+
+**Tag 15 (Webinareinladung → Traumteam 697 €):**
+- Katrin Stephens (29.08.) → UTM `utm_campaign=gelaendeschluessel-welcome` bestätigt, 80 % Webinar gesehen, Angebot geklickt → Funnel-Attribution gesichert ✓
+
+**Gesamt attributierbare Funnel-Käufe August: 3 Käufe, 893 € Umsatz**
+
+| Strecke | Kauf | Umsatz |
+|---------|------|--------|
+| Tag 4–6 Gelände sicher meistern | 1 | 99 € |
+| Tag 7–9 Schluss mit Kopfkino | 1 | 97 € |
+| Tag 15 Traumteam via Webinar-Link | 1 | 697 € |
+
+### Beobachtungen August 2026
+
+**Öffnungsraten stabil.** Tag 1 bei 71,9 % (von 78,7 % im Basis-Stand — etwas schwächer, aber noch kein Trend bei kleinen Fallzahlen). Die Mittelmails pendeln zwischen 37 % und 54 %, Tag 9 mit 53,8 % auffällig stark. Keine erkennbare Ermüdung bis Tag 14.
+
+**Tag 15 (Webinareinladung) performt wie Tag 11 (Umsetzungsdeal).** Beide haben ~11 % Klickrate, beide sind Content/Hinweis-Mails ohne direktes Produktangebot. Der Webinar-Link zieht — und hat im August einen 697-€-Kauf ausgelöst, den ohne Funnel-Mail keiner mitbekommt.
+
+**Kopfkino bleibt das schwächste Segment.** Tag 7–9: je 3, 1, 1 Klicks bei 78–80 Zugestellten. Einer dieser 5 Klicks führte zu einem Kauf (t.tomczak) — das ist eine Konvertierung von 20 %, aber bei nur 5 Klicks statisch nicht belastbar.
+
+**Handarbeit-Strecke (Tag 12–14): 0 Käufe im August.** Die Strecke erreicht weiterhin die spätesten (ältesten) Käuferinnen und hat kleine absolute Klickzahlen (4, 3, 1). Noch kein Trend ableitbar.
+
+**Order-Bump-Mails (Tag 2–3) mit 15,9–16,7 % Klickrate** weiterhin deutlich über den Upsell-Mails — passt zum Basis-Stand-Muster.
 
 ---
 

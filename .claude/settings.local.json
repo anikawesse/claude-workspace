@@ -651,7 +651,8 @@
       "PowerShell($envPfad='C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env'; $e=@{}; foreach\\($z in \\(Get-Content $envPfad\\)\\){$z=$z.Trim\\(\\); if\\($z -and -not $z.StartsWith\\('#'\\) -and $z.Contains\\('='\\)\\){$i=$z.IndexOf\\('='\\); $e[$z.Substring\\(0,$i\\).Trim\\(\\)]=$z.Substring\\($i+1\\).Trim\\(\\).Trim\\('\"'\\)}}; $tok=[uri]::EscapeDataString\\($e['META_ACCESS_TOKEN']\\); $r=Invoke-RestMethod -Uri \"https://graph.facebook.com/v21.0/search?type=adlocale&q=deutsch&limit=50&access_token=$tok\"; $r.data | Select-Object key,name | Format-Table -AutoSize)",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Call-Aufzeichnungen_neu.png\")",
       "PowerShell(git add outputs/tiergespraeche/)",
-      "PowerShell(git add \"outputs/ads-auswertung/auswertung_2026-08-20_bis_2026-09-03.csv\" reference/fotos/reitplatz-schimmel.jpg .claude/settings.local.json)"
+      "PowerShell(git add \"outputs/ads-auswertung/auswertung_2026-08-20_bis_2026-09-03.csv\" reference/fotos/reitplatz-schimmel.jpg .claude/settings.local.json)",
+      "PowerShell(git push)"
     ],
     "defaultMode": "bypassPermissions"
   }

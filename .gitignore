@@ -4,3 +4,6 @@
 .env
 *.env
 scripts/.env
+
+# Rollierendes Log des Supabase-Keep-Alive-Tasks — aendert sich taeglich, nicht versionieren
+scripts/supabase-keepalive.log
