@@ -652,7 +652,8 @@
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Call-Aufzeichnungen_neu.png\")",
       "PowerShell(git add outputs/tiergespraeche/)",
       "PowerShell(git add \"outputs/ads-auswertung/auswertung_2026-08-20_bis_2026-09-03.csv\" reference/fotos/reitplatz-schimmel.jpg .claude/settings.local.json)",
-      "PowerShell(git push)"
+      "PowerShell(git push)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-22 -Bis 2026-09-05)"
     ],
     "defaultMode": "bypassPermissions"
   }
