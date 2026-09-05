@@ -157,6 +157,18 @@
   .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:var(--cream);padding:12px 20px;border-radius:999px;font-weight:600;font-size:14px;z-index:80;transition:transform .3s;box-shadow:var(--shadow);}
   .toast.show{transform:translateX(-50%) translateY(0);}
   .hint{font-size:12px;color:var(--muted);margin-top:4px;}
+  .pl-nav{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
+  .pl-nav button{cursor:pointer;}
+  .pl-range{font-weight:700;font-size:13.5px;margin:0 4px;}
+  .pl-week{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;}
+  .pl-day{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:8px;min-height:120px;display:flex;flex-direction:column;gap:6px;}
+  .pl-day.today{border-color:var(--rose-dk);box-shadow:0 0 0 2px var(--rose);}
+  .pl-dayhead{font-weight:700;font-size:12.5px;border-bottom:1px solid var(--line);padding-bottom:5px;}
+  .pl-dayhead span{color:var(--muted);font-weight:600;}
+  .pl-item{background:var(--rose);border:1px solid var(--rose-dk);border-radius:8px;padding:5px 7px;font-size:11.5px;line-height:1.3;cursor:pointer;overflow:hidden;text-overflow:ellipsis;}
+  .pl-item:hover{filter:brightness(.97);}
+  .pl-empty{color:var(--line);font-size:12px;text-align:center;margin-top:auto;margin-bottom:auto;}
+  @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
 </head>
@@ -195,17 +207,13 @@
       </div>
     </div>
     <div class="panel">
-      <h3>📊 Content-Mix vs. deine Strategie (50 / 20 / 20 / 10)</h3>
-      <div id="mixMeters"></div>
-      <div class="hint" style="margin-top:8px;">Der schwarze Strich ist dein Zielwert. Zählt Reels, Karussells &amp; Ideen zusammen.</div>
-    </div>
-    <div class="panel">
       <h3>🔁 Reif fürs Recycling</h3>
       <div id="recycleList"></div>
     </div>
   </section>
 
   <section class="view" id="view-reels"></section>
+  <section class="view" id="view-yapping"></section>
   <section class="view" id="view-karussells"></section>
   <section class="view" id="view-hooks"></section>
   <section class="view" id="view-vorlagen"></section>
@@ -265,9 +273,12 @@ const STATUS_ALLG = ["Idee","Entwurf","Fertig","Geplant","Gepostet"];
 const VORLAGEN_ART = ["Hook-Formel","Story-Framework","Content-Idee","Launch-Post"];
 const ZWECKE = ["Neugierde","Engagement","Expertenstatus","Sales","Persönlich"];
 const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch","Launch"];
+const UNTERBEREICHE = ["Beziehung/Vertrauen","Training am Boden","Training im Sattel","Angst der Reiterin","Praxis im Gelände"];
+const FORMATE = ["Talking Head","B-Roll","Sonstiges"];
+const YAPPING_STATUS = ["Offen","Skript fertig","Gedreht","B-Rolls in Arbeit","Gepostet"];
 const opt = a => ["—",...a];
 
-const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
+const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',unterbereich:'b-kat',format:'b-format',gruppe:'b-quelle',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
 
 /* ===== Schema ===== */
 const COLLECTIONS = {
@@ -279,9 +290,11 @@ const COLLECTIONS = {
     {key:"medien",label:"🎬 Video-Link (Canva)",type:"text",card:"link"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
-    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"format",label:"Format",type:"seg",options:FORMATE,card:"badge"},
+    {key:"gruppe",label:"Botschaft/Gruppe (verbindet Varianten)",type:"text",card:"badge"},
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_REEL,card:"badge"},
+    {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
     {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
     {key:"karussell",label:"Karussell daraus schon gemacht?",type:"bool",card:"flag",flagText:"🎠 Karussell ✓"},
     {key:"favorit",label:"⭐ Best Performer",type:"bool",card:"flag",flagText:"⭐ Best Performer"},
@@ -294,14 +307,14 @@ const COLLECTIONS = {
     {key:"medien",label:"🖼 Slides-Link (Canva)",type:"text",card:"link"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
-    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
+    {key:"gruppe",label:"Botschaft/Gruppe (verbindet Varianten)",type:"text",card:"badge"},
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
+    {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
     {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
   ]},
   hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,hasDone:true,fields:[
     {key:"text",label:"Hook-Text",type:"textarea",required:true,card:"title"},
-    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
     {key:"bearbeitet",label:"✅ Bearbeitet (überarbeitet/fertig)",type:"bool",card:"flag",flagText:"✅ Bearbeitet"},
@@ -316,37 +329,40 @@ const COLLECTIONS = {
     {key:"phase",label:"Launch-Phase",type:"select",options:opt(PHASEN),card:"badge"},
     {key:"quelle",label:"Quelle",type:"text",card:"badge"},
   ]},
+  yapping:{label:"Yapping",icon:"🎙️",single:"Yapping-Video",three:false,fields:[
+    {key:"frage",label:"Frage / Thema",type:"textarea",required:true,card:"title"},
+    {key:"unterbereich",label:"Unterbereich",type:"seg",options:UNTERBEREICHE,card:"badge"},
+    {key:"produktbereich",label:"Produktbereich",type:"select",options:opt(PRODUKTBEREICHE),card:"badge"},
+    {key:"hookS",label:"1. Hook",type:"textarea",big:true},
+    {key:"heroStory",label:"2. Hero Story (Warum erzähle ich das?)",type:"textarea",big:true},
+    {key:"kontext",label:"3. Kontext (Worum geht es?)",type:"textarea",big:true},
+    {key:"learning",label:"4. Learning (Was kannst du mitnehmen?)",type:"textarea",big:true},
+    {key:"ctaText",label:"5. Handlungsaufruf / CTA",type:"textarea",big:true},
+    {key:"cta",label:"CTA-Ziel / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
+    {key:"status",label:"Status",type:"seg",options:YAPPING_STATUS,card:"badge"},
+    {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
+  ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
     {key:"text",label:"Idee",type:"textarea",required:true,card:"title"},
-    {key:"kategorie",label:"Kategorie",type:"seg",options:KATEGORIEN,card:"badge"},
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
     {key:"status",label:"Status",type:"seg",options:["Roh","In Arbeit","Umgesetzt"],card:"badge"},
-  ]},
-  planer:{label:"Planer",icon:"🗓️",single:"Eintrag",three:false,fields:[
-    {key:"titel",label:"Was wird gepostet?",type:"text",required:true,card:"title"},
-    {key:"datum",label:"Datum",type:"date",required:true,card:"date"},
-    {key:"typ",label:"Format",type:"seg",options:["Reel","Karussell","Story","Mail","Live"],card:"badge"},
-    {key:"plattform",label:"Plattform",type:"seg",options:["Instagram","FB-Gruppe","Beides"],card:"badge"},
-    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
-    {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
-    {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
-    {key:"notiz",label:"Notiz",type:"textarea",card:"notes"},
   ]},
 };
 
 /* ===== Filter-Definitionen ===== */
 const UNT={key:'unterthema',label:'Unterthema',options:UNTERTHEMEN};
 const PD={key:'produktbereich',label:'Bereich',options:PRODUKTBEREICHE,nested:{whenValue:'Weitere Produkte',def:UNT}};
-const KD={key:'kategorie',label:'Kategorie',options:KATEGORIEN};
+const FMT={key:'format',label:'Format',options:FORMATE};
+const UB={key:'unterbereich',label:'Bereich',options:UNTERBEREICHE};
 const FILTERS={
-  reels:[PD,KD], karussells:[PD,KD], ideen:[PD,KD],
-  hooks:[KD,PD],
+  reels:[PD,FMT], karussells:[PD], ideen:[PD],
+  hooks:[PD],
+  yapping:[UB],
   vorlagen:[{key:'kind',label:'Art',options:VORLAGEN_ART},{key:'hookTyp',label:'Hook-Typ',options:HOOK_TYPEN},{key:'zweck',label:'Zweck',options:ZWECKE}],
-  planer:[{key:'typ',label:'Format',options:["Reel","Karussell","Story","Mail","Live"]},PD],
 };
 
-const DEFAULT_DB={reels:[],karussells:[],hooks:[],vorlagen:[],ideen:[],planer:[],argumente:[]};
+const DEFAULT_DB={reels:[],karussells:[],yapping:[],hooks:[],vorlagen:[],ideen:[],planer:[],argumente:[]};
 
 /* ===== State ===== */
 let DB = load();
@@ -362,8 +378,8 @@ function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2
 function activeCount(col){return (DB[col]||[]).filter(x=>!x.archiv).length;}
 
 /* ===== Navigation ===== */
-const NAV=["dashboard","reels","karussells","hooks","vorlagen","ideen","planer","referenzen"];
-const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},referenzen:{icon:"👤",label:"Referenzen"}};
+const NAV=["dashboard","reels","yapping","karussells","hooks","vorlagen","ideen","planer","referenzen"];
+const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},planer:{icon:"🗓️",label:"Planer"},referenzen:{icon:"👤",label:"Referenzen"}};
 function renderTabs(){
   document.getElementById("tabs").innerHTML=NAV.map(id=>{
     const m=NAV_META[id]||COLLECTIONS[id];
@@ -379,6 +395,7 @@ function go(id){
   window.scrollTo({top:0,behavior:"smooth"});
   if(id==="dashboard")renderDashboard();
   else if(id==="referenzen")renderReferenzen();
+  else if(id==="planer")renderPlaner();
   else renderCollection(id);
 }
 
@@ -448,7 +465,8 @@ function cardHTML(col,it){
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
-    ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus (Satz für Satz)</button></div>`:""}
+    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button></div>`:""}
+    ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
 }
@@ -457,6 +475,19 @@ function makeFrom(hookId,toCol){
   const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(src.text||'').slice(0,60),hook:src.text||'',kategorie:src.kategorie||'',produktbereich:src.produktbereich||'',unterthema:src.unterthema||''};
   DB[toCol].push(item);save();renderTabs();go(toCol);openModal(toCol,item.id);
   toast(toCol==='reels'?'🎬 Reel-Entwurf aus Hook erstellt':'🎠 Karussell-Entwurf aus Hook erstellt');
+}
+function makeTalkingHead(yid){
+  const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
+  const script=[y.hookS,y.heroStory,y.kontext,y.learning,y.ctaText].filter(s=>s&&s.trim()).join('\n\n');
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",format:"Talking Head",titel:(y.frage||'').slice(0,60),hook:y.hookS||'',reelText:script,produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50)};
+  DB.reels.push(item);save();renderTabs();go('reels');openModal('reels',item.id);
+  toast('🎬 Talking-Head-Reel aus Yapping erstellt');
+}
+function makeBroll(id){
+  const r=DB.reels.find(x=>x.id===id);if(!r)return;
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",format:"B-Roll",titel:((r.titel||'').replace(/ \(B-Roll.*$/,''))+' (B-Roll)',hook:r.hook||'',reelText:r.reelText||'',caption:r.caption||'',produktbereich:r.produktbereich||'',cta:r.cta||'',gruppe:r.gruppe||(r.titel||'').slice(0,50)};
+  DB.reels.push(item);save();renderTabs();go('reels');openModal('reels',item.id);
+  toast('➕ B-Roll-Variante erstellt (gleicher Text)');
 }
 function splitSentences(t){
   return String(t||'').split(/\n+/).flatMap(l=>l.split(/(?<=[.!?…])\s+/)).map(s=>s.trim()).filter(s=>s.length>1);
@@ -541,7 +572,7 @@ function quickDelete(col,id,fromModal){
 /* ===== Dashboard ===== */
 function renderDashboard(){
   document.getElementById("statGrid").innerHTML=[
-    ["🎬",activeCount("reels"),"Reels"],["📋",DB.vorlagen.length,"Vorlagen"],
+    ["🎬",activeCount("reels"),"Reels"],["🎙️",activeCount("yapping"),"Yapping"],
     ["🪝",activeCount("hooks"),"Hooks aktiv"],["💡",DB.ideen.length,"Ideen"],
   ].map(([i,n,l])=>`<div class="stat"><div class="num">${n}</div><div class="lbl">${i} ${l}</div></div>`).join("");
 
@@ -549,15 +580,6 @@ function renderDashboard(){
   document.getElementById("reelRing").style.setProperty("--p",pct);
   document.getElementById("reelRingTxt").textContent=n;
   document.getElementById("reelGoalTxt").textContent=`${n} von 60 Reels angelegt · ${60-n>0?`noch ${60-n} bis zum Vorrat`:"Vorrat komplett! 🎉"}`;
-
-  const all=[...DB.reels,...DB.karussells,...DB.ideen].filter(x=>!x.archiv);
-  const counts={};KATEGORIEN.forEach(k=>counts[k]=0);
-  all.forEach(x=>{if(counts[x.kategorie]!=null)counts[x.kategorie]++;});
-  const sum=all.length||1;
-  document.getElementById("mixMeters").innerHTML=KATEGORIEN.map(k=>{
-    const p=Math.round(counts[k]/sum*100),ziel=KAT_ZIEL[k];
-    return `<div class="meter-row k-${k}"><div class="meter-top"><span>${k} <span class="muted">(${counts[k]})</span></span><span class="muted">${p}% · Ziel ${ziel}%</span></div><div class="bar"><i style="width:${p}%"></i><span class="target" style="left:${ziel}%"></span></div></div>`;
-  }).join("");
 
   const recycle=DB.reels.filter(r=>r.letztesPost||r.status==="Gepostet").sort((a,b)=>(a.letztesPost||"").localeCompare(b.letztesPost||"")).slice(0,4);
   const noCarousel=DB.reels.filter(r=>!r.karussell&&(r.favorit||r.status==="Gepostet")).slice(0,3);
@@ -748,11 +770,11 @@ const KAT_GUIDE={
 function buildPrompt(c){
   const prod=BRAND.produkte[c.prod]||{}, t=BRAND.tina;
   const code=prod.codewort&&prod.codewort!=='—'?prod.codewort:'CODEWORT';
-  const gl=(c.kat==='Wahrheit'||c.kat==='Problem')?`\n\nTINAS GLAUBENSSÄTZE (Denkfehler zu echtem Hebel):\n`+t.glaubenssaetze.map(x=>`• Sie glaubt „${x.g}" → Wahrheit: ${x.w}`).join(`\n`):``;
+  const gl=`\n\nTINAS GLAUBENSSÄTZE (Denkfehler zu echtem Hebel):\n`+t.glaubenssaetze.map(x=>`• Sie glaubt „${x.g}" → Wahrheit: ${x.w}`).join(`\n`);
   let fwLine=``;
   if(c.fw&&c.fw.indexOf('automatisch')<0){const f=HF_FRAMEWORKS.find(x=>`${x.n} ${x.name}`===c.fw);if(f)fwLine=`\n\nNUTZE DIESES STORY-FRAMEWORK (Heartfluencer): ${f.n} ${f.name} (${f.g})\nABLAUF: ${f.ablauf}`;}
   const typLine=(c.typ&&c.typ.indexOf('alle')<0)?`Nutze bevorzugt den Hook-Typ „${c.typ}".`:`Nutze verschiedene Hook-Typen und rotiere sie.`;
-  const themaLine=c.thema?`Thema/Idee: ${c.thema}`:`Wähle selbst ein konkretes, starkes Thema, das zu Kategorie und Produkt passt.`;
+  const themaLine=c.thema?`Thema/Idee: ${c.thema}`:`Wähle selbst ein konkretes, starkes Thema, das zum Produkt passt.`;
   const stil=(STIL_HOOKS[c.prod]||[]).slice();
   const tested=[];
   DB.reels.forEach(r=>{if(r.favorit&&r.produktbereich===c.prod&&r.hook)tested.push(r.hook);});
@@ -766,7 +788,6 @@ function buildPrompt(c){
   return `Du bist mein Hook- und Reel-Coach für Instagram. Erstelle mir ${c.format}-Content für meine Pferdeakademie. Bewerte streng, kein Weichspülen, klinge nach mir und nach meiner Kundin, nicht nach KI.
 
 FORMAT: ${c.format}
-KATEGORIE: ${c.kat} — ${KAT_GUIDE[c.kat]||''}
 ${themaLine}
 CTA-ZIEL: ${c.cta} (Codewort: ${prod.codewort||'—'})
 ${typLine}${fwLine}
@@ -807,7 +828,6 @@ function openCreate(){
   document.getElementById("createFields").innerHTML=`
     <div class="field"><label>Format</label><select id="cr_format"><option>Reel</option><option>Karussell</option></select></div>
     <div class="field"><label>Produktbereich</label><select id="cr_prod">${PRODUKTBEREICHE.map(p=>`<option>${p}</option>`).join('')}</select></div>
-    <div class="field"><label>Kategorie</label><select id="cr_kat">${KATEGORIEN.map(k=>`<option>${k}</option>`).join('')}</select></div>
     <div class="field"><label>CTA / Codewort</label><select id="cr_cta">${CTA_ZIELE.map(x=>`<option>${x}</option>`).join('')}</select></div>
     <div class="field"><label>Hook-Typ (optional)</label><select id="cr_typ"><option>— alle rotieren</option>${HOOK_TYPEN.map(x=>`<option>${x}</option>`).join('')}</select></div>
     <div class="field"><label>Story-Framework (optional)</label><select id="cr_fw"><option>— automatisch</option>${HF_FRAMEWORKS.map(f=>`<option>${f.n} ${f.name}</option>`).join('')}</select></div>
@@ -818,7 +838,7 @@ function openCreate(){
 function closeCreate(){document.getElementById("createOverlay").classList.remove("open");}
 function genPrompt(){
   const g=id=>document.getElementById(id).value;
-  const c={format:g('cr_format'),prod:g('cr_prod'),kat:g('cr_kat'),cta:g('cr_cta'),typ:g('cr_typ'),fw:g('cr_fw'),thema:g('cr_thema').trim()};
+  const c={format:g('cr_format'),prod:g('cr_prod'),cta:g('cr_cta'),typ:g('cr_typ'),fw:g('cr_fw'),thema:g('cr_thema').trim()};
   const p=buildPrompt(c);window._lastPrompt=p;window._lastCfg=c;
   const res=document.getElementById("createResult");res.style.display="block";
   res.innerHTML=`
@@ -837,7 +857,7 @@ function copyPrompt(){
 }
 function createDraft(){
   const c=window._lastCfg,col=c.format==='Karussell'?'karussells':'reels';
-  DB[col].push({id:uid(),createdAt:Date.now(),titel:c.thema||`Neuer ${c.format}-Entwurf`,produktbereich:c.prod,kategorie:c.kat,cta:c.cta,status:"Idee"});
+  DB[col].push({id:uid(),createdAt:Date.now(),titel:c.thema||`Neuer ${c.format}-Entwurf`,produktbereich:c.prod,cta:c.cta,status:"Idee"});
   save();renderTabs();closeCreate();go(col);toast(`${c.format}-Entwurf angelegt ✓`);
 }
 
@@ -859,7 +879,7 @@ function hideAuth(){document.getElementById('authOverlay').classList.remove('ope
 function skipAuth(){hideAuth();updateSyncBadge('local');}
 function authMsg(m){document.getElementById('auth_msg').textContent=m||'';}
 function syncClick(){if(SB_READY)doSignOut();else if(SB)showAuth();else updateSyncBadge('local');}
-function sbCount(db){return ['reels','karussells','hooks','ideen','planer','vorlagen','argumente'].reduce((n,k)=>n+((db&&db[k])?db[k].length:0),0);}
+function sbCount(db){return ['reels','yapping','karussells','hooks','ideen','planer','vorlagen','argumente'].reduce((n,k)=>n+((db&&db[k])?db[k].length:0),0);}
 async function doSignUp(){
   if(!SB)return;const email=document.getElementById('auth_email').value.trim(),pw=document.getElementById('auth_pw').value;
   authMsg('');if(!email||pw.length<6){authMsg('Bitte E-Mail und Passwort (mind. 6 Zeichen) eingeben.');return;}
@@ -907,8 +927,130 @@ function schedulePush(){if(!SB_READY)return;clearTimeout(pushTimer);updateSyncBa
 function reRender(){const cur=document.querySelector('.tab.active')?.dataset.nav||'dashboard';go(cur);}
 function updateSyncBadge(state){const el=document.getElementById('syncBadge');if(!el)return;const m={ok:'☁︎ Sync',sync:'⏳ …',off:'☁︎ Login',local:'☁︎ Aus',err:'⚠︎ Sync'};el.textContent=m[state]||'☁︎';}
 
+/* ===== Planer (automatische Wochenansicht) ===== */
+let planerWeek=0;
+function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`;}
+function startOfWeek(off){const d=new Date();const wd=(d.getDay()+6)%7;d.setHours(0,0,0,0);d.setDate(d.getDate()-wd+off*7);return d;}
+function renderPlaner(){
+  const view=document.getElementById('view-planer');
+  const monday=startOfWeek(planerWeek);
+  const days=[...Array(7)].map((_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);return d;});
+  const names=['Mo','Di','Mi','Do','Fr','Sa','So'];
+  const items=[];
+  [['reels','🎬'],['karussells','🎠'],['yapping','🎙️']].forEach(([col,icon])=>{(DB[col]||[]).forEach(it=>{if(it.postDatum)items.push({col,icon,it});});});
+  const byDate={};items.forEach(x=>{(byDate[x.it.postDatum]=byDate[x.it.postDatum]||[]).push(x);});
+  const todayKey=localISO(new Date());
+  const cols=days.map((d,i)=>{
+    const key=localISO(d),list=byDate[key]||[];
+    return `<div class="pl-day ${key===todayKey?'today':''}"><div class="pl-dayhead">${names[i]} <span>${d.getDate()}.${d.getMonth()+1}.</span></div>${list.map(x=>{const t=x.it.titel||x.it.frage||'(ohne Titel)';const fmt=x.it.format?' · '+x.it.format:'';return `<div class="pl-item" onclick="openModal('${x.col}','${x.it.id}')" title="${escAttr(t)}">${x.icon} ${escHTML(t.slice(0,44))}${escHTML(fmt)}</div>`;}).join('')||'<div class="pl-empty">—</div>'}</div>`;
+  }).join('');
+  const dated=items.length;
+  view.innerHTML=`
+    <div class="view-head"><h2>🗓️ Planer</h2><div class="sub">Automatische Wochenansicht — Beiträge erscheinen hier über ihr <b>Post-Datum</b>. (${dated} Beiträge terminiert)</div></div>
+    <div class="pl-nav">
+      <button class="chip" onclick="planerWeek--;renderPlaner()">◀ Woche</button>
+      <div class="pl-range">${fmtDate(localISO(days[0]))} – ${fmtDate(localISO(days[6]))}${planerWeek===0?' · diese Woche':''}</div>
+      <button class="chip" onclick="planerWeek++;renderPlaner()">Woche ▶</button>
+      <button class="chip tog" onclick="planerWeek=0;renderPlaner()">Heute</button>
+    </div>
+    <div class="pl-week">${cols}</div>
+    <div class="hint" style="margin-top:10px;">Setz bei einem Reel, Karussell oder Yapping-Video das Feld <b>„📅 Post-Datum"</b> — dann wandert es automatisch hierher.</div>`;
+}
+
+/* ===== Yapping-Fragen (Vorbefüllung) ===== */
+const YAPPING_FRAGEN=[
+  {u:"Beziehung/Vertrauen",f:`Woran erkenne ich, ob mein Pferd mir wirklich vertraut?`},
+  {u:"Beziehung/Vertrauen",f:`Vertraut mein Pferd anderen Menschen mehr, wenn es bei ihnen klappt?`},
+  {u:"Beziehung/Vertrauen",f:`Was kann ich machen, damit mein Pferd mir vertraut?`},
+  {u:"Beziehung/Vertrauen",f:`Wie baue ich Vertrauen auf, wenn wir uns erst kurz kennen?`},
+  {u:"Beziehung/Vertrauen",f:`Warum reagiert mein Pferd bei mir anders als bei meiner Trainerin/Freundin?`},
+  {u:"Beziehung/Vertrauen",f:`Wie streng muss ich mit meinem Pferd sein?`},
+  {u:"Beziehung/Vertrauen",f:`Wenn ich Leckerlis füttere, bettelt mein Pferd mich dann immer an?`},
+  {u:"Beziehung/Vertrauen",f:`Wie kann ich erkennen, ob mein Pferd sich gerade bei mir wohlfühlt?`},
+  {u:"Beziehung/Vertrauen",f:`Welche Fehler zerstören das Vertrauen zwischen uns beiden?`},
+  {u:"Beziehung/Vertrauen",f:`Wie „repariere" ich unser Vertrauen, wenn ich in einer Situation überreagiert habe?`},
+  {u:"Beziehung/Vertrauen",f:`Wie unterscheide ich zwischen Sturheit und Angst beim Pferd?`},
+  {u:"Training am Boden",f:`Was mache ich, wenn mein Pferd mich ständig überholt und eilig wird?`},
+  {u:"Training am Boden",f:`Was mache ich, wenn mein Pferd mich zum Gras zieht?`},
+  {u:"Training am Boden",f:`Wie kann ich am Boden Vertrauen aufbauen?`},
+  {u:"Training am Boden",f:`Welche Übungen müssen klappen, damit ich ins Gelände gehen kann?`},
+  {u:"Training am Boden",f:`Wie bekomme ich die Aufmerksamkeit meines Pferdes auf mich gelenkt?`},
+  {u:"Training am Boden",f:`Woher weiß ich, ob mein Pferd mich respektiert?`},
+  {u:"Training am Boden",f:`Was mache ich, wenn mein Pferd mich am Boden immer wieder andrängelt?`},
+  {u:"Training am Boden",f:`Wie kann ich verhindern, dass mein Pferd mir wieder auf den Fuß tritt?`},
+  {u:"Training am Boden",f:`Brauche ich für die Bodenarbeit einen Kappzaum?`},
+  {u:"Training am Boden",f:`Wie kann ich am Boden die Führung übernehmen, ohne dominant zu sein oder die Chefin raushängen zu lassen?`},
+  {u:"Training am Boden",f:`Kann ich auch nur Bodenarbeit machen oder muss ich mein Pferd auch reiten, um es gesund und fit zu halten?`},
+  {u:"Training am Boden",f:`Wie kann ich am Boden ordentlich Muskeln aufbauen?`},
+  {u:"Training im Sattel",f:`Woran erkenne ich, ob mein Pferd schon bereit ist geritten zu werden?`},
+  {u:"Training im Sattel",f:`Was mache ich, wenn mein Pferd beim Aufsteigen nicht ruhig stehen bleibt?`},
+  {u:"Training im Sattel",f:`Wie sitze ich so, dass ich mich sicher halten kann, auch wenn mein Pferd einen Satz zur Seite macht?`},
+  {u:"Training im Sattel",f:`Woher weiß ich, ob mein Sattel/Trense meinem Pferd passt?`},
+  {u:"Training im Sattel",f:`Was mache ich, wenn mein Pferd sich nicht satteln/trensen lassen möchte?`},
+  {u:"Training im Sattel",f:`Wie oft muss ich reiten, damit mein Pferd fit und gesund bleibt?`},
+  {u:"Training im Sattel",f:`Was mache ich, wenn mein Pferd unter mir plötzlich schneller wird und ich es kaum halten kann?`},
+  {u:"Training im Sattel",f:`Muss ich viel auf dem Reitplatz üben oder reicht mir auch das Ausreiten?`},
+  {u:"Training im Sattel",f:`Was mache ich, wenn mein Pferd unter dem Sattel keinen Meter mehr vorwärts geht?`},
+  {u:"Training im Sattel",f:`Woran erkenne ich, dass mein Pferd unter mir gerade Stress hat?`},
+  {u:"Training im Sattel",f:`Wie kann ich reiten, ohne dass mein Pferd auf die Vorhand fällt?`},
+  {u:"Training im Sattel",f:`Wie kann ich beim Reiten eine Trageerschöpfung vermeiden oder ausgleichen?`},
+  {u:"Angst der Reiterin",f:`Wie werde ich meine Angst beim Reiten wieder los?`},
+  {u:"Angst der Reiterin",f:`Was mache ich, wenn ich schon Bauchweh habe, bevor ich überhaupt zum Stall fahre?`},
+  {u:"Angst der Reiterin",f:`Wie überwinde ich meine Angst nach einem Sturz oder einer brenzligen Situation?`},
+  {u:"Angst der Reiterin",f:`Wie kann ich souverän für mein Pferd sein, wenn ich innerlich Angst habe?`},
+  {u:"Angst der Reiterin",f:`Was mache ich, wenn ich merke, dass mein Pferd meine Angst spürt und darauf reagiert?`},
+  {u:"Angst der Reiterin",f:`Wie unterscheide ich zwischen gesundem Respekt und Angst, die mich blockiert?`},
+  {u:"Angst der Reiterin",f:`Was hilft mir konkret, im Moment ruhig zu bleiben, wenn eine Situation kritisch wird?`},
+  {u:"Angst der Reiterin",f:`Wie kann ich meiner Angst begegnen, ohne mich selbst oder mein Pferd zu überfordern?`},
+  {u:"Angst der Reiterin",f:`Wie hole ich mir mein Selbstvertrauen zurück, nachdem etwas schiefgelaufen ist?`},
+  {u:"Angst der Reiterin",f:`Was mache ich, wenn andere im Stall meine Angst nicht ernst nehmen oder sich sogar lustig machen?`},
+  {u:"Angst der Reiterin",f:`Wie überwinde ich meine Angst, wenn mein Pferd steigt, bockt oder plötzlich durchgeht?`},
+  {u:"Angst der Reiterin",f:`Was mache ich, wenn ich Angst davor habe, überhaupt aufzusteigen?`},
+  {u:"Angst der Reiterin",f:`Wie gehe ich mit meiner Angst um, wenn sie immer nur an einer bestimmten Stelle im Gelände auftaucht?`},
+  {u:"Angst der Reiterin",f:`Warum wird meine Angst mit den Jahren manchmal größer statt kleiner?`},
+  {u:"Angst der Reiterin",f:`Wie kann ich weitermachen, wenn ich als Mama nicht ausfallen darf und mir das ständig durch den Kopf geht?`},
+  {u:"Angst der Reiterin",f:`Was tue ich, wenn ich mitten im Ausritt plötzlich Panik bekomme und ich nur noch nach Hause will?`},
+  {u:"Angst der Reiterin",f:`Wie sage ich meiner Trainerin oder Reitbeteiligung, dass ich gerade Angst habe, ohne dass es mir peinlich ist?`},
+  {u:"Angst der Reiterin",f:`Was mache ich, wenn ich mehr Angst um mein Pferd habe als um mich selbst?`},
+  {u:"Angst der Reiterin",f:`Ist es normal, dass ich mit über 50 viel mehr Angst habe als früher als Kind oder Jugendliche?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mir im Gelände plötzlich ein Auto oder Traktor entgegenkommt?`},
+  {u:"Praxis im Gelände",f:`Wie reagiere ich, wenn ein freilaufender Hund plötzlich um uns herum rennt?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mein Pferd im Wald plötzlich stehen bleibt und keinen Meter mehr weiter geht?`},
+  {u:"Praxis im Gelände",f:`Wie reagiere ich sicher, wenn mein Pferd beim Ausritt plötzlich losrennt?`},
+  {u:"Praxis im Gelände",f:`Was tue ich, wenn ich mit meinem Pferd an Schafen oder Kühen vorbei muss und es Panik bekommt?`},
+  {u:"Praxis im Gelände",f:`Wie plane ich meine allererste Runde alleine im Gelände, damit sie wirklich gut ausgeht?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mein Pferd auf halbem Weg plötzlich nach Hause zieht und immer schneller wird?`},
+  {u:"Praxis im Gelände",f:`Wie reagiere ich, wenn ich im Gelände selbst die Nerven verliere und in Panik gerate?`},
+  {u:"Praxis im Gelände",f:`Wie erweitere ich unseren Radius im Gelände Schritt für Schritt, ohne meinem Pferd zu viel zuzumuten?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mein Pferd im Gelände scheut und ich gar nicht weiß, was der Auslöser war?`},
+  {u:"Praxis im Gelände",f:`Wie verhalte ich mich, wenn wir am Waldrand plötzlich einem Reh oder Wildschwein begegnen?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn ein Fahrradfahrer schnell und lautlos an uns vorbeirauscht?`},
+  {u:"Praxis im Gelände",f:`Wie überquere ich mit meinem Pferd eine Brücke oder eine Bahnstrecke, wenn es zögert?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mich unterwegs ein Wetterwechsel überrascht, zum Beispiel Gewitter oder starker Wind?`},
+  {u:"Praxis im Gelände",f:`Was habe ich für eine Runde ins Gelände immer dabei, damit ich für die häufigsten Situationen gerüstet bin?`},
+  {u:"Praxis im Gelände",f:`Wie weit darf ich mich vom Stall entfernen, wenn wir gerade erst am Anfang stehen?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn ich unterwegs merke, dass die Zeit knapp wird und es bald dunkel ist?`},
+  {u:"Praxis im Gelände",f:`Wie erkenne ich mitten im Ausritt, wann ich lieber umkehren sollte und wann ich noch weitergehen kann?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn ich im Gelände stürze und mein Pferd wegrennt?`},
+  {u:"Praxis im Gelände",f:`Wie hole ich Hilfe, wenn unterwegs etwas passiert und ich kein Handynetz habe?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn mein Pferd unterwegs plötzlich lahm wird oder ein Hufeisen verliert?`},
+  {u:"Praxis im Gelände",f:`Wie reagiere ich, wenn wir von anderen Reitern in schneller Gangart überholt werden?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn wir einer Reitergruppe entgegenkommen und mein Pferd nervös wird?`},
+  {u:"Praxis im Gelände",f:`Wie bereite ich meine Runde vor, damit unterwegs möglichst wenig schiefgeht?`},
+  {u:"Praxis im Gelände",f:`Wie erkenne ich am Verhalten meines Pferdes, ob die letzte Runde vielleicht zu viel war?`},
+  {u:"Praxis im Gelände",f:`Wie gehe ich mit meinem Pferd im Gelände um, wenn wir mitten in der Bremsenzeit unterwegs sind?`},
+  {u:"Praxis im Gelände",f:`Was mache ich, wenn wir plötzlich auf hartem Asphalt oder rutschigem Waldboden landen?`},
+  {u:"Praxis im Gelände",f:`Wie plane ich meine erste kleine Halbtags-Wanderung, statt nur eine kurze Runde?`},
+];
+function seedYapping(){
+  if(DB._yappingSeeded)return;
+  if(!Array.isArray(DB.yapping))DB.yapping=[];
+  if(DB.yapping.length===0){YAPPING_FRAGEN.forEach(q=>DB.yapping.push({id:uid(),createdAt:Date.now(),frage:q.f,unterbereich:q.u,produktbereich:"Gelände-Schlüssel",status:"Offen"}));}
+  DB._yappingSeeded=true;save(true);
+}
+
 /* ===== Init ===== */
-renderTabs();renderDashboard();
+seedYapping();renderTabs();renderDashboard();
 document.getElementById("overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeModal();});
 document.getElementById("createOverlay").addEventListener("click",e=>{if(e.target.id==="createOverlay")closeCreate();});
 sbInit();

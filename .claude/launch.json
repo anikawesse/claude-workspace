@@ -34,6 +34,13 @@
       "runtimeArgs": ["serve", "outputs", "-p", "3006", "--no-clipboard"],
       "port": 3006,
       "autoPort": true
+    },
+    {
+      "name": "content-maschine-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "outputs/content-maschine", "-p", "3007", "--no-clipboard"],
+      "port": 3007,
+      "autoPort": true
     }
   ]
 }
