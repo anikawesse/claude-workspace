@@ -356,7 +356,8 @@ const COLLECTIONS = {
     {key:"videoLink",label:"🎥 Video-Link (Canva, zur Doku)",type:"text",card:"link"},
     {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
     {key:"susanneDatum",label:"📅 Susanne-Tag (Wochenplan B-Rolls)",type:"date",card:"date"},
-    {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
+    {key:"postDatum",label:"📅 Post-Datum Yapping-Video (Feed)",type:"date",card:"date"},
+    {key:"postDatumKarussell",label:"📅 Post-Datum Karussell (Feed)",type:"date",card:"date"},
   ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
     {key:"text",label:"Idee",type:"textarea",required:true,card:"title"},
@@ -485,7 +486,7 @@ function cardHTML(col,it){
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
-    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
+    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
     ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
@@ -502,6 +503,14 @@ function makeTalkingHead(yid){
   const item={id:uid(),createdAt:Date.now(),status:"Idee",format:"Talking Head",titel:(y.frage||'').slice(0,60),hook:y.hookS||'',reelText:script,produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50)};
   DB.reels.push(item);save();renderTabs();go('reels');openModal('reels',item.id);
   toast('🎬 Talking-Head-Reel aus Yapping erstellt');
+}
+function makeKarussellFromYapping(yid){
+  const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
+  const rest=[y.heroStory,y.kontext,y.learning,y.ctaText].filter(s=>s&&s.trim()).join('\n');
+  const lines=[];if(y.hookS&&y.hookS.trim())lines.push(y.hookS.trim());splitSentences(rest).forEach(s=>lines.push(s));
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(y.frage||'').slice(0,60),hook:y.hookS||'',slides:lines.join('\n'),produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50),postDatum:y.postDatumKarussell||''};
+  DB.karussells.push(item);save();renderTabs();go('karussells');openModal('karussells',item.id);
+  toast('🎠 Karussell aus Yapping erstellt, Slides aufgeteilt');
 }
 function makeBroll(id){
   const r=DB.reels.find(x=>x.id===id);if(!r)return;
