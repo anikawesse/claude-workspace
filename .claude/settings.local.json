@@ -653,7 +653,11 @@
       "PowerShell(git add outputs/tiergespraeche/)",
       "PowerShell(git add \"outputs/ads-auswertung/auswertung_2026-08-20_bis_2026-09-03.csv\" reference/fotos/reitplatz-schimmel.jpg .claude/settings.local.json)",
       "PowerShell(git push)",
-      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-22 -Bis 2026-09-05)"
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-22 -Bis 2026-09-05)",
+      "PowerShell($src=\"C:\\\\Users\\\\Olive\\\\Desktop\\\\Yapping Ideen.docx\"; $tmp=\"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\04ae8c2e-8cde-469b-85ff-6c2a266a4d42\\\\scratchpad\\\\yapping\"; if\\(Test-Path $tmp\\){Remove-Item $tmp -Recurse -Force}; New-Item -ItemType Directory -Path $tmp -Force | Out-Null; $zip=\"$tmp\\\\d.zip\"; Copy-Item $src $zip; Expand-Archive $zip -DestinationPath $tmp -Force; $xml=Get-Content \"$tmp\\\\word\\\\document.xml\" -Raw -Encoding UTF8; $t=$xml -replace '</w:p>',\"`n\" -replace '<[^>]+>',''; [System.Web.HttpUtility]::HtmlDecode\\($t\\) 2>$null; if\\(-not $?\\){ $t })",
+      "Bash(cmd.exe //c start \"\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\content-maschine\\\\index.html\")",
+      "Bash(mkdir -p \"/c/Users/Olive/Desktop/Content-Maschine-Deploy\")",
+      "Bash(cp outputs/content-maschine/deploy/index.html \"/c/Users/Olive/Desktop/Content-Maschine-Deploy/index.html\")"
     ],
     "defaultMode": "bypassPermissions"
   }
