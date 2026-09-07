@@ -353,7 +353,6 @@ const COLLECTIONS = {
     {key:"ctaText",label:"5. Handlungsaufruf / CTA",type:"textarea",big:true},
     {key:"cta",label:"CTA-Ziel / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:YAPPING_STATUS,card:"badge"},
-    {key:"videoLink",label:"🎥 Fertiges Video (Link für Susanne)",type:"text",card:"link"},
     {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
     {key:"susanneDatum",label:"📅 Susanne-Tag (Wochenplan B-Rolls)",type:"date",card:"date"},
     {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
@@ -999,8 +998,7 @@ function renderSusanneBoard(){
     return `<div class="pl-day ${key===todayKey?'today':''}"><div class="pl-dayhead">${names[i]} <span>${d.getDate()}.${d.getMonth()+1}.</span></div>${items.map(y=>{
       const done=y.status==='B-Rolls erstellt'||y.status==='Gepostet';
       const t=y.frage||'(ohne Titel)';
-      const link=y.videoLink?`<a href="${escAttr(y.videoLink)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Video öffnen">🎥</a>`:'';
-      return `<div class="pl-item su ${done?'sudone':''}"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1)">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1)">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}')">✕</button></div><div class="su-txt" onclick="openModal('yapping','${y.id}')" title="${escAttr(t)}">🎙️ ${escHTML(t.slice(0,52))} ${link}</div><span class="badge b-status">${escHTML(y.status||'Offen')}</span></div>`;
+      return `<div class="pl-item su ${done?'sudone':''}"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1)">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1)">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}')">✕</button></div><div class="su-txt" onclick="openModal('yapping','${y.id}')" title="${escAttr(t)}">🎙️ ${escHTML(t.slice(0,56))}</div><span class="badge b-status">${escHTML(y.status||'Offen')}</span></div>`;
     }).join('')||'<div class="pl-empty">—</div>'}</div>`;
   }).join('');
   box.innerHTML=`
