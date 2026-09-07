@@ -168,6 +168,14 @@
   .pl-item{background:var(--rose);border:1px solid var(--rose-dk);border-radius:8px;padding:5px 7px;font-size:11.5px;line-height:1.3;cursor:pointer;overflow:hidden;text-overflow:ellipsis;}
   .pl-item:hover{filter:brightness(.97);}
   .pl-empty{color:var(--line);font-size:12px;text-align:center;margin-top:auto;margin-bottom:auto;}
+  .pl-item.su{cursor:default;display:flex;flex-direction:column;gap:4px;}
+  .pl-item.su .su-txt{cursor:pointer;}
+  .pl-item.su .su-move{display:flex;gap:3px;}
+  .pl-item.su .su-move button{border:1px solid var(--rose-dk);background:var(--white);border-radius:6px;width:22px;height:20px;font-size:12px;line-height:1;cursor:pointer;padding:0;color:var(--ink);}
+  .pl-item.su .su-move button:hover{background:var(--rose);}
+  .pl-item.su .badge{align-self:flex-start;}
+  .pl-item.su.sudone{opacity:.6;}
+  .pl-item.su.sudone .su-txt{text-decoration:line-through;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
@@ -192,7 +200,7 @@
   <section class="view active" id="view-dashboard">
     <div class="view-head"><h2>Übersicht</h2><div class="sub">Dein Content auf einen Blick — Vorrat, Verteilung, nächste Schritte.</div></div>
     <div class="panel" style="background:linear-gradient(135deg,var(--gold),var(--rust));color:var(--cream);display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;"><h3 style="color:var(--cream);margin:0 0 4px;">✨ Content erstellen</h3><div style="font-size:13px;opacity:.92;">Wähle Produkt, Kategorie und Ziel. Die Maschine baut dir mit Tina, deinen Hook-Typen und Frameworks den fertigen Auftrag.</div></div>
+      <div style="flex:1;min-width:200px;"><h3 style="color:var(--cream);margin:0 0 4px;">✨ Content erstellen</h3><div style="font-size:13px;opacity:.92;">Wähle Produkt und Ziel. Die Maschine baut dir mit Tina, deinen Hook-Typen und Frameworks den fertigen Auftrag.</div></div>
       <button onclick="openCreate()" style="background:var(--cream);color:var(--rust);font-weight:800;padding:12px 22px;border-radius:999px;font-size:15px;">Los geht's</button>
     </div>
     <div class="dash-grid" id="statGrid"></div>
@@ -205,6 +213,10 @@
           <div class="hint">Ein Vorrat von ~60 Reels, die du immer wieder reposten kannst. Aus jedem Reel lässt sich zusätzlich ein Karussell machen — so wird aus wenig Aufwand viel Content.</div>
         </div>
       </div>
+    </div>
+    <div class="panel">
+      <h3>📤 Für Susanne — Wochenplan B-Rolls</h3>
+      <div id="susanneBoard"></div>
     </div>
     <div class="panel">
       <h3>🔁 Reif fürs Recycling</h3>
@@ -232,6 +244,7 @@
     <form id="modalForm" onsubmit="saveItem(event)">
       <div id="modalFields"></div>
       <button type="submit" class="save-btn">Speichern</button>
+      <button type="button" class="save-btn" id="modalSusanne" onclick="moveToSusanneModal()" style="display:none;background:var(--rust);margin-top:8px;">📤 Zu Susanne verschieben</button>
       <button type="button" class="del-link" id="modalDel" onclick="deleteCurrent()" style="display:none">Diesen Eintrag löschen</button>
     </form>
   </div>
@@ -261,7 +274,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 /* ===== Konstanten ===== */
-const PRODUKTBEREICHE = ["Gelände-Schlüssel","Auto-Webinar","Live-Webinar","Weitere Produkte"];
+const PRODUKTBEREICHE = ["Gelände-Schlüssel","Auto-Webinar","Live-Webinar","Freebie","Weitere Produkte"];
 const UNTERTHEMEN = ["BBP","Offenstall","Futter","Traumteam","Energetik","Sonstiges"];
 const KATEGORIEN = ["Identität","Problem","Wahrheit","Lösung"];
 const KAT_ZIEL = {"Identität":50,"Problem":20,"Wahrheit":20,"Lösung":10};
@@ -275,7 +288,7 @@ const ZWECKE = ["Neugierde","Engagement","Expertenstatus","Sales","Persönlich"]
 const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch","Launch"];
 const UNTERBEREICHE = ["Beziehung/Vertrauen","Training am Boden","Training im Sattel","Angst der Reiterin","Praxis im Gelände"];
 const FORMATE = ["Talking Head","B-Roll","Sonstiges"];
-const YAPPING_STATUS = ["Offen","Skript fertig","Gedreht","B-Rolls in Arbeit","Gepostet"];
+const YAPPING_STATUS = ["Offen","Skript fertig","Gedreht","B-Rolls erstellt","Gepostet"];
 const opt = a => ["—",...a];
 
 const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',unterbereich:'b-kat',format:'b-format',gruppe:'b-quelle',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
@@ -340,6 +353,9 @@ const COLLECTIONS = {
     {key:"ctaText",label:"5. Handlungsaufruf / CTA",type:"textarea",big:true},
     {key:"cta",label:"CTA-Ziel / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:YAPPING_STATUS,card:"badge"},
+    {key:"videoLink",label:"🎥 Fertiges Video (Link für Susanne)",type:"text",card:"link"},
+    {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
+    {key:"susanneDatum",label:"📅 Susanne-Tag (Wochenplan B-Rolls)",type:"date",card:"date"},
     {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
   ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
@@ -355,10 +371,14 @@ const UNT={key:'unterthema',label:'Unterthema',options:UNTERTHEMEN};
 const PD={key:'produktbereich',label:'Bereich',options:PRODUKTBEREICHE,nested:{whenValue:'Weitere Produkte',def:UNT}};
 const FMT={key:'format',label:'Format',options:FORMATE};
 const UB={key:'unterbereich',label:'Bereich',options:UNTERBEREICHE};
+const ST_REEL={key:'status',label:'Status',options:STATUS_REEL};
+const ST_ALLG={key:'status',label:'Status',options:STATUS_ALLG};
+const ST_YAP={key:'status',label:'Status',options:YAPPING_STATUS};
+const ST_IDEE={key:'status',label:'Status',options:["Roh","In Arbeit","Umgesetzt"]};
 const FILTERS={
-  reels:[PD,FMT], karussells:[PD], ideen:[PD],
+  reels:[PD,FMT,ST_REEL], karussells:[PD,ST_ALLG], ideen:[PD,ST_IDEE],
   hooks:[PD],
-  yapping:[UB],
+  yapping:[UB,ST_YAP],
   vorlagen:[{key:'kind',label:'Art',options:VORLAGEN_ART},{key:'hookTyp',label:'Hook-Typ',options:HOOK_TYPEN},{key:'zweck',label:'Zweck',options:ZWECKE}],
 };
 
@@ -465,7 +485,7 @@ function cardHTML(col,it){
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
-    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button></div>`:""}
+    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
     ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
@@ -530,6 +550,7 @@ function openModal(col,id){
   const item=id?DB[col].find(x=>x.id===id):{};
   document.getElementById("modalTitle").textContent=(id?"✎ ":"＋ ")+cfg.single;
   document.getElementById("modalDel").style.display=id?"block":"none";
+  document.getElementById("modalSusanne").style.display=col==='yapping'?"block":"none";
   document.getElementById("modalFields").innerHTML=cfg.fields.map(fl=>{
     const v=item[fl.key];
     if(fl.type==="text") return field(fl,`<input name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
@@ -550,17 +571,50 @@ function removeSlideRow(btn){const r=btn.closest('.slide-row');r.parentNode.remo
 function renumberSlides(){document.querySelectorAll('#slidesEditor .slide-num').forEach((el,i)=>el.textContent=i+1);}
 function pickSeg(btn){const w=btn.closest(".seg");w.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");w.querySelector("input[type=hidden]").value=btn.textContent;}
 function closeModal(){document.getElementById("overlay").classList.remove("open");}
-function saveItem(e){
-  e.preventDefault();
-  const col=current.collection,cfg=COLLECTIONS[col],form=e.target,data={};
+function readForm(col){
+  const cfg=COLLECTIONS[col],form=document.getElementById("modalForm"),data={};
   cfg.fields.forEach(fl=>{
     if(fl.type==="slides"){data[fl.key]=[...document.querySelectorAll('#slidesEditor .slide-inp')].map(t=>t.value.trim()).filter(Boolean).join('\n');}
     else if(fl.type==="bool") data[fl.key]=form.querySelector(`[name="${fl.key}"]`).checked;
     else data[fl.key]=form.querySelector(`[name="${fl.key}"]`).value.trim();
   });
+  return data;
+}
+function saveItem(e){
+  e.preventDefault();
+  const col=current.collection,data=readForm(col);
   if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
   else{DB[col].push({id:uid(),createdAt:Date.now(),...data});}
   save();closeModal();renderTabs();renderCollection(col);toast(current.id?"Gespeichert ✓":"Angelegt ✓");
+}
+function moveToSusanne(id){
+  const y=DB.yapping.find(x=>x.id===id);if(!y)return;
+  y.fuerSusanne=true;
+  if(!y.susanneDatum) y.susanneDatum=localISO(new Date());
+  save();renderTabs();renderCollection('yapping');
+  toast('📤 An Susanne übergeben – erscheint in der Übersicht');
+}
+function moveToSusanneModal(){
+  const col=current.collection;if(col!=='yapping')return;
+  const data=readForm(col);
+  data.fuerSusanne=true;
+  if(!data.susanneDatum) data.susanneDatum=localISO(new Date());
+  if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
+  else{const it={id:uid(),createdAt:Date.now(),...data};DB[col].push(it);current.id=it.id;}
+  save();closeModal();renderTabs();go('dashboard');
+  toast('📤 An Susanne übergeben – erscheint in der Übersicht');
+}
+function shiftSusanneDay(id,delta){
+  const y=DB.yapping.find(x=>x.id===id);if(!y)return;
+  const base=y.susanneDatum?new Date(y.susanneDatum+'T00:00:00'):new Date();
+  base.setDate(base.getDate()+delta);
+  y.susanneDatum=localISO(base);
+  save();renderSusanneBoard();
+}
+function removeFromSusanne(id){
+  const y=DB.yapping.find(x=>x.id===id);if(!y)return;
+  y.fuerSusanne=false;save();renderSusanneBoard();
+  toast('Von Susannes Übersicht entfernt');
 }
 function deleteCurrent(){if(current.id)quickDelete(current.collection,current.id,true);}
 function quickDelete(col,id,fromModal){
@@ -580,6 +634,8 @@ function renderDashboard(){
   document.getElementById("reelRing").style.setProperty("--p",pct);
   document.getElementById("reelRingTxt").textContent=n;
   document.getElementById("reelGoalTxt").textContent=`${n} von 60 Reels angelegt · ${60-n>0?`noch ${60-n} bis zum Vorrat`:"Vorrat komplett! 🎉"}`;
+
+  renderSusanneBoard();
 
   const recycle=DB.reels.filter(r=>r.letztesPost||r.status==="Gepostet").sort((a,b)=>(a.letztesPost||"").localeCompare(b.letztesPost||"")).slice(0,4);
   const noCarousel=DB.reels.filter(r=>!r.karussell&&(r.favorit||r.status==="Gepostet")).slice(0,3);
@@ -926,6 +982,37 @@ async function pullCloud(){
 function schedulePush(){if(!SB_READY)return;clearTimeout(pushTimer);updateSyncBadge('sync');pushTimer=setTimeout(()=>{pushTimer=null;pushCloud();},1200);}
 function reRender(){const cur=document.querySelector('.tab.active')?.dataset.nav||'dashboard';go(cur);}
 function updateSyncBadge(state){const el=document.getElementById('syncBadge');if(!el)return;const m={ok:'☁︎ Sync',sync:'⏳ …',off:'☁︎ Login',local:'☁︎ Aus',err:'⚠︎ Sync'};el.textContent=m[state]||'☁︎';}
+
+/* ===== Für Susanne — Wochenplan B-Rolls ===== */
+let susanneWeek=0;
+function renderSusanneBoard(){
+  const box=document.getElementById('susanneBoard');if(!box)return;
+  const monday=startOfWeek(susanneWeek);
+  const days=[...Array(7)].map((_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);return d;});
+  const names=['Mo','Di','Mi','Do','Fr','Sa','So'];
+  const list=(DB.yapping||[]).filter(y=>y.fuerSusanne);
+  const total=list.length;
+  const byDate={};list.forEach(y=>{const k=y.susanneDatum||localISO(new Date());(byDate[k]=byDate[k]||[]).push(y);});
+  const todayKey=localISO(new Date());
+  const cols=days.map((d,i)=>{
+    const key=localISO(d),items=byDate[key]||[];
+    return `<div class="pl-day ${key===todayKey?'today':''}"><div class="pl-dayhead">${names[i]} <span>${d.getDate()}.${d.getMonth()+1}.</span></div>${items.map(y=>{
+      const done=y.status==='B-Rolls erstellt'||y.status==='Gepostet';
+      const t=y.frage||'(ohne Titel)';
+      const link=y.videoLink?`<a href="${escAttr(y.videoLink)}" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Video öffnen">🎥</a>`:'';
+      return `<div class="pl-item su ${done?'sudone':''}"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1)">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1)">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}')">✕</button></div><div class="su-txt" onclick="openModal('yapping','${y.id}')" title="${escAttr(t)}">🎙️ ${escHTML(t.slice(0,52))} ${link}</div><span class="badge b-status">${escHTML(y.status||'Offen')}</span></div>`;
+    }).join('')||'<div class="pl-empty">—</div>'}</div>`;
+  }).join('');
+  box.innerHTML=`
+    <div class="pl-nav">
+      <button class="chip" onclick="susanneWeek--;renderSusanneBoard()">◀ Woche</button>
+      <div class="pl-range">${fmtDate(localISO(days[0]))} – ${fmtDate(localISO(days[6]))}${susanneWeek===0?' · diese Woche':''}</div>
+      <button class="chip" onclick="susanneWeek++;renderSusanneBoard()">Woche ▶</button>
+      <button class="chip tog" onclick="susanneWeek=0;renderSusanneBoard()">Heute</button>
+    </div>
+    <div class="pl-week">${cols}</div>
+    <div class="hint" style="margin-top:8px;">Hier landen fertige Talking-Head-Videos, die du „Zu Susanne verschieben" hast. Susanne schnappt sich das Video, macht die B-Rolls und setzt den Status auf „B-Rolls erstellt". Mit ‹ › verschiebst du ein Video auf einen anderen Tag.${total===0?' Noch nichts übergeben.':''}</div>`;
+}
 
 /* ===== Planer (automatische Wochenansicht) ===== */
 let planerWeek=0;
