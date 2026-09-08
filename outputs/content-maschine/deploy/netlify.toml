@@ -1,0 +1,4 @@
+# Netlify-Konfiguration fuer die Content-Maschine
+# Sagt Netlify, wo die Serverless-Funktionen liegen (auch bei Drag-and-Drop-Deploy).
+[functions]
+  directory = "netlify/functions"
