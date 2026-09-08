@@ -176,6 +176,14 @@
   .pl-item.su .badge{align-self:flex-start;}
   .pl-item.su.sudone{opacity:.6;}
   .pl-item.su.sudone .su-txt{text-decoration:line-through;}
+  .todo-list{display:flex;flex-direction:column;gap:6px;}
+  .todo-row{display:flex;align-items:center;gap:9px;padding:10px 12px;background:var(--white);border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:13.5px;}
+  .todo-row:hover{border-color:var(--rose-dk);}
+  .todo-row.over{border-color:var(--rust);background:#fbeee8;}
+  .todo-ic{font-size:16px;flex:none;}
+  .todo-lbl{flex:1;}
+  .todo-sub{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;margin:14px 0 6px;}
+  .todo-list.soft .todo-row{background:transparent;font-size:12.5px;padding:7px 10px;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
@@ -199,6 +207,7 @@
 <main>
   <section class="view active" id="view-dashboard">
     <div class="view-head"><h2>Übersicht</h2><div class="sub">Dein Content auf einen Blick — Vorrat, Verteilung, nächste Schritte.</div></div>
+    <div class="panel" id="todoPanel"><h3>📌 Heute zu posten</h3><div id="todoContent"></div></div>
     <div class="panel" style="background:linear-gradient(135deg,var(--gold),var(--rust));color:var(--cream);display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
       <div style="flex:1;min-width:200px;"><h3 style="color:var(--cream);margin:0 0 4px;">✨ Content erstellen</h3><div style="font-size:13px;opacity:.92;">Wähle Produkt und Ziel. Die Maschine baut dir mit Tina, deinen Hook-Typen und Frameworks den fertigen Auftrag.</div></div>
       <button onclick="openCreate()" style="background:var(--cream);color:var(--rust);font-weight:800;padding:12px 22px;border-radius:999px;font-size:15px;">Los geht's</button>
@@ -352,11 +361,13 @@ const COLLECTIONS = {
     {key:"learning",label:"4. Learning (Was kannst du mitnehmen?)",type:"textarea",big:true},
     {key:"ctaText",label:"5. Handlungsaufruf / CTA",type:"textarea",big:true},
     {key:"cta",label:"CTA-Ziel / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
+    {key:"caption",label:"Caption (für den Post)",type:"textarea",card:"notes",big:true},
     {key:"status",label:"Status",type:"seg",options:YAPPING_STATUS,card:"badge"},
     {key:"videoLink",label:"🎥 Video-Link (Canva, zur Doku)",type:"text",card:"link"},
     {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
     {key:"susanneDatum",label:"📅 Susanne-Tag (Wochenplan B-Rolls)",type:"date",card:"date"},
     {key:"postDatum",label:"📅 Post-Datum Yapping-Video (Feed)",type:"date",card:"date"},
+    {key:"postDatumBroll",label:"📅 Bester B-Roll ins Feed (auto +2 Wochen)",type:"date",card:"date"},
     {key:"postDatumKarussell",label:"📅 Post-Datum Karussell (Feed)",type:"date",card:"date"},
   ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
@@ -589,9 +600,12 @@ function readForm(col){
   });
   return data;
 }
+function addDays(iso,n){const d=new Date(iso+'T00:00:00');if(isNaN(d))return'';d.setDate(d.getDate()+n);return localISO(d);}
+function autoBrollDate(data){if(data.postDatum&&!data.postDatumBroll)data.postDatumBroll=addDays(data.postDatum,14);}
 function saveItem(e){
   e.preventDefault();
   const col=current.collection,data=readForm(col);
+  if(col==='yapping')autoBrollDate(data);
   if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
   else{DB[col].push({id:uid(),createdAt:Date.now(),...data});}
   save();closeModal();renderTabs();renderCollection(col);toast(current.id?"Gespeichert ✓":"Angelegt ✓");
@@ -606,6 +620,7 @@ function moveToSusanne(id){
 function moveToSusanneModal(){
   const col=current.collection;if(col!=='yapping')return;
   const data=readForm(col);
+  autoBrollDate(data);
   data.fuerSusanne=true;
   if(!data.susanneDatum) data.susanneDatum=localISO(new Date());
   if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
@@ -633,7 +648,32 @@ function quickDelete(col,id,fromModal){
 }
 
 /* ===== Dashboard ===== */
+function renderTodo(){
+  const el=document.getElementById('todoContent');if(!el)return;
+  const today=localISO(new Date());
+  const tasks=[];
+  (DB.reels||[]).forEach(r=>{if(r.postDatum&&r.status!=='Gepostet')tasks.push({date:r.postDatum,icon:'🎬',label:`Reel „${r.titel||'(ohne Titel)'}" posten`,col:'reels',id:r.id});});
+  (DB.karussells||[]).forEach(k=>{if(k.postDatum&&k.status!=='Gepostet')tasks.push({date:k.postDatum,icon:'🎠',label:`Karussell „${k.titel||'(ohne Titel)'}" posten`,col:'karussells',id:k.id});});
+  (DB.yapping||[]).forEach(y=>{
+    if(y.postDatum&&y.status!=='Gepostet')tasks.push({date:y.postDatum,icon:'🎬',label:`Talking Head „${(y.frage||'').slice(0,55)}" in den Feed`,col:'yapping',id:y.id});
+    if(y.postDatumBroll&&y.status!=='Gepostet')tasks.push({date:y.postDatumBroll,icon:'🎞',label:`Besten B-Roll vom Hook „${(y.frage||'').slice(0,45)}" ins Feed teilen`,type:'broll',col:'yapping',id:y.id});
+  });
+  const heute=tasks.filter(t=>t.date<=today).sort((a,b)=>a.date.localeCompare(b.date));
+  const woche=tasks.filter(t=>t.date>today&&t.date<=addDays(today,7)).sort((a,b)=>a.date.localeCompare(b.date));
+  const oc=t=>t.type==='broll'?`showBroll('${t.id}')`:`openModal('${t.col}','${t.id}')`;
+  const row=t=>{const over=t.date<today;return `<div class="todo-row ${over?'over':''}" onclick="${oc(t)}"><span class="todo-ic">${t.icon}</span><span class="todo-lbl">${escHTML(t.label)}</span>${over?`<span class="badge b-status">seit ${fmtDate(t.date)}</span>`:''}</div>`;};
+  el.innerHTML=(heute.length?`<div class="todo-list">${heute.map(row).join('')}</div>`:`<div class="hint">Heute nichts fällig. Trag bei Reels, Karussells oder Yapping-Videos ein Post-Datum ein, dann taucht die Aufgabe hier automatisch am richtigen Tag auf.</div>`)
+    +(woche.length?`<div class="todo-sub">Diese Woche noch</div><div class="todo-list soft">${woche.map(t=>`<div class="todo-row" onclick="${oc(t)}"><span class="todo-ic">${t.icon}</span><span class="todo-lbl">${escHTML(fmtDate(t.date))} · ${escHTML(t.label)}</span></div>`).join('')}</div>`:'');
+}
+function showBroll(yid){
+  const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
+  go('reels');
+  const f=filters.reels||(filters.reels={search:'',archiv:false});f.search=y.gruppe||y.frage||'';
+  renderCollection('reels');
+  toast('🎞 Test-Reels zu diesem Hook gefiltert — beste raussuchen und teilen');
+}
 function renderDashboard(){
+  renderTodo();
   document.getElementById("statGrid").innerHTML=[
     ["🎬",activeCount("reels"),"Reels"],["🎙️",activeCount("yapping"),"Yapping"],
     ["🪝",activeCount("hooks"),"Hooks aktiv"],["💡",DB.ideen.length,"Ideen"],
