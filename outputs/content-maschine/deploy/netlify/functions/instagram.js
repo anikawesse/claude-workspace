@@ -25,7 +25,7 @@ exports.handler = async (event) => {
       if (!ig) return json(502, { error: 'Kein verknuepftes Instagram-Konto gefunden.' });
     }
 
-    let url = `https://graph.facebook.com/${V}/${ig}/media?limit=50&fields=id,caption,permalink,timestamp,media_product_type,is_shared_to_feed,like_count,comments_count,insights.metric(reach,views,saved,shares,total_interactions)&access_token=${tok}`;
+    let url = `https://graph.facebook.com/${V}/${ig}/media?limit=50&fields=id,caption,permalink,timestamp,media_product_type,is_shared_to_feed,like_count,comments_count,thumbnail_url,media_url,insights.metric(reach,views,saved,shares,total_interactions)&access_token=${tok}`;
     const items = [];
     let pages = 0, stop = false;
     while (url && !stop && pages < 8) {
@@ -49,7 +49,8 @@ exports.handler = async (event) => {
           comments: m.comments_count || 0,
           saved: ins.saved || 0,
           shares: ins.shares || 0,
-          url: m.permalink || ''
+          url: m.permalink || '',
+          thumb: m.thumbnail_url || m.media_url || ''
         });
       }
       url = (!stop && j.paging && j.paging.next) ? j.paging.next : null;

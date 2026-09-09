@@ -200,6 +200,7 @@
   .ig-subhook{font-weight:600;font-size:12.5px;margin-bottom:6px;}
   .ig-actions{font-size:12.5px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
   .ig-date{padding:5px 8px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;}
+  img.ig-thumb{height:96px;width:auto;max-width:100%;border-radius:8px;object-fit:cover;margin-bottom:8px;display:block;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
@@ -512,6 +513,7 @@ function cardHTML(col,it){
       ${check}${star}<button class="mini" onclick="openModal('${col}','${it.id}')">✎</button>
       <button class="mini del" onclick="quickDelete('${col}','${it.id}')">🗑</button>
     </div>
+    ${it.igThumb?`<img class="ig-thumb" src="${escAttr(it.igThumb)}" alt="" loading="lazy" onerror="this.style.display='none'">`:''}
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
@@ -722,20 +724,27 @@ function igSectionTrial(trial){
   }).join('');
   return `<div class="ig-group"><div class="ig-hook">🧪 Test-Reels <span class="muted">(${trial.length})</span> · beste Variante 🏆</div>${inner}</div>`;
 }
+function igTitleFrom(it){
+  const cap=(it.caption||'').replace(/\s+/g,' ').trim();
+  const parts=cap.split(/(?<=[.!?…])\s+/).map(s=>s.trim()).filter(Boolean);
+  const cta=/^(👉|➡|🔗|🌸|Tippe|Speicher|Folge|Kommentier|Teile|Link in Bio|Schreib|Schau)/i;
+  const snippet=(parts.find(p=>!cta.test(p))||parts[0]||'').slice(0,45);
+  return 'Feed '+fmtDate(it.date)+(snippet?' · '+snippet:'');
+}
 function backfillFeed(){
   if(!igData||!igData.items){toast('Erst Instagram-Zahlen laden');return;}
   const fromEl=document.getElementById('igBackfillFrom');
   const from=(fromEl&&fromEl.value)||'2026-07-10';
   const feed=igData.items.filter(it=>it.feed&&it.date>=from);
-  const have=new Set((DB.reels||[]).map(r=>r.igId).filter(Boolean));
-  let n=0;
+  let created=0, updated=0;
   feed.forEach(it=>{
-    if(have.has(it.id))return;
-    DB.reels.push({id:uid(),createdAt:Date.now(),status:'Gepostet',titel:(it.caption||'(Instagram-Post)').replace(/\s+/g,' ').trim().slice(0,60)||'(Instagram-Post)',caption:it.caption||'',postDatum:it.date,letztesPost:it.date,igId:it.id,igUrl:it.url});
-    n++;
+    const ex=(DB.reels||[]).find(r=>r.igId===it.id);
+    if(ex){ if(!ex.igThumb){ ex.igThumb=it.thumb||''; ex.titel=igTitleFrom(it); updated++; } return; }
+    DB.reels.push({id:uid(),createdAt:Date.now(),status:'Gepostet',titel:igTitleFrom(it),caption:it.caption||'',postDatum:it.date,letztesPost:it.date,igId:it.id,igUrl:it.url,igThumb:it.thumb||''});
+    created++;
   });
-  if(n){save();renderTabs();toast('✅ '+n+' Feed-Post'+(n>1?'s':'')+' als Karteikarten angelegt (unter Reels)');}
-  else toast('Alles schon dokumentiert, nichts Neues angelegt');
+  if(created||updated){save();renderTabs();toast('✅ '+created+' angelegt'+(updated?', '+updated+' mit Bild + Titel aktualisiert':'')+' (unter Reels)');}
+  else toast('Alles schon dokumentiert, nichts Neues');
   renderInstagram();
 }
 function copyYappingScript(yid){
