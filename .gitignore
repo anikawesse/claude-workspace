@@ -7,3 +7,6 @@ scripts/.env
 
 # Rollierendes Log des Supabase-Keep-Alive-Tasks — aendert sich taeglich, nicht versionieren
 scripts/supabase-keepalive.log
+
+# Lokaler Netlify-CLI-Status (Projekt-Verknuepfung) - nicht versionieren
+.netlify/

@@ -11,6 +11,11 @@ Quellen:
                     Devine/GoHighLevel hat KEINEN Analytics-Endpunkt —
                     die Devine-Zahl muss manuell drueber, wenn organischer
                     Traffic mitzaehlen soll.
+  Checkout       -> checkout-thrivecart.csv, gefuellt aus dem eingeloggten
+                    ThriveCart-Dashboard (Verfahren in scripts\thrivecart-checkout.js).
+                    Die offizielle ThriveCart-Schnittstelle gibt Besucherzahlen
+                    NICHT heraus. Fehlt die Zahl fuer einen Tag, bleiben die
+                    beiden Checkout-Zeilen leer — kein Fehler.
 
 Zugaenge aus scripts\.env (steht in .gitignore):
   THRIVECART_API_KEY=...
@@ -36,7 +41,8 @@ param(
     [switch]$FelderZeigen,
     [switch]$NichtSenden,                   # Google-Tabelle NICHT beschreiben (nur CSV)
     [string]$EnvDatei = "$PSScriptRoot\.env",
-    [string]$BesucherDatei = "$PSScriptRoot\..\outputs\ads-auswertung\besucher-devine.csv"
+    [string]$BesucherDatei = "$PSScriptRoot\..\outputs\ads-auswertung\besucher-devine.csv",
+    [string]$CheckoutDatei = "$PSScriptRoot\..\outputs\ads-auswertung\checkout-thrivecart.csv"
 )
 
 $ErrorActionPreference = 'Stop'
@@ -499,6 +505,28 @@ if (Test-Path $BesucherDatei) {
     }
 }
 
+# Checkout-Aufrufe (ThriveCart-Bezahlseite) + die daraus entstandenen Bestellungen.
+# Quelle: checkout-thrivecart.csv, gefuellt aus dem eingeloggten Dashboard —
+# die offizielle Schnittstelle kennt diese Zahl nicht (08.09.2026 durchprobiert).
+# ⚠️ ThriveCart zaehlt hier ALLE Besucher der Bezahlseite, auch die aus Instagram.
+#    Die Devine-Zeile darueber zaehlt dagegen nur Ads-Traffic. Die beiden Zahlen
+#    sind deshalb NICHT gegeneinander zu rechnen. Die Checkout-Conversion
+#    (Bestellungen / Aufrufe) bleibt davon unberuehrt und ist die belastbare Zahl.
+$checkout = @{}
+if (Test-Path $CheckoutDatei) {
+    Import-Csv -Path $CheckoutDatei -Delimiter ';' -Encoding UTF8 | ForEach-Object {
+        if ($_.Datum -and $_.Checkout -ne '') {
+            try {
+                $tagC = ([datetime]::ParseExact($_.Datum, 'dd.MM.yy', $null)).Date
+                $checkout[$tagC] = @{
+                    Aufrufe      = [int]$_.Checkout
+                    Bestellungen = if ($_.Bestellungen -ne '') { [int]$_.Bestellungen } else { 0 }
+                }
+            } catch { }
+        }
+    }
+}
+
 # Break-even-CPA = Verdienst je Hauptprodukt-Verkauf. Liegt der tatsaechliche
 # Einkaufspreis (CPA) darunter -> Gewinn, darueber -> Verlust.
 $ausgabe['Breakeven (CPA)'] = $tage | ForEach-Object {
@@ -510,6 +538,17 @@ $ausgabe['Salespage Besucher'] = $tage | ForEach-Object {
 $ausgabe['Salespage Conversion'] = $tage | ForEach-Object {
     if ($devine.ContainsKey($_) -and $devine[$_] -gt 0) {
         (Fmt (100 * $hauptProTag[$_] / $devine[$_])) + '%'
+    } else { '' }
+}
+$ausgabe['Checkout Aufrufe'] = $tage | ForEach-Object {
+    if ($checkout.ContainsKey($_)) { $checkout[$_].Aufrufe } else { '' }
+}
+# Conversion der Bezahlseite: Bestellungen geteilt durch Aufrufe, BEIDE aus
+# ThriveCart. Bewusst nicht gegen die Verkaufszeile oben gerechnet — die zaehlt
+# nur Ads-Verkaeufe, waehrend ThriveCart alle Besucher zaehlt.
+$ausgabe['Checkout Conversion'] = $tage | ForEach-Object {
+    if ($checkout.ContainsKey($_) -and $checkout[$_].Aufrufe -gt 0) {
+        (Fmt (100 * $checkout[$_].Bestellungen / $checkout[$_].Aufrufe)) + '%'
     } else { '' }
 }
 $ausgabe['  (Kontrolle: Meta LPV)'] = $tage | ForEach-Object {
@@ -546,6 +585,13 @@ if ($fehlend.Count -gt 0) {
     Write-Host "    Ohne die Zahl bleibt auch die Conversion leer. Meta LPV ist nur Kontrolle" -ForegroundColor DarkGray
     Write-Host "    und zaehlt zu niedrig (12.07.: Meta 56 vs. Devine 77)." -ForegroundColor DarkGray
 }
+$fehlendCheckout = @($tage | Where-Object { -not $checkout.ContainsKey($_) })
+if ($fehlendCheckout.Count -gt 0) {
+    Write-Host "  - Checkout-Aufrufe fehlen fuer $($fehlendCheckout.Count) Tag(e) -> nachtragen in:" -ForegroundColor DarkGray
+    Write-Host "    $CheckoutDatei" -ForegroundColor DarkGray
+    Write-Host "    Die Zahl gibt es nur aus dem eingeloggten ThriveCart-Dashboard," -ForegroundColor DarkGray
+    Write-Host "    Verfahren steht in scripts\thrivecart-checkout.js." -ForegroundColor DarkGray
+}
 Write-Host "  - 'Verdienst' = netto abzgl. Gebuehr, Gebuehr pro BESTELLUNG gerechnet." -ForegroundColor DarkGray
 Write-Host "    Karte (Stripe) 2% + 0,31 und PayPal 2,99% + 0,39 sind an echten Belegen geprueft." -ForegroundColor DarkGray
 Write-Host "    ⚠️ Klarna kostet mehr (54 EUR -> 2,23 statt 1,39), ist in den Daten aber nicht" -ForegroundColor DarkGray
@@ -578,7 +624,12 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
         gesamt = $monatsblaetter
         tage   = @(
             foreach ($tag in $tage) {
-                $werte = @{}
+                # ⚠️ [ordered] ist Absicht: Ein normales @{} wuerfelt die Reihenfolge
+                # durch. Die Webapp legt fehlende Zeilen hinter einer Ankerzeile an
+                # ("Checkout Conversion" hinter "Checkout Aufrufe") — kommt die
+                # Conversion zuerst, fehlt ihr Anker noch und der Wert faellt fuer
+                # diesen Tag durch. Genau das passierte am 09.09.2026 im Juli-Blatt.
+                $werte = [ordered]@{}
                 $haupt = $hauptProTag[$tag]
 
                 # Stueckzahlen — Schluessel muessen exakt denen in der Webapp entsprechen
@@ -618,6 +669,12 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                     $werte['Salespage Besucher']   = [int]$devine[$tag]
                     $werte['Salespage Conversion'] = [math]::Round($haupt / $devine[$tag], 4)
                 }
+                if ($checkout.ContainsKey($tag)) {
+                    $werte['Checkout Aufrufe'] = [int]$checkout[$tag].Aufrufe
+                    if ($checkout[$tag].Aufrufe -gt 0) {
+                        $werte['Checkout Conversion'] = [math]::Round($checkout[$tag].Bestellungen / $checkout[$tag].Aufrufe, 4)
+                    }
+                }
 
                 # Ampel fuer die Break-even-Zeile: Verhaeltnis Adspend zu Verdienst
                 # (= tatsaechlicher CPA zu Break-even-CPA, die Stueckzahl kuerzt sich raus).
@@ -655,6 +712,11 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
             Write-Host "  Eingetragen: $($antwort.geschrieben -join ', ')" -ForegroundColor Green
             if ($antwort.summen) {
                 Write-Host "  Monatssumme: $($antwort.summen -join ' | ')" -ForegroundColor Green
+            }
+            # Neu angelegte Zeilen ausdruecklich melden — die Tabelle gehoert Anika,
+            # ein Umbau darf nie unbemerkt passieren.
+            if ($antwort.zeilen_angelegt) {
+                Write-Host "  Neue Zeile(n) in der Tabelle angelegt: $($antwort.zeilen_angelegt -join ', ')" -ForegroundColor Yellow
             }
             if ($antwort.datum_nicht_gefunden) {
                 Write-Warning "  Diese Tage haben keine Spalte in der Tabelle: $($antwort.datum_nicht_gefunden -join ', ')"

@@ -672,7 +672,18 @@
       "Bash(curl -s \"https://contentanika.netlify.app/.netlify/functions/instagram?limit=5\")",
       "Bash(node -e 'let s=\"\";process.stdin.on\\(\"data\",d=>s+=d\\).on\\(\"end\",\\(\\)=>{try{const j=JSON.parse\\(s\\);if\\(j.error\\){console.log\\(\"FEHLER:\",j.error,j.detail?JSON.stringify\\(j.detail\\).slice\\(0,200\\):\"\"\\);}else{console.log\\(\"OK · count\",j.count\\);\\(j.items||[]\\).slice\\(0,5\\).forEach\\(m=>console.log\\(m.date,\"|\",m.type,\"| views\",m.views,\"reach\",m.reach,\"likes\",m.likes,\"|\",m.hook.slice\\(0,40\\),\"|\",m.url\\)\\);}}catch\\(e\\){console.log\\(\"Antwort \\(kein JSON, erste 300 Zeichen\\):\"\\);console.log\\(s.slice\\(0,300\\)\\);}}\\)')",
       "Bash(curl -s -o /dev/null -w \"status=%{http_code}\\\\n\" \"https://contentanika.netlify.app/.netlify/functions/instagram\")",
-      "Bash(curl -s -I \"https://contentanika.netlify.app/.netlify/functions/instagram\")"
+      "Bash(curl -s -I \"https://contentanika.netlify.app/.netlify/functions/instagram\")",
+      "Bash(node -e 'let s=\"\";process.stdin.on\\(\"data\",d=>s+=d\\).on\\(\"end\",\\(\\)=>{try{const j=JSON.parse\\(s\\);if\\(j.error\\){console.log\\(\"FELD-FEHLER:\",j.error.message\\);}else{\\(j.data||[]\\).forEach\\(m=>console.log\\(m.timestamp.slice\\(0,10\\),m.media_product_type,\"shared_to_feed=\"+m.is_shared_to_feed\\)\\);}}catch\\(e\\){console.log\\(s.slice\\(0,200\\)\\)}}\\)')",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-26 -Bis 2026-09-09)",
+      "Bash(curl -s \"https://contentanika.netlify.app/.netlify/functions/instagram?days=120\")",
+      "Bash(node -e 'let s=\"\";process.stdin.on\\(\"data\",d=>s+=d\\).on\\(\"end\",\\(\\)=>{try{const j=JSON.parse\\(s\\);if\\(j.error\\){console.log\\(\"FEHLER:\",j.error\\);}else{const feed=j.items.filter\\(x=>x.feed\\),trial=j.items.filter\\(x=>!x.feed\\);console.log\\(\"gesamt\",j.count,\"| Feed\",feed.length,\"| Test-Reels\",trial.length,\"| since\",j.since\\);}}catch\\(e\\){console.log\\(\"kein JSON:\",s.slice\\(0,150\\)\\)}}\\)')",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\" -Recurse -File -ErrorAction SilentlyContinue | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddDays\\(-3\\) } | Sort-Object LastWriteTime -Descending | Select-Object -First 25 FullName, LastWriteTime)",
+      "Bash(grep -o 'fetch\\([^\\)]\\\\{0,200\\\\}' b6442385-b258-43bd-bc26-360f27d33dee.jsonl)",
+      "Bash(grep -o 'fetch\\([^;]\\\\{0,300\\\\}' c5bcb216-92bc-4d7c-8c6b-d893fec7f451.jsonl)",
+      "Read(//dev/**)",
+      "Bash(python -c ' *)",
+      "PowerShell($b = [IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"\\)[0..2]; \"$\\($b[0]\\) $\\($b[1]\\) $\\($b[2]\\)  \\(BOM = 239 187 191\\)\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-26 -Bis 2026-09-09 -NichtSenden)"
     ],
     "defaultMode": "bypassPermissions"
   }

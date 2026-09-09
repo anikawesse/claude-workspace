@@ -231,6 +231,30 @@ Bezogen auf die rund 108 Käuferinnen des Gelände-Schlüssels haben also nur et
 
 ---
 
+## Stand 04.09.2026 (kumuliert, all time)
+
+*(Maschinenlesbarer Block für das Google-Sheet-Script. Menschenlesbare August-Monatswerte stehen im Abschnitt darüber.)*
+
+| Mail | Thema | Zweck | Empfänger kum. | Geöffnet % kum. | Geklickt % kum. | Klicks abs. | Käufe |
+|------|-------|-------|----------------|-----------------|-----------------|-------------|-------|
+| Tag 1 | Kurszugang + Deal | Zugang / Service | 64 | 71,90 % | 37,50 % | 24 | — |
+| Tag 2 | Aha Moment + OB | Mehrwert + Order Bump | 67 | 53,00 % | 16,70 % | 11 | — |
+| Tag 3 | Losreißen + OB | Mehrwert + Order Bump | 69 | 50,70 % | 15,90 % | 11 | **1** (27 €) |
+| Tag 4 | Vorankommen + Upsell | Upsell sicher meistern 72h | 73 | 49,30 % | 5,50 % | 4 | **1** (99 €) |
+| Tag 5 | Geschichte + Upsell | Upsell sicher meistern 48h | 74 | 40,50 % | 2,70 % | 2 | — |
+| Tag 6 | Geschichte + Upsell | Upsell sicher meistern 24h | 74 | 47,30 % | 4,10 % | 3 | — |
+| Tag 7 | Kopfkino 1 | Upsell Kopfkino 72h | 78 | 43,60 % | 3,80 % | 3 | **1** (97 €) |
+| Tag 8 | Kopfkino 2 | Upsell Kopfkino 48h | 78 | 37,20 % | 1,30 % | 1 | — |
+| Tag 9 | Kopfkino 3 | Upsell Kopfkino 24h | 80 | 53,80 % | 1,30 % | 1 | — |
+| Tag 10 | Video Trageerschöpfung | Mehrwert / Überleitung | 83 | 37,30 % | 3,60 % | 3 | — |
+| Tag 11 | Umsetzungsdeal | Hinweis (kein Verkauf) | 88 | 42,00 % | 11,40 % | 10 | — |
+| Tag 12 | Geschichte + Handarbeit | Upsell Handarbeit 72h | 89 | 38,20 % | 4,50 % | 4 | **1** (197 €) |
+| Tag 13 | Testimonial + Handarbeit | Upsell Handarbeit 48h | 95 | 38,90 % | 3,20 % | 3 | — |
+| Tag 14 | FAQ + Handarbeit | Upsell Handarbeit 24h | 105 | 37,10 % | 1,00 % | 1 | — |
+| Tag 15 | Webinareinladung | Webinar / Traumteam | 93 | 37,60 % | 10,80 % | 10 | **1** (697 €) |
+
+---
+
 ## Trend-Notizen
 
 *(Ab der nächsten Erhebung im September trägt Claude hier ein, welche Mails sich verbessern oder verschlechtern, jeweils auf Basis der berechneten Monatswerte.)*

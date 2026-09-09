@@ -56,8 +56,20 @@ const ZEILEN_MUSTER = [
   { key: 'Gewinn',              praefix: 'gewinn',               format: EURO },
   { key: 'Salespage Besucher',  praefix: 'salespage besucher',   format: ZAHL },
   { key: 'Salespage Conversion',praefix: 'salespage conversion', format: PROZENT },
-  { key: 'Breakeven (CPA)',     praefix: 'breakeven',            format: EURO }
+  { key: 'Breakeven (CPA)',     praefix: 'breakeven',            format: EURO },
+  { key: 'Checkout Aufrufe',    praefix: 'checkout aufrufe',     format: ZAHL },
+  { key: 'Checkout Conversion', praefix: 'checkout conversion',  format: PROZENT }
 ];
+
+// Zeilen, die das Skript bei Bedarf selbst anlegen darf — sonst muesste Anika sie
+// in jedem Monatsblatt von Hand nachtragen. "anker" ist die Zeile, HINTER der die
+// neue eingefuegt wird. Fehlt der Anker im Block, passiert nichts (kein Rateraten).
+// ⚠️ Absichtlich eine ganz kurze Liste: alles andere bleibt Handarbeit, damit das
+//    Skript Anikas Aufbau nicht ungefragt umbaut.
+const ANLEGEN = {
+  'Checkout Aufrufe':    { anker: 'salespage conversion', format: ZAHL },
+  'Checkout Conversion': { anker: 'checkout aufrufe',     format: PROZENT }
+};
 
 // Welche Zeilen werden in der "Insgesamt"-Spalte einfach aufaddiert?
 // Alles andere (ROAS, Warenkorb, CPA, Breakeven, Conversion) ist ein VERHAELTNIS
@@ -65,7 +77,8 @@ const ZEILEN_MUSTER = [
 const GESAMT_SUMME = [
   'Gelände-Schlüssel', 'Audiotraining', 'Videoreihe',
   'Upsell Gelände', 'Upsell Kopfkino', 'Upsell Handarbeit', 'Upsell Offenstallplaner',
-  'Bruttoumsatz', 'Verdienst', 'Gesamtumsatz organisch', 'Adspend', 'Salespage Besucher'
+  'Bruttoumsatz', 'Verdienst', 'Gesamtumsatz organisch', 'Adspend', 'Salespage Besucher',
+  'Checkout Aufrufe'
 ];
 
 // So heisst die Summenspalte in Anikas Blaettern (April: "Summe", Juli: "Insgesamt").
@@ -120,6 +133,9 @@ function doPost(e) {
     // uebergangen — so blieb im Juli/August 2026 die Zeile "Gelände-Schlüssel"
     // wochenlang leer, ohne dass irgendwo eine Meldung auftauchte.
     const ohneZeile = [];
+    // Zeilen, die das Skript selbst angelegt hat — wird zurueckgemeldet, damit ein
+    // Umbau der Tabelle nie unbemerkt passiert.
+    const angelegt = [];
 
     (daten.tage || []).forEach(function (tag) {
       let treffer = null, ziel = null;
@@ -133,7 +149,17 @@ function doPost(e) {
       Object.keys(tag.werte).forEach(function (kennzahl) {
         const wert = tag.werte[kennzahl];
         if (wert === '' || wert === null || wert === undefined) return;   // Leeres nie schreiben
-        const fund = findeZeile(ziel.werte, treffer.datumZeile, kennzahl);
+        let fund = findeZeile(ziel.werte, treffer.datumZeile, kennzahl);
+        if (!fund) {
+          // Darf das Skript die Zeile selbst anlegen? (siehe ANLEGEN oben)
+          fund = legeZeileAn(ziel.blatt, ziel.werte, treffer.datumZeile, kennzahl);
+          if (fund) {
+            // Durch das Einfuegen sind alle Zeilen darunter verrutscht -> neu einlesen,
+            // sonst schreibt der naechste Wert in die falsche Zeile.
+            ziel.werte = ziel.blatt.getDataRange().getValues();
+            if (angelegt.indexOf(kennzahl) < 0) angelegt.push(kennzahl);
+          }
+        }
         if (!fund) {
           if (ohneZeile.indexOf(kennzahl) < 0) ohneZeile.push(kennzahl);
           return;
@@ -172,6 +198,7 @@ function doPost(e) {
       geschrieben: geschrieben,
       datum_nicht_gefunden: nichtGefunden,
       kennzahl_ohne_zeile: ohneZeile,
+      zeilen_angelegt: angelegt,
       summen: summen
     });
   } catch (err) {
@@ -267,6 +294,18 @@ function schreibeGesamt(blatt) {
     if (adspend   && stueck)   setze('Einkaufspreis (CPA)', teile(adspend, stueck));
     if (verdienst && stueck)   setze('Breakeven (CPA)',     teile(verdienst, stueck));
     if (stueck    && besucher) setze('Salespage Conversion',teile(stueck, besucher));
+
+    // Checkout-Conversion des Monats: gewichtet ueber die Aufrufe, NICHT der
+    // Mittelwert der Tagesquoten. Ein Tag mit 1 Aufruf und 100% wuerde den
+    // Schnitt sonst genauso stark heben wie ein Tag mit 30 Aufrufen.
+    // SUMMENPRODUKT(Aufrufe x Quote) ergibt die Bestellungen des Monats.
+    const chAufrufe = zn('Checkout Aufrufe');
+    const chConv    = zn('Checkout Conversion');
+    if (chAufrufe && chConv) {
+      const spanne = function (r) { return von + r + ':' + bis + r; };
+      setze('Checkout Conversion',
+        '=IFERROR(SUMPRODUCT(' + spanne(chAufrufe) + TR + spanne(chConv) + ')/SUM(' + spanne(chAufrufe) + ')' + TR + '"")');
+    }
 
     // Gewinn = Verdienst minus Adspend. Bewusst NICHT die Tageswerte summiert:
     // so stimmt die Zelle auch an Tagen, an denen nur eine der beiden Zahlen steht.
@@ -488,6 +527,38 @@ function schreibeMails(nutzlast) {
  * Macht aus einer Stand-Zelle einheitlich "TT.MM.JJJJ" — egal ob Text drinsteht
  * oder Google daraus ein echtes Datum gemacht hat.
  */
+/**
+ * Legt eine fehlende Kennzahl-Zeile an, aber nur wenn sie in ANLEGEN steht.
+ * Eingefuegt wird direkt HINTER der Ankerzeile desselben Datum-Blocks, damit die
+ * neue Zeile bei ihren Verwandten landet und nicht irgendwo am Blattende.
+ *
+ * ⚠️ insertRowAfter schiebt alles darunter eine Zeile nach unten — auch spaetere
+ *    Monatsbloecke im selben Blatt und Anikas Notizzeilen. Google zieht die
+ *    Formelbezuege automatisch mit, deshalb ist das ungefaehrlich. Der Aufrufer
+ *    MUSS die Blattwerte danach aber neu einlesen, sonst landen die naechsten
+ *    Werte eine Zeile zu hoch.
+ *
+ * Rueckgabe wie findeZeile: { zeile (0-basiert), format } oder null.
+ */
+function legeZeileAn(blatt, werte, datumZeile, kennzahl) {
+  const regel = ANLEGEN[kennzahl];
+  if (!regel) return null;
+
+  let anker = -1;
+  for (let z = datumZeile + 1; z < werte.length; z++) {
+    const beschriftung = normalisiere(String(werte[z][0]).trim().toLowerCase());
+    if (beschriftung === 'datum') break;            // naechster Block -> nicht gefunden
+    if (!beschriftung) continue;
+    if (beschriftung.indexOf(normalisiere(regel.anker)) === 0) { anker = z; break; }
+  }
+  if (anker < 0) return null;                        // ohne Anker lieber gar nichts
+
+  blatt.insertRowAfter(anker + 1);                   // +1: Apps Script zaehlt ab 1
+  const neu = anker + 1;                             // 0-basiert, wie findeZeile
+  blatt.getRange(neu + 1, 1).setValue(kennzahl);
+  return { zeile: neu, format: regel.format };
+}
+
 function standText(zelle) {
   if (zelle instanceof Date) {
     const t = ('0' + zelle.getDate()).slice(-2);
