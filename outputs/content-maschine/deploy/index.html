@@ -184,6 +184,17 @@
   .todo-lbl{flex:1;}
   .todo-sub{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);font-weight:700;margin:14px 0 6px;}
   .todo-list.soft .todo-row{background:transparent;font-size:12.5px;padding:7px 10px;}
+  .ig-group{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:12px;}
+  .ig-hook{font-weight:700;font-size:13.5px;margin-bottom:8px;}
+  .ig-scroll{overflow-x:auto;}
+  .ig-table{border-collapse:collapse;width:100%;font-size:12.5px;min-width:560px;}
+  .ig-table th{text-align:right;color:var(--muted);font-weight:600;padding:5px 8px;border-bottom:1px solid var(--line);font-size:11px;text-transform:uppercase;letter-spacing:.03em;}
+  .ig-table th:nth-child(2){text-align:left;}
+  .ig-table td{text-align:right;padding:6px 8px;border-bottom:1px solid var(--line);}
+  .ig-table td:nth-child(2){text-align:left;}
+  .ig-table td:last-child,.ig-table th:last-child{text-align:right;}
+  .ig-table tr.ig-win td{background:#f5ede4;font-weight:700;}
+  .ig-table a{color:var(--rust);font-weight:600;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
@@ -240,6 +251,7 @@
   <section class="view" id="view-vorlagen"></section>
   <section class="view" id="view-ideen"></section>
   <section class="view" id="view-planer"></section>
+  <section class="view" id="view-instagram"></section>
 
   <section class="view" id="view-referenzen">
     <div class="view-head"><h2>Referenzen</h2><div class="sub">Deine Marketing-Grundlagen — immer griffbereit beim Schreiben.</div></div>
@@ -410,8 +422,8 @@ function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2
 function activeCount(col){return (DB[col]||[]).filter(x=>!x.archiv).length;}
 
 /* ===== Navigation ===== */
-const NAV=["dashboard","reels","yapping","karussells","hooks","vorlagen","ideen","planer","referenzen"];
-const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},planer:{icon:"🗓️",label:"Planer"},referenzen:{icon:"👤",label:"Referenzen"}};
+const NAV=["dashboard","reels","yapping","karussells","hooks","vorlagen","ideen","planer","instagram","referenzen"];
+const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},planer:{icon:"🗓️",label:"Planer"},instagram:{icon:"📷",label:"Instagram"},referenzen:{icon:"👤",label:"Referenzen"}};
 function renderTabs(){
   document.getElementById("tabs").innerHTML=NAV.map(id=>{
     const m=NAV_META[id]||COLLECTIONS[id];
@@ -428,6 +440,7 @@ function go(id){
   if(id==="dashboard")renderDashboard();
   else if(id==="referenzen")renderReferenzen();
   else if(id==="planer")renderPlaner();
+  else if(id==="instagram"){renderInstagram();loadIg();}
   else renderCollection(id);
 }
 
@@ -667,10 +680,54 @@ function renderTodo(){
 }
 function showBroll(yid){
   const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
-  go('reels');
-  const f=filters.reels||(filters.reels={search:'',archiv:false});f.search=y.gruppe||y.frage||'';
-  renderCollection('reels');
-  toast('🎞 Test-Reels zu diesem Hook gefiltert — beste raussuchen und teilen');
+  igFilter=(y.caption||'').trim().slice(0,40);
+  go('instagram');
+  toast('📷 Instagram-Zahlen — beste Variante raussuchen und teilen');
+}
+
+/* ===== Instagram-Zahlen (über Netlify-Funktion) ===== */
+let igData=null, igError=null, igLoading=false, igFilter='';
+function loadIg(force){
+  if(igLoading)return;
+  if(igData&&!force){renderInstagram();return;}
+  igLoading=true;igError=null;renderInstagram();
+  fetch('/.netlify/functions/instagram?limit=50').then(r=>r.json()).then(j=>{
+    igLoading=false;
+    if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache',JSON.stringify(j));}catch(e){}}
+    else{igError=(j&&j.error)?String(j.error):'Unbekannter Fehler beim Abruf.';}
+    renderInstagram();
+  }).catch(e=>{igLoading=false;igError='Instagram-Zahlen gibt es nur auf der Live-Seite (contentanika.netlify.app), nicht in der lokalen Vorschau.';renderInstagram();});
+}
+function num(n){return (Number(n)||0).toLocaleString('de-DE');}
+function clearIgFilter(){igFilter='';renderInstagram();}
+function renderInstagram(){
+  const view=document.getElementById('view-instagram');if(!view)return;
+  if(!igData){try{const c=localStorage.getItem('cm-ig-cache');if(c)igData=JSON.parse(c);}catch(e){}}
+  let banner='';
+  if(igLoading) banner=`<div class="hint">⏳ Lade aktuelle Instagram-Zahlen…</div>`;
+  else if(igError) banner=`<div class="hint" style="color:var(--rust)">${escHTML(igError)}</div>`;
+  let body='';
+  if(!igData){ body = igLoading?'' : `<div class="empty"><div class="big">📷</div>Noch keine Instagram-Zahlen geladen.<br>Tippe auf „🔄 Aktualisieren".</div>`; }
+  else{
+    const q=igFilter.toLowerCase();
+    const items=(igData.items||[]).filter(it=>!q||(it.caption||'').toLowerCase().includes(q));
+    const groups={};items.forEach(it=>{(groups[it.hook]=groups[it.hook]||[]).push(it);});
+    const keys=Object.keys(groups);
+    if(!keys.length) body=`<div class="hint">Keine passenden Beiträge gefunden.${igFilter?' <button class="chip" onclick="clearIgFilter()">Filter löschen</button>':''}</div>`;
+    else body=keys.map(h=>{
+      const arr=groups[h].slice().sort((a,b)=>b.views-a.views);
+      const rows=arr.map((it,i)=>{const win=i===0&&arr.length>1;return `<tr class="${win?'ig-win':''}"><td>${win?'🏆':''}</td><td>${escHTML(it.date)}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`;}).join('');
+      return `<div class="ig-group"><div class="ig-hook">${escHTML(h||'(ohne Caption)')} <span class="muted">(${arr.length} ${arr.length===1?'Beitrag':'Varianten'})</span></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th></th><th>Datum</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+    }).join('');
+  }
+  const stamp=igData&&igData.updated?('Stand: '+new Date(igData.updated).toLocaleString('de-DE')):'';
+  view.innerHTML=`
+    <div class="view-head"><h2>📷 Instagram</h2><div class="sub">Deine Beiträge nach Hook gruppiert, mit echten Zahlen und Direktlink. Beste Variante 🏆. ${stamp}</div></div>
+    <div class="filters">
+      <input class="search" placeholder="🔍 Hook/Caption suchen…" value="${escAttr(igFilter)}" oninput="igFilter=this.value;renderInstagram()">
+      <button class="chip tog" onclick="loadIg(true)">🔄 Aktualisieren</button>
+    </div>
+    ${banner}${body}`;
 }
 function renderDashboard(){
   renderTodo();
