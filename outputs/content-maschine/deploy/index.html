@@ -446,7 +446,7 @@ function go(id){
   if(id==="dashboard")renderDashboard();
   else if(id==="referenzen")renderReferenzen();
   else if(id==="planer")renderPlaner();
-  else if(id==="instagram"){renderInstagram();loadIg(true);}
+  else if(id==="instagram"){renderInstagram();loadIg();}
   else renderCollection(id);
 }
 
@@ -700,7 +700,7 @@ function loadIg(force){
   igLoading=true;igError=null;renderInstagram();
   fetch('/.netlify/functions/instagram?days=120').then(r=>r.json()).then(j=>{
     igLoading=false;
-    if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache2',JSON.stringify(j));}catch(e){}}
+    if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache3',JSON.stringify(j));}catch(e){}}
     else{igError=(j&&j.error)?String(j.error):'Unbekannter Fehler beim Abruf.';}
     renderInstagram();
   }).catch(e=>{igLoading=false;igError='Instagram-Zahlen gibt es nur auf der Live-Seite (contentanika.netlify.app), nicht in der lokalen Vorschau.';renderInstagram();});
@@ -756,7 +756,7 @@ function copyYappingScript(yid){
 }
 function renderInstagram(){
   const view=document.getElementById('view-instagram');if(!view)return;
-  if(!igData){try{const c=localStorage.getItem('cm-ig-cache2');if(c)igData=JSON.parse(c);}catch(e){}}
+  if(!igData){try{const c=localStorage.getItem('cm-ig-cache3');if(c)igData=JSON.parse(c);}catch(e){}}
   let banner='';
   if(igLoading) banner=`<div class="hint">⏳ Lade aktuelle Instagram-Zahlen…</div>`;
   else if(igError) banner=`<div class="hint" style="color:var(--rust)">${escHTML(igError)}</div>`;
