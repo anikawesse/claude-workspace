@@ -195,6 +195,11 @@
   .ig-table td:last-child,.ig-table th:last-child{text-align:right;}
   .ig-table tr.ig-win td{background:#f5ede4;font-weight:700;}
   .ig-table a{color:var(--rust);font-weight:600;}
+  .ig-cap{text-align:left;max-width:260px;color:var(--muted);}
+  .ig-sub{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line);}
+  .ig-subhook{font-weight:600;font-size:12.5px;margin-bottom:6px;}
+  .ig-actions{font-size:12.5px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .ig-date{padding:5px 8px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
 </style>
@@ -440,7 +445,7 @@ function go(id){
   if(id==="dashboard")renderDashboard();
   else if(id==="referenzen")renderReferenzen();
   else if(id==="planer")renderPlaner();
-  else if(id==="instagram"){renderInstagram();loadIg();}
+  else if(id==="instagram"){renderInstagram();loadIg(true);}
   else renderCollection(id);
 }
 
@@ -510,7 +515,7 @@ function cardHTML(col,it){
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
-    ${col==='yapping'?`<div class="makerow"><span>Daraus:</span><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
+    ${col==='yapping'?`<div class="makerow"><button onclick="copyYappingScript('${it.id}')">📋 Skript kopieren</button><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
     ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
@@ -691,18 +696,58 @@ function loadIg(force){
   if(igLoading)return;
   if(igData&&!force){renderInstagram();return;}
   igLoading=true;igError=null;renderInstagram();
-  fetch('/.netlify/functions/instagram?limit=50').then(r=>r.json()).then(j=>{
+  fetch('/.netlify/functions/instagram?days=120').then(r=>r.json()).then(j=>{
     igLoading=false;
-    if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache',JSON.stringify(j));}catch(e){}}
+    if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache2',JSON.stringify(j));}catch(e){}}
     else{igError=(j&&j.error)?String(j.error):'Unbekannter Fehler beim Abruf.';}
     renderInstagram();
   }).catch(e=>{igLoading=false;igError='Instagram-Zahlen gibt es nur auf der Live-Seite (contentanika.netlify.app), nicht in der lokalen Vorschau.';renderInstagram();});
 }
 function num(n){return (Number(n)||0).toLocaleString('de-DE');}
 function clearIgFilter(){igFilter='';renderInstagram();}
+function igCols(){return `<tr><th></th><th>Datum</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th></th></tr>`;}
+function igRow(it,win){return `<tr class="${win?'ig-win':''}"><td>${win?'🏆':''}</td><td>${escHTML(it.date)}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`;}
+function igSectionFeed(feed){
+  if(!feed.length)return '';
+  const rows=feed.map(it=>`<tr><td>${escHTML(it.date)}</td><td class="ig-cap">${escHTML((it.caption||'(ohne Caption)').replace(/\s+/g,' ').trim().slice(0,60))}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`).join('');
+  return `<div class="ig-group"><div class="ig-hook">📤 Feed <span class="muted">(${feed.length})</span></div><div class="ig-actions">Fehlende Feed-Posts als Karteikarten anlegen ab <input type="date" id="igBackfillFrom" value="2026-07-10" class="ig-date"> <button class="chip" onclick="backfillFeed()">➕ Anlegen</button></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th>Datum</th><th>Caption</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+}
+function igSectionTrial(trial){
+  if(!trial.length)return '';
+  const groups={};trial.forEach(it=>{(groups[it.hook]=groups[it.hook]||[]).push(it);});
+  const inner=Object.keys(groups).map(h=>{
+    const arr=groups[h].slice().sort((a,b)=>b.views-a.views);
+    const rows=arr.map((it,i)=>igRow(it,i===0&&arr.length>1)).join('');
+    return `<div class="ig-sub"><div class="ig-subhook">${escHTML(h||'(ohne Caption)')} <span class="muted">(${arr.length} ${arr.length===1?'Reel':'Varianten'})</span></div><div class="ig-scroll"><table class="ig-table"><thead>${igCols()}</thead><tbody>${rows}</tbody></table></div></div>`;
+  }).join('');
+  return `<div class="ig-group"><div class="ig-hook">🧪 Test-Reels <span class="muted">(${trial.length})</span> · beste Variante 🏆</div>${inner}</div>`;
+}
+function backfillFeed(){
+  if(!igData||!igData.items){toast('Erst Instagram-Zahlen laden');return;}
+  const fromEl=document.getElementById('igBackfillFrom');
+  const from=(fromEl&&fromEl.value)||'2026-07-10';
+  const feed=igData.items.filter(it=>it.feed&&it.date>=from);
+  const have=new Set((DB.reels||[]).map(r=>r.igId).filter(Boolean));
+  let n=0;
+  feed.forEach(it=>{
+    if(have.has(it.id))return;
+    DB.reels.push({id:uid(),createdAt:Date.now(),status:'Gepostet',titel:(it.caption||'(Instagram-Post)').replace(/\s+/g,' ').trim().slice(0,60)||'(Instagram-Post)',caption:it.caption||'',postDatum:it.date,letztesPost:it.date,igId:it.id,igUrl:it.url});
+    n++;
+  });
+  if(n){save();renderTabs();toast('✅ '+n+' Feed-Post'+(n>1?'s':'')+' als Karteikarten angelegt (unter Reels)');}
+  else toast('Alles schon dokumentiert, nichts Neues angelegt');
+  renderInstagram();
+}
+function copyYappingScript(yid){
+  const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
+  const text=[y.hookS,y.heroStory,y.kontext,y.learning,y.ctaText].map(s=>(s||'').trim()).filter(Boolean).join('\n\n');
+  if(!text){toast('Noch kein Skript-Text vorhanden');return;}
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);toast('📋 Skript kopiert ✓');};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(()=>toast('📋 Skript kopiert ✓'),fb);else fb();
+}
 function renderInstagram(){
   const view=document.getElementById('view-instagram');if(!view)return;
-  if(!igData){try{const c=localStorage.getItem('cm-ig-cache');if(c)igData=JSON.parse(c);}catch(e){}}
+  if(!igData){try{const c=localStorage.getItem('cm-ig-cache2');if(c)igData=JSON.parse(c);}catch(e){}}
   let banner='';
   if(igLoading) banner=`<div class="hint">⏳ Lade aktuelle Instagram-Zahlen…</div>`;
   else if(igError) banner=`<div class="hint" style="color:var(--rust)">${escHTML(igError)}</div>`;
@@ -710,15 +755,11 @@ function renderInstagram(){
   if(!igData){ body = igLoading?'' : `<div class="empty"><div class="big">📷</div>Noch keine Instagram-Zahlen geladen.<br>Tippe auf „🔄 Aktualisieren".</div>`; }
   else{
     const q=igFilter.toLowerCase();
-    const items=(igData.items||[]).filter(it=>!q||(it.caption||'').toLowerCase().includes(q));
-    const groups={};items.forEach(it=>{(groups[it.hook]=groups[it.hook]||[]).push(it);});
-    const keys=Object.keys(groups);
-    if(!keys.length) body=`<div class="hint">Keine passenden Beiträge gefunden.${igFilter?' <button class="chip" onclick="clearIgFilter()">Filter löschen</button>':''}</div>`;
-    else body=keys.map(h=>{
-      const arr=groups[h].slice().sort((a,b)=>b.views-a.views);
-      const rows=arr.map((it,i)=>{const win=i===0&&arr.length>1;return `<tr class="${win?'ig-win':''}"><td>${win?'🏆':''}</td><td>${escHTML(it.date)}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`;}).join('');
-      return `<div class="ig-group"><div class="ig-hook">${escHTML(h||'(ohne Caption)')} <span class="muted">(${arr.length} ${arr.length===1?'Beitrag':'Varianten'})</span></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th></th><th>Datum</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
-    }).join('');
+    const all=(igData.items||[]).filter(it=>!q||(it.caption||'').toLowerCase().includes(q));
+    const feed=all.filter(it=>it.feed).sort((a,b)=>b.date.localeCompare(a.date));
+    const trial=all.filter(it=>!it.feed);
+    if(!feed.length&&!trial.length) body=`<div class="hint">Keine passenden Beiträge gefunden.${igFilter?' <button class="chip" onclick="clearIgFilter()">Filter löschen</button>':''}</div>`;
+    else body=igSectionFeed(feed)+igSectionTrial(trial);
   }
   const stamp=igData&&igData.updated?('Stand: '+new Date(igData.updated).toLocaleString('de-DE')):'';
   view.innerHTML=`
