@@ -225,12 +225,51 @@ Yapping ist ein US-Trend und beschreibt einen quatschenden Talking Head, der fre
 **Die 5 Elemente in fester Reihenfolge:**
 
 1. **Hook** — der Aufhänger am Anfang, der zum Weiterschauen zieht.
-2. **Hero Story** — Warum erzähle ich das? Persönlicher Anker, eigene Erfahrung, eigene Autorität.
-3. **Kontext** — Worum geht es eigentlich? Rahmen setzen, damit die Zuschauerin einordnen kann.
+2. **Hero Story** — Aufbau von Expertise um **ANIKA**. Warum bin ICH qualifiziert, das zu erzählen? Eigene Erfahrung, eigene Geschichte, eigener Aha-Moment mit dem Thema. NICHT: "meine Kundinnen kennen das", das gehört in den Kontext.
+3. **Kontext** — Worum geht es eigentlich für die Zuschauerin? Warum ist das für sie relevant? Hier kommt der Kundinnen-Winkel, das Umfeld, das Warum-jetzt.
 4. **Learning** — Was kann sie daraus mitnehmen? Der eigentliche Value.
 5. **Call to Action (optional)** — Handlungs-Aufforderung, wenn thematisch passend.
 
 **Wichtig:** Wie beim YPing frei sprechen, nicht ablesen. Mit Bullet Points als Orientierung, aber authentisch und ohne Skript-Anmutung.
+
+**Klare Trennung Hero Story vs. Kontext:**
+
+- ❌ Falsch (das ist Kontext, keine Hero Story): "Das Thema kommt bei fast jeder Kundin am Anfang der Zusammenarbeit auf. Die meisten stehen am Putzplatz und fühlen sich ignoriert."
+- ✅ Richtig (Hero Story = Anika über Anika): "Ich habe das damals mit Leroy selbst durchgemacht. Er hat mich am Putzplatz komplett ignoriert und ich habe drei Wochen gebraucht, um zu verstehen, dass ich das Problem war, nicht er. Seitdem weiß ich..."
+- ✅ Alternativ (Hero Story = Anikas Trainer-Autorität): "Ich habe in den letzten Jahren über 500 Teams begleitet und dieses Thema kommt in fast jedem Erstgespräch. Ich weiß deshalb genau, an welchem Punkt es hakt."
+
+Die Hero Story darf sehr kurz sein (1-2 Sätze reichen), aber sie muss **um Anika** kreisen, nicht um die Zuschauerin oder die Kundinnen.
+
+## Anikas fertiges Yapping-Muster (aus dem Aufmerksamkeits-Video übernommen)
+
+Anika hat den Aufbau nach der ersten Runde selbst geschärft. Dieses Muster ist die verlässliche Vorlage für alle weiteren Yapping-Skripte.
+
+**Reihenfolge und Länge pro Element:**
+
+1. **Hook (1 Satz):** Value-Promise mit emotionalem Hebel. Kleine Wörter wie "wieder" ergänzen, wenn sie implizieren, dass etwas verloren ging.
+   - Beispiel: "So bekommst du die Aufmerksamkeit deines Pferdes **wieder** auf dich gelenkt."
+
+2. **Hero Story (1 Satz):** Selbstvorstellung + Autorität, dann direkt in das Gefühl der Zuschauerin kippen.
+   - Standardformel: "Hey, ich bin Anika und durch die Begleitung von über 500 Schülerinnen weiß ich, dass [Gefühl/Situation der Zuschauerin]..."
+
+3. **Kontext (2-3 Sätze, sehr konkret):** Nicht Theorie, sondern konkrete körperliche Szenen visualisieren.
+   - Beispiel: "auf den Fuß getreten, mit der Schulter angerempelt, am Strick durch die Gegend gezogen" (3 konkrete Bilder statt "Pferd ist Beutetier")
+   - Emotional zuspitzen: "Und das kann im schlimmsten Fall richtig weh tun."
+
+4. **Learning = REFRAME, nicht Schritte-Liste (3-5 Sätze):** Im Video wird der Umdenker geliefert, nicht die 5 Handlungstipps. Das WARUM klären, nicht das WIE komplett ausschütten.
+   - Muster: "Viele stufen das als [gängige Deutung] ein, aber ich sehe dahinter [Reframe]."
+   - Perspektivwechsel-Stilmittel: "in den Augen deines Pferdes"
+   - Anikas Standard-Bilder: "Berglöwe" für Bedrohungswahrnehmung, "Job zutrauen" für Verantwortungsübernahme
+   - Übergang zur Lösungsandeutung: "Das heißt, du darfst dich erstmal beweisen, dass..."
+
+5. **CTA mit Cliff:** Konkrete Zahl versprechen, aber nicht verraten. Codewort. Konkretes Nutzen-Versprechen.
+   - Muster: "Um das zu erreichen brauchst du [3 klare Schritte / 5 Bausteine / 2 Übungen]. Schreibe mir einfach '[Codewort]' in die Kommentare und ich schicke dir [die kostenlose Anleitung / das Videotraining] dazu."
+
+**Wichtig — Value-Verteilung Video vs. CTA:**
+
+Das Video liefert den REFRAME (Aha-Moment, neue Sicht auf das Problem). Die konkreten Handlungsschritte bleiben im Codewort-Freebie oder Videotraining. Wenn du im Video schon alle 5 Tipps ausschüttest, ist der CTA schwach, weil die Zuschauerin nichts mehr braucht.
+
+Das ist der Kernunterschied zwischen einem Skript, das nur bildet (Video zeigt alles), und einem Skript, das qualifiziert (Video macht neugierig auf die Umsetzung).
 
 ## YPing (frei in die Kamera sprechen)
 

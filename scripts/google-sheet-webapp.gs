@@ -136,6 +136,9 @@ function doPost(e) {
     // Zeilen, die das Skript selbst angelegt hat — wird zurueckgemeldet, damit ein
     // Umbau der Tabelle nie unbemerkt passiert.
     const angelegt = [];
+    // Wie viele Zellen geleert wurden. Ebenfalls Rueckmeldung: Loeschen soll
+    // niemals still passieren.
+    let geleert = 0;
 
     (daten.tage || []).forEach(function (tag) {
       let treffer = null, ziel = null;
@@ -170,6 +173,27 @@ function doPost(e) {
         gesetzt++;
       });
 
+      // Zellen, die das Skript ausdruecklich LEEREN will.
+      //
+      // Warum es das braucht: Oben werden leere Werte absichtlich nicht
+      // geschrieben, damit sie nichts ueberschreiben. Verliert ein Tag durch eine
+      // Korrektur aber seine Verkaeufe, bliebe der alte Wert stehen. Genau so
+      // blieb am 08.09.2026 nach der Zeitzonen-Umstellung ein Umsatz von 27 EUR
+      // an einem Tag stehen, an dem es keinen Verkauf mehr gab.
+      //
+      // ⚠️ Es wird NUR geleert, was es schon gibt — hier wird nie eine Zeile
+      //    angelegt. Und das Skript schickt die Grenze mit: es leert erst ab dem
+      //    Tag, ab dem die Daten wirklich in ThriveCart liegen (April/Mai kommen
+      //    aus der Digistore-Zeit und duerfen nicht angefasst werden).
+      [].concat(tag.leeren || []).forEach(function (kennzahl) {
+        const fund = findeZeile(ziel.werte, treffer.datumZeile, kennzahl);
+        if (!fund) return;
+        const zelle = ziel.blatt.getRange(fund.zeile + 1, treffer.spalte + 1);
+        if (zelle.getValue() === '') return;         // schon leer, nichts zu tun
+        zelle.clearContent();
+        geleert++;
+      });
+
       // Ampelfarben (z.B. Break-even) — Hintergrund je Zelle
       if (tag.farben) {
         Object.keys(tag.farben).forEach(function (kennzahl) {
@@ -199,6 +223,7 @@ function doPost(e) {
       datum_nicht_gefunden: nichtGefunden,
       kennzahl_ohne_zeile: ohneZeile,
       zeilen_angelegt: angelegt,
+      zellen_geleert: geleert,
       summen: summen
     });
   } catch (err) {

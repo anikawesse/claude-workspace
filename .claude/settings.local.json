@@ -683,7 +683,18 @@
       "Read(//dev/**)",
       "Bash(python -c ' *)",
       "PowerShell($b = [IO.File]::ReadAllBytes\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\minikurs-auswertung.ps1\"\\)[0..2]; \"$\\($b[0]\\) $\\($b[1]\\) $\\($b[2]\\)  \\(BOM = 239 187 191\\)\")",
-      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-26 -Bis 2026-09-09 -NichtSenden)"
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-26 -Bis 2026-09-09 -NichtSenden)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-07-10 -Bis 2026-09-09 2>&1)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\639dacbf-f416-497e-880a-659277471894\\\\scratchpad\\\\verkaufszeiten.ps1\")",
+      "PowerShell(Invoke-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\\\\quiz.html\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-28 -Bis 2026-09-11)",
+      "mcp__claude-in-chrome__*",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 *)",
+      "PowerShell(.\\\\scripts\\\\mail-auswertung-sheet.ps1 *)",
+      "PowerShell(.\\\\scripts\\\\mail-auswertung-sheet.ps1)",
+      "Edit(outputs/ads-auswertung/**)",
+      "Edit(outputs/mail-auswertung/**)",
+      "PowerShell($heute = Get-Date -Format \"yyyy-MM-dd\"; $von = \\(Get-Date\\).AddDays\\(-14\\).ToString\\(\"yyyy-MM-dd\"\\); Write-Output \"Von: $von  Bis: $heute\")"
     ],
     "defaultMode": "bypassPermissions"
   }

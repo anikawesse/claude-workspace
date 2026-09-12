@@ -68,6 +68,32 @@ $ProduktZeilen = [ordered]@{
 # Welche Zeile ist das Hauptprodukt? Warenkorb, CPA und Conversion rechnen darauf.
 $HauptproduktZeile = 'Gelände-Schlüssel 27€'
 
+# Zuordnung Tabellenzeile -> Schluessel in der Webapp. Wird an ZWEI Stellen
+# gebraucht: beim Senden der Stueckzahlen und beim Leeren (s.u.).
+$StueckzahlZeilen = @(
+    @{ K = 'Gelände-Schlüssel'; Z = 'Gelände-Schlüssel 27€' },
+    @{ K = 'Audiotraining';     Z = 'Audiotraining 17€' },
+    @{ K = 'Videoreihe';        Z = 'Videoreihe 27€' },
+    @{ K = 'Upsell Gelände';    Z = 'Upsell Gelände s.m. 99€' },
+    @{ K = 'Upsell Kopfkino';   Z = 'Upsell Kopfkino 97€' },
+    @{ K = 'Upsell Handarbeit'; Z = 'Upsell Handarbeit 197€' },
+    @{ K = 'Upsell Offenstallplaner'; Z = 'Upsell Offenstallplaner 47€' }
+)
+
+# Ab wann liegen die Verkaufsdaten ueberhaupt in ThriveCart? Erst ab diesem Tag
+# darf das Skript Zellen LEEREN.
+#
+# Warum es das Leeren braucht: Leere Werte werden bewusst nicht gesendet, damit
+# sie nichts ueberschreiben. Verliert ein Tag durch eine Korrektur aber seine
+# Verkaeufe, bliebe der alte Wert einfach stehen. Genau so stand am 08.09.2026
+# nach der Zeitzonen-Umstellung noch ein Umsatz von 27 EUR in der Tabelle,
+# obwohl der Verkauf auf den 09.09. gewandert war.
+#
+# ⚠️ Die Grenze ist die Schutzmauer: April und Mai 2026 stammen aus der
+#    Digistore-Zeit und stehen NICHT in ThriveCart. Ohne sie wuerde ein Lauf
+#    ueber die alten Monate Anikas dort eingetragene Zahlen loeschen.
+$ThriveCartDatenAb = [datetime]'2026-06-15'
+
 # Ab diesem Datum zaehlen NUR noch Ads-Verkaeufe (customer.passthrough.utm_medium=paid).
 # Grund: Die UTM-Uebermittlung an ThriveCart ist erst am 14.07.2026 live gegangen —
 # davor trug KEIN Verkauf eine Markierung (geprueft: bis 12.07. 0% getaggt, ab 14.07.
@@ -165,8 +191,19 @@ function Invoke-ThriveCart($pfad, $query = @{}) {
 }
 
 # ThriveCart benennt Datumsfelder je nach Endpunkt unterschiedlich.
+#
+# ⚠️ 'timestamp' steht ABSICHTLICH VORNE (umgestellt 09.09.2026).
+# Das Feld 'date' ist ein UTC-Datum. Ein Verkauf um 22:21 UTC ist fuer Anika
+# schon der naechste Tag (00:21 deutscher Zeit) — mit 'date' landete er einen
+# Tag zu frueh. Die Checkout-Zeilen kommen aus dem ThriveCart-Dashboard und
+# rechnen in deutscher Zeit; dadurch stand am 08.09.2026 ein Verkauf ohne
+# Bestellung und am 09.09. eine Bestellung ohne Verkauf.
+# 'timestamp' ist Unix-Zeit und wird unten nach LOKALER Zeit umgerechnet, damit
+# alle Zeilen der Tabelle auf demselben Tagesraster liegen.
+# Betrifft rueckwirkend 4 von 225 Verkaeufen seit 01.07.2026 (immer kurz nach
+# Mitternacht): 20./21.07., 30./31.07., 06./07.08., 08./09.09.
 function Get-TransaktionsDatum($t) {
-    foreach ($feld in @('date', 'order_date', 'created_at', 'timestamp', 'processed_at')) {
+    foreach ($feld in @('timestamp', 'date', 'order_date', 'created_at', 'processed_at')) {
         $v = $t.$feld
         if ($v) {
             if ($v -is [int] -or $v -match '^\d{9,10}$') {
@@ -632,35 +669,40 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                 $werte = [ordered]@{}
                 $haupt = $hauptProTag[$tag]
 
+                # Zellen, die AKTIV geleert werden muessen (siehe $ThriveCartDatenAb).
+                $leeren = @()
+
                 # Stueckzahlen — Schluessel muessen exakt denen in der Webapp entsprechen
-                foreach ($paar in @(
-                    @{ K = 'Gelände-Schlüssel'; Z = 'Gelände-Schlüssel 27€' },
-                    @{ K = 'Audiotraining';     Z = 'Audiotraining 17€' },
-                    @{ K = 'Videoreihe';        Z = 'Videoreihe 27€' },
-                    @{ K = 'Upsell Gelände';    Z = 'Upsell Gelände s.m. 99€' },
-                    @{ K = 'Upsell Kopfkino';   Z = 'Upsell Kopfkino 97€' },
-                    @{ K = 'Upsell Handarbeit'; Z = 'Upsell Handarbeit 197€' },
-                    @{ K = 'Upsell Offenstallplaner'; Z = 'Upsell Offenstallplaner 47€' }
-                )) {
+                foreach ($paar in $StueckzahlZeilen) {
                     $n = @($verkaeufe | Where-Object { $_.Tag -eq $tag -and $_.Zeile -eq $paar.Z }).Count
                     if ($n -gt 0) { $werte[$paar.K] = $n }
+                    elseif ($tag -ge $ThriveCartDatenAb) { $leeren += $paar.K }
                 }
 
                 if ($bruttoProTag[$tag] -gt 0) {
                     $werte['Bruttoumsatz'] = Rund $bruttoProTag[$tag]
                     $werte['Verdienst']    = Rund $verdienstProTag[$tag]
+                } elseif ($tag -ge $ThriveCartDatenAb) {
+                    $leeren += 'Bruttoumsatz'
+                    $leeren += 'Verdienst'
                 }
                 if ($tag -ge $PaidTrackingAb -and $organischUmsatzProTag[$tag] -gt 0) {
                     $werte['Gesamtumsatz organisch'] = Rund $organischUmsatzProTag[$tag]
+                } elseif ($tag -ge $PaidTrackingAb) {
+                    $leeren += 'Gesamtumsatz organisch'
                 }
                 if ($MetaAktiv) {
                     $werte['Adspend'] = Rund $adspendProTag[$tag]
                     if ($adspendProTag[$tag] -gt 0) { $werte['ROAS'] = Rund ($bruttoProTag[$tag] / $adspendProTag[$tag]) }
                     if ($haupt -gt 0) { $werte['Einkaufspreis (CPA)'] = Rund ($adspendProTag[$tag] / $haupt) }
+                    elseif ($tag -ge $ThriveCartDatenAb) { $leeren += 'Einkaufspreis (CPA)' }
                 }
                 if ($haupt -gt 0) {
                     $werte['Warenkorb brutto'] = Rund ($bruttoProTag[$tag] / $haupt)
                     $werte['Breakeven (CPA)']  = Rund ($verdienstProTag[$tag] / $haupt)
+                } elseif ($tag -ge $ThriveCartDatenAb) {
+                    $leeren += 'Warenkorb brutto'
+                    $leeren += 'Breakeven (CPA)'
                 }
                 if ($MetaAktiv -and ($bruttoProTag[$tag] -gt 0 -or $adspendProTag[$tag] -gt 0)) {
                     $werte['Gewinn'] = Rund ($verdienstProTag[$tag] - $adspendProTag[$tag])
@@ -685,8 +727,8 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
                     $farben['Breakeven (CPA)'] = if ($r -le 0.8) { '#d9ead3' } elseif ($r -le 1.0) { '#fff2cc' } else { '#f4cccc' }
                 }
 
-                if ($werte.Count -gt 0) {
-                    @{ datum = $tag.ToString('dd.MM.yy'); werte = $werte; farben = $farben }
+                if ($werte.Count -gt 0 -or $leeren.Count -gt 0) {
+                    @{ datum = $tag.ToString('dd.MM.yy'); werte = $werte; farben = $farben; leeren = @($leeren) }
                 }
             }
         )
@@ -717,6 +759,10 @@ if (-not $NichtSenden -and $env_['SHEET_WEBAPP_URL'] -and $env_['SHEET_WEBAPP_UR
             # ein Umbau darf nie unbemerkt passieren.
             if ($antwort.zeilen_angelegt) {
                 Write-Host "  Neue Zeile(n) in der Tabelle angelegt: $($antwort.zeilen_angelegt -join ', ')" -ForegroundColor Yellow
+            }
+            # Geleerte Zellen ebenfalls melden — Loeschen darf nie still passieren.
+            if ($antwort.zellen_geleert -gt 0) {
+                Write-Host "  Veraltete Zellen geleert: $($antwort.zellen_geleert)" -ForegroundColor Yellow
             }
             if ($antwort.datum_nicht_gefunden) {
                 Write-Warning "  Diese Tage haben keine Spalte in der Tabelle: $($antwort.datum_nicht_gefunden -join ', ')"

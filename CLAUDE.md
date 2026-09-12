@@ -81,6 +81,12 @@ Liest den Plan, führt jeden Schritt der Reihe nach aus, validiert die Arbeit un
 
 Beispiel: `/implement plans/2026-01-28-wettbewerbs-analyse-command.md`
 
+### /gelaende-call [vtt-pfad]
+
+**Zweck:** Wöchentlichen Live-Call des Gelände-Programms auswerten.
+
+Liest das Zoom-Transkript (.vtt vom Desktop, optional Pfad als Argument), aktualisiert die Kundinnen-Übersicht in `outputs/gelaende-calls/kundinnen-uebersicht.md`, pusht sie via `scripts/gelaende-call-doc-update.ps1` ins Google Doc „Gelände-Programm — Call-Notizen Kundinnen" und sammelt Marketing-Insights (O-Töne, Einwände, häufige Fragen, Tina-Abgleich) in `outputs/gelaende-calls/marketing-insights.md`. Details im Command selbst.
+
 ---
 
 ## Kritische Anweisung: Diese Datei pflegen
