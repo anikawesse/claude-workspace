@@ -2,7 +2,7 @@
 
 **Zielgruppe:** bereits angemeldete Teilnehmerinnen
 **Ziel:** kurze Erinnerung + EINEN großen Einwand entkräften + ins Webinar mitnehmen
-**Versandzeitpunkt:** 2 Stunden vorher = Sonntag 23.08. um 17 Uhr (Webinar 19 Uhr)
+**Versandzeitpunkt:** 2 Stunden vorher = Sonntag 27.09. um 17 Uhr (Webinar 19 Uhr)
 **Prinzip:** je näher am Start, desto kürzer die Mail
 
 ---

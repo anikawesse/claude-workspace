@@ -1,6 +1,6 @@
 # Verkaufsmail 2 — Testimonial + Programm-Details (Gelände-Programm)
 
-**Timing:** Montag 24.08. vormittags (Frühbucher-Bonus läuft HEUTE Abend aus)
+**Timing:** Montag 28.09. vormittags (Frühbucher-Bonus läuft HEUTE Abend aus)
 **Ziel:** Social Proof (echte Stimmen) + Programm-Details (4 Phasen als Meilensteine) + Frühbucher-Deadline heute Mitternacht
 **Basis:** Lena-Vorlage 08 (Testimonial) + 06/07, Energetik-Mail-2-Struktur. Alle Testimonials ECHT (aus Gelände-Schlüssel-Umfrage).
 

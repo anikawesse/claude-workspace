@@ -694,7 +694,16 @@
       "PowerShell(.\\\\scripts\\\\mail-auswertung-sheet.ps1)",
       "Edit(outputs/ads-auswertung/**)",
       "Edit(outputs/mail-auswertung/**)",
-      "PowerShell($heute = Get-Date -Format \"yyyy-MM-dd\"; $von = \\(Get-Date\\).AddDays\\(-14\\).ToString\\(\"yyyy-MM-dd\"\\); Write-Output \"Von: $von  Bis: $heute\")"
+      "PowerShell($heute = Get-Date -Format \"yyyy-MM-dd\"; $von = \\(Get-Date\\).AddDays\\(-14\\).ToString\\(\"yyyy-MM-dd\"\\); Write-Output \"Von: $von  Bis: $heute\")",
+      "PowerShell(Invoke-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\\\\vorschau-ergebnisse.html\"; Invoke-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\\\\quiz.html\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-30 -Bis 2026-09-13)",
+      "PowerShell(Invoke-Item \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\\\\vorschau-ergebnisse.html\")",
+      "Bash(node --check results.js)",
+      "Bash(node --check netlify/functions/lead.js)",
+      "PowerShell(explorer.exe \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\")",
+      "Bash(node --check netlify/functions/confirm.js)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-31 -Bis 2026-09-14)",
+      "Bash(node -e 'console.log\\(new Date\\(2026,8,27\\).toLocaleDateString\\(\"de-DE\",{weekday:\"long\",day:\"2-digit\",month:\"long\",year:\"numeric\"}\\)\\)')"
     ],
     "defaultMode": "bypassPermissions"
   }

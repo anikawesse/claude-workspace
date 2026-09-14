@@ -1,7 +1,7 @@
-# Ads-Text — Webinar-Einladung Gelände (23.08.26)
+# Ads-Text — Webinar-Einladung Gelände (27.09.26)
 
 **Kampagne:** Meta-Ads, Webinar-Anmeldung
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Anmelde-Link (Ad-Tracking):** https://aw.anikas-pferdeakademie.de/webinar-ads-gelaende
 **Status:** final (Anika-Version, 2026-08-05)
 
@@ -25,7 +25,7 @@ Genau das zeige ich dir in meinem kostenlosen Live-Webinar. 🐴🤩
 
 Selbst wenn du gerade denkst „Das schaffe ICH doch nicht alleine" oder „Bei meinem Pferd ist das bestimmt etwas anderes", wirst du überrascht sein, wie klar der Weg dorthin ist. 💫
 
-📅 Am 23. August um 19 Uhr treffen wir uns live.
+📅 Am 27. September um 19 Uhr treffen wir uns live.
 
 In diesem kostenfreien Webinar erfährst du:
 

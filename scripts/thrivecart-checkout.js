@@ -70,7 +70,9 @@ window.fetch = function (u, o) {
 // Von/Bis unten anpassen. Ein Aufruf deckt problemlos einen ganzen Monat ab;
 // laengere Zeitraeume lieber in Monatsstuecke teilen (so wie hier).
 
-const vorlage = window.__cap2.find(x => x.b.indexOf('checkout_view') > -1).b;
+// ⚠️ Beim Laden feuert das Dashboard auch Aufrufe mit product=all — die ergeben
+//    viel zu hohe Zahlen (13.09.2026 passiert). Deshalb gezielt die product-12-Vorlage nehmen.
+const vorlage = window.__cap2.find(x => x.b.indexOf('checkout_view') > -1 && x.b.indexOf('product=product-12') > -1).b;
 
 window.__hole = async function (von, bis) {
   // Alles aus der Vorlage behalten AUSSER den Datumsbereichen — die kommen neu.

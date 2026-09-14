@@ -1,6 +1,6 @@
 # Verkaufsmail 7 — Last Call (Gelände-Programm)
 
-**Timing:** Donnerstag 27.08. abends (letzte Mail, Cart schließt heute 23:59)
+**Timing:** Donnerstag 01.10. abends (letzte Mail, Cart schließt heute 23:59)
 **Ziel:** kurze, schnelle Erinnerung. Hier wird NICHTS mehr überzeugt (wer bis jetzt nicht überzeugt ist, wird es hier nicht). Nur Deadline + CTA.
 **Basis:** Lena-Vorlage 10 (Last Call). ⚠️ KEIN Telefonat, KEINE Testimonials, kurz halten.
 

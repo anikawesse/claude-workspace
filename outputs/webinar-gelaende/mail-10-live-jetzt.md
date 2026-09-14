@@ -1,6 +1,6 @@
 # Live-jetzt-Mail — an die GESAMTE Newsletterliste (zum Webinar-Start) — FINAL (Anika)
 
-**Versand:** kurz nach Start (So, 23.08., ~19 Uhr), an die komplette Liste (nicht nur Angemeldete).
+**Versand:** kurz nach Start (So, 27.09., ~19 Uhr), an die komplette Liste (nicht nur Angemeldete).
 **Zweck:** Live-Zuschauer nachziehen. Beim Energetik-Webinar brachte das ~1/3 der Live-Zuschauer.
 **⚠️ Vor Versand: echten LIVE-Teilnahme-Link einfügen (nicht Opt-in-Seite)! Ohne Link kann niemand dazukommen.**
 

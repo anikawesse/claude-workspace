@@ -1,6 +1,6 @@
 # Verkaufsmail 3 — Frühbucher-Deadline (Gelände-Programm)
 
-**Timing:** Montag 24.08. abends (2-3 Std vor Mitternacht)
+**Timing:** Montag 28.09. abends (2-3 Std vor Mitternacht)
 **Ziel:** kurze, klare Deadline-Erinnerung, Frühbucher-Bonus (Schmerzguide) läuft heute Mitternacht aus
 **Prinzip:** bewusst kurz. Cart bleibt bis Do offen, hier geht es NUR um das Bonus-Ende.
 

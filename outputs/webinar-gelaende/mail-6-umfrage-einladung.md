@@ -1,6 +1,6 @@
 # Einladungs-Mail — Umfrage-Aufhänger (Newsletterliste) — FINAL (Anika)
 
-**Webinar:** So, 23.08., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
+**Webinar:** So, 27.09., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
 **Aufhänger:** Umfrage-Ergebnis als Mehrwert + Social Proof (200 Plätze), greift häufigste Probleme + Wünsche auf.
 **Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 
@@ -43,7 +43,7 @@ So viele von euch haben geschrieben, dass die eigene Angst, das Kopfkino und die
 
 Und trotzdem stand bei fast allen derselbe Wunsch dahinter: einfach ruhig bleiben, dem Pferd Sicherheit geben und einfach eine entspannte Runde alleine schaffen.🧘🏻‍♀️ Genau darüber möchte ich mit dir sprechen.🤗
 
-Deshalb halte ich am Sonntag, den 23. August, um 19 Uhr live zum ersten Mal mein brandneues, kostenloses Gelände-Webinar.
+Deshalb halte ich am Sonntag, den 27. September, um 19 Uhr live zum ersten Mal mein brandneues, kostenloses Gelände-Webinar.
 
 Darin zeige ich dir:
 

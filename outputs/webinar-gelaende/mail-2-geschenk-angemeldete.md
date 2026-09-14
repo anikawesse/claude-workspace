@@ -1,7 +1,7 @@
 # Mail 2 — Geschenk-Ankündigung an bereits Angemeldete
 
 **Launch:** Gelände-Webinar
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Empfänger:** bereits Angemeldete (~100 Anmeldungen)
 **Zweck:** Dank für Umfrage, Geschenk (Koffer voller Notfallstrategien) enthüllen, Vorfreude wecken, Termin + Live-Bedingung
 **Status:** final (2026-08-08)
@@ -35,7 +35,7 @@ Genau für die Momente, die ihr mir beschrieben habt: wenn dein Pferd nicht vom 
 
 Ich kann es kaum erwarten, dir im Webinar zu zeigen, wie du Schritt für Schritt zum sicheren Anker für dein Pferd wirst und das coole ist, diesen Koffer bekommst du als Geschenk komplett for free, einfach weil du beim Webinar dabei bist. 🤩🥳 Merk dir also unbedingt:
 
-📅 23. August, 19 Uhr, live
+📅 27. September, 19 Uhr, live
 
 ⏰ Plane dir rund 2 Stunden ein, damit du wirklich alles in Ruhe mitnehmen kannst und zum Schluss kannst du mir noch all deine Fragen stellen.
 

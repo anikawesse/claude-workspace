@@ -1,6 +1,6 @@
 # Reminder-Mail — Saison-Aufhänger (Newsletterliste)
 
-**Webinar:** So, 23.08., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
+**Webinar:** So, 27.09., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
 **Aufhänger:** Saison-Fenster (Hitze/Bremsen vorbei, Winter fern = ideale Gelände-Zeit). Kürzer, emotionaler, als 2. Einladung/Reminder.
 **Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 
@@ -23,7 +23,7 @@ Genau jetzt beginnt die schönste Zeit fürs Gelände. Die drückende Hitze ist 
 
 Es wäre so schade, dieses Fenster ungenutzt verstreichen zu lassen und dann wieder ein ganzes Jahr zu warten.
 
-Deshalb lade ich dich ein: Am Sonntag, den 23. August, um 19 Uhr halte ich mein kostenloses Gelände-Webinar. Darin zeige ich dir, wie du mit deinem Pferd endlich alleine und entspannt losgehst. Ganz ohne Begleitpferd und ohne Kopfkino.
+Deshalb lade ich dich ein: Am Sonntag, den 27. September, um 19 Uhr halte ich mein kostenloses Gelände-Webinar. Darin zeige ich dir, wie du mit deinem Pferd endlich alleine und entspannt losgehst. Ganz ohne Begleitpferd und ohne Kopfkino.
 
 Du lernst,
 

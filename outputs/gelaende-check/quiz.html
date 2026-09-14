@@ -11,7 +11,7 @@
   :root{
     --rost:#7B3F28; --caramel:#A9603B; --beige:#E6C5B4; --beige-hell:#F3E7DE;
     --creme:#FAF4EF; --text:#3A2C24; --text-hell:#6E5B4F; --weiss:#FFFFFF;
-    --gruen:#8FA98A;
+    --gruen:#8FA98A; --blutrot:#C0392B;
     --schatten:0 10px 30px rgba(123,63,40,.14); --schatten-klein:0 4px 14px rgba(123,63,40,.10);
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -53,6 +53,7 @@
   .feld input{width:100%;padding:14px 16px;border:2px solid var(--beige);border-radius:12px;font-family:'Montserrat',sans-serif;font-size:16px;color:var(--text);background:var(--creme)}
   .feld input:focus{outline:none;border-color:var(--caramel);background:#fff}
   .hinweis{font-size:12px;color:var(--text-hell);margin-top:12px;text-align:center}
+  .hinweis a{color:var(--caramel);text-decoration:underline}
 
   /* Fahrplan-Stepper */
   .stepper{margin:22px 0 8px;position:relative}
@@ -74,6 +75,7 @@
 
   .ergebnis-box{background:var(--beige-hell);border-radius:16px;padding:22px 22px 18px;margin:22px 0}
   .cta-block{margin-top:20px}
+  .ergebnis-box .bereich-head{font-size:14px;font-weight:700;color:var(--rost);margin:16px 0 4px}
   .mailhint{background:var(--beige-hell);border-radius:12px;padding:14px 16px;font-size:14.5px;color:var(--text);text-align:center;margin:0}
   .bereich{margin-bottom:18px}
   .bereich-kopf{display:flex;justify-content:space-between;align-items:center;gap:10px}
@@ -84,7 +86,7 @@
   .bar-fill{height:100%;border-radius:99px;width:0;transition:width .6s ease}
   .bar-fill.lv-gut{background:var(--gruen)} .bereich-level.lv-gut{background:rgba(143,169,138,.20);color:#5f7a5a}
   .bar-fill.lv-mittel{background:var(--caramel)} .bereich-level.lv-mittel{background:var(--beige-hell);color:var(--caramel)}
-  .bar-fill.lv-hoch{background:var(--rost)} .bereich-level.lv-hoch{background:rgba(123,63,40,.12);color:var(--rost)}
+  .bar-fill.lv-hoch{background:var(--blutrot)} .bereich-level.lv-hoch{background:rgba(192,57,43,.14);color:var(--blutrot)}
   .hidden{display:none}
   @media(max-width:520px){.card{padding:30px 22px 24px}h1{font-size:25px}.frage{font-size:19.5px}}
 </style>
@@ -121,11 +123,11 @@
       <p class="lead">Trage hier deinen Vornamen und deine E-Mail ein, dann schicke ich dir deinen persönlichen Fahrplan direkt in dein Postfach und du bekommst zusätzlich auch noch passende Tipps für genau eure Situation von mir.</p>
       <p>Nach dem Ausfüllen der beiden Felder wirst du sofort zu deinem Ergebnis weitergeleitet.</p>
       <form id="leadForm" onsubmit="absenden(event)">
-        <div class="feld"><label for="vorname">Dein Vorname</label><input type="text" id="vorname" autocomplete="given-name" placeholder="Vorname"></div>
-        <div class="feld"><label for="email">Deine E-Mail-Adresse</label><input type="email" id="email" autocomplete="email" placeholder="name@beispiel.de"></div>
+        <div class="feld"><label for="vorname">Dein Vorname</label><input type="text" id="vorname" required autocomplete="given-name" placeholder="Vorname"></div>
+        <div class="feld"><label for="email">Deine E-Mail-Adresse</label><input type="email" id="email" required autocomplete="email" placeholder="name@beispiel.de"></div>
         <button type="submit" class="btn">Meinen Fahrplan anzeigen</button>
       </form>
-      <p class="hinweis">Deine Daten sind sicher. Du kannst dich jederzeit mit einem Klick wieder abmelden.</p>
+      <p class="hinweis">Mit dem Absenden meldest du dich für meinen kostenlosen E-Mail-Newsletter an. Abmelden kannst du dich jederzeit mit einem Klick. Mehr in meiner <a href="https://www.anikas-pferdeakademie.de/datenschutzerklaerung" target="_blank" rel="noopener">Datenschutzerklärung</a>.</p>
     </section>
 
     <!-- ERGEBNIS -->
@@ -144,6 +146,7 @@
   </div>
 </div>
 
+<script src="results.js"></script>
 <script>
 /* ============================================================
    AUSSAGEN  (Skala: Kenne ich gar nicht=0, Manchmal=1, Kenne ich gut=2, Das ist bei uns Alltag=3)
@@ -172,22 +175,8 @@ const AUSSAGEN = [
   {m:4, t:"Wenn mein Pferd unterwegs in Stress gerät, bekomme ich es nur schwer wieder heruntergefahren."}
 ];
 
-/* ============================================================
-   MEILENSTEINE (Fahrplan-Pfad)
-   ============================================================ */
-const MEILEN = [
-  {nr:1, title:"Fundament am Boden", sub:"Vertrauen und Kommunikation"},
-  {nr:2, title:"Souveräne Führungsperson", sub:"Kopfkino im Griff"},
-  {nr:3, title:"Entspannt vom Hof", sub:"auch ohne Pferdekumpel"},
-  {nr:4, title:"Souverän draußen unterwegs", sub:"Notfallstrategien und Kontrolle"}
-];
-const ZIEL = "Entspannt alleine ins Gelände";
-
-/* ============================================================
-   ERGEBNIS-TEXTE je Position
-   ============================================================ */
-const MAILHINT = `<p class="mailhint">📩 Deinen persönlichen Fahrplan schicke ich dir gleich in dein Postfach.</p>`;
-function level(v){ if(v<=3) return {label:"Schon stark",kl:"lv-gut"}; if(v<=8) return {label:"Ausbaufähig",kl:"lv-mittel"}; return {label:"Großer Hebel",kl:"lv-hoch"}; }
+/* MEILEN, ERKLAER, level, topAreas, namen, bereicheHTML, buildProfil -> results.js */
+const MAILHINT = `<p class="mailhint">📩 Dein persönlicher Fahrplan liegt schon in deinem Postfach.</p>`;
 
 /* ============================================================
    LOGIK
@@ -229,45 +218,30 @@ function meilensteinScores(){
   AUSSAGEN.forEach((a,i)=> s[a.m]+= (antworten[i]||0));
   return s; // je 0..12
 }
-function topArea(s){ let best=1; for(let m=2;m<=4;m++){ if(s[m]>s[best]) best=m; } return best; }
-
-function baueBereiche(s){
-  const box=el("bereiche"); box.innerHTML="";
-  MEILEN.forEach(m=>{
-    const v=s[m.nr], lv=level(v), pct=Math.max(4,Math.round((12-v)/12*100));
-    box.insertAdjacentHTML("beforeend",
-      `<div class="bereich">
-         <div class="bereich-kopf"><span class="bereich-title">${m.nr} · ${m.title}</span><span class="bereich-level ${lv.kl}">${lv.label}</span></div>
-         <div class="bereich-sub">${m.sub}</div>
-         <div class="bar"><div class="bar-fill ${lv.kl}" style="width:${pct}%"></div></div>
-       </div>`);
-  });
-}
-
 function absenden(e){
   e.preventDefault();
   const vorname=el("vorname").value.trim();
   const email=el("email").value.trim();
+  const s=meilensteinScores();
+  const werte=[s[1],s[2],s[3],s[4]];
   if(window.fbq){ fbq('track','Lead',{content_name:'Gelaende-Quiz'}); }
-  // TODO Devine: vorname, email + Scores an Netlify-Funktion -> EIN Funnel fuer alle
-  console.log("Lead:",{vorname,email,scores:meilensteinScores()});
-  zeigeErgebnis(vorname);
+  // Lead an Devine (ueber Netlify-Funktion). Fire-and-forget, blockiert das Ergebnis nicht.
+  try{
+    fetch("/.netlify/functions/lead",{
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({vorname, email, werte})
+    }).catch(()=>{});
+  }catch(err){}
+  zeigeErgebnis();
 }
 
-function zeigeErgebnis(vorname){
-  const s=meilensteinScores();
-  baueBereiche(s);
-  const max=Math.max(s[1],s[2],s[3],s[4]);
-  const top=topArea(s);
-  if(max<=3){
-    el("ergIntro").textContent="Ihr seid schon richtig weit. In allen vier Bereichen steht bei euch das Fundament.";
-    el("ergTitel").textContent="Dein Fazit";
-    el("ergText").innerHTML="<p>Das ist richtig stark. Genieße eure Spaziergänge und bleib dran. Feile einfach dort weiter, wo noch ein bisschen Luft ist.</p>";
-  } else {
-    el("ergIntro").innerHTML="So sieht euer aktueller Stand in den vier Bereichen aus. Je kürzer und roter ein Balken, desto größer ist dort gerade dein <b>Hebel</b>.";
-    el("ergTitel").textContent="Dein größter Hebel";
-    el("ergText").innerHTML=`<p>Am meisten holst du gerade im Bereich <b>${MEILEN[top-1].title}</b> heraus. Genau da lohnt sich dein nächster Schritt am schnellsten.</p>`;
-  }
+function zeigeErgebnis(){
+  const p=buildProfil(meilensteinScores());
+  el("ergIntro").innerHTML=p.intro;
+  el("bereiche").innerHTML=p.bereiche;
+  el("ergTitel").textContent=p.titel;
+  el("ergText").innerHTML=p.text;
   el("ergCta").innerHTML=MAILHINT;
   zeige("ergebnis");
 }

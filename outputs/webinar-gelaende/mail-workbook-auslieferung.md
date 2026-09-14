@@ -1,7 +1,7 @@
 # Auslieferungsmail — Workbook (an VIP-Paket-Käufer)
 
 **Zweck:** Nachliefern des versprochenen Workbooks an alle, die sich das VIP-Paket zum Gelände-Webinar gekauft haben.
-**Webinar:** 23. August 2026, 19 Uhr.
+**Webinar:** 27. September 2026, 19 Uhr.
 **Download-Link:** https://drive.google.com/file/d/1oxq1Ya_J7yQHuDrnT7KI0-ZqlbF1HIAT/view?usp=sharing
 
 ---
@@ -29,7 +29,7 @@ So holst du am meisten raus:
 - Die erste Seite füllst du schon vorher aus, damit du genau weißt, wo du gerade stehst.
 - Den Rest füllen wir dann live gemeinsam im Webinar aus.
 
-Wir sehen uns am **23. August um 19 Uhr**. Bis dahin freue ich mich schon auf dich.
+Wir sehen uns am **27. September um 19 Uhr**. Bis dahin freue ich mich schon auf dich.
 
 Genieße die Zeit mit deinem Pferd.
 Deine Anika

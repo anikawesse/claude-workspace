@@ -1,7 +1,7 @@
 # Verkaufsmail 1 — „Für die Schnellentschlossenen" (Gelände-Programm)
 
 **Zielgruppe:** Webinar-Segment (Verkaufs-Tag), nach dem Webinar
-**Timing:** direkt nach dem Webinar (So 23.08. abends)
+**Timing:** direkt nach dem Webinar (So 27.09. abends)
 **Ziel:** Euphorie/Recap + direkter Link + Frühbucher-Bonus (Schmerzguide) mit 24h-Deadline
 **Basis:** Lena-Framework (Cart open) + Energetik-Mail-1-Struktur, in Anikas Stimme
 

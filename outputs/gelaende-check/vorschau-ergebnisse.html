@@ -10,7 +10,7 @@
 <style>
   :root{
     --rost:#7B3F28; --caramel:#A9603B; --beige:#E6C5B4; --beige-hell:#F3E7DE;
-    --creme:#FAF4EF; --text:#3A2C24; --text-hell:#6E5B4F; --weiss:#FFFFFF; --gruen:#8FA98A;
+    --creme:#FAF4EF; --text:#3A2C24; --text-hell:#6E5B4F; --weiss:#FFFFFF; --gruen:#8FA98A; --blutrot:#C0392B;
     --schatten:0 10px 30px rgba(123,63,40,.14);
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -35,10 +35,12 @@
   .bar-fill{height:100%;border-radius:99px}
   .bar-fill.lv-gut{background:var(--gruen)} .bereich-level.lv-gut{background:rgba(143,169,138,.20);color:#5f7a5a}
   .bar-fill.lv-mittel{background:var(--caramel)} .bereich-level.lv-mittel{background:var(--beige-hell);color:var(--caramel)}
-  .bar-fill.lv-hoch{background:var(--rost)} .bereich-level.lv-hoch{background:rgba(123,63,40,.12);color:var(--rost)}
+  .bar-fill.lv-hoch{background:var(--blutrot)} .bereich-level.lv-hoch{background:rgba(192,57,43,.14);color:var(--blutrot)}
   .ergebnis-box{background:var(--beige-hell);border-radius:16px;padding:20px 20px 16px;margin:20px 0}
   .ergebnis-box h3{font-family:'Playfair Display',serif;font-size:19px;color:var(--rost);margin-bottom:8px}
-  .ergebnis-box p{color:var(--text-hell);font-size:15px}
+  .ergebnis-box p{color:var(--text-hell);font-size:15px;margin-bottom:10px}
+  .ergebnis-box p:last-child{margin-bottom:0}
+  .ergebnis-box .bereich-head{font-size:14px;font-weight:700;color:var(--rost);margin:16px 0 4px}
   .mailhint{background:var(--beige-hell);border-radius:12px;padding:14px 16px;font-size:14.5px;color:var(--text);text-align:center;margin-top:18px}
 </style>
 </head>
@@ -56,15 +58,22 @@ const MEILEN=[
   {nr:3,title:"Entspannt vom Hof",sub:"auch ohne Pferdekumpel"},
   {nr:4,title:"Souverän draußen unterwegs",sub:"Notfallstrategien und Kontrolle"}
 ];
+const ERKLAER={
+  1:"<p>Wie der Name schon sagt, wird hier die absolute Basis für eine vertrauensvolle Beziehung gelegt.</p><p>Du und dein Pferd entwickelt eine gemeinsame Sprache und verfeinert eure Kommunikation, damit in Zukunft keine Missverständnisse mehr entstehen.</p><p>Ich empfehle dir, dich mit der Art und Weise zu beschäftigen, wie Pferde energetisch und mit ihrer Körpersprache kommunizieren.</p><p>Das kannst du dann in Form von Führübungen und vor allem Freiarbeit mit deinem Pferd üben.</p><p>Wenn du dich jetzt fragst, wie das gehen soll, keine Sorge, das ist mein täglicher Job. Ich helfe dir, halte einfach nur die Augen in deinem E-Mail-Postfach offen.</p>",
+  2:"<p>Du bist der Dreh- und Angelpunkt, damit ihr tiefes, gegenseitiges Vertrauen aufbauen könnt.</p><p>Wenn du unsicher bist, überträgt sich deine Anspannung auf dein Pferd. Das wollen wir verhindern.</p><p>Der Schlüssel dazu ist, sein eigenes Kopfkino in den Griff zu bekommen und damit deine Emotionen unter Kontrolle zu bringen.</p><p>So nimmt dich auch dein Pferd immer mehr als Sicherheitsanker wahr.</p><p>Wenn du dich jetzt fragst, wie das gehen soll, keine Sorge, das ist mein täglicher Job. Ich helfe dir, halte einfach nur die Augen in deinem E-Mail-Postfach offen.</p>",
+  3:"<p>Wenn du erst gar nicht mit deinem Liebling ins Gelände kommst, weil dein Pferd steht wie der Fels in der Brandung oder total hektisch wird, ist das wirklich frustrierend.</p><p>Hier gilt es jetzt eine gezielte Strategie zu entwickeln, mit der du sanft und sicher, ohne Pferdekumpel, vom Hof kommst.</p><p>Ich empfehle dir dafür mit Annäherung und Rückzug zu arbeiten.</p><p>Damit bekommt die ganze Situation etwas spielerisches und schon bald hast du die Freiheit, unabhängig von jemand anderem, den Hof zu verlassen.</p><p>Wenn du dich jetzt fragst, wie das gehen soll, keine Sorge, das ist mein täglicher Job. Ich helfe dir, halte einfach nur die Augen in deinem E-Mail-Postfach offen.</p>",
+  4:"<p>Hurra, ihr könnt schon mal alleine ins Gelände gehen.</p><p>Jetzt gilt es, die auftretenden Situationen zu meistern, damit ihr euren Ausflug genießt und wohlbehalten wieder zu Hause ankommt.</p><p>Leider sind wir im Gelände den Umweltreizen ausgesetzt und haben keinen Einfluss darauf. Das heißt, wir müssen damit klarkommen, wenn die Kuhherde neben uns losrennt oder der Trecker um die Ecke schießt.</p><p>Zum Glück gibt es dafür ganz viele Strategien, um immer wieder „das Ventil zu öffnen“ und Druck rauszulassen, bevor dein Pferd explodiert.</p><p>Wenn du dich jetzt fragst, wie das gehen soll, keine Sorge, das ist mein täglicher Job. Ich helfe dir, halte einfach nur die Augen in deinem E-Mail-Postfach offen.</p>"
+};
 function level(v){ if(v<=3) return {label:"Schon stark",kl:"lv-gut"}; if(v<=8) return {label:"Ausbaufähig",kl:"lv-mittel"}; return {label:"Großer Hebel",kl:"lv-hoch"}; }
-function topArea(s){ let best=1; for(let m=2;m<=4;m++){ if(s[m]>s[best]) best=m; } return best; }
+function topAreas(s){ const max=Math.max(s[1],s[2],s[3],s[4]); const arr=[]; for(let m=1;m<=4;m++){ if(s[m]===max) arr.push(m); } return arr; }
+function namen(arr){ const t=arr.map(m=>MEILEN[m-1].title); return t.length===1 ? t[0] : t.slice(0,-1).join(", ")+" und "+t[t.length-1]; }
 
 const SZENARIEN=[
   {label:"Größter Hebel: Fundament am Boden", s:{1:11,2:5,3:3,4:2}},
   {label:"Größter Hebel: Souveräne Führungsperson", s:{1:3,2:11,3:5,4:4}},
   {label:"Größter Hebel: Entspannt vom Hof", s:{1:2,2:4,3:11,4:5}},
   {label:"Größter Hebel: Souverän draußen", s:{1:2,2:3,3:5,4:11}},
-  {label:"Gemischt: zwei Baustellen", s:{1:9,2:3,3:8,4:4}},
+  {label:"Gleichstand: zwei Bereiche gleich rot", s:{1:10,2:4,3:10,4:5}},
   {label:"Alles stark (kein Verkauf)", s:{1:2,2:1,3:3,4:2}}
 ];
 
@@ -80,23 +89,27 @@ function bereicheHTML(s){
 }
 function ergebnisHTML(s){
   const max=Math.max(s[1],s[2],s[3],s[4]);
-  const top=topArea(s);
+  const tops=topAreas(s);
   let intro,titel,text;
   if(max<=3){
-    intro="Ihr seid schon richtig weit. In allen vier Bereichen steht bei euch das Fundament.";
+    intro="So sieht dein aktueller Stand in den vier Bereichen aus. Je länger und grüner ein Balken, desto runder läuft dieser Bereich schon.";
     titel="Dein Fazit";
-    text="Das ist richtig stark. Genieße eure Spaziergänge und bleib dran. Feile einfach dort weiter, wo noch ein bisschen Luft ist.";
+    text="<p>Das ist richtig stark. Genieße eure Gelände-Ausflüge und bleib dran.</p><p>Feile einfach dort weiter, wo noch ein bisschen Luft ist.</p><p>Du bekommst in den nächsten Tagen noch Tipps von mir für die einzelnen Bereiche. Halte einfach dafür dein E-Mail-Postfach im Auge.</p>";
   } else {
-    intro="So sieht euer aktueller Stand in den vier Bereichen aus. Je kürzer und roter ein Balken, desto größer ist dort gerade dein <b>Hebel</b>.";
-    titel="Dein größter Hebel";
-    text=`Am meisten holst du gerade im Bereich <b>${MEILEN[top-1].title}</b> heraus. Genau da lohnt sich dein nächster Schritt am schnellsten.`;
+    intro="So sieht dein aktueller Stand in den vier Bereichen aus. Je kürzer und roter ein Balken, desto größer ist dort gerade dein <b>Hebel</b>.";
+    const mehrere=tops.length>1;
+    titel=mehrere?"Deine größten Hebel":"Dein größter Hebel";
+    const satz=mehrere
+      ? `<p>Am meisten Potential holst du gerade in diesen Bereichen heraus: <b>${namen(tops)}</b>. Genau dort sollten deine nächsten Schritte liegen.</p>`
+      : `<p>Am meisten Potential holst du gerade im Bereich <b>${namen(tops)}</b> heraus. Genau dort sollte dein nächster Schritt liegen.</p>`;
+    text=satz+tops.map(m=>(mehrere?`<h4 class="bereich-head">${MEILEN[m-1].title}</h4>`:"")+ERKLAER[m]).join("");
   }
   return `<div class="kicker">Dein Gelände-Fahrplan</div>
     <h2 class="head">Deine vier Bereiche auf dem Weg ins Gelände</h2>
     <p class="lead">${intro}</p>
     ${bereicheHTML(s)}
-    <div class="ergebnis-box"><h3>${titel}</h3><p>${text}</p></div>
-    <div class="mailhint">📩 Deinen persönlichen Fahrplan schicke ich dir gleich in dein Postfach.</div>`;
+    <div class="ergebnis-box"><h3>${titel}</h3>${text}</div>
+    <div class="mailhint">📩 Dein persönlicher Fahrplan liegt schon in deinem Postfach.</div>`;
 }
 
 const grid=document.getElementById("grid");

@@ -1,7 +1,7 @@
 # Mail 4 — Einladung an Bestandsliste (mit Jungbullen-Story)
 
 **Launch:** Gelände-Webinar
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Empfänger:** Bestandsliste (alle), ggf. „angemeldet"-Tag ausschließen, damit Angemeldete keine Einladung doppelt bekommen
 **Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **Story:** Anikas eigene Jungbullen-Geschichte (feurige Spanierin an der Hand, ~30 Jungbullen brechen aus, einer durch den Stacheldrahtzaun) — dokumentiert in context/gelaendeschluessel/lektion-10-abschluss-naechster-schritt.md + Fragerunde. Echte Story, nichts erfunden.
@@ -64,7 +64,7 @@ Dort zeige ich dir die Schritte um überhaupt erstmal entspannt vom Hof herunter
 
 Merk dir:
 
-📅 23. August, 19 Uhr, live
+📅 27. September, 19 Uhr, live
 
 ⏰ Plane dir rund 2 Stunden ein, am Schluss beantworte ich all deine Fragen.
 

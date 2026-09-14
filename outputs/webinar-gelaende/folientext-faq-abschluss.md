@@ -61,5 +61,5 @@ Dramaturgie: erst die Herausforderungs-FAQ (passt das zu meiner Situation?), dan
 
 **Folie — Also, worauf wartest du? (Abschluss-CTA)**
 > Du kennst jetzt den Weg, das Programm, die Boni und meine Garantien.
-> Sichere dir deinen Platz, solange die Türen offen sind (bis Donnerstag, 27.08., 23:59 Uhr).
+> Sichere dir deinen Platz, solange die Türen offen sind (bis Donnerstag, 01.10., 23:59 Uhr).
 🗣️ Link in den Chat, und an den Frühbucher bis Montag erinnern.

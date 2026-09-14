@@ -1,6 +1,6 @@
 # Erinnerungs-Mail — Tag des Webinars (Newsletterliste) — FINAL (Anika)
 
-**Versand:** am Webinar-Tag (So, 23.08.), einige Stunden vor 19 Uhr.
+**Versand:** am Webinar-Tag (So, 27.09.), einige Stunden vor 19 Uhr.
 **Aufhänger:** Catch-all — „schon länger dabei und Mails übersehen ODER ganz neu". Aha-Momente + Live-dabei-Koffer.
 **⚠️ Vor Versand prüfen: Anmelde-/Zugangs-Button einfügen.** An Gesamtliste = Anmelde-Link; nur an Angemeldete = Live-Zugangslink.
 **⚠️ Reine Live-Erwartung, KEINE Aufzeichnung anbieten. Koffer (27 Notfallstrategien) = Live-dabei-Geschenk.**

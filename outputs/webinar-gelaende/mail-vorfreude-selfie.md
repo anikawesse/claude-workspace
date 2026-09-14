@@ -2,7 +2,7 @@
 
 **Zielgruppe:** bereits angemeldete Teilnehmerinnen
 **Ziel:** neugierig auf EINEN konkreten Webinar-Teil machen + live-Erwartung aufbauen
-**Versandzeitpunkt:** Freitag oder Samstag vor dem Webinar (Sonntag 23.08., 19 Uhr)
+**Versandzeitpunkt:** Freitag oder Samstag vor dem Webinar (Sonntag 27.09., 19 Uhr)
 **Prinzip:** nicht das ganze Webinar beschreiben, sondern den interessantesten Teil herauspicken + Selfie fürs Storytelling
 
 ---
@@ -38,7 +38,7 @@ Deine Anika
 
 **PS:** Hier noch einmal das Wichtigste auf einen Blick:
 
-📅 Das Webinar findet am **Sonntag, den 23. August um 19 Uhr** statt. [Klicke hier, um dir den Termin bequem in deinen Kalender zu legen.]
+📅 Das Webinar findet am **Sonntag, den 27. September um 19 Uhr** statt. [Klicke hier, um dir den Termin bequem in deinen Kalender zu legen.]
 
 📺 Das Webinar ist **live**. Es gibt keine Aufzeichnung, sei also unbedingt in Echtzeit dabei.
 

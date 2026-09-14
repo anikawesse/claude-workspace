@@ -1,7 +1,7 @@
 # Mail 3 — Geschenk-Teaser + Einladung an Noch-nicht-Angemeldete
 
 **Launch:** Gelände-Webinar
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Empfänger:** Alle, die sich noch NICHT fürs Webinar angemeldet haben (Segment: Liste minus „angemeldet"-Tag)
 **Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **Zweck:** Geschenk (Koffer voller 27 Notfallstrategien) teasern → zur Anmeldung + Live-Teilnahme bewegen
@@ -38,7 +38,7 @@ Sichere dir jetzt deinen kostenlosen Platz:
 
 Merk dir:
 
-📅 23. August, 19 Uhr, live
+📅 27. September, 19 Uhr, live
 ⏰ Plane dir rund 2 Stunden ein, am Schluss beantworte ich all deine Fragen.
 🎁 Den Koffer voller Notfallstrategien bekommst du geschenkt, aber nur, wenn du live dabei bist.
 

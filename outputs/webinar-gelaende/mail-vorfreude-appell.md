@@ -2,7 +2,7 @@
 
 **Zielgruppe:** bereits angemeldete Teilnehmerinnen
 **Ziel:** Schmerzpunkte auffrischen („ich weiß, was du durchmachst") + Appell an die echte Motivation → live dabei sein
-**Versandzeitpunkt:** 1 Tag vorher = Samstag 22.08. (Webinar Sonntag 23.08., 19 Uhr)
+**Versandzeitpunkt:** 1 Tag vorher = Samstag 26.09. (Webinar Sonntag 27.09., 19 Uhr)
 
 ⚠️ Konflikt-Hinweis: Diese Vorlage nutzt einen „Hintertür-Frame" (Erlaubnis, nicht zu kommen). Das widerspricht Anikas Regel „keine Ausreden-Mails vor Live-Events". Deshalb der Appell-Absatz in zwei Varianten (siehe unten).
 

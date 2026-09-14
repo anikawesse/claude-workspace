@@ -1,0 +1,21 @@
+# Netlify-Konfiguration fuer den Gelände-Quiz-Freebie.
+# Deploy: dieses Verzeichnis als Site. Secret DEVINE_TOKEN in den Netlify-Env-Variablen setzen.
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# Startseite zeigt direkt das Quiz
+[[redirects]]
+  from = "/"
+  to = "/quiz.html"
+  status = 200
+
+# Interne Planungsdatei nicht ausliefern
+[[redirects]]
+  from = "/freebie-ideen.md"
+  to = "/404.html"
+  status = 404

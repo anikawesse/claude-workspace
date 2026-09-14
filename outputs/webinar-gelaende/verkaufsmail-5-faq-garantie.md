@@ -1,6 +1,6 @@
 # Verkaufsmail 5 — FAQ + Garantie (Gelände-Programm)
 
-**Timing:** Mittwoch 26.08.
+**Timing:** Mittwoch 30.09.
 **Ziel:** häufige Fragen/Einwände beantworten (rationale Absicherung) + beide Garantien
 **Basis:** Lena-Vorlage 09 (FAQ) + Energetik-Mail-4. FAQ-Antworten exakt aus salespage.html. Telefon-Option Mittwoch noch erlaubt.
 

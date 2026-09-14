@@ -1,6 +1,6 @@
 # Verkaufsmail 6 — Zweifel „alleine nur mit Online-Begleitung?" + Testimonials (Gelände-Programm)
 
-**Timing:** Donnerstag 27.08. vormittags (Cart schließt heute 23:59)
+**Timing:** Donnerstag 01.10. vormittags (Cart schließt heute 23:59)
 **Ziel:** den Zweifel „schaffe ich das alleine, nur mit Online-Begleitung?" ausräumen, mit 2 echten Testimonials Vertrauen aufbauen + Cart-Close
 **Basis:** Lena-DPS 07 (Einwände drehen). ⚠️ Donnerstag = KEIN Telefonat mehr, nur aufs Programm pitchen. Testimonials ECHT.
 

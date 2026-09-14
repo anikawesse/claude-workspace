@@ -2,7 +2,7 @@
 
 **Zielgruppe:** bereits angemeldete Teilnehmerinnen
 **Ziel:** ganz kurz die Vorteile anreißen + direkt auf den Link zeigen
-**Versandzeitpunkt:** 15 Minuten vorher = Sonntag 23.08. um 18:45 Uhr (Webinar 19 Uhr)
+**Versandzeitpunkt:** 15 Minuten vorher = Sonntag 27.09. um 18:45 Uhr (Webinar 19 Uhr)
 **Prinzip:** so kurz wie möglich, Neugier + Link
 
 ---

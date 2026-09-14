@@ -1,7 +1,7 @@
 # Mail 5 — Einladung Bestandsliste (Angle: Spaziergänge = unterschätztes Fundament)
 
 **Launch:** Gelände-Webinar
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Empfänger:** Bestandsliste (alle), „angemeldet"-Tag ausschließen
 **Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **Angle:** Geländespaziergänge werden unterschätzt / kaum jemand auf dem Pferdemarkt fokussiert sich NUR darauf; überall geht es gleich ums Reiten. Dabei ist der Spaziergang die Basis (sicher & allein rauskommen + Vertrauen). Danach ist der Sprung zum Alleine-Ausreiten nur noch mini. Darum das Webinar-Fokusthema.
@@ -52,7 +52,7 @@ Und als Geschenk bekommst du meinen Koffer voller Notfallstrategien:
 27 konkrete Strategien zum Nachschlagen für den Ernstfall.
 Den gibt es für alle, die live dabei sind. 🎁
 
-📅 23. August, 19 Uhr, live
+📅 27. September, 19 Uhr, live
 
 ⏰ Plane dir rund 2 Stunden ein, am Schluss beantworte ich all deine Fragen.
 

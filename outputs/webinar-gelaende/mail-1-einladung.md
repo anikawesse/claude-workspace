@@ -1,7 +1,7 @@
 # Mail 1 — Einladung Gelände-Webinar (Gesamtliste)
 
 **Launch:** Gelände-Webinar
-**Webinar-Termin:** 23. August 2026, 19 Uhr (live)
+**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
 **Empfänger:** Gesamtliste
 **Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **Status:** final (Anika-Version, 2026-08-05)
@@ -42,7 +42,7 @@ Darin zeige ich dir, wie du in den nächsten zwei Monaten Schritt für Schritt d
 
 Und zwar auch dann, wenn ihr ganz alleine unterwegs seid, ohne einen zweiten Pferdekumpel an eurer Seite.
 
-Wir treffen uns am 23. August um 19 Uhr live.
+Wir treffen uns am 27. September um 19 Uhr live.
 
 Diese drei Dinge nimmst du aus dem Webinar mit:
 

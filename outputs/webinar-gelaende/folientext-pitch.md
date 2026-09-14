@@ -133,7 +133,7 @@ Zwei Schutzschichten. Die 14-Tage-Geld-zurück ist als B2C-Verkäuferin gesetzli
 
 ## TEIL 14 — Verknappung (final)
 Ansatz: KEINE öffentliche Platzzahl (Anikas Entscheidung — kein Fake-Druck). Dringlichkeit über Zeit + Kapazität + Pilot/Saison.
-Timing: Webinar So 23.08. abends · Frühbucher 24 h bis Mo 24.08. · Cart-Close Do 27.08. 23:59 Uhr.
+Timing: Webinar So 27.09. abends · Frühbucher 24 h bis Mo 28.09. · Cart-Close Do 01.10. 23:59 Uhr.
 
 **Folie — Warum jetzt starten und nicht später? (1)**
 > Das ist der allererste Durchgang des Gelände-Programms. Du bekommst den Pilot-Preis und gestaltest die Inhalte mit. Zu diesem Preis gibt es das Programm nie wieder.
@@ -141,11 +141,11 @@ Timing: Webinar So 23.08. abends · Frühbucher 24 h bis Mo 24.08. · Cart-Close
 
 **Folie — Warum jetzt starten und nicht später? (2)**
 > Weil ich jede Teilnehmerin eng in den Calls begleite und wir uns gemeinsam eure Videos anschauen, kann ich nur eine begrenzte Anzahl aufnehmen. Ist die Runde voll, ist sie voll.
-> Die Türen sind bis Donnerstag, 27.08., 23:59 Uhr geöffnet. Danach schließt das Angebot.
+> Die Türen sind bis Donnerstag, 01.10., 23:59 Uhr geöffnet. Danach schließt das Angebot.
 
-**Folie — Frühbucher-Geschenk (nur 24 h, bis Mo 24.08.)**
+**Folie — Frühbucher-Geschenk (nur 24 h, bis Mo 28.09.)**
 > Einführungsangebot: 549 € einmalig oder 4 × 165 €.
-> Bis Montag, 24.08., bekommst du zusätzlich mein Frühbucher-Geschenk: den leicht verständlichen Schmerzguide mit Videoanleitung und Checkliste. Damit erkennst du an klaren Zeichen, ob dein Pferd Schmerzen hat und sich vielleicht deshalb verweigert.
+> Bis Montag, 28.09., bekommst du zusätzlich mein Frühbucher-Geschenk: den leicht verständlichen Schmerzguide mit Videoanleitung und Checkliste. Damit erkennst du an klaren Zeichen, ob dein Pferd Schmerzen hat und sich vielleicht deshalb verweigert.
 
 **Folie — So funktioniert's / CTA**
 > 1. Du klickst auf den Link zur Infoseite und sicherst dir dort über einen der Buttons das Programm.

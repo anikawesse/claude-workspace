@@ -1,6 +1,6 @@
 # Gelände-Webinar — Skript (nach Eric Steigner 14-Teile-Framework)
 
-**Webinar:** 23. August 2026, 19 Uhr live
+**Webinar:** 27. September 2026, 19 Uhr live
 **Opt-in:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **Avatar:** Tina (Mitte 50, erstes eigenes Pferd, will sicher & allein ins Gelände)
 **Framework-Referenz:** outputs/webinar-gelaende/eric-referenz.md (alle 14 Teile originalgetreu)

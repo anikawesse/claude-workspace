@@ -1,6 +1,6 @@
 # Einladungs-Mail — Vision/Traumzustand (Newsletterliste) — FINAL (Anika)
 
-**Webinar:** So, 23.08., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
+**Webinar:** So, 27.09., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
 **Aufhänger:** Vision zuerst (entspannter Alleinspaziergang, Traktor-Szene) + Meilenstein-Weg-Teaser.
 **Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
 **⚠️ Vor Versand: Anmelde-Button/Link einfügen (fehlt in Anikas Fassung, siehe Markierung unten).**
@@ -37,7 +37,7 @@ Und in diesem Moment merkst du: Ihr seid ein Team und könnt endlich im Gelände
 
 Ich weiß, für viele fühlt sich das gerade noch wie ein ferner Traum an. Aber es ist keiner. Um dieses Ziel zu erreichen, gibt es einen bewährten Weg mit einigen Meilensteinen und den möchte ich dir gerne kostenlos zeigen.🎁
 
-Genau diesen Weg zeige ich dir am Sonntag, den 23. August, um 19 Uhr in meinem kostenlosen Gelände-Webinar.
+Genau diesen Weg zeige ich dir am Sonntag, den 27. September, um 19 Uhr in meinem kostenlosen Gelände-Webinar.
 
 Darin zeige ich dir, wie du mit deinem Pferd endlich alleine und entspannt spazieren gehst. Ganz ohne Begleitpferd und ohne Kopfkino.
 

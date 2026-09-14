@@ -7,7 +7,7 @@
 - Name: „Webinardatum Gelände" · Key: `webinardatum_gelaende` (bzw. `..._gelnde_...`).
 
 ## 2. Feld im Haupt-Workflow automatisch füllen
-- Direkt nach dem Trigger (Anmeldung): Aktion „Kontakt aktualisieren" → Webinardatum Gelände = **Specific Date** = aktuelles Webinardatum (z. B. 23.08.2026).
+- Direkt nach dem Trigger (Anmeldung): Aktion „Kontakt aktualisieren" → Webinardatum Gelände = **Specific Date** = aktuelles Webinardatum (z. B. 27.09.2026).
 - → Jede neue Anmeldung bekommt das Datum automatisch. Monatlich hier nur das Datum tauschen.
 
 ## 3. Wait-Schritte relativ zum Feld
