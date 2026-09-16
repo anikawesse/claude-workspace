@@ -703,7 +703,16 @@
       "PowerShell(explorer.exe \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaende-check\")",
       "Bash(node --check netlify/functions/confirm.js)",
       "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-08-31 -Bis 2026-09-14)",
-      "Bash(node -e 'console.log\\(new Date\\(2026,8,27\\).toLocaleDateString\\(\"de-DE\",{weekday:\"long\",day:\"2-digit\",month:\"long\",year:\"numeric\"}\\)\\)')"
+      "Bash(node -e 'console.log\\(new Date\\(2026,8,27\\).toLocaleDateString\\(\"de-DE\",{weekday:\"long\",day:\"2-digit\",month:\"long\",year:\"numeric\"}\\)\\)')",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-01 -Bis 2026-09-15)",
+      "Bash(base64 -w0 \"outputs/webinar-gelaende/launch-auswertung-gelaende.xlsx\" > /c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/8a5bb399-ce61-4df9-aa8d-57e1ccdfbf46/scratchpad/la_b64.txt && wc -c < /c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/8a5bb399-ce61-4df9-aa8d-57e1ccdfbf46/scratchpad/la_b64.txt)",
+      "mcp__432f9c54-60a4-4754-beed-b4befd5bef1c__create_file",
+      "Bash(base64 -w0 \"Geländeprogramm Problem-Lösung-Liste.xlsx\")",
+      "mcp__432f9c54-60a4-4754-beed-b4befd5bef1c__trash_file",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\" -NurZeigen)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\")",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\" 2>&1)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-02 -Bis 2026-09-16)"
     ],
     "defaultMode": "bypassPermissions"
   }
