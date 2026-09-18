@@ -1,0 +1,43 @@
+<!--
+  NEUE VERSION (17.09.2026) des Footer-Tracking-Scripts der Ads-Salespage
+  (Devine Funnel → Tracking Code → Footer). Ersetzt passthrough-script.html komplett.
+
+  Neu: utm_campaign / utm_content / utm_term werden aus der Salespage-URL gelesen
+  und an alle ThriveCart-Checkout-Links weitergereicht (plain + passthrough).
+  Die Werte setzt Meta automatisch, wenn in den Anzeigen im Feld „URL-Parameter" steht:
+    utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}
+  Damit lassen sich parallel laufende Kampagnen in ThriveCart auseinanderhalten.
+
+  source/medium bleiben FEST (facebook/paid) wie bisher, fbclid unverändert.
+  Die einzige Änderung ggü. der Vorversion: die mit >>> markierten Zeilen.
+-->
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var fbclid = params.get('fbclid');
+  var extra = ['utm_campaign', 'utm_content', 'utm_term']; // >>> neu
+  function decorate() {
+    document.querySelectorAll('a[href*="thrivecart.com"]').forEach(function (a) {
+      try {
+        var url = new URL(a.href, window.location.origin);
+        url.searchParams.set('utm_source', 'facebook');
+        url.searchParams.set('utm_medium', 'paid');
+        url.searchParams.set('passthrough[utm_source]', 'facebook');
+        url.searchParams.set('passthrough[utm_medium]', 'paid');
+        extra.forEach(function (k) {                                    // >>> neu
+          var v = params.get(k);                                        // >>> neu
+          if (v) {                                                      // >>> neu
+            url.searchParams.set(k, v);                                 // >>> neu
+            url.searchParams.set('passthrough[' + k + ']', v);          // >>> neu
+          }                                                             // >>> neu
+        });                                                             // >>> neu
+        if (fbclid) url.searchParams.set('fbclid', fbclid);
+        a.href = url.toString();
+      } catch (e) {}
+    });
+  }
+  if (document.readyState !== 'loading') decorate();
+  else document.addEventListener('DOMContentLoaded', decorate);
+  setTimeout(decorate, 1500);
+})();
+</script>

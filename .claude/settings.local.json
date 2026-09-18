@@ -712,7 +712,18 @@
       "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\" -NurZeigen)",
       "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\")",
       "PowerShell(& \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Aug 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-aug-2026.json\" 2>&1)",
-      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-02 -Bis 2026-09-16)"
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-02 -Bis 2026-09-16)",
+      "Bash(sed -i 's/^15\\\\.09\\\\.26;.*/15.09.26;6;1/' checkout-thrivecart.csv)",
+      "Bash(printf '16.09.26;9;3\\\\n17.09.26;0;0\\\\n')",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\008fc4dd-3a3e-43a3-88e2-498dbb36191a\\\\scratchpad\\\\kampagnen.ps1\")",
+      "PowerShell($t = Get-Content -Raw -Encoding UTF8 C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\thrivecart-utm\\\\passthrough-script-kampagnen.html; $s = $t.Substring\\($t.IndexOf\\('<script>'\\)\\).Trim\\(\\); Set-Clipboard -Value $s; \\(Get-Clipboard | Measure-Object -Line\\).Lines; \\(Get-Clipboard\\)[0]; \\(Get-Clipboard\\)[-1])",
+      "PowerShell($c = Get-Clipboard -Raw; $c.Substring\\(0,40\\); '...'; $c.Substring\\($c.Length-30\\))",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Wasserkurs_neu.png\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Wasserkurs_neu.jpg\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-04 -Bis 2026-09-18)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\5938e62a-d03b-4eee-a1e9-d3bfa1f09336\\\\scratchpad\\\\kampagnen.ps1\")",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-10 -Bis 2026-09-18)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\5938e62a-d03b-4eee-a1e9-d3bfa1f09336\\\\scratchpad\\\\kampagnen2.ps1\")"
     ],
     "defaultMode": "bypassPermissions"
   }
