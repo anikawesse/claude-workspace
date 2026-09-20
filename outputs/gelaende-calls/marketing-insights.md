@@ -12,6 +12,12 @@ Laufende Sammlung aus den Live-Calls des Gelände-Programms. Wird von `/gelaende
 
 Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und Social Proof. Format: Zitat + Name + Pferd + Datum + Kontext.
 
+**Call 18.09.2026 (2. Feedbackrunde):**
+
+- **Susannes Anke-Erlebnis (Marketing-Gold):** Eine Stallkollegin führte ihren „blockierten" 1,74-m-Wallach problemlos ins Gelände — sogar den ungeliebten Berg hoch. Susannes eigene Worte: **„Das Pferd kann scheinbar ins Gelände gehen... das heißt, ich muss eigentlich an mir arbeiten."** → Der lebende Beweis für die Kern-These des Programms (die Angst geht mit dem Menschen mit, nicht mit dem Pferd). Als Story fürs Webinar/Content perfekt: gleicher Wallach, zwei Menschen, zwei Ergebnisse. Details: Bei der Kollegin ohne „Bilder im Kopf" ging er; sobald Susanne den Strick übernahm: Nüstern auf, Puls hoch, Schwitzen „mehr als beim Reiten".
+- **Nicola über die Anker-Übungen:** „Ich hätte nicht gedacht, dass es so gut hilft, aber es hilft wirklich" + „obwohl ich so ein bisschen am Zweifeln bin, merke ich dann doch, dass es hilft und deswegen mache ich weiter." → Ehrliches Testimonial-Material für Phase 1 (Skepsis → Wirkung).
+- **Sabines Resilienz:** Nach Floras erneutem Abhauen war sie am nächsten Tag sofort wieder draußen reiten, am übernächsten spazieren — und hat die Engstelle gemeistert.
+
 **Call 11.09.2026 (Feedbackrunde):**
 
 - **„Das ist überhaupt schon der Game Changer für mich, dass ich nicht irgendwo ankommen muss."** — Sabine (Flora). Die Kern-Botschaft des Programms in Kundinnen-Worten, nach nur einer Woche. Stärkster Satz des Calls.
@@ -32,6 +38,12 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 
 Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Content-Blöcke im Webinar.
 
+**Call 18.09.2026 (2. Feedbackrunde):**
+
+- **„Mentalarbeit ist mühsam"** (Nicola): „Man muss sich halt wirklich ändern und da ist man auch so ein bisschen bequem... der Schweinehund." → Der ehrliche Einwand NACH dem Kauf; fürs Marketing als Erwartungsmanagement nutzbar (Anikas Antwort: ab ~6 Wochen greift die Gewöhnung). 
+- **Phase 1 wird übersprungen** (Susanne: „Ich dachte, ich mache es vielleicht gar nicht"): Die Zielgruppe will Praxis, nicht Kopfarbeit — bis das eigene Erlebnis sie einholt. → Bestätigt, wie das Webinar Phase 1 verkaufen muss: über Beweis-Storys (wie die Anke-Story), nicht über Appelle.
+- **Selbsterfüllende Prophezeiung in Zielgruppen-Sprache** (Susanne): „Ich sehe dann den Riesenkopf neben mir und diese Riesennüstern — um Gottes Willen, der kann ja eigentlich nur gleich durchgehen."
+
 **Call 11.09.2026 (Feedbackrunde):**
 
 - **„Angst vor der Angst"** (Miriam): Die Anspannung in der Brust kommt schon beim bloßen **Beschäftigen mit dem Thema** — „jetzt sitze ich hier und bin wieder unter Anspannung." → Tiefste Formulierung des Kernproblems bisher; direkt als Webinar-/Mail-Sprache verwendbar.
@@ -50,6 +62,14 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 ## 3. Häufige Fragen & Themen
 
 Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Zähler hochsetzen.
+
+**Call 18.09.2026 (2. Feedbackrunde):**
+
+- **Tempokontrolle im Gelände (Trab/Galopp) — jetzt offizieller Pilot-Wunsch von Sabine (2× von ihr angesprochen).** → Kurs-Lücke: Kandidat für Phase 4 / eigene Lektion; gleichzeitig Content-Thema („Was, wenn es draußen schneller wird?").
+- **Durchlässigkeit der Hilfen als Losreiß-Ursache** (Anikas Kern-Diagnose bei Flora): Wenn Hilfen im Alltag langsam durchgehen, kommt im Angst-Moment jede Korrektur zu spät. → Starker Content-Winkel: „Warum dein Pferd sich losreißt (und es nichts mit dem Trecker zu tun hat)".
+- **„Reitplatz im Gelände denken"** (Watt-Beispiel): auf Lichtung/Feld Dressurfiguren reiten, um das Pferd ansprechbar zu machen, statt stur einer Richtung zu folgen. → Sehr visueller Reel-/Karussell-Stoff.
+- **Gras-Bulldozer + „Blinker setzen"** (aus Carolines Video-Analyse): Gras für sich beanspruchen (Fuß zwischen Gras und Maul — Kinder-Trick!), Bauchnabel-„Blinker" statt hektisch schneller werden, Übungen nach 3-4 guten Durchgängen beenden. → Gleich drei kleine How-to-Reel-Ideen.
+- **Wasser-Thema zieht** (Sabine fragte von sich aus nach dem See): Der kommende Wasser-Kurs hat im Programm bereits Nachfrage; Angst „Pferd gerät im tiefen Wasser in Panik" als Einwand/Hook notiert.
 
 **Call 11.09.2026 (Feedbackrunde):**
 
@@ -72,6 +92,11 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 ## 4. Tina-Abgleich
 
 Abweichungen vom Avatar + Original-Wording der Kundinnen.
+
+**Call 18.09.2026 (2. Feedbackrunde):**
+
+- **Die Figur der „unbefleckten" Helferin** (Anke, Susannes Mann beim Verladen): Menschen ohne Angst-Vorgeschichte kommen mit denselben Pferden mühelos klar — Anika: „Mit diesen unbefleckten Gehirnen ist das einfacher." → Starke Story-Figur für Content: nicht das Pferd ist das Problem.
+- **Wording neu:** „Riesenkopf und Riesennüstern", „er ist bequem, aber nicht dumm", „Gras-Bulldozer", „der Schweinehund", „ich hätte ihn prügeln müssen — will ich nicht" (Susanne über Vorausgehen), „wie das Fähnchen im Winde" (am Strick).
 
 **Call 11.09.2026 (Feedbackrunde):**
 
