@@ -728,7 +728,9 @@
       "PowerShell($p='C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\5938e62a-d03b-4eee-a1e9-d3bfa1f09336\\\\scratchpad\\\\kampagnen.ps1'; $c=Get-Content $p -Raw -Encoding UTF8; $c=$c -replace \"since = '2026-09-13'; until = '2026-09-18'\",\"since = '2026-09-15'; until = '2026-09-19'\"; [System.IO.File]::WriteAllText\\($p,$c,\\(New-Object System.Text.UTF8Encoding $true\\)\\); & $p | Out-String -Width 220)",
       "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-13 -Bis 2026-09-19)",
       "PowerShell($p='C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\5938e62a-d03b-4eee-a1e9-d3bfa1f09336\\\\scratchpad\\\\webinar.ps1'; $c=Get-Content $p -Raw -Encoding UTF8; [System.IO.File]::WriteAllText\\($p,$c,\\(New-Object System.Text.UTF8Encoding $true\\)\\); & $p | Out-String -Width 220)",
-      "PowerShell(git add .claude/settings.local.json outputs/ads-auswertung/)"
+      "PowerShell(git add .claude/settings.local.json outputs/ads-auswertung/)",
+      "PowerShell(git add outputs/wasser-kurs/transformation-bullets.md outputs/gelaende-calls/)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-07 -Bis 2026-09-21)"
     ],
     "defaultMode": "bypassPermissions"
   }

@@ -384,41 +384,95 @@ Die drei leisen Themen. Einstiegs-Muster gemischt: 3.1 Du-Szene, 3.2 Fremd-Szene
 
 ## Loop 3, Mail 1 — Kopfkino / Angst vor der Angst
 
-**Status:** Entwurf
+**Status:** ✅ FINAL von Anika, in Devine als „3.1. Softmail G-S" angelegt (21.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen. Am Mail-Ende: Foto Anika mit Pferd.
 
-**Betreff:** 🌳 Die Bilder gehen nicht aus dem Kopf
+**Betreff:** 🌳 Die Bilder gehen dir nicht aus dem Kopf
 **Vorschautext:** Dabei ist seitdem nichts mehr passiert.
 
-Es war nur ein Moment im letzten Herbst.
+Es war nur ein kurzer Moment im letzten Herbst. 🍂
 
-Ein Traktor kam hinter der Hecke hervor, Carlo machte einen Satz zur Seite und der Strick rutschte dir durch die Hand.
+Ein Traktor 🚜 kam hinter der Hecke hervor, Carlo 🐴 machte einen Satz zur Seite und der Strick rutschte dir durch die Hand.
 
-Passiert ist am Ende nichts. Carlo stand fünf Meter weiter und hat gegrast.
+Passiert ist am Ende nichts. Carlo stand fünf Meter weiter und hat gegrast. 🌱
 
-Aber dein Herz hat noch eine Stunde geklopft.
+Aber dein Herz hat noch eine Stunde später laut geklopft.
 
-Und seitdem läuft in deinem Kopf ein Film. Immer wenn du ans Rausgehen denkst, siehst du ihn schon wieder springen. Nur diesmal in Richtung Straße.
+Und seitdem läuft in deinem Kopf ein Film. Immer wenn du ans Rausgehen denkst, siehst du ihn schon wieder springen. Nur diesmal läuft er nach dem Losreißen in Richtung Straße. 🚗
 
 Du nimmst dir für Samstag einen Spaziergang vor und schläfst ab Donnerstag schlecht.
 
-Am Samstag sagst du dann doch ab. Das Wetter, die Zeit, irgendein Grund findet sich immer.
+Am Samstag sagst du dann doch ab. Das Wetter, die Zeit, irgendein Grund findet sich immer. 🤷‍♀️
 
 Merkst du, was da passiert ist? Die Anspannung kommt gar nicht mehr von Carlo. Sie kommt von den Bildern in deinem Kopf.
 
-Und dafür schäme dich bitte kein bisschen. Dein Kopf will dich nur beschützen. Er zeigt dir die Bilder, weil du auf eine Frage noch keine Antwort hast: Was mache ich, wenn es wirklich passiert?
+Ich weiß, das ist total frustrierend, aber zumindest will dein Kopf dich nur beschützen.
 
-Genau diese Antwort kannst du dir holen. Und dann verlieren die Bilder ihre Macht.
+Ein großer Hebel für mehr Sicherheit ist auf jeden Fall, in jedem Moment zu wissen, wie dein Pferd sich gerade fühlt und wie viel Stress es hat.
 
-Es kann so viel leichter werden:
+Mit dieser Fähigkeit kann es so viel leichter werden:
 ✅ Du weißt in jeder Situation genau, was zu tun ist,
 ✅ du erkennst früh, wenn es deinem Pferd zu viel wird
-✅ und du gehst mit einem ruhigen Kopf vom Hof! 🥰
+✅ und du gehst ohne Kopfkino vom Hof! 🥳
 
-**Ich nehme die Vorsicht meiner Kundinnen sehr ernst. Sie ist keine Schwäche, sie zeigt, wie viel dir dein Pferd bedeutet.** Und mit einem Plan in der Tasche wird aus Vorsicht Souveränität.
+**Ich nehme die Vorsicht meiner Schülerinnen sehr ernst. Sie zeigt, wie viel dir dein Pferd bedeutet.** Und mit einem Plan in der Tasche wird aus Vorsicht Souveränität. 💪🏻
 
-Genau so einen Plan bekommst du in meinem Minikurs dem "Gelände-Schlüssel". Inklusive Notfall-Plan für den Moment, in dem dein Pferd doch mal stoppt oder hektisch wird.
+Genau so einen Plan bekommst du in meinem Minikurs dem "Gelände-Schlüssel".
 
-**Darin zeige ich dir, wie du dein Pferd draußen sicher einschätzt und mit ruhigem Kopf losgehst.**
+**Darin zeige ich dir, wie du sofort erkennst, wie es deinem Pferd geht und wie du dich damit so viel sicherer fühlst, dass dein Kopfkino sich von selbst ganz leise dreht.**
+
+Schau ihn dir hier an:
+
+[Button: Gib mir mal Infos zum Gelände-Schlüssel!]
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite kommst. Er beginnt für 3 Tage zu zählen, weil der Einführungspreis genau diese Zeit gültig ist. Nach den 3 Tagen wird es den Gelände-Schlüssel zu einem anderen Preis geben. Danke für dein Verständnis.
+
+[Foto: Anika mit Pferd]
+
+---
+
+## Loop 3, Mail 2 — Die Fassade im Stall
+
+**Status:** ✅ FINAL von Anika, in Devine als „3.2. Softmail G-S" angelegt (21.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
+
+**Betreff:** 🌳 „Kommst du mit ins Gelände?"
+**Vorschautext:** Bloß nicht. Schnell eine Ausrede finden.
+
+Samstagvormittag am Stall. Die Ausreitgruppe sattelt ihr Pferde und dann kommt die Frage, vor der Silke jedes Wochenende ein bisschen Bauchweh hat: *„Kommst du heute mit?"*
+
+*„Nee, wir machen heute Platzarbeit."*
+
+Letzte Woche war es *„Fritz hatte gestern erst Training"*.
+
+Die Woche davor *„mir ist es zu windig"*.
+
+Silke hat inzwischen eine kleine Sammlung an Ausreden. Und sie merkt genau, dass die anderen langsam aufhören zu fragen. 😅
+
+Was sie nie laut sagt: Sie traut sich mit Fritz alleine nicht vom Hof. Und in der Gruppe wird er so aufgeregt, dass sie schon nach hundert Metern umdrehen will. 💥
+
+Abends scrollt sie durch die Stallgruppe. Ausritt-Fotos von schönen Waldwegen, alle strahlen. Silke tippt ein Herz und legt das Handy weg. 💔
+
+Vielleicht kennst du diese Fassade. Nach außen hast du alles im Griff, aber in dir drinnen sieht es ganz anders aus. Da sehnst du dich entspannt mit ins Gelände zu gehen, aber deine Unsicherheit blockiert dich einfach.
+
+Ich möchte dir heute etwas mitgeben: Du schuldest niemandem im Stall eine Erklärung. Und du musst auch niemanden einweihen, um deine Situation zu ändern.
+
+Eigentlich kann es so entspannt sein:
+✅ Du übst mit deinem Pferd mit der Annäherungs- und Rückzugsstrategie, um überhaupt entspannt vom Hof zu kommen.
+
+✅ Dadurch lernst du zu erkennen, wie dein Pferd sich gerade fühlt und ob er Stress hat.
+
+✅ Du lernst, wie du dein Pferd aus dem Stress herausholst und wieder herunterfährst.
+
+✅ Du kannst alleine den Hof verlassen und dich endlich auch der gemütlichen Samstagsgruppe anschließen. 🌳
+
+**Bei mir muss sich keine Frau dafür rechtfertigen, dass sie vorsichtig ist.** Ich arbeite jeden Tag mit Frauen, die genau da standen und ihren Weg in ihrem eigenen Tempo gegangen sind und schlussendlich mit ihrem Pferd die wunderschöne Natur genießen. 🌸
+
+Deshalb ist mein Minikurs der "Gelände-Schlüssel" auch komplett online. Du gehst ihn für dich durch, Schritt für Schritt, ganz in deinem Tempo oder ohne, dass es im Stall jemand mitbekommen muss.
+
+**Darin zeige ich dir, wie du so viel Sicherheit mit deinem Pferd bekommst, dass du keine Ausreden mehr brauchst, sondern die erste bist, die samstags mit ihrem Pferd den Hof verlassen hat.**
 
 Schau ihn dir hier an:
 
@@ -430,45 +484,50 @@ Deine Anika
 
 PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 Tage Zeit zum Einführungspreis zu buchen. Hast du noch nicht draufgeklickt, dann hast du womöglich Glück und das Fenster hat für dich noch nicht begonnen. [hier klicken und herausfinden → AUSLÖSER-LINK]
 
-[Foto: Anika mit Pferd]
+⚠️ Anmerkungen an Anika (Chat 21.09.): „Die Ausreitgruppe sattelt ihr Pferde" → vermutlich „satteln ihre Pferde"; „ganz in deinem Tempo oder ohne, dass es im Stall jemand mitbekommen muss" → vermutlich „und ohne, dass".
 
 ---
 
-## Loop 3, Mail 2 — Die Fassade im Stall
+## Loop 3, Mail 3 — Erstes und letztes Pferd (behutsam)
 
-**Status:** Entwurf
+**Status:** ✅ FINAL von Anika, in Devine als „3.3. Softmail G-S" angelegt (21.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen. Am Mail-Ende: Foto Anika mit Pferd.
 
-**Betreff:** 🌳 Beim Schmied schauen alle zu
-**Vorschautext:** Und ausgerechnet heute zappelt er wieder.
+**Betreff:** 🌳 Weißt du noch, warum du dir ein Pferd gewünscht hast?
+**Vorschautext:** Bestimmt nicht für Runden auf dem Reitplatz.
 
-Fritz zappelt am Putzplatz hin und her, während der Schmied geduldig auf sein Hufeisen wartet.
+Auf deinem Handy gibt es ein Foto von dem Tag, an dem Paula 🐴 bei dir eingezogen ist.
 
-Die beiden Pferde daneben stehen wie angewurzelt.
+Du weißt noch genau, wie du abends dachtest: Jetzt geht es endlich los, das Traumleben mit dem eigenen Pferd. 💕
 
-Silke spürt die Blicke der anderen Einstellerinnen in ihrem Rücken und dann fällt auch noch der Spruch: „Du lässt ihm einfach alles durchgehen."
+Dieser Traum ist schon Jahre alt. Er war schon da, als du als Mädchen Pferdebücher verschlungen und dir Pferde auf jedes Schulheft gemalt hast.
 
-Silke lacht kurz mit und sagt: „Er hat heute einen schlechten Tag."
+Und jetzt ist Paula da. Dein erstes eigenes Pferd. Und wenn du ehrlich bist, wahrscheinlich auch dein letztes.
 
-Dabei würde sie am liebsten im Boden versinken.
+Denn du hast dich erst um deine Familie gekümmert, deine Kinder liebevoll großgezogen und jetzt wo sie aus dem Haus sind, möchtest du dir endlich diesen Traum erfüllen. 🐴
 
-Abends in der Stallgasse erzählen die anderen von ihren Ausritten. Als Silke dran ist, sagt sie: „Wir machen gerade viel Bodenarbeit."
+Genau deshalb wünschst du dir, dass ihr eure gemeinsame Zeit richtig zusammen genießt und all die schönen Dinge erlebt, die du dir schon immer ausgemalt hast.
 
-Was sie nicht sagt: Sie traut sich mit Fritz alleine nicht vom Hof.
+Du möchtest mit Paula Zuhause am Wochenende ausreiten und sie auch mit in den Urlaub nehmen und mit ihr durchs Watt reiten. 🌸
 
-Vielleicht kennst du diese Fassade. Nach außen ist alles im Griff und die Wahrheit bleibt zwischen dir und deinem Pferd.
+Nicht nur Putzplatz, Reitplatz, Koppel. Sondern richtig draußen unterwegs sein 🌳, die Jahreszeiten erleben 🍂❄️ und all die Momente sammeln, von denen du damals geträumt hast.
 
-Ich möchte dir heute etwas mitgeben: Du schuldest niemandem im Stall eine Erklärung. Und du musst auch niemanden einweihen, um das zu ändern.
+Vielleicht denkst du manchmal: Das wird schon noch, irgendwann.
 
-Es kann so entspannt sein:
-✅ Du übst mit deinem Pferd, wann und wie DU es willst,
-✅ ganz in deinem Tempo und ohne Zuschauer
-✅ und irgendwann erzählst du in der Stallgasse einfach von eurem Ausritt! 😍
+Aber im Moment kommst du mit Paula leider noch nicht einmal vom Hof herunter. Sie bekommst Stress, wenn sie merkt, dass es von den anderen Pferden weggeht und dadurch wirst du auch unsicher.
+Ein Teufelskreis. 🙈
 
-**Bei mir muss sich keine Frau dafür rechtfertigen, dass sie vorsichtig ist.** Ich arbeite jeden Tag mit Frauen, die genau da standen und ihren Weg in ihrem eigenen Tempo gegangen sind.
+Aber du musst zum Glück nicht warten, bis es von alleine besser wird. Denn das tut es meistens nicht. Du kannst den ersten Schritt jetzt gehen.
 
-Deshalb ist mein Minikurs der "Gelände-Schlüssel" auch komplett online. Du gehst ihn für dich durch, Schritt für Schritt, ohne dass es im Stall jemand mitbekommen muss.
+Denn es kann so schön werden:
+✅ Deinen Mädchentraum vom eigenen Pferd richtig ausleben,
+✅ gemeinsame Abenteuer draußen statt immer nur Reitplatzrunden
+✅ und Erinnerungen sammeln, die für immer bleiben! 🌸
 
-**Darin zeige ich dir, wie ihr zwei in eurem Tempo entspannt vom Hof kommt.**
+**Wenn sich eine Frau den Traum vom eigenen Pferd erfüllt, ist das für mich einer der schönsten Momente überhaupt.** Und ich möchte, dass dieser Traum nicht am Hoftor endet.
+
+Deshalb habe ich den "Gelände-Schlüssel" entwickelt.
+
+**In diesem Minikurs zeige ich dir, wie dein Pferd entspannt mit dir vom Hof ins Gelände geht und aus eurem Alltag gemeinsame Zeit in der Natur wird.** 🌳
 
 Schau ihn dir hier an:
 
@@ -482,50 +541,148 @@ PS: Sobald du auf den Link klickst, starten die 3 Tage, die dir den besten Preis
 
 [Foto: Anika mit Pferd]
 
+⚠️ Anmerkung an Anika (Chat 21.09.): „**Sie bekommst** Stress, wenn sie merkt, dass **es** von den anderen Pferden weggeht" → vermutlich „Sie bekommt Stress, wenn sie merkt, dass es von den anderen Pferden weggeht" (oder „dass sie … weggeht").
+
 ---
 
-## Loop 3, Mail 3 — Erstes und letztes Pferd (behutsam)
+# ✅ STATUS: Alle 9 Soft-Mails FINAL in Devine (21.09.2026)
 
-**Status:** Entwurf
+Nächste Schritte: Devine-Workflows verdrahten (Soft-Workflow mit Wait-Standard, Auslöser-Link, Sales-Workflow mit Tag + Entfernen-Aktion, Käufer-Ausschluss via ThriveCart-Tag), Hard-Sale-Mails schreibt Anika selbst. Danach nächstes Produkt nach demselben Modell.
 
-**Betreff:** 🌳 Weißt du noch, warum du dir ein Pferd gewünscht hast?
-**Vorschautext:** Bestimmt nicht für Runden auf dem Reitplatz.
+---
 
-Auf deinem Handy gibt es ein Foto von dem Tag, an dem Paula bei dir eingezogen ist.
+# Hard-Sale-Mails (schreibt Anika, hier exakt gesichert)
 
-Du weißt noch genau, wie du abends dachtest: Jetzt geht er endlich los, der Traum vom eigenen Pferd.
+## Salesmail 1 — Open
 
-Dieser Traum ist alt. Er war schon da, als du als Mädchen Pferdebücher verschlungen und dir Pferde auf jedes Schulheft gemalt hast.
+**Status:** ✅ FINAL von Anika, in Devine als „1. Salesmail Open G-S" angelegt (21.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
 
-Und jetzt ist Paula da. Dein erstes eigenes Pferd. Und wenn du ehrlich bist, wahrscheinlich auch dein letztes.
+**Betreff:** 🌳 Der Gelände-Schlüssel hat geöffnet
+**Vorschautext:** Timer ist aktiviert
 
-Genau deshalb wünschst du dir, dass ihr eure gemeinsame Zeit richtig lebt.
+Hey {{contact.first_name}},
 
-Nicht nur Putzplatz, Reitplatz, Koppel. Sondern draußen unterwegs sein, die Jahreszeiten erleben und all die Momente sammeln, von denen du damals geträumt hast.
+du hast soeben den Timer für den **Gelände-Schlüssel** aktiviert. 🥳
 
-Vielleicht denkst du manchmal: Das wird schon noch, irgendwann.
+Und dir damit für 3 Tage den besten Preis gesichert. Kein Trick, sondern ein Deal für alle, die schnell sind.
 
-Aber du musst nicht warten, bis es von alleine besser wird. Denn das tut es meistens nicht. Du kannst den ersten Schritt jetzt gehen, in eurem Tempo und ohne Druck.
+[Bild: Produkt-Mockup Gelände-Schlüssel mit Badge „Anmeldung geöffnet!"]
 
-Es kann so schön werden:
-✅ Den Mädchentraum vom eigenen Pferd ganz leben,
-✅ gemeinsame Abenteuer draußen statt immer nur Stallrunden
-✅ und Erinnerungen sammeln, die bleiben! 🌸
+Mit dem Gelände-Schlüssel **verlässt du in nur 2 Wochen entspannt mit deinem Pferd den Hof,** auch ohne den Pferdekumpel mitnehmen zu müssen.
 
-**Wenn sich eine Frau den Traum vom eigenen Pferd erfüllt, ist das für mich einer der schönsten Momente überhaupt.** Und ich möchte, dass dieser Traum nicht am Hoftor endet.
+➡️ [Hier geht´s zum Minikurs. → SALESPAGE-LINK]
 
-Deshalb habe ich den "Gelände-Schlüssel" gemacht.
+Ich freue mich so sehr, dass schon über **130 Freizeitreiterinnen** sich diesen Kurs gesichert haben, denn ich weiß aus eigener Erfahrung, was für eine großartige Tür sich plötzlich öffnet, wenn du dein Pferd einfach jederzeit schnappen und alleine loslaufen kannst. 🙏
 
-**Darin zeige ich dir, wie dein Pferd entspannt mit dir vom Hof ins Gelände läuft und aus eurem Alltag gemeinsame Zeit in der Natur wird.**
+Im **Gelände-Schlüssel** lernst du die Annäherungs- und Rückzugsstrategie und bekommst dafür sogar einen **2 Wochen-Plan** an die Hand.
 
-Schau ihn dir hier an:
+Mit dieser Methode weißt du zukünftig ganz genau, **wie es deinem Pferd geht und ob es Stress hat**. Und natürlich wie du deinem Pferd aus diesem Stress heraushilfst und es herunterfährst. 🧘‍♀️
 
-[Button: Gib mir mal Infos zum Gelände-Schlüssel!]
+Diese Fähigkeit verändert euer Zusammensein, denn auf einmal kommt es gar nicht mehr zu den Explosionen deines Pferdes, weil du diese kommen siehst und rechtzeitig reagieren kannst. 💪🏻
+
+Eine Erfolgsgeschichte ist z.B. Sarina, die mit ihrer Stute nach einem Umzug in einen neuen Stall endlich das Thema Gelände in Angriff nehmen konnte.
+
+**Sie hat während des 2-Wochen-Plans insgesamt nur 4x geübt und hat trotzdem direkt ihren ersten Minispaziergang mit entspanntem Pferd geschafft. 🥳**
+
+[Bild: Testimonial-Grafik „Endlich alleine vom Hof kommen!" mit Zitat: „Die Strategie funktioniert. Nach 2 Wochen und nur 2 Trainings pro Woche haben wir unseren ersten Minispaziergang geschafft." #Freizeitreiterin Sarina]
+
+Oder Katrin, die es **nach einem Losreißen** ihrer Stute sogar geschafft hat, dass ihr Liebling nun freiwillig den Hof verlassen und mit ihr die Umgebung erkunden möchte. 💕
+
+[Bild: Testimonial-Grafik mit Pferdefoto + Zitat: „Deine Methode hat mir Mut gemacht, dass ich es doch noch schaffen kann, nachdem meine Stute sich losgerissen und davongaloppiert ist und das Außen seither nur noch schrecklich war. Ich habe es geschafft, dass sie freiwillig vor das Hoftor gehen möchte. Wir können sogar auf dem Parkplatz kleine Runden drehen." Katrin S.]
+
+Wenn du bereit bist, genau einschätzen zu können, **wie dein Pferd sich gerade fühlt und es bei Stress souverän herunterzufahren**, ist der Gelände-Schlüssel der nächste Schritt für dich. 💪🏻
+
+➡️ [Hört sich gut an, zeige mir den Gelände-Schlüssel. → SALESPAGE-LINK]
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite kommst. Er beginnt für 3 Tage zu zählen, weil der Einführungspreis genau diese Zeit gültig ist. Nach den 3 Tagen wird es den Gelände-Schlüssel zu einem anderen Preis geben. Danke für dein Verständnis.
+[Foto: Anika mit Pferd]
+
+## Salesmail 2 — Einblick / Kurstour
+
+**Status:** ✅ FINAL von Anika, in Devine als „2. Salesmail Open G-S" angelegt (21.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
+
+**Betreff:** 🌳 Einblick in den Gelände-Schlüssel
+**Vorschautext:** Dafür wirst du mir danken 🙏
+
+Hey {{contact.first_name}},
+
+ich dachte mir, ich schicke dir heute nochmal kurz eine Erinnerung. Nicht zum Gelände-Schlüssel, sondern dazu, warum du gestern überhaupt auf die Infoseite geklickt hast.
+
+Denn dafür gab es ja einen Grund.
+
+Vielleicht war es der Wunsch endlich mit deinem Liebling 🐴 nach **Feierabend eine schöne Runde im Wald zu drehen und die Natur zu genießen.**
+
+Vielleicht war es auch die Vorstellung, dass du dein **Pferd dann ja sogar auch mit in den Urlaub an die Nordsee 🌸 mitnehmen und wunderschöne Strandausritte/ -spaziergänge genießen kannst.**
+
+Oder ganz einfach: du willst einfach mit deinem Pferd den Hof verlassen, wann immer DU es möchtest. **Ohne vorher ein Begleitpferd zu organisieren und Zeiten abzustimmen.**
+
+Da hat doch keiner Bock drauf... 🙈
+
+Damit du dir ein gutes Bild davon machen kannst, wie dir der Gelände-Schlüssel bei der Erreichung dieser Ziele hilft, nehme ich dich jetzt mit in einen komplette Video-Rundgang durch den Kurs. ⬇️
+
+[Bild: Screenshot der Kursplattform mit Willkommens-Video „Hallo und herzlich willkommen im Kurs ‚Der Gelände-Schlüssel'"]
+
+[Hier die Kurstour anschauen. → VIDEO-/SALESPAGE-LINK]
+
+Falls du gespannt bist, wie es im Kurs aussieht, nachdem du gebucht hast, schaue dir unbedingt das Video an.
+
+Darin führe ich dich einmal im Kurs herum und zeige dir, was dich Geniales erwartet.
+
+Ich spreche von:
+
+🐴 super **knackigen Kursinhalten**, die du sofort umsetzen kannst (auch als Anfängerin und mit erstem eigenen Pferd)
+
+🐴 dem **erprobten 2-Wochen-Plan**, dem du nur Schritt für Schritt folgen brauchst und Schwupps stehst du mit deinem Pferd im Gelände.
+
+🐴 einer **genialen Bonuslektion**, mit der du die Strategie Annäherung und Rückzug auch geritten anwenden kannst.
+
+➡️ [Hört sich gut an, zeige mir den Gelände-Schlüssel. → SALESPAGE-LINK]
+
+By the way - der Kurs ist auch hervorragend für Pferdebesitzerinnen geeignet, **die mit ihrem Pferd vom Hof kommen, aber dann irgendwann das Problem haben, dass ihr Pferd sich losreißen oder keinen Schritt mehr weiter gehen möchte.**
+
+Im Kern geht es immer darum zu erkennen, wann dein Pferd Stress aufbaut und wie du diesen Stress wieder senken kannst.
+
+Ah und bevor ich es vergesse: du behältst nach Buchung Zugriff zum Kurs, solange er existiert (aka "lebenslang" ). 👵🏻
+
+Aber ich verspreche dir, diesen Kurs willst du nicht in deinem Konto verstauben lassen, den setzt du direkt um. 🔥
+
+➡️ [Genau das brauche ich! → SALESPAGE-LINK]
+
+Solltest du noch irgendwelche Fragen zum Kurs haben, antworte mir einfach auf diese Mail und du bekommst direkt eine Antwort. 💌
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+P.S. In dieser Mail gebe ich dir eine Kurstour durch den Gelände-Schlüssel, den du [hier → SALESPAGE-LINK] zum besten Preis sichern kannst.
 
 [Foto: Anika mit Pferd]
+
+⚠️ Anmerkung an Anika (Chat 21.09.): „nehme ich dich jetzt mit in **einen komplette** Video-Rundgang" → „einen kompletten Video-Rundgang".
+
+### Struktur-Learnings Salesmail 2
+
+1. **Tag-2-Winkel: Erinnerung an den Klick-Grund** („warum du gestern überhaupt auf die Infoseite geklickt hast") → 3 Wunsch-Bilder zurückspiegeln (Feierabendrunde, Nordsee-Urlaub, Unabhängigkeit)
+2. **Kurstour-Video als Herzstück:** „wie es im Kurs aussieht, nachdem du gebucht hast" (nimmt Katze-im-Sack-Einwand)
+3. **🐴 als Bullet-Emoji** für die Kurs-Inhalte (Inhalte / 2-Wochen-Plan / Bonuslektion geritten)
+4. **Zielgruppen-Erweiterung mit „By the way":** auch für die, die rauskommen, aber unterwegs Probleme haben
+5. **Kern-Mechanik in einem Satz wiederholt** (Stress erkennen und senken)
+6. **Lebenslang-Zugriff mit Augenzwinkern** („solange er existiert, aka ‚lebenslang'" 👵🏻) + Anti-Verstauben-Versprechen 🔥
+7. **Reply-Angebot für Fragen** („antworte mir einfach auf diese Mail")
+8. **3 CTAs:** Kurstour-Link, „Hört sich gut an…", „Genau das brauche ich!" + P.S. mit viertem Link
+
+### Struktur-Learnings Salesmail 1 (als Vorlage für weitere Salesmails)
+
+1. **Timer-Bestätigung als Opener:** „du hast soeben den Timer aktiviert" + Entwaffnung „Kein Trick, sondern ein Deal für alle, die schnell sind."
+2. **Produkt-Mockup-Bild** früh in der Mail
+3. **Kern-Versprechen fett** mit Zeitrahmen (2 Wochen) + Einwand-Entkräftung (ohne Pferdekumpel)
+4. **Erster CTA schon nach dem Versprechen** (➡️ + Textlink als Satz)
+5. **Social-Proof-Zahl:** „über 130 Freizeitreiterinnen"
+6. **Open Loop aus den Soft-Mails wird EINGELÖST:** Annäherungs- und Rückzugsstrategie + 2-Wochen-Plan werden benannt und erklärt, was sie können
+7. **2 echte, Gelände-spezifische Erfolgsgeschichten** (Sarina, Katrin) mit Testimonial-Grafiken, jeweils ein fetter Ergebnis-Satz
+8. **Qualifizierungs-CTA zum Schluss:** „Wenn du bereit bist, … ist der Gelände-Schlüssel der nächste Schritt für dich."
+9. **CTA-Text in Kundinnen-Sprache:** „Hört sich gut an, zeige mir den Gelände-Schlüssel."
+10. Kein PS, kein konkreter Preis in der Mail (nur „bester Preis" + Timer-Bezug)

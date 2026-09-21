@@ -64,6 +64,31 @@
 - **Werte-Satz mit Ziel-Zusatz:** „…in der richtigen Reihenfolge, die genau auf mein Ziel hinführt."
 - **Betreff-Format mit angedeutetem Cliffhanger:** Betreff „100 gespeicherte Tipps…" + Vorschautext führt den Satz weiter „und was hat's gebracht?"
 
+## Learnings aus Softmail 3.1 Backend-Funnel (Anikas Final-Version, 21.09.2026)
+- **Devine-Titel-Konvention mit Produktkürzel:** „3.1. Softmail G-S"
+- **„Schülerinnen" statt „Kundinnen"** in Anikas Selbstbeschreibung
+- **Mechanik-Fokus aufs Pferd-Lesen statt Notfall-Plan:** Der Hebel ist „in jedem Moment wissen, wie dein Pferd sich fühlt und wie viel Stress es hat", NICHT „was mache ich, wenn es passiert" (kein Angst-Verstärker in der Angst-Mail)
+- **Frustration benennen statt Scham thematisieren:** „Ich weiß, das ist total frustrierend, aber zumindest will dein Kopf dich nur beschützen." (mein „schäme dich bitte kein bisschen" flog raus)
+- **Versprechen-Satz mit Folge-Kette:** „…wie du sofort erkennst, wie es deinem Pferd geht und wie du dich damit so viel sicherer fühlst, dass dein Kopfkino sich von selbst ganz leise dreht." (Kopfkino löst sich als Nebenwirkung, wird nicht direkt „behandelt")
+- **Deko-Emojis IN der Szene:** 🍂 🚜 🐴 🌱 🚗 direkt hinter den Bildwörtern
+- **Bullet-Intro variiert nach Mechanik:** „Mit dieser Fähigkeit kann es so viel leichter werden:"
+
+## Learnings aus Softmail 3.2 Backend-Funnel (Anikas Final-Version, 21.09.2026)
+- **Bullets dürfen die Methoden-Kette erzählen** (4 Bullets mit Leerzeilen dazwischen): Strategie anwenden → Pferd lesen lernen → Stress runterfahren → Ergebnis-Bild (Samstagsgruppe). Nicht nur Ergebnis-Bullets
+- **„Annäherungs- und Rückzugsstrategie" ist DER wiederkehrende Open-Loop-Begriff** über die Mails hinweg (auch in 1.3) — benennen, nie erklären
+- **Wörtliche Rede kursiv setzen** (Ausreden-Zitate)
+- **Fassade-Brücke ausformuliert:** „Nach außen hast du alles im Griff, aber in dir drinnen sieht es ganz anders aus" + Unsicherheit als Blockade benennen
+- **Versprechen-Satz als Identitäts-Flip:** „…dass du keine Ausreden mehr brauchst, sondern die erste bist, die samstags mit ihrem Pferd den Hof verlassen hat."
+- **Bullet-Intro-Varianten sammeln:** „Eigentlich kann es so entspannt sein:"
+
+## Learnings aus Softmail 3.3 Backend-Funnel (Anikas Final-Version, 21.09.2026)
+- **Lebensphasen-Kontext macht Endlichkeit warm statt drückend:** „erst um deine Familie gekümmert, Kinder liebevoll großgezogen und jetzt wo sie aus dem Haus sind, möchtest du dir endlich diesen Traum erfüllen"
+- **Träume ganz konkret ausbuchstabieren:** am Wochenende ausreiten, mit in den Urlaub, durchs Watt reiten (statt abstrakt „die Zeit richtig leben")
+- **Problem als Teufelskreis benennen** (Pferd gestresst → Mensch unsicher → „Ein Teufelskreis." als Ein-Wort-Absatz-Schluss)
+- **„entwickelt" statt „gemacht"** beim Produkt
+- **Bullet-Intro-Variante:** „Denn es kann so schön werden:"
+- **Jahreszeiten-Emojis als Bild:** 🍂❄️ mitten im Satz
+
 ## Struktur Teaser-E-Mail (Vorlage)
 1. Persönlicher Einstieg mit Beobachtung ("ich höre immer wieder...")
 2. Pain Point benennen — das Pferd ist immer explizit Teil davon
