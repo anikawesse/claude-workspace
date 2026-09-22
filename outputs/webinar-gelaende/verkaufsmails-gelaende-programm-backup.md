@@ -8,6 +8,7 @@
 - ✅ **Mail 1: Text/Bild-Mismatch behoben** (22.09.). Absatz handelt von **Katrin**; das anfangs falsch platzierte „Eva K."-Bild hat Anika in Devine ausgetauscht. (Mail 1 = Sarina + Katrin.)
 - Mail 2, Betreff-Emoji ist ein Baum 🌳 (kein Apfel) — passt zum Gelände, bleibt so.
 - Deadline-Wording je nach Sendetag prüfen (Mail 1 „bis Montagabend", Mail 2 „bis heute Abend").
+- Mail 3, Tippfehler: „die Seele baumeln **lasse**" → „baumeln **lassen**". Redewendung „7 Meilen Stiefeln" = eigentlich „Siebenmeilenstiefeln" (Anikas lockere Variante, optional).
 
 ---
 
@@ -166,6 +167,135 @@ Kein Interesse am Gelände-Programm? Das ist völlig in Ordnung. Klick einfach h
 
 ---
 
-## Mail 3–7 — folgen (Frühbucher-Ende, Kursinhalte, FAQ, Einwand, Lastcall)
+## Mail 3 — „3. Verkaufsmail Deadline Frühbucher"
+
+**Betreff:** (im Screenshot nicht erfasst)
+
+Nur ganz kurz, weil die Uhr tickt. ⏰
+
+Heute um Mitternacht läuft dein Schnellentscheider-Bonus fürs Gelände-Programm aus. Danach gibt es ihn nicht mehr.
+
+Das sicherst du dir, wenn du dich bis dahin entscheidest:
+
+🎁 Ein persönliches Tiergespräch mit mir per Zoom.
+
+Wir stellen alle Fragen, auf die du schon immer eine Antwort haben wolltest und bringen dadurch euer Geländetraining mit 7 Meilen Stiefeln voran. 👍🏻
+
+[Bild: Anika am Laptop auf dem Sofa]
+
+Stell dir kurz vor, wie es sich anfühlt, ab nächster Woche mit einem klaren Plan ins Gelände zu gehen. Kein Theater mehr am Hoftor, kein Kopfkino, einfach im Gelände die Seele baumeln lasse. 🌳🧍
+
+[Link] ➡️ Ja, ich sichere mir meinen Platz im Gelände-Programm:
+
+[Button: Ab geht´s zum Gelände-Programm!]
+
+[Box] Du bist dir noch nicht sicher, ob das Programm zu euch passt?
+
+Dann lass uns telefonieren. Wenn du dir bis Mitternacht einen Termin aussuchst, zählt das noch für deinen Schnellentscheider-Bonus. 📞
+
+[Button: Mit Anika telefonieren.]
+
+Um Mitternacht ist Schluss mit dem Bonus. ⏳
+
+Bis gleich auf der anderen Seite?
+
+Deine Anika 🐴
+
+[Bild: Anika mit Schimmel]
+
+Kein Interesse am Gelände-Programm? Das ist völlig in Ordnung. Klick einfach hier und du bekommst keine weiteren Mails zu dieser Aktion. Du bleibst dabei ganz normal bei mir im offiziellen Newsletter.
+
+---
+
+## Mail 4 — „4. Verkaufsmail Programminhalte"
+
+**Betreff:** 🌳📋 Kurseinblicke ins Gelände-Programm
+**Vorschautext:** Zahlen, Daten, Fakten
+
+Hey {{contact.first_name}},
+
+wie geht es dir inzwischen mit dem Webinar, jetzt wo du ein paar Nächte drüber geschlafen hast?
+
+Ich weiß, es war eine Menge Input. Deshalb fasse ich dir heute in Ruhe zusammen, was du im Gelände-Programm alles bekommst. Damit du eine ganz klare Entscheidung treffen kannst.
+
+Damit du dir ein gutes Bild machen kannst, habe ich dir einen kompletten Video-Rundgang durch mein Gelände-Programm aufgenommen:
+
+[Video: Kurstour Gelände-Programm]
+
+[Link] ➡️ Hier die Kurstour starten.
+
+Im Webinar hast du die drei Schritte kennengelernt, die dich entspannt ins Gelände bringen.
+
+Du wirst zum Sicherheitsanker ⚓, ihr kommt alleine vom Hof 🏡 und du weißt in jedem Schreckmoment 💥 genau, was zu tun ist.
+
+Genau diese drei Schritte bekommst du im Programm komplett an die Hand, Schritt für Schritt begleitet.
+
+Das ist jetzt für alle, die Zahlen, Daten, Fakten lieben. 🤓
+
+**Das steckt alles drin:**
+
+✅ Modul „Dein Selbstbewusstsein stärken": Mentaltraining, das dein Kopfkino zum Schweigen bringt, damit du selbst zum ruhigen Sicherheitsanker wirst. (Wert 399 €)
+
+✅ Video-Kurs „Der Gelände-Schlüssel" (4 Module): dein Fundament, um alleine vom Hof zu kommen. (Wert 197 €)
+
+✅ Die 3-Zonen-Methode mit Schritt-für-Schritt-Plan, damit ihr euch ruhig von Hof und Herde lösen könnt. (Wert 79 €)
+
+✅ Dein 2-Wochen-Trainingsplan, um fokussiert in kurzer Zeit alleine vom Hof zu kommen. (Wert 49 €)
+
+✅ Umsetzungs-Workbook, damit du am Ball bleibst und deine Fortschritte festhältst. (Wert 39 €)
+
+✅ Checkliste „Bereit fürs Gelände", damit du genau weißt, wann es losgehen kann. (Wert 29 €)
+
+✅ Video-Kurs „Gelände sicher meistern": um dein Pferd jederzeit unter Kontrolle zu haben. (Wert 197 €)
+
+✅ Deine Notfallstrategien: für Verkehr, fremde Tiere und Schreckmomente wie Losreißen, Steigen und Co. (Wert 79 €)
+
+✅ Checkliste Stress-Signale, damit du frühzeitig erkennst, wann dein Pferd sich anspannt und du es herunterfahren kannst. (Wert 29 €)
+
+Und weil du das nicht allein durchziehen sollst, begleite ich dich persönlich:
+
+✅ Wöchentliche Live-Calls mit mir: Ich beantworte alle deine Fragen und schaue mit dir gemeinsam Videoausschnitte aus deinem Training an. (Wert 497 €)
+
+✅ Begleit-Community: Stelle jederzeit deine Fragen und ich antworte dir persönlich, auch zwischen den Calls. (Wert 197 €)
+
+Dazu kommen deine Boni obendrauf:
+
+🎁 Das Anti-Schreck-Paket, um das Selbstbewusstsein deines Pferdes zu stärken (30 Strategien). (Wert 399 €)
+
+🎁 Chill-Rezepturen, um dein Pferd mit 7 Kräutern und 6 Bachblüten innerlich zu entspannen. (Wert 37 €)
+
+🎁 Exklusiver VIP-Zugang vor Ort: ein persönlicher Aufenthalt mit deinem Pferd bei mir auf dem Hof.
+
+Das macht zusammen einen Gesamtwert von über 2.200 €.
+
+Deinen Platz bekommst du nur noch in dieser Runde für einmalig 549 € oder ganz bequem in Teilzahlungen über Klarna ab 49€ mtl.
+
+[Button: Ab geht´s zum Gelände-Programm!]
+
+Und damit du dich rundum sicher fühlst, gehst du gleich doppelt kein Risiko ein (kann man das so schreiben?... du weißt gleich, was ich meine 🥰):
+
+🔵 **Deine 14-Tage-Zufriedenheits-Garantie:** Wenn du in den ersten [14 Tagen merkst, es passt nicht,] sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.
+
+⭐ **Meine „Entspannt-vom-Hof"-Garantie:** Ich begleite dich so lange KOSTENLOS weiter, bis du dein Ziel wirklich erreicht hast. Du füllst dafür nur deine Erfolgstracker aus und setzt die Inhalte Schritt für Schritt um. Dein Ziel ist erreicht, sobald du mit deinem Pferd rund 10 Minuten alleine im Gelände unterwegs warst und ihr gemeinsam entspannt wieder am Hof angekommen seid.
+
+Also wie cool ist das denn bitte???
+
+Du hast also mein Wort, dass wir dein Pferd gemeinsam sicher nach draußen bringen.
+
+Du möchtest vorher noch mit mir sprechen? Dann lass uns telefonieren: ☎️
+
+[Button: Mit Anika telefonieren.]
+
+Ich freue mich auf dich.
+
+Deine Anika 🐴
+
+**P.S.** Die Türen zum Gelände-Programm sind noch bis Donnerstag offen. Danach schließt die Pilotrunde.
+
+[Bild: Anika mit Schimmel]
+
+---
+
+## Mail 5–7 — folgen (FAQ, Einwand, Lastcall)
 
 _Noch nicht abgetippt. Kommen, sobald Anika die Screenshots schickt._
