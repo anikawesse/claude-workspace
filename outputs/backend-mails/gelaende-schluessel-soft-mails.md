@@ -663,6 +663,149 @@ P.S. In dieser Mail gebe ich dir eine Kurstour durch den Gelände-Schlüssel, de
 
 ⚠️ Anmerkung an Anika (Chat 21.09.): „nehme ich dich jetzt mit in **einen komplette** Video-Rundgang" → „einen kompletten Video-Rundgang".
 
+## Salesmail 3 — Deadline / Einwand „Extremfall"
+
+**Status:** ✅ FINAL von Anika, in Devine als „3. Salesmail Open G-S" angelegt (22.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
+
+**Betreff:** 🌳 Mein Pferd ist ein Extremfall
+**Vorschautext:** Gerade dann hast du dein Glück verdient
+
+Hey {{contact.first_name}},
+
+heute ist der letzte Tag: **Nur noch 24 Stunden** kannst du dir noch den Gelände-Schlüssel zum besten Preis, für 27€, sichern. Danach schließen sich die Türen wieder. 🚪
+
+*(geändert 22.09.: vorher „Bis 23:59 Uhr" — auf 24-Stunden-Formulierung umgestellt, weil der Dynamic-Timer pro Person ab Klick läuft, nicht bis Mitternacht)*
+
+➡️ [Ja, ich bin dabei. → SALESPAGE-LINK]
+
+Vielleicht denkst du dir, mein Pferd ist einfach eine harte Nuss, da hilft nichts mehr. **Seit 8 Jahren hast du das Problem**, dass dein Liebling am Hof und den anderen Pferden klebt und das wird sich wohl nicht mehr ändern.
+
+Ganz ehrlich? Genau dann lohnt es sich.
+
+Du willst doch wohl nicht auf deinen **großen Pferdetraum im Gelände** verzichten? 🙈
+
+Schließlich steckst du eine Menge Geld und Zeit in dein Pferd, da solltest du auch auf die Weise die Zeit verbringen können, wie du dir das erträumt hast. 🌸
+
+Und genau da hilft dir der Gelände-Schlüssel weiter.
+
+Du lernst dort
+
+1. zu verstehen, **warum** dein Pferd gerade noch nicht mit dir alleine vom Hof gehen will.
+
+2. wie du schon am Hof **Vertrauen aufbaust** und euch perfekt auf´s Gelände vorbereitest.
+
+3. wie du eure **Komfortzone Schritt für Schritt erweiterst** und dabei immer ganz genau weißt, wie sich dein Pferd fühlt und **ob es Stress hat**.
+
+4. wie du mit dem 2 Wochen-Plan **das Verlassen des Hofes zur selbstverständlichen Routine machst.**
+
+Christine, eine Teilnehmerin des Gelände-Schlüssels, hatte mit ihrer Stute schon **Probleme einfach nur die Koppel mit den anderen Pferden zu verlassen.** Da ist am Verlassen des Hofs natürlich noch gar nicht zu denken.
+
+Aber ließ selbst, **innerhalb von 2 Tagen hatte sich das Problem erledigt.** ⬇️
+
+[Bild: Testimonial-Grafik Christine D. mit Pferdefoto: „Wir sind entspannt am zweiten Tag aus der Koppel gekommen. Normalerweise haben wir immer total das Theater am Koppelausgang. Mein Pferd ist einfach mit mir durchgelaufen, ohne sich aufzuregen." Christine D.]
+
+Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook.** 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als nächstes übst und du dich damit immer weiter vom Hof entfernst.
+
+➡️ [Ja, ich möchte mir den Minikurs sichern. → SALESPAGE-LINK]
+
+Nur noch 24 Stunden, danach sind die Türen zu.
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto: Anika mit Pferd]
+
+⚠️ Anmerkungen an Anika (Chat 22.09.): „Aber **ließ** selbst" → „lies selbst"; „auf´s" mit Akzent statt Apostroph; „Da ist **am** Verlassen des Hofs … nicht zu denken" → „Da ist **ans** Verlassen des Hofs … nicht zu denken". Timing-Fix ✅ (22.09.): Opener UND Schlusssatz von „bis 23:59 Uhr" auf „Nur noch 24 Stunden" umgestellt, passend zum personenbezogenen 72h-Timer.
+
+## Salesmail 4 — Last Call
+
+**Status:** ✅ FINAL von Anika, in Devine als „4. Salesmail Open G-S" angelegt (22.09.2026). Modelliert nach Sophie Beckmanns „Last Call"-Vorlage (Desktop-PDF S. 26-27). Zweite Mail am letzten Tag. Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
+
+**Betreff:** 🌳 Du willst es doch auch.
+**Vorschautext:** Ich habe dich durchschaut😏
+
+Hey {{contact.first_name}},
+
+ich mache es kurz: Es sind nur noch wenige Stunden bis die Türen zum **Gelände-Schlüssel** sich schließen.
+
+Falls du immer noch am Grübeln bist, ist jetzt der Zeitpunkt der Entscheidung gekommen.
+
+Hier noch ein kleiner Entscheidungshelfer👇🏻
+
+Nickst du hier mit dem Kopf, dann bist du im **Gelände-Schlüssel** goldrichtig.
+
+🌳 Du hast schon eine Menge ausprobiert, aber dein Pferd hat immer noch mega Stress, wenn es ins Gelände geht.
+
+🌳 Du wünschst dir einen klaren Plan, der dir genau sagt, was du wann mit deinem Pferd übst, statt weiterhin alleine auf dich gestellt zu sein.
+
+🌳 Du hast keine Lust mehr, für jede Runde erst ein Begleitpferd zu organisieren.
+
+🌳 Du willst jederzeit erkennen, wie sich dein Pferd gerade fühlt und wie du es aus dem Stress wieder herausholst.
+
+🌳 Du bist bereit, in kleinen Schritten zu üben, sanft und ganz ohne Druck. 💕
+
+Ja? Dann sei jetzt noch schnell dabei!
+
+➡️ [Ja, ich sichere mir noch schnell den Gelände-Schlüssel. → SALESPAGE-LINK]
+
+Wenn du endlich mit deinem Pferd losziehen willst, wann immer DU es möchtest und aufhören willst zu hoffen, dass es von alleine besser wird: Dann sehe ich dich gleich im Kurs.
+
+*„**Die Strategie funktioniert.** **Nach 2 Wochen und nur 2 Trainings pro Woche haben wir unseren ersten Minispaziergang geschafft.**"* schreibt Sarina.
+
+*„**Wir sind entspannt am zweiten Tag von der Herde weg gekommen.** Mein Pferd ist einfach mit mir von der Koppel gegangen, ohne sich aufzuregen."* erzählt Christine.
+
+*„Ich habe es geschafft, **dass sie freiwillig vor das Hoftor gehen möchte.** Wir können sogar auf dem Parkplatz kleine Runden drehen."* freut sich Katrin.
+
+Ich freue mich auf dich und deinen Liebling! 🥰
+
+[Bild: Testimonial-Grafik „Ich fühle mich draußen viel sicherer!" mit Pferdefoto + Zitat: „Ich fühle mich jetzt viel sicherer im Gelände. Ich kann ruhig bleiben, auch wenn etwas unvorhergesehenes passiert, weil ich weiß, wie ich reagieren musst. Das hat alles verändert." #Freizeitreiterin Henriette]
+
+Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook.** 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als nächstes übst und du dich damit immer weiter vom Hof entfernst.
+
+➡️ [Ja, ich möchte mir den Minikurs sichern. → SALESPAGE-LINK]
+
+In 8 Stunden läuft dein Timer ab, danach sind die Türen endgültig zu. 🚪
+
+Und falls du merkst, dass es gerade nicht euer Thema ist, ist das auch völlig okay. Dann ignorier diese Mail einfach, das war meine letzte Erinnerung dazu.
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto: Anika mit Pferd]
+
+### Anikas Änderungen gegenüber dem Entwurf (Learnings)
+
+- **Betreff als Identitäts-Anspruch statt Standard-„Letzte Chance":** „Du willst es doch auch." + frecher Vorschautext „Ich habe dich durchschaut😏"
+- **🌳 statt ✅ als Bullet-Emoji** im Entscheidungshelfer (Marken-Emoji zieht sich durch)
+- **Kein Preis im Last-Call-Opener** (stand schon in Salesmail 3)
+- Checklisten-Punkt 1 umgebaut auf „mega Stress im Gelände" (breiter als nur Hoftor)
+- „Dann **sehe ich dich gleich im Kurs**" statt „komm rein" (konkreter nächster Moment)
+- **Viertes Testimonial als Grafik** (Henriette, „viel sicherer im Gelände") NACH den Text-Zitaten
+- **Workbook-Geschenk-Absatz** aus Salesmail 3 wiederholt
+- **Konkrete Restzeit:** „In 8 Stunden läuft dein Timer ab" (⚠️ setzt passenden Versandzeitpunkt voraus, siehe Anmerkung)
+
+⚠️ Anmerkung an Anika (Chat 22.09.): „In 8 Stunden" ist eine feste Zahl, die Restzeit variiert aber pro Person (Timer = 72h ab Klick, Mail-Versand zum Workflow-Zeitpunkt). Prüfen, ob der Versandzeitpunkt von Mail 4 so liegt, dass „8 Stunden" grob stimmt, sonst weichere Formulierung („nur noch wenige Stunden"). Im Henriette-Grafik-Zitat steht „wie ich reagieren musst" (vermutlich „muss").
+
+### Vorlage-Notizen (Sophie Beckmann, „Final Salesmail Vorlagen" PDF S. 25-27)
+
+- Last-Call-Aufbau: kurzer Einstieg mit Countdown → Entscheidung einfordern (auch „dagegen" ist ok) → Checkliste als Entscheidungshelfer (kleines Ja abholen) → CTA → „Wenn du…"-Frage (zweites Ja) → kurze Testimonials mit Zahlen → letzter CTA + Deadline
+- Am letzten Verkaufstag 2-3 Mails; **Klickrate soll von Mail zu Mail steigen**, sonst die Mail überarbeiten, die aus der Reihe tanzt
+- Keine „Druckmails" schreiben, auch wenn der Launch schlecht läuft
+- Referenz-Zahlen der Original-Mail: 46% Öffnungsrate, 5% Klickrate
+
+### Struktur-Learnings Salesmail 3
+
+1. **Deadline-Mail = Einwand-Mail:** Der schwerste Einwand („mein Pferd ist ein Extremfall / harte Nuss, seit 8 Jahren") wird zum Betreff und Aufhänger; Reframe „Genau dann lohnt es sich."
+2. **Preis wird ERSTMALS genannt** (27€) — Soft-Mails und Salesmail 1+2 blieben preisfrei
+3. **Türen-Frame** für die Deadline („danach schließen sich die Türen wieder" 🚪), Deadline doppelt: im Opener und als letzter Satz vor dem Gruß
+4. **Sunk-Cost-Argument:** „Schließlich steckst du eine Menge Geld und Zeit in dein Pferd…"
+5. **Nummerierte 4er-Lernliste** (warum verstehen → Vertrauen am Hof → Komfortzone + Stress erkennen → 2-Wochen-Plan als Routine)
+6. **Extremfall-Testimonial:** Christine kam nicht mal von der Koppel (schlimmer als die Leserin) → nach 2 Tagen gelöst; Beweis passend zum Mail-Einwand
+7. **Workbook als Geschenk** 🎁 kurz vor dem letzten CTA
+8. Kein PS; erster CTA schon nach dem Opener
+
 ### Struktur-Learnings Salesmail 2
 
 1. **Tag-2-Winkel: Erinnerung an den Klick-Grund** („warum du gestern überhaupt auf die Infoseite geklickt hast") → 3 Wunsch-Bilder zurückspiegeln (Feierabendrunde, Nordsee-Urlaub, Unabhängigkeit)
