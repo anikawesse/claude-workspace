@@ -9,6 +9,11 @@
 - Mail 2, Betreff-Emoji ist ein Baum 🌳 (kein Apfel) — passt zum Gelände, bleibt so.
 - Deadline-Wording je nach Sendetag prüfen (Mail 1 „bis Montagabend", Mail 2 „bis heute Abend").
 - Mail 3, Tippfehler: „die Seele baumeln **lasse**" → „baumeln **lassen**". Redewendung „7 Meilen Stiefeln" = eigentlich „Siebenmeilenstiefeln" (Anikas lockere Variante, optional).
+- Mail 5, Tippfehler: „die Teilnehmer**in** der ersten Runde" → „Teilnehmer**innen**" (Plural passt zu „haben"); „ein Telefonat **mir mit**" → „ein Telefonat **mit mir**".
+- Mail 6, Tippfehler: Vorschautext „die überraschende **Anwort**" → „**Antwort**"; „Dann **habe sie** in Phase 2 gelernt" → „**haben sie**" (Heike + Birgit).
+- ⚠️ **Mail 6, Countdown-Timer:** muss auf Cart-Close (Do 01.10., Mitternacht) zielen, damit „heute Abend schließen die Türen" am Sendetag zum Timer passt. Editor zeigt 205 Std (= 8 Tage vor Versand), das ist nur die Vorschau. Timer-Mini-Test nicht vergessen.
+- Mail 7, Tippfehler: „**P.S.Und**" → „**P.S. Und**" (Leerzeichen).
+- ⚠️ **Mail 8 (Last-Call), Timing:** „nur noch 4 Stunden" ist fester Text plus Countdown. Mail muss ~4 Std vor Cart-Close raus (Do 01.10., ~20:00) und der Timer auf Mitternacht zielen, sonst passt die Zahl nicht. Klein: „4 Stunden**,** bis die Türen" (Komma vor Nebensatz, optional).
 
 ---
 
@@ -274,7 +279,7 @@ Deinen Platz bekommst du nur noch in dieser Runde für einmalig 549 € oder gan
 
 Und damit du dich rundum sicher fühlst, gehst du gleich doppelt kein Risiko ein (kann man das so schreiben?... du weißt gleich, was ich meine 🥰):
 
-🔵 **Deine 14-Tage-Zufriedenheits-Garantie:** Wenn du in den ersten [14 Tagen merkst, es passt nicht,] sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.
+🔵 **Deine 14-Tage-Zufriedenheits-Garantie:** Wenn du in den ersten zwei Wochen merkst, dass das Programm doch nichts für dich ist, sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück. _(Satzmitte aus der identischen Garantie in Mail 5 ergänzt; im Mail-4-Screenshot war sie abgeschnitten.)_
 
 ⭐ **Meine „Entspannt-vom-Hof"-Garantie:** Ich begleite dich so lange KOSTENLOS weiter, bis du dein Ziel wirklich erreicht hast. Du füllst dafür nur deine Erfolgstracker aus und setzt die Inhalte Schritt für Schritt um. Dein Ziel ist erreicht, sobald du mit deinem Pferd rund 10 Minuten alleine im Gelände unterwegs warst und ihr gemeinsam entspannt wieder am Hof angekommen seid.
 
@@ -296,6 +301,241 @@ Deine Anika 🐴
 
 ---
 
-## Mail 5–7 — folgen (FAQ, Einwand, Lastcall)
+## Mail 5 — „5. Verkaufsmail FAQ"
 
-_Noch nicht abgetippt. Kommen, sobald Anika die Screenshots schickt._
+**Betreff:** 🌳🖊️ Dein Name fehlt auf meiner Liste
+**Vorschautext:** Wo bist du denn?
+
+Hey {{contact.first_name}},
+
+ich bin gerade nochmal die Teilnehmerinnenliste vom Gelände-Programm durchgegangen und dein Name war leider noch nicht dabei. 😔
+
+Ich habe mich gefragt: Warum?
+
+Vielleicht hältst du noch eine Frage zurück? Hier kommen die häufigsten, die in den letzten Tagen in meinem Postfach gelandet sind. Vielleicht ist deine ja auch dabei:
+
+❓ **„Spazierengehen klappt gut mit meinem Pferd. Aber beim Ausreiten habe ich Schwierigkeiten. Kann mir das Programm auch da weiterhelfen?"**
+
+Ich bin ehrlich, auf diese Antwort haben mich erst die Teilnehmerin der ersten Runde gebracht. Ich spreche hier ja hauptsächlich vom Spaziergang, aber es sind auch Teilnehmerinnen gestartet, die problemlos mit ihren Pferden am Boden unterwegs sind, sich aber im Sattel genauso sicher fühlen wollten.
+
+Es hat sich herausgestellt, dass das Programm hier wunderbar hilft. Denn bei ihnen liegt der Fokus darauf, sich selbst sicher und souverän zu fühlen und die verschiedenen Strategien zu kennen, mit denen sie ihr Pferd wieder unter Kontrolle bekommen.
+
+Solltest du dir da unsicher sein, reserviere dir einfach unten ein Telefonat mir mit. ⬇️ Dann sprechen wir persönlich über deine Herausforderungen. ☎️
+
+❓ **„Kann ich das wirklich alleine und online umsetzen?"**
+Ja, online funktioniert das ganz wunderbar. Das siehst du daran, dass mein Minikurs „Gelände-Schlüssel" ein reiner Selbstlernkurs ist und die ganzen Kundenerfolge genau daraus stammen. Und im Gelände-Programm bist du sogar in einem begleiteten Programm und hast mich an deiner Seite. In den wöchentlichen Live-Calls, mit meinen persönlichen Antworten in der Community und durch die gemeinsame Videoanalyse.
+
+❓ **„Ich habe wenig Zeit. Schaffe ich das?"**
+Die Einheiten im Training brauchen wirklich nicht lang zu sein. Gerade zu Beginn sind 15 Minuten völlig ausreichend. Mindestens 3 mal pro Woche solltest du dir zum Üben einplanen.
+
+❓ **„Funktioniert das auch bei meinem Pferd?"**
+Ja, egal ob jung, alt oder besonders schreckhaft. Die Verlasspferd-Methode arbeitet mit Vertrauen und Sicherheit und kann durch die kleinen Schritte von jedem Pferd gut umgesetzt werden.
+
+❓ **„Ich habe schon so viel probiert. Warum sollte es jetzt klappen?"**
+Weil es nicht daran lag, dass du zu wenig versucht hast, sondern an der Herangehensweise. Genau die änderst du hier, Schritt für Schritt und mit mir an deiner Seite.
+
+❓ **„Kann ich in Teilzahlungen zahlen?"**
+Ja, entweder einmalig 549 Euro oder ganz bequem z.B. über Klarna mit Teilzahlungen schon ab 49€ mtl.
+
+Ab der nächsten Runde kostet das Programm übrigens 749€. Jetzt kannst du also noch 200€ sparen und dir lieber einen schönen Wellnesstag davon gönnen. 😇🥰
+
+❓ **„Und was, wenn es doch nichts für mich ist?"**
+Dann bist du gleich doppelt abgesichert:
+
+🔵 **Deine 14-Tage-Zufriedenheits-Garantie:** Wenn du in den ersten zwei Wochen merkst, dass das Programm doch nichts für dich ist, sagst du mir Bescheid. Ich storniere deinen Zugang und erstatte dir dein Geld zurück.
+
+⭐ **Meine „Entspannt-vom-Hof"-Garantie:** Ich begleite dich so lange KOSTENLOS weiter, bis du dein Ziel wirklich erreicht hast. Du füllst dafür nur deine Erfolgstracker aus und setzt die Inhalte Schritt für Schritt um. Dein Ziel ist erreicht, sobald du mit deinem Pferd rund 10 Minuten alleine im Gelände unterwegs warst und ihr gemeinsam entspannt wieder am Hof angekommen seid.
+
+Deine Frage war nicht dabei? Dann antworte einfach direkt auf diese Mail und ich melde mich so schnell wie möglich bei dir zurück. ✨
+
+Und wenn du jetzt ready bist:
+
+[Link] ➡️ Ja, ich sichere mir meinen Platz im Gelände-Programm:
+
+[Button: Ab geht´s zum Gelände-Programm!]
+
+Du möchtest vorher lieber mit mir sprechen? Dann lass uns telefonieren. Such dir einfach einen Termin aus und ich rufe dich an. ☎️
+
+[Button: Mit Anika telefonieren.]
+
+Ich freue mich auf dich.
+
+Deine Anika 🐴
+
+**P.S.** Die Türen zum Gelände-Programm sind noch bis Donnerstag offen. Danach schließt die Runde.
+
+[Bild: Anika mit Schimmel]
+
+Kein Interesse am Gelände-Programm? Das ist völlig in Ordnung. Klick einfach hier und du bekommst keine weiteren Mails zu dieser Aktion. Du bleibst dabei ganz normal bei mir im offiziellen Newsletter.
+
+---
+
+## Mail 6 — „6. Verkaufsmail Einwand"
+
+**Betreff:** 🌳❓ Hilft mir das beim Ausreiten?
+**Vorschautext:** die überraschende Anwort  _(Tippfehler: Antwort)_
+
+[Countdown-Timer: Rest bis Cart-Close — Ziel Do 01.10., Mitternacht prüfen]
+
+Hey {{contact.first_name}},
+
+heute Abend schließen die Türen zum Gelände-Programm. Und ich merke, dass viele von euch noch eine bestimmte Frage durch den Kopf geht:
+
+**„Spazierengehen ist kein Problem, aber beim Ausreiten fühle ich mich oft unsicher.** Bin ich dann im Gelände-Programm auch richtig?" 🤔
+
+Diese Frage verstehe ich total, denn schließlich spreche ich ja hauptsächlich über den Spaziergang. 😉
+
+Ehrlich gesagt, hatte ich die Reiterinnen als Zielgruppe gar nicht so im Fokus, aber irgendwie kamen sie von alleine. 😅
+
+In der ersten Pilotrunde des Gelände-Programms hatte ich mehrere Teilnehmerinnen dabei, die mit Spaziergängen überhaupt keine Probleme hatten.
+
+**Aber beim Ausreiten fühlen sie sich unsicher,** weil sie nicht wussten, wie sie reagieren sollen, wenn ihr Pferd plötzlich zur Seite springt oder wie sie ihr Pferd auf engen Wegen beruhigen sollen, wenn nicht viel Platz für Volten und Co ist.
+
+Es hat sich herausgestellt, dass das Gelände-Programm auch ihnen großartig geholfen hat.
+
+Bei Heike und Birgit war zum Beispiel der Hauptfokus auf Phase 1, das **Selbstvertrauen stärken und das Kopfkino in den Griff bekommen.**
+
+Dann habe sie in Phase 2 gelernt, **schon die kleinsten Anzeichen für Stress zu erkennen und ihr Pferd wieder herunterzufahren.**
+
+Und in Phase 3 gibt es ja die ganzen **verschiedenen Notfallstrategien** für Trecker, Kühe, Schreckhaftigkeit etc.
+
+Dieses Gesamtpaket hat beiden super geholfen, sich auch im Sattel so wohl und sicher zu fühlen wie am Boden neben ihrem Pferd.
+
+🗣️ „Krass wie viel es verändert, wenn ich meine Gedanken unter Kontrolle bekomme. Gerade der Löschanker hilft mir da richtig gut. Hätte ich nicht gedacht. Leo ist jetzt viel ruhiger im Ganzen geworden und ich habe kaum noch Angst, dass er zur Seite springt." Heike (Teilnehmerin aus dem Gelände-Programm)
+
+[Button: Ab geht´s zum Gelände-Programm!]
+
+[Box] Heute um Mitternacht schließen die Türen. Danach ist erstmal Schluss.
+
+Wenn du noch Fragen hast, antworte einfach auf diese Mail.
+
+Ich freue mich auf dich und dein Pferd.
+
+Deine Anika 🐴
+
+[Bild: Anika mit Schimmel]
+
+---
+
+## Mail 7 — „7. Verkaufsmail Deadline Ende" (versteckter Bonus = Freiheit, nach Sophie-Vorlage S. 29-31)
+
+**Betreff:** (im Screenshot nicht erfasst) · Optionen: „Ich schenk dir noch was dazu, {{contact.first_name}}" · „Der Bonus, den ich noch gar nicht erwähnt habe"
+
+Hey {{contact.first_name}},
+
+während es sich die ersten Teilnehmerinnen schon im Kursbereich vom Gelände-Programm gemütlich machen und sich in der Gruppe vorstellen, verrate ich dir noch etwas.
+
+Etwas, das ich dir zusätzlich schenke, wenn du dir jetzt deinen Platz sicherst.
+
+[Link] ➡️ Hier geht's direkt zum Gelände-Programm.
+
+Und damit meine ich nicht die Boni, die sowieso mit dabei sind.
+
+✅ Nicht das Anti-Schreck-Paket,
+✅ nicht die Chill-Rezepturen
+✅ und auch nicht deinen VIP-Tag bei mir auf dem Hof.
+
+Sondern etwas, das auf keiner Angebotsseite steht:
+
+**Freiheit.**
+
+Das ist tatsächlich das, was mir meine Schülerinnen immer wieder sagen, wenn ich sie nach ihrem sehnlichsten Wunsch frage.
+
+Klar, wir trainieren hier „nur" dich und dein Pferd. Aber sobald du dein Pferd lesen kannst und in jedem Moment weißt, wie du deinem Liebling aus dem Stress heraus hilfst, passiert etwas mit dir:
+
+- Du ziehst einfach los, wann DU es willst, ohne vorher zehn Leute zu fragen, ob jemand mitkommt. 🤩
+- Denn du bist nicht mehr auf das brave Begleitpferd angewiesen, das gerade nie Zeit hat.
+- Du entdeckst mit deinem Pferd Wege, die du noch nicht einmal mit dem Fahrrad abgefahren bist und verspürst das Gefühl von Abenteuer. 😆
+- Und egal, mit welcher Situation ihr im Gelände konfrontiert werdet, du kennst genug Strategien, um jede Herausforderung sicher und souverän zu meistern. 💪🏻
+
+Das meine ich mit Freiheit. Und zwar schon in ein paar Wochen.
+
+Dafür musst du nur eines lernen: dein Pferd so fein zu lesen, dass du immer genau weißt, wie es sich fühlt und ob es Stress hat.
+
+Und genau das bringe ich dir Schritt für Schritt bei.
+
+[Link] ➡️ Ja, ich nehme das Gelände-Programm samt Freiheit dazu.
+
+Ganz ehrlich?
+
+Ich erinnere mich noch gut daran, wie sich das anfühlt, wenn dein Kopf dir am Hoftor schon zehn Katastrophen ausmalt und du lieber wieder umdrehst.
+
+Und ich erinnere mich genauso gut an das erste Mal, als ich einfach losgezogen bin und die Welt mit meinem Pferd wieder mir gehört hat. 💕
+
+[Link] ➡️ Uh, das will ich auch.
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika 🐴
+
+**P.S.** Und denk dran: Die Türen schließen heute Abend um Mitternacht. Danach steigt der Preis von 549 € auf 749 €.
+
+[Bild: Anika mit Schimmel]
+
+---
+
+## Mail 8 — „8. Verkaufsmail Deadline Ende" (Last-Call, nach Sophie-Vorlage S. 26-27)
+
+Zweite Mail am letzten Tag (~4 Std vor Cart-Close). **Betreff:** (im Screenshot nicht erfasst).
+
+[Countdown-Timer: Rest bis Cart-Close — Ziel Do 01.10., Mitternacht]
+
+Hey {{contact.first_name}},
+
+ich mache es kurz: Es sind nur noch 4 Stunden bis die Türen zum Gelände-Programm sich schließen.
+
+Falls du immer noch am Grübeln bist, ist jetzt der Zeitpunkt der Entscheidung gekommen.
+
+Hier noch ein kleiner Entscheidungshelfer 👇
+
+Nickst du hier mit dem Kopf, dann bist du im Gelände-Programm goldrichtig.
+
+🌳 Du hast schon eine Menge ausprobiert, aber dein Pferd hat immer noch mega Stress, wenn es ins Gelände geht.
+
+🌳 Deine Angst oder dein Kopfkino steht dir im Weg und lässt sich einfach nicht abschalten.
+
+🌳 Du willst in jedem Schreckmoment wissen, was zu tun ist, statt nur zu hoffen, dass es schon gut geht.
+
+🌳 Du wünschst dir einen klaren Plan, der dir genau sagt, was du wann mit deinem Pferd übst, statt weiterhin alleine auf dich gestellt zu sein.
+
+🌳 Du hast keine Lust mehr, für jede Runde erst ein Begleitpferd zu organisieren.
+
+🌳 Du willst jederzeit erkennen, wie sich dein Pferd gerade fühlt und wie du es aus dem Stress wieder herausholst.
+
+🌳 Du bist bereit dranzubleiben und lässt dir dabei gerne von mir persönlich helfen. 💕
+
+Ja? Dann sei jetzt noch schnell dabei!
+
+[Link] ➡️ Ja, ich sichere mir noch schnell das Gelände-Programm.
+
+Wenn du endlich mit deinem Pferd losziehen willst, wann immer DU es möchtest und jeder Situation im Gelände gewachsen sein willst: Dann sehe ich dich gleich im Kurs.
+
+„Die Strategie funktioniert. Nach 2 Wochen und nur 2 Trainings pro Woche haben wir unseren ersten Minispaziergang geschafft." schreibt Sarina.
+
+„Wir sind entspannt am zweiten Tag von der Herde weg gekommen. Mein Pferd ist einfach mit mir von der Koppel gegangen, ohne sich aufzuregen." erzählt Christine.
+
+„Ich habe es geschafft, dass sie freiwillig vor das Hoftor gehen möchte. Wir können sogar auf dem Parkplatz kleine Runden drehen." freut sich Katrin.
+
+„Meine Stute hat panische Angst vor Treckern und ist schon oft mit mir durchgegangen. Endlich habe ich jetzt einige Strategien an der Hand, mit denen ich sicherer an den Treckern vorbeikomme. Und meine Angst ist seitdem auch weniger geworden." berichtet Marin über ihre Fortschritte.
+
+„Wir schaffen es tatsächlich, den Hof zu verlassen und einige 100 Meter ins Gelände zu kommen." berichtet Ute.
+
+„Leo ist jetzt viel ruhiger geworden und ich habe kaum noch Angst, dass er zur Seite springt." sagt Heike.
+
+Ich freue mich auf dich und deinen Liebling! 🥳
+
+[Button: Ab geht´s zum Gelände-Programm!]
+
+Dank meiner „Entspannt-vom-Hof"-Garantie gehst du dabei kein Risiko ein. Ich begleite dich so lange kostenlos weiter, bis ihr euer Ziel erreicht habt. 🤗
+
+Und nur noch in dieser Runde gibt es meinen Einführungspreis von 549€. Danach steigt der Preis auf 749€.
+
+Ich würde mich riesig freuen, dich auf der anderen Seite zu begrüßen.
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika 🐴
+
+[Bild: Anika mit Schimmel]
+
+Kein Interesse am Gelände-Programm? Das ist völlig in Ordnung. Klick einfach hier und du bekommst keine weiteren Mails zu dieser Aktion. Du bleibst dabei ganz normal bei mir im offiziellen Newsletter.
