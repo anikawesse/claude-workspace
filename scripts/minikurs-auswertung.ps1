@@ -102,6 +102,19 @@ $ThriveCartDatenAb = [datetime]'2026-06-15'
 # Vor dem Stichtag daher weiter "blended" (alle Funnel-Verkaeufe).
 $PaidTrackingAb = [datetime]'2026-07-14'
 
+# Ab diesem Tag laufen die Ads auf die NEUE Salespage in ThriveCart (product-52,
+# Salespage und Checkout auf EINER Seite, eingebetteter Checkout). Umgestellt am
+# Abend des 23.09.2026 — der 23.09. selbst ist ein Mischtag (alte Devine-Seite +
+# Anikas Testaufrufe der neuen) und zaehlt deshalb noch nicht.
+# Folge ab hier: "Salespage Besucher" = Seitenaufrufe aus checkout-thrivecart.csv
+# (dort stehen ab diesem Tag die product-52-Zahlen). Devine faellt weg.
+# Anika nutzt product-52 NUR fuer Ads (bestaetigt 24.09.2026). Deshalb sind die
+# Aufrufe reiner Ads-Traffic (wie frueher die Devine-Ads-Seite), und JEDER Verkauf
+# mit base_product 52 gilt als Ads-Verkauf, auch ohne UTM-Markierung.
+# ⚠️ Wird die Seite je auch in Mails/Instagram verlinkt, stimmt beides nicht mehr.
+$NeueSalespageAb = [datetime]'2026-09-24'
+$NurAdsProdukt   = '52'
+
 # Gebuehren fuer die Zeile "Verdienst".
 # ThriveCart liefert die Gebuehren NICHT mit (17.07.2026 geprueft) -> nachgerechnet
 # aus echten Belegen, die Anika herausgesucht hat.
@@ -394,7 +407,9 @@ $verkaeufe = $transaktionen | ForEach-Object {
         Zeile    = $zeile
         Brutto   = $brutto
         Ust      = $ust
-        Bezahlt  = ($_.customer.passthrough.utm_medium -eq 'paid')
+        # product-52 ist die reine Ads-Seite (s.o. $NurAdsProdukt) -> immer Ads-Verkauf,
+        # auch wenn die UTM aus der Anzeigen-URL nicht ankommen sollte.
+        Bezahlt  = ($_.customer.passthrough.utm_medium -eq 'paid') -or ([string]$_.base_product -eq $NurAdsProdukt)
     }
 }
 
@@ -562,6 +577,12 @@ if (Test-Path $CheckoutDatei) {
             } catch { }
         }
     }
+}
+
+# Neue ThriveCart-Salespage (siehe $NeueSalespageAb): Seite = Checkout, also sind
+# die Checkout-Aufrufe ab dort zugleich die Salespage-Besucher.
+foreach ($tagC in @($checkout.Keys)) {
+    if ($tagC -ge $NeueSalespageAb) { $devine[$tagC] = $checkout[$tagC].Aufrufe }
 }
 
 # Break-even-CPA = Verdienst je Hauptprodukt-Verkauf. Liegt der tatsaechliche

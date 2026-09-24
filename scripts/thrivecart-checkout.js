@@ -38,6 +38,14 @@
  *         der Berechtigung) — das Produkt-Feld einzeln setzen.
  *   5. SCHRITT 2 unten ausfuehren  ->  gibt die fertigen CSV-Zeilen zurueck.
  *
+ * ⚠️ AB 24.09.2026: NEUE SALESPAGE product-52 (Salespage + eingebetteter Checkout
+ *    auf einer ThriveCart-Seite). Fuer Tage ab 24.09. die Zahlen von product-52
+ *    eintragen: in SCHRITT 2 die Vorlage mit
+ *      vorlage.replace('product=product-12', 'product=product-52')
+ *    umbauen (die product-12-Vorlage funktioniert dafuer genauso). Tage bis 23.09.
+ *    bleiben product-12. minikurs-auswertung.ps1 nimmt die Aufrufe ab 24.09.
+ *    zugleich als "Salespage Besucher" ($NeueSalespageAb).
+ *
  * WARUM DER AUFRUF ABGEHOERT UND NICHT NACHGEBAUT WIRD: "requested_stats" ist ein
  * verschachteltes Feld mit rund 30 Eintraegen, das das Dashboard aus den
  * Benutzereinstellungen zusammensetzt. Selbst gebaut antwortet der Server mit
