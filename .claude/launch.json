@@ -4,43 +4,89 @@
     {
       "name": "futterrechner",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "outputs/futterrechner", "-p", "3001", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        "outputs/futterrechner",
+        "-p",
+        "3001",
+        "--no-clipboard"
+      ],
       "port": 3001
     },
     {
       "name": "checklist-preview",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "outputs/gelaendeschluessel", "-p", "3003", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        "outputs/gelaendeschluessel",
+        "-p",
+        "3003",
+        "--no-clipboard"
+      ],
       "port": 3003,
       "autoPort": true
     },
     {
       "name": "gs-salespage-preview",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", ".claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel", "-p", "3004", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        ".claude/worktrees/xenodochial-booth-2d4a6a/outputs/gelaendeschluessel",
+        "-p",
+        "3004",
+        "--no-clipboard"
+      ],
       "port": 3004,
       "autoPort": true
     },
     {
       "name": "energetik-preview",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "outputs/energetik", "-p", "3005", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        "outputs/energetik",
+        "-p",
+        "3005",
+        "--no-clipboard"
+      ],
       "port": 3005,
       "autoPort": true
     },
     {
       "name": "offenstall-freebie-preview",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "outputs", "-p", "3006", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        "outputs",
+        "-p",
+        "3006",
+        "--no-clipboard"
+      ],
       "port": 3006,
       "autoPort": true
     },
     {
       "name": "content-maschine-preview",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "outputs/content-maschine", "-p", "3007", "--no-clipboard"],
+      "runtimeArgs": [
+        "serve",
+        "outputs/content-maschine",
+        "-p",
+        "3007",
+        "--no-clipboard"
+      ],
       "port": 3007,
       "autoPort": true
+    },
+    {
+      "name": "content-maschine-node",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/0064dbfd-4845-486e-83b4-0749935ee9b9/scratchpad/static-server.js",
+        "C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine",
+        "3008"
+      ],
+      "port": 3008
     }
   ]
 }

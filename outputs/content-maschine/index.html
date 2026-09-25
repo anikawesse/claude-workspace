@@ -183,8 +183,6 @@
   .pl-item.su .su-move button{border:1px solid var(--rose-dk);background:var(--white);border-radius:6px;width:22px;height:20px;font-size:12px;line-height:1;cursor:pointer;padding:0;color:var(--ink);}
   .pl-item.su .su-move button:hover{background:var(--rose);}
   .pl-item.su .badge{align-self:flex-start;}
-  .pl-item.su.sudone{opacity:.6;}
-  .pl-item.su.sudone .su-txt{text-decoration:line-through;}
   .todo-list{display:flex;flex-direction:column;gap:6px;}
   .todo-row{display:flex;align-items:center;gap:9px;padding:10px 12px;background:var(--white);border:1px solid var(--line);border-radius:10px;cursor:pointer;font-size:13.5px;}
   .todo-row:hover{border-color:var(--rose-dk);}
@@ -209,6 +207,29 @@
   .ig-subhook{font-weight:600;font-size:12.5px;margin-bottom:6px;}
   .ig-actions{font-size:12.5px;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
   .ig-date{padding:5px 8px;border:1px solid var(--line);border-radius:8px;font-size:12.5px;}
+  .post-checks{display:flex;flex-wrap:wrap;gap:6px;}
+  .pc-box{display:inline-flex !important;align-items:center;gap:7px;background:var(--white);border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:13px !important;font-weight:600 !important;text-transform:none !important;letter-spacing:0 !important;margin:0 !important;cursor:pointer;}
+  .pc-box input{width:auto !important;transform:scale(1.2);margin:0;}
+  .pc-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+  .pc-row span{font-size:11.5px;color:var(--muted);font-weight:600;}
+  .pc-chip{background:var(--white);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:600;}
+  .pc-chip.on{background:var(--ok);border-color:var(--ok);color:#fff;}
+  .pl-item.done{background:#dfeedd;border-color:#9cc39a;}
+  .pl-item.pl-ig{background:#eef1f5;border-color:#c5cfdb;}
+  .pl-checks{display:flex;gap:2px;margin-top:3px;}
+  .pl-checks button{flex:1;min-width:0;height:17px;padding:0;border:1px solid var(--rose-dk);background:var(--white);border-radius:4px;font-size:9.5px;font-weight:700;color:var(--muted);line-height:1;cursor:pointer;}
+  .pl-checks button.own{border-width:2px;border-color:var(--ink);}
+  .pl-checks button.on{background:var(--ok);border-color:var(--ok);color:#fff;}
+  .pl-checks button.on.own{border-color:#2f5a2e;}
+  .pl-legend{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;font-size:11.5px;color:var(--muted);}
+  .pl-lg{border-radius:6px;padding:2px 8px;border:1px solid;}
+  .pl-lg.open{background:var(--rose);border-color:var(--rose-dk);color:var(--ink);}
+  .pl-lg.done{background:#dfeedd;border-color:#9cc39a;color:var(--ink);}
+  .pl-lg.ig{background:#eef1f5;border-color:#c5cfdb;color:var(--ink);}
+  select.ig-kat{padding:4px 6px;border:1px solid var(--line);border-radius:8px;font-size:12px;background:var(--white);color:var(--ink);max-width:130px;}
+  select.ig-kat.none{color:var(--muted);border-style:dashed;}
+  .ig-subhook select.ig-kat{margin-left:6px;}
+  img.ig-mini{width:34px;height:42px;object-fit:cover;border-radius:5px;display:block;}
   img.ig-thumb{height:96px;width:auto;max-width:100%;border-radius:8px;object-fit:cover;margin-bottom:8px;display:block;}
   @media(max-width:760px){.pl-week{grid-template-columns:1fr;}.pl-day{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:center;}.pl-dayhead{border-bottom:0;border-right:1px solid var(--line);padding-right:8px;min-width:78px;}.pl-empty{margin:0;}}
   input[type=file]{display:none;}
@@ -316,15 +337,19 @@ const KATEGORIEN = ["Identität","Problem","Wahrheit","Lösung"];
 const KAT_ZIEL = {"Identität":50,"Problem":20,"Wahrheit":20,"Lösung":10};
 const HOOK_TYPEN = ["Eingeständnis","Kontrast","Geheimnis","Empörung","Tabu","Bedauern"];
 const REEL_FORMATE = ["Persönliche Story","Quick Tipp","Yapping","Reaction/Stitch","Kundenerfolge","Talking Head","B-Roll","Trend/Audio"];
-const CTA_ZIELE = ["—","Gelände-Schlüssel · Gelände/Schlüssel (27€)","Live-Webinar (Anmeldung)","Auto-Webinar · Verlasspferd/Videotraining","Futter-Fahrplan · Futterplan (47€)","Offenstall-Planer · Konzept (47€)","Masterclass · Muskeln/Masterclass"];
-const STATUS_REEL = ["Idee","Entwurf","Gedreht","Gepostet"];
-const STATUS_ALLG = ["Idee","Entwurf","Fertig","Geplant","Gepostet"];
+const CTA_ZIELE = ["—","Gelände-Schlüssel · Gelände/Schlüssel (27€)","Gelände-Quiz · Quiz/Plan (Freebie)","Live-Webinar (Anmeldung)","Auto-Webinar · Verlasspferd/Videotraining","Futter-Fahrplan · Futterplan (47€)","Offenstall-Planer · Konzept (47€)","Masterclass · Muskeln/Masterclass"];
+const STATUS_REEL = ["Idee","Entwurf","Gepostet"];
+const STATUS_ALLG = ["Idee","Fertig","Gepostet"];
 const VORLAGEN_ART = ["Hook-Formel","Story-Framework","Content-Idee","Launch-Post"];
 const ZWECKE = ["Neugierde","Engagement","Expertenstatus","Sales","Persönlich"];
 const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch","Launch"];
 const UNTERBEREICHE = ["Beziehung/Vertrauen","Training am Boden","Training im Sattel","Angst der Reiterin","Praxis im Gelände"];
 const FORMATE = ["Talking Head","B-Roll","Sonstiges"];
-const YAPPING_STATUS = ["Offen","Skript fertig","Gedreht","B-Rolls erstellt","Gepostet"];
+const YAPPING_STATUS = ["Offen","Skript fertig","Gepostet"];
+/* Gepostet/geplant-Häkchen pro Yapping-Thema (ein Thema → bis zu 4 Posts) */
+const POST_CHECKS = [{k:"yap",l:"Yapping",s:"Y"},{k:"broll",l:"B-Roll",s:"B"},{k:"karussell",l:"Karussell",s:"K"},{k:"short",l:"B-Roll Short",s:"S"}];
+/* Kategorien für die Instagram-Auswertung */
+const IG_KATS = ["Yapping","B-Roll","B-Roll Short","Karussell","Reel"];
 const opt = a => ["—",...a];
 
 const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',unterbereich:'b-kat',format:'b-format',gruppe:'b-quelle',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
@@ -390,6 +415,7 @@ const COLLECTIONS = {
     {key:"cta",label:"CTA-Ziel / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"caption",label:"Caption (für den Post)",type:"textarea",card:"notes",big:true},
     {key:"status",label:"Status",type:"seg",options:YAPPING_STATUS,card:"badge"},
+    {key:"gepostet",label:"✅ Gepostet / geplant",type:"checks"},
     {key:"videoLink",label:"🎥 Video-Link (Canva, zur Doku)",type:"text",card:"link"},
     {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
     {key:"susanneDatum",label:"📅 Susanne-Tag (Wochenplan B-Rolls)",type:"date",card:"date"},
@@ -429,8 +455,16 @@ let current={collection:null,id:null};
 let filters={};
 
 function load(){
-  try{const raw=localStorage.getItem("content-maschine-v2");if(raw)return Object.assign({},DEFAULT_DB,JSON.parse(raw));}catch(e){}
-  return Object.assign({},DEFAULT_DB);
+  try{const raw=localStorage.getItem("content-maschine-v2");if(raw)return migrate(Object.assign({},DEFAULT_DB,JSON.parse(raw)));}catch(e){}
+  return migrate(Object.assign({},DEFAULT_DB));
+}
+/* Alte Status „Gedreht"/„B-Rolls erstellt" gibt es nicht mehr */
+function migrate(db){
+  (db.yapping||[]).forEach(y=>{if(y.status==='Gedreht'||y.status==='B-Rolls erstellt')y.status='Skript fertig';});
+  (db.reels||[]).forEach(r=>{if(r.status==='Gedreht')r.status='Entwurf';});
+  (db.karussells||[]).forEach(k=>{if(k.status==='Entwurf')k.status='Idee';else if(k.status==='Geplant')k.status='Gepostet';});
+  if(!db.igKat||typeof db.igKat!=='object')db.igKat={};
+  return db;
 }
 function save(skipPush){if(!skipPush)DB._t=Date.now();try{localStorage.setItem("content-maschine-v2",JSON.stringify(DB));}catch(e){}if(!skipPush)schedulePush();}
 function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
@@ -439,25 +473,54 @@ function activeCount(col){return (DB[col]||[]).filter(x=>!x.archiv).length;}
 /* ===== Navigation ===== */
 const NAV=["dashboard","reels","yapping","karussells","hooks","vorlagen","ideen","planer","instagram","referenzen"];
 const NAV_META={dashboard:{icon:"📊",label:"Übersicht"},planer:{icon:"🗓️",label:"Planer"},instagram:{icon:"📷",label:"Instagram"},referenzen:{icon:"👤",label:"Referenzen"}};
+let currentView="dashboard";
 function renderTabs(){
   document.getElementById("tabs").innerHTML=NAV.map(id=>{
     const m=NAV_META[id]||COLLECTIONS[id];
     const cnt=COLLECTIONS[id]?`<span class="cnt">${activeCount(id)}</span>`:"";
-    const active=(document.querySelector(`.tab[data-nav="${id}"]`)?.classList.contains('active'))||id==='dashboard'&&!document.querySelector('.tab.active');
-    return `<button class="tab ${id==='dashboard'?'active':''}" data-nav="${id}" onclick="go('${id}')">${m.icon} ${m.label}${cnt}</button>`;
+    return `<button class="tab ${id===currentView?'active':''}" data-nav="${id}" onclick="go('${id}')">${m.icon} ${m.label}${cnt}</button>`;
   }).join("");
 }
-function go(id){
+function go(id,keepScroll){
+  if(!document.getElementById("view-"+id))id="dashboard";
+  currentView=id;
   document.querySelectorAll(".view").forEach(v=>v.classList.remove("active"));
   document.getElementById("view-"+id).classList.add("active");
   document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.nav===id));
-  window.scrollTo({top:0,behavior:"smooth"});
+  if(!keepScroll)window.scrollTo({top:0,behavior:"smooth"});
   if(id==="dashboard")renderDashboard();
   else if(id==="referenzen")renderReferenzen();
-  else if(id==="planer")renderPlaner();
-  else if(id==="instagram"){renderInstagram();loadIg();}
+  else if(id==="planer"){renderPlaner();loadIg(false,true);}
+  else if(id==="instagram"){renderInstagram();loadIg(false,true);}
   else renderCollection(id);
+  saveUI();
 }
+
+/* ===== Wo war ich? (überlebt Neuladen, z.B. nach App-Wechsel zu Edits am Handy) ===== */
+const UI_KEY="cm-ui-v1";
+let uiTimer=null;
+function writeUI(){
+  const ov=document.getElementById("overlay");
+  let modal=null;
+  if(ov&&ov.classList.contains("open")&&current.collection){try{modal={col:current.collection,id:current.id,draft:readForm(current.collection)};}catch(e){}}
+  try{localStorage.setItem(UI_KEY,JSON.stringify({view:currentView,filters,scroll:window.scrollY,planerMonth,igFilter,igKatFilter,modal}));}catch(e){}
+}
+function saveUI(){clearTimeout(uiTimer);uiTimer=setTimeout(writeUI,250);}
+function restoreUI(){
+  let ui=null;try{ui=JSON.parse(localStorage.getItem(UI_KEY)||"null");}catch(e){}
+  if(!ui){go("dashboard");return;}
+  if(ui.filters&&typeof ui.filters==="object")filters=ui.filters;
+  if(typeof ui.planerMonth==="number")planerMonth=ui.planerMonth;
+  if(typeof ui.igFilter==="string")igFilter=ui.igFilter;
+  if(typeof ui.igKatFilter==="string")igKatFilter=ui.igKatFilter;
+  go(ui.view||"dashboard",true);
+  const y=ui.scroll||0;setTimeout(()=>window.scrollTo(0,y),60);
+  const m=ui.modal;
+  if(m&&COLLECTIONS[m.col]&&(!m.id||DB[m.col].some(x=>x.id===m.id)))openModal(m.col,m.id,m.draft);
+}
+window.addEventListener("scroll",()=>saveUI(),{passive:true});
+window.addEventListener("pagehide",()=>{clearTimeout(uiTimer);writeUI();});
+document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="hidden"){clearTimeout(uiTimer);writeUI();}});
 
 /* ===== Collection Views ===== */
 function renderCollection(col){
@@ -526,10 +589,23 @@ function cardHTML(col,it){
     <h3 style="padding-right:${nBtns*34+2}px">${title}</h3>${body}
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
+    ${col==='yapping'?checksRowHTML(it):""}
     ${col==='yapping'?`<div class="makerow"><button onclick="copyYappingScript('${it.id}')">📋 Skript kopieren</button><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
     ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
+}
+/* Gepostet/geplant-Häkchen (Yapping) */
+function checksRowHTML(y){
+  const g=y.gepostet||{};
+  return `<div class="pc-row"><span>Gepostet / geplant:</span>${POST_CHECKS.map(c=>`<button type="button" class="pc-chip ${g[c.k]?'on':''}" onclick="event.stopPropagation();togglePosted('${y.id}','${c.k}')">${g[c.k]?'☑':'☐'} ${c.l}</button>`).join('')}</div>`;
+}
+function togglePosted(yid,k){
+  const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
+  y.gepostet=Object.assign({},y.gepostet||{});y.gepostet[k]=!y.gepostet[k];
+  save();reRender();
+  const c=POST_CHECKS.find(x=>x.k===k);
+  toast(y.gepostet[k]?`☑ ${c.l} gepostet/geplant`:`☐ ${c.l} wieder offen`);
 }
 function makeFrom(hookId,toCol){
   const src=DB.hooks.find(x=>x.id===hookId);if(!src)return;
@@ -548,7 +624,7 @@ function makeKarussellFromYapping(yid){
   const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
   const rest=[y.heroStory,y.kontext,y.learning,y.ctaText].filter(s=>s&&s.trim()).join('\n');
   const lines=[];if(y.hookS&&y.hookS.trim())lines.push(y.hookS.trim());splitSentences(rest).forEach(s=>lines.push(s));
-  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(y.frage||'').slice(0,60),hook:y.hookS||'',slides:lines.join('\n'),produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50),postDatum:y.postDatumKarussell||''};
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(y.frage||'').slice(0,60),hook:y.hookS||'',slides:lines.join('\n'),caption:y.caption||'',produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50),postDatum:y.postDatumKarussell||''};
   DB.karussells.push(item);save();renderTabs();go('karussells');openModal('karussells',item.id);
   toast('🎠 Karussell aus Yapping erstellt, Slides aufgeteilt');
 }
@@ -577,9 +653,22 @@ function copyKarussell(id){
   if(k.caption&&k.caption.trim()) t+='\n\nCAPTION:\n'+k.caption.trim();
   const meta=[k.produktbereich&&('Produktbereich: '+k.produktbereich),k.kategorie&&('Kategorie: '+k.kategorie),k.cta&&k.cta!=='—'&&('CTA: '+k.cta)].filter(Boolean).join(' | ');
   if(meta) t+='\n\n'+meta;
+  t+='\n\nKarten-ID: '+k.id;
   const fallback=()=>{const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);toast('📋 Für Canva kopiert ✓');};
   if(navigator.clipboard&&navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(()=>toast('📋 Für Canva kopiert ✓'),fallback); else fallback();
 }
+/* Canva-Link per Klick eintragen: contentanika.netlify.app/#canva=<Karten-ID>&url=<Canva-Link> */
+function applyCanvaHash(){
+  const h=location.hash.slice(1);if(!h.startsWith('canva='))return;
+  if(SB&&!SB_READY&&!syncSkipped)return; // erst nach dem Cloud-Abgleich eintragen
+  const p=new URLSearchParams(h),id=p.get('canva'),url=p.get('url')||'';
+  history.replaceState(null,'',location.pathname+location.search);
+  const k=(DB.karussells||[]).find(x=>x.id===id);
+  if(!k||!/^https:\/\/(www\.)?canva\.(com|link)\//.test(url)){toast('⚠️ Karussell-Karte oder Canva-Link nicht gefunden');return;}
+  k.medien=url;save();renderTabs();go('karussells');openModal('karussells',k.id);
+  toast('🔗 Canva-Link eingetragen ✓');
+}
+window.addEventListener('hashchange',applyCanvaHash);
 function toggleFav(col,id){
   const it=DB[col].find(x=>x.id===id);if(!it)return;
   it.favorit=!it.favorit;save();renderCollection(col);
@@ -590,13 +679,13 @@ function toggleDone(col,id){
   it.bearbeitet=!it.bearbeitet;save();renderCollection(col);
   toast(it.bearbeitet?'✅ Als bearbeitet abgehakt':'Haken entfernt');
 }
-function setFilter(col,key,val){filters[col]=filters[col]||{search:"",archiv:false};filters[col][key]=val;renderCollection(col);}
+function setFilter(col,key,val){filters[col]=filters[col]||{search:"",archiv:false};filters[col][key]=val;renderCollection(col);saveUI();}
 
 /* ===== Modal ===== */
-function openModal(col,id){
+function openModal(col,id,draft){
   current={collection:col,id:id||null};
   const cfg=COLLECTIONS[col];
-  const item=id?DB[col].find(x=>x.id===id):{};
+  const item=Object.assign({},id?DB[col].find(x=>x.id===id):{},draft||{});
   document.getElementById("modalTitle").textContent=(id?"✎ ":"＋ ")+cfg.single;
   document.getElementById("modalDel").style.display=id?"block":"none";
   document.getElementById("modalSusanne").style.display=col==='yapping'?"block":"none";
@@ -608,22 +697,25 @@ function openModal(col,id){
     if(fl.type==="select"){const cur=v||fl.options[0];return field(fl,`<select name="${fl.key}">${fl.options.map(o=>`<option ${o===cur?'selected':''}>${o}</option>`).join("")}</select>`);}
     if(fl.type==="bool") return `<div class="field"><div class="switch"><input type="checkbox" name="${fl.key}" ${v?'checked':''}><label style="margin:0;text-transform:none;letter-spacing:0;">${fl.label}</label></div></div>`;
     if(fl.type==="seg"){const cur=v||fl.options[0];return `<div class="field"><label>${fl.label}</label><div class="seg" data-seg="${fl.key}">${fl.options.map(o=>`<button type="button" class="${o===cur?'on':''}" onclick="pickSeg(this)">${o}</button>`).join("")}<input type="hidden" name="${fl.key}" value="${escAttr(cur)}"></div></div>`;}
+    if(fl.type==="checks"){const g=v||{};return `<div class="field"><label>${fl.label}</label><div class="post-checks">${POST_CHECKS.map(c=>`<label class="pc-box"><input type="checkbox" data-check="${fl.key}" value="${c.k}" ${g[c.k]?'checked':''}> ${c.l}</label>`).join('')}</div></div>`;}
     if(fl.type==="slides"){let arr=String(v||'').split('\n').map(s=>s.trim()).filter(Boolean);if(!arr.length)arr=[''];return `<div class="field"><label>${fl.label}</label><div class="slides-editor" id="slidesEditor">${arr.map((s,i)=>slideRowHTML(i+1,s)).join('')}</div><button type="button" class="add-slide" onclick="addSlideRow()">＋ Slide hinzufügen</button></div>`;}
     return "";
   }).join("");
   document.getElementById("overlay").classList.add("open");
+  saveUI();
 }
 function field(fl,inner){return `<div class="field"><label>${fl.label}${fl.required?' *':''}</label>${inner}</div>`;}
 function slideRowHTML(num,text){return `<div class="slide-row"><span class="slide-num">${num}</span><textarea class="slide-inp" rows="2">${escHTML(text)}</textarea><button type="button" class="slide-del" title="Slide löschen" onclick="removeSlideRow(this)">✕</button></div>`;}
 function addSlideRow(){const ed=document.getElementById('slidesEditor');const d=document.createElement('div');d.className='slide-row';d.innerHTML=`<span class="slide-num"></span><textarea class="slide-inp" rows="2"></textarea><button type="button" class="slide-del" title="Slide löschen" onclick="removeSlideRow(this)">✕</button>`;ed.appendChild(d);renumberSlides();d.querySelector('textarea').focus();}
-function removeSlideRow(btn){const r=btn.closest('.slide-row');r.parentNode.removeChild(r);renumberSlides();}
+function removeSlideRow(btn){const r=btn.closest('.slide-row');r.parentNode.removeChild(r);renumberSlides();saveUI();}
 function renumberSlides(){document.querySelectorAll('#slidesEditor .slide-num').forEach((el,i)=>el.textContent=i+1);}
-function pickSeg(btn){const w=btn.closest(".seg");w.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");w.querySelector("input[type=hidden]").value=btn.textContent;}
-function closeModal(){document.getElementById("overlay").classList.remove("open");}
+function pickSeg(btn){const w=btn.closest(".seg");w.querySelectorAll("button").forEach(b=>b.classList.remove("on"));btn.classList.add("on");w.querySelector("input[type=hidden]").value=btn.textContent;saveUI();}
+function closeModal(){document.getElementById("overlay").classList.remove("open");saveUI();}
 function readForm(col){
   const cfg=COLLECTIONS[col],form=document.getElementById("modalForm"),data={};
   cfg.fields.forEach(fl=>{
     if(fl.type==="slides"){data[fl.key]=[...document.querySelectorAll('#slidesEditor .slide-inp')].map(t=>t.value.trim()).filter(Boolean).join('\n');}
+    else if(fl.type==="checks"){const g={};form.querySelectorAll(`[data-check="${fl.key}"]`).forEach(c=>{g[c.value]=c.checked;});data[fl.key]=g;}
     else if(fl.type==="bool") data[fl.key]=form.querySelector(`[name="${fl.key}"]`).checked;
     else data[fl.key]=form.querySelector(`[name="${fl.key}"]`).value.trim();
   });
@@ -682,10 +774,12 @@ function renderTodo(){
   const today=localISO(new Date());
   const tasks=[];
   (DB.reels||[]).forEach(r=>{if(r.postDatum&&r.status!=='Gepostet')tasks.push({date:r.postDatum,icon:'🎬',label:`Reel „${r.titel||'(ohne Titel)'}" posten`,col:'reels',id:r.id});});
-  (DB.karussells||[]).forEach(k=>{if(k.postDatum&&k.status!=='Gepostet')tasks.push({date:k.postDatum,icon:'🎠',label:`Karussell „${k.titel||'(ohne Titel)'}" posten`,col:'karussells',id:k.id});});
+  (DB.karussells||[]).forEach(k=>{if(k.postDatum&&!karussellPosted(k))tasks.push({date:k.postDatum,icon:'🎠',label:`Karussell „${k.titel||'(ohne Titel)'}" posten`,col:'karussells',id:k.id});});
   (DB.yapping||[]).forEach(y=>{
-    if(y.postDatum&&y.status!=='Gepostet')tasks.push({date:y.postDatum,icon:'🎬',label:`Talking Head „${(y.frage||'').slice(0,55)}" in den Feed`,col:'yapping',id:y.id});
-    if(y.postDatumBroll&&y.status!=='Gepostet')tasks.push({date:y.postDatumBroll,icon:'🎞',label:`Besten B-Roll vom Hook „${(y.frage||'').slice(0,45)}" ins Feed teilen`,type:'broll',col:'yapping',id:y.id});
+    const g=y.gepostet||{};
+    if(y.postDatum&&!g.yap)tasks.push({date:y.postDatum,icon:'🎬',label:`Talking Head „${(y.frage||'').slice(0,55)}" in den Feed`,col:'yapping',id:y.id});
+    if(y.postDatumBroll&&!g.broll)tasks.push({date:y.postDatumBroll,icon:'🎞',label:`Besten B-Roll vom Hook „${(y.frage||'').slice(0,45)}" ins Feed teilen`,type:'broll',col:'yapping',id:y.id});
+    if(y.postDatumKarussell&&!g.karussell&&!yapKarussell(y))tasks.push({date:y.postDatumKarussell,icon:'🎠',label:`Karussell zu „${(y.frage||'').slice(0,50)}" posten`,col:'yapping',id:y.id});
   });
   const heute=tasks.filter(t=>t.date<=today).sort((a,b)=>a.date.localeCompare(b.date));
   const woche=tasks.filter(t=>t.date>today&&t.date<=addDays(today,7)).sort((a,b)=>a.date.localeCompare(b.date));
@@ -694,6 +788,10 @@ function renderTodo(){
   el.innerHTML=(heute.length?`<div class="todo-list">${heute.map(row).join('')}</div>`:`<div class="hint">Heute nichts fällig. Trag bei Reels, Karussells oder Yapping-Videos ein Post-Datum ein, dann taucht die Aufgabe hier automatisch am richtigen Tag auf.</div>`)
     +(woche.length?`<div class="todo-sub">Diese Woche noch</div><div class="todo-list soft">${woche.map(t=>`<div class="todo-row" onclick="${oc(t)}"><span class="todo-ic">${t.icon}</span><span class="todo-lbl">${escHTML(fmtDate(t.date))} · ${escHTML(t.label)}</span></div>`).join('')}</div>`:'');
 }
+/* Karussell-Karte ↔ Yapping-Thema (über gruppe) */
+function yapKarussell(y){const g=(y.frage||'').slice(0,50);return g?(DB.karussells||[]).find(k=>k.gruppe===g):null;}
+function karussellYap(k){return k.gruppe?(DB.yapping||[]).find(y=>(y.frage||'').slice(0,50)===k.gruppe):null;}
+function karussellPosted(k){if(k.status==='Gepostet')return true;const y=karussellYap(k);return !!(y&&y.gepostet&&y.gepostet.karussell);}
 function showBroll(yid){
   const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
   igFilter=(y.caption||'').trim().slice(0,40);
@@ -702,26 +800,62 @@ function showBroll(yid){
 }
 
 /* ===== Instagram-Zahlen (über Netlify-Funktion) ===== */
-let igData=null, igError=null, igLoading=false, igFilter='';
-function loadIg(force){
+let igData=null, igError=null, igLoading=false, igFilter='', igKatFilter='';
+const IG_STALE_MS=48*3600*1000; // spätestens alle 48 Std. frisch (Netlify-Credits sparen)
+function igRefresh(){if(currentView==='instagram')renderInstagram();else if(currentView==='planer')renderPlaner();}
+function loadIg(force,auto){
   if(igLoading)return;
-  if(igData&&!force){renderInstagram();return;}
-  igLoading=true;igError=null;renderInstagram();
+  if(!igData){try{const c=localStorage.getItem('cm-ig-cache3');if(c)igData=JSON.parse(c);}catch(e){}}
+  const stale=!igData||!igData.updated||(Date.now()-igData.updated>IG_STALE_MS);
+  if(!force&&!stale){igRefresh();return;}
+  if(auto&&location.protocol!=='https:')return; // lokale Vorschau: kein Abruf möglich
+  igLoading=true;igError=null;igRefresh();
   fetch('/.netlify/functions/instagram?days=120').then(r=>r.json()).then(j=>{
     igLoading=false;
     if(j&&j.items){igData=j;igError=null;try{localStorage.setItem('cm-ig-cache3',JSON.stringify(j));}catch(e){}}
     else{igError=(j&&j.error)?String(j.error):'Unbekannter Fehler beim Abruf.';}
-    renderInstagram();
-  }).catch(e=>{igLoading=false;igError='Instagram-Zahlen gibt es nur auf der Live-Seite (contentanika.netlify.app), nicht in der lokalen Vorschau.';renderInstagram();});
+    igRefresh();
+  }).catch(e=>{igLoading=false;igError='Instagram-Zahlen gibt es nur auf der Live-Seite (contentanika.netlify.app), nicht in der lokalen Vorschau.';igRefresh();});
+}
+/* Kategorie eines IG-Posts: von dir gewählt, sonst Karussell automatisch erkannt */
+function igKat(it){return (DB.igKat&&DB.igKat[it.id])||(it.mtype==='CAROUSEL_ALBUM'?'Karussell':'');}
+function setIgKat(id,val){DB.igKat=DB.igKat||{};if(val)DB.igKat[id]=val;else delete DB.igKat[id];save();renderInstagram();}
+function setIgKatGroup(hook,val){
+  if(!igData||!val)return;
+  DB.igKat=DB.igKat||{};
+  igData.items.filter(it=>!it.feed&&it.hook===hook).forEach(it=>{DB.igKat[it.id]=val;});
+  save();renderInstagram();toast('Kategorie „'+val+'" für die ganze Gruppe gesetzt');
+}
+function igKatSelect(it){const k=igKat(it);return `<select class="ig-kat ${k?'':'none'}" onchange="setIgKat('${it.id}',this.value)"><option value="">— Kategorie</option>${IG_KATS.map(x=>`<option ${x===k?'selected':''}>${x}</option>`).join('')}</select>`;}
+function setIgKatFilter(v){igKatFilter=v;renderInstagram();saveUI();}
+function igThumbCell(it){return it.thumb?`<img class="ig-mini" src="${escAttr(it.thumb)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`:'';}
+function igCompare(items){
+  const groups=[...IG_KATS,''].map(k=>{
+    const arr=items.filter(it=>igKat(it)===k);
+    if(!arr.length)return '';
+    const avg=f=>Math.round(arr.reduce((s,it)=>s+(Number(it[f])||0),0)/arr.length);
+    const lbl=k||'Ohne Kategorie';
+    const sel=igKatFilter&&(igKatFilter==='__none'?'':igKatFilter)===k;
+    return `<tr class="${sel?'ig-win':''}" style="cursor:pointer" onclick="setIgKatFilter('${k||'__none'}')"><td style="text-align:left">${escHTML(lbl)}</td><td>${arr.length}</td><td>${num(avg('views'))}</td><td>${num(avg('reach'))}</td><td>${num(avg('likes'))}</td><td>${num(avg('comments'))}</td><td>${num(avg('saved'))}</td><td>${num(avg('shares'))}</td></tr>`;
+  }).join('');
+  return `<div class="ig-group"><div class="ig-hook">📊 Vergleich nach Kategorie <span class="muted">(Durchschnitt pro Post · antippen zum Filtern)</span></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th style="text-align:left">Kategorie</th><th>Posts</th><th>Ø Aufrufe</th><th>Ø Reichw.</th><th>Ø Likes</th><th>Ø Komm.</th><th>Ø Gesp.</th><th>Ø Geteilt</th></tr></thead><tbody>${groups}</tbody></table></div></div>`;
+}
+function igSectionKat(items){
+  const want=igKatFilter==='__none'?'':igKatFilter;
+  const arr=items.filter(it=>igKat(it)===want).sort((a,b)=>b.views-a.views);
+  const lbl=want||'Ohne Kategorie';
+  if(!arr.length)return `<div class="hint">Noch keine Posts in „${escHTML(lbl)}". Ordne sie unten in „Alle" über das Kategorie-Feld zu.</div>`;
+  const rows=arr.map((it,i)=>`<tr class="${i===0&&arr.length>1?'ig-win':''}"><td>${i===0&&arr.length>1?'🏆':''}</td><td>${igThumbCell(it)}</td><td>${escHTML(fmtDate(it.date))}${it.feed?'':' 🧪'}</td><td class="ig-cap">${escHTML((it.caption||'(ohne Caption)').replace(/\s+/g,' ').trim().slice(0,50))}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td>${igKatSelect(it)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`).join('');
+  return `<div class="ig-group"><div class="ig-hook">${escHTML(lbl)} <span class="muted">(${arr.length} Posts · nach Aufrufen sortiert · 🧪 = Test-Reel)</span></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th></th><th></th><th>Datum</th><th>Caption</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th>Kategorie</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 function num(n){return (Number(n)||0).toLocaleString('de-DE');}
 function clearIgFilter(){igFilter='';renderInstagram();}
-function igCols(){return `<tr><th></th><th>Datum</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th></th></tr>`;}
-function igRow(it,win){return `<tr class="${win?'ig-win':''}"><td>${win?'🏆':''}</td><td>${escHTML(it.date)}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`;}
+function igCols(){return `<tr><th></th><th>Datum</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Gesp.</th><th>Geteilt</th><th>Kategorie</th><th></th></tr>`;}
+function igRow(it,win){return `<tr class="${win?'ig-win':''}"><td>${win?'🏆':''}</td><td>${escHTML(it.date)}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${num(it.saved)}</td><td>${num(it.shares)}</td><td>${igKatSelect(it)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`;}
 function igSectionFeed(feed){
   if(!feed.length)return '';
-  const rows=feed.map(it=>`<tr><td>${escHTML(it.date)}</td><td class="ig-cap">${escHTML((it.caption||'(ohne Caption)').replace(/\s+/g,' ').trim().slice(0,60))}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`).join('');
-  return `<div class="ig-group"><div class="ig-hook">📤 Feed <span class="muted">(${feed.length})</span></div><div class="ig-actions">Fehlende Feed-Posts als Karteikarten anlegen ab <input type="date" id="igBackfillFrom" value="2026-07-10" class="ig-date"> <button class="chip" onclick="backfillFeed()">➕ Anlegen</button></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th>Datum</th><th>Caption</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
+  const rows=feed.map(it=>`<tr><td>${igThumbCell(it)}</td><td>${escHTML(it.date)}</td><td class="ig-cap">${escHTML((it.caption||'(ohne Caption)').replace(/\s+/g,' ').trim().slice(0,60))}</td><td>${num(it.views)}</td><td>${num(it.reach)}</td><td>${num(it.likes)}</td><td>${num(it.comments)}</td><td>${igKatSelect(it)}</td><td><a href="${escAttr(it.url)}" target="_blank" rel="noopener">öffnen ↗</a></td></tr>`).join('');
+  return `<div class="ig-group"><div class="ig-hook">📤 Feed <span class="muted">(${feed.length})</span></div><div class="ig-actions">Fehlende Feed-Posts als Karteikarten anlegen ab <input type="date" id="igBackfillFrom" value="2026-07-10" class="ig-date"> <button class="chip" onclick="backfillFeed()">➕ Anlegen</button></div><div class="ig-scroll"><table class="ig-table"><thead><tr><th></th><th>Datum</th><th>Caption</th><th>Aufrufe</th><th>Reichw.</th><th>Likes</th><th>Komm.</th><th>Kategorie</th><th></th></tr></thead><tbody>${rows}</tbody></table></div></div>`;
 }
 function igSectionTrial(trial){
   if(!trial.length)return '';
@@ -729,7 +863,8 @@ function igSectionTrial(trial){
   const inner=Object.keys(groups).map(h=>{
     const arr=groups[h].slice().sort((a,b)=>b.views-a.views);
     const rows=arr.map((it,i)=>igRow(it,i===0&&arr.length>1)).join('');
-    return `<div class="ig-sub"><div class="ig-subhook">${escHTML(h||'(ohne Caption)')} <span class="muted">(${arr.length} ${arr.length===1?'Reel':'Varianten'})</span></div><div class="ig-scroll"><table class="ig-table"><thead>${igCols()}</thead><tbody>${rows}</tbody></table></div></div>`;
+    const grpSel=arr.length>1?` <select class="ig-kat" onchange="setIgKatGroup(this.dataset.h,this.value)" data-h="${escAttr(h)}"><option value="">ganze Gruppe als …</option>${IG_KATS.map(x=>`<option>${x}</option>`).join('')}</select>`:'';
+    return `<div class="ig-sub"><div class="ig-subhook">${escHTML(h||'(ohne Caption)')} <span class="muted">(${arr.length} ${arr.length===1?'Reel':'Varianten'})</span>${grpSel}</div><div class="ig-scroll"><table class="ig-table"><thead>${igCols()}</thead><tbody>${rows}</tbody></table></div></div>`;
   }).join('');
   return `<div class="ig-group"><div class="ig-hook">🧪 Test-Reels <span class="muted">(${trial.length})</span> · beste Variante 🏆</div>${inner}</div>`;
 }
@@ -777,14 +912,16 @@ function renderInstagram(){
     const feed=all.filter(it=>it.feed).sort((a,b)=>b.date.localeCompare(a.date));
     const trial=all.filter(it=>!it.feed);
     if(!feed.length&&!trial.length) body=`<div class="hint">Keine passenden Beiträge gefunden.${igFilter?' <button class="chip" onclick="clearIgFilter()">Filter löschen</button>':''}</div>`;
-    else body=igSectionFeed(feed)+igSectionTrial(trial);
+    else body=igCompare(all)+(igKatFilter?igSectionKat(all):igSectionFeed(feed)+igSectionTrial(trial));
   }
+  const katChips=`<div class="chips"><span class="chip-group-label">Kategorie</span>${['',...IG_KATS,'__none'].map(k=>`<button class="chip ${igKatFilter===k?'active':''}" onclick="setIgKatFilter('${k}')">${k===''?'Alle':k==='__none'?'Ohne Kategorie':k}</button>`).join('')}</div>`;
   const stamp=igData&&igData.updated?('Stand: '+new Date(igData.updated).toLocaleString('de-DE')):'';
   view.innerHTML=`
-    <div class="view-head"><h2>📷 Instagram</h2><div class="sub">Deine Beiträge nach Hook gruppiert, mit echten Zahlen und Direktlink. Beste Variante 🏆. ${stamp}</div></div>
+    <div class="view-head"><h2>📷 Instagram</h2><div class="sub">Deine Beiträge mit echten Zahlen und Direktlink. Ordne jeden Post einer Kategorie zu, dann kannst du Yapping, B-Roll, Karussell &amp; Co. direkt vergleichen. Beste Variante 🏆. ${stamp}</div></div>
     <div class="filters">
-      <input class="search" placeholder="🔍 Hook/Caption suchen…" value="${escAttr(igFilter)}" oninput="igFilter=this.value;renderInstagram()">
-      <button class="chip tog" onclick="loadIg(true)">🔄 Aktualisieren</button>
+      <input class="search" placeholder="🔍 Hook/Caption suchen…" value="${escAttr(igFilter)}" oninput="igFilter=this.value;renderInstagram();saveUI()">
+      ${katChips}
+      <div class="chips"><button class="chip tog" onclick="loadIg(true)">🔄 Aktualisieren</button></div>
     </div>
     ${banner}${body}`;
 }
@@ -874,6 +1011,7 @@ function renderReferenzen(){
   <div class="ref-block"><h3>💬 ManyChat-Codewörter</h3>
     <table class="reftable"><tr><th>Angebot</th><th>Preis</th><th>Codewort</th></tr>
     <tr><td>Mini-Kurs Gelände-Schlüssel</td><td>27 €</td><td><code>Gelände</code> / <code>Schlüssel</code></td></tr>
+    <tr><td>Gelände-Quiz (Freebie)</td><td>0 €</td><td><code>Quiz</code> / <code>Plan</code></td></tr>
     <tr><td>Auto-Webinar / Video-Training</td><td>0 €</td><td><code>Verlasspferd</code> / <code>Videotraining</code></td></tr>
     <tr><td>Futter-Fahrplan</td><td>47 €</td><td><code>Futterplan</code></td></tr>
     <tr><td>Offenstall-Planer</td><td>47 €</td><td><code>Konzept</code></td></tr>
@@ -916,7 +1054,7 @@ function importData(ev){
   const r=new FileReader();
   r.onload=()=>{try{const data=JSON.parse(r.result);
     if(!confirm("Aktuelle Daten mit dem Backup ERSETZEN?"))return;
-    DB=Object.assign({},DEFAULT_DB,data);save();renderTabs();go("dashboard");toast("Backup geladen ✓");
+    DB=migrate(Object.assign({},DEFAULT_DB,data));save();renderTabs();go("dashboard");toast("Backup geladen ✓");
   }catch(e){alert("Diese Datei konnte ich nicht lesen.");}};
   r.readAsText(file);ev.target.value="";
 }
@@ -958,6 +1096,7 @@ const BRAND = {
   produkte:{
     "Gelände-Schlüssel":{preis:`27€ (Frühbucher) / 197€`,codewort:`Gelände / Schlüssel`,rolle:`Frontend-/Einstiegsprodukt mit niedriger Hürde, oft Tinas erster Kauf.`,inhalt:`Entspannt vom Hof kommen. Das Pferd richtig lesen und einschätzen (wann wird es zu viel?), viel Adrenalin früh erkennen und runterfahren, wieder kontrollierbar machen. Schritt für Schritt, ohne das Pferd zu überfordern. Greift auch, wenn die Stute gar nicht klebt (dann Fokus Lesen/Einschätzen). Etwa 2 Wochen.`},
     "Auto-Webinar":{preis:`0€`,codewort:`Verlasspferd / Videotraining`,rolle:`Kostenloses, immer verfügbares Video-Training, das Leads aufwärmt.`,inhalt:`Die perfekte gelernte Vorbereitung rund um die Verlasspferd-Methode. Einstieg in Anikas Welt, bevor ein Angebot kommt.`},
+    "Freebie":{preis:`0€`,codewort:`Quiz / Plan`,rolle:`Kostenloser Einstieg: das Gelände-Quiz. Tina beantwortet 16 Aussagen und sieht danach ihr Profil über 4 Bereiche mit ihrem größten Hebel.`,inhalt:`Zeigt Tina, wo es bei ihr und ihrem Pferd fürs Gelände noch hakt und was der nächste sinnvolle Schritt ist. Niedrigste Hürde, macht neugierig auf die Verlasspferd-Methode.`},
     "Live-Webinar":{preis:`0€`,codewort:`—`,rolle:`Monatliches Live-Webinar rund ums Gelände, laufende Anmeldung möglich.`,inhalt:`Live-Training und Interaktion zum Thema Gelände, warmes Aufwärmen für die Angebote.`},
     "Weitere Produkte":{preis:`unterschiedlich`,codewort:`je Produkt`,rolle:`Backend und weitere Themen, auf Gelände gemünzt.`,inhalt:`Traumteam-Programm (~700€, Beziehungs-Fundament) · Bauch-Bein-Po (Pferd tragfähig machen) · Gelände sicher meistern (die Spaziergänge selbst) · Schluss mit Kopfkino (Selbstzweifel) · Futter-Fahrplan (47€) · Offenstall-Planer (47€).`},
   },
@@ -1097,7 +1236,8 @@ function sbInit(){
 }
 function showAuth(){document.getElementById('authOverlay').classList.add('open');}
 function hideAuth(){document.getElementById('authOverlay').classList.remove('open');}
-function skipAuth(){hideAuth();updateSyncBadge('local');}
+let syncSkipped=false;
+function skipAuth(){hideAuth();updateSyncBadge('local');syncSkipped=true;applyCanvaHash();}
 function authMsg(m){document.getElementById('auth_msg').textContent=m||'';}
 function syncClick(){if(SB_READY)doSignOut();else if(SB)showAuth();else updateSyncBadge('local');}
 function sbCount(db){return ['reels','yapping','karussells','hooks','ideen','planer','vorlagen','argumente'].reduce((n,k)=>n+((db&&db[k])?db[k].length:0),0);}
@@ -1130,10 +1270,11 @@ async function onLogin(user){
     else{
       const ct=cloud._t||0, lt=DB._t||0;
       const takeCloud = ct>lt || (ct===lt && sbCount(cloud)>=sbCount(DB));
-      if(takeCloud){DB=Object.assign({},DEFAULT_DB,cloud);save(true);renderTabs();reRender();}
+      if(takeCloud){DB=migrate(Object.assign({},DEFAULT_DB,cloud));save(true);renderTabs();reRender();}
       else{await pushCloud();}
     }
     updateSyncBadge('ok');toast('☁️ Sync aktiv');
+    applyCanvaHash();
   }catch(e){console.warn(e);updateSyncBadge('err');}
 }
 async function pushCloud(){
@@ -1147,10 +1288,10 @@ async function pullCloud(){
   const {data,error}=await SB.from('content_store').select('data').eq('user_id',SB_USER.id).maybeSingle();
   if(error||!data||!data.data)return;
   const cloud=data.data, ct=cloud._t||0, lt=DB._t||0;
-  if(ct>lt && JSON.stringify(cloud)!==JSON.stringify(DB)){DB=Object.assign({},DEFAULT_DB,cloud);save(true);renderTabs();reRender();toast('☁️ Aktualisiert');}
+  if(ct>lt && JSON.stringify(cloud)!==JSON.stringify(DB)){DB=migrate(Object.assign({},DEFAULT_DB,cloud));save(true);renderTabs();reRender();toast('☁️ Aktualisiert');}
 }
 function schedulePush(){if(!SB_READY)return;clearTimeout(pushTimer);updateSyncBadge('sync');pushTimer=setTimeout(()=>{pushTimer=null;pushCloud();},1200);}
-function reRender(){const cur=document.querySelector('.tab.active')?.dataset.nav||'dashboard';go(cur);}
+function reRender(){const y=window.scrollY;go(currentView,true);window.scrollTo(0,y);}
 function updateSyncBadge(state){const el=document.getElementById('syncBadge');if(!el)return;const m={ok:'☁︎ Sync',sync:'⏳ …',off:'☁︎ Login',local:'☁︎ Aus',err:'⚠︎ Sync'};el.textContent=m[state]||'☁︎';}
 
 /* ===== Für Susanne — Wochenplan B-Rolls ===== */
@@ -1167,9 +1308,8 @@ function renderSusanneBoard(){
   const cols=days.map((d,i)=>{
     const key=localISO(d),items=byDate[key]||[];
     return `<div class="pl-day ${key===todayKey?'today':''}"><div class="pl-dayhead">${names[i]} <span>${d.getDate()}.${d.getMonth()+1}.</span></div>${items.map(y=>{
-      const done=y.status==='B-Rolls erstellt'||y.status==='Gepostet';
       const t=y.frage||'(ohne Titel)';
-      return `<div class="pl-item su ${done?'sudone':''}"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1)">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1)">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}')">✕</button></div><div class="su-txt" onclick="openModal('yapping','${y.id}')" title="${escAttr(t)}">🎙️ ${escHTML(t.slice(0,56))}</div><span class="badge b-status">${escHTML(y.status||'Offen')}</span></div>`;
+      return `<div class="pl-item su"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1)">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1)">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}')">✕</button></div><div class="su-txt" onclick="openModal('yapping','${y.id}')" title="${escAttr(t)}">🎙️ ${escHTML(t.slice(0,56))}</div><span class="badge b-status">${escHTML(y.status||'Offen')}</span></div>`;
     }).join('')||'<div class="pl-empty">—</div>'}</div>`;
   }).join('');
   box.innerHTML=`
@@ -1180,7 +1320,7 @@ function renderSusanneBoard(){
       <button class="chip tog" onclick="susanneWeek=0;renderSusanneBoard()">Heute</button>
     </div>
     <div class="pl-week">${cols}</div>
-    <div class="hint" style="margin-top:8px;">Hier landen fertige Talking-Head-Videos, die du „Zu Susanne verschieben" hast. Susanne schnappt sich das Video, macht die B-Rolls und setzt den Status auf „B-Rolls erstellt". Mit ‹ › verschiebst du ein Video auf einen anderen Tag.${total===0?' Noch nichts übergeben.':''}</div>`;
+    <div class="hint" style="margin-top:8px;">Hier landen fertige Talking-Head-Videos, die du „Zu Susanne verschieben" hast. Susanne schnappt sich das Video und macht die B-Rolls. Mit ‹ › verschiebst du ein Video auf einen anderen Tag.${total===0?' Noch nichts übergeben.':''}</div>`;
 }
 
 /* ===== Planer (automatische Monatsansicht) ===== */
@@ -1188,18 +1328,33 @@ let planerMonth=0;
 function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),day=String(d.getDate()).padStart(2,'0');return `${y}-${m}-${day}`;}
 function startOfWeek(off){const d=new Date();const wd=(d.getDay()+6)%7;d.setHours(0,0,0,0);d.setDate(d.getDate()-wd+off*7);return d;}
 function startOfMonthGrid(off){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()+off);d.setHours(0,0,0,0);return d;}
+const capKey=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim().slice(0,60);
 function planEntries(){
   const e=[];
-  (DB.reels||[]).forEach(r=>{if(r.postDatum)e.push({date:r.postDatum,icon:'🎬',label:r.titel||r.hook||'Reel',col:'reels',id:r.id});});
-  (DB.karussells||[]).forEach(k=>{if(k.postDatum)e.push({date:k.postDatum,icon:'🎠',label:k.titel||'Karussell',col:'karussells',id:k.id});});
+  (DB.reels||[]).forEach(r=>{if(r.postDatum)e.push({date:r.postDatum,icon:'🎬',label:r.titel||r.hook||'Reel',col:'reels',id:r.id,done:r.status==='Gepostet'});});
+  (DB.karussells||[]).forEach(k=>{if(k.postDatum)e.push({date:k.postDatum,icon:'🎠',label:k.titel||'Karussell',col:'karussells',id:k.id,done:karussellPosted(k)});});
   (DB.yapping||[]).forEach(y=>{
-    const t=(y.frage||'Yapping').slice(0,32);
-    if(y.postDatum)e.push({date:y.postDatum,icon:'🎙️',label:'Talking Head: '+t,col:'yapping',id:y.id});
-    if(y.postDatumBroll)e.push({date:y.postDatumBroll,icon:'🎞',label:'B-Roll ins Feed: '+t,col:'yapping',id:y.id});
-    const kExists=(DB.karussells||[]).some(k=>k.gruppe&&k.gruppe===(y.frage||'').slice(0,50));
-    if(y.postDatumKarussell&&!kExists)e.push({date:y.postDatumKarussell,icon:'🎠',label:'Karussell: '+t,col:'yapping',id:y.id});
+    const t=(y.frage||'Yapping').slice(0,32),g=y.gepostet||{};
+    if(y.postDatum)e.push({date:y.postDatum,icon:'🎙️',label:'Talking Head: '+t,col:'yapping',id:y.id,yap:y,own:'yap',done:!!g.yap});
+    if(y.postDatumBroll)e.push({date:y.postDatumBroll,icon:'🎞',label:'B-Roll ins Feed: '+t,col:'yapping',id:y.id,yap:y,own:'broll',done:!!g.broll});
+    if(y.postDatumKarussell&&!yapKarussell(y))e.push({date:y.postDatumKarussell,icon:'🎠',label:'Karussell: '+t,col:'yapping',id:y.id,yap:y,own:'karussell',done:!!g.karussell});
   });
+  // Posts, die direkt in Instagram entstanden sind (keine Karteikarte dazu)
+  if(igData&&igData.items){
+    const ids=new Set(),caps=new Set();
+    ['reels','karussells','yapping'].forEach(c=>(DB[c]||[]).forEach(x=>{if(x.igId)ids.add(x.igId);const k=capKey(x.caption);if(k.length>=20)caps.add(k);}));
+    igData.items.filter(it=>it.feed&&!ids.has(it.id)&&!caps.has(capKey(it.caption))).forEach(it=>{
+      const kat=igKat(it);
+      e.push({date:it.date,icon:'📷',label:(kat?kat+': ':'IG: ')+igTitleFrom(it).replace(/^Feed [^·]*· ?/,''),ig:it,done:true});
+    });
+  }
   return e;
+}
+function planItemHTML(x){
+  const short=escHTML(x.label.slice(0,22));
+  if(x.ig) return `<div class="pl-item pl-ig done" onclick="window.open('${escAttr(x.ig.url)}','_blank','noopener')" title="${escAttr('Direkt in Instagram gepostet: '+x.label)}">${x.icon} ${short}</div>`;
+  const checks=x.yap?`<div class="pl-checks">${POST_CHECKS.map(c=>{const on=!!(x.yap.gepostet||{})[c.k];return `<button class="${on?'on':''} ${c.k===x.own?'own':''}" title="${c.l}${on?' ✓ gepostet/geplant':' offen'}" onclick="event.stopPropagation();togglePosted('${x.id}','${c.k}')">${on?'✓':c.s}</button>`;}).join('')}</div>`:'';
+  return `<div class="pl-item ${x.done?'done':''}" onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label)}">${x.done&&!x.yap?'✓ ':''}${x.icon} ${short}${checks}</div>`;
 }
 function renderPlaner(){
   const view=document.getElementById('view-planer');
@@ -1216,7 +1371,7 @@ function renderPlaner(){
   const head=names.map(n=>`<div class="pl-dayhead">${n}</div>`).join('');
   const cells=days.map(d=>{
     const key=localISO(d),inMonth=d.getMonth()===first.getMonth(),list=byDate[key]||[];
-    return `<div class="pl-mday ${inMonth?'':'pl-out'} ${key===todayKey?'today':''}"><div class="pl-mnum">${d.getDate()}</div>${list.map(x=>`<div class="pl-item" onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label)}">${x.icon} ${escHTML(x.label.slice(0,20))}</div>`).join('')}</div>`;
+    return `<div class="pl-mday ${inMonth?'':'pl-out'} ${key===todayKey?'today':''}"><div class="pl-mnum">${d.getDate()}</div>${list.map(planItemHTML).join('')}</div>`;
   }).join('');
   view.innerHTML=`
     <div class="view-head"><h2>🗓️ Planer</h2><div class="sub">Monatsansicht — Beiträge erscheinen über ihr <b>Post-Datum</b>. Pro Yapping-Thema Talking Head, bester B-Roll und Karussell. (${entries.length} terminiert)</div></div>
@@ -1227,7 +1382,8 @@ function renderPlaner(){
       <button class="chip tog" onclick="planerMonth=0;renderPlaner()">Heute</button>
     </div>
     <div class="pl-monthscroll"><div class="pl-mhead">${head}</div><div class="pl-mgrid">${cells}</div></div>
-    <div class="hint" style="margin-top:10px;">Setz bei Reel, Karussell oder Yapping-Video ein <b>Post-Datum</b>, dann taucht es hier auf. Beim Yapping-Video zählen alle drei Datumsfelder.</div>`;
+    <div class="pl-legend"><span class="pl-lg open">offen</span><span class="pl-lg done">gepostet / geplant</span><span class="pl-lg ig">📷 direkt in Instagram gepostet</span><span>Häkchen: <b>Y</b> Yapping · <b>B</b> B-Roll · <b>K</b> Karussell · <b>S</b> B-Roll Short (antippen zum Abhaken)</span></div>
+    <div class="hint" style="margin-top:10px;">Setz bei Reel, Karussell oder Yapping-Video ein <b>Post-Datum</b>, dann taucht es hier auf. Beim Yapping-Video zählen alle drei Datumsfelder. Posts, die du direkt in Instagram gemacht hast, holt sich der Planer automatisch aus deinen Instagram-Daten.${igData&&igData.updated?' Instagram-Stand: '+new Date(igData.updated).toLocaleString('de-DE')+'.':''}</div>`;
 }
 
 /* ===== Yapping-Fragen (Vorbefüllung) ===== */
@@ -1323,7 +1479,9 @@ function seedYapping(){
 }
 
 /* ===== Init ===== */
-seedYapping();renderTabs();renderDashboard();
+seedYapping();renderTabs();restoreUI();applyCanvaHash();
+document.getElementById("modalForm").addEventListener("input",saveUI);
+document.getElementById("modalForm").addEventListener("change",saveUI);
 document.getElementById("overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeModal();});
 document.getElementById("createOverlay").addEventListener("click",e=>{if(e.target.id==="createOverlay")closeCreate();});
 sbInit();

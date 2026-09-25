@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gelände sicher meistern – Anika's Pferdeakademie</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --rose:#e6c5b4;
+  --gold:#d6b923;
+  --rust:#894b2f;
+  --red:#691212;
+  --black:#1a1a1a;
+  --white:#ffffff;
+  --beige:#f5ede2;
+  --beige2:#ede0d0;
+  --beige3:#e8d8c4;
+  --text:#1a1a1a;
+  --text-mid:#4a3828;
+  --text-muted:#7a6050;
+}
+body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--text);max-width:960px;margin:0 auto;font-size:16px;line-height:1.7}
+
+/* HERO IMAGE */
+.hero-img{width:100%;display:block;position:relative}
+.hero-img img{width:100%;display:block;border-radius:0}
+
+/* TRANSITION BANNER */
+.transition-band{background:var(--red);color:#fff;text-align:center;padding:18px 32px}
+.transition-band p{font-size:16px;font-weight:700;color:#fff;margin:0;line-height:1.5}
+.transition-band p span{font-weight:400;opacity:0.85}
+
+/* SECTIONS */
+.sec-hero{background:var(--beige);padding:44px 48px;text-align:center}
+.sec-white{background:var(--white);padding:52px 48px}
+.sec-beige{background:var(--beige);padding:52px 48px}
+.sec-beige2{background:var(--beige2);padding:52px 48px}
+.sec-cta{background:var(--red);padding:52px 48px;text-align:center}
+
+/* TYPOGRAPHY */
+h1{font-size:34px;font-weight:800;line-height:1.15;color:var(--black);margin-bottom:14px;letter-spacing:-0.5px}
+h2{font-size:24px;font-weight:800;line-height:1.25;color:var(--black);margin-bottom:14px;letter-spacing:-0.3px}
+h3{font-size:16px;font-weight:700;color:var(--black);margin-bottom:6px}
+p{font-size:15px;line-height:1.8;color:var(--text-mid);margin-bottom:14px;font-weight:400}
+p:last-child{margin-bottom:0}
+strong{font-weight:700;color:var(--black)}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--rust);margin-bottom:10px}
+.eyebrow-light{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.65);margin-bottom:10px}
+
+/* HERO TEXT */
+.hero-pre{font-size:12px;font-weight:700;color:var(--red);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:12px}
+.hero-sub{font-size:17px;color:var(--text-mid);max-width:620px;margin:0 auto 28px;font-weight:500;line-height:1.6}
+
+/* PRICE BOX */
+.price-box{background:var(--white);border:2px solid var(--gold);border-radius:8px;padding:24px 28px;max-width:500px;margin:0 auto 28px;text-align:center}
+.price-box .price-label{font-size:13px;font-weight:700;color:var(--text-mid);margin-bottom:8px;line-height:1.5}
+.price-box .price-main{font-size:42px;font-weight:900;color:var(--red);line-height:1;margin:6px 0}
+.price-box .price-original{font-size:16px;color:var(--text-muted);font-weight:500;text-decoration:line-through}
+.price-box .price-or{font-size:13px;color:var(--text-muted);margin:6px 0 0;font-weight:500}
+.price-box .price-rate{font-size:18px;font-weight:700;color:var(--text-mid)}
+
+/* BUTTON */
+.btn{display:inline-block;background:var(--red);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;padding:18px 40px;border-radius:4px;text-decoration:none;letter-spacing:0.3px}
+.btn:hover{background:#550f0f}
+.btn-white{display:inline-block;background:#fff;color:var(--red);font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;padding:18px 40px;border-radius:4px;text-decoration:none;letter-spacing:0.3px}
+
+/* CHECK / CROSS LIST */
+.check-list{list-style:none;margin-top:4px}
+.check-list li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-size:15px;line-height:1.6;color:var(--text-mid);font-weight:500}
+.check-list li::before{content:"✓";color:var(--rust);font-weight:800;font-size:14px;flex-shrink:0;margin-top:2px}
+
+/* TESTIMONIAL */
+.testimonial-card{background:var(--white);border:1px solid var(--beige3);border-left:4px solid var(--gold);border-radius:0 6px 6px 0;padding:22px 26px;margin-top:24px}
+.testimonial-card .t-quote{font-size:15px;line-height:1.8;color:var(--text-mid);font-style:italic;margin-bottom:10px}
+.testimonial-card .t-name{font-size:11px;font-weight:700;color:var(--rust);letter-spacing:1.5px;text-transform:uppercase}
+
+/* INFO BOX */
+.info-box{background:var(--beige2);border-radius:8px;padding:20px 24px;margin-top:24px}
+.info-box p{font-size:15px;color:var(--text-mid);margin:0}
+
+/* STAT BOX */
+.stat-box{background:rgba(255,255,255,0.15);border-radius:8px;padding:16px 24px;max-width:560px;margin:0 auto 24px;text-align:center}
+.stat-box p{font-size:14px;color:rgba(255,255,255,0.9);margin:0;line-height:1.6;font-style:italic}
+
+/* NO THANKS */
+.no-thanks{text-align:center;margin-top:20px}
+.no-thanks a{font-size:13px;color:var(--text-muted);text-decoration:underline}
+
+.center{text-align:center}
+.max-w{max-width:700px;margin:0 auto}
+.mt8{margin-top:8px}
+.mt16{margin-top:16px}
+.mt24{margin-top:24px}
+.mt32{margin-top:32px}
+
+@media(max-width:640px){
+  .sec-hero,.sec-white,.sec-beige,.sec-beige2,.sec-cta{padding:36px 20px}
+  h1{font-size:26px}
+  h2{font-size:21px}
+  .price-box .price-main{font-size:34px}
+  .btn,.btn-white{display:block;width:100%;text-align:center;padding:18px 20px}
+  .transition-band{padding:14px 20px}
+  .transition-band p{font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO BILD -->
+<div class="hero-img">
+  <img src="https://assets.cdn.filesafe.space/YTcO1DtAeZWVMFTPktEB/media/69fdf49fbc1f77cc35faf5fa.png" alt="Frau führt Pferd sicher durchs Gelände" style="width:100%;display:block;" />
+</div>
+
+<!-- ÜBERGANGS-BANNER -->
+<div class="transition-band">
+  <p>🎉 Glückwunsch! Du hast gerade den ersten Schritt gemacht.<br>
+  <span>Dein Pferd kommt jetzt vom Hof. Dein nächster Schritt ist jetzt die Spaziergänge auszuweiten und auf die lauernden Herausforderungen vorbereitet zu sein.</span></p>
+</div>
+
+<!-- HERO TEXT -->
+<div class="sec-hero">
+  <div class="hero-pre">Perfekte Ergänzung für alle Gelände-Schlüssel-Kundinnen</div>
+  <h1>Du hast das Hoftor gemeistert.<br>Jetzt meisterst du das Gelände.</h1>
+  <p class="hero-sub">Das Hoftor ist überwunden, das ist riesig! Aber auf deinen Spaziergängen warten schon die nächsten Herausforderungen auf dich. Unbekannte Situationen, in denen dein Pferd hektisch wird oder auf einmal scheut und nicht mehr weiter will. Wer da nicht vorbereitet ist, wird schnell überfordert sein. Deshalb habe ich hier etwas ganz Wertvolles für dich zusammengestellt:</p>
+  <p class="hero-sub" style="font-size:18px;font-weight:700;color:var(--black)">Mit „Gelände sicher meistern" wirst du zur ruhigen, souveränen Führungsperson, egal was draußen passiert.</p>
+
+  <div class="price-box">
+    <div class="price-label">Nutze hier die Chance für nur 99 € statt <span class="price-original">147 €</span></div>
+    <div class="price-main">99 €</div>
+    <div class="price-or">oder bequem in</div>
+    <div class="price-rate">2 × 59 €</div>
+  </div>
+
+  <a href="https://anikas-pferdeakademie.thrivecart.com/gsm/" target="_blank" rel="noopener" class="btn">Ja! Ich will das Gelände sicher meistern!</a>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="sec-white">
+  <div class="max-w">
+    <div class="eyebrow">Das sagen andere</div>
+    <h2>„Ich dachte, wenn ich erst mal durchs Hoftor bin, dann ist das Gelände kein Problem mehr."</h2>
+    <div class="testimonial-card">
+      <p class="t-quote">„Ich dachte, wenn wir erst mal vom Hof kommen, ist alles easy. Und dann ist meine Stute beim ersten Traktor komplett durchgedreht. Durch diesen Kurs weiß ich jetzt, warum sie so reagiert hat und ich habe einen klaren Plan für genau diese Momente. Wir sind letzte Woche an dem bellenden Hund vorbeispaziert, vor dem sie sonst immer solche Angst hatte. Einfach so. Ich hätte nie gedacht, dass das jemals möglich ist."</p>
+      <div class="t-name">Sandra, mit Hannoveraner Stute Fiona</div>
+    </div>
+
+    <div class="info-box mt24">
+      <p>Bei den Übungen, um überhaupt vom Hof zu kommen, kannst du die Situation und damit eure Komfortzone selbst steuern. Das ist im Gelände leider nicht mehr der Fall. Du bist der Umgebung (Traktoren, etc.) ausgeliefert und kannst diese nicht beeinflussen. Deshalb brauchst du hierfür konkrete Strategien, die sich von den Übungen am Hoftor unterscheiden.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WAS DU BEKOMMST -->
+<div class="sec-beige">
+  <div class="max-w">
+    <div class="eyebrow">Das bekommst du</div>
+    <h2>Was „Gelände sicher meistern" für dich und dein Pferd bedeutet</h2>
+    <ul class="check-list mt16">
+      <li>Du weißt genau, warum dein Pferd draußen anders reagiert und was du in jedem Moment tun kannst</li>
+      <li>Neue Wege werden Routine, kein Stress mehr bei unbekannten Strecken</li>
+      <li>Scheuen, einfrieren, hektisch werden: du hast für jede Situation einen klaren Plan</li>
+      <li>Begegnungen mit Hunden, Traktoren und Lärm meisterst du souverän</li>
+      <li>Du liest die Signale deines Pferdes bevor etwas eskaliert</li>
+      <li>In jeder Situation behältst du die Kontrolle und weißt, wie du die Aufmerksamkeit deines Pferdes wieder auf dich lenkst</li>
+    </ul>
+    <p class="mt16" style="font-weight:600;color:var(--black)">Du bekommst einen Kurs mit Videoanleitungen und zusätzlichem Arbeitsmaterial.</p>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sec-cta">
+  <div class="eyebrow-light">Der perfekte nächste Schritt</div>
+  <h2 style="color:#fff;max-width:520px;margin:10px auto 16px;font-size:26px">Ihr habt das Hoftor gemeistert.<br>Jetzt meistert ihr das Gelände.</h2>
+  <p style="color:rgba(255,255,255,0.85);max-width:480px;margin:0 auto 24px;font-size:15px">Nur jetzt, nur hier zu</p>
+
+  <div style="background:rgba(255,255,255,0.12);border-radius:8px;padding:20px 28px;max-width:380px;margin:0 auto 24px;text-align:center">
+    <div style="font-size:38px;font-weight:900;color:#fff;line-height:1">99 €</div>
+    <div style="font-size:16px;color:rgba(255,255,255,0.65);margin-top:6px;font-weight:500;text-decoration:line-through">147 €</div>
+    <div style="font-size:13px;color:rgba(255,255,255,0.7);margin-top:4px">oder 2 × 59 €</div>
+  </div>
+
+  <div class="stat-box">
+    <p>80 % aller Kursabsolventinnen berichten, dass sie innerhalb von zwei Wochen mit ihrem Pferd im Gelände unterwegs sind und sich dabei sicher fühlen.</p>
+  </div>
+
+  <a href="https://anikas-pferdeakademie.thrivecart.com/gsm/" target="_blank" rel="noopener" class="btn-white">Ja! Ich will das Gelände sicher meistern!</a>
+
+  <p style="color:rgba(255,255,255,0.75);margin-top:20px;font-size:14px;font-style:italic">Du wirst dich später ärgern, wenn du jetzt nicht zugreifst.</p>
+</div>
+
+</body>
+</html>

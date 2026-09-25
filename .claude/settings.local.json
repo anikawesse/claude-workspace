@@ -745,7 +745,23 @@
       "Bash(grep -o -i \"Angst[^\\\\\"]\\\\{0,80\\\\}\" 04ae8c2e-8cde-469b-85ff-6c2a266a4d42.jsonl)",
       "Bash(grep -o -i \"Sarina[^\\\\\"]\\\\{0,120\\\\}\" 04ae8c2e-8cde-469b-85ff-6c2a266a4d42.jsonl)",
       "Bash(' 2>/dev/null *)",
-      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__help"
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__help",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-11 -Bis 2026-09-25)",
+      "Read(//c/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/435b20a1-f31d-4e66-a9fb-b74b454912aa/scratchpad/**)",
+      "Bash(node dump.js 33428205-cf6d-4f07-aaac-826e6f2550cc 1185 1240 5000)",
+      "Bash(awk '/^--- .* user text/{p=1} /^--- .* assistant/{p=0} p')",
+      "Bash(node dump.js 33428205-cf6d-4f07-aaac-826e6f2550cc 1440 1800 500)",
+      "Bash(cd /c/Users/Olive/.claude/projects/C--Users-Olive-Desktop-claude-workspace/ && ls -d */ | head; find . -name \"*85871f22*\" | head; grep -l \"statt <del\" -r . --include=*.jsonl | head)",
+      "Bash(mkdir -p img)",
+      "Bash(timeout 90 git log --all --format=\"%h %ad %s\" --date=short --name-only -S \"Nein danke, bitte\" -- outputs context)",
+      "Bash(timeout 90 git log --all --format=\"%h %ad %s\" --date=short --name-only -i -G \"upsell.*offenstall|offenstall.*upsell\" -- outputs)",
+      "PowerShell(Get-ChildItem outputs\\\\gelaendeschluessel\\\\upsell-wiederherstellung -Recurse -File | Select-Object @{n='Datei';e={$_.FullName.Replace\\(\\(Get-Location\\).Path+'\\\\',''\\)}}, Length | Format-Table -AutoSize | Out-String -Width 200)",
+      "PowerShell(start \"\" \"outputs\\\\gelaendeschluessel\\\\upsell-wiederherstellung\")",
+      "PowerShell(Invoke-Item \"outputs\\\\gelaendeschluessel\\\\upsell-wiederherstellung\")",
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; Start-Process $f; \"In Zwischenablage: $\\($code.Length\\) Zeichen. Vorschau geoeffnet.\")",
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; Start-Process $f; \"In Zwischenablage: $\\($code.Length\\) Zeichen. Vorschau aktualisiert.\")",
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; \"In Zwischenablage: $\\($code.Length\\) Zeichen.\")",
+      "Bash(git commit -q -m 'Gelaende-Programm Salespage: letzte Runde/Einfuehrungspreis 549->749, Klarna ab 49, Bonus Akupressur, Wasser-Kurs optional, Einblick-Video, Fettungen *)"
     ],
     "defaultMode": "bypassPermissions"
   }
