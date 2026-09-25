@@ -82,8 +82,8 @@
       "name": "content-maschine-node",
       "runtimeExecutable": "node",
       "runtimeArgs": [
-        "C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/0064dbfd-4845-486e-83b4-0749935ee9b9/scratchpad/static-server.js",
-        "C:/Users/Olive/Desktop/claude-workspace/outputs/content-maschine",
+        "scripts/static-server.js",
+        "outputs/content-maschine",
         "3008"
       ],
       "port": 3008

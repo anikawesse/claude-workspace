@@ -376,12 +376,12 @@ const COLLECTIONS = {
   karussells:{label:"Karussells",icon:"🎠",single:"Karussell",three:false,fields:[
     {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
     {key:"hook",label:"Slide 1 / Hook",type:"textarea",card:"hook"},
-    {key:"slides",label:"Slides (ein Satz pro Slide, einzeln bearbeitbar)",type:"slides",card:"notes"},
+    {key:"slides",label:"Slides (ein Satz pro Slide, einzeln bearbeitbar)",type:"slides"},
     {key:"caption",label:"Caption",type:"textarea",big:true},
     {key:"medien",label:"🖼 Slides-Link (Canva)",type:"text",card:"link"},
-    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
-    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN),card:"badge"},
-    {key:"gruppe",label:"Botschaft/Gruppe (verbindet Varianten)",type:"text",card:"badge"},
+    {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE},
+    {key:"unterthema",label:"Unterthema (bei Weitere Produkte)",type:"select",options:opt(UNTERTHEMEN)},
+    {key:"gruppe",label:"Botschaft/Gruppe (verbindet Varianten)",type:"text"},
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
     {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
@@ -1227,8 +1227,8 @@ const SB_KEY='sb_publishable_NMRqZrismuTZD-b8ieYGxA_Q9zwG3Jj';
 let SB=null,SB_USER=null,SB_READY=false,pushTimer=null,lastPush=0;
 function sbAvail(){return typeof window!=='undefined'&&window.supabase&&window.supabase.createClient;}
 function sbInit(){
-  if(!sbAvail()){updateSyncBadge('local');return;}
-  try{SB=window.supabase.createClient(SB_URL,SB_KEY);}catch(e){updateSyncBadge('local');return;}
+  if(!sbAvail()){updateSyncBadge('local');applyCanvaHash();return;}
+  try{SB=window.supabase.createClient(SB_URL,SB_KEY);}catch(e){SB=null;updateSyncBadge('local');applyCanvaHash();return;}
   SB.auth.getSession().then(({data})=>{
     if(data&&data.session){onLogin(data.session.user);}
     else{updateSyncBadge('off');showAuth();}
@@ -1479,7 +1479,7 @@ function seedYapping(){
 }
 
 /* ===== Init ===== */
-seedYapping();renderTabs();restoreUI();applyCanvaHash();
+seedYapping();renderTabs();restoreUI();
 document.getElementById("modalForm").addEventListener("input",saveUI);
 document.getElementById("modalForm").addEventListener("change",saveUI);
 document.getElementById("overlay").addEventListener("click",e=>{if(e.target.id==="overlay")closeModal();});
