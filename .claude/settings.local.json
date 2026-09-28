@@ -761,7 +761,12 @@
       "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; Start-Process $f; \"In Zwischenablage: $\\($code.Length\\) Zeichen. Vorschau geoeffnet.\")",
       "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; Start-Process $f; \"In Zwischenablage: $\\($code.Length\\) Zeichen. Vorschau aktualisiert.\")",
       "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; \"In Zwischenablage: $\\($code.Length\\) Zeichen.\")",
-      "Bash(git commit -q -m 'Gelaende-Programm Salespage: letzte Runde/Einfuehrungspreis 549->749, Klarna ab 49, Bonus Akupressur, Wasser-Kurs optional, Einblick-Video, Fettungen *)"
+      "Bash(git commit -q -m 'Gelaende-Programm Salespage: letzte Runde/Einfuehrungspreis 549->749, Klarna ab 49, Bonus Akupressur, Wasser-Kurs optional, Einblick-Video, Fettungen *)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-14 -Bis 2026-09-28)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\f5f30a2a-e79d-411e-a648-b433a793848d\\\\scratchpad\\\\kampagnen.ps1\")",
+      "PowerShell($f = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\optin-ads.html\"; $code = [System.IO.File]::ReadAllText\\($f, [System.Text.Encoding]::UTF8\\); Set-Clipboard -Value $code; Start-Process $f; \"In Zwischenablage: $\\($code.Length\\) Zeichen. Vorschau geoeffnet.\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\gelaendeschluessel\\\\upsell-wiederherstellung\\\\sicher-meistern.html\")",
+      "Bash(git commit -q -m 'Shutdown 28.09.: Optin-Seiten Datum 25.10. + Formulare, Salespage-Programm final, Aufwaermmail Leroy, Webinar-Transkript *)"
     ],
     "defaultMode": "bypassPermissions"
   }

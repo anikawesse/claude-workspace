@@ -1,6 +1,6 @@
 # Gelände-Calls — Marketing-Insights
 
-Laufende Sammlung aus den Live-Calls des Gelände-Programms. Wird von `/gelaende-call` nach jedem Call ergänzt (neueste Einträge oben, immer mit Datum). Nur **echte** Aussagen und Fälle — nichts erfinden, siehe Feedback-Regel „Keine erfundenen Kundenfälle".
+Laufende Sammlung aus den Live-Calls des Gelände-Programms und aus den Gelände-Webinaren (Chat + Transkript, dort Interessentinnen statt Kundinnen). Wird von `/gelaende-call` nach jedem Call ergänzt (neueste Einträge oben, immer mit Datum). Nur **echte** Aussagen und Fälle — nichts erfinden, siehe Feedback-Regel „Keine erfundenen Kundenfälle".
 
 **Wofür:** Webinar-Feinschliff (Eric-Framework: 3 Einwände = 3 Content-Blöcke), Salespage/FAQ, Content-Ideen (Hooks, Reels, Karussells), Wording in der Sprache der Zielgruppe.
 
@@ -11,6 +11,20 @@ Laufende Sammlung aus den Live-Calls des Gelände-Programms. Wird von `/gelaende
 ## 1. O-Töne & Erfolge
 
 Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und Social Proof. Format: Zitat + Name + Pferd + Datum + Kontext.
+
+**Webinar 27.09.2026 (Live-Chat, Interessentinnen, keine Kundinnen):**
+
+- **„Trecker sind kein Problem. Bringen Futter. Aber Gespenster sind schlimm."** (Simone P.) → Hook-fertig, humorvoll, zahlt auf das Anti-Schreck-Paket ein.
+- **„Ja, unbedingt. Das ist mein Problem."** (Simone P., auf die Frage nach einem klaren Plan für den Notfall-Moment)
+- **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
+- **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
+
+**Call 23.09.2026 (3. Feedbackrunde):**
+
+- **Sabines Durchbruch:** Durch DIE Engstelle, an der Flora sich losgerissen hatte, ist sie jetzt **geritten** — „überhaupt kein Thema. Ich hatte dann am Ende da sogar angefangen zu traben." Drei Wochen nach dem Vorfall. → Transformations-Beleg mit klarem Vorher/Nachher; mit ihrem Ok starkes Testimonial fürs Gelände-Programm.
+- **„Das ist mein Anti-Schrecktraining. Das hat offensichtlich gewirkt."** (Sabine): Ihre Trainerin wedelte mit einer **Deutschlandflagge** über Floras Rücken und Kopf — Flora blieb komplett ruhig; die Trainerin verblüfft. → Herrliche, konkrete Szene für ein Reel oder eine Story (Flagge überm Kopf = Bild, das hängen bleibt).
+- **Carolines Mini-Erfolg:** Erster Ausflug bis kurz vors Hoftor, ruhig und bewusst klein gehalten — genau die „kleine Einheit"-Philosophie des Programms in Aktion.
+- **Souveränität statt Heldentum** (Sabine): Am Wassergraben wurde Flora kribbelig → sie stieg selbstständig ab und zirkelte, kam entspannt heim. → Beleg für „Absteigen ist kein Versagen, sondern Strategie" (Content-Winkel).
 
 **Call 18.09.2026 (2. Feedbackrunde):**
 
@@ -39,6 +53,17 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 
 Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Content-Blöcke im Webinar.
 
+**Webinar 27.09.2026 (Live-Chat):**
+
+- **„Zu dünn / reine Werbeveranstaltung"** (JG, 3× im Chat): „mein Pferd reißt sich los, wenn ein Trecker kommt, auch mit dieser Strategie, die ja nichts Neues ist". → Ursache: Die Opt-in-Seite verspricht Strategien gegen das **Losreißen**, das Webinar lieferte dazu keine Sofort-Strategie. Und das Publikum ist erfahren (siehe Tina-Abgleich): Grundlagen wirken wie „nichts Neues".
+- **Garantie als Kaufhürde** (Corina): „Wenn ich nach 14 Tagen keine Verbesserung im Gelände merke, bekomme ich wirklich ohne weiteres das komplette Geld zurück?" → Garantie gehört klar und früh in Pitch + Verkaufsmails.
+- **„Angst vor dem Winter"** (Simone mit Tari, Losreißer, Unterstützungsband angerissen): Die Jahreszeit (dunkel, glatt, weniger Bewegung) ist ein echter Angst-Verstärker. → Saison-Winkel für Oktober–Dezember.
+
+**Call 23.09.2026 (3. Feedbackrunde):**
+
+- **„Mein Unterbewusstsein sagt sofort: Nein, das stimmt nicht"** (Sabine über den Glaubenssatz „Ich habe Flora voll unter Kontrolle"): Der innere Widerspruch beim Affirmieren als echter Einwand gegen Mentaltraining. Anikas Antwort „irgendwann kippt die Waage" + „Ziel mit ein bisschen Stretching" ist die Content-Antwort dazu.
+- **Vergrabene Vorfälle wirken weiter** (Caroline): Das Losreißen kurz nach dem Kauf war „völlig aus den Gedanken entschwunden" und kam erst durch die Phase-1-Arbeit wieder hoch. → Dritter Fall im Muster „Die Bilder im Kopf" — diesmal sogar unbewusst. Starker Phase-1-Beweis: Man weiß oft gar nicht, WAS einen blockiert.
+
 **Call 18.09.2026 (2. Feedbackrunde):**
 
 - **„Mentalarbeit ist mühsam"** (Nicola): „Man muss sich halt wirklich ändern und da ist man auch so ein bisschen bequem... der Schweinehund." → Der ehrliche Einwand NACH dem Kauf; fürs Marketing als Erwartungsmanagement nutzbar (Anikas Antwort: ab ~6 Wochen greift die Gewöhnung). 
@@ -63,6 +88,23 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 ## 3. Häufige Fragen & Themen
 
 Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Zähler hochsetzen.
+
+**Webinar 27.09.2026 (Live-Chat):**
+
+- **Plötzliches Losreißen = häufigste Frage** (JG, Sonja, Simone/Tari; vgl. Flora in den Calls). Sonja: Pferd ist „beide Typen" und verweigert beim Führen. → **Zähler Losreißen: Calls + Webinar.** Content: „Die Stresszeichen vor dem Losreißen bei stillen Pferden" (introvertierter Typ, Pulsuhr-Trick, früh umdrehen).
+- **„Ich weiß nicht, wann der Stress kommt"** (Susanne, zu Annäherung & Rückzug) → deckt sich mit „Wie weit darf ich gehen?" aus dem Call 11.09. **Zähler: jetzt 4×.**
+- **Festklotzen / Freeze** (Simone P.): „Wie bekomme ich stressfrei eine Reaktion? Seitengänge gehen da nicht." Anikas Antwort: erst umdrehen, nicht Seitengänge.
+- **Beim Ausritt „abgemeldet", wenn andere Pferde kommen** (Carola, Lea; iPhone Babs: „Mein Pferd vergisst beim Ausritt oft, dass ich da bin"). Anikas Hebel: Kopfkino, Durchlässigkeit, Linienführung/Abkauen, sonst absteigen.
+- **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
+- **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
+- **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Call 23.09.2026 (3. Feedbackrunde):**
+
+- **Tempokontrolle im Trab — Zähler: 3× von Sabine** (jetzt konkret: „Schulter vor" vom Sattel schwieriger als vom Boden, Auto+Hänger-Situation). → Der Kurs-Wunsch verfestigt sich, Priorität fürs Nachliefern.
+- **Matsch/Paddock-Befestigung** (Sabine, ausführliche Beratung mit Anikas Offenstallplaner-Wissen + Realkosten 12k/60k): → Beleg, dass der **Offenstallplaner-Kurs** in der Gelände-Zielgruppe Nachfrage hat (Cross-sell); Herbst/Winter = saisonales Content-Fenster für das Matsch-Thema.
+- **Leckerli bei Diät-Pferden** (Klickern trotz Abnehmen — Hagebutten & Co.): kleine, dankbare Content-/FAQ-Frage aus dem echten Alltag.
+- **Barhuf + Strahlpflege** (Kupferbürsten-Routine mit sichtbarem Erfolg): Community-taugliches Praxisthema.
 
 **Call 18.09.2026 (2. Feedbackrunde):**
 
@@ -93,6 +135,13 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 ## 4. Tina-Abgleich
 
 Abweichungen vom Avatar + Original-Wording der Kundinnen.
+
+**Webinar 27.09.2026 (Live-Chat):**
+
+- **Umfrage Minute 5 (1 = noch nie im Gelände, 2 = schon versucht, aber stressig): 14× „2", 2× „1".** → Tina ist **keine Anfängerin, sondern frustriert**: Sie hat es schon probiert und ist am Stress gescheitert. Einladung/Ads auf die „2er" zuschneiden („Du hast es schon versucht und es war jedes Mal Stress?"), Webinar-Content muss über Grundlagen hinausgehen.
+- **Reiten ist ein großes Thema:** mehrere Fragen zum Ausritt (M. Joost, Lea, iPhone Babs). Anika selbst: Teilnehmerinnen haben sie vom Reit-Angle „überzeugt".
+- **Einzugsgebiet noch breiter als DACH:** Schweiz, Österreich, Ungarn, England, Frankreich, Mallorca, Ägypten (Begrüßungsrunde).
+- **Original-Wording neu:** „Gespenster sind schlimm", „ich war total abgemeldet", „klotzt sich fest", „Losreißer", „wie ein Ochs vorm Berg" (Anika), „Kastenwagen reicht schon".
 
 **Call 18.09.2026 (2. Feedbackrunde):**
 
