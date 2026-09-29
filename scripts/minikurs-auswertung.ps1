@@ -59,7 +59,11 @@ $ProduktZeilen = [ordered]@{
     'Gelände-Schlüssel 27€'      = @{ Name = 'Gelände-Schlüssel';        Typ = 'product' }
     'Audiotraining 17€'          = @{ Name = 'Audiotraining Hoftor';     Typ = 'bump'    }
     'Videoreihe 27€'             = @{ Name = 'Videoreihe';               Typ = 'bump'    }
-    'Upsell Gelände s.m. 99€'    = @{ Name = 'Gelände sicher meistern';  Typ = 'upsell'  }
+    # Drittes Order-Bump seit 29.09.2026 ("Paket Videoreihe und Audiotraining", 27 EUR).
+    # Noch nie verkauft, der genaue ThriveCart-Name ist also unbestaetigt -> 'Paket*'.
+    # Der Vergleich unten laeuft mit -like, deshalb greift das Sternchen.
+    'Paket 27€'                  = @{ Name = 'Paket*';                   Typ = 'bump'    }
+    'Upsell Gelände s.m. 99€'   = @{ Name = 'Gelände sicher meistern';  Typ = 'upsell'  }
     'Upsell Kopfkino 97€'        = @{ Name = 'Schluss mit Kopfkino';     Typ = 'upsell'  }
     'Upsell Handarbeit 197€'     = @{ Name = 'Handarbeits-Programm';     Typ = 'upsell'  }
     'Upsell Offenstallplaner 47€'= @{ Name = 'Offenstallplaner';         Typ = 'upsell'  }
@@ -74,6 +78,7 @@ $StueckzahlZeilen = @(
     @{ K = 'Gelände-Schlüssel'; Z = 'Gelände-Schlüssel 27€' },
     @{ K = 'Audiotraining';     Z = 'Audiotraining 17€' },
     @{ K = 'Videoreihe';        Z = 'Videoreihe 27€' },
+    @{ K = 'Paket';             Z = 'Paket 27€' },
     @{ K = 'Upsell Gelände';    Z = 'Upsell Gelände s.m. 99€' },
     @{ K = 'Upsell Kopfkino';   Z = 'Upsell Kopfkino 97€' },
     @{ K = 'Upsell Handarbeit'; Z = 'Upsell Handarbeit 197€' },
@@ -395,7 +400,7 @@ $verkaeufe = $transaktionen | ForEach-Object {
     # Zeile in der Tabelle bestimmen (Name UND item_type muessen passen)
     $zeile = $null
     foreach ($k in $ProduktZeilen.Keys) {
-        if ($name -eq $ProduktZeilen[$k].Name -and $_.item_type -eq $ProduktZeilen[$k].Typ) { $zeile = $k; break }
+        if ($name -like $ProduktZeilen[$k].Name -and $_.item_type -eq $ProduktZeilen[$k].Typ) { $zeile = $k; break }
     }
 
     [PSCustomObject]@{

@@ -42,6 +42,7 @@ const ZEILEN_MUSTER = [
   { key: 'Audiotraining',       praefix: 'audiotraining',        format: ZAHL },
   { key: 'Videoreihe',          praefix: 'videoserie',           format: ZAHL },  // heisst in der Tabelle "Videoserie"
   { key: 'Videoreihe',          praefix: 'videoreihe',           format: ZAHL },  // falls doch mal so benannt
+  { key: 'Paket',               praefix: 'paket',                format: ZAHL },  // 3. Order-Bump seit 29.09.2026
   { key: 'Upsell Gelände',      praefix: 'upsell gelände',       format: ZAHL },
   { key: 'Upsell Kopfkino',     praefix: 'upsell kopfkino',      format: ZAHL },
   { key: 'Upsell Handarbeit',   praefix: 'upsell handarbeit',    format: ZAHL },
@@ -75,7 +76,7 @@ const ANLEGEN = {
 // Alles andere (ROAS, Warenkorb, CPA, Breakeven, Conversion) ist ein VERHAELTNIS
 // und darf NICHT summiert werden — das wird unten aus den Summen neu gerechnet.
 const GESAMT_SUMME = [
-  'Gelände-Schlüssel', 'Audiotraining', 'Videoreihe',
+  'Gelände-Schlüssel', 'Audiotraining', 'Videoreihe', 'Paket',
   'Upsell Gelände', 'Upsell Kopfkino', 'Upsell Handarbeit', 'Upsell Offenstallplaner',
   'Bruttoumsatz', 'Verdienst', 'Gesamtumsatz organisch', 'Adspend', 'Salespage Besucher',
   'Checkout Aufrufe'
