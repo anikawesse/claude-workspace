@@ -4,7 +4,9 @@ Stand: 25.09.2026. Quellen: Session-Transkripte (`~/.claude/projects/C--Users-Ol
 Inhalte 1:1 übernommen, nichts umformuliert.
 
 ## Funnel-Reihenfolge (laut Anika, Session 33428205, 23.07.2026)
-Gelände-Schlüssel (27 €, product-12) → **1. Gelände sicher meistern** (99 €) → **2. Schluss mit Kopfkino** (97 €) → **3. Handarbeits-Programm** (197 €) → **4. Offenstallplaner** (47 €)
+Gelände-Schlüssel (27 €, product-12) → **1. Gelände sicher meistern** (77 €, Live-Stand 29.09.2026; früher 99 €) → **2. Schluss mit Kopfkino** (97 €) → **3. Handarbeits-Programm** (197 €) → **4. Offenstallplaner** (47 €)
+
+> Live-Textfassung „Gelände sicher meistern" (Screenshots 29.09.2026): `sicher-meistern.md`. Preis dort **77 € statt 197 €**. Die ältere `sicher-meistern.html` ist die Devine-Rekonstruktion und weicht ab (99 € statt 147 €).
 
 - Laut Claude-Zusammenfassung vom 23.07. ist Handarbeit der „4. Upsell nach Kopfkino". Die Zählung passt nicht ganz zur Reihenfolge oben, aber die Reihenfolge selbst ist klar.
 - In ThriveCart sind das One-Click-Upsells. GSM läuft in `purchase_map_flat` als `upsell-1` (Filter `product-12` + `upsell-1`).
