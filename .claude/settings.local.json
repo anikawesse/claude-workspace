@@ -777,7 +777,11 @@
       "Bash(xargs grep -il \"upsell\")",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\Olive\\\\Desktop\\\\MockUps Produkte PESP.png\"\\); \"Datei: MockUps Produkte PESP.png\"; \"Breite x Hoehe: $\\($img.Width\\) x $\\($img.Height\\)\"; \"Groesse: {0:N0} KB\" -f \\(\\(Get-Item 'C:\\\\Users\\\\Olive\\\\Desktop\\\\MockUps Produkte PESP.png'\\).Length/1KB\\); $img.Dispose\\(\\))",
       "PowerShell(Add-Type -AssemblyName System.Drawing; $p=\"C:\\\\Users\\\\Olive\\\\Desktop\\\\HHP-OKT-SA-12-14-239_Web.jpg\"; $img=[System.Drawing.Image]::FromFile\\($p\\); \"HHP-OKT-SA-12-14-239_Web.jpg\"; \"Breite x Hoehe: $\\($img.Width\\) x $\\($img.Height\\)\"; \"Groesse: {0:N0} KB\" -f \\(\\(Get-Item $p\\).Length/1KB\\); $img.Dispose\\(\\))",
-      "Bash(git commit -q -m 'Sicher-meistern Salespage \\(ThriveCart live\\) gesichert: Volltext-Backup + 14 Screenshots *)"
+      "Bash(git commit -q -m 'Sicher-meistern Salespage \\(ThriveCart live\\) gesichert: Volltext-Backup + 14 Screenshots *)",
+      "Bash(unzip -p \"Deal_ Bauch, Beine, Po- Programm \\(Antworten\\).xlsx\" xl/sharedStrings.xml)",
+      "Bash(git commit -q -m 'Handarbeit-Upsell \\(ThriveCart live, 197 statt 299\\) gesichert: Volltext + 6 Screenshots, echte BBP-Testimonials *)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-16 -Bis 2026-09-30)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Freiarbeit_neu.jpg\")"
     ],
     "defaultMode": "bypassPermissions"
   }

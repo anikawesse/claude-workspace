@@ -50,7 +50,16 @@ Organisch: 38 der 82 waren schon im August angemeldet, 28 besitzen den Gelände-
 
 Bianca Willems, Birgit, Sonja Lemberger, Simone, Barbara Hammer, Christine, iPhone Babs, iPhone von frank braeunling, Anne Rührer (mehrfach neu eingewählt), Andrea Schäfer, Simone Pruefig, Sophie, Corinna Drave. → heißeste Leads für Verkaufsmails/Gespräche.
 
+## Verkäufe (Zwischenstand laut Anika, 30.09.)
+
+| Nr. | Wann | Wie | Was (brutto) | Quelle |
+|---|---|---|---|---|
+| 1 | Mo 28.09. | nach Telefonat | Gelände-Programm 549 € Einmalzahlung + Freiarbeitskurs 97 € | organisch |
+| 2 | Mi 30.09. | nach der FAQ-Mail | Gelände-Programm 549 € Einmalzahlung | organisch |
+
+→ 2 Programm-Käufe (1.098 € brutto) + 97 € Zusatzumsatz. Gesprächstermine: 2 geführt, 1 gekauft (das zweite Gespräch Di 29.09. war JG, die Kritikerin aus dem Webinar, kein Kaufinteresse). Ads-Käufe: bisher 0. Netto-Werte beim Cart-Close aus ThriveCart ziehen.
+
 ## Offen
 
-- VIP-Paket-Verkäufe, Programm-Käufe, Gesprächstermine (ThriveCart, bis Cart-Close Do 01.10.)
+- VIP-Paket-Verkäufe, weitere Programm-Käufe, Gesprächstermine (ThriveCart, bis Cart-Close Do 01.10.)
 - Warum liefen die Ads nur bis 22.09.? (Budget/Laufzeit bewusst so gesetzt?)
