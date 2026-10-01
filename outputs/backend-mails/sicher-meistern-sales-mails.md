@@ -183,3 +183,66 @@ Deine Anika
 [Foto: Anika mit Pferd]
 
 ⚠️ **Hinweis zu „Laura":** Dieses Testimonial ist eines der erfundenen Muster aus der Testimonial-Runde (29.09.), kein echter Kundenfall. Erfundene Kundenstimmen mit Namen sind in Deutschland abmahnbar und widersprechen Anikas Regel „nur echte Fälle". Bitte durch ein echtes, freigegebenes Zitat ersetzen (z. B. Sandra: beim ersten Traktor durchgedreht, jetzt ein klarer Plan).
+
+---
+
+## Sales-Mail 4 — Last Call
+
+**Status:** ✅ FINAL, in Devine als „4. Salesmail Open GSM" gebaut (01.10.2026).
+**Vorlage:** Gelände-Schlüssel „Salesmail 4 — Last Call" (nach Sophie Beckmann).
+🚨 **ACHTUNG Testimonials (siehe Hinweis am Ende):** Laura und Petra (inline + Bild) sind **erfundene Muster**, Kristin ist ein **Traumteam-Fall** (nicht GSM). Vor dem Scharfschalten durch echte GSM-Stimmen ersetzen.
+
+**Betreff:** 🌳 Du willst es doch auch.
+**Vorschautext:** Ich habe dich durchschaut 😳
+
+Hey {{contact.first_name}},
+
+ich mache es kurz: Es sind nur noch 8 Stunden bis die Türen zu „Gelände sicher meistern" sich schließen.
+
+Falls du immer noch am Grübeln bist, ist jetzt der Zeitpunkt der Entscheidung gekommen.
+
+Hier noch ein kleiner Entscheidungshelfer 👇🏻
+
+Nickst du hier mit dem Kopf, dann bist du in „Gelände sicher meistern" goldrichtig.
+
+🌳 Du hast schon eine Menge ausprobiert, aber dein Pferd wird draußen immer noch schnell nervös und schreckhaft.
+
+🌳 Du wünschst dir für jede Situation im Gelände einen klaren Plan, statt im Ernstfall zu erstarren und nur zu hoffen, dass schon alles gut geht.
+
+🌳 Du willst endlich die große Runde drehen, statt immer an derselben Stelle umzudrehen oder dich nur mit der Hofrunde zufrieden zu geben.
+
+🌳 Du willst bei Trecker, Auto und fremden Tieren ruhig bleiben und für dein Pferd der sichere Anker sein.
+
+🌳 Du bist bereit, in kleinen Schritten zu üben, sanft und ganz ohne Druck. 💕
+
+Ja? Dann sei jetzt noch schnell dabei!
+
+➡️ [Ja, ich sichere mir noch schnell Gelände sicher meistern. → SALESPAGE-LINK]
+
+Wenn du dich draußen endlich sicher fühlen willst und aufhören willst zu hoffen, dass es von alleine besser wird: Dann sehe ich dich gleich im Kurs.
+
+*„Der Trecker kam und ich hatte zum ersten Mal kein Herzrasen. Wir haben ihn ganz entspannt vorbeiziehen lassen."* schreibt Laura. 🚨 (erfundenes Muster)
+
+*„Endlich bin ich nicht mehr erstarrt, als uns die Reitergruppe entgegenkam. Ich weiß jetzt, wie ich Hanno aufmerksam behalte und ich bin weiter handlungsfähig."* erzählt Petra. 🚨 (erfundenes Muster)
+
+*„14 km am Stück bin ich geritten. Alleine, ohne Begleitpferd und in unbekanntem Gebiet."* freut sich Kristin. 🚨 (Traumteam-Fall, nicht GSM)
+
+Ich freue mich auf dich und deinen Liebling! 🥳
+
+[Bild: Testimonial-Grafik Petra 🚨 (erfundenes Muster): „An den Kühen sind wir das endlich vorbeigekommen, ohne dass sie erstarrt ist. Diese Stelle war für uns immer der Endgegner und ich habe sie sonst gemieden. Jetzt weiß ich genau, wie ich sie da durchführe und sie vertraut mir dabei komplett." Petra]
+
+Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook.** 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als Nächstes übst und du die wichtigen Infos aus dem Kurs alle auf einen Blick hast.
+
+➡️ [Ja, ich möchte mir den Kurs sichern. → SALESPAGE-LINK]
+
+In 8 Stunden läuft dein Timer ab, danach sind die Türen endgültig zu. 🚪
+
+Und falls du merkst, dass es gerade nicht euer Thema ist, ist das auch völlig okay. Dann ignorier diese Mail einfach, das war meine letzte Erinnerung dazu.
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto: Anika mit Pferd]
+
+🚨 **Hinweis zu den Testimonials in dieser Mail:** „Laura" und „Petra" (beide Zitate plus das Petra-Bild) sind erfundene Muster aus der Testimonial-Runde (29.09.), keine echten Fälle. „Kristin" ist echt, aber ihr 14-km-Erfolg stammt aus dem **Traumteam-Programm**, nicht aus „Gelände sicher meistern" (verstößt gegen „Testimonials themenspezifisch"). Vor dem Live-Schalten durch echte, freigegebene GSM-Stimmen ersetzen. Echt und passend sind bisher nur **Sandra** und **Henriette**.
