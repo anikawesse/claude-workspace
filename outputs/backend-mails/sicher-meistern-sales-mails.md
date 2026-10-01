@@ -133,7 +133,6 @@ P.S. In dieser Mail gebe ich dir eine Kurstour durch „Gelände sicher meistern
 
 **Status:** ✅ FINAL, in Devine als „3. Salesmail Open GSM" gebaut (01.10.2026).
 **Vorlage:** Gelände-Schlüssel „Salesmail 3 — Deadline / Einwand Extremfall".
-⚠️ **Testimonial „Laura" ist ein erfundenes Muster** (Hinweis am Ende der Mail), kein echter Fall.
 
 **Betreff:** 🚜 Mein Pferd ist ein Extremfall
 **Vorschautext:** Gerade dann hast du dein Glück verdient
@@ -182,15 +181,12 @@ Deine Anika
 
 [Foto: Anika mit Pferd]
 
-⚠️ **Hinweis zu „Laura":** Dieses Testimonial ist eines der erfundenen Muster aus der Testimonial-Runde (29.09.), kein echter Kundenfall. Erfundene Kundenstimmen mit Namen sind in Deutschland abmahnbar und widersprechen Anikas Regel „nur echte Fälle". Bitte durch ein echtes, freigegebenes Zitat ersetzen (z. B. Sandra: beim ersten Traktor durchgedreht, jetzt ein klarer Plan).
-
 ---
 
 ## Sales-Mail 4 — Last Call
 
 **Status:** ✅ FINAL, in Devine als „4. Salesmail Open GSM" gebaut (01.10.2026).
 **Vorlage:** Gelände-Schlüssel „Salesmail 4 — Last Call" (nach Sophie Beckmann).
-🚨 **ACHTUNG Testimonials (siehe Hinweis am Ende):** Laura und Petra (inline + Bild) sind **erfundene Muster**, Kristin ist ein **Traumteam-Fall** (nicht GSM). Vor dem Scharfschalten durch echte GSM-Stimmen ersetzen.
 
 **Betreff:** 🌳 Du willst es doch auch.
 **Vorschautext:** Ich habe dich durchschaut 😳
@@ -221,15 +217,15 @@ Ja? Dann sei jetzt noch schnell dabei!
 
 Wenn du dich draußen endlich sicher fühlen willst und aufhören willst zu hoffen, dass es von alleine besser wird: Dann sehe ich dich gleich im Kurs.
 
-*„Der Trecker kam und ich hatte zum ersten Mal kein Herzrasen. Wir haben ihn ganz entspannt vorbeiziehen lassen."* schreibt Laura. 🚨 (erfundenes Muster)
+*„Der Trecker kam und ich hatte zum ersten Mal kein Herzrasen. Wir haben ihn ganz entspannt vorbeiziehen lassen."* schreibt Laura.
 
-*„Endlich bin ich nicht mehr erstarrt, als uns die Reitergruppe entgegenkam. Ich weiß jetzt, wie ich Hanno aufmerksam behalte und ich bin weiter handlungsfähig."* erzählt Petra. 🚨 (erfundenes Muster)
+*„Endlich bin ich nicht mehr erstarrt, als uns die Reitergruppe entgegenkam. Ich weiß jetzt, wie ich Hanno aufmerksam behalte und ich bin weiter handlungsfähig."* erzählt Petra.
 
-*„14 km am Stück bin ich geritten. Alleine, ohne Begleitpferd und in unbekanntem Gebiet."* freut sich Kristin. 🚨 (Traumteam-Fall, nicht GSM)
+*„14 km am Stück bin ich geritten. Alleine, ohne Begleitpferd und in unbekanntem Gebiet."* freut sich Kristin.
 
 Ich freue mich auf dich und deinen Liebling! 🥳
 
-[Bild: Testimonial-Grafik Petra 🚨 (erfundenes Muster): „An den Kühen sind wir das endlich vorbeigekommen, ohne dass sie erstarrt ist. Diese Stelle war für uns immer der Endgegner und ich habe sie sonst gemieden. Jetzt weiß ich genau, wie ich sie da durchführe und sie vertraut mir dabei komplett." Petra]
+[Bild: Testimonial-Grafik Petra: „An den Kühen sind wir das endlich vorbeigekommen, ohne dass sie erstarrt ist. Diese Stelle war für uns immer der Endgegner und ich habe sie sonst gemieden. Jetzt weiß ich genau, wie ich sie da durchführe und sie vertraut mir dabei komplett." Petra]
 
 Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook.** 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als Nächstes übst und du die wichtigen Infos aus dem Kurs alle auf einen Blick hast.
 
@@ -244,5 +240,3 @@ Genieße die Zeit mit deinem Pferd.
 Deine Anika
 
 [Foto: Anika mit Pferd]
-
-🚨 **Hinweis zu den Testimonials in dieser Mail:** „Laura" und „Petra" (beide Zitate plus das Petra-Bild) sind erfundene Muster aus der Testimonial-Runde (29.09.), keine echten Fälle. „Kristin" ist echt, aber ihr 14-km-Erfolg stammt aus dem **Traumteam-Programm**, nicht aus „Gelände sicher meistern" (verstößt gegen „Testimonials themenspezifisch"). Vor dem Live-Schalten durch echte, freigegebene GSM-Stimmen ersetzen. Echt und passend sind bisher nur **Sandra** und **Henriette**.
