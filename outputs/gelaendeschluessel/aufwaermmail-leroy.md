@@ -2,8 +2,8 @@
 
 **Produkt:** Gelände-Schlüssel Backend
 **Typ:** Einleitungs-/Aufwärmmail, läuft VOR den 9 Soft-Mails
-**Status:** FINAL, live in Devine gebaut (Anika, 23.09.2026) — Automation-Workflow f392efc3-3a37-4c6a-8d4b-0f74ceed69f9
-**Quelle:** Leroy-Story wortgetreu aus dem Gelände-Webinar-Transkript (context/gelaendeschluessel/webinar-gelaende-transkript.vtt, Zeilen 657-897), von Anika um echte Details ergänzt (S-Springpferd, Ausschlagen nach der Reitlehrerin, Karotte an der Gerte)
+**Status:** FINAL, live in Devine gebaut (Anika). Überarbeitet 01.10.2026: die magische Wendung stark ausgebaut (frei laufen lassen → gemeinsame Sprache → „wie ein Magnet" → tiefes Vertrauen → zurück an die Straße), Schluss mit Hook „in den nächsten 4 Tagen". Automation-Workflow f392efc3-3a37-4c6a-8d4b-0f74ceed69f9
+**Quelle:** Leroy-Story aus dem Gelände-Webinar-Transkript (context/gelaendeschluessel/webinar-gelaende-transkript.vtt), von Anika ausgebaut.
 
 ---
 
@@ -35,27 +35,39 @@ Er war ein sehr selbstbewusster Bub. Also hat er beschlossen: „Wir gehen nicht
 
 **Von einem Tag auf den anderen war Schluss.**
 
-Schon an der Hofeinfahrt hat er gezögert. Dann ging es noch ein paar Meter und dann hat er voll die Bremse reingehauen. Danach ging gar nichts mehr.
+Schon an der Hofeinfahrt hat er gezögert. Dann ging es noch ein paar Meter und dann hat er voll die Bremse reingehauen. Danach ging gar nichts mehr und er ist sogar rückwärts in die Gräben gelaufen.
 
-Wir haben uns wirklich rückwärts in die Gräben gesetzt und das waren tiefe Gräben da an der Straßenseite.
+Aber ich war jung und ehrgeizig, also habe ich wirklich alles probiert. Pausen, seitwärts, rückwärts.
 
-Aber ich war jung und ehrgeizig und wollte das einfach nicht auf mir sitzen lassen. Ich habe gedacht: „Das kann doch nicht sein, dass ich hier Probleme habe."
-
-Also habe ich wirklich alles probiert. Pausen, seitwärts, rückwärts. Wir sind rückwärts diese ganze verdammte Straße runtergeritten, weil ich dachte, irgendwann wird es ihm zu doof und dann kann ich umdrehen und weiterreiten.
+Wir sind rückwärts diese ganze verdammte Straße runtergeritten, weil ich dachte, irgendwann wird es ihm zu doof und dann kann ich umdrehen und weiterreiten.
 
 **Tja. Ich war ein Sturkopf. Leroy war aber ein noch größerer Sturkopf.** 🤣
 
 Am Ende standen wir steigend mitten auf der Straße. Andere haben schon gesagt: „Du, das ist vielleicht ein bisschen gefährlich, was du da gerade machst."
 
-Ich war so verzweifelt, dass ich ihn sogar mit einer Karotte 🥕 an der Gerte festgebunden vorlocken wollte. 🙈 Das hat bestimmt wie im Comic ausgesehen..
+Ich war so verzweifelt, dass ich ihn sogar mit einer Karotte 🥕 an der Gerte festgebunden vorlocken wollte. 🙈 Das hat bestimmt wie im Comic ausgesehen.
 
-Und dann hat sich mit der Zeit etwas zwischen uns verändert.
+**Leider hat nicht mal die Karotte etwas an der Situation geändert.** Und langsam war ich so genervt, dass ich etwas gemacht habe, was ich vorher noch nie getan habe.
 
-Nach ganz viel Ausprobieren und noch viel mehr **Beziehungsarbeit am Boden** haben wir es wieder hingekriegt. Er hat mir wieder vertraut und sich bei mir sicher gefühlt.
+Ich habe Leroy einfach nur frei auf dem Reitplatz um mich herum laufen lassen und habe das Ziel zur Reithalle zu kommen, erstmal aufgegeben.
 
-Das war der Casus knacksus. Und im Nachhinein war das die **Geburtsstunde meiner Verlasspferd-Methode.** 💕
+Und damit fing an sich etwas zwischen uns zu verändern.
 
-Ich habe sogar noch das alte Video gefunden.
+Ich habe gemerkt, wie wir eine **richtige gemeinsame Sprache entwickelt habe.** Ich habe ausprobiert mit wie wenig Hilfen ich ihn denn in den Trab bekomme oder auch nur die Richtung verändere.
+
+Auf einmal brauchte ich nur den Blick senken und Leroy parierte aus dem Trab in den Schritt durch. Wie magisch.
+
+**Irgendwann konnte man die kleinen Zeichen unserer Verständigung von außen kaum noch sehen und Leroy klebte wie ein richtiger Magnet an mir.** 💕
+
+Ich ließ ihn auch über den Hof frei hinter mir herlaufen und anbinden zum Putzen brauchte ich ihn auch nicht mehr.
+
+Wir haben ein richtig tiefes Vertrauen aufgebaut, also habe ich mich einfach mal wieder an die Straße heran getraut.
+
+Und siehe da. Auf einmal gab es keine Spur mehr von Kampf oder Diskussionen. Ja, er war noch etwas unsicher, aber er hat sich mir trotzdem angeschlossen.
+
+Damals war mir noch nicht bewusst, dass das die Geburtsstunde meiner Verlasspferd-Methode gewesen ist.
+
+Ich habe sogar noch ein altes Video aus dieser Zeit gefunden.
 
 Genau die Stelle, wo Leroy vorher steigend auf dem Asphalt stand. Und wo ich ihn danach endlich wieder im Schritt am hängenden Zügel zur Halle reiten konnte.
 
@@ -65,11 +77,7 @@ Ich war das glücklichste Mädchen ever. Endlich war der Knoten geplatzt. 🌳
 
 Das war eine Reise, sage ich dir.
 
-Und genau darum geht es in den nächsten Tagen. Ich zeige dir Schritt für Schritt, **wie du für dein Pferd zu genau diesem sicheren Anker wirst, damit ihr gemeinsam entspannt rauskommt.**
-
-Ganz ohne Bremse an der Hofeinfahrt und ohne Karotte am Stock. 🥕
-
-Freu dich drauf. Die erste Mail kommt schon bald.
+Was ich genau mit Leroy gemacht habe, damit er überallhin hinter mir her lief und wir auch schließlich wieder zur Halle gekommen sind, zeige ich dir in den nächsten 4 Tagen.
 
 Genieße die Zeit mit deinem Pferd.
 
