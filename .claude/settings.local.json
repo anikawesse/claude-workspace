@@ -782,7 +782,19 @@
       "Bash(git commit -q -m 'Handarbeit-Upsell \\(ThriveCart live, 197 statt 299\\) gesichert: Volltext + 6 Screenshots, echte BBP-Testimonials *)",
       "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-16 -Bis 2026-09-30)",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Freiarbeit_neu.jpg\")",
-      "Bash(git commit -q -m 'Shutdown 30.09.: GSM Backend-Mails - Sales-Mail 2 \\(Einblick/Kurstour\\) + 3 \\(Deadline/Extremfall\\) final/Entwurf, Sales-Mail 1 final, Aufwaermmail + Softmails 1.1-1.3 final *)"
+      "Bash(git commit -q -m 'Shutdown 30.09.: GSM Backend-Mails - Sales-Mail 2 \\(Einblick/Kurstour\\) + 3 \\(Deadline/Extremfall\\) final/Entwurf, Sales-Mail 1 final, Aufwaermmail + Softmails 1.1-1.3 final *)",
+      "Bash(node scripts/lexware-import.js --month 2026-09 --all --dry-run)",
+      "Bash(node scripts/lexware-import.js --month 2026-09 --all)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-17 -Bis 2026-10-01)",
+      "Bash(awk '/^=================== Heuvlies/{p=1} p' C:/Users/Olive/.claude/projects/C--Users-Olive-Desktop-claude-workspace/19c49c97-2076-42a5-a5f4-77a55f2928d7/tool-results/b04pc2ihn.txt)",
+      "Bash(grep -viE \"Meta Platforms|^\\\\s*$\")",
+      "Bash(node book2.js)",
+      "Bash(ls -la \"C:/Users/Olive/Desktop/\"*.html 2>/dev/null; cd \"C:/Users/Olive/Desktop/claude-workspace\" && grep -rIl \"Zuordnung\" --include=*.js --include=*.ps1 --include=*.md --include=*.html scripts outputs 2>/dev/null | head; git log --oneline -5 --all -- \"*uordnung*\")",
+      "Bash(git commit -q -m 'GSM Sales-Mail 3 final \\(in Devine gebaut\\) + Flag: Testimonial Laura ist erfundenes Muster, ersetzen *)",
+      "Bash(grep -oiE \"\\(spezifisch|messbar|attraktiv|realistisch|terminiert|achievable|relevant|zeitlich\\)[^<]{0,80}\" outputs/gelaende-programm/workbook-smart-ziel.html)",
+      "Bash(grep -oiE \"\\(z\\\\.?B\\\\.?|Beispiel|allein|Runde|Gelände|Minuten\\)[^<]{0,90}\" outputs/gelaende-programm/workbook-smart-ziel.html)",
+      "Bash(git commit -q -m 'G-S Softmails: 1.1 + 1.2 auf Anikas Mentorin-Ueberarbeitung aktualisiert, 1.3 im neuen Stil ueberarbeitet \\(Entwurf\\) *)",
+      "mcp__ca5ac75d-af18-451b-b211-326d6f6c2505__get-create-design-async-job"
     ],
     "defaultMode": "bypassPermissions"
   }
