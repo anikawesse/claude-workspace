@@ -16,66 +16,63 @@ Stil-Referenz: Anikas Final-Version von Mail 1.1 (Learnings in `context/gelaende
 
 ## Loop 1, Mail 1 — Spontanität und Unabhängigkeit
 
-**Status:** ✅ FINAL von Anika, in Devine als „1.1. Softmail" angelegt (18.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen.
+**Status:** ✅ FINAL, Mentorin-Überarbeitung von Anika (flüssiger, mehr Brückensätze, durchgehend „Luna"), Stand 01.10.2026. Transkription aus Screenshot.
 
 **Betreff:** 🌳 Keine Begleitung = kein Gelände möglich?
 **Vorschautext:** Das ist ja mal scheiße.
+*(Betreff/Vorschautext im Screenshot nicht sichtbar, ggf. in Devine prüfen.)*
 
-Es ist Freitagnachmittag und du hast nach einer stressigen Woche endlich Feierabend. 🤠
+Es ist Freitagnachmittag und du hast nach einer stressigen Woche endlich Feierabend. 😌
 
-Die Sonne scheint und auf dem Weg zum Stall denkst du: Boah, heute ist es so schön. Ich würde echt gerne mit Luna einen Spaziergang machen. 🐎
+Die Sonne scheint und auf dem Weg zum Stall denkst du: *„Boah, heute ist es so schön. Ich würde echt gerne mit Luna einen Spaziergang machen. Hoffentlich ist jemand da, der mitkommt."* 🐎
 
-Dann stehst du am Stall und die Realität holt dich ein. Alleine geht Lilly ja leider nicht vom Hof. Bzw. es ist totaler Stress für alle Beteiligten.
+Dann stehst du am Stall und die Realität holt dich ein. Alleine geht Luna ja leider nicht vom Hof. Bzw. es ist totaler Stress für alle Beteiligten.
 
 Wer könnte also von den anderen Einstellerinnen mitkommen?
 
-Marina ist im Urlaub.
+❌ Marina ist im Urlaub.
 
-Sandra kommt erst am Wochenende wieder.
+❌ Sandra kommt erst am Wochenende wieder.
 
 Du schreibst in die Stallgruppe und wartest. Keine Antwort.
 
-Also machst du das, was du immer machst. Putzen, Reitplatz, eine Runde Bodenarbeit.
+Deine Sorge hat sich bestätigt. Du kommst wieder nicht vom Hof. 🤦‍♀️
 
-Und als du Lilly zurück auf die Koppel bringst, fällt dein Blick auf den Feldweg hinterm Hof und du denkst: Irgendwann gehen wir da lang. Irgendwann.
+Stattdessen machst du das, was du immer machst. Putzen, Reitplatz, eine Runde Bodenarbeit.
 
-Dabei wünschst du dir etwas ganz Einfaches.
+Und als du Luna zurück auf die Koppel bringst, fällt dein Blick auf den Feldweg hinterm Hof und du denkst: Irgendwann gehen wir da lang. Nur du und ich.
 
-Du willst losziehen können, wann DU es willst. Ohne vorher drei Leute zu fragen und ohne zu hoffen, dass ein Begleitpferd Zeit hat.
+Und du streichelst Luna über den Hals und flüsterst ihr zu: *„Ist doch eigentlich ein ganz einfacher Wunsch, den ich habe, oder?"* 🌸
 
-✅ Dein Pferd holen,
-✅ fertigmachen
-✅ und selbstverständlich gemeinsam vom Hof gehen! 🥰
+Denn dein Wunsch ist einfach nur losziehen können, wann du es willst.
 
-**Ich liebe in allen Lebensbereichen meine Unabhängigkeit.** Und sie ist auch der höchste Wert in meiner Arbeit.
+Ohne vorher drei Leute fragen zu müssen und zu hoffen, das jemand Zeit hat euch zu begleiten.
 
-Ich möchte, dass du unabhängig von mir wirst, weil du selbst zur besten Partnerin für dein Pferd wirst.
+Mensch {{contact.first_name}}, ich weiß nicht wie es dir geht, aber **ich liebe in allen Lebensbereichen meine Unabhängigkeit. Und sie ist auch der höchste Wert in meiner Arbeit.**
 
-Und natürlich möchte ich auch, dass du unabhängig von einer Begleitung für deine Gelände-Ausflüge wirst.
+Und ich möchte, dass auch du unabhängig wirst. Unabhängig von Menschen, die du brauchst, nur damit du ins Gelände kommst. 🌳
 
-Um genau das zu erreichen, habe ich dir heute meinen Minikurs den "Gelände-Schlüssel" mitgebracht.
+Und den ersten Schritt, wie du es schaffst, ohne auf irgendjemanden angewiesen zu sein, vom Hof zu kommen, habe ich dir vorbereitet.
 
-**Darin zeige ich dir, wie dein Pferd entspannt mit dir vom Hof läuft, auch wenn kein zweites Pferd dabei ist.**
+[Button: Hier klicken! → AUSLÖSER-LINK]
 
-Ich habe über 500 Mensch-Pferd-Teams begleitet und eins kann ich dir versprechen: 87% der Frauen, die heute ganz selbstverständlich mit ihrem Pferd alleine losziehen, standen fast alle mal genau da, wo du gerade stehst.
+Damit schaffst du es entspannt mit deinem Pferd vom Hof zu kommen, auch ohne Pferdekumpel. Und du kannst endlich deine Feierabendrunde genießen. 😊
 
-Wie das auch für euch zwei möglich wird, erfährst du hier:
-
-[Button: Gib mir mal Infos zum Gelände-Schlüssel!]
+Ich habe über 500 Mensch-Pferd-Teams begleitet und eines kann ich dir versprechen: 87% der Frauen, die heute ganz selbstverständlich mit ihrem Pferd alleine losziehen, standen fast alle mal genau da, wo du gerade stehst. ❤️
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite kommst. Er beginnt für 3 Tage zu zählen, weil der Einführungspreis genau diese Zeit gültig ist. Nach den 3 Tagen wird es den Gelände-Schlüssel zu einem anderen Preis geben. Danke für dein Verständnis.
+PS: Sobald du auf den Link geklickt hast, öffnet sich eine Seite, die genau 3 Tage gültig ist.
 
-⚠️ Zwei Anmerkungen an Anika (siehe Chat 18.09.): Pferdename wechselt zwischen Luna und Lilly; der 87%-Satz trägt doppelt („87% … standen fast alle").
+[Foto: Anika mit Pferd]
 
 ---
 
 ## Loop 1, Mail 2 — Trainerin-Paradox
 
-**Status:** ✅ FINAL von Anika, in Devine als „1.2. Softmail" angelegt (18.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen. Am Mail-Ende: Foto Anika mit Pferd.
+**Status:** ✅ FINAL, Mentorin-Überarbeitung von Anika (flüssiger, mehr Brückensätze), Stand 01.10.2026. Transkription aus Screenshot.
 
 **Betreff:** 🌳 Mit Trainerin klappt alles. Und alleine?
 **Vorschautext:** Woran liegt das bloß?
@@ -102,85 +99,72 @@ Auch wenn Miriam den Strick in die Hand nimmt und Heike neben ihr läuft, macht 
 
 Aber alleine? Ohne Heike?
 
-Da steht Michel wie der Fels in der Brandung und wir eher den Teufel tun, aber bestimmt nicht weg von seiner Herde ins Gelände gehen. 🐴
+Da steht Michel wie der Fels in der Brandung und wird eher den Teufel tun, aber bestimmt nicht weg von seiner Herde ins Gelände gehen. 🏔️
 
-Dabei willst du genau das: das Gefühl aus der Trainerstunde mitnehmen.
+Dabei will Miriam nur das Gefühl aus ihrer Trainerstunde mitnehmen und souverän mit Michel ins Gelände gehen, auch wenn niemand daneben steht.
 
-Auch souverän sein, wenn niemand daneben steht und dir zunickt.
+Und vielleicht kennst du das auch, dass es im Unterricht gut lief, aber alleine stehst du immer vor denselben Schwierigkeiten.
 
-✅ Alleine mit deinem Pferd zum Hoftor gehen,
-✅ ruhig bleiben
-✅ und genau wissen, wie du deinem Liebling Sicherheit gibst. 💪🏻
+Dabei wünschst du dir eigentlich, dass dein Alltag so aussieht:
 
-**Ich verrate dir was: Deine Trainerin kann nichts, was du nicht auch lernen kannst.**
+✅ Du gehst alleine mit deinem Pferd bis ans Hoftor,
+✅ dabei bleibst du völlig gelassen und fühlst dich souverän
+✅ und dein Liebling läuft ohne zu fragen mit dir mit, weil du so viel Sicherheit ausstrahlst. 🤚🏼
 
-Deine Sicherheit muss nicht an einer Person hängen, die daneben steht. Du kannst sie dir selbst aufbauen und dann gehört sie dir.
+Ich habe eine wirklich simple Methode, wie du für dein Pferd so sicher wirkst, dass es gerne mit dir alleine überall hingeht.
 
-Bei jedem Spaziergang, an jedem Wochenende, ganz ohne vorherige Terminabsprache. 😁
+Dabei bin ich jetzt keine Zauberin oder habe magische Fähigkeiten, sondern ich zeige dir etwas, was keiner mehr so richtig auf dem Schirm hat, weil es so basic ist.
 
-Genau dabei begleite ich dich in meinem Minikurs dem "Gelände-Schlüssel".
+Und damit schaffst du es bei jedem Spaziergang, an jedem Wochenende (ohne Terminabsprache mit Begleitpersonen) einfach entspannt vom Hof zu kommen.
 
-**Darin zeige ich dir, wie ihr zwei auch ohne Trainerin an eurer Seite entspannt vom Hof kommt.**
-
-Wie das geht, erfährst du hier:
-
-[Button: Gib mir mal Infos zum Gelände-Schlüssel!]
+Wenn du das willst, klicke hier.
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 Tage Zeit zum Einführungspreis zu buchen. Hast du noch nicht draufgeklickt, dann hast du womöglich Glück und das Fenster hat für dich noch nicht begonnen. [hier klicken und herausfinden → AUSLÖSER-LINK]
+PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 Tage Zeit zum Einführungspreis zu buchen. Hast du noch nicht draufgeklickt, dann hast du womöglich Glück und das Fenster hat für dich noch nicht begonnen: [hier klicken und herausfinden → AUSLÖSER-LINK]
 
 [Foto: Anika mit Pferd]
-
-⚠️ Anmerkungen an Anika (siehe Chat 18.09.): vermutlich Tippfehler „und wir eher den Teufel tun" → „und wird eher den Teufel tun"; Miriam-Zitat stammt aus den intern geteilten Calls (laut eigener Regel vor öffentlicher Nutzung Erlaubnis einholen, Pferdename ist ggf. schon pseudonymisiert).
 
 ---
 
 ## Loop 1, Mail 3 — Erholung statt Kraftprobe
 
-**Status:** ✅ FINAL von Anika, in Devine als „1.3. Softmail" angelegt (18.09.2026). Transkription aus Screenshot, Emojis nach bestem Wissen übernommen. Am Mail-Ende: Foto Anika mit Pferd.
+**Status:** ⏳ Überarbeitet von Claude im Mentorin-Stil (flüssiger, mehr Emotion, Brückensätze), 01.10.2026. Wartet auf Anikas Freigabe. Basis = Anikas bisherige Live-Fassung.
 
 **Betreff:** 🌳 Der Stall sollte deine Auszeit sein
 **Vorschautext:** Doch danach bist du gestresster als vorher.
 
-Eigentlich fährst du zum Stall, um runterzukommen.
+Eigentlich fährst du zum Stall, um runterzukommen. Der Job war anstrengend, zu Hause wartet noch der halbe Haushalt und die Zeit mit Wanja soll genau diese kleine Insel sein, auf der du einmal richtig durchatmen kannst.
 
-Der Job war anstrengend, zu Hause wartet der Rest vom Haushalt und die Zeit mit Wanja soll deine kleine Insel sein.
+Doch wie sieht diese Insel gerade wirklich aus?
 
-Aber wie sieht diese Zeit gerade aus?
+Du willst nur einen schönen Spaziergang machen und schon wird daraus ein Kampf. 😮‍💨 Wanja zieht bereits an der Hofeinfahrt zurück Richtung Stall, ruft nach den anderen und du hältst den Strick immer fester, mit diesem mulmigen Gefühl, dass sie sich jeden Moment losreißt.
 
-Du möchtest einen Spaziergang machen und es endet im Kampf. 😮‍💨
+Du versuchst es mit aller Ruhe und Geduld, wieder und wieder. Aber so richtig vorwärts kommt ihr einfach nicht und nach zwanzig zähen Minuten seid ihr beide mit den Nerven am Ende. 🤷‍♀️
 
-Wanja zieht schon an der Hofeinfahrt zurück Richtung Stall, ruft nach den anderen und du hältst den Strick immer fester und hast Angst, dass sie sich gleich losreißt.
+Und abends im Auto spürst du es dann ganz deutlich. Du bist angespannter als auf dem Hinweg und den Tränen nahe.
 
-Du probierst es mit viel Ruhe und Geduld immer wieder.
-Aber so richtig weiter kommt ihr nicht voran. 🤷‍♀️
-Nach zwanzig Minuten seid ihr beide fertig mit den Nerven.
+Vielleicht bist du aber auch schon einen Schritt weiter und versuchst es gar nicht mehr. Du machst brav Bodenarbeit auf dem Platz und redest dir ein, dass das heute sowieso genau so geplant war. 💔
 
-Und abends im Auto merkst du: Du bist angespannter als auf dem Hinweg und den Tränen nahe.
+Dabei sehnst du dich doch nach etwas ganz anderem.
 
-Vielleicht bist du auch schon einen Schritt weiter und versuchst es gar nicht mehr. Du machst Bodenarbeit auf dem Platz und erzählst dir selbst, dass das heute genau so geplant war. 💔
+Du träumst davon, wie ihr zwei einfach entspannt durch den Wald streift. Wanja schnaubt tief ab und du kannst endlich mal wieder so richtig durchatmen und die herrliche Waldluft einsaugen. 🌳
 
-Dabei sehnst du dich nach etwas ganz anderem.
+Und weißt du was? Genau so leicht darf es sich anfühlen:
 
-Ihr zwei einfach entspannt im Wald unterwegs.
-
-Wanja schnaubt ab und du kannst endlich mal wieder so richtig durchatmen und die herrliche Waldluft einsaugen. 🌳
-
-Es kann so einfach sein:
 ✅ Zum Stall fahren und runterkommen,
-✅ mit deinem Pferd durch den Wald schlendern
-✅ und erholt nach Hause fahren! 🥳
+✅ mit deinem Pferd gemütlich durch den Wald schlendern
+✅ und abends erholt nach Hause fahren. 🥳
 
-**Für mich ist ein Spaziergang mit meinem Pferd bis heute die beste Erholung, die es gibt.** Und ich möchte, dass du dieses Gefühl auch (wieder) bekommst.
+Denn für mich ist ein Spaziergang mit meinem Pferd bis heute die schönste Erholung, die es überhaupt gibt. Und genau dieses Gefühl möchte ich dir zurückgeben.
 
-Meine Teilnehmerin Susanne kannte davon lange nur die Kraftprobe. Ihr Haflinger Amir klebte am Hof und wurde richtig gestresst, sobald sie es alleine versuchte. Sie hat die Annäherungs- und Rückzugsstrategie aus dem Gelände-Schlüssel ausprobiert und heute gehen die beiden ganz selbstverständlich zusammen ins Gelände. 💕
+Meine Teilnehmerin Susanne kannte davon lange nur die Kraftprobe. Ihr Haflinger Amir klebte förmlich am Hof und geriet richtig in Stress, sobald sie es alleine versuchte. Dann hat sie die Annäherungs- und Rückzugsstrategie aus dem Gelände-Schlüssel ausprobiert und heute spazieren die beiden ganz selbstverständlich zusammen ins Gelände. 💕
 
-Welche Strategie die beiden angewendet haben, zeige ich dir ganz detailliert in meinem Minikurs dem "Gelände-Schlüssel".
+Welche Strategie Susanne und Amir genau genutzt haben, zeige ich dir Schritt für Schritt in meinem Minikurs, dem „Gelände-Schlüssel".
 
-**Darin erfährst du, wie der Spaziergang mit deinem Pferd wieder Erholung wird statt Stress.**
+**Darin erfährst du, wie der Spaziergang mit deinem Pferd wieder zu echter Erholung wird statt zur Zerreißprobe.**
 
 Schau es dir hier an:
 
