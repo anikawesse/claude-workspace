@@ -131,10 +131,11 @@ P.S. In dieser Mail gebe ich dir eine Kurstour durch „Gelände sicher meistern
 
 ## Sales-Mail 3 — Deadline / Einwand „Extremfall"
 
-**Status:** ⏳ Entwurf, wartet auf Freigabe von Anika.
-**Vorlage:** Gelände-Schlüssel „Salesmail 3 — Deadline / Einwand Extremfall". Aufbau: 24-Stunden-Deadline → Einwand „mein Pferd ist ein Extremfall" entkräften → 4 Punkte was du lernst → Testimonial → Workbook-Bonus → CTA.
+**Status:** ✅ FINAL, in Devine als „3. Salesmail Open GSM" gebaut (01.10.2026).
+**Vorlage:** Gelände-Schlüssel „Salesmail 3 — Deadline / Einwand Extremfall".
+⚠️ **Testimonial „Laura" ist ein erfundenes Muster** (Hinweis am Ende der Mail), kein echter Fall.
 
-**Betreff:** 🌳 Mein Pferd ist ein Extremfall
+**Betreff:** 🚜 Mein Pferd ist ein Extremfall
 **Vorschautext:** Gerade dann hast du dein Glück verdient
 
 Hey {{contact.first_name}},
@@ -163,13 +164,13 @@ Du lernst dort
 
 4. wie ihr eure Strecke Schritt für Schritt ausweitet, sodass **die große Runde zur Routine wird.**
 
-Sandra, eine Teilnehmerin, hatte mit ihrer Stute schon **Probleme, überhaupt an einem Trecker vorbeizukommen.** Beim ersten Traktor ist ihre Stute komplett durchgedreht.
+Laura, eine Teilnehmerin von Gelände sicher meistern, hatte mit ihrer Stute schon **Probleme, überhaupt an einem Trecker vorbeizukommen.** Schon wenn sie nur das Brummen vom Motor gehört hat, waren sie beide in Alarmbereitschaft.
 
 Aber lies selbst, wie sich das geändert hat. ⬇️
 
-[Bild: Testimonial-Grafik Sandra mit Fiona: „Durch den Kurs weiß ich jetzt, warum sie so reagiert hat und ich habe einen klaren Plan für genau diese Momente. Wir sind letzte Woche sogar am bellenden Hund vorbeispaziert, vor dem sie sonst immer solche Angst hatte. Einfach so." Sandra mit Fiona]
+[Bild: Testimonial-Grafik Laura: „Der Trecker kam und ich hatte zum ersten Mal kein Herzrasen. Früher hätte ich schon von Weitem Panik bekommen und mein Pferd gleich mit. Diesmal habe ich meinen Plan durchgezogen und wir haben ihn ganz entspannt vorbeiziehen lassen." Laura]
 
-Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook** mit Erfolgstracker. 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als Nächstes übst.
+Zusätzlich schenke ich dir im Kurs noch ein richtig **geniales Workbook**. 🎁 Es führt dich durch den Kurs, damit du immer genau weißt, was du als Nächstes übst und zeigt dir nochmal alle wichtigen Learnings auf einen Blick.
 
 ➡️ [Ja, ich möchte mir den Kurs sichern. → SALESPAGE-LINK]
 
@@ -180,3 +181,5 @@ Genieße die Zeit mit deinem Pferd.
 Deine Anika
 
 [Foto: Anika mit Pferd]
+
+⚠️ **Hinweis zu „Laura":** Dieses Testimonial ist eines der erfundenen Muster aus der Testimonial-Runde (29.09.), kein echter Kundenfall. Erfundene Kundenstimmen mit Namen sind in Deutschland abmahnbar und widersprechen Anikas Regel „nur echte Fälle". Bitte durch ein echtes, freigegebenes Zitat ersetzen (z. B. Sandra: beim ersten Traktor durchgedreht, jetzt ein klarer Plan).
