@@ -129,50 +129,42 @@ PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite komms
 
 ## Loop 1, Mail 2 — Der Trecker, kein Platz, und du erstarrst
 
-**Status:** ✅ FINAL, in Devine gebaut (30.09.2026).
+**Status:** ✅ FINAL, Mentorin-Stil (03.10.2026). Kein Button (Link im Fließtext), kein „Kurs"-Wort, Notfall-Strategie-Logik, Fett nur an Schlüsselstellen.
 
 **Betreff:** 🚜 Trecker kommt. Und jetzt?
 **Vorschautext:** Du erstarrst zur Salzsäule.
 
-Ihr seid unterwegs auf eurem Feldweg. Die Sonne scheint, Luna läuft entspannt neben dir und für einen Moment ist einfach alles gut. 🐎
+Du bist mit deinem Pferd Luna unterwegs auf eurem Feldweg. Die Sonne scheint, Luna läuft entspannt neben dir und für einen Moment ist einfach alles gut. 🐎
 
 Dann hörst du es. Dieses tiefe Brummen, das langsam näher kommt.
 
-Und dann siehst du das, was du befürchtet hast. Um die Kurve schiebt sich ein Trecker. Groß, laut und direkt auf euch zu. 🚜
+Und dann siehst du das, was du befürchtet hast. Um die Kurve schiebt sich ein Trecker, groß, laut und direkt auf euch zu. 🚜
 
-Und du merkst sofort, wie Luna sich neben dir anspannt. Der Kopf geht hoch, die Ohren sind starr nach vorne gerichtet und sie fängt an, seitwärts zu tänzeln.
+Sofort spürst du, wie Luna sich neben dir anspannt. Ihr Kopf geht hoch, die Ohren sind starr nach vorne gerichtet und sie fängt an, nervös zur Seite zu tänzeln.
 
-Und du? Du weißt in dieser Sekunde einfach nicht, was du tun sollst. Umdrehen? Weitergehen? Anhalten? In deinem Kopf ist auf einmal nur noch Leere.
+Und du? Du weißt in dieser Sekunde einfach nicht, was du tun sollst.
 
-Also hältst du den Strick fester und hoffst einfach, dass es gut geht. 🙄
+Umdrehen? Weitergehen? Anhalten? In deinem Kopf ist auf einmal nur noch gähnende Leere.
 
-Und diesen einen Moment erleben ganz viele Freizeitreiterinnen immer wieder. Im Gelände passiert etwas gruseliges und sie selbst erstarren.
+Also hältst du den Strick fester und hoffst einfach, dass es gut geht. 😬
 
-Also übernimmt dein Pferd die Führung und entscheidet sich dann leider oft für die Flucht. 💥
+Und genau diesen Moment erleben unglaublich viele Freizeitreiterinnen immer wieder. Draußen passiert etwas Gruseliges, sie selbst erstarren und in genau dieser Schrecksekunde übernimmt das Pferd die Führung und entscheidet sich viel zu oft für **die Flucht**. 💥
 
-Du hast schon gemerkt, dass es nicht reicht, überhaupt ins Gelände zu kommen.
+Diese Momente immer und immer wieder zu erleben, kann wirklich frustrierend sein.
 
-Du willst wissen, was zu tun ist, wenn dieser blöde Trecker kommt.
+Damit du endlich mit diesen Situationen umgehen kannst, hilft es enorm immer **einige Notfall-Strategien parat zu haben**.💪🏻
 
-Du willst souverän reagieren und dein Pferd dabei unter Kontrolle behalten. 💪🏻
+Denn souveräne Treckerbegegnungen sind **keine Frage von Glück oder Pech**. Für jede Situation gibt es einfach eine klare Handlungsstrategie, die du vorher kennen solltest und im Ernstfall dann einfach abrufst.
 
-**Souveräne Treckerbegegnungen sind keine Frage von Glück oder Pech.** Für jede dieser Situationen gibt es eine klare Handlungsstrategie, die du vorher kennst und im Ernstfall einfach abrufst.
+Dann stehst du nicht mehr erstarrt da, sondern **weißt genau, was zu tun ist**. Damit vermittelst du deinem Liebling, dass du die Lage im Griff hast und **das baut Vertrauen auf**. 🌸
 
-Dann stehst du nicht mehr erstarrt da, sondern weißt genau, was zu tun ist. 🌸
-
-Genau das zeige ich dir in meinem Kurs „Gelände sicher meistern".
-
-**Darin bekommst du für Trecker, Autos und die typischen Schreckmomente deinen klaren Plan, sodass du nie wieder ratlos danebenstehst.**
-
-Wie das geht, erfährst du hier:
-
-[Button: Gib mir mal Infos zu Gelände sicher meistern!]
+Wie diese Strategie für den Trecker und all die anderen Schreckmomente aussieht, **[zeige ich dir hier → AUSLÖSER-LINK]**.
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 Tage Zeit zum Einführungspreis zu buchen. Hast du noch nicht draufgeklickt, dann hast du womöglich Glück und das Fenster hat für dich noch nicht begonnen. [hier klicken und herausfinden]
+PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 Tage Zeit, dir die Strategien anzusehen. Hast du noch nicht draufgeklickt, dann hast du womöglich Glück und das Fenster hat für dich noch nicht begonnen. **[Einfach hier klicken → AUSLÖSER-LINK]**.
 
 ---
 
