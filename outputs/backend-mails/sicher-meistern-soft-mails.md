@@ -170,7 +170,7 @@ PS: Sobald du auf die Seite kommst, beginnt der Timer. Ab dem Moment hast du 3 T
 
 ## Loop 1, Mail 3 — Direkt vom Hof an die befahrene Straße
 
-**Status:** ✅ FINAL, in Devine gebaut (30.09.2026).
+**Status:** ✅ FINAL, Mentorin-Stil (03.10.2026). Kein Button (Link im Fließtext), kein „Kurs"-Wort, flüssiger mit Brückensätzen, Fett nur an Schlüsselstellen.
 
 **Betreff:** 🚗 Bei euch geht es gleich an die Straße?
 **Vorschautext:** Kein gemütlicher Feldweg zum Warmwerden.
@@ -181,30 +181,26 @@ Sie gehen vom Hof und haben erstmal einen ruhigen Feldweg, auf dem ihr Pferd in 
 
 Und dann gibt es Ställe wie vielleicht deinen.
 
-Bei dir geht es direkt los. 🚗 Kaum aus der Hofeinfahrt, seid ihr schon an der Straße. Autos, die mit Tempo 100 an euch vorbeiziehen, kein Grasstreifen, keine Stelle zum Ausweichen.
+Bei dir geht es nämlich sofort zur Sache. 🛣️🚘 Kaum seid ihr aus der Hofeinfahrt, steht ihr auch schon an der Straße. Autos ziehen mit Tempo 100 an euch vorbei, kein Grasstreifen, **keine Stelle zum Ausweichen**.
 
-Kein Warmwerden, kein sanfter Einstieg. Sondern vom ersten Meter an volle Aufmerksamkeit.
+Kein sanfter Einstieg, sondern vom ersten Meter an volle Aufmerksamkeit.
 
-Und genau deshalb hast du das Gefühl, dass es bei euch eh nicht geht. 🤦‍♀️
+Und genau deshalb hast du oft das Gefühl, dass es bei euch beiden **nie funktionieren wird**, entspannt eine schöne Gelände-Runde zu drehen.🤷🏻‍♀️
 
-„Die anderen haben ja auch einen schönen Weg. Bei mir ist gleich die Straße, da brauche ich gar nicht erst anfangen."
+„Die anderen haben schließlich einen schönen Weg. Bei mir ist gleich die Straße, da brauche ich gar nicht erst anfangen." hast du dir schon oft gedacht.
 
-Aber weißt du was? Auch für diese Startbedingungen gibt es einen Weg.
+Ich kenne das übrigens aus eigener Erfahrung. Auch ich lande von meiner Hofeinfahrt direkt an der Landstraße, mit großen Treckern und Bussen.
 
-Auch aus meiner Hofeinfahrt lande ich direkt an der Landstraße mit großen Treckern und Bussen.
+Und trotzdem komme ich mit meinen Pferden **entspannt los und genieße gemütliche Gelände Runden**.
 
-Du brauchst also nur die richtige Vorbereitung und die richtige Strategie, wie ihr auch an einer befahrenen Straße sicher startet. ✅
+Bei solchen Startbedingungen brauchst du tatsächlich eine richtig gute Vorbereitung und **die richtige Strategie**, wie ihr auch an einer befahrenen Straße sicher startet.✅
 
-Genau das zeige ich dir in meinem Kurs „Gelände sicher meistern".
+Damit wird selbst eure schwierige Stalllage **vom Problem zur ganz normalen Ausgangssituation**.
 
-**Darin bekommst du für den Start direkt an der Straße einen klaren Weg, sodass ihr sicher losgeht, egal wie eure Stalllage ist.**
-
-Wie das geht, erfährst du hier:
-
-[Button: Gib mir mal Infos zu Gelände sicher meistern!]
+Wie genau dieser sichere Start aussieht, **[zeige ich dir hier → AUSLÖSER-LINK]**.
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Sobald du auf den Link klickst, starten die 3 Tage, die dir den besten Preis sichern. Also klick hier.
+PS: Sobald du auf den Link klickst, starten die 3 Tage, in denen du dir die Strategien ansehen kannst. **[Einfach hier klicken → AUSLÖSER-LINK]**.
