@@ -7,6 +7,7 @@
 - **Methode:** Verlasspferd-Methode
 - **Proof:** 500+ Mensch-Pferd-Teams begleitet
 - **Sales Page:** https://aw.anikas-pferdeakademie.de/gs-ads
+- **Checkout (Buttons der Sales Page):** https://anikas-pferdeakademie.thrivecart.com/gs-1/ (seit 03.10.2026 in `outputs/gelaendeschluessel/landingpage-ads.html`, vorher `/gs-ads/`; Einspielen in Devine macht Anika)
 - **Preis:** €27 Early Bird (regulär €197)
 
 ---
