@@ -74,52 +74,56 @@ Deine Anika
 
 ## Loop 1, Mail 1 — Die immer gleiche kurze Mini-Runde
 
-**Status:** ✅ FINAL, in Devine als „1.1. Softmail GSM" gebaut (30.09.2026).
+**Status:** ✅ FINAL, Mentorin-Stil (03.10.2026). Kein Button (Links im Fließtext), kein „Kurs"-Wort, stattdessen konkrete Notfall-Situationen. Fett nur an Schlüsselstellen.
 
 **Betreff:** 🚜 Immer dieselbe kleine Runde?
 **Vorschautext:** Und immer an derselben Stelle wieder umdrehen.
 
-Es ist Feierabend, die Sonne scheint und du holst Luna von der Koppel. 🐎
+Es ist Feierabend, die Sonne steht golden über den Feldern und du holst Luna von der Koppel. 🐎 Vom Hof kommt ihr inzwischen ganz alleine und darauf bist du zu Recht mächtig stolz.
 
-Ihr kommt inzwischen alleine vom Hof, darauf bist du auch richtig stolz.
+Also macht ihr euch auf den Weg. Eure Runde. Die eine Runde, die ihr immer geht.
 
-Also geht ihr los. Eure Runde. Die eine Runde, die ihr immer geht.
+Bis zu der Stelle, an der der Feldweg auf die Straße trifft. Genau da drehst du um. Wie immer.
 
-Bis zu der Stelle, wo der Feldweg auf die Straße trifft. Da drehst du um. Wie immer.
+Denn dahinter kommt der Hof mit dem Hund🐶, der jedes Mal wild an den Zaun prescht. Und ein Stück weiter kommt die Kurve, wo dir damals ein Trecker 🚜entgegenkam und Luna fast durchgedreht ist.
 
-Denn dahinter kommt der Hof mit dem Hund, der jedes Mal an den Zaun prescht. Und ein Stück weiter die Stelle, wo dir mal ein Trecker entgegenkam und Luna fast durchgedreht ist.
+Diese Bilder hast du im Hinterkopf und deshalb bleibt ihr lieber auf Nummer sicher.
 
-Also bleibt ihr auf Nummer sicher. Immer derselbe Weg, immer dieselbe Länge, immer an derselben Stelle wieder um.
+Immer derselbe Weg und immer an derselben Stelle wieder zurück nach Hause.
 
-Und während ihr zurückgeht, fällt dein Blick auf den Feldweg, der weiter rausführt, an den Feldern vorbei bis in den Wald. Und du denkst: Da würde ich so gerne mal langgehen. Irgendwann.
+Und während ihr langsam zurückschlendert, wandert dein Blick zu dem Feldweg, der weiter hinausführt, vorbei an den Feldern bis tief in den Wald.🌳🌲 In dir meldet sich diese leise Sehnsucht und du denkst:
 
-Dabei wünschst du dir eigentlich nur eins.
+**Da würde ich so gerne mal langgehen. Irgendwann.**
 
-Du willst die ganze Runde gehen können. Ohne vorher im Kopf durchzugehen, welche Schreckstelle heute im Weg liegt.
+Dabei wünschst du dir im Grunde nur eines.
 
-✅ Einfach losgehen,
-✅ an allem entspannt vorbeikommen
-✅ und die große Runde bis in den Wald genießen. 🥰
+Du willst diese ganze Runde gehen können, ohne vorher im Kopf jede Schreckstelle durchzuspielen. 🤯
 
-**Ich möchte, dass ihr euch draußen die ganze Welt zurückholt.** Nicht nur die 500 Meter, die sich sicher anfühlen.
+Einfach losziehen, an allem gelassen vorbeikommen und **die große Runde bis in den Wald in vollen Zügen genießen**. 🥰
 
-Denn dein Pferd ist nicht zu schreckhaft dafür. Euch fehlt nur die Sicherheit, in genau diesen Situationen zu wissen, was zu tun ist.
+Und genau das wünsche ich mir für euch. Ich möchte, dass ihr draußen **die ganze Welt erobert**. Nicht nur die ersten 500 Meter, die sich sicher anfühlen.
 
-Genau dafür habe ich dir meinen Kurs "Gelände sicher meistern" mitgebracht.
+Denn weißt du was? **Dein Pferd ist überhaupt nicht zu schreckhaft dafür.** Euch fehlt einzig die Sicherheit, in genau diesen Momenten zu wissen, was zu tun ist.
 
-**Darin zeige ich dir, wie ihr auch an Treckern, Autos und den kniffligen Stellen ruhig vorbeikommt, sodass euch keine Schreckstelle mehr die Runde vermiest.**
+Es ist einfach super hilfreich immer die **passende Notfall-Strategie** parat zu haben.
 
-Ich habe über 500 Mensch-Pferd-Teams begleitet. Und die meisten Frauen, die heute die große Runde ganz selbstverständlich gehen, sind früher auch immer an derselben Stelle umgedreht.
+Für den Fall, dass...
 
-Wie das auch für euch zwei möglich wird, erfährst du hier:
+🚜 dir auf einmal ein Trecker mit Anhänger entgegen kommt und du schon merkst, wie **die Panik in euch aufsteigt**.
 
-[Button: Gib mir mal Infos zu Gelände sicher meistern.]
+🐶 du immer an diesem einem Grundstück vorbei musst, wo **der Hund bellend an den Zaun springt**.
+
+🐎 dein Pferd im Gelände irgendwann **den Turbogang drin hat** und am liebsten auf dem schnellsten Weg nach Hause möchte.
+
+Ich habe über 500 Mensch-Pferd-Teams begleitet. Und die meisten Frauen, die heute die große Runde ganz selbstverständlich gehen, haben den Durchbruch damit geschafft, weil ihnen das Kennen dieser **Notfallstrategien Sicherheit gegeben hat**.
+
+Wie diese Strategien genau aussehen, **[zeige ich dir hier → AUSLÖSER-LINK]**.
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite kommst. Er beginnt für 3 Tage zu zählen, weil der Einführungspreis genau diese Zeit gültig ist. Nach den 3 Tagen sind die Türen zu „Gelände sicher meistern" geschlossen. Danke für dein Verständnis.
+PS: Du wirst auf der Seite einen Countdown finden, sobald du auf die Seite kommst. Er beginnt für 3 Tage zu zählen und in dieser Zeit hast du die Möglichkeit auf diese Strategien zuzugreifen. **[Einfach hier klicken → AUSLÖSER-LINK]**.
 
 ---
 
