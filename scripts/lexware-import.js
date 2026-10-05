@@ -18,6 +18,10 @@
  * DOPPELBUCHUNGS-SCHUTZ: Rechnungen, die in Lexware schon als Beleg existieren
  * (egal ob manuell als "000000099" oder automatisch als "TC-99"), werden uebersprungen.
  *
+ * TEILZAHLUNGEN: Raten ueber ThrivePay/Stripe werden uebersprungen, weil Lexware den Beleg
+ * automatisch ueber "Stripe Invoicing" bekommt. Raten ueber PayPal bucht das Skript nur fuer
+ * die erste Zahlung; Folgeraten (rebill) muessen einzeln als TC-<Nr>-R2 usw. angelegt werden.
+ *
  * Verwendung:
  *   node scripts/lexware-import.js "<PDF-Ordner>" --all            # alle PDFs im Ordner
  *   node scripts/lexware-import.js "<PDF-Ordner>" 126 106 109      # nur diese Rechnungsnummern
@@ -116,6 +120,7 @@ async function attachPdf(voucherId, filePath, tries = 5) {
   }
 }
 const round2 = n => Math.round(n * 100) / 100;
+const istStripeTeilzahlung = t => t.processor === 'thrivepay' && !!t.related_to_recur && /^sub_/.test(String(t.subscription_id || ''));
 const fmtDE = n => n.toFixed(2).replace('.', ',');
 
 // voucherNumber -> ThriveCart-Rechnungsnummer (int) normalisieren; sonst null
@@ -229,7 +234,16 @@ function invNumFromVoucherNumber(vn) {
 
     if (alreadyBooked.has(num)) { console.log(`Nr ${num}: bereits gebucht -> uebersprungen`); stats.uebersprungen++; continue; }
 
-    let name = `${(c['first name'] || '').trim()} ${(c['last name'] || '').trim()}`.trim();
+    // Teilzahlungen ueber ThrivePay/Stripe: den Beleg legt "Stripe Invoicing" in Lexware selbst an
+    // (z.B. 4KTEVAST-0001, mit PDF). Hier nicht noch einmal buchen, sonst entsteht eine Dublette.
+    if (items.every(istStripeTeilzahlung)) {
+      console.log(`Nr ${num}: Stripe-Teilzahlung (${first.customer && first.customer.name}, ${totalGross}€) -> uebersprungen, Beleg kommt automatisch ueber Stripe`);
+      stats.uebersprungen++;
+      continue;
+    }
+    if (items.some(istStripeTeilzahlung)) console.log(`Nr ${num}: ⚠ enthaelt eine Stripe-Teilzahlung UND andere Posten -> komplett gebucht, bitte in Lexware auf Dublette pruefen`);
+
+    let name =`${(c['first name'] || '').trim()} ${(c['last name'] || '').trim()}`.trim();
     if (!name) name = `⚠ Name fehlt (${c.email || 'keine E-Mail'})`;
 
     if (dryRun) {

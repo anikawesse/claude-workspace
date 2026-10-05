@@ -1,0 +1,10 @@
+[
+  { "mail": "Mail 1 nach Webinar", "betreff": "🌳 Die Türen zum Gelände-Programm sind offen.", "versand": "So 27.09.", "empfaenger": 145, "oeffner": 69, "klicks": 10, "abmeldungen": 5, "kaeufe": "" },
+  { "mail": "Mail 2 Testimonial", "betreff": "🌳❤️ Das erleben meine Schülerinnen im Gelände", "versand": "Mo 28.09.", "empfaenger": 141, "oeffner": 65, "klicks": 6, "abmeldungen": 5, "kaeufe": "" },
+  { "mail": "Mail 3 Frühbucherende", "betreff": "🌳⏳ Um Mitternacht ist dein Bonus weg", "versand": "Mo 28.09.", "empfaenger": 136, "oeffner": 57, "klicks": 7, "abmeldungen": 5, "kaeufe": "" },
+  { "mail": "Mail 4 Kurseinblick", "betreff": "🌳📋 Kurseinblicke ins Gelände-Programm", "versand": "Di 29.09.", "empfaenger": 130, "oeffner": 59, "klicks": 4, "abmeldungen": 3, "kaeufe": "" },
+  { "mail": "Mail 5 FAQ", "betreff": "🌳🖊️ Dein Name fehlt auf meiner Liste", "versand": "Mi 30.09.", "empfaenger": 122, "oeffner": 56, "klicks": 4, "abmeldungen": 2, "kaeufe": 1 },
+  { "mail": "Mail 6 Einwand", "betreff": "🌳❓ Hilft mir das beim Ausreiten?", "versand": "Do 01.10.", "empfaenger": 119, "oeffner": 39, "klicks": 6, "abmeldungen": 3, "kaeufe": "" },
+  { "mail": "Mail 7 versteckter Bonus", "betreff": "🌳🎁 Ich schenke dir noch was dazu", "versand": "Do 01.10.", "empfaenger": 116, "oeffner": 44, "klicks": 3, "abmeldungen": 0, "kaeufe": "" },
+  { "mail": "Mail 8 Ende", "betreff": "🌳😍 Du willst es doch auch.", "versand": "Do 01.10.", "empfaenger": 115, "oeffner": 35, "klicks": 1, "abmeldungen": 0, "kaeufe": "" }
+]

@@ -10,3 +10,6 @@ scripts/supabase-keepalive.log
 
 # Lokaler Netlify-CLI-Status (Projekt-Verknuepfung) - nicht versionieren
 .netlify/
+
+# Aufwaermphase: Videos nicht ins Repo (GitHub-Limit 100 MB)
+outputs/aufwaermphase/*.mp4

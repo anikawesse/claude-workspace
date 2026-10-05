@@ -19,6 +19,13 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Call 02.10.2026 (4. Feedbackrunde):**
+
+- **Carolines erster Spaziergang in neues Terrain** (vier Wochen nach Programmstart, drei Wochen nach dem Stallumzug): „Er ist da so flüssig mitgegangen. Ich war da total überrascht." Ihr eigener Schluss: Es lag an ihrer Energie an dem Tag („Neugierde, wir probieren das jetzt mal"). → Vorher/Nachher für ein Pferd, das allein immer stehen blieb.
+- **Phase-1-Übung wirkt im Ernstfall** (Caroline): 6-7 fremde Pferde galoppieren vor ihnen davon, Fakur wird flotter. Ihr fällt die Übung „Gedanke gegen Realität" ein: „Wir gehen doch jetzt Schritt." Wörtlich: **„Das hat mich dann total beruhigt. Das war eine tolle Hilfe."** → Beleg, dass das Mentaltraining draußen abrufbar ist, als Zitat gut für Phase-1-Marketing (Freigabe anfragen).
+- **„Gesten wirken nicht, wenn meine innere Haltung nicht dazu passt"** (Caroline, sinngemäß nach der Video-Analyse). → Kernbotschaft in Kundinnen-Worten, passt zu Susannes Anke-Story vom 18.09.
+- **Sabine:** Ausritt mit Reitpad ohne Steigbügel, „die Maus war super gechillt"; Flora ein Gurtloch schlanker. Anikas Urteil zum Ausritt-Video: „Sieht gut aus, weitermachen."
+
 **Call 23.09.2026 (3. Feedbackrunde):**
 
 - **Sabines Durchbruch:** Durch DIE Engstelle, an der Flora sich losgerissen hatte, ist sie jetzt **geritten** — „überhaupt kein Thema. Ich hatte dann am Ende da sogar angefangen zu traben." Drei Wochen nach dem Vorfall. → Transformations-Beleg mit klarem Vorher/Nachher; mit ihrem Ok starkes Testimonial fürs Gelände-Programm.
@@ -59,6 +66,13 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 - **Garantie als Kaufhürde** (Corina): „Wenn ich nach 14 Tagen keine Verbesserung im Gelände merke, bekomme ich wirklich ohne weiteres das komplette Geld zurück?" → Garantie gehört klar und früh in Pitch + Verkaufsmails.
 - **„Angst vor dem Winter"** (Simone mit Tari, Losreißer, Unterstützungsband angerissen): Die Jahreszeit (dunkel, glatt, weniger Bewegung) ist ein echter Angst-Verstärker. → Saison-Winkel für Oktober–Dezember.
 
+**Call 02.10.2026 (4. Feedbackrunde):**
+
+- **„Hin und her gehen zeigt dem Pferd, dass ich nicht führen kann"** (Sabine, irgendwo gelesen): Dieser Glaubenssatz hat sie monatelang davon abgehalten, Stichwege zu gehen oder umzudrehen. Anika: Diese Erfahrung hat sie nie gemacht, es gibt kein Richtig oder Falsch. → **Mythos-Content** („Umdrehen ist kein Führungsversagen") und zugleich ein Einwand gegen Annäherung/Rückzug, den das Webinar vorwegnehmen kann.
+- **Zeitmangel mitten im Programm** (Miriam): zwei Wochen kaum trainiert, „es hapert ein bisschen an mir". Sie bleibt aber gelassen und vertraut auf Videos und Kursmaterial. → Der klassische Einwand „Ich schaffe das zeitlich nicht" in der Nachkauf-Variante; Antwort fürs Marketing: eigenes Tempo, Zugang zum Material, Hebel liegt in Phase 1.
+- **Druck aus dem Stall** (Miriam): „Du musst dein Pferd erziehen, der kugelt einem ja den Arm aus." → Zweiter Beleg nach Susanne („Geh einfach raus"), dass Stallkolleginnen Druck machen; Brandstiftungs-Material.
+- **Selbstregulation dauert** (Miriam, Woche 4): „Habe ich noch nicht intus, muss ich ganz ehrlich sagen." → Erwartungsmanagement für Phase 1, passt zu Nicolas „mühsam" vom 18.09. (Zähler: 2 Kundinnen).
+
 **Call 23.09.2026 (3. Feedbackrunde):**
 
 - **„Mein Unterbewusstsein sagt sofort: Nein, das stimmt nicht"** (Sabine über den Glaubenssatz „Ich habe Flora voll unter Kontrolle"): Der innere Widerspruch beim Affirmieren als echter Einwand gegen Mentaltraining. Anikas Antwort „irgendwann kippt die Waage" + „Ziel mit ein bisschen Stretching" ist die Content-Antwort dazu.
@@ -98,6 +112,16 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Call 02.10.2026 (4. Feedbackrunde):**
+
+- **Technik stimmt, Energie fehlt** (Carolines Acht-Video): Das Pferd „lässt sie verhungern", obwohl sie alles richtig macht. Anika: Es fehlt nur die innere Haltung, „lauter, bunter, größer". → Reel-Idee „Du machst alles richtig und dein Pferd ignoriert dich trotzdem"; Rockmusik-Trick als konkretes Bild.
+- **Enge Wege, Pferd im Nacken** (Miriam, Caroline kennt es auch): Angst, dass das Pferd auf schmalem Weg von hinten in einen hineinspringt. Anikas Technik: Gerte hinter sich pendeln. → Zähler 2 Kundinnen; guter How-to-Content und möglicher Kurs-Baustein.
+- **Unsichtbare Schreckquellen** (Hund hinter Sichtschutz, Tennisbälle hinter dem Zaun): Was das Pferd nicht sehen kann, ist schlimmer als das, was es sieht. → Content-Winkel für Stadt- und Ortsrand-Reiterinnen.
+- **Pferd wird nervös, sobald es nicht Richtung Heimweg geht** (Sabine): bei völlig unauffälligem Weg. → Bekanntes Alltagsphänomen als Hook („Der Weg war harmlos. Es ging nur nicht nach Hause.").
+- **Grasbüschel-Schnappen beim Führen** (Caroline, nach Miriams Fliegen-Kopfschlagen): Trick 17 Anti-Fress-Netz. → kleine Praxisfrage, FAQ-tauglich.
+- **„Trottet mit, aber ohne Fokus"** (Miriam): Hilfen kommen an, die Aufmerksamkeit nicht. Sie fragte von sich aus nach dem **Traumteam-Programm** → Cross-sell-Signal aus dem Gelände-Programm heraus (nach Offenstallplaner am 23.09. das zweite).
+- **Fremdes Terrain per Hänger und Galopp draußen** als Fernziele (Sabine) → Stoff für eine spätere Phase oder ein Aufbau-Angebot; Tempokontrolle bleibt ihr Dauerthema (jetzt 4 Calls in Folge).
 
 **Call 23.09.2026 (3. Feedbackrunde):**
 
@@ -142,6 +166,11 @@ Abweichungen vom Avatar + Original-Wording der Kundinnen.
 - **Reiten ist ein großes Thema:** mehrere Fragen zum Ausritt (M. Joost, Lea, iPhone Babs). Anika selbst: Teilnehmerinnen haben sie vom Reit-Angle „überzeugt".
 - **Einzugsgebiet noch breiter als DACH:** Schweiz, Österreich, Ungarn, England, Frankreich, Mallorca, Ägypten (Begrüßungsrunde).
 - **Original-Wording neu:** „Gespenster sind schlimm", „ich war total abgemeldet", „klotzt sich fest", „Losreißer", „wie ein Ochs vorm Berg" (Anika), „Kastenwagen reicht schon".
+
+**Call 02.10.2026 (4. Feedbackrunde):**
+
+- **Kundinnen sind oft reiterlich kompetent:** Sabine korrigiert in der Reitschule zwei schwierige Schulpferde in einer Stunde und reitet ohne Steigbügel aus. Das Problem ist nicht Können, sondern die Situation draußen allein. → Tina nicht als Anfängerin zeichnen.
+- **Wording neu:** „er lässt mich verhungern" (Anika über Fakur, Caroline übernimmt es), „Sicherheitsrunden" (Sabine), „Safe-Zone", „er trottet mir nach", „das Pferd sitzt einem im Nacken", „habe ich noch nicht intus".
 
 **Call 18.09.2026 (2. Feedbackrunde):**
 

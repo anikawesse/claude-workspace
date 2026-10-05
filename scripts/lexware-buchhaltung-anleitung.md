@@ -75,3 +75,15 @@ Lexware bucht nur pro Beleg und liefert keine eigene OSS-Meldung. Deshalb schrei
 ## Voraussetzungen
 - `scripts/.env` mit `THRIVECART_API_KEY` und `LEXWARE_API_KEY` (liegt lokal, gitignored)
 - Lexware Office Tarif **XL** (Public API)
+
+## Teilzahlungen / Folgeraten (Stand 05.10.2026)
+Das Skript bucht nur die erste Zahlung einer Bestellung. Folgeraten (in ThriveCart `rebill`) haben dieselbe Rechnungsnummer und werden übersprungen. Seit 05.10.2026 überspringt es außerdem Stripe-Teilzahlungen komplett (Meldung „Stripe-Teilzahlung … Beleg kommt automatisch über Stripe"), damit keine Dublette mehr entsteht. Deshalb jeden Monat prüfen:
+
+- **Raten über ThrivePay/Stripe** (z.B. Gelände-Programm 4 × 165 €): Lexware bekommt jeden Ratenbeleg automatisch über „Stripe Invoicing" (Nummern wie `4KTEVAST-0002`, mit PDF). Nichts zusätzlich anlegen.
+- **Raten über PayPal:** Es kommt nichts automatisch. Claude bitten, die Folgerate als eigenen Beleg anzulegen (`TC-<Rechnungsnr>-R2`, `-R3` …, Steuerfall wie die erste Rate).
+
+## Feste Zuordnungen ohne Beleg
+- Stripe „ThriveCart application fee" (Monatsende) → **Nebenkosten des Geldverkehrs**, keine Steuer
+- Überweisung an PayPal und deren Rücküberweisung → **Geldtransit**
+- Doppelt eingegangene Kundenzahlung und ihre Rückzahlung → **Durchlaufende Posten**
+- PayPal-Zahlungen laufen oft auf einen anderen Namen als die Käuferin (Partner, Geburtsname). Dann gibt es keinen Auto-Vorschlag → über Betrag, Datum und Produkt den TC-Beleg suchen.

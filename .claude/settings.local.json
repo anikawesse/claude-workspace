@@ -806,7 +806,22 @@
       "Bash(node readpdf.mjs)",
       "Bash(node readpdf.cjs)",
       "Bash(node readpdf2.cjs)",
-      "Bash(awk '/^## Loop 1, Mail 1 /{f=1} f{print} /^## Loop 1, Mail 2 /{if\\(f\\)exit}' outputs/backend-mails/sicher-meistern-soft-mails.md)"
+      "Bash(awk '/^## Loop 1, Mail 1 /{f=1} f{print} /^## Loop 1, Mail 2 /{if\\(f\\)exit}' outputs/backend-mails/sicher-meistern-soft-mails.md)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-21 -Bis 2026-10-05)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\f23a74d4-7fc6-4037-908d-0ece7bee857b\\\\scratchpad\\\\anzeigen.ps1\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File ./launch-auswertung-push.ps1 -Launch \"Sep 2026\" -WerteDatei ../outputs/webinar-gelaende/launch-werte-sep-2026-verkauf.json)",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -Command ' *)",
+      "Bash(sed -i s/voucherStatus=open,overdue/voucherStatus=open/ C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/19c49c97-2076-42a5-a5f4-77a55f2928d7/scratchpad/open.js)",
+      "Bash(node C:/Users/Olive/AppData/Local/Temp/claude/C--Users-Olive-Desktop-claude-workspace/19c49c97-2076-42a5-a5f4-77a55f2928d7/scratchpad/open.js)",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{for\\(const v of JSON.parse\\(s\\).content\\)console.log\\(v.voucherNumber,v.voucherDate.slice\\(0,10\\),v.totalAmount,v.voucherStatus,v.id\\)}\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const c=JSON.parse\\(s\\).content;for\\(const v of c\\)if\\(/romberg/i.test\\(v.contactName||''\\)||!/^TC-|^\\\\d{5,6}$/.test\\(v.voucherNumber||''\\)\\)console.log\\([v.voucherDate.slice\\(0,10\\),v.voucherNumber,v.contactName,v.totalAmount,'offen:'+v.openAmount,v.voucherStatus,v.id].join\\(' | '\\)\\)}\\)\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Sep 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-sep-2026-komplett.json\" -MailDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-mails-sep-2026.json\" -EnvDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\" -NurZeigen)",
+      "Bash(node --check scripts/launch-auswertung-webapp.gs)",
+      "Bash(cp scripts/launch-auswertung-webapp.gs /tmp/_gscheck.js)",
+      "Bash(node --check /tmp/_gscheck.js)",
+      "Bash(rm -f /tmp/_gscheck.js)",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -Command '$c = Get-Content -Path '\\\\''C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-webapp.gs'\\\\'' -Raw -Encoding UTF8; Set-Clipboard -Value $c; Write-Host \\('\\\\''In Zwischenablage: '\\\\'' + $c.Length + '\\\\'' Zeichen'\\\\''\\)')",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Sep 2026\" -WerteDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-werte-sep-2026-komplett.json\" -MailDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-mails-sep-2026.json\" -EnvDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\")"
     ],
     "defaultMode": "bypassPermissions"
   }

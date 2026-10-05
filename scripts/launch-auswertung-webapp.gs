@@ -117,6 +117,12 @@ function doPost(e) {
       geschrieben.push(label);
     });
 
+    // Optional: Sales-Mail-Tabelle desselben Launches mitschreiben (Blatt "Sales-Mails").
+    let mailInfo = null;
+    if (daten.mails && daten.mails.length) {
+      mailInfo = schreibeMailBlatt(launch, daten.mails, daten.softOptOut);
+    }
+
     return antwort({
       ok: true,
       launch: launch,
@@ -124,7 +130,8 @@ function doPost(e) {
       spalte_neu_angelegt: neuAngelegt,
       geschrieben: geschrieben,
       nicht_gefunden: nichtGefunden,
-      formel_zeile_uebersprungen: formelKollision
+      formel_zeile_uebersprungen: formelKollision,
+      mails: mailInfo
     });
   } catch (err) {
     return antwort({ ok: false, fehler: String(err) });
@@ -218,4 +225,138 @@ function normalisiere(s) {
 function antwort(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj))
     .setMimeType(ContentService.MimeType.JSON);
+}
+
+// ============================================================================
+// doGet: liest eine Launch-Spalte LIVE zurueck (zur Kontrolle nach dem Schreiben).
+// Aufruf:  <web-app-url>?launch=Sep%202026   (ohne launch = letzte befuellte Spalte)
+// Antwort: { ok, launch, spalte, werte:{ "Beschriftung": Wert, ... } }
+// ============================================================================
+function doGet(e) {
+  try {
+    const launch = String((e && e.parameter && e.parameter.launch) || '').trim();
+    const blatt = findeLaunchBlatt();
+    if (!blatt) return antwort({ ok: false, fehler: 'Kein Blatt mit "Kennzahl" in Spalte A.' });
+
+    const lastRow = blatt.getLastRow();
+    const spalteA = blatt.getRange(1, 1, lastRow, 1).getValues();
+    let kopfZeile = -1;
+    for (let z = 0; z < spalteA.length; z++) {
+      if (String(spalteA[z][0]).trim().toLowerCase() === 'kennzahl') { kopfZeile = z; break; }
+    }
+    if (kopfZeile < 0) return antwort({ ok: false, fehler: '"Kennzahl"-Kopfzeile nicht gefunden.' });
+
+    const lastCol = Math.max(blatt.getLastColumn(), 2);
+    const kopf = blatt.getRange(kopfZeile + 1, 1, 1, lastCol).getValues()[0];
+    let ziel = -1;
+    if (launch) {
+      for (let s = 1; s < kopf.length; s++) {
+        if (normalisiere(String(kopf[s]).trim().toLowerCase()) === normalisiere(launch.toLowerCase())) { ziel = s; break; }
+      }
+    } else {
+      for (let s = 1; s < kopf.length; s++) { if (String(kopf[s]).trim() !== '') ziel = s; }  // letzte befuellte
+    }
+    if (ziel < 0) return antwort({ ok: false, fehler: 'Launch-Spalte nicht gefunden: ' + launch });
+
+    const colVals = blatt.getRange(1, ziel + 1, lastRow, 1).getValues();
+    const werte = {};
+    for (let z = kopfZeile + 1; z < spalteA.length; z++) {
+      const label = String(spalteA[z][0]).trim();
+      const v = colVals[z][0];
+      if (label && v !== '' && v !== null) werte[label] = v;
+    }
+    return antwort({ ok: true, launch: String(kopf[ziel]).trim(), spalte: spaltenBuchstabe(blatt, ziel), werte: werte });
+  } catch (err) {
+    return antwort({ ok: false, fehler: String(err) });
+  }
+}
+
+/** Sucht das Blatt "Sales-Mails" (oder irgendeines mit "Sales-Mail-Auswertung" in Spalte A); legt es sonst an. */
+function findeMailBlatt() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const direkt = ss.getSheetByName('Sales-Mails');
+  if (direkt) return direkt;
+  const blaetter = ss.getSheets();
+  for (let i = 0; i < blaetter.length; i++) {
+    const n = blaetter[i].getLastRow();
+    if (n < 1) continue;
+    const a = blaetter[i].getRange(1, 1, n, 1).getValues();
+    for (let z = 0; z < a.length; z++) {
+      if (String(a[z][0]).indexOf('Sales-Mail-Auswertung') > -1) return blaetter[i];
+    }
+  }
+  return ss.insertSheet('Sales-Mails');
+}
+
+/**
+ * Schreibt/aktualisiert fuer den Launch einen eigenen Mail-Block auf dem Blatt
+ * "Sales-Mails" (jeder Launch untereinander). Oeffnungs-/Klickrate werden als
+ * Formel gesetzt (rechnen automatisch). Laeuft der Push erneut, wird derselbe
+ * Block ueberschrieben statt verdoppelt.
+ *
+ * rows = [{ mail, betreff, versand, empfaenger, oeffner, klicks, abmeldungen, kaeufe }, ...]
+ */
+function schreibeMailBlatt(launch, rows, softOptOut) {
+  const blatt = findeMailBlatt();
+  const titel = 'Sales-Mail-Auswertung Gelände-Webinar (' + launch + ')';
+  const note = 'Zahlen aus Devine (je Kontakt ein Status: Zugestellt/Geöffnet/Geklickt/Beantwortet/Abmeldung). Öffner = eindeutige Öffner inkl. Klicker und Antworter. Öffnungs- und Klickrate rechnen sich automatisch. Reihenfolge über Zustell-Zeitstempel.';
+  const header = ['Mail', 'Betreff', 'Versand', 'Empfänger', 'Öffnungen', 'Öffnungsrate', 'Klicks', 'Klickrate', 'Abmeldungen', 'Käufe danach'];
+
+  const lastRow = Math.max(blatt.getLastRow(), 0);
+  let titelRow = -1;
+  if (lastRow > 0) {
+    const colA = blatt.getRange(1, 1, lastRow, 1).getValues();
+    for (let z = 0; z < colA.length; z++) {
+      if (normalisiere(String(colA[z][0]).trim()) === normalisiere(titel)) { titelRow = z + 1; break; }
+    }
+  }
+  let neu = false;
+  if (titelRow < 0) { titelRow = lastRow > 0 ? lastRow + 2 : 1; neu = true; }
+  const headerRow = titelRow + 2;
+  const dataStart = headerRow + 1;
+
+  if (neu) {
+    blatt.getRange(titelRow, 1, 1, header.length).merge();
+    blatt.getRange(titelRow, 1).setValue(titel).setFontWeight('bold');
+    blatt.getRange(titelRow + 1, 1, 1, header.length).merge();
+    blatt.getRange(titelRow + 1, 1).setValue(note).setWrap(true);
+    blatt.getRange(headerRow, 1, 1, header.length).setValues([header]).setFontWeight('bold');
+  }
+
+  // Datenbereich leeren (Daten + Summe + Soft-Opt-out + Puffer); Titel/Note/Header bleiben stehen.
+  blatt.getRange(dataStart, 1, rows.length + 4, header.length).clearContent();
+
+  for (let i = 0; i < rows.length; i++) {
+    const r = dataStart + i;
+    const m = rows[i] || {};
+    const _e = (m.empfaenger == null || m.empfaenger === '') ? null : Number(m.empfaenger);
+    const _o = (m.oeffner == null || m.oeffner === '') ? null : Number(m.oeffner);
+    const _k = (m.klicks == null || m.klicks === '') ? null : Number(m.klicks);
+    blatt.getRange(r, 1).setValue(m.mail || '');
+    blatt.getRange(r, 2).setValue(m.betreff || '');
+    blatt.getRange(r, 3).setValue(m.versand || '');
+    blatt.getRange(r, 4).setValue(_e == null ? '' : _e);
+    blatt.getRange(r, 5).setValue(_o == null ? '' : _o);
+    // Öffnungs-/Klickrate als FERTIGE WERTE (nicht als Formel): ein deutsch-
+    // lokalisiertes Google-Sheet braucht in Formeln Semikolons; eine per Apps
+    // Script gesetzte Komma-Formel ergibt sonst #ERROR!. Werte sind locale-sicher.
+    blatt.getRange(r, 6).setValue((_e && _o != null) ? _o / _e : '').setNumberFormat('0.0%');
+    blatt.getRange(r, 7).setValue(_k == null ? '' : _k);
+    blatt.getRange(r, 8).setValue((_e && _k != null) ? _k / _e : '').setNumberFormat('0.0%');
+    blatt.getRange(r, 9).setValue(m.abmeldungen == null ? '' : m.abmeldungen);
+    blatt.getRange(r, 10).setValue((m.kaeufe == null || m.kaeufe === '') ? '' : m.kaeufe);
+  }
+
+  const sumRow = dataStart + rows.length + 1;
+  blatt.getRange(sumRow, 1).setValue('Abmeldungen gesamt (Sequenz)').setFontWeight('bold');
+  blatt.getRange(sumRow, 9).setValue(rows.reduce(function (s, m) { return s + (Number(m.abmeldungen) || 0); }, 0));
+
+  // Soft-Opt-out (Trigger-Link) — nur schreiben, wenn geliefert.
+  if (softOptOut != null && softOptOut !== '') {
+    const soRow = sumRow + 1;
+    blatt.getRange(soRow, 1).setValue('Soft-Opt-out genutzt (Trigger-Link, nur aus Sales-Strecke raus)').setFontWeight('bold');
+    blatt.getRange(soRow, 9).setValue(softOptOut);
+  }
+
+  return { blatt: blatt.getName(), titel: titel, zeilen: rows.length, neu: neu, ab_zeile: titelRow };
 }
