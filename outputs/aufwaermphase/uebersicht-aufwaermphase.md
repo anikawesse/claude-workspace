@@ -48,3 +48,11 @@ Hinweis zur Zählung: Im Chat hieß die Ids-Mail „Mail 3". Gemeint ist die dri
 3. Passende Podcast- oder YouTube-Folge für weitere Links, falls gewünscht.
 4. Die Landkarten-Mail berührt den Blickwinkel „roter Faden" aus Soft-Mail 2.3. Bei Bedarf gegen eine zweite Aha-Mail tauschen.
 5. Mail 1 als Entwurf schreiben.
+
+## Stand 06.10.2026
+
+- ✅ **Mail 1 „Über mich"**: Anikas Version in Devine („Aufwärm Mail 1"), Text in `mail-1-ueber-mich.md`. Leroy ist komplett raus, Hauptfigur ist die Stute Elfentanz mit Foto von 2007. Betreff noch nicht festgehalten.
+- ✅ **Mail 2 „Wer ist hier der Chef?"**: Anikas Version in Devine („Aufwärm Mail 2"), Text in `mail-2-chef.md`. Neuer Begriff „Verlassmensch", Motto „Liebevoll, aber konsequent".
+- ⏭️ **Mail 3 (Ids-Video)**: Mail 2 verspricht, dass Anika zeigt, wie man sich das freie Folgen aufbauen kann. Die Mail muss das einlösen (Tor-Moment, Strick über den Hals, Halsring als Zwischenstufe). Video-Link fehlt noch.
+- ⚠️ **Zu prüfen in Devine:** In den Vorlageneinstellungen von Aufwärm Mail 2 stand bei „Von Name" `{{contact.name}}` und bei „Von E-Mail" `{{contact.email}}`. Dort sollten Anikas Name und Absenderadresse stehen. Auch bei Mail 1 nachsehen.
+- Offene Kleinkorrekturen aus dem Chat (Tippfehler, Doppelungen) hat Anika noch nicht bestätigt.

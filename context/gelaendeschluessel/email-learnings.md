@@ -169,3 +169,30 @@ Morgen erfährst du mehr. Ich freue mich schon darauf, es mit dir zu teilen.😍
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
+
+## Learnings aus Aufwärm Mail 1 „Über mich" (Anikas Version, 06.10.2026)
+- **Einstieg warm statt Ansage:** „ich freue mich, dass wir uns jetzt ein bisschen besser kennenlernen. 🤗" Mein „du bekommst öfter Post von mir, da solltest du wissen, wer dir schreibt" klang für Anika „fast wie eine Drohung"
+- **Leroy flog komplett raus.** Hauptfigur der Über-mich-Mail ist **Elfentanz**, die erste Stute, die Anika mit 14 ganz allein einreiten durfte („von einem Bauern um die Ecke", „gerade mal halfterführig"). Schlusspunkt der Story: „Mit der Ausbildung von Elfentanz habe ich meine Berufung gefunden. 💗"
+- **Echtes altes Foto in der Mail** (Anika mit Elfentanz, 2007) als Beleg der Geschichte
+- **Persönlichen Hintergrund ergänzt Anika selbst:** Pferd verkauft wegen der Scheidung der Eltern. Solche Details nicht weglassen, wenn sie im Quellmaterial stehen
+- **Eigene Bilder schlagen neutrale Beschreibung:** „wie ein Zinnsoldat um die eigene Achse drehen", „Sand festgetreten wie Beton"
+- **Leserin direkt abholen mitten in der Story:** „Wenn du auch schonmal Unterricht nach der alten Schule gehabt hast, weißt du, was ich meine."
+- **Monty Roberts darf namentlich rein**, mit ehrlicher Einordnung: Techniken wendet sie heute nicht mehr so an, damals war es „eine ganz andere Welt im Vergleich zur starren Englisch-Reiterei"
+- **Zeit-Kontext für Jüngere:** „Damals gab es noch kein Youtube oder Social Media"
+- **Autoritäts-Zahlen:** „über 30 Pferde eingeritten und rund 500 Mensch-Pferd-Paaren geholfen", Wording „mit ihrem Liebling ein großartiges Team zu werden"
+- **Zwischenüberschrift fett als Szenenwechsel:** „Dann kam Weihnachten."
+- **Mehr Emojis als von mir gesetzt** (🤗 🐎 🙈 😌 💥 💗), jeweils am Absatzende
+- **Brücke am Schluss:** „Genau die Person möchte ich gerne für dich sein und nehme dich dafür ab jetzt an die Hand." + Ankündigung der nächsten Mail mit „Ich melde mich in ein paar Tagen wieder bei dir"
+- Volltext: `outputs/aufwaermphase/mail-1-ueber-mich.md`
+
+## Learnings aus Aufwärm Mail 2 „Wer ist hier der Chef?" (Anikas Version, 06.10.2026)
+- **Betreff kurz als Frage, Stall-Zitat in den Vorschautext:** „🐴Wer ist hier der Chef?" / „Der testet dich doch nur." Aufwärm-Mails nutzen 🐴 statt des 🌳 der Gelände-Schlüssel-Soft-Mails
+- **„Verlassmensch" als Gegenstück zum Verlasspferd:** „Jedes Pferd kann ein Verlasspferd werden, wenn der Mensch vorher gelernt hat, ein Verlassmensch zu werden." Anika hat mein „Wirklich jedes." dadurch ersetzt
+- **Anikas Motto wörtlich:** „Liebevoll, aber konsequent."
+- **„vertrauensvoller Partner" statt „sicherer Hafen"** und **„kein dominanter Chef"** statt nur „kein Chef"
+- **Ursache breiter fassen:** „Verunsicherung oder fehlendes Vertrauen" (nicht nur „verunsichert") und als fetter Kernsatz
+- **Verhalten allgemein beschreiben statt nur „stehen bleiben":** „ein Pferd, das gerade nicht das tut, was sein Mensch von ihm möchte"
+- **Klarheit positiv fordern:** „Du musst wirklich klar sein in deiner Kommunikation." Mein „Nur kommt diese Klarheit ganz ohne Druck und Zwang aus" und „Du musst dafür kein anderer Mensch werden" flogen raus
+- **Derbes Stall-Zitat blieb drin:** „Der verarscht dich doch! Setz dich mal durch!" ist ok, wenn es die Stallkollegin sagt
+- **Nächste Mail mit Ergebnisbild ankündigen statt mit Rätsel:** „Er hat sich für mich entschieden und folgt mir im Alltag völlig frei. Egal ob von der frischen Weide, am Putzplatz oder in den Anhänger." + Versprechen „ich zeige dir, wie du dir das auch mit deinem Pferd aufbauen kannst". Mein Tor-Cliffhanger („winzige Situation, die fast niemand bemerkt") flog raus
+- Volltext: `outputs/aufwaermphase/mail-2-chef.md`
