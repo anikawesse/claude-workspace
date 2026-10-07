@@ -54,5 +54,34 @@ Hinweis zur Zählung: Im Chat hieß die Ids-Mail „Mail 3". Gemeint ist die dri
 - ✅ **Mail 1 „Über mich"**: Anikas Version in Devine („Aufwärm Mail 1"), Text in `mail-1-ueber-mich.md`. Leroy ist komplett raus, Hauptfigur ist die Stute Elfentanz mit Foto von 2007. Betreff noch nicht festgehalten.
 - ✅ **Mail 2 „Wer ist hier der Chef?"**: Anikas Version in Devine („Aufwärm Mail 2"), Text in `mail-2-chef.md`. Neuer Begriff „Verlassmensch", Motto „Liebevoll, aber konsequent".
 - ⏭️ **Mail 3 (Ids-Video)**: Mail 2 verspricht, dass Anika zeigt, wie man sich das freie Folgen aufbauen kann. Die Mail muss das einlösen (Tor-Moment, Strick über den Hals, Halsring als Zwischenstufe). Video-Link fehlt noch.
-- ⚠️ **Zu prüfen in Devine:** In den Vorlageneinstellungen von Aufwärm Mail 2 stand bei „Von Name" `{{contact.name}}` und bei „Von E-Mail" `{{contact.email}}`. Dort sollten Anikas Name und Absenderadresse stehen. Auch bei Mail 1 nachsehen.
 - Offene Kleinkorrekturen aus dem Chat (Tippfehler, Doppelungen) hat Anika noch nicht bestätigt.
+
+## Stand 07.10.2026: alle 7 Mails stehen in Devine
+
+| Mail | Datei | Betreff |
+|---|---|---|
+| 1 Über mich | `mail-1-ueber-mich.md` | 🐴Blick hinter die Kulissen |
+| 2 Haltung | `mail-2-chef.md` | 🐴Wer ist hier der Chef? |
+| 3 Ids-Video | `mail-3-ids-video.md` | 🐴Dein Pferd folgt dir wie ein Hund |
+| 4 Vier Meilensteine | `mail-4-meilensteine.md` | 🐴In 4 Schritten ALLEINE ins Gelände |
+| 5 Caroline und Vinur | `mail-5-caroline.md` | 🐴Carolines Durchbruch |
+| 6 Was du von mir erwarten kannst | `mail-6-arbeitsweise.md` | 🐴Einen Tritt in den Allerwertesten gefälligst? |
+| 7 Brücke zum Gelände-Schlüssel | `mail-7-bruecke-gelaendeschluessel.md` | 🐴Weißt du, was dein Pferd gerade fühlt? |
+
+Die Dateien enthalten Anikas Text aus Devine, abgetippt aus Screenshots. Kleinkorrekturen aus dem Chat sind dort NICHT eingearbeitet.
+
+**Neu gegenüber dem ersten Gerüst:** Mail 7 kam dazu. Sie übernimmt die Überleitung „erster Hebel = Pferd fein lesen", die bisher am Ende der Quiz-Auslieferung stand.
+
+**Quiz-Auslieferung (Anikas Entscheidung 07.10.):** Warme Leads behalten die bestehende Übergangsmail und gehen direkt ins Backend zum Gelände-Schlüssel. Nur kalte Leads bekommen eine andere letzte Quiz-Mail und laufen danach durch die Aufwärmphase. Die Variante „kalt" (Einführung je Hebel unverändert, längerer Mittelteil, gemeinsamer Schluss) ist im Chat vorgeschlagen und noch nicht bestätigt.
+
+### Offen vor dem Scharfschalten
+
+1. ✅ Variante „kalt" der Quiz-Übergangsmail: alle fünf fertigen Versionen stehen in `outputs/gelaende-check/auslieferungsmails.md` (07.10.). Betreff der Devine-Vorlage „Überleitung" noch nicht festgehalten.
+2. ✅ Absender: laut Anika (07.10.) passen die Platzhalter in den Vorlageneinstellungen so, kein Handlungsbedarf.
+3. Ids-Video ungelistet hochladen und den Link an beiden Stellen in Mail 3 setzen.
+4. Carolines Einverständnis für Mail 5 einholen (echter Vorname, Bayern, Isländer).
+5. Betreff Mail 6: „gefällig?" statt „gefälligst?".
+6. Mail 4: „vor ein paar Tagen" durch eine dauerhaft gültige Angabe ersetzen.
+7. Kleinkorrekturen (Tippfehler, Kommas) aus dem Chat übernehmen.
+8. Workflow in Devine: Anika baut ihn am 07.10. mit durchgehend 2 Tagen Abstand (Mails an Tag 1, 3, 5, 7, 9, 11, 13). Noch zu klären: Käuferinnen des Gelände-Schlüssels ausschließen, Übergabe an den Soft-Mail-Workflow.
+9. ✅ Mail 1: Betreff „🐴Blick hinter die Kulissen", Vorschautext „Wer schreibt dir hier eigentlich?" (07.10. festgehalten).

@@ -1,18 +1,21 @@
 # Aufwärm Mail 1: Über mich
 
-Stand: 06.10.2026. Anikas Version aus dem Devine-Editor (Titel dort: „Aufwärm Mail 1"), aus ihren Screenshots abgetippt. Emojis nach bestem Erkennen. Betreff und Vorschautext waren in den Screenshots nicht zu sehen.
+Stand: 07.10.2026. Anikas Version aus dem Devine-Editor (Titel dort: „Aufwärm Mail 1"), aus ihren Screenshots abgetippt. Emojis nach bestem Erkennen. Oben das Logo. Betreff, Vorschautext und die ersten Absätze am 07.10. nach neuem Screenshot aktualisiert (weiter unten war der Screenshot abgeschnitten, dort steht der Stand vom 06.10.).
+
+**Betreff:** 🐴Blick hinter die Kulissen
+**Vorschautext:** Wer schreibt dir hier eigentlich?
 
 ---
 
 Hey {{contact.first_name}},
 
-ich freue mich, dass wir uns jetzt ein bisschen besser kennenlernen. 🤗
+ich bin Anika und ich freue mich, dass wir uns jetzt ein bisschen besser kennenlernen. 🤗
 
 Damit du weißt, mit wem du es zu tun hast, nehme ich dich heute einmal mit zu den Anfängen meiner Pferdeausbildung. 🐎
 
 Damals lief bei mir nämlich längst nicht alles rund:
 
-Ich bin Anika und ich fange mit einer kleinen Geschichte an, auf die ich nicht unbedingt stolz bin. 🙈
+Ich fange mit einer kleinen Geschichte an, auf die ich nicht unbedingt stolz bin. 🙈
 
 Ich war 13 und habe in einem Jungpferdestall ausgeholfen, nachdem ich mein damaliges Pferd aufgrund der Scheidung meiner Eltern verkaufen musste.
 

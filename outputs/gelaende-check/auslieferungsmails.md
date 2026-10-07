@@ -280,3 +280,246 @@ Die zwei Slots je Hebel:
 > Genieße die Zeit mit deinem Pferd.
 >
 > Deine Anika
+
+
+---
+
+# Übergangsmail Variante „KALT" (führt in die Aufwärmphase statt zum Gelände-Schlüssel)
+
+Stand 07.10.2026, **Anikas Version aus Devine** (Vorlagentitel dort: „Überleitung", aus Screenshots abgetippt, Emojis nach bestem Erkennen; Betreff war nicht zu sehen).
+
+Anikas Entscheidung: **Warme Leads** bekommen weiter die Übergangsmail oben und gehen direkt ins Backend zum Gelände-Schlüssel. **Kalte Leads** bekommen diese Variante und laufen danach durch die 7 Aufwärm-Mails (`outputs/aufwaermphase/`, 2 Tage Abstand). Die Selektion warm/kalt baut Anika in Devine.
+
+**Aufbau:** Die ersten zwei Absätze sind die Einführung je Hebel (unverändert aus dem Abschnitt „Einführung — je Hebel"). Alles danach ist bei allen fünf Varianten wortgleich, inklusive der drei 🐴-Punkte mit Nutzen für die Leserin (Anika am 07.10.: „es fehlte der Nutzen, der Wert für die Leserin" → Punkte in allen Varianten genauso übernehmen). Unten stehen alle fünf Mails komplett.
+
+Die fünf Mails unten sind die fertigen Versionen (07.10.2026): Zwei Tippfehler aus dem Devine-Screenshot sind hier korrigiert („genau weißt", „das nachmachen kannst").
+
+## KALT: Souveräne Führungsperson
+
+{{contact.first_name}}, und? Hat Hans Günther gestern schon mal kurz die Klappe gehalten?
+
+Wenn du das Video mit dem Realitätskreislauf gesehen hast, weißt du jetzt, wie dein Kopfkino entsteht und wie du das unter Kontrolle bekommst. Allein dieses Wissen verändert schon so viel.
+
+Vielleicht hast du dich ja auch schon gefragt, wer dir das hier alles schreibt. 😄
+
+Ich bin Anika. Seit über 20 Jahren begleite ich als Pferdetrainerin Freizeitreiterinnen dabei, ein unschlagbares Team mit ihrem Pferd zu machen. Über 500 Mensch-Pferd-Teams waren das inzwischen. 💕
+
+Mein Herz schlägt fürs Gelände und für genau den Wunsch, den du auch hast: entspannt mit deinem Pferd rausgehen und die Zeit genießen. 🌿
+
+Dafür analysiere ich im ersten Schritt immer, welche Hebel wir haben, um unser Ziel "entspannt ins Gelände" zu erreichen.
+
+Dadurch, dass ich nicht nur Trainerin, sondern auch Therapeutin für traditionelle chinesische Medizin (Akupunktur), Ernährungsberaterin und Haltungsexpertin (Paddocktrail) bin, habe ich immer eine ganze Menge Ideen. 💡🤓
+
+Den ersten Analyseschritt hast du mit dem Gelände-Quiz bereits getan. ✅
+
+Bevor wir tiefer einsteigen, möchte ich aber, dass du mich und meine Art zu arbeiten erst einmal richtig kennenlernst. Schließlich sollst du wissen, wem du da dein Vertrauen schenkst. 🤗
+
+**In den nächsten zwei Wochen nehme ich dich deshalb mit in meine Welt:**
+
+🐴 Du kommst mit auf meinen Hof und siehst, wie mein Friese Ids mir ohne Halfter und Strick überallhin folgt. Und ich zeige dir, wie du das auch mit deinem Pferd schaffst.
+
+🐴 Du bekommst meine Landkarte mit den 4 Meilensteinen, die dich ALLEINE ins Gelände bringen, damit du dich dort einordnen kannst und genau weißt, was dein nächster Meilenstein ist.
+
+🐴 Du lernst eine Schülerin kennen, deren Pferd alleine keinen Meter vom Hof ging, bis sie ihren Durchbruch hatte und nun entspannt im Gelände unterwegs ist. Ich erzähle dir die ganze Geschichte, damit du genau weißt, wie sie ihren Durchbruch erreicht hat und das nachmachen kannst.
+
+[Foto: Anika reitet ihren Friesen durchs Wasser]
+
+Und wenn zwischendurch Fragen aufkommen und du dir unsicher bist, bin ich für dich da.
+
+Antworte mir einfach auf eine meiner Mails und stelle mir deine Frage. 💌
+
+Jetzt kannst du dich einfach schon mal auf meine nächste Mail freuen. 🤗
+
+Da erzähle ich dir, wie bei mir alles angefangen hat. Und ich starte mit einer Geschichte, auf die ich nicht unbedingt stolz bin. 🙈
+
+Du hörst bald wieder von mir und bis dahin...
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto unter der Signatur]
+
+## KALT: Fundament am Boden
+
+{{contact.first_name}}, und? Hast du dich gestern in dem Video auch wiedererkannt?
+
+Vielleicht konntest du erkennen, wie eine gemeinsame Sprache und liebevolle Konsequenz gegenseitiges Vertrauen aufbaut, was fundamental wichtig ist, um entspannt ins Gelände zu gehen.
+
+Vielleicht hast du dich ja auch schon gefragt, wer dir das hier alles schreibt. 😄
+
+Ich bin Anika. Seit über 20 Jahren begleite ich als Pferdetrainerin Freizeitreiterinnen dabei, ein unschlagbares Team mit ihrem Pferd zu machen. Über 500 Mensch-Pferd-Teams waren das inzwischen. 💕
+
+Mein Herz schlägt fürs Gelände und für genau den Wunsch, den du auch hast: entspannt mit deinem Pferd rausgehen und die Zeit genießen. 🌿
+
+Dafür analysiere ich im ersten Schritt immer, welche Hebel wir haben, um unser Ziel "entspannt ins Gelände" zu erreichen.
+
+Dadurch, dass ich nicht nur Trainerin, sondern auch Therapeutin für traditionelle chinesische Medizin (Akupunktur), Ernährungsberaterin und Haltungsexpertin (Paddocktrail) bin, habe ich immer eine ganze Menge Ideen. 💡🤓
+
+Den ersten Analyseschritt hast du mit dem Gelände-Quiz bereits getan. ✅
+
+Bevor wir tiefer einsteigen, möchte ich aber, dass du mich und meine Art zu arbeiten erst einmal richtig kennenlernst. Schließlich sollst du wissen, wem du da dein Vertrauen schenkst. 🤗
+
+**In den nächsten zwei Wochen nehme ich dich deshalb mit in meine Welt:**
+
+🐴 Du kommst mit auf meinen Hof und siehst, wie mein Friese Ids mir ohne Halfter und Strick überallhin folgt. Und ich zeige dir, wie du das auch mit deinem Pferd schaffst.
+
+🐴 Du bekommst meine Landkarte mit den 4 Meilensteinen, die dich ALLEINE ins Gelände bringen, damit du dich dort einordnen kannst und genau weißt, was dein nächster Meilenstein ist.
+
+🐴 Du lernst eine Schülerin kennen, deren Pferd alleine keinen Meter vom Hof ging, bis sie ihren Durchbruch hatte und nun entspannt im Gelände unterwegs ist. Ich erzähle dir die ganze Geschichte, damit du genau weißt, wie sie ihren Durchbruch erreicht hat und das nachmachen kannst.
+
+[Foto: Anika reitet ihren Friesen durchs Wasser]
+
+Und wenn zwischendurch Fragen aufkommen und du dir unsicher bist, bin ich für dich da.
+
+Antworte mir einfach auf eine meiner Mails und stelle mir deine Frage. 💌
+
+Jetzt kannst du dich einfach schon mal auf meine nächste Mail freuen. 🤗
+
+Da erzähle ich dir, wie bei mir alles angefangen hat. Und ich starte mit einer Geschichte, auf die ich nicht unbedingt stolz bin. 🙈
+
+Du hörst bald wieder von mir und bis dahin...
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto unter der Signatur]
+
+## KALT: Entspannt vom Hof
+
+{{contact.first_name}}, und? Hast du schon erkannt, warum dein Pferd im Moment noch nicht mit dir vom Hof möchte?
+
+Nach dem Video weißt du jetzt, dass dein Pferd an erster Stelle einen Sicherheitsanker braucht. ⚓ Und wenn du die richtige Strategie anwendest, könnt ihr eure Komfortzone nach und nach erweitern und entspannt den Hof verlassen.
+
+Vielleicht hast du dich ja auch schon gefragt, wer dir das hier alles schreibt. 😄
+
+Ich bin Anika. Seit über 20 Jahren begleite ich als Pferdetrainerin Freizeitreiterinnen dabei, ein unschlagbares Team mit ihrem Pferd zu machen. Über 500 Mensch-Pferd-Teams waren das inzwischen. 💕
+
+Mein Herz schlägt fürs Gelände und für genau den Wunsch, den du auch hast: entspannt mit deinem Pferd rausgehen und die Zeit genießen. 🌿
+
+Dafür analysiere ich im ersten Schritt immer, welche Hebel wir haben, um unser Ziel "entspannt ins Gelände" zu erreichen.
+
+Dadurch, dass ich nicht nur Trainerin, sondern auch Therapeutin für traditionelle chinesische Medizin (Akupunktur), Ernährungsberaterin und Haltungsexpertin (Paddocktrail) bin, habe ich immer eine ganze Menge Ideen. 💡🤓
+
+Den ersten Analyseschritt hast du mit dem Gelände-Quiz bereits getan. ✅
+
+Bevor wir tiefer einsteigen, möchte ich aber, dass du mich und meine Art zu arbeiten erst einmal richtig kennenlernst. Schließlich sollst du wissen, wem du da dein Vertrauen schenkst. 🤗
+
+**In den nächsten zwei Wochen nehme ich dich deshalb mit in meine Welt:**
+
+🐴 Du kommst mit auf meinen Hof und siehst, wie mein Friese Ids mir ohne Halfter und Strick überallhin folgt. Und ich zeige dir, wie du das auch mit deinem Pferd schaffst.
+
+🐴 Du bekommst meine Landkarte mit den 4 Meilensteinen, die dich ALLEINE ins Gelände bringen, damit du dich dort einordnen kannst und genau weißt, was dein nächster Meilenstein ist.
+
+🐴 Du lernst eine Schülerin kennen, deren Pferd alleine keinen Meter vom Hof ging, bis sie ihren Durchbruch hatte und nun entspannt im Gelände unterwegs ist. Ich erzähle dir die ganze Geschichte, damit du genau weißt, wie sie ihren Durchbruch erreicht hat und das nachmachen kannst.
+
+[Foto: Anika reitet ihren Friesen durchs Wasser]
+
+Und wenn zwischendurch Fragen aufkommen und du dir unsicher bist, bin ich für dich da.
+
+Antworte mir einfach auf eine meiner Mails und stelle mir deine Frage. 💌
+
+Jetzt kannst du dich einfach schon mal auf meine nächste Mail freuen. 🤗
+
+Da erzähle ich dir, wie bei mir alles angefangen hat. Und ich starte mit einer Geschichte, auf die ich nicht unbedingt stolz bin. 🙈
+
+Du hörst bald wieder von mir und bis dahin...
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto unter der Signatur]
+
+## KALT: Souverän draußen unterwegs
+
+{{contact.first_name}}, und? Hast du dir die drei Schritte für den nächsten Trecker gemerkt? 🚜
+
+Nach dem Video weißt du jetzt, dass du so einer Situation nicht mehr ausgeliefert bist. Du kannst jetzt einen klaren Plan abrufen.
+
+Vielleicht hast du dich ja auch schon gefragt, wer dir das hier alles schreibt. 😄
+
+Ich bin Anika. Seit über 20 Jahren begleite ich als Pferdetrainerin Freizeitreiterinnen dabei, ein unschlagbares Team mit ihrem Pferd zu machen. Über 500 Mensch-Pferd-Teams waren das inzwischen. 💕
+
+Mein Herz schlägt fürs Gelände und für genau den Wunsch, den du auch hast: entspannt mit deinem Pferd rausgehen und die Zeit genießen. 🌿
+
+Dafür analysiere ich im ersten Schritt immer, welche Hebel wir haben, um unser Ziel "entspannt ins Gelände" zu erreichen.
+
+Dadurch, dass ich nicht nur Trainerin, sondern auch Therapeutin für traditionelle chinesische Medizin (Akupunktur), Ernährungsberaterin und Haltungsexpertin (Paddocktrail) bin, habe ich immer eine ganze Menge Ideen. 💡🤓
+
+Den ersten Analyseschritt hast du mit dem Gelände-Quiz bereits getan. ✅
+
+Bevor wir tiefer einsteigen, möchte ich aber, dass du mich und meine Art zu arbeiten erst einmal richtig kennenlernst. Schließlich sollst du wissen, wem du da dein Vertrauen schenkst. 🤗
+
+**In den nächsten zwei Wochen nehme ich dich deshalb mit in meine Welt:**
+
+🐴 Du kommst mit auf meinen Hof und siehst, wie mein Friese Ids mir ohne Halfter und Strick überallhin folgt. Und ich zeige dir, wie du das auch mit deinem Pferd schaffst.
+
+🐴 Du bekommst meine Landkarte mit den 4 Meilensteinen, die dich ALLEINE ins Gelände bringen, damit du dich dort einordnen kannst und genau weißt, was dein nächster Meilenstein ist.
+
+🐴 Du lernst eine Schülerin kennen, deren Pferd alleine keinen Meter vom Hof ging, bis sie ihren Durchbruch hatte und nun entspannt im Gelände unterwegs ist. Ich erzähle dir die ganze Geschichte, damit du genau weißt, wie sie ihren Durchbruch erreicht hat und das nachmachen kannst.
+
+[Foto: Anika reitet ihren Friesen durchs Wasser]
+
+Und wenn zwischendurch Fragen aufkommen und du dir unsicher bist, bin ich für dich da.
+
+Antworte mir einfach auf eine meiner Mails und stelle mir deine Frage. 💌
+
+Jetzt kannst du dich einfach schon mal auf meine nächste Mail freuen. 🤗
+
+Da erzähle ich dir, wie bei mir alles angefangen hat. Und ich starte mit einer Geschichte, auf die ich nicht unbedingt stolz bin. 🙈
+
+Du hörst bald wieder von mir und bis dahin...
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto unter der Signatur]
+
+## KALT: Starkes Team (kein Video davor)
+
+{{contact.first_name}}, und? Wie fühlt sich dein Ergebnis an? 🎉
+
+In allen vier Bereichen läuft es bei dir schon richtig rund. Ihr seid ein starkes Team und darauf darfst du stolz sein.
+
+Vielleicht hast du dich ja auch schon gefragt, wer dir das hier alles schreibt. 😄
+
+Ich bin Anika. Seit über 20 Jahren begleite ich als Pferdetrainerin Freizeitreiterinnen dabei, ein unschlagbares Team mit ihrem Pferd zu machen. Über 500 Mensch-Pferd-Teams waren das inzwischen. 💕
+
+Mein Herz schlägt fürs Gelände und für genau den Wunsch, den du auch hast: entspannt mit deinem Pferd rausgehen und die Zeit genießen. 🌿
+
+Dafür analysiere ich im ersten Schritt immer, welche Hebel wir haben, um unser Ziel "entspannt ins Gelände" zu erreichen.
+
+Dadurch, dass ich nicht nur Trainerin, sondern auch Therapeutin für traditionelle chinesische Medizin (Akupunktur), Ernährungsberaterin und Haltungsexpertin (Paddocktrail) bin, habe ich immer eine ganze Menge Ideen. 💡🤓
+
+Den ersten Analyseschritt hast du mit dem Gelände-Quiz bereits getan. ✅
+
+Bevor wir tiefer einsteigen, möchte ich aber, dass du mich und meine Art zu arbeiten erst einmal richtig kennenlernst. Schließlich sollst du wissen, wem du da dein Vertrauen schenkst. 🤗
+
+**In den nächsten zwei Wochen nehme ich dich deshalb mit in meine Welt:**
+
+🐴 Du kommst mit auf meinen Hof und siehst, wie mein Friese Ids mir ohne Halfter und Strick überallhin folgt. Und ich zeige dir, wie du das auch mit deinem Pferd schaffst.
+
+🐴 Du bekommst meine Landkarte mit den 4 Meilensteinen, die dich ALLEINE ins Gelände bringen, damit du dich dort einordnen kannst und genau weißt, was dein nächster Meilenstein ist.
+
+🐴 Du lernst eine Schülerin kennen, deren Pferd alleine keinen Meter vom Hof ging, bis sie ihren Durchbruch hatte und nun entspannt im Gelände unterwegs ist. Ich erzähle dir die ganze Geschichte, damit du genau weißt, wie sie ihren Durchbruch erreicht hat und das nachmachen kannst.
+
+[Foto: Anika reitet ihren Friesen durchs Wasser]
+
+Und wenn zwischendurch Fragen aufkommen und du dir unsicher bist, bin ich für dich da.
+
+Antworte mir einfach auf eine meiner Mails und stelle mir deine Frage. 💌
+
+Jetzt kannst du dich einfach schon mal auf meine nächste Mail freuen. 🤗
+
+Da erzähle ich dir, wie bei mir alles angefangen hat. Und ich starte mit einer Geschichte, auf die ich nicht unbedingt stolz bin. 🙈
+
+Du hörst bald wieder von mir und bis dahin...
+
+Genieße die Zeit mit deinem Pferd.
+
+Deine Anika
+
+[Foto unter der Signatur]
