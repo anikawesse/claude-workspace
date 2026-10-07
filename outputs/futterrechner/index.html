@@ -111,6 +111,49 @@
         }
         #save-indicator.visible { opacity: 1; }
 
+        /* Profil-Leiste */
+        #profile-bar {
+            background: #3a1208;
+            padding: 8px 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(214,185,35,0.15);
+        }
+        #profile-bar label {
+            color: rgba(230,197,180,0.75);
+            font-size: 0.72rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        #profile-select {
+            flex: 1; min-width: 130px; max-width: 200px;
+            padding: 5px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(214,185,35,0.3);
+            background: rgba(255,255,255,0.07);
+            color: white;
+            font-size: 0.78rem;
+        }
+        #profile-select option { background: #3a1208; color: white; }
+        .btn-profile {
+            padding: 5px 11px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: background 0.15s;
+            white-space: nowrap;
+        }
+        #btn-save-profile { background: rgba(214,185,35,0.18); color: var(--gold); border: 1px solid rgba(214,185,35,0.4); }
+        #btn-save-profile:hover { background: rgba(214,185,35,0.32); }
+        #btn-new-profile { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.18); }
+        #btn-new-profile:hover { background: rgba(255,255,255,0.14); }
+
         .main { max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
         .step-panel { display: none; }
         .step-panel.active { display: block; }
@@ -413,6 +456,15 @@
 </div>
 
 <div id="save-indicator">✓ Gespeichert</div>
+
+<div id="profile-bar">
+    <label>Meine Pferde:</label>
+    <select id="profile-select">
+        <option value="">Profil laden ...</option>
+    </select>
+    <button id="btn-save-profile" class="btn-profile">💾 Speichern</button>
+    <button id="btn-new-profile" class="btn-profile">+ Neues Pferd</button>
+</div>
 
 <div class="progress-bar">
     <div class="steps">
@@ -1579,6 +1631,94 @@ function showSaveIndicator() {
 }
 
 // ============================================================
+// PROFILE MANAGEMENT (mehrere Pferde)
+// ============================================================
+const PROFILES_KEY = 'futterrechner_profiles';
+
+function getProfiles() {
+    try { return JSON.parse(localStorage.getItem(PROFILES_KEY)) || []; } catch(e) { return []; }
+}
+
+function saveProfile() {
+    const horseName = document.getElementById('horse-name')?.value?.trim();
+    if (!horseName) {
+        alert('Bitte zuerst den Namen deines Pferdes eingeben.');
+        document.getElementById('horse-name')?.focus();
+        return;
+    }
+    saveState();
+    let currentState;
+    try { currentState = JSON.parse(localStorage.getItem(SAVE_KEY)); } catch(e) { return; }
+    const profiles = getProfiles();
+    const existingIdx = profiles.findIndex(p => p.name === horseName);
+    const profile = {
+        id: existingIdx >= 0 ? profiles[existingIdx].id : Date.now(),
+        name: horseName, savedAt: Date.now(), state: currentState
+    };
+    if (existingIdx >= 0) { profiles[existingIdx] = profile; } else { profiles.push(profile); }
+    try { localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles)); } catch(e) {}
+    renderProfileSelect(horseName);
+    const el = document.getElementById('save-indicator');
+    if (el) {
+        el.textContent = '✓ Profil gespeichert';
+        el.classList.add('visible');
+        clearTimeout(el._fadeTimer);
+        el._fadeTimer = setTimeout(() => { el.classList.remove('visible'); el.textContent = '✓ Gespeichert'; }, 2500);
+    }
+}
+
+function loadProfile(id) {
+    const profile = getProfiles().find(p => p.id == id);
+    if (!profile) return;
+    try { localStorage.setItem(SAVE_KEY, JSON.stringify(profile.state)); } catch(e) {}
+    loadState();
+}
+
+function renderProfileSelect(selectName) {
+    const sel = document.getElementById('profile-select');
+    if (!sel) return;
+    const profiles = getProfiles();
+    sel.innerHTML = '<option value="">Profil laden ...</option>';
+    profiles.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.id;
+        opt.textContent = p.name;
+        sel.appendChild(opt);
+    });
+    if (selectName) {
+        const match = getProfiles().find(p => p.name === selectName);
+        if (match) sel.value = match.id;
+    }
+}
+
+function clearForm() {
+    document.getElementById('horse-name').value = '';
+    document.getElementById('horse-weight').value = '';
+    const idealRadio = document.querySelector('input[name="condition"][value="ideal"]');
+    if (idealRadio) idealRadio.checked = true;
+    const lufaRadio = document.querySelector('input[name="heu-mode"][value="lufa"]');
+    if (lufaRadio) { lufaRadio.checked = true; }
+    document.getElementById('lufa-source-label').textContent = 'Lufa 2025 Durchschnitt';
+    _heuCustom = {};
+    setLufaDefaults();
+    document.querySelectorAll('.feed-cb').forEach(cb => {
+        if (cb.id !== 'feed-heu') {
+            cb.checked = false;
+            const row = document.getElementById('menge-' + cb.id.replace('feed-', '') + '-row');
+            if (row) row.style.display = 'none';
+        }
+    });
+    const mengeHeu = document.getElementById('menge-heu');
+    if (mengeHeu) mengeHeu.value = '';
+    const lgs = document.getElementById('horse-langeshaargear');
+    const sen = document.getElementById('horse-senior');
+    if (lgs) lgs.checked = false;
+    if (sen) sen.checked = false;
+    document.getElementById('profile-select').value = '';
+    try { localStorage.removeItem(SAVE_KEY); } catch(e) {}
+}
+
+// ============================================================
 // INIT
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
@@ -1637,6 +1777,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Gespeicherten Stand wiederherstellen
     loadState();
+
+    // Profile-Leiste verdrahten
+    renderProfileSelect();
+    document.getElementById('btn-save-profile').addEventListener('click', saveProfile);
+    document.getElementById('profile-select').addEventListener('change', function() {
+        if (!this.value) return;
+        const currentName = document.getElementById('horse-name')?.value?.trim();
+        const targetName = this.options[this.selectedIndex].text;
+        if (currentName && currentName !== targetName) {
+            if (!confirm('Aktuelles Pferd (' + currentName + ') durch "' + targetName + '" ersetzen?')) {
+                this.value = currentName ? (getProfiles().find(p => p.name === currentName)?.id || '') : '';
+                return;
+            }
+        }
+        loadProfile(this.value);
+    });
+    document.getElementById('btn-new-profile').addEventListener('click', function() {
+        const name = document.getElementById('horse-name')?.value?.trim();
+        if (name && !confirm('Aktuelles Pferd (' + name + ') verwerfen und neu beginnen?')) return;
+        clearForm();
+    });
 
     // Sofort speichern wenn Seite geschlossen wird (Sicherheitsnetz für schnelle Eingaben)
     window.addEventListener('beforeunload', saveState);
