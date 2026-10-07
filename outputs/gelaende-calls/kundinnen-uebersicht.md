@@ -1,8 +1,20 @@
 # Gelände-Programm — Call-Notizen Kundinnen
 
-Stand: nach der 4. Feedbackrunde vom **02.10.2026**
+Stand: nach dem Einzel-Onboarding von Anne Rührer am **05.10.2026**
 
 Dieses Dokument pflegt Claude nach jedem Live-Call. Ein Abschnitt pro Kundin (alphabetisch), darunter die Einträge aus den einzelnen Calls. Hinweis: Nicht jedes Zoom-Transkript enthält Sprecher-Namen, und Anikas eigene Tonspur ist oft lückenhaft. Unsichere Stellen sind mit ⚠️ markiert.
+
+---
+
+## Anne Rührer (Number 1)
+
+**Pferd:** Number 1, Haflinger-Wallach, 18 Jahre, ca. 540 kg, Arthrose. Haltung im **Offenstall am eigenen Haus** (Weiden sehr fett, eine Stute mit Asthma im Bestand). **Neu im Programm seit Oktober 2026.**
+**Ausgangslage:** Hauptthema ist das **Losreißen an der Hand** (beim Longieren immer an derselben Stelle auf der linken Hand, auf einem Trailkurs 3× an einem Tag, beim Verladen durch die Tochter 3×), dazu **Buckeln nur im Gelände**: Reiterin Julia wurde bei einem Orientierungsritt in fremdem Gelände abgeworfen. Früher war er viel im Gelände und auf Wanderritten. Anne erkennt vorher keine Anzeichen („Ich sehe es nicht"), longiert derzeit nicht und **reitet selbst nicht ins Gelände**. Ziel: wieder ins Gelände kommen, erst auf die abgetrennte Wiese, dann raus. Ihre Sorge: Wenn die Angst weiter wächst, kann sie ihn irgendwann nicht mehr versorgen. Sie reitet 2-3× pro Woche und macht an 5 Tagen etwas mit ihm.
+**Aktueller Stand:** Onboarding und Tiergespräch am 05.10. Freiarbeitskurs freigeschaltet, erster Blick in den Kursbereich.
+
+### Calls
+
+- **05.10.2026 (Einzel-Onboarding mit Tiergespräch, Mo 19 Uhr):** Private Session, weil „die anderen beiden" an dem Abend nicht konnten. **Orga:** Der dazugebuchte Freiarbeitskurs (97 €) war angelegt, aber nicht zugewiesen, Anika hat ihn im Call freigeschaltet; der Gespensterecke-Kurs in ihrem Bereich bleibt erst mal liegen; nächster Schritt im Kurs ist die Lektion „Ziele". **Tiergespräch, Kernergebnisse:** Zuhause fühlt er sich rundum wohl. Unterm Reiter ein **Unbehagen im Rücken (3-4 von 10)**, das beim Reiten nachlässt, kein Gurtschmerz. Das Buckeln mit Julia war **nicht körperlich und lag nicht an der Reiterin**: Er war genervt (Wiese mehrfach auf und ab), wollte selbst entscheiden, die Impulskontrolle war leer. Auf dem Trailkurs war er **mental überfordert** und braucht mehr Pausen. Ihm war **nicht bewusst, dass Losreißen Anne wehtut und gefährlich ist**; nach der Erklärung verstanden, er will ihr nicht schaden und ist offen dafür, Überforderung vorher zu zeigen (scharren, tänzeln). **Kernthema: Das Älterwerden belastet ihn emotional**, er testet, „ob es noch geht" (Anne findet das stimmig; Arthrosemittel waren wegen einer Leber-Ausleitung wochenlang abgesetzt). Er vertraut und respektiert Anne. **Empfehlungen:** Aufwärmen zuerst **ohne Reitergewicht vom Boden**, mehr Pausen, Freiarbeitskurs Schritt für Schritt. **Fütterung:** Faustregel rund 2 kg Heu je 100 kg in 24 Stunden, bei ihm etwa 11 kg; zeitgesteuerte Raufe ist gebaut, Heu bedampfen ausprobieren. **Hausaufgabe: Video vom gemeinsamen Arbeiten** (Handy quer), gern mit Seitengängen. Vollständige Notiz: outputs/tiergespraeche/2026-10-05-anne-ruehrer-number-1.md. ⚠️ Anikas Tonspur lückenhaft, einzelne Antworten (Osteopathin, Spazierengehen) sind nicht überliefert.
 
 ---
 
@@ -154,3 +166,8 @@ Dieses Dokument pflegt Claude nach jedem Live-Call. Ein Abschnitt pro Kundin (al
 - Videos von Sabine und Caroline besprochen; Miriam bringt nächste Woche die Acht mit.
 - **Teilnahme im Blick behalten:** Corinna und Johanna waren seit dem Onboarding in keinem Call live, Susanne und Nicola nur am 18.09. (Nicola auch am 11.09.).
 - Kein nächster Termin im Call genannt.
+
+**Aus dem Einzel-Onboarding (Mo 05.10.2026, 19 Uhr):**
+
+- **Neue Teilnehmerin: Anne Rührer.** ⚠️ Anika erwähnte „die anderen beiden", die an dem Abend nicht konnten. Falls das weitere neue Teilnehmerinnen sind, fehlen ihre Einträge noch.
+- **Nächster Gruppen-Call: Freitag, 09.10.2026, 11 Uhr.** Die Termine für den ganzen Monat und der gleichbleibende Link stehen in der Lektion „Calls".
