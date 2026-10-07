@@ -85,3 +85,11 @@ Die Dateien enthalten Anikas Text aus Devine, abgetippt aus Screenshots. Kleinko
 7. Kleinkorrekturen (Tippfehler, Kommas) aus dem Chat übernehmen.
 8. Workflow in Devine: Anika baut ihn am 07.10. mit durchgehend 2 Tagen Abstand (Mails an Tag 1, 3, 5, 7, 9, 11, 13). Noch zu klären: Käuferinnen des Gelände-Schlüssels ausschließen, Übergabe an den Soft-Mail-Workflow.
 9. ✅ Mail 1: Betreff „🐴Blick hinter die Kulissen", Vorschautext „Wer schreibt dir hier eigentlich?" (07.10. festgehalten).
+
+## Abschluss 07.10.2026: Aufwärmphase fertig
+
+Anika hat am 07.10.2026 gemeldet: **alles erledigt.** Damit sind laut ihr alle Punkte aus „Offen vor dem Scharfschalten" abgehakt (Ids-Video-Link, Carolines Einverständnis, Betreff Mail 6, Zeitangabe in Mail 4, Tippfehler, Workflow mit 2 Tagen Abstand, Käuferinnen-Ausschluss und Übergabe an die Soft-Mails).
+
+- Betreff der kalten Quiz-Übergangsmail (Devine-Vorlage „Überleitung"): **„Das ist erst der Anfang."**
+- ⚠️ Die Mail-Dateien in diesem Ordner zeigen den Stand der Screenshots VOR Anikas letzten Korrekturen in Devine. Maßgeblich ist immer die Version in Devine. Wer die Texte wiederverwenden will, holt sich den aktuellen Wortlaut dort.
+- Ablauf für kalte Leads: Freebie-Auslieferung → (beim Quiz: Überleitungs-Mail „Das ist erst der Anfang.") → Aufwärm Mail 1 bis 7 im 2-Tage-Abstand → Soft-Mails Gelände-Schlüssel. Warme Leads gehen wie bisher direkt ins Backend.

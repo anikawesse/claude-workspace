@@ -286,7 +286,9 @@ Die zwei Slots je Hebel:
 
 # Übergangsmail Variante „KALT" (führt in die Aufwärmphase statt zum Gelände-Schlüssel)
 
-Stand 07.10.2026, **Anikas Version aus Devine** (Vorlagentitel dort: „Überleitung", aus Screenshots abgetippt, Emojis nach bestem Erkennen; Betreff war nicht zu sehen).
+Stand 07.10.2026, **Anikas Version aus Devine** (Vorlagentitel dort: „Überleitung", aus Screenshots abgetippt, Emojis nach bestem Erkennen).
+
+**Betreff:** Das ist erst der Anfang.
 
 Anikas Entscheidung: **Warme Leads** bekommen weiter die Übergangsmail oben und gehen direkt ins Backend zum Gelände-Schlüssel. **Kalte Leads** bekommen diese Variante und laufen danach durch die 7 Aufwärm-Mails (`outputs/aufwaermphase/`, 2 Tage Abstand). Die Selektion warm/kalt baut Anika in Devine.
 
