@@ -127,6 +127,23 @@ Sep-Betreffzeilen (neues Gelände-/Baum-Framing 🌳): M1 „Die Türen zum Gel�
 - Opt-in-/Salespage-Aufrufe nur im Browser ablesbar (Devine-API 401).
 - Warum liefen die Ads nur bis 22.09.? (Budget/Laufzeit bewusst so gesetzt?)
 
+## Downsell-Strecke (05.–07.10., Gelände-Paket 199 €)
+
+4 Mails an die Programm-Nicht-Käufer (Bundle Gelände-Schlüssel + sicher meistern):
+
+| Mail | Versand | Zugestellt | Öffner | ÖffnR | Klicks | KlickR | Abm. |
+|---|---|---|---|---|---|---|---|
+| Downsell 1 | Mo 05.10. | 89 | 23 | 25,8% | 1 | 1,1% | 1 |
+| Downsell 2 | Di 06.10. | 87 | 21 | 24,1% | 3 | 3,4% | 1 |
+| Downsell 3 | Mi 07.10. vorm. | 87 | 20 | 23,0% | 3 | 3,4% | 1 |
+| Downsell 4 Last Call | Mi 07.10. abends | 110 | 27 | 24,5% | 2 | 1,8% | 6 |
+
+**Ergebnis: 0 Käufe.** In ThriveCart keine einzige Gelände-Paket-Bestellung im Fenster 05.–08.10. Die 9 Klicks über die Strecke sind nicht in den 199-€-Kauf konvertiert.
+
+- Öffnungsraten durchgehend ~23–26 %, also deutlich unter der Sales-Strecke (30–48 %). Erwartbar, das sind die kälteren Nicht-Käufer.
+- Last-Call ging an eine größere Liste (110 statt ~87) und brachte die meisten Abmeldungen (6 von 9 der Strecke).
+- ⚠️ Null Conversion trotz passablem Angebot: Entweder trifft das 199-€-Bundle die Nicht-Käufer preislich/thematisch nicht, oder die Strecke ist zu kurz/zu schwach. Für den nächsten Durchlauf überdenken (anderer Preis-Anker, mehr Nutzen-Beweis, evtl. Einstieg über den 27-€-Gelände-Schlüssel statt 199-€-Bundle).
+
 ## Abschließendes Fazit (05.10.2026)
 
 **Das Ergebnis in Zahlen:** 150 Anmeldungen (82 organisch / 71 Ads, Ad-Spend 535,32 €, CPL 7,54 €), ~47 live (31 % Show-up). Verkäufe: 2× Gelände-Programm (netto 1.010,34 €) + 5× VIP (37,80 €) + 1× Freiarbeitskurs-Cross-Sell (97 € brutto). Gesamt-Nettoumsatz 1.048,14 €, Gewinn grob 512,82 €, Gesamt-ROAS 1,96. Beide Programmkäufe organisch, einer nach Telefonat, einer über die FAQ-Mail.

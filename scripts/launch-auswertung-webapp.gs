@@ -123,6 +123,12 @@ function doPost(e) {
       mailInfo = schreibeMailBlatt(launch, daten.mails, daten.softOptOut);
     }
 
+    // Optional: Downsell-Mail-Tabelle mitschreiben (Blatt "Downsell-Mails").
+    let downsellInfo = null;
+    if (daten.downsell && daten.downsell.length) {
+      downsellInfo = schreibeDownsellBlatt(launch, daten.downsell);
+    }
+
     return antwort({
       ok: true,
       launch: launch,
@@ -131,7 +137,8 @@ function doPost(e) {
       geschrieben: geschrieben,
       nicht_gefunden: nichtGefunden,
       formel_zeile_uebersprungen: formelKollision,
-      mails: mailInfo
+      mails: mailInfo,
+      downsell: downsellInfo
     });
   } catch (err) {
     return antwort({ ok: false, fehler: String(err) });
@@ -357,6 +364,78 @@ function schreibeMailBlatt(launch, rows, softOptOut) {
     blatt.getRange(soRow, 1).setValue('Soft-Opt-out genutzt (Trigger-Link, nur aus Sales-Strecke raus)').setFontWeight('bold');
     blatt.getRange(soRow, 9).setValue(softOptOut);
   }
+
+  return { blatt: blatt.getName(), titel: titel, zeilen: rows.length, neu: neu, ab_zeile: titelRow };
+}
+
+/** Sucht das Blatt "Downsell-Mails" (oder eins mit "Downsell" im Namen); legt es sonst an. */
+function findeDownsellBlatt() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const direkt = ss.getSheetByName('Downsell-Mails');
+  if (direkt) return direkt;
+  const blaetter = ss.getSheets();
+  for (let i = 0; i < blaetter.length; i++) {
+    if (blaetter[i].getName().toLowerCase().indexOf('downsell') > -1) return blaetter[i];
+  }
+  return ss.insertSheet('Downsell-Mails');
+}
+
+/**
+ * Schreibt/aktualisiert fuer den Launch einen Downsell-Block auf dem Blatt
+ * "Downsell-Mails" (jeder Launch untereinander). Gleiche Struktur wie der
+ * Sales-Mail-Block; Oeffnungs-/Klickrate als fertige Werte (locale-sicher).
+ * rows = [{ mail, betreff, versand, empfaenger, oeffner, klicks, abmeldungen, kaeufe }, ...]
+ */
+function schreibeDownsellBlatt(launch, rows) {
+  const blatt = findeDownsellBlatt();
+  const titel = 'Downsell-Auswertung Gelände-Paket (' + launch + ')';
+  const note = 'Downsell-Strecke an die Programm-Nicht-Käufer (Bundle Gelände-Schlüssel + sicher meistern, 199 €). Zahlen aus Devine. Öffner = eindeutige Öffner inkl. Klicker und Antworter. Öffnungs-/Klickrate als Wert. Käufe = Gelände-Paket-Bestellungen (ThriveCart).';
+  const header = ['Mail', 'Betreff', 'Versand', 'Empfänger', 'Öffnungen', 'Öffnungsrate', 'Klicks', 'Klickrate', 'Abmeldungen', 'Käufe danach'];
+
+  const lastRow = Math.max(blatt.getLastRow(), 0);
+  let titelRow = -1;
+  if (lastRow > 0) {
+    const colA = blatt.getRange(1, 1, lastRow, 1).getValues();
+    for (let z = 0; z < colA.length; z++) {
+      if (normalisiere(String(colA[z][0]).trim()) === normalisiere(titel)) { titelRow = z + 1; break; }
+    }
+  }
+  let neu = false;
+  if (titelRow < 0) { titelRow = lastRow > 0 ? lastRow + 2 : 1; neu = true; }
+  const headerRow = titelRow + 2;
+  const dataStart = headerRow + 1;
+
+  if (neu) {
+    blatt.getRange(titelRow, 1, 1, header.length).merge();
+    blatt.getRange(titelRow, 1).setValue(titel).setFontWeight('bold');
+    blatt.getRange(titelRow + 1, 1, 1, header.length).merge();
+    blatt.getRange(titelRow + 1, 1).setValue(note).setWrap(true);
+    blatt.getRange(headerRow, 1, 1, header.length).setValues([header]).setFontWeight('bold');
+  }
+
+  blatt.getRange(dataStart, 1, rows.length + 3, header.length).clearContent();
+
+  for (let i = 0; i < rows.length; i++) {
+    const r = dataStart + i;
+    const m = rows[i] || {};
+    const _e = (m.empfaenger == null || m.empfaenger === '') ? null : Number(m.empfaenger);
+    const _o = (m.oeffner == null || m.oeffner === '') ? null : Number(m.oeffner);
+    const _k = (m.klicks == null || m.klicks === '') ? null : Number(m.klicks);
+    blatt.getRange(r, 1).setValue(m.mail || '');
+    blatt.getRange(r, 2).setValue(m.betreff || '');
+    blatt.getRange(r, 3).setValue(m.versand || '');
+    blatt.getRange(r, 4).setValue(_e == null ? '' : _e);
+    blatt.getRange(r, 5).setValue(_o == null ? '' : _o);
+    blatt.getRange(r, 6).setValue((_e && _o != null) ? _o / _e : '').setNumberFormat('0.0%');
+    blatt.getRange(r, 7).setValue(_k == null ? '' : _k);
+    blatt.getRange(r, 8).setValue((_e && _k != null) ? _k / _e : '').setNumberFormat('0.0%');
+    blatt.getRange(r, 9).setValue(m.abmeldungen == null ? '' : m.abmeldungen);
+    blatt.getRange(r, 10).setValue((m.kaeufe == null || m.kaeufe === '') ? '' : m.kaeufe);
+  }
+
+  const sumRow = dataStart + rows.length + 1;
+  blatt.getRange(sumRow, 1).setValue('Abmeldungen gesamt (Downsell)').setFontWeight('bold');
+  blatt.getRange(sumRow, 9).setValue(rows.reduce(function (s, m) { return s + (Number(m.abmeldungen) || 0); }, 0));
 
   return { blatt: blatt.getName(), titel: titel, zeilen: rows.length, neu: neu, ab_zeile: titelRow };
 }

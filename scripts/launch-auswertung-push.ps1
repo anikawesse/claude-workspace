@@ -37,6 +37,7 @@ param(
     [Parameter(Mandatory = $true)][string]$Launch,
     [string]$WerteDatei,
     [string]$MailDatei,
+    [string]$DownsellDatei,
     [string]$SoftOptOut,
     [string]$EnvDatei,
     [switch]$NurZeigen
@@ -82,8 +83,17 @@ if ($MailDatei) {
     foreach ($m in $parsedM) { $mails += $m }   # einzeln anhaengen (sonst fasst @() das Array als 1 Element)
 }
 
-if ($werteHash.Count -eq 0 -and $mails.Count -eq 0) {
-    Write-Error "Weder Werte noch Mails uebergeben (mindestens -WerteDatei oder -MailDatei noetig)."; exit 1
+# ---------------------------------------------------------------- Downsell-Mails lesen
+$downsell = @()
+if ($DownsellDatei) {
+    if (-not (Test-Path $DownsellDatei)) { Write-Error "Downsell-Datei nicht gefunden: $DownsellDatei"; exit 1 }
+    $rohD = Get-Content -Path $DownsellDatei -Raw -Encoding UTF8
+    try { $parsedD = $rohD | ConvertFrom-Json } catch { Write-Error "Downsell-Datei ist kein gueltiges JSON: $($_.Exception.Message)"; exit 1 }
+    foreach ($m in $parsedD) { $downsell += $m }
+}
+
+if ($werteHash.Count -eq 0 -and $mails.Count -eq 0 -and $downsell.Count -eq 0) {
+    Write-Error "Weder Werte noch Mails noch Downsell uebergeben (mindestens -WerteDatei, -MailDatei oder -DownsellDatei noetig)."; exit 1
 }
 
 Write-Host "`nLaunch: $Launch" -ForegroundColor Cyan
@@ -94,6 +104,10 @@ if ($werteHash.Count) {
 if ($mails.Count) {
     Write-Host "Sales-Mails ($($mails.Count)):" -ForegroundColor Cyan
     $mails | ForEach-Object { Write-Host ("  {0,-22} Zugestellt {1,-5} Öffner {2,-5} Klicks {3}" -f $_.mail, $_.empfaenger, $_.oeffner, $_.klicks) }
+}
+if ($downsell.Count) {
+    Write-Host "Downsell-Mails ($($downsell.Count)):" -ForegroundColor Cyan
+    $downsell | ForEach-Object { Write-Host ("  {0,-26} Zugestellt {1,-5} Öffner {2,-5} Klicks {3}" -f $_.mail, $_.empfaenger, $_.oeffner, $_.klicks) }
 }
 
 if ($NurZeigen) { Write-Host "`n-NurZeigen: nichts gesendet.`n" -ForegroundColor DarkGray; exit 0 }
@@ -107,6 +121,7 @@ if (-not $url -or $url -eq 'HIER_EINFUEGEN') {
 # ⚠️ Body als UTF-8-BYTES (PS 5.1 kodiert String-Body sonst als ASCII -> Umlaute kaputt).
 $nutzlast = @{ launch = $Launch; werte = $werteHash; mails = $mails }
 if ($SoftOptOut -ne '' -and $null -ne $SoftOptOut) { $nutzlast.softOptOut = [int]$SoftOptOut }
+if ($downsell.Count) { $nutzlast.downsell = $downsell }
 $koerper = [Text.Encoding]::UTF8.GetBytes(($nutzlast | ConvertTo-Json -Depth 6 -Compress))
 
 Write-Host "`nSchreibe in die Google-Tabelle..." -ForegroundColor Cyan
@@ -144,6 +159,9 @@ if ($antwort.formel_zeile_uebersprungen -and $antwort.formel_zeile_uebersprungen
 }
 if ($antwort.mails) {
     Write-Host "  Mail-Tabelle: $($antwort.mails.zeilen) Mails im Block '$($antwort.mails.titel)' (Blatt $($antwort.mails.blatt), ab Zeile $($antwort.mails.ab_zeile))" -ForegroundColor Green
+}
+if ($antwort.downsell) {
+    Write-Host "  Downsell-Tabelle: $($antwort.downsell.zeilen) Mails im Block '$($antwort.downsell.titel)' (Blatt $($antwort.downsell.blatt), ab Zeile $($antwort.downsell.ab_zeile))" -ForegroundColor Green
 }
 
 # ---------------------------------------------------------------- Ruecklese (Kontrolle)

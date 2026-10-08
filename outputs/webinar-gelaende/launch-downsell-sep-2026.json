@@ -1,0 +1,6 @@
+[
+  { "mail": "Downsell Mail 1", "betreff": "", "versand": "Mo 05.10.", "empfaenger": 89, "oeffner": 23, "klicks": 1, "abmeldungen": 1, "kaeufe": "" },
+  { "mail": "Downsell Mail 2", "betreff": "", "versand": "Di 06.10.", "empfaenger": 87, "oeffner": 21, "klicks": 3, "abmeldungen": 1, "kaeufe": "" },
+  { "mail": "Downsell Mail 3", "betreff": "", "versand": "Mi 07.10. vorm.", "empfaenger": 87, "oeffner": 20, "klicks": 3, "abmeldungen": 1, "kaeufe": "" },
+  { "mail": "Downsell Mail 4 Last Call", "betreff": "", "versand": "Mi 07.10. abends", "empfaenger": 110, "oeffner": 27, "klicks": 2, "abmeldungen": 6, "kaeufe": 0 }
+]

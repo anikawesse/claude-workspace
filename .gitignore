@@ -13,3 +13,6 @@ scripts/supabase-keepalive.log
 
 # Aufwaermphase: Videos nicht ins Repo (GitHub-Limit 100 MB)
 outputs/aufwaermphase/*.mp4
+
+# Devine-Kontaktlisten (E-Mail-Adressen, DND-Status) - nur lokal, nicht ins Repo
+outputs/devine-dnd-wiederherstellung/*.csv
