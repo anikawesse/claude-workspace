@@ -830,7 +830,17 @@
       "Bash(netlify deploy *)",
       "PowerShell(npx netlify-cli deploy --prod --dir \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\" 2>&1)",
       "PowerShell($env:NETLIFY_AUTH_TOKEN=\"nfp_Vv1tnBmtkg2vyMzSCyxXFzZ1NzJwVFW31250\"; npx netlify-cli sites:list 2>&1 | Select-Object -First 30)",
-      "PowerShell($env:NETLIFY_AUTH_TOKEN=\"nfp_Vv1tnBmtkg2vyMzSCyxXFzZ1NzJwVFW31250\"; npx netlify-cli deploy --prod --dir \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\" --site e083eb87-11c8-48ff-8efd-d04a9dca9111 2>&1)"
+      "PowerShell($env:NETLIFY_AUTH_TOKEN=\"nfp_Vv1tnBmtkg2vyMzSCyxXFzZ1NzJwVFW31250\"; npx netlify-cli deploy --prod --dir \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\" --site e083eb87-11c8-48ff-8efd-d04a9dca9111 2>&1)",
+      "PowerShell(.\\\\scripts\\\\minikurs-auswertung.ps1 -Von 2026-09-24 -Bis 2026-10-08)",
+      "Bash(cp scripts/launch-auswertung-webapp.gs /tmp/_c.js)",
+      "Bash(node --check /tmp/_c.js)",
+      "Bash(rm -f /tmp/_c.js)",
+      "Bash(node -e \"const fs=require\\('fs'\\);const p='scripts/launch-auswertung-push.ps1';let c=fs.readFileSync\\(p,'utf8'\\);if\\(c.charCodeAt\\(0\\)!==0xFEFF\\){fs.writeFileSync\\(p,'\\\\ufeff'+c,'utf8'\\);console.log\\('BOM ergänzt'\\);}else{console.log\\('BOM da'\\);}\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -Command '$null=[System.Management.Automation.PSParser]::Tokenize\\(\\(Get-Content '\\\\''scripts\\\\launch-auswertung-push.ps1'\\\\'' -Raw\\),[ref]$null\\); Write-Host '\\\\''PS1 OK'\\\\''')",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\launch-auswertung-push.ps1\" -Launch \"Sep 2026\" -DownsellDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\launch-downsell-sep-2026.json\" -EnvDatei \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\scripts\\\\.env\")",
+      "Bash(powershell -NoProfile -ExecutionPolicy Bypass -Command '$c = Get-Content -Path '\\\\''scripts\\\\launch-auswertung-webapp.gs'\\\\'' -Raw -Encoding UTF8; Set-Clipboard -Value $c; Write-Host \\('\\\\''In Zwischenablage: '\\\\'' + $c.Length + '\\\\'' Zeichen; enthält schreibeDownsellBlatt: '\\\\'' + \\($c -match '\\\\''schreibeDownsellBlatt'\\\\''\\)\\)')",
+      "PowerShell(Set-Clipboard -Value '<iframe src=\"https://futterrechner.netlify.app\" width=\"100%\" height=\"950\" frameborder=\"0\" style=\"border:none; width:100%; min-height:950px;\"></iframe>')",
+      "PowerShell(cd \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\"; npm install 2>$null; $env:NETLIFY_AUTH_TOKEN=\"nfp_Vv1tnBmtkg2vyMzSCyxXFzZ1NzJwVFW31250\"; npx netlify-cli deploy --prod --dir \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\futterrechner\" --site e083eb87-11c8-48ff-8efd-d04a9dca9111 2>&1 | Select-String \"Deploy is live|Error|deploy URL\")"
     ],
     "defaultMode": "bypassPermissions"
   }
