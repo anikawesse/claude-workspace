@@ -179,8 +179,7 @@
   .pl-mday .pl-item{font-size:10.5px;padding:3px 5px;line-height:1.25;}
   .pl-item.su{cursor:default;display:flex;flex-direction:column;gap:4px;}
   .pl-item.su .su-txt{cursor:pointer;}
-  .pl-item.su .su-short{font-size:11.5px;font-weight:400;margin-top:4px;line-height:1.35;white-space:normal;}
-  .pl-item.su .su-short b{display:block;margin-bottom:2px;}
+  .pl-item.su .su-short{font-size:11.5px;font-weight:400;margin-top:4px;line-height:1.35;white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
   .pl-item.su .su-copy{font-size:11px;padding:3px 8px;border-radius:999px;background:var(--beige);margin-top:4px;}
   .pl-item.su .su-move{display:flex;gap:3px;}
   .pl-item.su .su-move button{border:1px solid var(--rose-dk);background:var(--white);border-radius:6px;width:22px;height:20px;font-size:12px;line-height:1;cursor:pointer;padding:0;color:var(--ink);}
@@ -671,8 +670,12 @@ function makeKarussellFromYapping(yid){
 function makeShortFromYapping(yid){
   const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
   const ex=yapShort(y);
-  if(ex){go('shorts');openModal('shorts',ex.id);toast('🎞 Die B-Roll-Short-Karte zu diesem Thema gibt es schon');return;}
-  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(y.frage||'').slice(0,60),hook:'',falsch1:'',falsch2:'',caption:'',produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50),postDatum:y.postDatumShort||''};
+  if(ex){
+    const fill=!(ex.caption||'').trim()&&(y.caption||'').trim();
+    if(fill){ex.caption=y.caption;save();}
+    go('shorts');openModal('shorts',ex.id);toast(fill?'🎞 Caption vom Yapping-Thema nachgetragen':'🎞 Die B-Roll-Short-Karte zu diesem Thema gibt es schon');return;
+  }
+  const item={id:uid(),createdAt:Date.now(),status:"Idee",titel:(y.frage||'').slice(0,60),hook:'',falsch1:'',falsch2:'',caption:y.caption||'',produktbereich:y.produktbereich&&y.produktbereich!=='—'?y.produktbereich:'Gelände-Schlüssel',cta:y.cta||'',gruppe:(y.frage||'').slice(0,50),postDatum:y.postDatumShort||''};
   DB.shorts.push(item);save();renderTabs();go('shorts');openModal('shorts',item.id);
   toast('🎞 B-Roll Short zum Yapping-Thema angelegt');
 }
@@ -1382,8 +1385,10 @@ function renderSusanneBoard(){
   const monday=startOfWeek(susanneWeek);
   const days=[...Array(7)].map((_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);return d;});
   const names=['Mo','Di','Mi','Do','Fr','Sa','So'];
-  const list=(DB.yapping||[]).filter(y=>y.fuerSusanne).map(y=>({col:'yapping',id:y.id,susanneDatum:y.susanneDatum,frage:y.frage,short:yapShort(y)}))
-    .concat((DB.shorts||[]).filter(s=>s.susanneDatum&&!(shortYap(s)&&shortYap(s).fuerSusanne)).map(s=>({col:'shorts',id:s.id,susanneDatum:s.susanneDatum,frage:s.titel,short:s})));
+  // Hat die Short-Karte einen eigenen Susanne-Tag, steht sie dort als eigener Eintrag (nicht am Tag des Yapping-Themas)
+  const ownDay=(s,y)=>s&&s.susanneDatum&&s.susanneDatum!==y.susanneDatum;
+  const list=(DB.yapping||[]).filter(y=>y.fuerSusanne).map(y=>{const s=yapShort(y);return {col:'yapping',id:y.id,susanneDatum:y.susanneDatum,frage:y.frage,short:ownDay(s,y)?null:s,noShort:ownDay(s,y)};})
+    .concat((DB.shorts||[]).filter(s=>{if(!s.susanneDatum)return false;const y=shortYap(s);return !(y&&y.fuerSusanne&&!ownDay(s,y));}).map(s=>({col:'shorts',id:s.id,susanneDatum:s.susanneDatum,frage:s.titel,short:s})));
   const total=list.length;
   const byDate={};list.forEach(y=>{const k=y.susanneDatum||localISO(new Date());(byDate[k]=byDate[k]||[]).push(y);});
   const todayKey=localISO(new Date());
@@ -1392,9 +1397,9 @@ function renderSusanneBoard(){
     return `<div class="pl-day ${key===todayKey?'today':''}"><div class="pl-dayhead">${names[i]} <span>${d.getDate()}.${d.getMonth()+1}.</span></div>${items.map(y=>{
       const t=y.frage||'(ohne Titel)';
       const s=y.short,ready=s&&(s.hook||'').trim();
-      const txt=ready?`<div class="su-short"><b>${escHTML(s.hook.trim())}</b>${[s.falsch1,s.falsch2].filter(x=>x&&x.trim()).map(x=>`<div>❌ ${escHTML(x.trim())}</div>`).join('')}</div>`:'';
+      const txt=ready?`<div class="su-short">${escHTML(s.hook.trim())}</div>`:'';
       const open=s?`openModal('shorts','${s.id}')`:`openModal('yapping','${y.id}')`;
-      return `<div class="pl-item su"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1,'${y.col}')">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1,'${y.col}')">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}','${y.col}')">✕</button></div><div class="su-txt" onclick="${open}" title="${escAttr(t)}">🎞 ${escHTML(t.slice(0,56))}${txt}</div>${y.col==='yapping'?`<button class="su-copy" title="Yapping-Skript für den Teleprompter kopieren" onclick="event.stopPropagation();copyYappingScript('${y.id}')">📜 Skript</button>`:''}${ready?`<button class="su-copy" onclick="event.stopPropagation();copyShort('${s.id}')">📋 Short-Texte</button>`:(y.susanneDatum||'')>=SHORTS_AB?`<span class="badge b-status">Short-Texte fehlen</span>`:''}</div>`;
+      return `<div class="pl-item su"><div class="su-move"><button title="Tag zurück" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',-1,'${y.col}')">‹</button><button title="Tag vor" onclick="event.stopPropagation();shiftSusanneDay('${y.id}',1,'${y.col}')">›</button><button title="Aus Übersicht nehmen" onclick="event.stopPropagation();removeFromSusanne('${y.id}','${y.col}')">✕</button></div><div class="su-txt" onclick="${open}" title="${escAttr(t)}">${y.col==='yapping'&&!ready?'🎙️':'🎞'} ${escHTML(t.slice(0,56))}${txt}</div>${y.col==='yapping'?`<button class="su-copy" title="Yapping-Skript für den Teleprompter kopieren" onclick="event.stopPropagation();copyYappingScript('${y.id}')">📜 Skript</button>`:''}${ready?`<button class="su-copy" onclick="event.stopPropagation();copyShort('${s.id}')">📋 Short-Texte</button>`:(!y.noShort&&(y.susanneDatum||'')>=SHORTS_AB)?`<span class="badge b-status" style="cursor:pointer" title="B-Roll-Short-Karte öffnen und Texte eintragen" onclick="event.stopPropagation();${y.col==='yapping'?`makeShortFromYapping('${y.id}')`:`go('shorts');openModal('shorts','${y.id}')`}">Short-Texte fehlen ✎</span>`:''}</div>`;
     }).join('')||'<div class="pl-empty">—</div>'}</div>`;
   }).join('');
   box.innerHTML=`

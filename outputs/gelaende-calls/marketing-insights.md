@@ -19,6 +19,15 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Fragerunde 07.10.2026 (nur Corinna) und Call 09.10.2026 (5. Feedbackrunde):**
+
+- **Corinna: von 2 auf 7 in fünf Wochen.** „Es geht jetzt im Gelände überraschend gut." Ihre Selbsteinschätzung stieg von 2 auf 7, „es ist relativ schnell gegangen, ich hatte ein paar Aha-Erlebnisse". Ihre Erklärung: „Ich war viel, viel zu schnell für ihn, viel zu ungeduldig, viel zu ungenau, alle Hilfen miteinander." Seit sie das geändert hat, wird Calvados „mega ruhig, auch wenn ich reite". → Stärkster messbarer Fortschritt bisher, noch dazu bei einer Kundin mit Angst im Sattel nach Rücken-OP. Vorher/Nachher mit Zahl, mit ihrem Ok ein Testimonial fürs Gelände-Programm. ⚠️ Die Skalenfrage selbst fehlt im Transkript, vor einer Veröffentlichung kurz mit Corinna klären, worauf sich 2 und 7 beziehen.
+- **„Ich habe mein Pferd verrückt gemacht mit zu viel Hilfen aufs Mal und mit meiner Ungeduld"** (Corinna) und **„Jetzt ist er wieder in seiner Mitte."** → Ehrliche Selbsterkenntnis einer Reiterin mit 50 Jahren Erfahrung; zeigt, dass der Hebel beim Menschen liegt (dritte Kundin nach Susanne und Caroline mit dieser Einsicht in eigenen Worten).
+- **„Wenn ich Verbindung zum Pferd habe im Gelände und er sich an mir orientiert, dass er quasi fragt ..."** (Corinna), Anika: „Das ist der Schlüssel." → Kundin formuliert das Verlasspferd-Prinzip selbst.
+- **Sabine und die Ernte:** Silageballen in Sicht, dann drei Trecker auf einem Weg mit 50 cm Durchgang. „Aber sie ist nicht abgehauen." Vor fünf Wochen war genau das ihr Hauptproblem. Dazu der Trecker-Fahrer: „Die Dicken, die hab ich ja so lieb." → Starke, bildhafte Erfolgsgeschichte; passt direkt zur Treckerstrategie aus dem Webinar.
+- **Sabine bricht bewusst ab:** Floras Puls stieg am Silageballen von 119 auf 124, sie drehte um, statt sie starren zu lassen. → Beleg für „Umdrehen ist eine Entscheidung, kein Scheitern" (Fortsetzung des Mythos-Themas vom 02.10.).
+- **Caroline:** Abendspaziergang mit Traktor gemeistert; als Fakur aufgeregt wurde, reichte ihre Präsenz und „er war dann wieder da".
+
 **Call 02.10.2026 (4. Feedbackrunde):**
 
 - **Carolines erster Spaziergang in neues Terrain** (vier Wochen nach Programmstart, drei Wochen nach dem Stallumzug): „Er ist da so flüssig mitgegangen. Ich war da total überrascht." Ihr eigener Schluss: Es lag an ihrer Energie an dem Tag („Neugierde, wir probieren das jetzt mal"). → Vorher/Nachher für ein Pferd, das allein immer stehen blieb.
@@ -66,6 +75,13 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 - **Garantie als Kaufhürde** (Corina): „Wenn ich nach 14 Tagen keine Verbesserung im Gelände merke, bekomme ich wirklich ohne weiteres das komplette Geld zurück?" → Garantie gehört klar und früh in Pitch + Verkaufsmails.
 - **„Angst vor dem Winter"** (Simone mit Tari, Losreißer, Unterstützungsband angerissen): Die Jahreszeit (dunkel, glatt, weniger Bewegung) ist ein echter Angst-Verstärker. → Saison-Winkel für Oktober–Dezember.
 
+**Fragerunde 07.10.2026 und Call 09.10.2026:**
+
+- **Kopfkino durch ein Hilfsmittel** (Caroline zum Anti-Fress-Netz): „Der reißt sich jetzt los und dann kann er ja nicht fressen und dann verhungert er oder kriegt die Panik und läuft auf die Straße. Mehr Kopfkino als irgendwie jemals zuvor." → Wortwörtliches Beispiel für eine Katastrophen-Gedankenkette, sehr gut als Einstieg in Phase-1-Content. Anikas Antwort: Löschanker, dann bestellen.
+- **Zu viele Methoden im Kopf** (Corinna): 50 Jahre Reiten, „ein Riesenhaufen" an Wissen und Reitweisen, „das hat sich teilweise widersprochen, ich musste da mal aufräumen". → Einwand-Variante „Ich habe schon alles probiert"; Antwort fürs Marketing: ein klarer roter Faden statt noch einer Methode.
+- **„Mal will er einfach nicht"** (Corinna): Unsicherheit, ob das Pferd überfordert ist oder nur keine Lust hat. → Wiederkehrende Frage (auch bei Sabine/Flora), Kandidat für eine eigene Lektion oder ein Reel „Überfordert oder Schweinehund?".
+- **Schlechte Vorerfahrung mit Tierkommunikation** (Corinna): hatte woanders ein Tiergespräch, „da kam nicht viel raus". → Einwand fürs Energetik-Marketing, nicht fürs Gelände.
+
 **Call 02.10.2026 (4. Feedbackrunde):**
 
 - **„Hin und her gehen zeigt dem Pferd, dass ich nicht führen kann"** (Sabine, irgendwo gelesen): Dieser Glaubenssatz hat sie monatelang davon abgehalten, Stichwege zu gehen oder umzudrehen. Anika: Diese Erfahrung hat sie nie gemacht, es gibt kein Richtig oder Falsch. → **Mythos-Content** („Umdrehen ist kein Führungsversagen") und zugleich ein Einwand gegen Annäherung/Rückzug, den das Webinar vorwegnehmen kann.
@@ -112,6 +128,16 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Fragerunde 07.10.2026 und Call 09.10.2026:**
+
+- **Silageballen als „Endgegner"** (Sabine, zweites Jahr in Folge): liegen nur einmal im Jahr für einen Tag, lassen sich also nicht üben. → Saisonaler Content im Spätsommer/Herbst („Was tun bei Schreckobjekten, die man nicht trainieren kann?").
+- **Ernte-Verkehr auf engen Wegen** (Sabine): mehrere Trecker hintereinander, kein Ausweichen möglich. → Bestätigt die Treckerstrategie als Kern-Content; Zusatz-Winkel „wenn du nicht ausweichen kannst".
+- **Freiarbeit auf Distanz: Pferd fühlt sich „lost"** (Corinna): Nah am Menschen entspannt, weiter draußen startet es durch. Anikas Erklärung über die abreißende Verbindung. → Reel-Idee, dazu Cross-sell-Signal Freiarbeit/Traumteam (Anne hat den Freiarbeitskurs dazugebucht, Miriam fragte am 02.10. nach Traumteam).
+- **Seitengänge und Hilfengebung an der Hand** (Corinna): Anika verwies auf Handarbeitskurs und ihr YouTube-Übersichtsvideo. → Cross-sell-Signal Handarbeitskurs.
+- **Sitz und Körpergefühl der Reiterin** (Corinna: Becken, „ich störe ihn mit jeder Mini-Bewegung"): Yoga/Pilates-Empfehlung. → Möglicher Bonus-Baustein.
+- **Präsenz des Menschen** (Caroline): Pferd wird unruhig, sobald sie gedanklich abschweift. → Zweiter Beleg nach dem 02.10. („innere Haltung"), gutes Reel-Thema.
+- **Führungspersönlichkeit definieren** (Caroline): Die Workbook-Frage „Was macht Führungspersönlichkeit für mich aus?" war für sie „gar nicht so leicht". → Hinweis für Phase 1: evtl. Beispiele oder Hilfsfragen ergänzen.
 
 **Call 02.10.2026 (4. Feedbackrunde):**
 
