@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Infopaket Online-Unterricht</title>
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --wein: #6B1A24;
+    --gold: #A8874E;
+    --sand: #E9DFCF;
+    --creme: #FAF6F0;
+    --text: #3E3632;
+    --grau: #7A6E66;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--creme); color: var(--text);
+         font-family: "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.5; }
+  .seite { width: 210mm; height: 297mm; padding: 16mm 20mm 14mm; position: relative;
+           page-break-after: always; overflow: hidden; background: var(--creme); }
+  .seite:last-child { page-break-after: auto; }
+  .seite::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5mm; background: var(--wein); }
+  .fuss { position: absolute; bottom: 8mm; left: 20mm; right: 20mm; text-align: center; letter-spacing: .03em !important;
+          font-size: 8pt; color: var(--grau); letter-spacing: .08em; text-transform: uppercase;
+          border-top: 1px solid var(--sand); padding-top: 3mm; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; color: var(--wein); font-weight: bold; }
+  h1 { font-size: 22pt; margin: 1mm 0 1mm; text-align: center; letter-spacing: .02em; }
+  h2 { font-size: 15pt; margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 2px solid var(--gold);
+       letter-spacing: .04em; text-transform: uppercase; }
+  h3 { font-size: 11.5pt; margin: 0 0 1mm; }
+  p { margin: 0 0 2.5mm; }
+  img { mix-blend-mode: multiply; }
+  .logo { display: block; width: 36mm; margin: 0 auto; }
+  .intro { text-align: center; max-width: 150mm; margin: 0 auto 5mm; font-size: 10.5pt; }
+  .unter { text-align: center; color: var(--gold); font-family: Georgia, serif; font-style: italic;
+           font-size: 12pt; margin-bottom: 3mm; }
+  .raster { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+  .karte { background: #fff; border: 1px solid var(--sand); border-left: 4px solid var(--gold);
+           border-radius: 2mm; padding: 2.8mm 4mm; font-size: 10pt; line-height: 1.42; }
+  .karte p { margin: 0; }
+  .karte.breit { grid-column: 1 / -1; }
+  .kopf { display: flex; align-items: center; gap: 6mm; margin-bottom: 4mm; }
+  .kopf img { width: 22mm; }
+  .kopf h2 { flex: 1; margin: 0; }
+  .block { margin-bottom: 5mm; }
+  .regel { display: grid; grid-template-columns: 52mm 1fr; gap: 4mm; background: #fff;
+           border: 1px solid var(--sand); border-radius: 2mm; padding: 3mm 5mm; margin-bottom: 2.5mm; }
+  .regel .frist { font-family: Georgia, serif; font-weight: bold; color: var(--wein); font-size: 12pt; line-height: 1.25; }
+  .partner { background: #fff; border: 1px solid var(--sand); border-radius: 2mm; padding: 3mm 4mm; font-size: 9.5pt; }
+  .code { display: inline-block; background: var(--wein); color: #fff; font-weight: bold;
+          padding: .6mm 3mm; border-radius: 1mm; letter-spacing: .03em; }
+  .link { color: var(--grau); font-size: 9pt; }
+  .frage { margin-bottom: 4.2mm; }
+  .frage h3 { font-size: 10.5pt; }
+  .linie { border-bottom: 1px solid #CDBFAA; height: 7mm; }
+  .hinweis { font-size: 9.5pt; color: var(--grau); }
+  .check { display: grid; grid-template-columns: 7mm 1fr; gap: 2mm; margin-bottom: 3.5mm; }
+  .box { width: 5mm; height: 5mm; border: 1.5px solid var(--wein); border-radius: .8mm; margin-top: .8mm; }
+  .feld { display: grid; grid-template-columns: 30mm 1fr; align-items: end; margin-bottom: 5mm; }
+  .feld .linie { height: 6mm; }
+  .zwischen { font-family: Georgia, serif; color: var(--wein); font-weight: bold; margin: 5mm 0 3mm; }
+  .skala { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin-top: 1.5mm; }
+  .stufe { display: grid; grid-template-columns: 7mm 1fr; align-items: start; background: #fff;
+           border: 1px solid var(--sand); border-radius: 2mm; padding: 2.5mm 3mm; font-size: 9.5pt; }
+  .stufe b { color: var(--wein); font-family: Georgia, serif; font-size: 12pt; margin-right: 1mm; }
+</style>
+</head>
+<body>
+
+<!-- SEITE 1 -->
+<section class="seite">
+  <img class="logo" src="logo.png" alt="Anikas Pferdeakademie">
+  <h1>Willkommen im Online-Unterricht bei<br>Anika’s Pferdeakademie</h1>
+  <div class="unter">Dein Infopaket für den Start</div>
+  <p class="intro">Schön, dass du da bist! In diesem Infopaket findest du alles, was zu deinem Unterricht dazugehört. So weißt du von Anfang an, was du nutzen kannst und wie wir Termine, Kündigung und Bezahlung organisieren.</p>
+
+  <h2>Das ist in deinem Unterrichtspaket enthalten</h2>
+  <div class="raster">
+    <div class="karte">
+      <h3>Deine Trainingsstunden</h3>
+      <p>Live per Videoanruf über Zoom oder WhatsApp, direkt bei dir im Stall. Mit festem Regeltermin, wöchentlich, alle zwei Wochen oder einmal im Monat.</p>
+    </div>
+    <div class="karte">
+      <h3>Auch vor Ort möglich</h3>
+      <p>Wenn du in der Nähe wohnst, kannst du jede Einheit auch bei mir vor Ort auf einem meiner Lehrpferde nutzen, zum gleichen Preis von 85&nbsp;€.</p>
+    </div>
+    <div class="karte">
+      <h3>Deine Stunde als Video</h3>
+      <p>Treffen wir uns per Zoom, zeichne ich die Stunde auf und du bekommst die Aufnahme. So kannst du in Ruhe nachschauen, was wir erarbeitet haben.</p>
+    </div>
+    <div class="karte">
+      <h3>Fragen-Flatrate per WhatsApp</h3>
+      <p>An Werktagen kannst du mir jederzeit Fragen stellen oder kurze Videoausschnitte schicken.</p>
+    </div>
+    <div class="karte">
+      <h3>Monatliche Online-Fragerunde</h3>
+      <p>Einmal im Monat treffen wir uns mit meinen Online-Schülerinnen in Zoom. Du kannst Fragen stellen oder Trainingsvideos einreichen, die wir gemeinsam analysieren. Dazu hast du Zugriff auf alle Aufzeichnungen der letzten zwei Jahre.</p>
+    </div>
+    <div class="karte">
+      <h3>E-Book „Sitzhilfen für feines Reiten“</h3>
+      <p>Das bekommst du direkt zum Start.</p>
+    </div>
+    <div class="karte">
+      <h3>Dein Zielkompass</h3>
+      <p>Damit halten wir zu Beginn fest, wo du mit deinem Pferd hinmöchtest. Für die nächsten 8 Wochen legst du ein Minimal- und ein Maximalziel fest. Du findest ihn ab Seite 4.</p>
+    </div>
+    <div class="karte">
+      <h3>Rabattcodes</h3>
+      <p>Bei meinen Kooperationspartnern sparst du beim Einkauf. Die Codes findest du auf Seite 3.</p>
+    </div>
+  </div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+<!-- SEITE 2 -->
+<section class="seite">
+  <div class="kopf"><h2>So organisieren wir deine Termine</h2><img src="logo.png" alt=""></div>
+  <div class="block">
+    <h3>Dein fester Unterrichtsplatz</h3>
+    <p>Mit deiner Anmeldung reserviere ich dir einen meiner wenigen Unterrichtsplätze. Wenn du ihn nicht mehr brauchst, kannst du ihn jeden Monat zum Monatsende kündigen.</p>
+    <h3 style="margin-top:3.5mm">Rhythmus und Regeltermin</h3>
+    <p>Zu Beginn sprechen wir ab, in welchem Rhythmus wir trainieren, zum Beispiel wöchentlich, alle zwei Wochen oder einmal im Monat. Dazu vereinbaren wir einen festen Regeltermin, am besten unter der Woche tagsüber. Ausweichtermine können nach Absprache auch abends oder am Wochenende stattfinden.</p>
+    <h3 style="margin-top:3.5mm">So läuft eine Online-Stunde ab</h3>
+    <p>Du entscheidest, wie wir uns treffen:</p>
+    <div class="regel">
+      <div class="frist">Per Zoom mit Aufnahme</div>
+      <div>Ich schicke dir einen Link, über den du mit der Zoom-App beitrittst. Ich zeichne die Stunde auf und stelle dir die Aufnahme danach zur Verfügung.</div>
+    </div>
+    <div class="regel">
+      <div class="frist">Per WhatsApp</div>
+      <div>Ich rufe dich per Videoanruf an und du nimmst einfach ab. Hier gibt es keine Aufnahme.</div>
+    </div>
+    <p>In beiden Fällen stellst du dein Handy im Querformat so in eine Ecke, dass ich dich und dein Pferd gut sehe, zum Beispiel auf dem Zirkel. Über dein Headset hörst du mich die ganze Zeit. Du brauchst nur dein Handy, ein Headset und eine stabile Internetverbindung. Ein Pivo, der dir automatisch folgt, ist schön, aber kein Muss.</p>
+    <p>Plane für eine Einheit bis zu 45 Minuten ein. Dein Pferd sollte zum Start geputzt und startbereit sein und dein Handy aufgeladen, damit wir die Zeit voll fürs Training nutzen können.</p>
+    <h3 style="margin-top:3.5mm">Wenn du absagen musst</h3>
+    <p>Sag mir bitte so früh wie möglich per WhatsApp an <b>0172 4510344</b> Bescheid.</p>
+    <div class="regel">
+      <div class="frist">Mehr als 24 Stunden vorher</div>
+      <div>Du kannst den Termin innerhalb eines Monats nachholen. Danach verfällt er.</div>
+    </div>
+    <div class="regel">
+      <div class="frist">Weniger als 24 Stunden vorher</div>
+      <div>Es fällt die Hälfte des Preises für die Einheit an, egal aus welchem Grund, also auch bei schlechtem Wetter oder Krankheit. Diese Einsatzpauschale brauche ich, damit ich dir deinen Platz verlässlich und verbindlich freihalten kann.</div>
+    </div>
+    <h3 style="margin-top:3.5mm">Urlaub und längere Pausen</h3>
+    <p>Wenn du länger weg bist, sprechen wir uns ab. Dann kannst du pausieren oder die Termine nachholen.</p>
+  </div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+<!-- SEITE 3 -->
+<section class="seite">
+  <div class="kopf"><h2>Preis und Bezahlung</h2><img src="logo.png" alt=""></div>
+  <div class="block">
+    <div class="regel">
+      <div class="frist">85&nbsp;€ pro Einheit</div>
+      <div>Das gilt für den Online-Unterricht genauso wie für Unterricht vor Ort auf einem meiner Lehrpferde.</div>
+    </div>
+    <div class="regel">
+      <div class="frist">Unterricht vor Ort</div>
+      <div>Wenn du in der Nähe wohnst, findet der Unterricht auf meinen Lehrpferden in Anika’s Pferdeakademie statt, Osterndorfer Straße 10, 27616 Beverstedt.</div>
+    </div>
+  </div>
+
+  <h3>So bezahlst du</h3>
+  <div class="block">
+    <div class="regel">
+      <div class="frist">Per Lastschrift</div>
+      <div>Das wählen die meisten. Zum Monatsanfang zähle ich, wie viele Termine für dich in diesem Monat geplant sind, und ziehe den Betrag von deinem Konto ein. Dafür füllst du einmalig das beiliegende SEPA-Mandat aus.</div>
+    </div>
+    <div class="regel">
+      <div class="frist">Bar vor Ort</div>
+      <div>Wenn du zu mir vor Ort kommst, kannst du auch direkt beim Unterricht bar bezahlen. Bitte bring den Betrag dann passend mit.</div>
+    </div>
+  </div>
+
+  <h3>Reithelm</h3>
+  <p style="margin-bottom:5mm">Erwachsene entscheiden selbst, ob sie mit Helm reiten. Für alle unter 18 Jahren gilt Helmpflicht.</p>
+
+  <h2>Deine Rabattcodes</h2>
+  <div class="raster">
+  <div class="partner">
+    <h3>Tajara Horsewear</h3>
+    <p>Zubehör aus Biothane wie Kappzäume, Zügel und vieles mehr.</p>
+    <p>Mit dem Code <span class="code">Anikas Pferdeakademie</span> sparst du 10 %.</p>
+    <p class="link">tajara-horsewear.de</p>
+  </div>
+  <div class="partner">
+    <h3>Horse Vitality Company</h3>
+    <p>Pferdefutter und Mineralfutter.</p>
+    <p>Mit dem Code <span class="code">AnikaW</span> sparst du 5 %.</p>
+    <p class="link">horse-vitality-company.com/?ref=AnikaW</p>
+  </div>
+  </div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+<!-- SEITE 4: ZIELKOMPASS START -->
+<section class="seite">
+  <div class="kopf"><h2>Dein Zielkompass</h2><img src="logo.png" alt=""></div>
+  <p class="hinweis">Nimm dir vor unserer ersten Stunde ein paar Minuten Zeit dafür. Es gibt keine falschen Antworten. Je ehrlicher du schreibst, desto besser kann ich den Unterricht auf euch abstimmen.</p>
+  <div class="feld"><span>Reiterin:</span><div class="linie"></div></div>
+  <div class="feld"><span>Pferd:</span><div class="linie"></div></div>
+  <div class="feld"><span>Datum:</span><div class="linie"></div></div>
+  <div class="zwischen">Wo steht ihr gerade?</div>
+  <div class="frage"><h3>Was klappt mit deinem Pferd schon richtig gut?</h3><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Wo hakt es im Moment am meisten?</h3><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Wie viel Zeit hast du pro Woche für das Training mit deinem Pferd?</h3><div class="linie"></div></div>
+  <div class="frage"><h3>Gibt es gesundheitliche Themen oder Ängste bei dir oder deinem Pferd, die ich kennen sollte?</h3><div class="linie"></div><div class="linie"></div></div>
+  <div class="karte breit" style="margin-top:3mm">
+    <h3>So funktioniert der Zielkompass</h3>
+    <p>Wir schauen immer auf die nächsten <b>8 Wochen</b>. Dafür legst du zwei Ziele fest. Dein <b>Minimalziel</b> ist das, was du in dieser Zeit auf jeden Fall schaffen möchtest, auch wenn mal etwas dazwischenkommt. Dein <b>Maximalziel</b> ist das, was drin ist, wenn alles richtig gut läuft. Formuliere beide so konkret, dass wir nach 8 Wochen klar sagen können, ob du es erreicht hast.</p>
+  </div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+<!-- SEITE 5: MINIMALZIEL -->
+<section class="seite">
+  <div class="kopf"><h2>Dein Minimalziel</h2><img src="logo.png" alt=""></div>
+  <p class="hinweis">Das möchtest du in den nächsten 8 Wochen auf jeden Fall erreichen.</p>
+  <div class="frage"><h3>Was möchte ich in den nächsten 8 Wochen mindestens erreichen?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Priorität hat dieses Ziel für dich?</h3>
+    <div class="skala">
+      <div class="stufe"><div class="box"></div><div><b>1</b> Wäre schön, wenn es klappt</div></div>
+      <div class="stufe"><div class="box"></div><div><b>2</b> Ist mir wichtig</div></div>
+      <div class="stufe"><div class="box"></div><div><b>3</b> Hat für mich höchste Priorität</div></div>
+    </div>
+  </div>
+  <div class="frage"><h3>Warum ist mir dieses Ziel wichtig?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Was muss ich als Reiterin dafür können?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Was muss mein Pferd dafür können?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Übungen bereiten uns darauf vor?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Meilensteine gibt es auf dem Weg dorthin?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+<!-- SEITE 6: MAXIMALZIEL -->
+<section class="seite">
+  <div class="kopf"><h2>Dein Maximalziel</h2><img src="logo.png" alt=""></div>
+  <p class="hinweis">Das ist in den nächsten 8 Wochen drin, wenn alles richtig gut läuft.</p>
+  <div class="frage"><h3>Was möchte ich in den nächsten 8 Wochen im besten Fall erreichen?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Priorität hat dieses Ziel für dich?</h3>
+    <div class="skala">
+      <div class="stufe"><div class="box"></div><div><b>1</b> Wäre schön, wenn es klappt</div></div>
+      <div class="stufe"><div class="box"></div><div><b>2</b> Ist mir wichtig</div></div>
+      <div class="stufe"><div class="box"></div><div><b>3</b> Hat für mich höchste Priorität</div></div>
+    </div>
+  </div>
+  <div class="frage"><h3>Warum ist mir dieses Ziel wichtig?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Was muss ich als Reiterin dafür können?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Was muss mein Pferd dafür können?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Übungen bereiten uns darauf vor?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="frage"><h3>Welche Meilensteine gibt es auf dem Weg dorthin?</h3><div class="linie"></div><div class="linie"></div><div class="linie"></div></div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+
+<!-- SEITE 7: EINVERSTÄNDNIS -->
+<section class="seite">
+  <div class="kopf"><h2>Anmeldung und Einverständnis</h2><img src="logo.png" alt=""></div>
+  <div class="feld"><span>Name:</span><div class="linie"></div></div>
+  <div class="feld"><span>Pferd:</span><div class="linie"></div></div>
+
+  <div class="zwischen">Aufzeichnung im Unterricht</div>
+  <div class="check"><div class="box"></div><div>Wenn wir uns per Zoom treffen: Ich bin einverstanden, dass Anika Wesse den Online-Unterricht aufzeichnet und mir die Aufnahme danach zur Verfügung stellt. Das gilt auch für Videoaufnahmen beim Unterricht vor Ort.</div></div>
+
+  <div class="zwischen">Freiwillig <span style="font-weight:normal;font-size:9.5pt;color:var(--grau)">(hat keinen Einfluss auf deinen Unterricht)</span></div>
+  <div class="check"><div class="box"></div><div>Ich bin einverstanden, dass Anika Wesse Ausschnitte aus den Aufnahmen und aus Videos, die ich ihr schicke, für Schulungszwecke nutzt, zum Beispiel in ihren Onlinekursen oder in der Online-Fragerunde.</div></div>
+  <div class="check"><div class="box"></div><div>Ich bin einverstanden, dass Anika Wesse Ausschnitte aus den Aufnahmen und aus Videos, die ich ihr schicke, für Werbezwecke nutzt, zum Beispiel auf Instagram, Facebook, YouTube oder ihrer Website.</div></div>
+
+  <p class="hinweis" style="margin-top:5mm">Ich kann meine Einwilligung jederzeit ganz oder teilweise widerrufen, formlos per WhatsApp oder E-Mail. Was bis dahin veröffentlicht wurde, bleibt rechtmäßig. Auf Wunsch entfernt Anika die Beiträge, soweit ihr das möglich ist.</p>
+
+  <div class="zwischen" style="margin-top:7mm">Deine Anmeldung</div>
+  <div class="check"><div class="box"></div><div>Ich habe die Infos zu Terminen, Absagen und Bezahlung gelesen und bin damit einverstanden. Ich möchte mir verbindlich einen festen Unterrichtsplatz sichern. Mir ist bekannt, dass ich ihn jeden Monat zum Monatsende kündigen kann.</div></div>
+
+  <div style="margin-top:9mm">
+    <div class="feld"><span>Ort, Datum:</span><div class="linie"></div></div>
+    <div class="feld"><span>Unterschrift:</span><div class="linie"></div></div>
+    <p class="hinweis" style="margin-top:6mm">Bei Minderjährigen zusätzlich Unterschrift der Erziehungsberechtigten:</p>
+    <div class="linie" style="margin-top:6mm"></div>
+  </div>
+  <div class="fuss">Anika’s Pferdeakademie · Osterndorfer Straße 10, 27616 Beverstedt · 0172 4510344</div>
+</section>
+
+</body>
+</html>
