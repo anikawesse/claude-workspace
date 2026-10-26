@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Zertifikat Energetik-Programm</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4 landscape; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bordeaux: #691212;
+    --gold: #a08a6a;
+    --gold-hell: #c9b48a;
+    --text: #3d3530;
+    --papier: #fffdf9;
+  }
+
+  html, body { background: #e8e3d8; }
+  body { font-family: 'Montserrat', sans-serif; color: var(--text); }
+
+  .seite {
+    width: 297mm;
+    height: 210mm;
+    margin: 0 auto;
+    background: var(--papier);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Doppelrahmen */
+  .rahmen-aussen {
+    position: absolute; inset: 9mm;
+    border: 1.2mm solid var(--bordeaux);
+  }
+  .rahmen-innen {
+    position: absolute; inset: 12.5mm;
+    border: 0.35mm solid var(--gold);
+  }
+  .ecke {
+    position: absolute; width: 9mm; height: 9mm;
+    border: 0.35mm solid var(--gold);
+    background: var(--papier);
+  }
+  .ecke::after {
+    content: ""; position: absolute; inset: 2.2mm;
+    background: var(--gold-hell); transform: rotate(45deg);
+  }
+  .ecke.ol { top: 8.2mm; left: 8.2mm; }
+  .ecke.or { top: 8.2mm; right: 8.2mm; }
+  .ecke.ul { bottom: 8.2mm; left: 8.2mm; }
+  .ecke.ur { bottom: 8.2mm; right: 8.2mm; }
+
+  .inhalt {
+    position: absolute; inset: 16mm 26mm 15mm;
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center;
+  }
+
+  .logo { width: 33mm; mix-blend-mode: multiply; margin-bottom: 1mm; }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 40pt;
+    letter-spacing: 0.22em;
+    color: var(--bordeaux);
+    text-transform: uppercase;
+    margin-right: -0.22em;
+    line-height: 1.1;
+  }
+
+  .zierlinie {
+    display: flex; align-items: center; gap: 3mm;
+    margin: 2.5mm 0 4mm;
+  }
+  .zierlinie span { display: block; width: 28mm; height: 0.3mm; background: var(--gold); }
+  .zierlinie i {
+    display: block; width: 2.2mm; height: 2.2mm;
+    background: var(--gold); transform: rotate(45deg);
+  }
+
+  .vorspann {
+    font-size: 10pt; letter-spacing: 0.08em;
+    color: var(--gold); text-transform: uppercase;
+  }
+
+  .name {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 50pt;
+    color: var(--bordeaux);
+    line-height: 1.15;
+    margin: 2mm 0 0;
+    padding: 0 12mm 1mm;
+    border-bottom: 0.3mm solid var(--gold-hell);
+    min-width: 140mm;
+  }
+
+  .text {
+    font-size: 10.5pt; line-height: 1.6;
+    margin-top: 5mm;
+  }
+
+  .programm {
+    font-family: 'Playfair Display', serif;
+    font-size: 22pt; font-weight: 500;
+    color: var(--bordeaux);
+    margin-top: 1.5mm;
+  }
+  .untertitel {
+    font-family: 'Playfair Display', serif;
+    font-style: italic; font-size: 12pt;
+    color: var(--text); margin-top: 0.5mm;
+  }
+
+  .inhalte {
+    margin-top: 5mm;
+    font-size: 8.5pt; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--text);
+  }
+  .inhalte b { color: var(--gold); font-weight: 600; margin: 0 2.2mm; }
+  .umfang {
+    font-size: 9pt; margin-top: 2mm; color: #6b615a;
+  }
+
+  .fuss {
+    margin-top: auto;
+    width: 100%;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .feld { width: 70mm; text-align: center; }
+  .feld .wert {
+    font-size: 11pt; min-height: 13mm;
+    display: flex; align-items: flex-end; justify-content: center;
+    padding-bottom: 1.5mm;
+  }
+  .feld .unterschrift {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 24pt; color: var(--text);
+  }
+  .feld .linie { height: 0.3mm; background: var(--text); opacity: 0.6; }
+  .feld .label {
+    font-size: 8pt; letter-spacing: 0.06em;
+    color: #6b615a; margin-top: 1.5mm; line-height: 1.5;
+  }
+
+  .siegel {
+    width: 30mm; height: 30mm; border-radius: 50%;
+    border: 0.6mm solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    margin-bottom: -2mm;
+  }
+  .siegel::before {
+    content: ""; position: absolute; inset: 1.5mm;
+    border-radius: 50%; border: 0.3mm dashed var(--gold-hell);
+  }
+  .siegel div {
+    font-family: 'Playfair Display', serif;
+    font-size: 7.5pt; line-height: 1.35;
+    color: var(--bordeaux); letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .siegel div strong { display: block; font-size: 11pt; letter-spacing: 0.04em; }
+
+  @media print {
+    html, body { background: none; }
+    .seite { margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="seite">
+  <div class="rahmen-aussen"></div>
+  <div class="rahmen-innen"></div>
+  <div class="ecke ol"></div><div class="ecke or"></div>
+  <div class="ecke ul"></div><div class="ecke ur"></div>
+
+  <div class="inhalt">
+    <img class="logo" src="../logo.png" alt="Anika's Pferdeakademie">
+
+    <h1>Zertifikat</h1>
+    <div class="zierlinie"><span></span><i></i><span></span></div>
+
+    <div class="vorspann">Hiermit wird bestätigt, dass</div>
+    <div class="name" id="name">Petra Schröder</div>
+
+    <div class="text">erfolgreich am viermonatigen Ausbildungsprogramm teilgenommen hat</div>
+    <div class="programm">Energetik-Programm</div>
+    <div class="untertitel">Energetische Kommunikation und Behandlung von Pferden</div>
+
+    <div class="inhalte">
+      Kinesiologisches Testen<b>◆</b>Fragetechniken<b>◆</b>Fallleitfäden<b>◆</b>Akupressur<b>◆</b>Energetische Akupunktur
+    </div>
+    <div class="umfang" id="zeitraum">Juni bis Oktober 2026</div>
+
+    <div class="fuss">
+      <div class="feld">
+        <div class="wert" id="datum">26. Oktober 2026</div>
+        <div class="linie"></div>
+        <div class="label">Datum</div>
+      </div>
+
+      <div class="feld">
+        <div class="wert unterschrift">Anika Wesse</div>
+        <div class="linie"></div>
+        <div class="label">Anika Wesse</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Name/Datum/Zeitraum per URL überschreibbar: zertifikat.html?name=Petra%20Schröder&datum=...&zeitraum=...
+  const p = new URLSearchParams(location.search);
+  ['name', 'datum', 'zeitraum'].forEach(k => {
+    if (p.get(k)) document.getElementById(k).textContent = p.get(k);
+  });
+</script>
+</body>
+</html>
