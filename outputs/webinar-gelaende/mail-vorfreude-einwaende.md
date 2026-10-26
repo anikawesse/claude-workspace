@@ -14,7 +14,7 @@
 
 Das ist deine kleine Erinnerung, dass unser Gelände-Webinar **in 2 Stunden startet,** also heute um 19 Uhr.
 
-Klicke einfach auf diesen Link, um **live dabei** zu sein: https://us06web.zoom.us/j/84040111457?pwd=jg6jvXQZDsY6Z2zYv0t5YhR6xcUUOs.1
+Klicke einfach auf diesen Link, um **live dabei** zu sein: https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MOBeSIh6.1
 
 **[COUNTDOWN-TIMER]**
 
@@ -30,4 +30,4 @@ Bis gleich um 19 Uhr.
 
 Deine Anika
 
-**PS:** Hier ist noch einmal dein Link zum Webinar-Raum: https://us06web.zoom.us/j/84040111457?pwd=jg6jvXQZDsY6Z2zYv0t5YhR6xcUUOs.1
+**PS:** Hier ist noch einmal dein Link zum Webinar-Raum: https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MOBeSIh6.1

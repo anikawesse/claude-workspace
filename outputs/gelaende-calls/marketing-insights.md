@@ -19,6 +19,14 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Calls 14.10.2026 (nur Sabine) und 21.10.2026 (Sabine, Caroline, Annes schriftliche Frage):**
+
+- **Anne über das Tiergespräch (schriftlich, von Anika im Call vorgelesen):** Seit dem Gespräch verhalte sich Number 1 „sehr angenehm", sie waren zweimal spazieren, sie reitet auf dem Platz und schenkt ihm beim Putzen mehr Aufmerksamkeit. → Testimonial-Kandidat fürs **Tiergespräch/Energetik**, nicht fürs Gelände (Freigabe anfragen; genauen Wortlaut aus ihrer Nachricht nehmen).
+- **Sabine nach sechs Wochen: „Ich denke schon, dass ich sicherer geworden bin."** Dazu ein konkreter Beleg: Den Stichweg, der vom Boden aus noch aufregend war, ritt sie jetzt, „überhaupt gar kein Thema". Und das Maisfeld (ihr Losreiß-Ort) ging sie an: „Hat super geklappt."
+- **Weiterempfehlung aus dem Programm heraus:** Sabine erzählte einer neuen Einstallerin, deren Stute nicht vom Hof kommt, von sich aus vom Geländekurs. → Mundpropaganda funktioniert; möglicher Anlass für ein kleines Empfehlungsangebot.
+- **Caroline am 21.10.:** Trotz zwei neuer Pferde in der Herde und Böllern konnte sie Fakur immer wieder runterfahren. Anika: „Das ist mega wertvoll." → Belegt die Kernfähigkeit „deeskalieren können" in einer echten Stresswoche.
+- **Fremdlob für die eigene Ruhe** (Sabine): Reitlehrerin und Mitreiterin lobten, mit welcher Ruhe sie ein nervöses Pony reitet. → Zeigt, dass die innere Ruhe auch auf fremde Pferde wirkt.
+
 **Fragerunde 07.10.2026 (nur Corinna) und Call 09.10.2026 (5. Feedbackrunde):**
 
 - **Corinna: von 2 auf 7 in fünf Wochen.** „Es geht jetzt im Gelände überraschend gut." Ihre Selbsteinschätzung stieg von 2 auf 7, „es ist relativ schnell gegangen, ich hatte ein paar Aha-Erlebnisse". Ihre Erklärung: „Ich war viel, viel zu schnell für ihn, viel zu ungeduldig, viel zu ungenau, alle Hilfen miteinander." Seit sie das geändert hat, wird Calvados „mega ruhig, auch wenn ich reite". → Stärkster messbarer Fortschritt bisher, noch dazu bei einer Kundin mit Angst im Sattel nach Rücken-OP. Vorher/Nachher mit Zahl, mit ihrem Ok ein Testimonial fürs Gelände-Programm. ⚠️ Die Skalenfrage selbst fehlt im Transkript, vor einer Veröffentlichung kurz mit Corinna klären, worauf sich 2 und 7 beziehen.
@@ -75,6 +83,13 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 - **Garantie als Kaufhürde** (Corina): „Wenn ich nach 14 Tagen keine Verbesserung im Gelände merke, bekomme ich wirklich ohne weiteres das komplette Geld zurück?" → Garantie gehört klar und früh in Pitch + Verkaufsmails.
 - **„Angst vor dem Winter"** (Simone mit Tari, Losreißer, Unterstützungsband angerissen): Die Jahreszeit (dunkel, glatt, weniger Bewegung) ist ein echter Angst-Verstärker. → Saison-Winkel für Oktober–Dezember.
 
+**Calls 14.10.2026 und 21.10.2026:**
+
+- **Vermeidung beim großen Ziel** (Sabine): „Wenn ich denke, vielleicht sollte ich das Maisfeld nochmal angehen, dann denke ich: Ne, heute eher nicht, doch zu kaputt." → Ehrlicher Einwand gegen das eigene Weiterkommen; passt als „Kennst du das?"-Hook und als Grund für die Begleitung (Accountability durch die Calls).
+- **Losreißen „von jetzt auf gleich"** bleibt die Restunsicherheit, auch wenn die Grundangst weg ist (Sabine). → Kern-Einwand des Gelände-Themas in Kundinnen-Worten.
+- **„Wie bestrafe ich Losreißen?"** (Anne, schriftlich): Wunsch nach einer klaren Reaktion im Ernstfall, inklusive Treten. Anikas Antwort (vermeiden, verbal meckern, nicht eskalieren) und die Gegenbeispiele aus der Runde (Scheuchen hat bei Sabine einmal geholfen, einmal eskaliert; Carolines Pferd suchte nach Druck-Training den Ausgang) → starker Content zum Losreißen, passt zu den „zwei Typen" aus dem Podcast (ich kann nicht vs. ich will nicht).
+- **Teilnahme bricht ein:** Am 14.10. war nur Sabine da, sie startete selbst einen Aufruf in der Gruppe und sagte: „Ich finde es ja auch immer spannend, was die anderen so berichten." → Für die nächste Runde des Programms: Gruppenbindung aktiv einplanen (z.B. feste Paare, Erinnerungen, Kurz-Updates im Chat).
+
 **Fragerunde 07.10.2026 und Call 09.10.2026:**
 
 - **Kopfkino durch ein Hilfsmittel** (Caroline zum Anti-Fress-Netz): „Der reißt sich jetzt los und dann kann er ja nicht fressen und dann verhungert er oder kriegt die Panik und läuft auf die Straße. Mehr Kopfkino als irgendwie jemals zuvor." → Wortwörtliches Beispiel für eine Katastrophen-Gedankenkette, sehr gut als Einstieg in Phase-1-Content. Anikas Antwort: Löschanker, dann bestellen.
@@ -128,6 +143,17 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Calls 14.10.2026 und 21.10.2026:**
+
+- **Gewohnheitstier auf bekannten Wegen** (Sabine: „Sie ist genauso ein Gewohnheitstier wie ich"): Auf bekannten Runden alles fein, auf einem unauffälligen neuen Weg wird das Pferd nervös. Anikas Antwort: erst Gewohntes festigen, dann schrittweise neue Strecken dazunehmen. → Zweites Mal nach dem 02.10. Thema, guter Reel-Stoff.
+- **Pulsgurt als Entscheidungshilfe** (Sabine, rund 350 €): Die Zahl hat sie davon abgehalten, „stell dich nicht so an" zu denken und weiterzugehen. Anika nimmt ihn in die Tipp-Sektion auf. → Gerade bei introvertierten Pferden ein starkes Content-Thema („Sieht man deinem Pferd den Stress nicht an?").
+- **Herdenwechsel und neue Pferde als Stress-Trigger** (Caroline): Zwei neue Pferde in der Herde reichen, damit ein vorher entspanntes Pferd draußen wieder wiehert und angespannt ist. → Fünfte Kundin mit Stall- oder Herdenwechsel-Thema; Content „Warum dein Pferd plötzlich wieder schwierig ist".
+- **Pferdebegegnungen schlimmer als Trecker** (Caroline): Sie selbst bleibt bei Traktoren ruhiger als bei fremden Pferden. → Eigenes Begegnungs-Thema neben der Treckerstrategie.
+- **Akupressur unterwegs?** (Sabine): Nur vorher in Ruhe wirklich wirksam, unterwegs höchstens der Yin-Tang-Punkt. → kleine FAQ.
+- **Freiarbeit als Gegenteil von Losreißen** (Anika): „Was ist das Gegenteil von Losreißen? Mein Pferd läuft mir frei hinterher." → Starke Brücke zum Freiarbeits- und Traumteam-Angebot; Sabine will das freie Zirkeln angehen.
+- **Tempokontrolle im Galopp auf engen Wegen** (Sabine, jetzt 5× Thema): Abwenden geht auf schmalen Wegen nicht. → Kurs-Lücke bleibt offen.
+- **Programmdauer:** Anika überlegt im Call laut, das Programm von 8 auf 12 Wochen zu verlängern. → Relevant für die nächste Salespage.
 
 **Fragerunde 07.10.2026 und Call 09.10.2026:**
 

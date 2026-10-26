@@ -14,7 +14,7 @@
 
 Dein Gelände-Webinar startet gleich um **19 Uhr.**
 
-Hier ist dein Link zum Webinar-Raum, falls du ihn verlegt hast: https://us06web.zoom.us/j/84040111457?pwd=jg6jvXQZDsY6Z2zYv0t5YhR6xcUUOs.1
+Hier ist dein Link zum Webinar-Raum, falls du ihn verlegt hast: https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MOBeSIh6.1
 
 **[FOTO: Zoom-Raum oder Banner mit deinem Foto + „Gelände-Webinar"]**
 
@@ -30,7 +30,7 @@ Sei live dabei, damit du das hier nicht verpasst:
 
 Und am Ende schenke ich dir meinen **Koffer mit 27 Notfallstrategien.** Aber nur, wenn du live bis zum Schluss dabei bist.
 
-Hier ist dein Link zum Webinar-Raum: https://us06web.zoom.us/j/84040111457?pwd=jg6jvXQZDsY6Z2zYv0t5YhR6xcUUOs.1
+Hier ist dein Link zum Webinar-Raum: https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MOBeSIh6.1
 
 Bis gleich!
 

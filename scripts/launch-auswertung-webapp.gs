@@ -158,7 +158,7 @@ function doPost(e) {
 function baueLaunchSpalte(blatt, kopfZeile, zielSpalte, launch, lastRow, gesperrt) {
   // Kopf setzen (fett, wie B)
   const kopfZelle = blatt.getRange(kopfZeile + 1, zielSpalte + 1);
-  kopfZelle.setValue(launch);
+  kopfZelle.setNumberFormat('@').setValue(launch);  // als Text, sonst wird "Okt 2026" zum Datum
   const bKopf = blatt.getRange(kopfZeile + 1, 2);
   kopfZelle.setFontWeight(bKopf.getFontWeight());
   kopfZelle.setBackground(bKopf.getBackground());
