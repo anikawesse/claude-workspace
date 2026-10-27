@@ -854,7 +854,25 @@
       "Bash(grep -noiE \"<h1[^>]*>.*|12 Wochen|vom Hof|losreiß|entspannt.{0,40}spazier|Schluss damit|<p class=\\\\\"?sub\" outputs/webinar-gelaende/optin-organisch.html)",
       "Bash(powershell -NoProfile -ExecutionPolicy Bypass -Command '$c = Get-Content -Path '\\\\''outputs\\\\webinar-gelaende\\\\optin-organisch.html'\\\\'' -Raw -Encoding UTF8; Set-Clipboard -Value $c; Write-Host \\('\\\\''In Zwischenablage: '\\\\'' + $c.Length + '\\\\'' Zeichen'\\\\''\\)')",
       "Bash(start \"\" \"outputs/webinar-gelaende/optin-organisch.html\")",
-      "Bash(grep -noE \"hero-mockup.{0,220}\" outputs/webinar-gelaende/optin-organisch.html)"
+      "Bash(grep -noE \"hero-mockup.{0,220}\" outputs/webinar-gelaende/optin-organisch.html)",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; [System.Windows.Forms.Clipboard]::SetText\\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\) 2>$null; Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.Clipboard]::SetText\\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); \"Zeichen in Zwischenablage: \" + \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\).Length)",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; Set-Clipboard -Value \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); \"ok, Zeichen: \" + \\(Get-Clipboard -Raw\\).Length)",
+      "Bash(echo \"exit:$?\")",
+      "Bash(echo \"e1:$?\")",
+      "Bash(echo \"e2:$?\")",
+      "Bash(git commit -m 'Gelände-Salespage: neues Losreiß-Versprechen, Preis 999->749, Wert-Tabelle 3.476, Freiarbeitskurs-Bonus, Phasen wie im Deck + Master-Modul, VIP/Wasserkurs raus, Garantie neu *)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\")",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; Set-Clipboard -Value \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); Start-Process $p; \"Zwischenablage aktualisiert: \" + \\(Get-Clipboard -Raw\\).Length + \" Zeichen\")",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\salespage-programm.html\"; Set-Clipboard -Value \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); \"Zwischenablage: \" + \\(Get-Clipboard -Raw\\).Length + \" Zeichen\")",
+      "Bash(git commit -m 'Gelände-Salespage: Losreiß-Storys \\(Einstieg + Zukunft\\), Problem/Qualifizierungs-Bullets, Wertliste ohne Durchstrich mit Wert-Label, neues Mockup + Master-Modul-Bild, neue Testimonials, Phasen-/Preis-/Garantie-Feinschliff *)",
+      "Bash(git commit -m 'Gelände-Salespage: Hero-Untertitel auf Losreiss-Positionierung \\(vom-Hof raus\\) *)",
+      "Bash(git commit -m 'Gelände-Salespage: Master-Modul wieder entfernt \\(Karte + Einblick-Hinweis\\) *)",
+      "Bash(git commit -m 'Gelände-Salespage: Freiarbeitskurs als Bild-Karte, Akupressur-Bild links, Wording-Feinschliff *)",
+      "Bash(git commit -m 'Gelaende-Garantie: Entspannt-im-Gelaende, Ziel 30 Minuten, 12 Wochen \\(HTML + neue PDF v3\\) *)",
+      "Bash(cd \"C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende\" && ls -la logo.png anika.jpg 2>&1; echo \"---puppeteer?---\"; ls -d ../../node_modules/puppeteer-core 2>&1 | head -1)",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\workbook-gelaende.html\")",
+      "Bash(git commit -m 'Webinar-Workbook: Bausteine-Texte \\(Lead + Baustein 1-3\\) nachgeschaerft, PDF neu *)",
+      "Bash(git commit -m 'Gelaende-Salespage: Hero-Mockup durch Vimeo-Video ersetzt *)"
     ],
     "defaultMode": "bypassPermissions"
   }

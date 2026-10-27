@@ -1,6 +1,6 @@
 # Online-Reitunterricht: VIP-Mails an Bestandskunden (24.10.2026)
 
-Empfänger: Tag „bestandskunden“. Antwort per Reply auf die Mail. 3 Plätze, danach öffentlich an die ganze Liste (5.166).
+Empfänger: Mail 1 ging versehentlich an ALLE Kontakte, deshalb gehen ab Mail 2 alle Mails an die ganze Liste (Entscheidung Anika 27.10.). Ursprünglich geplant: Tag „bestandskunden“. Antwort per Reply auf die Mail. 3 Plätze, danach öffentlich an die ganze Liste (5.166).
 Versand: Mail 1 Sa 24.10. · Mail 2 Mo 26.10. · Mail 3 Mi 28.10.
 Namen Kerstin/Pinto sind bereits geändert (ok von Anika).
 
@@ -76,70 +76,104 @@ Wer zuerst kommt, mahlt zuerst. 🙃
 
 ---
 
-## Mail 2 (Mo, 26.10.)
+## Mail 2 (an ALLE, neu 27.10.) so in Devine „Online Unterricht anbieten 2“ (komplett per Screenshots übernommen)
 
-**Betreff:** Du kennst die Übungen. Aber wer schaut zuhause drauf?
-**Vorschautext:** Warum der Online-Unterricht genau da hilft, wo es hakt
+**Betreff:** 🐴Neu: Reitunterricht mit mir, egal wo du wohnst
 
-Du hast schon einen Kurs bei mir gemacht. Du kennst also viele Übungen und weißt, worauf es ankommt.
+**Vorschautext:** Ab jetzt gibt es mich als Reitlehrerin online, europaweit
 
-Aber zuhause sieht es oft anders aus. Da stehst du allein auf dem Platz, dein Pferd reagiert nicht so wie im Video und niemand sagt dir, ob deine Hand gerade zu fest ist oder das Timing nicht passt. 🤷🏻‍♀️
+Hey {{contact.first_name}},
 
-Genau da setzt der Online-Unterricht an.
+Wie viele Reitlehrerinnen kommen eigentlich zu dir in den Stall?
 
-Ich schaue dir live über die Schulter, und zwar genau da, wo es bei euch im Alltag hakt:
+Bei vielen sieht die Auswahl so aus: Es gibt eine, vielleicht zwei, die in der Gegend unterrichten.
 
-🦄 auf deinem eigenen Reitplatz, wenn die Seitengänge noch nicht so flüssig laufen
+Ob die Chemie stimmt und ob die Trainingsrichtung zu dir und deinem Pferd passt, wird dann schnell zur Nebensache. Hauptsache, es kommt überhaupt jemand. 🤷🏻‍♀️
 
-🦄 an deinem Hänger, so wie bei Kerstin und Pinto
+Noch schwieriger ist es, wenn du deine Pferde bei dir Zuhause stehen hast. Dann lohnt sich die Anfahrt für "nur" eine Reitschülerin für mobile Trainer eigentlich kaum noch (bei den heutigen Spritpreisen🙈).
 
-🦄 bei der Bodenarbeit oder Freiheitsdressur auf eurer Wiese oder im Roundpen
+Und wer keinen Anhänger hat oder sein Pferd nicht so einfach verladen kann, ist komplett auf diese Auswahl angewiesen.
 
-🦄 und sogar im Gelände: Wenn jemand mitläuft und das Handy hält, nimmst du mich einfach mit auf den Ausritt
+Genau deshalb haben mich in den letzten Jahren so viele von euch gefragt, ob ich auch online live unterrichte.
 
-Du bekommst die Korrektur also nicht erst Tage später, sondern genau in dem Moment, in dem es passiert. Und du lernst es direkt in eurer gewohnten Umgebung, wo du es auch brauchst.
+Gute Nachrichten, ab jetzt gibt es das:
+**Online-Reitunterricht bei mir, ganz einfach über WhatsApp oder Zoom. 🎉**
 
-**Kleiner Tipp:** Wenn du einen Pivo Silver hast, umso besser. Der dreht sich automatisch mit und folgt dir über den ganzen Platz. Ein Muss ist er aber nicht. Das Handy in der Ecke reicht völlig.
+Damit suchst du dir deine Reitlehrerin nicht mehr nach Postleitzahl aus, sondern danach, was dir wirklich wichtig ist. Ob die Chemie stimmt. Ob dir gefällt, wie mit dem Pferd umgegangen wird. Und ob die Trainingsrichtung zu euch passt.🤗
 
-Es gibt nur **3 feste Plätze** und als Bestandskundin hast du gerade noch den Vortritt.
+Und das **europaweit.** Egal, wo du mit deinem Pferd zuhause bist.
 
-**Wenn du Interesse hast**, antworte einfach auf diese Mail und schreib mir kurz, was für ein Pferd du hast und welche Herausforderung oder welches Ziel ihr gerade habt.
+**So einfach geht’s:**
+
+🦄 Wir treffen uns per Zoom oder WhatsApp-Videoanruf. Bei Zoom zeichne ich die Stunde auf und du bekommst die Aufnahme zum Nachschauen.
+
+🦄 Du stellst dein Handy einfach in die Ecke vom Platz und hörst mich die ganze Zeit über dein Headset.
+
+🦄 Wir arbeiten direkt bei dir im Stall, also genau da, wo es im Alltag hakt.
+
+Thematisch ist alles offen: Bodenarbeit, Freiheitsdressur, Reiten im Stil der Reitkunst mit allen Seitengängen + Versammlung, Verladetraining und sogar Gelände, wenn jemand mit dem Handy mitläuft.
+
+Wie gut das funktioniert, hast du ja in meiner letzten Mail bei Kerstin und Pinto gelesen. Nach einer Viertelstunde per Videoanruf stand Pinto im Hänger, obwohl er vorher nicht mal die Vorderhufe auf die Rampe setzen wollte. 🐴
+
+Zum Start gibt es **nur 3 feste Plätze.** Eine Einheit dauert bis zu 45 Minuten und kostet 85 €. Dazu bekommst du den Zugang zu meiner monatlichen Fragerunde inkl. Aufzeichnungen für deine Blickschulung, meine WhatsApp-Fragen-Flatrate und mein E-Book über feine Sitzhilfen.
+
+**Wenn du Interesse hast**, antworte einfach auf diese Mail und schreib mir kurz:
+
+* was für ein Pferd du hast
+* welche Herausforderung oder welches Ziel ihr gerade habt
+
+Dann melde ich mich bei dir und wir sprechen in Ruhe miteinander.
 
 Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-P.S. Weil alles online läuft, ist es egal, wo du wohnst. Ob um die Ecke oder ganz woanders auf der Welt, wir können loslegen. 🌍
+P.S. Du brauchst technisch wirklich nur eine Internetverbindung, dein Handy und ein Headset.
+
+Wer zuerst kommt, mahlt zuerst. 😇
 
 ---
 
-## Mail 3 (Mi, 28.10.)
+## Mail 3 (an ALLE) so in Devine „Online Unterricht anbieten 3“ (per Screenshots übernommen, 27.10.)
 
-**Betreff:** Noch [X] Plätze frei, dann geht’s an 5.166 Leute
-**Vorschautext:** Deine letzte Chance auf den VIP-Zugang
+**Betreff:** 🐴{{contact.first_name}}, sicherst du dir den letzten Platz?
+**Vorschautext:** Online-Reitunterricht
 
-Kurze Info: Das ist meine letzte Mail zum Online-Unterricht an dich, bevor ich das Angebot an meine ganze Liste mit 5.166 Leuten schicke.
+Hey {{contact.first_name}},
 
-**Aktuell sind noch [X] von 3 Plätzen frei.**
+kurzes Update zum Online-Reitunterricht: **Aktuell ist noch 1 Platz von 3 Plätzen frei.**
 
-**Warum nur 3?**
-Jede Stunde ist 1:1. Ich bin die ganze Zeit nur für dich und dein Pferd da und zwischen den Stunden beantworte ich deine Fragen per WhatsApp. Das kann ich nur für ein paar Schülerinnen richtig gut machen.
+Vielleicht hast du bei meinen letzten Mails kurz überlegt und dann gedacht: „Ach, das ist bestimmt nichts für mich.“ Dazu ein paar Gedanken:
 
-Zur Erinnerung, das steckt drin:
+🦄 **„Ich habe gar keinen richtigen Reitplatz.“**
+Brauchst du auch nicht. Wir arbeiten da, wo du mit deinem Pferd trainierst, ob auf dem Reitplatz, auf der Wiese oder am Hänger. Bei Kerstin und Pinto stand das Handy einfach neben dem Anhänger.
 
+🦄 **„Ich weiß nicht, ob mir die online Hilfe reicht.“**
+Online funktioniert richtig gut. Inzwischen bin ich geübt darin, auch kleine Details zu sehen, selbst wenn dein Handy einfach fest in der Ecke steht. Und du hast endlich eine Sparringspartnerin, die live dabei ist und dir sofort am Pferd hilft. Wenn du noch tiefer einsteigen möchtest, kannst du meine Onlinekurse als Ergänzung nutzen. Und was hast du zu verlieren, probiere es einfach aus.💕
+
+🦄 **„Ich bin technisch nicht so fit.“**
+Wenn du telefonieren kannst, klappt das auch mit dem Online-Unterricht. Internetverbindung an, Handy in die Ecke, Headset auf, fertig.
+
+**Warum nur 3 Plätze?**
+Jede Stunde ist 1:1. Ich bin die ganze Zeit nur für dich und dein Pferd da und zwischen den Stunden beantworte ich deine Fragen per WhatsApp. Das kann ich nur für ein paar Schülerinnen richtig gut machen, denn ich erstelle und betreue nach wie vor auch noch meine Online-Programme und Kurse.
+
+**Das steckt drin:**
 🦄 Live-Unterricht per Zoom oder WhatsApp, bis zu 45 Minuten für 85 €. Bei Zoom zeichne ich die Stunde auf und du bekommst die Aufnahme zum Nachschauen.
 
-🦄 in dem Rhythmus, der zu dir passt: wöchentlich, alle zwei Wochen oder einmal im Monat
+🦄 ein fester Rhythmus, der zu dir passt: wöchentlich, alle zwei Wochen oder einmal im Monat
 
-🦄 meine monatliche Fragerunde inkl. der Aufzeichnungen der letzten zwei Jahre zur Blickschulung
+🦄 meine monatliche Fragerunde inkl. aller Aufzeichnungen der letzten zwei Jahre für deine Blickschulung
 
-🦄 die WhatsApp-Fragen-Flatrate an Werktagen
+🦄 die WhatsApp-Fragen-Flatrate für die direkte Verbindung zu mir, auch außerhalb unserer Trainingsstunden
 
-🦄 mein E-Book über feine Sitzhilfen und dein Zielkompass, mit dem wir festhalten, wo du in den nächsten 8 Wochen hinmöchtest
+🦄 mein E-Book über feine Sitzhilfen und deinen Zielkompass, der dich in 8 Wochen zu deinem gewünschten Ziel mit deinem Pferd bringt
 
-🦄 und wenn du nicht so weit weg wohnst, kannst du deine Stunden auch bei mir vor Ort auf meinen Lehrpferden nutzen
+🦄 und wenn du nicht so weit weg wohnst, kannst du deine Stunden auch bei mir vor Ort auf meinen Lehrpferden nutzen.
 
-Hast du beim Lesen schon an dein Pferd und euer Thema gedacht? Dann **antworte jetzt einfach auf diese Mail** und schreib mir kurz, was für ein Pferd du hast und woran ihr arbeiten möchtet.
+Hast du beim Lesen schon an dein Pferd und euer Thema gedacht? Dann **antworte einfach auf diese Mail** und schreib mir kurz:
+
+* was für ein Pferd du hast
+* welche Herausforderung oder welches Ziel ihr gerade habt
 
 Du musst noch nichts entscheiden. Wir sprechen erst mal in Ruhe miteinander und schauen, ob es für euch passt.
 
@@ -147,4 +181,6 @@ Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-P.S. Wer zuerst kommt, mahlt zuerst. Danach teilen sich 5.166 Leute die restlichen Plätze. 🙃
+P.S. Du brauchst technisch wirklich nur eine Internetverbindung, dein Handy und ein Headset.
+
+[Rest unterhalb des Screenshots nicht sichtbar]
