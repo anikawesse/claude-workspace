@@ -872,7 +872,11 @@
       "Bash(cd \"C:/Users/Olive/Desktop/claude-workspace/outputs/webinar-gelaende\" && ls -la logo.png anika.jpg 2>&1; echo \"---puppeteer?---\"; ls -d ../../node_modules/puppeteer-core 2>&1 | head -1)",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\workbook-gelaende.html\")",
       "Bash(git commit -m 'Webinar-Workbook: Bausteine-Texte \\(Lead + Baustein 1-3\\) nachgeschaerft, PDF neu *)",
-      "Bash(git commit -m 'Gelaende-Salespage: Hero-Mockup durch Vimeo-Video ersetzt *)"
+      "Bash(git commit -m 'Gelaende-Salespage: Hero-Mockup durch Vimeo-Video ersetzt *)",
+      "Bash(grep -nED \"data-\\(tab|view\\)=|class=\\\\\"tab|nav-|showTab|switchTab|renderPlaner|Planer|Planner\" index.html)",
+      "Bash(start \"\" \"index.html\")",
+      "Bash(netlify --version)",
+      "Bash(npx --no-install netlify-cli --version)"
     ],
     "defaultMode": "bypassPermissions"
   }

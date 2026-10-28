@@ -223,6 +223,21 @@
   .pl-checks button.own{border-width:2px;border-color:var(--ink);}
   .pl-checks button.on{background:var(--ok);border-color:var(--ok);color:#fff;}
   .pl-checks button.on.own{border-color:#2f5a2e;}
+  .pl-item.warn{box-shadow:0 0 0 2px #d9534f;}
+  #modalThemeBar{margin:0 0 12px;padding:9px 10px;background:var(--beige);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:7px;}
+  .tb-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
+  .tb-lbl{font-size:12px;color:var(--muted);margin-right:2px;}
+  .tb-shift,.tb-jump{border:1px solid var(--rose-dk);background:var(--white);border-radius:999px;padding:4px 11px;font-size:12px;cursor:pointer;color:var(--ink);}
+  .tb-shift:hover,.tb-jump:hover{background:var(--rose);}
+  .tb-days{width:52px;padding:4px 6px;border:1px solid var(--rose-dk);border-radius:8px;font-size:13px;text-align:center;}
+  .sq-row{display:flex;align-items:center;gap:10px;padding:7px 4px;border-bottom:1px solid var(--line);}
+  .sq-row:last-of-type{border-bottom:0;}
+  .sq-date{flex:0 0 auto;font-size:12px;font-weight:700;color:var(--muted);min-width:66px;}
+  .sq-row.over .sq-date{color:#d9534f;}
+  .sq-ttl{flex:1 1 auto;cursor:pointer;font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .sq-ttl:hover{text-decoration:underline;}
+  .sq-make{flex:0 0 auto;border:1px solid var(--rose-dk);background:var(--white);border-radius:999px;padding:5px 12px;font-size:12px;cursor:pointer;color:var(--ink);}
+  .sq-make:hover{background:var(--rose);}
   .pl-legend{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;font-size:11.5px;color:var(--muted);}
   .pl-lg{border-radius:6px;padding:2px 8px;border:1px solid;}
   .pl-lg.open{background:var(--rose);border-color:var(--rose-dk);color:var(--ink);}
@@ -273,8 +288,8 @@
       </div>
     </div>
     <div class="panel">
-      <h3>📤 Für Susanne — Wochenplan B-Roll Shorts</h3>
-      <div id="susanneBoard"></div>
+      <h3>🎞 Shorts, die noch erstellt werden müssen</h3>
+      <div id="shortQueue"></div>
     </div>
     <div class="panel">
       <h3>🔁 Reif fürs Recycling</h3>
@@ -302,9 +317,9 @@
   <div class="modal">
     <div class="modal-head"><h3 id="modalTitle">Neu</h3><button class="close" onclick="closeModal()">✕</button></div>
     <form id="modalForm" onsubmit="saveItem(event)">
+      <div id="modalThemeBar" style="display:none"></div>
       <div id="modalFields"></div>
       <button type="submit" class="save-btn">Speichern</button>
-      <button type="button" class="save-btn" id="modalSusanne" onclick="moveToSusanneModal()" style="display:none;background:var(--rust);margin-top:8px;">📤 Zu Susanne verschieben</button>
       <button type="button" class="del-link" id="modalDel" onclick="deleteCurrent()" style="display:none">Diesen Eintrag löschen</button>
     </form>
   </div>
@@ -343,6 +358,7 @@ const REEL_FORMATE = ["Persönliche Story","Quick Tipp","Yapping","Reaction/Stit
 const CTA_ZIELE = ["—","Gelände-Schlüssel · Gelände/Schlüssel (27€)","Gelände-Quiz · Quiz/Plan (Freebie)","Live-Webinar (Anmeldung)","Auto-Webinar · Verlasspferd/Videotraining","Futter-Fahrplan · Futterplan (47€)","Offenstall-Planer · Konzept (47€)","Masterclass · Muskeln/Masterclass"];
 const STATUS_REEL = ["Idee","Entwurf","Gepostet"];
 const STATUS_ALLG = ["Idee","Fertig","Gepostet"];
+const STATUS_SHORT = ["Idee","Gepostet Testreel","Gepostet Feed"];
 const VORLAGEN_ART = ["Hook-Formel","Story-Framework","Content-Idee","Launch-Post"];
 const ZWECKE = ["Neugierde","Engagement","Expertenstatus","Sales","Persönlich"];
 const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch","Launch"];
@@ -391,7 +407,6 @@ const COLLECTIONS = {
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
     {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
-    {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
   ]},
   hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,hasDone:true,fields:[
     {key:"text",label:"Hook-Text",type:"textarea",required:true,card:"title"},
@@ -425,9 +440,7 @@ const COLLECTIONS = {
     {key:"videoLink",label:"🎥 Video-Link Yapping (Canva)",type:"text",card:"link",linkText:"🎥 Yapping"},
     {key:"videoLinkShort",label:"🎞 Video-Link B-Roll Short (Canva)",type:"text",card:"link",linkText:"🎞 B-Roll Short"},
     {key:"videoLinkBroll",label:"📼 Video-Link lange B-Roll (Canva)",type:"text",card:"link",linkText:"📼 Lange B-Roll"},
-    {key:"fuerSusanne",label:"📤 An Susanne übergeben (erscheint in der Übersicht)",type:"bool",card:"flag",flagText:"📤 Bei Susanne"},
-    {key:"susanneDatum",label:"📅 Susanne-Tag = Test-Reels (B-Roll Shorts) gehen raus",type:"date",card:"date"},
-    {key:"postDatum",label:"📅 Yapping-Video ins Feed (auto +1 Woche)",type:"date",card:"date"},
+    {key:"postDatum",label:"📅 Yapping-Video ins Feed (Start der Kette)",type:"date",card:"date"},
     {key:"postDatumShort",label:"📅 Bester B-Roll Short neu ins Feed (auto +2 Wochen)",type:"date",card:"date"},
     {key:"postDatumKarussell",label:"📅 Karussell ins Feed (auto +2 Wochen)",type:"date",card:"date"},
     {key:"postDatumBroll",label:"📅 Lange B-Roll-Variante ins Feed (auto +2 Wochen)",type:"date",card:"date"},
@@ -442,8 +455,7 @@ const COLLECTIONS = {
     {key:"produktbereich",label:"Produktbereich",type:"seg",options:PRODUKTBEREICHE,card:"badge"},
     {key:"gruppe",label:"Yapping-Thema (Verknüpfung)",type:"text"},
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
-    {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
-    {key:"susanneDatum",label:"📅 Susanne-Tag = Test-Reels gehen raus (nur ohne Yapping-Thema nötig)",type:"date",card:"date"},
+    {key:"status",label:"Status",type:"seg",options:STATUS_SHORT,card:"badge"},
     {key:"postDatum",label:"📅 Bester Short neu ins Feed (für Planer)",type:"date",card:"date"},
   ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
@@ -461,10 +473,11 @@ const FMT={key:'format',label:'Format',options:FORMATE};
 const UB={key:'unterbereich',label:'Bereich',options:UNTERBEREICHE};
 const ST_REEL={key:'status',label:'Status',options:STATUS_REEL};
 const ST_ALLG={key:'status',label:'Status',options:STATUS_ALLG};
+const ST_SHORT={key:'status',label:'Status',options:STATUS_SHORT};
 const ST_YAP={key:'status',label:'Status',options:YAPPING_STATUS};
 const ST_IDEE={key:'status',label:'Status',options:["Roh","In Arbeit","Umgesetzt"]};
 const FILTERS={
-  reels:[PD,FMT,ST_REEL], karussells:[PD,ST_ALLG], shorts:[PD,ST_ALLG], ideen:[PD,ST_IDEE],
+  reels:[PD,FMT,ST_REEL], karussells:[PD,ST_ALLG], shorts:[PD,ST_SHORT], ideen:[PD,ST_IDEE],
   hooks:[PD],
   yapping:[UB,ST_YAP],
   vorlagen:[{key:'kind',label:'Art',options:VORLAGEN_ART},{key:'hookTyp',label:'Hook-Typ',options:HOOK_TYPEN},{key:'zweck',label:'Zweck',options:ZWECKE}],
@@ -488,6 +501,7 @@ function migrate(db){
   (db.karussells||[]).forEach(k=>{if(k.status==='Entwurf')k.status='Idee';else if(k.status==='Geplant')k.status='Gepostet';});
   if(!db.igKat||typeof db.igKat!=='object')db.igKat={};
   if(!Array.isArray(db.shorts))db.shorts=[];
+  (db.shorts||[]).forEach(s=>{if(s.status==='Gepostet')s.status='Gepostet Feed';else if(s.status&&!STATUS_SHORT.includes(s.status))s.status='Idee';});
   return db;
 }
 function save(skipPush){if(!skipPush)DB._t=Date.now();try{localStorage.setItem("content-maschine-v2",JSON.stringify(DB));}catch(e){}if(!skipPush)schedulePush();}
@@ -615,9 +629,9 @@ function cardHTML(col,it){
     ${tags.length?`<div class="card-tags">${tags.join("")}</div>`:""}
     ${col==='hooks'?`<div class="makerow"><span>Daraus erstellen:</span><button onclick="makeFrom('${it.id}','reels')">🎬 Reel</button><button onclick="makeFrom('${it.id}','karussells')">🎠 Karussell</button></div>`:""}
     ${col==='yapping'?checksRowHTML(it):""}
-    ${col==='yapping'?`<div class="makerow"><button onclick="copyYappingScript('${it.id}')">📋 Skript kopieren</button><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeShortFromYapping('${it.id}')">🎞 B-Roll Short</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button><button onclick="moveToSusanne('${it.id}')">📤 Zu Susanne verschieben</button></div>`:""}
+    ${col==='yapping'?`<div class="makerow"><button onclick="copyYappingScript('${it.id}')">📋 Skript kopieren</button><button onclick="makeTalkingHead('${it.id}')">🎬 Talking-Head-Reel</button><button onclick="makeShortFromYapping('${it.id}')">🎞 B-Roll Short</button><button onclick="makeKarussellFromYapping('${it.id}')">🎠 Karussell</button></div>`:""}
     ${col==='reels'?`<div class="makerow"><span>Recyceln:</span><button onclick="makeBroll('${it.id}')">➕ B-Roll-Variante</button><button onclick="makeKarussellFromReel('${it.id}')">🎠 Karussell daraus</button></div>`:""}
-    ${col==='shorts'?`<div class="makerow"><span>Für Susanne:</span><button onclick="copyShort('${it.id}')">📋 Texte kopieren</button>${shortYap(it)?`<button onclick="openModal('yapping','${shortYap(it).id}')">🎙️ Zum Yapping-Thema</button>`:''}</div>`:""}
+    ${col==='shorts'?`<div class="makerow"><button onclick="copyShort('${it.id}')">📋 Texte kopieren</button>${shortYap(it)?`<button onclick="openModal('yapping','${shortYap(it).id}')">🎙️ Zum Yapping-Thema</button>`:''}</div>`:""}
     ${col==='karussells'?`<div class="makerow"><span>Canva:</span><button onclick="copyKarussell('${it.id}')">📋 Slides + Caption kopieren</button></div>`:""}
   </div>`;
 }
@@ -751,7 +765,6 @@ function openModal(col,id,draft){
   const item=Object.assign({},id?DB[col].find(x=>x.id===id):{},draft||{});
   document.getElementById("modalTitle").textContent=(id?"✎ ":"＋ ")+cfg.single;
   document.getElementById("modalDel").style.display=id?"block":"none";
-  document.getElementById("modalSusanne").style.display=col==='yapping'?"block":"none";
   document.getElementById("modalFields").innerHTML=cfg.fields.map(fl=>{
     const v=item[fl.key];
     if(fl.type==="text") return field(fl,`<input name="${fl.key}" value="${escAttr(v||'')}" ${fl.required?'required':''}>`);
@@ -764,8 +777,37 @@ function openModal(col,id,draft){
     if(fl.type==="slides"){let arr=String(v||'').split('\n').map(s=>s.trim()).filter(Boolean);if(!arr.length)arr=[''];return `<div class="field"><label>${fl.label}</label><div class="slides-editor" id="slidesEditor">${arr.map((s,i)=>slideRowHTML(i+1,s)).join('')}</div><button type="button" class="add-slide" onclick="addSlideRow()">＋ Slide hinzufügen</button></div>`;}
     return "";
   }).join("");
+  const bar=document.getElementById("modalThemeBar");
+  if(col==='yapping'&&id){bar.style.display='flex';bar.innerHTML=themeBarHTML(item);}
+  else{bar.style.display='none';bar.innerHTML='';}
   document.getElementById("overlay").classList.add("open");
   saveUI();
+}
+function themeBarHTML(y){
+  const s=yapShort(y),k=yapKarussell(y);
+  const sBtn=`<button type="button" class="tb-jump" onclick="openShortCard('${y.id}')">🎞 Short-Karte${s?'':' anlegen'}</button>`;
+  const kBtn=`<button type="button" class="tb-jump" onclick="openKarussellCard('${y.id}')">🎠 Karussell-Karte${k?'':' anlegen'}</button>`;
+  return `<div class="tb-row"><span class="tb-lbl">🔗 Ganze Themen-Kette verschieben:</span>`
+    +`<button type="button" class="tb-shift" onclick="shiftChainModal(-1)">◀ früher</button>`
+    +`<input type="number" id="tbShiftDays" class="tb-days" value="7" min="1" onclick="event.stopPropagation()">`
+    +`<span class="tb-lbl">Tage</span>`
+    +`<button type="button" class="tb-shift" onclick="shiftChainModal(1)">später ▶</button></div>`
+    +`<div class="tb-row"><span class="tb-lbl">Zu den Format-Karten:</span>${sBtn}${kBtn}</div>`;
+}
+function openShortCard(yid){makeShortFromYapping(yid);}
+function openKarussellCard(yid){const y=DB.yapping.find(x=>x.id===yid);if(!y)return;const k=yapKarussell(y);if(k){go('karussells');openModal('karussells',k.id);}else{makeKarussellFromYapping(yid);}}
+function shiftChainModal(sign){
+  const f=document.getElementById('tbShiftDays');
+  const n=Math.abs(parseInt(f&&f.value,10))||0;
+  if(!n){toast('Bitte eine Tageszahl eingeben');return;}
+  const delta=sign<0?-n:n;
+  let c=0;
+  ['susanneDatum','postDatum','postDatumShort','postDatumKarussell','postDatumBroll'].forEach(kk=>{
+    const inp=document.querySelector(`#modalForm [name="${kk}"]`);
+    if(inp&&inp.value){inp.value=addDays(inp.value,delta);c++;}
+  });
+  saveUI();
+  toast(c?`Kette um ${delta>0?'+':''}${delta} Tage verschoben – noch speichern ✓`:'Keine Termine gesetzt zum Verschieben');
 }
 function field(fl,inner){return `<div class="field"><label>${fl.label}${fl.required?' *':''}</label>${inner}</div>`;}
 function slideRowHTML(num,text){return `<div class="slide-row"><span class="slide-num">${num}</span><textarea class="slide-inp" rows="2">${escHTML(text)}</textarea><button type="button" class="slide-del" title="Slide löschen" onclick="removeSlideRow(this)">✕</button></div>`;}
@@ -797,7 +839,12 @@ function saveItem(e){
   if(col==='yapping')autoBrollDate(data);
   if(current.id){Object.assign(DB[col].find(x=>x.id===current.id),data);}
   else{DB[col].push({id:uid(),createdAt:Date.now(),...data});}
-  save();closeModal();renderTabs();renderCollection(col);toast(current.id?"Gespeichert ✓":"Angelegt ✓");
+  let msg=current.id?"Gespeichert ✓":"Angelegt ✓";
+  if(col==='yapping'){
+    const d=[data.postDatum,data.postDatumShort,data.postDatumKarussell,data.postDatumBroll].filter(Boolean).sort();
+    for(let i=1;i<d.length;i++){if(daysBetween(d[i-1],d[i])<MIN_ABSTAND){msg='⚠ Gespeichert – aber zwei Posts dieses Themas liegen unter 7 Tage auseinander';break;}}
+  }
+  save();closeModal();renderTabs();renderCollection(col);toast(msg);
 }
 function moveToSusanne(id){
   const y=DB.yapping.find(x=>x.id===id);if(!y)return;
@@ -867,7 +914,7 @@ function karussellPosted(k){if(k.status==='Gepostet')return true;const y=karusse
 /* B-Roll-Short-Karte ↔ Yapping-Thema (über gruppe) */
 function yapShort(y){const g=(y.frage||'').slice(0,50);return g?(DB.shorts||[]).find(s=>s.gruppe===g):null;}
 function shortYap(s){return s.gruppe?(DB.yapping||[]).find(y=>(y.frage||'').slice(0,50)===s.gruppe):null;}
-function shortPosted(s){if(s.status==='Gepostet')return true;const y=shortYap(s);return !!(y&&y.gepostet&&y.gepostet.short);}
+function shortPosted(s){if(s.status==='Gepostet Feed'||s.status==='Gepostet')return true;const y=shortYap(s);return !!(y&&y.gepostet&&y.gepostet.short);}
 function showBroll(yid){
   const y=DB.yapping.find(x=>x.id===yid);if(!y)return;
   igFilter=(y.caption||'').trim().slice(0,40);
@@ -1021,7 +1068,7 @@ function renderDashboard(){
   document.getElementById("reelRingTxt").textContent=n;
   document.getElementById("reelGoalTxt").textContent=`${n} von 60 Reels angelegt · ${60-n>0?`noch ${60-n} bis zum Vorrat`:"Vorrat komplett! 🎉"}`;
 
-  renderSusanneBoard();
+  renderShortQueue();
 
   const recycle=DB.reels.filter(r=>r.letztesPost||r.status==="Gepostet").sort((a,b)=>(a.letztesPost||"").localeCompare(b.letztesPost||"")).slice(0,4);
   const noCarousel=DB.reels.filter(r=>!r.karussell&&(r.favorit||r.status==="Gepostet")).slice(0,3);
@@ -1378,7 +1425,28 @@ function schedulePush(){if(!SB_READY)return;clearTimeout(pushTimer);updateSyncBa
 function reRender(){const y=window.scrollY;go(currentView,true);window.scrollTo(0,y);}
 function updateSyncBadge(state){const el=document.getElementById('syncBadge');if(!el)return;const m={ok:'☁︎ Sync',sync:'⏳ …',off:'☁︎ Login',local:'☁︎ Aus',err:'⚠︎ Sync'};el.textContent=m[state]||'☁︎';}
 
-/* ===== Für Susanne — Wochenplan B-Rolls ===== */
+/* ===== Shorts-Warteschlange (Übersicht): Themen, die noch einen Short brauchen ===== */
+function themeNeedsShort(y){
+  if(yapShort(y))return false;                  // Short-Karte existiert bereits
+  if(y.gepostet&&y.gepostet.short)return false;  // schon als erledigt abgehakt
+  return true;
+}
+function renderShortQueue(){
+  const box=document.getElementById('shortQueue');if(!box)return;
+  const list=(DB.yapping||[]).filter(y=>y.postDatumShort&&themeNeedsShort(y))
+    .sort((a,b)=>a.postDatumShort.localeCompare(b.postDatumShort));
+  if(!list.length){box.innerHTML=`<div class="hint">Gerade kein Short offen. Sobald bei einem Yapping-Thema ein Short-Feed-Datum gesetzt ist und noch keine Short-Karte dazu existiert, erscheint es hier, sortiert nach dem Tag, an dem der Short ins Feed soll.</div>`;return;}
+  const today=localISO(new Date());
+  box.innerHTML=list.map(y=>{
+    const over=y.postDatumShort<today;
+    return `<div class="sq-row ${over?'over':''}"><span class="sq-date">${fmtDate(y.postDatumShort)}</span>`
+      +`<span class="sq-ttl" onclick="openModal('yapping','${y.id}')" title="Yapping-Thema öffnen">${escHTML((y.frage||'(ohne Thema)').slice(0,70))}</span>`
+      +`<button class="sq-make" onclick="makeShortFromYapping('${y.id}')">🎞 Short erstellen</button></div>`;
+  }).join('')
+    +`<div class="hint" style="margin-top:8px;">Oben steht das Thema, dessen Short als Nächstes ins Feed soll. „🎞 Short erstellen" legt die Short-Karte an und öffnet sie. Danach wandert das Thema aus dieser Liste und läuft über den Status Idee → Gepostet Testreel → Gepostet Feed.</div>`;
+}
+
+/* ===== Für Susanne — Wochenplan B-Rolls (nicht mehr genutzt) ===== */
 let susanneWeek=0;
 function renderSusanneBoard(){
   const box=document.getElementById('susanneBoard');if(!box)return;
@@ -1419,6 +1487,15 @@ function localISO(d){const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2
 function startOfWeek(off){const d=new Date();const wd=(d.getDay()+6)%7;d.setHours(0,0,0,0);d.setDate(d.getDate()-wd+off*7);return d;}
 function startOfMonthGrid(off){const d=new Date();d.setDate(1);d.setMonth(d.getMonth()+off);d.setHours(0,0,0,0);return d;}
 const capKey=s=>String(s||'').toLowerCase().replace(/\s+/g,' ').trim().slice(0,60);
+const MIN_ABSTAND=7;
+function daysBetween(a,b){const d1=new Date(a+'T00:00:00'),d2=new Date(b+'T00:00:00');if(isNaN(d1)||isNaN(d2))return 999;return Math.round(Math.abs(d2-d1)/86400000);}
+function themeKeyFor(x){
+  if(x.yap)return 'y:'+((x.yap.frage||'').slice(0,50));
+  if(x.col&&x.id){const it=(DB[x.col]||[]).find(o=>o.id===x.id);if(it&&it.gruppe)return 'g:'+it.gruppe;}
+  return null;
+}
+// 6 kräftige Grundfarben, erst alle dunkel (1-6), dann dieselben Farbtöne hell (7-12). Beide Stufen gut sichtbar.
+const THEME_PALETTE=['#0d47a1','#e65100','#1b5e20','#4a148c','#b71c1c','#00695c','#42a5f5','#ffa726','#66bb6a','#ab47bc','#ef5350','#26a69a'];
 function planEntries(){
   const e=[];
   (DB.reels||[]).forEach(r=>{if(r.postDatum)e.push({date:r.postDatum,icon:'🎬',label:r.titel||r.hook||'Reel',col:'reels',id:r.id,done:r.status==='Gepostet'});});
@@ -1445,10 +1522,15 @@ function planEntries(){
 function planItemHTML(x){
   const short=escHTML(x.label.slice(0,22));
   if(x.ig) return `<div class="pl-item pl-ig done" onclick="window.open('${escAttr(x.ig.url)}','_blank','noopener')" title="${escAttr('Direkt in Instagram gepostet: '+x.label)}">${x.icon} ${short}</div>`;
+  const col=x._tc||null;
+  const sty=col?` style="border-left:9px solid ${col}"`:'';
+  const warn=x._warn?' warn':'';
+  const wtip=x._warn?' ⚠ gleiches Thema unter 7 Tage entfernt':'';
+  const w=x._warn?'⚠ ':'';
   const card=x.col==='karussells'||x.col==='shorts'||x.col==='reels';
-  if(card){const s=x.col==='shorts'?'S':x.col==='reels'?'R':'K';return `<div class="pl-item ${x.done?'done':''}" onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label)}">${x.icon} ${short}<div class="pl-checks"><button class="${x.done?'on':''} own" title="${x.done?'✓ gepostet/geplant (antippen zum Zurücknehmen)':'Als gepostet/geplant abhaken'}" onclick="event.stopPropagation();toggleCardPosted('${x.col}','${x.id}')">${x.done?'✓':s}</button></div></div>`;}
+  if(card){const s=x.col==='shorts'?'S':x.col==='reels'?'R':'K';return `<div class="pl-item${warn} ${x.done?'done':''}"${sty} onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label+wtip)}">${w}${x.icon} ${short}<div class="pl-checks"><button class="${x.done?'on':''} own" title="${x.done?'✓ gepostet/geplant (antippen zum Zurücknehmen)':'Als gepostet/geplant abhaken'}" onclick="event.stopPropagation();toggleCardPosted('${x.col}','${x.id}')">${x.done?'✓':s}</button></div></div>`;}
   const checks=x.yap?`<div class="pl-checks">${POST_CHECKS.map(c=>{const on=!!(x.yap.gepostet||{})[c.k];return `<button class="${on?'on':''} ${c.k===x.own?'own':''}" title="${c.l}${on?' ✓ gepostet/geplant':' offen'}" onclick="event.stopPropagation();togglePosted('${x.id}','${c.k}')">${on?'✓':c.s}</button>`;}).join('')}</div>`:'';
-  return `<div class="pl-item ${x.done?'done':''}" onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label)}">${x.done&&!x.yap?'✓ ':''}${x.icon} ${short}${checks}</div>`;
+  return `<div class="pl-item${warn} ${x.done?'done':''}"${sty} onclick="openModal('${x.col}','${x.id}')" title="${escAttr(x.label+wtip)}">${w}${x.done&&!x.yap?'✓ ':''}${x.icon} ${short}${checks}</div>`;
 }
 function renderPlaner(){
   const view=document.getElementById('view-planer');
@@ -1459,6 +1541,11 @@ function renderPlaner(){
   const totalCells=Math.ceil((wd+lastDay)/7)*7;
   const days=[...Array(totalCells)].map((_,i)=>{const d=new Date(gridStart);d.setDate(gridStart.getDate()+i);return d;});
   const entries=planEntries();
+  const tmap={};entries.forEach(x=>{const k=themeKeyFor(x);x._tk=k;x._warn=false;x._tc=null;if(k&&x.date){(tmap[k]=tmap[k]||[]).push(x);}});
+  // Farben aus fester Palette, Themen nach frühestem Datum sortiert => zeitlich benachbarte Themen bekommen klar verschiedene Farben
+  const minDate={};Object.keys(tmap).forEach(k=>{minDate[k]=tmap[k].reduce((m,i)=>i.date<m?i.date:m,'9999-99-99');});
+  Object.keys(tmap).sort((a,b)=>minDate[a].localeCompare(minDate[b])).forEach((k,i)=>{const c=THEME_PALETTE[i%THEME_PALETTE.length];tmap[k].forEach(it=>it._tc=c);});
+  Object.values(tmap).forEach(list=>{for(let i=0;i<list.length;i++)for(let j=i+1;j<list.length;j++){if(daysBetween(list[i].date,list[j].date)<MIN_ABSTAND){list[i]._warn=true;list[j]._warn=true;}}});
   const byDate={};entries.forEach(x=>{(byDate[x.date]=byDate[x.date]||[]).push(x);});
   const todayKey=localISO(new Date());
   const names=['Mo','Di','Mi','Do','Fr','Sa','So'];
@@ -1476,7 +1563,7 @@ function renderPlaner(){
       <button class="chip tog" onclick="planerMonth=0;renderPlaner()">Heute</button>
     </div>
     <div class="pl-monthscroll"><div class="pl-mhead">${head}</div><div class="pl-mgrid">${cells}</div></div>
-    <div class="pl-legend"><span class="pl-lg open">offen</span><span class="pl-lg done">gepostet / geplant</span><span class="pl-lg ig">📷 direkt in Instagram gepostet</span><span>Häkchen: <b>Y</b> Yapping · <b>S</b> B-Roll Short · <b>K</b> Karussell · <b>B</b> lange B-Roll · <b>R</b> Reel (antippen zum Abhaken)</span></div>
+    <div class="pl-legend"><span class="pl-lg open">offen</span><span class="pl-lg done">gepostet / geplant</span><span class="pl-lg ig">📷 direkt in Instagram gepostet</span><span><b style="color:#d9534f">⚠ roter Rahmen</b> = gleiches Thema liegt unter 7 Tage auseinander</span><span>Der <b>farbige Rand links</b> zeigt zusammengehörige Posts eines Themas.</span><span>Häkchen: <b>Y</b> Yapping · <b>S</b> B-Roll Short · <b>K</b> Karussell · <b>B</b> lange B-Roll · <b>R</b> Reel (antippen zum Abhaken)</span></div>
     <div class="hint" style="margin-top:10px;">Setz bei Reel, Karussell oder Yapping-Video ein <b>Post-Datum</b>, dann taucht es hier auf. Beim Yapping-Video zählen alle vier Feed-Termine. Posts, die du direkt in Instagram gemacht hast, holt sich der Planer automatisch aus deinen Instagram-Daten.${igData&&igData.updated?' Instagram-Stand: '+new Date(igData.updated).toLocaleString('de-DE')+'.':''}</div>`;
 }
 
