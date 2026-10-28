@@ -319,7 +319,8 @@
     <form id="modalForm" onsubmit="saveItem(event)">
       <div id="modalThemeBar" style="display:none"></div>
       <div id="modalFields"></div>
-      <button type="submit" class="save-btn">Speichern</button>
+      <div id="modalCopyScript" style="display:none;margin-top:10px;"><button type="button" class="tb-jump" style="width:100%;padding:9px;" onclick="copyCardScript(current.collection,current.id)">📋 Skript kopieren</button></div>
+      <button type="submit" class="save-btn" style="margin-top:10px;">Speichern</button>
       <button type="button" class="del-link" id="modalDel" onclick="deleteCurrent()" style="display:none">Diesen Eintrag löschen</button>
     </form>
   </div>
@@ -779,7 +780,9 @@ function openModal(col,id,draft){
   }).join("");
   const bar=document.getElementById("modalThemeBar");
   if(col==='yapping'&&id){bar.style.display='flex';bar.innerHTML=themeBarHTML(item);}
+  else if((col==='shorts'||col==='karussells')&&id){bar.style.display='flex';bar.innerHTML=themeBarFormatHTML(col,item);}
   else{bar.style.display='none';bar.innerHTML='';}
+  document.getElementById("modalCopyScript").style.display=(id&&['reels','karussells','yapping','shorts'].includes(col))?'block':'none';
   document.getElementById("overlay").classList.add("open");
   saveUI();
 }
@@ -796,6 +799,15 @@ function themeBarHTML(y){
 }
 function openShortCard(yid){makeShortFromYapping(yid);}
 function openKarussellCard(yid){const y=DB.yapping.find(x=>x.id===yid);if(!y)return;const k=yapKarussell(y);if(k){go('karussells');openModal('karussells',k.id);}else{makeKarussellFromYapping(yid);}}
+/* Sprung-Leiste für Short- und Karussell-Karten: zum Yapping-Thema und zur anderen Format-Karte */
+function themeBarFormatHTML(col,item){
+  const y=col==='shorts'?shortYap(item):karussellYap(item);
+  if(!y)return `<div class="tb-row"><span class="tb-lbl">Noch kein verknüpftes Yapping-Thema. Trag das Feld „Yapping-Thema (Verknüpfung)" genau wie den Thementitel ein, dann kannst du von hier aus springen.</span></div>`;
+  let btns=`<button type="button" class="tb-jump" onclick="openModal('yapping','${y.id}')">🎙️ Yapping-Thema</button>`;
+  if(col==='shorts'){const k=yapKarussell(y);btns+=`<button type="button" class="tb-jump" onclick="openKarussellCard('${y.id}')">🎠 Karussell-Karte${k?'':' anlegen'}</button>`;}
+  else{const s=yapShort(y);btns+=`<button type="button" class="tb-jump" onclick="openShortCard('${y.id}')">🎞 Short-Karte${s?'':' anlegen'}</button>`;}
+  return `<div class="tb-row"><span class="tb-lbl">Zu den Format-Karten:</span>${btns}</div>`;
+}
 function shiftChainModal(sign){
   const f=document.getElementById('tbShiftDays');
   const n=Math.abs(parseInt(f&&f.value,10))||0;
@@ -1028,6 +1040,26 @@ function copyYappingScript(yid){
   if(!text){toast('Noch kein Skript-Text vorhanden');return;}
   const fb=()=>{const ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);toast('📋 Skript kopiert ✓');};
   if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(text).then(()=>toast('📋 Skript kopiert ✓'),fb);else fb();
+}
+function copyText(t){
+  const fb=()=>{const ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.focus();ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);toast('📋 Kopiert ✓');};
+  if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(()=>toast('📋 Kopiert ✓'),fb);else fb();
+}
+/* „Skript kopieren" für jede Post-Karte — nimmt je Collection den passenden Inhalt */
+function copyCardScript(col,id){
+  if(col==='yapping')return copyYappingScript(id);
+  if(col==='karussells')return copyKarussell(id);
+  if(col==='shorts')return copyShort(id);
+  const it=(DB[col]||[]).find(x=>x.id===id);if(!it)return;
+  const parts=[];
+  if(it.titel)parts.push('THEMA: '+it.titel);
+  if(it.hook&&it.hook.trim())parts.push('HOOK:\n'+it.hook.trim());
+  if(it.reelText&&it.reelText.trim())parts.push('TEXT IM VIDEO:\n'+it.reelText.trim());
+  if(it.text&&it.text.trim())parts.push(it.text.trim());
+  if(it.caption&&it.caption.trim())parts.push('CAPTION:\n'+it.caption.trim());
+  const t=parts.join('\n\n');
+  if(!t){toast('Noch kein Text vorhanden');return;}
+  copyText(t);
 }
 function renderInstagram(){
   const view=document.getElementById('view-instagram');if(!view)return;
