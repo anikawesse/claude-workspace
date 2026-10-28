@@ -14,15 +14,15 @@ Was tun, wenn dein junges Pferd schreckhaft, unberechenbar oder schwer zu hände
 
 Bevor du dein junges Pferd „schwierig" nennst, lohnt sich ein genauer Blick. Im E-Book und in den 3 Videos zeige ich dir:
 
-✔ **Die 5 Ursachen, warum dein junges Pferd so unberechenbar wirkt.** Und warum die erste davon gar nichts mit Training zu tun hat.
+✔ **Wie du herausfindest, was wirklich hinter dem Zappeln am Putzplatz steckt,** damit du nicht länger an der falschen Stelle trainierst.
 
-✔ **Warum zum Gras ziehen, rempeln und nicht in den Hänger gehen so eng zusammenhängen.** Und warum die Lösung für alle drei dieselbe ist.
+✔ **Welche Signale du deinem Pferd sendest, ohne es zu merken,** damit es dich endlich klar versteht.
 
-✔ **Warum manche Pferde schreckhafter sind als andere** und wie du langfristig daran arbeitest.
+✔ **Was Grasziehen auf dem Weg zur Koppel, Anrempeln am Putzplatz und Stehenbleiben vor dem Hänger gemeinsam haben,** damit du nicht mehr an drei Baustellen gleichzeitig arbeiten musst.
 
-✔ **Was du sofort tust, wenn doch etwas passiert ist**, damit aus einem Schreckmoment keine Negativspirale wird.
+✔ **Was du tust, wenn dein Pferd bei jeder flatternden Plane zur Seite springt,** damit es im Schreckmoment bei dir bleibt.
 
-✔ **3 Videos mit vielen Beispielen aus meinem Alltag**, damit du siehst, wie ich vorgehe.
+✔ **Was du sofort tust, wenn sich dein Pferd doch einmal losgerissen hat,** um auch in diesem Moment einen kühlen Kopf und einen klaren Plan zu haben.
 
 Den Notfall-Guide bekommst du **nur am Ende des Videotrainings**. Bleib also unbedingt bis zum Schluss dabei.
 
