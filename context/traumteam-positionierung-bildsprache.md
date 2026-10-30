@@ -9,7 +9,7 @@ Stand 28.10.2026 · Gilt für ALLES Traumteam-Copywriting (Opt-in, Videotraining
 - **Zielgruppe:** Freizeitreiterinnen mit **jungem Pferd** (Jungpferd = Thema). Die (Wieder-)Einsteigerin ist die Heldin der Geschichte, nicht das Thema.
 - **Warum Jungpferd:** grenzt über den ZEITPUNKT ab (ganz am Anfang = Kundenreise-Schritt 1, vor Gelände-Schlüssel und Gelände-Programm). „Wiedereinsteigerin" ist die Identität der ganzen Zielgruppe und grenzt nicht ab.
 - **Inhalt:** Basis aus Führübungen, Vertrauen und Kommunikation (gemeinsame Sprache). Kein Einreitkurs.
-- **Gegner:** das Hin und Her zwischen „zu lieb" und „zu streng" + Dominanz-Ratschläge („Zeig ihm, wer der Chef ist"). Dazu Tinas stiller Zweifel „Bin ich die Richtige für dieses junge Pferd?".
+- **Gegner:** das Hin und Her zwischen „zu lieb" und „zu streng" + dominante Stall-Ratschläge. ⚠️ Sie SOLL die Chefin sein, nur souverän statt dominant; Chef-Thema nicht ausreizen. Dazu Tinas stiller Zweifel „Bin ich die Richtige für dieses junge Pferd?".
 - **Kern-Wahrheit:** Der Schlüssel zum Vertrauen deines Pferdes ist dein Selbstvertrauen.
 - **Transformation:** Von einem jungen, unerfahrenen Pferd, das über dich hinwegpoltert, zu einem Verlasspferd, das sich an dir orientiert. Von der Frau, die zweifelt, ob sie ihrem jungen Pferd gerecht wird, zur Pferdefrau, die ihm Sicherheit gibt.
 - **Zeitraum:** 8 Wochen.

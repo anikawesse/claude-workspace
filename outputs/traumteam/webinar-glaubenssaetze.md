@@ -18,7 +18,7 @@ Daraus folgt: Abwarten, sich durchwursteln oder das Pferd zum Bereiter geben sin
 
 | | Einwand im Kopf | Neuer Glaubenssatz | Aha-Moment |
 |---|---|---|---|
-| **1 Führung** | „Entweder bin ich zu lieb oder ich muss hart werden. Beides will ich nicht." | Führung heißt nicht Dominanz. Ich kann klar führen, ohne den Chef zu spielen. | Dein Pferd sucht keinen Chef, es sucht **Sicherheit**. Souverän heißt: ruhig, berechenbar und klar. |
+| **1 Führung** | „Entweder bin ich zu lieb oder ich muss hart werden. Beides will ich nicht." | Ich darf die Chefin sein, souverän statt dominant. | Dein Pferd kann nur so verlässlich werden, wie du es bist. Souverän heißt: **ruhig, berechenbar und klar**. |
 | **2 Vertrauen** | „Mir fehlt die Erfahrung für ein junges Pferd. Vielleicht bin ich gar nicht die Richtige dafür." | Es liegt nicht an meiner Erfahrung. Selbstvertrauen kann ich lernen. | Das Vertrauen deines Pferdes ist der **Spiegel deines Selbstvertrauens**. |
 | **3 Gemeinsame Sprache** | „Mein Pferd ist respektlos oder stur. Und allein, online schaffe ich das sowieso nicht." | Mein Pferd versteht mich nur noch nicht. Eine gemeinsame Sprache lässt sich Schritt für Schritt lernen. | Was wie Respektlosigkeit aussieht, ist meistens ein **Missverständnis**. |
 

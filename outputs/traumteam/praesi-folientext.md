@@ -194,7 +194,7 @@ Souverän heißt nicht laut und nicht hart. Souverän heißt: ruhig, berechenbar
 Vorher: „Kennst du das, dass dir am Stall jeder etwas anderes rät?" · Danach: „Merkst du, wie viel entspannter sich das anfühlt, wenn du nicht mehr den Chef spielen musst?"
 
 ### Notiz für den Pitch (29.10.)
-⚠️ Freiarbeit ist laut Anika **Modul 3** im Traumteam-Programm (Präsi zeigt noch „Mega Bonus: Freiarbeit" + „Modul 3: Die 8 Grundbausteine") → Modulübersicht im Pitch an aktuellen Kursaufbau anpassen. Bild „folgt dir frei wie ein Hund" für die Freiarbeit-Folie im Pitch aufheben.
+✅ Korrektur 30.10.: Freiarbeit ist **Mega Bonus**, Modul 3 = die 8 Grundbausteine. Bild „folgt dir frei wie ein Hund" für die Freiarbeit-Folie im Pitch aufheben.
 ✅ Titel Deckfolie (final): „Für Freizeitreiterinnen mit jungem Pferd: In 90 Minuten erfährst du, wie dein Pferd dir tiefes Vertrauen schenkt und zu einem Verlasspferd wird, das in jeder Situation an deiner Seite bleibt und dir sogar frei überallhin folgt."
 
 ---
@@ -216,3 +216,172 @@ Vorher: „Kennst du das, dass dir am Stall jeder etwas anderes rät?" · Danach
 **So stärkst du dein Selbstvertrauen:** bleibt (Komma: „Du übst, Grenzen zu setzen")
 **Ich wünsche mir für dich:** bleibt (Komma: „kaum erwarten kann, mit dir")
 **Alena:** bleibt („explodiert, als")
+
+---
+
+✅ Schritt 1 komplett eingebaut (30.10.). ⚠️ Feedback Anika: Chef-Thema nicht ausreizen, sie SOLL Chefin sein, nur souverän statt dominant (Aha-Folie „sucht keinen Chef" verworfen).
+
+## Schritt 2 Vertrauen (Entwurf 30.10.)
+
+**Titel (bleibt):** Wie du tiefes, gegenseitiges Vertrauen aufbaust, ohne jeden Tag Stunden im Stall verbringen zu müssen.
+
+**Mit echtem, gegenseitigem Vertrauen ...**
+- ... wirst du dich in der Gegenwart deines Pferdes sicher fühlen. Und umgekehrt.
+- ... kannst du deinem Kopfkino ade sagen und jeden Moment mit deinem Liebling so richtig genießen.
+- ... habt ihr keine Diskussionen mehr, egal ob auf dem Weg zur Koppel, am Putzplatz oder vor dem Hänger. Auch wenn dein Pferd erschrickt, bleibt es bei dir und orientiert sich an deinen Hilfen.
+
+**Stell dir vor ...**
+- ... dein Pferd folgt dir freiwillig und ohne Diskussionen überallhin. Egal ob in den Hänger, über die Plane oder durch die enge Stallgasse.
+- ... du führst dein Pferd an der Koppel vorbei, auf der die Herde gerade wild lostobt. Dein Pferd hebt kurz den Kopf, aber ein Ohr bleibt bei dir und es achtet weiter auf deine Hilfen.
+
+**So baut ihr gegenseitiges Vertrauen auf (bleibt):** Biete Sicherheit & sei vorhersehbar · Gemeinsame Sprache finden · Gemeinsame Erfolgserlebnisse schaffen
+
+**Die Sache mit dem Vertrauen ... (bleibt, Grammatik):**
+Der wahre Schlüssel zum Vertrauen deines Pferdes liegt in deinem Selbstvertrauen!
+Fehlendes Selbstvertrauen ist der Grund für Angst und Kopfkino.
+Es gibt keine Methode, die du nur Schritt für Schritt ausführst und als logisches Ergebnis das Vertrauen deines Pferdes bekommst.
+Tiefes Vertrauen bekommst du geschenkt, wenn du dir selbst vertraust. Und das kannst du lernen.
+
+**Ich wünsche mir für dich, dass ...**
+- ... du so selbstbewusst wirst, dass du nie wieder zweifelst, ob du die Richtige für dein Pferd bist und ob du ihm gerecht wirst.
+- ... dein Pferd im Alltag und im Training zu einem richtigen Verlasspartner für dich wird und ihr einfach durch dick und dünn geht. So sehr, dass deine Stallkolleginnen dich fragen, wie du das hinbekommen hast.
+
+**Tanja (bleibt)**
+
+---
+
+✅ Schritt 2 komplett eingebaut (30.10., bis Folie 34).
+
+## Schritt 3 Fahrplan zum Verlasspferd (Entwurf 30.10.) — ersetzt Block „Kontrolle & Aufmerksamkeit"
+
+**Titel:** Dein Fahrplan zum Verlasspferd: Welche Stufen dein junges Pferd durchläuft, damit es in jeder Situation an deiner Seite bleibt.
+
+**Wenn du den Fahrplan kennst ...**
+- ... weißt du immer, was als Nächstes dran ist, statt dich durch Tipps aus YouTube und vom Stall zu wühlen.
+- ... überspringst du keine wichtige Stufe und musst später nichts mühsam reparieren.
+- ... siehst du jede Woche, wie ihr vorankommt. Das gibt dir und deinem Pferd Sicherheit.
+
+**NEU Aha (aus Anikas Notfall-Guide):** Die meisten fangen bei D an und überspringen A, B und C. Nicht mit Absicht, sondern weil ihnen niemand die Reihenfolge gezeigt hat.
+
+**Stell dir vor ...**
+- ... du fährst zum Stall und weißt genau, welche Übung heute dran ist. Kein Grübeln und kein Herumprobieren.
+- ... ein paar Monate später geht ihr zum ersten Mal zusammen ins Gelände. Und es ist vollkommen unspektakulär.
+
+**Der Fahrplan (Stufen von Anika bestätigen lassen):** Entwurf 1 Verlassmensch werden · 2 Vertrauen · 3 Gemeinsame Sprache + feine Hilfen (Grundbausteine) · 4 Freiarbeit · 5 Ausblick Gelände & Reiten
+
+**Kostprobe (offen):** Mähnenkamm schütteln, auf den Hof geholt („wenn dein junges Pferd plötzlich erstarrt") · ❌ Ovallaufen raus
+
+**Ich wünsche mir für dich (bleibt):** „... dass du alles machen kannst, was du dir als kleines Pferdemädchen erträumt hast" (Tippfehler „alle") + Familienpferd
+
+**Roger (bleibt)**
+
+### ✅ Fahrplan-Folie (Stufen von Anika bestätigt 30.10.)
+**DEIN FAHRPLAN ZUM VERLASSPFERD**
+1. **Verlassmensch werden** → Du bist der ruhige Pol, an dem sich dein Pferd orientiert. ✓ heute
+2. **Vertrauen aufbauen** → Dein Pferd fühlt sich bei dir sicher und bleibt auch im Schreck bei dir. ✓ heute
+3. **Gemeinsame Sprache und feine Hilfen** → Die Grundbausteine sitzen und ein kleiner Fingerzeig reicht.
+4. **Freiarbeit** → Dein Pferd entscheidet sich für dich und folgt dir frei überallhin.
+5. **Ausblick: Gelände und Reiten** → Auf diesem Fundament wird jeder Ausflug vollkommen unspektakulär.
+Sprechnotiz: „Die Stufen 1 und 2 hast du heute schon kennengelernt. Die Stufen 3 und 4 gehen wir im Programm gemeinsam."
+
+### Kostprobe (optional): Mähnenkamm-Schütteln
+**Kostprobe aus Stufe 3: Wenn dein junges Pferd plötzlich erstarrt**
+Ein erstarrtes Pferd ist kein ruhiges Pferd. Oft ist es die Ruhe vor dem Sturm. Mit dem Mähnenkamm-Schütteln holst du es zurück zu dir, bevor es knallt.
+
+### ✅✅ Fahrplan NEU nach Anikas echtem Weg (30.10., ersetzt den 5-Stufen-Entwurf oben)
+**DEIN FAHRPLAN ZUM VERLASSPFERD**
+1. **Traumteam werden** (das Fundament) → Ihr habt eine tiefe, vertrauensvolle Beziehung und versteht euch fein. ← heute + Traumteam-Programm
+2. **Den Körper stark machen** → Mit Handarbeit und gut aufgebautem Longentraining bekommt dein Pferd Muskeln, Tragkraft und Balance.
+3. **Sicher anreiten** → Dein Pferd kennt deine Hilfen schon vom Boden und muss sich nur noch an dein Gewicht gewöhnen. Ab hier wird euer Training bunt: Freiarbeit, Führübungen, Handarbeit und immer mehr Reiten.
+4. **Ab ins Gelände** → Erst als Spaziergang, später als Ausritt.
+5. **Unabhängig unterwegs** → Mit Verladetraining genießt ihr die Natur auch woanders oder nehmt dein Pferd mit in den Urlaub.
+
+Zoom-Folie Stufe 1 „Traumteam werden" (3 Bausteine): Verlassmensch werden (Ängste + Kopfkino im Griff) ✓ heute · Feine gemeinsame Sprache · Freiarbeit: Dein Pferd entscheidet sich für dich
+Beweis-Satz Stufe 3: „So habe ich über 20 junge Pferde ganz allein angeritten. Ohne einen einzigen Buckler und ohne ein panisches Durchgehen."
+
+### Eine Folie pro Stufe (30.10., Anika bis Folie 41 fertig)
+**STUFE 1: TRAUMTEAM WERDEN** — Hier legst du das Fundament für alles, was danach kommt. Du wirst zum Verlassmenschen und bekommst deine Ängste und dein Kopfkino in den Griff. Ihr findet eine feine gemeinsame Sprache. Und in der Freiarbeit entscheidet sich dein Pferd aktiv für dich und für die Zusammenarbeit mit dir. → Ergebnis: Ihr seid ein echtes Team, das sich vertraut und versteht. [Bild: Freiarbeit, Pferd folgt frei]
+**STUFE 2: DEN KÖRPER STARK MACHEN** — Jetzt bereiten wir den Körper deines Pferdes auf das vor, was ihr später gemeinsam vorhabt. Mit Handarbeit und einem gut aufgebauten Longentraining bekommt dein junges Pferd Muskeln, Tragkraft und Balance. → Ergebnis: Dein Pferd ist körperlich bereit, dich gesund zu tragen. [Bild: Handarbeit oder Longe]
+**STUFE 3: SICHER ANREITEN** — Dein Pferd kennt deine Hilfen schon vom Boden und aus der Handarbeit. Es vertraut dir und muss sich nur noch an dein Gewicht gewöhnen und lernen, sich mit dir oben drauf auszubalancieren. Ab hier wird euer Training bunt: mal Freiarbeit, mal Führübungen oder Handarbeit und immer mehr Reiten. → Ergebnis: Ein entspannter Start unter dem Sattel, ganz ohne Buckler und Drama. Sprechnotiz: „So habe ich über 20 junge Pferde ganz allein angeritten. Ohne einen einzigen Buckler und ohne ein panisches Durchgehen." [Bild: erstes Aufsitzen / Reiten Schritt]
+**STUFE 4: AB INS GELÄNDE** — Wenn du dich mit deinem Pferd sicher fühlst, kommt das Gelände dazu. Erst als Spaziergang, später als Ausritt. → Ergebnis: Eure Ausflüge sind entspannt und vollkommen unspektakulär. [Bild: Spaziergang/Ausritt]
+**STUFE 5: UNABHÄNGIG UNTERWEGS** — Mit einem guten Verladetraining seid ihr frei. Ihr könnt die schöne Natur auch woanders genießen oder dein Pferd sogar mit in den Urlaub nehmen. → Ergebnis: Ihr könnt überall hin, wo es euch gefällt. [Bild: Hänger / Pferd im Urlaub]
+
+### ✅ Stufen-Folien im Format von Folie 43 (Titel + 3 Pfeile „Fett: kurzer Satz"), ersetzt Langversion oben
+STUFE 1 TRAUMTEAM WERDEN (Anika, fertig) · Verlassmensch werden · Gemeinsame Sprache entwickeln · Kommunizieren in der Freiarbeit
+DEN KÖRPER STARK MACHEN · **Handarbeit:** Dein Pferd lernt, sich gesund zu tragen. · **Longentraining:** Es baut gezielt Muskeln auf. · **Tragkraft und Balance:** Dein Pferd ist bereit für dein Gewicht.
+SICHER ANREITEN · **Gewicht kennenlernen:** Dein Pferd gewöhnt sich Schritt für Schritt an dich im Sattel. · **Hilfen übertragen:** Was es vom Boden kennt, versteht es jetzt auch von oben. · **Buntes Training:** Freiarbeit, Handarbeit und Reiten wechseln sich ab.
+AB INS GELÄNDE · **Sicher fühlen:** Ihr geht erst raus, wenn du dich bereit fühlst. · **Spaziergang:** Ihr entdeckt die Welt zuerst gemeinsam zu Fuß. · **Ausritt:** Später genießt ihr die Natur vom Sattel aus.
+UNABHÄNGIG UNTERWEGS · **Verladetraining:** Dein Pferd geht entspannt in den Hänger. · **Neue Orte:** Ihr genießt die Natur auch woanders. · **Pferdeurlaub:** Dein Pferd kommt mit in den Urlaub.
+
+### ✅ FINAL Stufen-Namen laut Anika (Folie 41): 1 Traumteam werden · 2 Pferdekörper stärken · 3 Entspannt anreiten · 4 Gelände erkunden · 5 Deinen Traum leben
+Stufe 1 + 2 von Anika fertig (bis Folie 43/44). Vorschläge 3–5:
+ENTSPANNT ANREITEN · **Reitergewicht kennenlernen:** Dein Pferd gewöhnt sich Schritt für Schritt an dich im Sattel. · **Hilfen übertragen:** Was dein Pferd vom Boden kennt, versteht es jetzt auch von oben. · **Buntes Training:** Freiarbeit, Handarbeit und Reiten wechseln sich ab, damit es spannend bleibt.
+GELÄNDE ERKUNDEN · **Im eigenen Tempo:** Ihr geht erst raus, wenn du dich sicher fühlst. · **Spazieren gehen:** Ihr entdeckt die Welt zuerst gemeinsam zu Fuß. · **Ausreiten:** Später genießt ihr die Natur vom Sattel aus.
+DEINEN TRAUM LEBEN · **Verladetraining:** Dein Pferd steigt entspannt in den Hänger. · **Unabhängig sein:** Ihr genießt die Natur auch an neuen Orten. · **Pferdeurlaub:** Dein Pferd kommt einfach mit in den Urlaub.
+
+---
+
+## Block 5: Übergang (Entwurf 30.10.) — Aufbau Mentorin = fast deckungsgleich mit Eric (Rückblick → Ja-Straße → 2 Optionen)
+
+**Heute habe ich dir gezeigt:** (Eric: 5–7 Punkte, je kleiner Screenshot der Content-Folie als Anker)
+- wie du zum Verlassmenschen für dein junges Pferd wirst
+- wie du dein Kopfkino leiser drehst und dein Selbstvertrauenskonto auffüllst
+- warum der Schlüssel zum Vertrauen deines Pferdes in deinem Selbstvertrauen liegt
+- wie ihr gegenseitiges Vertrauen aufbaut: mit Sicherheit, einer gemeinsamen Sprache und gemeinsamen Erfolgserlebnissen
+- welche 5 Stufen dein junges Pferd auf dem Weg zum Verlasspferd durchläuft
+- warum jetzt der beste Zeitpunkt ist: Was dein Pferd jetzt lernt, trägt es sein ganzes Leben
+
+**Martina (bleibt)**
+
+**Ja-Straße („Jetzt, wo du so einen tiefen Einblick hast ...")**
+- Würdest du sagen, dass sich unsere gemeinsame Zeit heute gelohnt hat?
+- Verstehst du jetzt viel besser, warum dein junges Pferd sich so verhält, wie es sich verhält?
+- Kannst du sehen, wie du schon morgen am Stall ein Stück mehr zum Verlassmenschen für dein Pferd wirst?
+- Ist dir klar geworden, dass du die Richtige für dein Pferd sein kannst, auch ohne Profi-Erfahrung?
+- Und freust du dich schon darauf, euren Fahrplan zum Verlasspferd Stufe für Stufe zu gehen?
+
+**Ich habe vollstes Vertrauen ...** und glaube fest daran: Wenn du dem roten Faden von heute folgst, wirst du Fortschritte machen, die du bisher für unmöglich gehalten hast.
+
+**Doch ehrlich gesagt ...** schaffen es die wenigsten allein. Obwohl der Weg in der Theorie einfach ist, steckt der Teufel bei der Umsetzung im Detail. Gerade beim jungen Pferd, bei dem jeder Tag zählt. Wie viel leichter ist es, wenn dich jemand an die Hand nimmt, der diesen Weg schon unzählige Male gegangen ist?
+
+**Deshalb stand ich vor einer schweren Entscheidung:** Ich könnte es bei diesem einmaligen Videotraining belassen ... oder ... ich ermögliche dir einen zweiten Weg.
+Einen, bei dem wir gemeinsam tiefer ins Detail gehen, als es in 90 Minuten möglich ist.
+Einen, bei dem ich dir mit all meiner Erfahrung zur Seite stehe und dich Schritt für Schritt durch Stufe 1 führe.
+Sprechnotiz (Eric): „Angenommen, ich hätte so einen Weg für dich. Würdest du gern hören, was er für dich tun kann?"
+
+**NEU vor „Darf ich vorstellen":** Fahrplan-Übersicht (Folie 41) noch einmal, Stufe 1 hervorgehoben: „Und genau hier fängt alles an."
+
+**Leona (bleibt)** → **Darf ich vorstellen ...**
+
+---
+
+✅ Übergang komplett eingebaut (bis Folie 68). Tippfehler: „schon Bald" → „schon bald".
+
+## Block 6: Pitch Teil 1 (Entwurf 30.10.)
+Vergleich: Mentorin = Produkt → 2 Wege → Module → Support/Fragerunde → Preis → exklusive Boni → Zahlungsplan → Verknappung → So geht's → FAQ. Eric = Name+Tagline → Nutzenstatement → 3–5 Module → Preis mit Anker + 1. CTA VOR den Boni → Boni (mehr als Module, verschiedene Kategorien) → Garantie → doppelte Verknappung. Fehlt bei Mentorin: Nutzenstatement, eigene Garantie-Folie, Anker-Schema.
+
+**Produktfolie:** Das Traumteam-Programm · Tagline: Stufe 1 auf deinem Weg zum Verlasspferd · Onlinekurs mit unbegrenztem Zugang + optionaler Begleitung · Ziel: Du wirst zum Verlassmenschen für dein junges Pferd und ihr legt gemeinsam das Fundament für ein Verlasspferd. · Zeitinvest: 3–4 Mal pro Woche mit deinem Pferd und 3–4 Stunden pro Woche für die Theorie. Oder ganz so, wie es dir passt.
+
+**NEU Nutzenstatement (Eric):** Im Traumteam-Programm wirst du Schritt für Schritt zum Verlassmenschen für dein junges Pferd. Ihr findet eine feine gemeinsame Sprache und legt das Fundament für ein Verlasspferd, das dir vertraut, in jeder Situation an deiner Seite bleibt und dir sogar frei folgt. Ohne Druck, in deinem Tempo und mit meiner Begleitung.
+
+**2 Möglichkeiten:** Harter Weg: Du versuchst, dir alles allein beizubringen, ohne echten Plan und mit endlosem Ausprobieren. Dabei verlierst du nicht nur Zeit, sondern auch das Vertrauen in dich. Und am Ende zweifelst du wieder, ob du überhaupt die Richtige für dein Pferd bist. / Smarter Weg: Du entscheidest dich heute, Stufe 1 gemeinsam mit mir zu gehen. Mit meiner Methode folgst du endlich einem erprobten roten Faden. So wächst zwischen dir und deinem jungen Pferd eine Herzensverbindung, die du nie für möglich gehalten hättest.
+
+⏭️ Offene Fakten von Anika: aktueller Modulaufbau (Kopfkino? Sprache? Grundbausteine? Freiarbeit = Modul 3), Preis + regulärer Preis + Teilzahlung, Boni, Garantie, Deadline/Plätze.
+
+---
+
+## Pitch: Stand Anika 30.10. (selbst gebaut)
+Module: 1 Verlassmensch werden 800 € · 2 Gemeinsame Sprache 650 € · 3 Die 8 Grundbausteine 700 € · Mega Bonus Freiarbeit 800 € · Support 450 € = 3.400 €. Geschenke: Fragerunde 3 Monate 500 € · Spanischer Schritt 120 € · Akupressur 160 € · 500 € Preisvorteil = 1.280 €. Gesamtwert 4.680 €. Preis: 1.700 € Anker → regulär 997 € → **497 € für 72 Stunden**, Teilzahlungen ab 62 €.
+
+Offene Korrekturen: Übersicht „300 € Preisvorteil" → 500 € · Übersicht „Quizze" raus (nicht mehr im Support) · Preisfolie „Ratenzahlung" → „Teilzahlungen" · So funktioniert's „einen der Button" → „Buttons".
+
+**NEU Garantie-Folie (vor Verknappung):** Deine 14-Tage-Sicherheit. Schau dir alles in Ruhe an und probier die ersten Übungen mit deinem Pferd aus. Wenn du merkst, dass das Programm nicht zu euch passt, schreibst du mir innerhalb von 14 Tagen eine kurze Mail und bekommst dein Geld zurück.
+
+**NEU FAQ:** Mein Pferd ist noch nicht angeritten oder erst zwei Jahre alt. Passt das Programm trotzdem? / Mein Pferd ist gar nicht mehr so jung. Ist das Programm dann auch etwas für mich?
+
+---
+
+## Endkontrolle Präsi 30.10. (101 Folien)
+Boni-Logik laut Präsi: 3 Tage = Fragerunde + 500 € Preisvorteil · nur im Video = Spanischer Schritt + Akupressur · Gesamtwert 4.680 € stimmt.
+Inhalt offen: „Geschenk 4" (500 €) → „Geschenk 2" · Boni-Namen vereinheitlichen (Übersicht + Überschrift der 3-Tage-Zusammenfassung) · FAQ „allein umsetzbar / online lernbar" + „Pferd nicht mehr jung" fehlen · Übung im Video? (Commitment verspricht Übungen, Text-Folien enthalten keine) · Satz „so unspektakulär" unvollständig · Modul-3-Name Übersicht vs. Detail · technisch: zwei Kauf-Links für die zwei Bonus-Stufen.
+Tippfehler offen: Anika´s · wirlich · gegenseitgen · Kopfkion · überall hin · feinste Hilfe · „auf mit in den Urlaub mitnehmen" · als nächstes · longentraining · WErden · explodiert als · alle machen · schon Bald · dieses Videotrainings · 1 jährige · mobil Ansicht · „Schritt:" ohne 1.
