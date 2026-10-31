@@ -876,7 +876,8 @@
       "Bash(grep -nED \"data-\\(tab|view\\)=|class=\\\\\"tab|nav-|showTab|switchTab|renderPlaner|Planer|Planner\" index.html)",
       "Bash(start \"\" \"index.html\")",
       "Bash(netlify --version)",
-      "Bash(npx --no-install netlify-cli --version)"
+      "Bash(npx --no-install netlify-cli --version)",
+      "Bash(git commit -m 'Gelaende-Salespage: neues Testimonial \\(Susanne Huber\\) statt zwei alte; DOI-Bestaetigungsmail ergaenzt *)"
     ],
     "defaultMode": "bypassPermissions"
   }

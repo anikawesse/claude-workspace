@@ -19,6 +19,11 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Call 30.10.2026 (Sabine, Anne):**
+
+- **Anne, vier Wochen nach dem Onboarding:** „Ich kann mit meinem Pferd ins Gelände spazieren gehen. Das funktioniert." Beim Einstieg am 05.10. war das Losreißen ihr Hauptthema und sie ging gar nicht ins Gelände. → Testimonial-Kandidat fürs Gelände-Programm (Freigabe anfragen, vorher den Stand beim Losreißen klären).
+- **Fortschritt beim Alleinsein** (Anne): „gestern erstmals ohne Wiehern", „Tendenz besser werdend".
+
 **Calls 14.10.2026 (nur Sabine) und 21.10.2026 (Sabine, Caroline, Annes schriftliche Frage):**
 
 - **Anne über das Tiergespräch (schriftlich, von Anika im Call vorgelesen):** Seit dem Gespräch verhalte sich Number 1 „sehr angenehm", sie waren zweimal spazieren, sie reitet auf dem Platz und schenkt ihm beim Putzen mehr Aufmerksamkeit. → Testimonial-Kandidat fürs **Tiergespräch/Energetik**, nicht fürs Gelände (Freigabe anfragen; genauen Wortlaut aus ihrer Nachricht nehmen).
@@ -144,6 +149,15 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
 
+**Call 30.10.2026:**
+
+- **Wunsch nach wöchentlichen Aufgaben** (Anne: „Vielleicht könnte man jede Woche so eine Aufgabe kriegen, das wäre doch toll."). Dazu passt die dünne Call-Teilnahme. → Idee für die nächste Programmrunde: eine feste Wochenaufgabe als roter Faden und Anlass, sich zu melden.
+- **Antworten in Aufzeichnungen sind schwer zu finden** (Anne hat ihre Antwort im Call vom 21.10. nicht entdeckt, obwohl sie ihn angesehen hat). → Hinweis fürs Programm: Zeitmarken oder Kurz-Notizen zu den Aufzeichnungen.
+- **Trennung von den Herdenkumpels statt Gelände als Knackpunkt** (Anne: Er lässt sich wegführen, schwierig wird es, wenn die anderen weggeführt werden): Das Pferd, das zurückbleibt, kommt in Kursen selten vor. → Content-Idee.
+- **Wie viel Boden verträgt das Pferd?** (Anne, unebene Wiese): Schritt immer, Trab ausprobieren, Galopp in der nassen Jahreszeit eher nicht. → kleine FAQ.
+- **Nach dem Urlaub fragt das Pferd nach** (Sabine: „Bist du wirklich noch das Frauchen, das ich so kenne?"). → Alltagsnahes Reel-Thema.
+- **Beinschluss als Bremse** (Sabine wartet auf Anikas Reitvideos): Passt zur offenen Kurs-Lücke Tempokontrolle.
+
 **Calls 14.10.2026 und 21.10.2026:**
 
 - **Gewohnheitstier auf bekannten Wegen** (Sabine: „Sie ist genauso ein Gewohnheitstier wie ich"): Auf bekannten Runden alles fein, auf einem unauffälligen neuen Weg wird das Pferd nervös. Anikas Antwort: erst Gewohntes festigen, dann schrittweise neue Strecken dazunehmen. → Zweites Mal nach dem 02.10. Thema, guter Reel-Stoff.
@@ -153,7 +167,7 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Akupressur unterwegs?** (Sabine): Nur vorher in Ruhe wirklich wirksam, unterwegs höchstens der Yin-Tang-Punkt. → kleine FAQ.
 - **Freiarbeit als Gegenteil von Losreißen** (Anika): „Was ist das Gegenteil von Losreißen? Mein Pferd läuft mir frei hinterher." → Starke Brücke zum Freiarbeits- und Traumteam-Angebot; Sabine will das freie Zirkeln angehen.
 - **Tempokontrolle im Galopp auf engen Wegen** (Sabine, jetzt 5× Thema): Abwenden geht auf schmalen Wegen nicht. → Kurs-Lücke bleibt offen.
-- **Programmdauer:** Anika überlegt im Call laut, das Programm von 8 auf 12 Wochen zu verlängern. → Relevant für die nächste Salespage.
+- **Programmdauer:** Das Programm läuft jetzt generell 12 statt 8 Wochen (von Anika bestätigt). → Bei der nächsten Salespage und im Webinar anpassen, falls dort noch 8 Wochen stehen.
 
 **Fragerunde 07.10.2026 und Call 09.10.2026:**
 

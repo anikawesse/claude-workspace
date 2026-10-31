@@ -1,0 +1,6 @@
+[
+  { "mail": "Mail 1 nach Webinar", "betreff": "🌳 Die Türen zum Gelände-Programm sind offen.", "versand": "So 25.10.", "empfaenger": 119, "oeffner": 60, "klicks": 10, "abmeldungen": 0, "kaeufe": "" },
+  { "mail": "Mail 2 Testimonial", "betreff": "🌳❤️ Das erleben meine Schülerinnen im Gelände", "versand": "Mo 26.10.", "empfaenger": 117, "oeffner": 54, "klicks": 8, "abmeldungen": 0, "kaeufe": "" },
+  { "mail": "Mail 3 Frühbucherende", "betreff": "🌳⏳ Um Mitternacht ist dein Bonus weg", "versand": "Mo 26.10.", "empfaenger": 117, "oeffner": 42, "klicks": 5, "abmeldungen": 2, "kaeufe": "" },
+  { "mail": "Mail 4 Kurseinblick", "betreff": "🌳📋 Kurseinblicke ins Gelände-Programm", "versand": "Di 27.10.", "empfaenger": 114, "oeffner": 38, "klicks": 2, "abmeldungen": 0, "kaeufe": "" }
+]

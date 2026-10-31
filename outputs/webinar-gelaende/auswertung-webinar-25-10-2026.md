@@ -72,3 +72,22 @@ Abgleich der Zoom-Namen mit den Anmelderinnen (Devine-Tags). Nur eindeutig zuord
 - **Weniger Anmeldungen über Ads** (35 statt 71). Für die Bewertung brauche ich noch den Ad-Spend des Oktober-Launches.
 - **Der Content lief deutlich länger** (81 Min). Das hat den Kritiker vom September verhindert, kostet aber etwas Haltequote bis zum Pitch (64 % statt 74 %). Straffungs-Kandidat: Roadmap-Teil (ca. 20:12 bis 20:16), dort gingen die meisten.
 - **Zeitumstellung am selben Tag** und letzter Ferientag in Niedersachsen. Beides hat die Live-Zahl vermutlich gedrückt.
+
+## Sales-Mails Tag 1–2 (Stand 29.10.; auch in Google-Tabelle + Desktop-Excel, Blatt Sales-Mails ab Zeile 31, Exporte in `webinar-25-10-2026/salesmails/`)
+
+| Mail | Versand | Empf. | Öffnung | Klicks | Abm. | Sep zum Vergleich |
+|---|---|---|---|---|---|---|
+| 1 | So 25.10. 21:06 | 119 | 50,4 % | 10 (8,4 %) | 0 | 47,6 % / 6,9 % |
+| 2 | Mo 26.10. 07:00 | 117 | 46,2 % | 8 (6,8 %) | 0 | 46,1 % / 4,3 % |
+| 3 | Mo 26.10. 20:00 | 117 | 35,9 % | 5 (4,3 %) | 2 | 41,9 % / 5,1 % |
+| 4 | Di 27.10. 07:00 | 114 | 33,3 % | 2 (1,8 %) | 0 | 45,4 % / 3,1 % |
+
+- 73 von 119 haben mindestens 1 Mail geöffnet, **23 verschiedene Personen haben geklickt**, 0 Käufe, 0 Gesprächstermine.
+- Mail 1+2 sind so gut wie oder besser als im September. Ab Mail 3 fallen Öffnung und Klicks deutlich.
+- Befund: Die Mails bringen genug Leute auf die Seite. Der Abbruch passiert **nach dem Klick** (Salespage/Preis 749 €/Checkout). Salespage- und Checkout-Aufrufe zur Bestätigung noch holen.
+
+### Checkout (ThriveCart-Dashboard, product-44, Stand 29.10. mittags)
+
+- Checkout-Aufrufe seit Webinar: **6** (So 25.10.: 3 · Mo 26.10.: 3 · Di–Do bisher 0), Bestellungen 0. Dazu 3 Aufrufe am 22.10. (vor dem Webinar, vermutlich Test).
+- Zum Vergleich Sep: 12 Aufrufe → 1 Bestellung über Checkout (+1 Kauf außerhalb nach Telefonat).
+- Trichter Okt: 23 Mail-Klicker → 6 öffnen die Bezahlseite → 0 kaufen. Der größte Abbruch liegt **auf der Salespage** (vor dem Checkout).
