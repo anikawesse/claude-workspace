@@ -882,7 +882,22 @@
       "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\attach-pdfs.js\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\September\" --dry-run)",
       "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\diag-attach.js\")",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Herzensverbindung-Pur_neu.jpg\")",
-      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Jungpferde-Starterkit_neu.jpg\")"
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Jungpferde-Starterkit_neu.jpg\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\attach-pdfs.js\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\September\" 331)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\attach-pdfs.js\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Oktober\" --dry-run)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\attach-pdfs.js\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Oktober\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\check-rebills.js\")",
+      "Bash(Select-String -NotMatch \"Warning|deprecat\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-rebills.js\" --dry-run)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-rebills.js\")",
+      "Bash(node extract-belege.js)",
+      "Bash(node -e \"require\\('pdf-parse'\\); console.log\\('OK pdf-parse geladen'\\)\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\ref-lieferanten.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\ref-full.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-expenses.js\" --dry-run)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-expenses.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\sweep.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\check-status.js\")"
     ],
     "defaultMode": "bypassPermissions"
   }
