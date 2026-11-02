@@ -877,7 +877,12 @@
       "Bash(start \"\" \"index.html\")",
       "Bash(netlify --version)",
       "Bash(npx --no-install netlify-cli --version)",
-      "Bash(git commit -m 'Gelaende-Salespage: neues Testimonial \\(Susanne Huber\\) statt zwei alte; DOI-Bestaetigungsmail ergaenzt *)"
+      "Bash(git commit -m 'Gelaende-Salespage: neues Testimonial \\(Susanne Huber\\) statt zwei alte; DOI-Bestaetigungsmail ergaenzt *)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\probe-voucher-files.js\")",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\attach-pdfs.js\" \"C:\\\\Users\\\\Olive\\\\Desktop\\\\September\" --dry-run)",
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\diag-attach.js\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Herzensverbindung-Pur_neu.jpg\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\Jungpferde-Starterkit_neu.jpg\")"
     ],
     "defaultMode": "bypassPermissions"
   }
