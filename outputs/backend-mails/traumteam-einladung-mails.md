@@ -2,7 +2,7 @@
 
 Stand 03.11.2026 · Modell wie Backend-Soft-Mails: 3 Loops × 3 Mails, 9 Blickwinkel. Ziel jeder Mail: **Anmeldung zum Videotraining** (nicht Salespage). Kein Preis, keine Programm-Werbung, keine Wissensvermittlung. Basis: [Positionierung](../../context/traumteam-positionierung-bildsprache.md), [Glaubenssätze](../traumteam/webinar-glaubenssaetze.md), Präsi.
 
-Technik: Einladungs-Workflow pro Loop; am Start Tag `traumteam-webinar-reg` entfernen; vor jeder Mail Wenn/Dann „Tag `traumteam-webinar-reg` vorhanden?" → Ja: Ende.
+Technik: Einladungs-Workflow pro Loop; am Start Tag `everg_web_traumteam_reg` entfernen; vor jeder Mail Wenn/Dann „Tag `everg_web_traumteam_reg` vorhanden?" → Ja: Ende.
 
 ---
 
