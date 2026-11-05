@@ -91,3 +91,23 @@ Abgleich der Zoom-Namen mit den Anmelderinnen (Devine-Tags). Nur eindeutig zuord
 - Checkout-Aufrufe seit Webinar: **6** (So 25.10.: 3 · Mo 26.10.: 3 · Di–Do bisher 0), Bestellungen 0. Dazu 3 Aufrufe am 22.10. (vor dem Webinar, vermutlich Test).
 - Zum Vergleich Sep: 12 Aufrufe → 1 Bestellung über Checkout (+1 Kauf außerhalb nach Telefonat).
 - Trichter Okt: 23 Mail-Klicker → 6 öffnen die Bezahlseite → 0 kaufen. Der größte Abbruch liegt **auf der Salespage** (vor dem Checkout).
+
+## Endstand Launch Oktober (05.11.2026, komplett in Google-Tabelle + Desktop-Excel)
+
+- Programm 0 · Downsell 0 · Gespräche 0 · VIP 4 (31,50 € netto) · Ad-Spend 204,24 € → **Ergebnis −172,74 €**.
+- Sales-Mails 1–8 (Blatt Sales-Mails ab Zeile 31), Soft-Opt-outs 9, Downsell-Mails 1–4 (Blatt Downsell-Mails ab Zeile 11).
+- Vergleich aller Launches: `launch-vergleich-aug-sep-okt-2026.md`.
+
+### Empfänger-Verlauf 122 → 101 (nachgeprüft)
+
+| Schritt | Anzahl | Was passiert |
+|---|---|---|
+| Anmeldungen | 122 | |
+| Verkaufsmail 1 zugestellt | 119 | 3 nicht beliefert (ungültig/nicht bestätigt) |
+| Verkaufsmail 8 zugestellt | 113 | 5 Soft-Opt-outs + 1 echte Abmeldung (Saskia) |
+| Downsell-Mail 4 zugestellt | 97 | 13 Gelände-Schlüssel-Besitzerinnen absichtlich ausgeschlossen (Abzweigung → ENDE) + 3 Soft-Opt-outs (Verena, Ulrike/anyaulrike, Marion/outdoormari8) |
+| Warte-Schritt nach Downsell 4 (Devine-Zähler) | 101 | 4 durchlaufen ohne Zustellung |
+
+- In der ganzen Strecke nur **1 echte Abmeldung**; 9 Soft-Opt-outs bleiben auf der Liste.
+- ⚠️ Einige „Geklickt" in den Mail-Exporten sind Klicks auf den Soft-Opt-out-Link (Belinda, Ulrike/meljumim1, Christine Markfeit, Marion/outdoormari8) → echte Salespage-Klickerinnen ca. 27 statt 31.
+- Die Zahl am Devine-Workflow-Schritt (z. B. 101) = Kontakte, die gerade in diesem Schritt stehen, nicht Empfänger einer Mail.
