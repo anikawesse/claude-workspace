@@ -28,6 +28,8 @@ Anikas einzige Freelancerin (ex-Setterin → aktuell Community-Managerin der FB-
 
 **Offen:** Postfach + Ordner + Outlook/Handy einrichten; Devine-Rolle; Support-Wiki/SOP + Antwort-Vorlagen (Anika liefert häufigste Anfragetypen); ThriveCart eingeschränkter Zugang + 3–4 Loom-Videos (Zugang freischalten, Rechnung finden, Kauf sehen, Passwort-Reset); Rollen-Gespräch mit Freelancerin.
 
+**⚠️ Stand 06.11.2026 (Anika): Es gibt KEINE Support-Adresse.** Das Postfach support@ wurde nie eingerichtet, der gesamte Kundinnen-Support läuft über **info@anikas-pferdeakademie.de**. In Antworten, Vorlagen und Seiten immer info@ angeben, nie support@. Der Plan oben (Weg 1) ist damit nicht umgesetzt.
+
 Voller Fahrplan: outputs/freelancerin-support-setup/fahrplan.md. Siehe auch [[project_thrivecart]], [[project_manychat]].
 
 ---

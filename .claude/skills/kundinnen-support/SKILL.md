@@ -18,7 +18,7 @@ Jede Kundin fühlt sich gesehen und bekommt schnell eine warme, klare Antwort. W
 
 - **Tiergespräch-Zusammenfassungen:** Zoom-VTT → kurze Notiz für den Devine-Kontakt + Datei in `outputs/tiergespraeche/`
 - Antworten auf Kundinnen-Anfragen (Zugang, Rechnung, Inhalte, Fragen zur Methode)
-- Antwort-Vorlagen und Support-Wiki für die Freelancerin (First-Level-Support über support@)
+- Antwort-Vorlagen und Support-Wiki für die Freelancerin
 - Posts und Ansprachen in der Facebook-Gruppe und der Käufer-Gruppe
 - Zugangs-Laufzeiten (z.B. Tag `3-monate` für die Fragerunde)
 
@@ -55,7 +55,7 @@ Jede Kundin fühlt sich gesehen und bekommt schnell eine warme, klare Antwort. W
 
 - Community-Ton: warm, „Guten Morgen ihr Lieben“, Abschluss „Deine Anika“, wenige Dreier-Aufzählungen.
 - Namen von Kundinnen im Marketing nur mit Einverständnis, Pferdenamen bei Bedarf anonymisieren.
-- Kein Weiterleiten von info@ an die Freelancerin, Support läuft über support@.
+- **Es gibt keine eigene Support-Adresse.** Der gesamte Support läuft über **info@anikas-pferdeakademie.de**. In Antworten, Vorlagen und auf Seiten immer info@ angeben, nie support@.
 - Unsichere Zuordnungen (wer hat was gesagt) kennzeichnen statt raten.
 - **Übergreifend** (Memory): keine Gedankenstriche, kein Komma vor „und“, vollständige Sätze, scanbar, ⛔ nie „Du bist damit nicht allein“.
 
