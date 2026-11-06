@@ -111,7 +111,7 @@ Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibu
 
 **Zum Lesen für Anika:** .md-Dateien kann sie nicht öffnen. `node scripts/skills-als-html.js` erzeugt lesbare Seiten in `outputs/ki-team/stellenbeschreibungen/` (je Skill Stellenbeschreibung + Wissen). Nach jeder Skill-Änderung neu laufen lassen und im Browser öffnen.
 
-**Seitenleiste:** Chats sind in Gruppen pro Abteilung sortiert (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen). Neue Chats in die passende Gruppe einsortieren.
+**Seitenleiste:** Chats sind in Gruppen pro Abteilung sortiert (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen). Neue Chats in die passende Gruppe einsortieren. **Angepinnt ist nur die Assistenz** (Anika, 06.11.2026), höchstens vorübergehend ein brandaktuelles Projekt.
 
 **Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Morgen-Briefing werktags 7:00, Ads-Wochenbericht montags 8:00, Instagram-Rückblick alle zwei Wochen freitags 7:00 (gerade KW), Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
 
