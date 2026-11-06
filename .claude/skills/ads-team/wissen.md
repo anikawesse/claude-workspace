@@ -320,6 +320,8 @@ Anika schaltet **keine einzelnen Creatives/Anzeigen** innerhalb einer Kampagne a
 
 **How to apply:** Ads-Empfehlungen nur mit diesen zwei Hebeln formulieren. Eine schwache Anzeige wird man los, indem sie in der NÄCHSTEN Kampagne nicht mehr dabei ist und die alte Kampagne als Ganzes ausgeht, sobald die neue trägt. Kampagnen als Paket bewerten (CPA der ganzen Kampagne vs. Breakeven). Meine Deutung: gilt sinngemäß auch für Budget-/Zielgruppen-Edits an laufenden Kampagnen, das hat sie aber nicht ausdrücklich gesagt.
 
+**Ergänzung 06.11.2026 (Anika):** Empfehlungen auf **Creative-Ebene sind ausdrücklich erwünscht**: welche Creatives in die nächste Kampagne kommen, welche raus, welche neuen Motive oder Hooks fehlen, was an einem Creative schwach ist. Umgesetzt wird das weiterhin über die zwei Hebel oben (neue Kampagne mit den besten + neuen Creatives), nicht durch Pausieren einzelner Anzeigen in einer laufenden Kampagne.
+
 ---
 
 ## Ads-Playbook Agatha Bieschke
