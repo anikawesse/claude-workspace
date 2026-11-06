@@ -108,6 +108,8 @@ Jeder Arbeitsbereich bekommt einen eigenen Skill mit Stellenbeschreibung. Jeder 
 
 Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibung mit 8 Feldern) und `wissen.md` (gesammeltes Bereichswissen, früher in der Memory).
 
+**Zum Lesen für Anika:** .md-Dateien kann sie nicht öffnen. `node scripts/skills-als-html.js` erzeugt lesbare Seiten in `outputs/ki-team/stellenbeschreibungen/` (je Skill Stellenbeschreibung + Wissen). Nach jeder Skill-Änderung neu laufen lassen und im Browser öffnen.
+
 **Regel:** Neue Regeln und Learnings, die nur einen Bereich betreffen, unten in die `wissen.md` des passenden Skills schreiben, nicht in die Memory. In der Memory bleiben nur übergreifende Regeln, Positionierung, Projektstände und Fristen.
 
 ---
