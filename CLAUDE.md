@@ -113,7 +113,7 @@ Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibu
 
 **Seitenleiste:** Chats sind in Gruppen pro Abteilung sortiert (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen). Neue Chats in die passende Gruppe einsortieren.
 
-**Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Morgen-Briefing werktags 7:00, Ads-Wochenbericht montags 8:00, Instagram-Rückblick freitags 16:00, Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
+**Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Morgen-Briefing werktags 7:00, Ads-Wochenbericht montags 8:00, Instagram-Rückblick alle zwei Wochen freitags 7:00 (gerade KW), Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
 
 **Regel:** Neue Regeln und Learnings, die nur einen Bereich betreffen, unten in die `wissen.md` des passenden Skills schreiben, nicht in die Memory. In der Memory bleiben nur übergreifende Regeln, Positionierung, Projektstände und Fristen.
 

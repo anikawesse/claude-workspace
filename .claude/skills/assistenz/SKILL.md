@@ -72,7 +72,7 @@ Wenn zwei Abteilungen betroffen sind (z.B. Launch = Mails + Salespage + Ads), di
 |---|---|---|
 | Werktags 7:00 | Morgen-Briefing | Assistenz |
 | Montags 8:00 | Ads-Wochenbericht | ads-team |
-| Freitags 16:00 | Instagram-Rückblick | content-redaktion |
+| Alle 2 Wochen freitags 7:00 (gerade KW) | Instagram-Rückblick | content-redaktion |
 | Monatlich am 1. | Erinnerung Mail-Auswertung (Screenshots) | ads-team |
 | Monatlich am 1. | Buchhaltung ThriveCart → Lexware (lief schon vorher) | backoffice |
 
