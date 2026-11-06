@@ -28,7 +28,6 @@ Mails, die nach Anika klingen und Tina zum nächsten Schritt bringen: Webinar-An
 - Devine-Workflows verdrahten, Wartezeiten, Tags, Timer-Technik (nur Hinweise geben, siehe unten)
 - Preise oder Angebote festlegen
 - Mails verschicken
-- **Hard-Sale-Mails im Backend schreibt Anika selbst.** Nur auf ausdrücklichen Wunsch entwerfen.
 
 ## 4. Arbeitet mit (Wissen, vor dem Schreiben lesen)
 
