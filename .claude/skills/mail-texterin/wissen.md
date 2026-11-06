@@ -45,7 +45,7 @@ Anikas Soft-Mails und Story-Mails dürfen sich NICHT gestückelt lesen (zu viele
 **Dramaturgie jeder Story-Mail:** Die Story öffnet ein **Problem oder eine Sehnsucht** → den Leser **emotional abholen** → dann den **Nutzen** zeigen.
 
 **Weitere Mentorin-Vorgaben (ab 03.10.2026, gilt für alle überarbeiteten Mails):**
-- **Kein Button.** Der CTA ist ein Link **im Fließtext** (z.B. „…zeige ich dir hier.", „Einfach hier klicken.").
+- **CTA als Link im Fließtext** (z.B. „…zeige ich dir hier.", „Einfach hier klicken."). **Einzige Ausnahme (Anika, 06.11.2026):** In **Hard-Sale-Mails**, besonders zum Ende einer Deadline hin, darf zusätzlich ein **Button** rein. In allen anderen Mails kein Button.
 - **Nicht von einem „Kurs" sprechen.** Stattdessen die Inhalte/den Nutzen benennen (z.B. „diese Strategien", „die passende Notfall-Strategie").
 - **Konkrete Situationen als „Für den Fall, dass…"-Liste** mit Emoji pro Zeile (Trecker, bellender Hund, Turbogang nach Hause), statt abstrakter ✅-Wunschliste.
 - **Fett nur an wenigen Schlüsselstellen** (Sehnsucht, Payoff, Reframe, die Situations-Kernphrasen, der Link), nicht überladen.
@@ -104,6 +104,7 @@ Anikas Standard-Format für Mehrwert-Mails, die ein YouTube-Video als Hauptaufh�
 - **Bei Mehrwert-Mails (Video-Link):** Devine rendert Button am Ende → KEIN expliziter "Hier kommst du direkt zum Video"-Satz im Fließtext
 - **Bei Verkaufsmails (Kurs-Pitch):** DOCH expliziter Click-CTA im Text, z.B. "Aktuell für 27€ statt 197€. Klicke hier zum Kurs." → "Klicke hier" wird mit dem Link unterlegt
 - Unterschied: Mehrwert = Cliffhanger + Button, Verkauf = direkter Klick-Auftrag
+- ⚠️ **Überholt seit 06.11.2026:** Auch Mehrwert-Mails bekommen den Link im Fließtext, keinen Button. Button nur noch in Hard-Sale-Mails (siehe Mentorin-Vorgaben oben).
 
 ### Wording-Patterns für Verkaufsmails (Gelände-Schlüssel)
 

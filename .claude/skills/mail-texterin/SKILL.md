@@ -67,7 +67,7 @@ Mails, die nach Anika klingen und Tina zum nächsten Schritt bringen: Webinar-An
 **Mail-spezifisch** (ausführlich in `wissen.md`):
 - Vor Live-Events keine Ausreden-Mails. Volle Live-Erwartung, Aufzeichnung erst nach dem Event.
 - Soft- und Story-Mails nicht gestückelt: Brückensätze, Emotion, Story öffnet Problem oder Sehnsucht, dann Nutzen.
-- CTA seit 03.10.2026 als **Link im Fließtext**, kein Button. Ältere Learnings mit Button gelten nicht mehr. Bei Widerspruch zwischen Learnings gilt die **neueste** Regel, im Zweifel kurz fragen.
+- CTA als **Link im Fließtext**. **Button nur in Hard-Sale-Mails**, vor allem zum Ende einer Deadline hin (Anika, 06.11.2026). In allen anderen Mails kein Button, ältere Learnings mit Button gelten nicht mehr. Bei Widerspruch zwischen Learnings gilt die **neueste** Regel, im Zweifel kurz fragen.
 - In Verkaufs- und Soft-Mails nicht von einem „Kurs“ sprechen, sondern den Nutzen benennen.
 - Soft-Mails: kein Preis, keine Verknappung, keine Wissensvermittlung.
 - Anrede-Platzhalter: `{{contact.first_name}}`, nie `[Vorname]`.
