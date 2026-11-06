@@ -1,6 +1,6 @@
 ---
 name: backoffice
-description: Anikas Backoffice für Buchhaltung, Finanzen, Fristen und Technik. Verwenden für Lexware (ThriveCart-Import, Ausgabenbelege buchen), Banking-Routine und Finanzauswertung, Fristen (Steuer, IOSS/OSS, Kredit-Nachweise), Devine (API, Tags, Segmente, DND, Workflows, Countdown-Timer, Launch-Listen), ThriveCart-Setup und Webhooks, ManyChat-Automationen und die Anbindung an Devine, Drucker-Probleme. Trigger u.a. "Lexware", "Beleg", "Rechnung buchen", "Buchhaltung", "Banking", "Finanzen", "Frist", "Steuer", "IOSS", "OSS", "grenke", "Devine", "Tag", "Segment", "Workflow", "Timer", "ThriveCart", "Webhook", "ManyChat", "Codewort anlegen", "Drucker".
+description: Anikas Backoffice für Buchhaltung, Finanzen, Fristen und Technik. Verwenden für Lexware (ThriveCart-Import, Ausgabenbelege buchen), Banking-Routine und Finanzauswertung, Fristen (Steuer, IOSS/OSS, Kredit), Devine (API, Tags, Segmente, DND, Workflows, Countdown-Timer, Launch-Listen), ThriveCart-Setup und Webhooks, ManyChat-Automationen und die Anbindung an Devine, Drucker-Probleme. Trigger u.a. "Lexware", "Beleg", "Rechnung buchen", "Buchhaltung", "Banking", "Finanzen", "Frist", "Steuer", "IOSS", "OSS", "grenke", "Devine", "Tag", "Segment", "Workflow", "Timer", "ThriveCart", "Webhook", "ManyChat", "Codewort anlegen", "Drucker".
 version: 1.0.0
 ---
 
@@ -34,7 +34,7 @@ Im Hintergrund läuft alles: Geld ist richtig verbucht, keine Frist wird verpass
 
 - `wissen.md` in diesem Ordner: Lexware, Belege, Banking, Finanzauswertung 2025, Drucker, Devine (API, DND, Tag bestandskunden, Segmentierung), ManyChat (+ Devine-Anbindung), ThriveCart-Setup, Countdown-Timer, Launch-Listen
 - Tokens und URLs in `scripts/.env` (nie im Chat ausgeben)
-- Memory „IOSS/OSS-Klärung“ und „Mikrokredit grenke“ (Fristen, bleiben bewusst in der Memory)
+- Memory „IOSS/OSS-Klärung“ und „Mikrokredit grenke“ (Fristen und Ablösung, bleiben bewusst in der Memory)
 - Memory „Google Drive Struktur“, „Canva Struktur“ (Ablage)
 - Kontoauszüge und Auswertungen liegen außerhalb des Workspace: `Documents\Kontoauszüge\Konten 2025\_Auswertung`
 
@@ -63,10 +63,10 @@ Bei jedem Backoffice-Auftrag kurz prüfen, ob eine Frist in den nächsten 14 Tag
 
 | Frist | Stand laut Memory | Quelle |
 |---|---|---|
-| IOSS letzte Nullmeldung | bis 31.10.2026 | Memory „IOSS/OSS-Klärung“ |
-| OSS-Registrierung | wartet auf Ok der Steuerberaterin | Memory „IOSS/OSS-Klärung“ |
-| grenke Mittelverwendungsnachweis | ca. Ende Oktober 2026 | Memory „Mikrokredit grenke“ |
+| IOSS letzte Nullmeldung 09/2026 | Frist war 31.10.2026, **unklar ob erledigt** (Stand 06.11.26) → im BOP-Portal prüfen | Memory „IOSS/OSS-Klärung“ |
+| OSS-Meldung Q4/2026 (erste) | bis 31.01.2027, danach quartalsweise bis Ende des Folgemonats | Memory „IOSS/OSS-Klärung“ |
 | Schweiz-Thema | 2027 | Memory „IOSS/OSS-Klärung“ |
+| ~~grenke Mittelverwendungsnachweis~~ | gestrichen 06.11.26, Anika löst das Darlehen ab | Memory „Mikrokredit grenke“ |
 
 Neue Fristen hier eintragen und erledigte mit Datum abhaken.
 
