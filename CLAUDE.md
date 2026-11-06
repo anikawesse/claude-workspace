@@ -103,12 +103,17 @@ Jeder Arbeitsbereich bekommt einen eigenen Skill mit Stellenbeschreibung. Jeder 
 | `kundinnen-support` | Tiergespräch-Notizen, Support-Antworten, Freelancerin-Vorlagen, Community-Posts |
 | `produkt-werkstatt` | Kurse, Lektionen, Workbooks, Folien, Zertifikate, Thumbnails, Video-Technik |
 | `backoffice` | Lexware, Belege, Banking, Fristen, Devine, ThriveCart, ManyChat |
+| `assistenz` | Eingangskorb im angepinnten Chat „Assistenz“: verteilt Aufträge, Überblick, Fristen, Morgen-Briefing |
 | `hook-reel-coach` | Hooks und Reel-Ideen bewerten und entwickeln |
 | `humanizer`, `ki-sprech-killer` | Lektorat: jeder Text vor der Abgabe |
 
 Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibung mit 8 Feldern) und `wissen.md` (gesammeltes Bereichswissen, früher in der Memory).
 
 **Zum Lesen für Anika:** .md-Dateien kann sie nicht öffnen. `node scripts/skills-als-html.js` erzeugt lesbare Seiten in `outputs/ki-team/stellenbeschreibungen/` (je Skill Stellenbeschreibung + Wissen). Nach jeder Skill-Änderung neu laufen lassen und im Browser öffnen.
+
+**Seitenleiste:** Chats sind in Gruppen pro Abteilung sortiert (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen). Neue Chats in die passende Gruppe einsortieren.
+
+**Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Morgen-Briefing werktags 7:00, Ads-Wochenbericht montags 8:00, Instagram-Rückblick freitags 16:00, Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
 
 **Regel:** Neue Regeln und Learnings, die nur einen Bereich betreffen, unten in die `wissen.md` des passenden Skills schreiben, nicht in die Memory. In der Memory bleiben nur übergreifende Regeln, Positionierung, Projektstände und Fristen.
 

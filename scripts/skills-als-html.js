@@ -9,7 +9,7 @@ const skillsDir = path.join(root, ".claude", "skills");
 const outDir = path.join(root, "outputs", "ki-team", "stellenbeschreibungen");
 fs.mkdirSync(outDir, { recursive: true });
 
-const TEAM = ["mail-texterin", "salespage-texterin", "content-redaktion", "ads-team",
+const TEAM = ["assistenz", "mail-texterin", "salespage-texterin", "content-redaktion", "ads-team",
   "kundinnen-support", "produkt-werkstatt", "backoffice"];
 
 const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

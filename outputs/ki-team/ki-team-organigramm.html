@@ -102,9 +102,9 @@ tr:last-child th,tr:last-child td{border-bottom:0}
 <div class="wrap">
 
 <header>
-  <span class="eyebrow">Anikas Pferdeakademie · Stand 06.11.2026 abends</span>
+  <span class="eyebrow">Anikas Pferdeakademie · Stand 06.11.2026 spätabends</span>
   <h1>Anikas KI-Team</h1>
-  <p class="lead">Alle 6 Abteilungen haben jetzt eine Stellenbeschreibung als Skill. Das Wissen, das vorher verstreut in der Memory lag, ist in die passende Abteilung umgezogen. Offen sind noch die Assistenz als angepinnter Chat und der Dienstplan.</p>
+  <p class="lead">Alle 6 Abteilungen haben jetzt eine Stellenbeschreibung als Skill. Das Wissen, das vorher verstreut in der Memory lag, ist in die passende Abteilung umgezogen. Die Assistenz sitzt als angepinnter Chat in der Seitenleiste, die Chats sind nach Abteilungen gruppiert und der Dienstplan läuft.</p>
   <div class="legend">
     <span><span class="chip ok">steht</span> fester Skill, Command oder Skript</span>
     <span><span class="chip ok">steht</span> Regeln und Vorlagen vorhanden, aber keine feste Rolle</span>
@@ -118,7 +118,7 @@ tr:last-child th,tr:last-child td{border-bottom:0}
     <div class="boss"><strong>Anika</strong>entscheidet und gibt frei</div>
     <div class="stem"></div>
     <div class="staff">
-      <div class="box"><h3>Assistenz</h3><p>Claude Code mit <code>/prime</code> und <code>CLAUDE.md</code>. Nimmt Aufträge an und weiß, welche Rolle zuständig ist.</p></div>
+      <div class="box"><h3>Assistenz</h3><p>Skill <code>assistenz</code> im angepinnten Chat „Assistenz“. Dein Eingangskorb: nimmt alles an, erledigt Kleines, verteilt Großes an die zuständige Abteilung und macht werktags das Morgen-Briefing.</p></div>
       <div class="box"><h3>Business Brain</h3><p><code>context/</code>, <code>reference/</code> und rund 100 Memory-Einträge: Tina, Positionierung, Wording-Regeln, Tools.</p></div>
       <div class="box"><h3>Lektorat</h3><p>Humanizer und KI-Sprech-Killer prüfen jeden Text vor der Auslieferung. Das hat kaum jemand so sauber.</p></div>
     </div>
@@ -184,7 +184,7 @@ tr:last-child th,tr:last-child td{border-bottom:0}
         <li><span class="name">Datensicherung</span><span class="chip ok">steht</span><span class="how">Skripte <code>auto-backup.ps1</code>, <code>supabase-keepalive.ps1</code></span></li>
         <li><span class="name">Devine-Pflege</span><span class="chip ok">steht</span><span class="how">Retag- und Segment-Skripte</span></li>
         <li><span class="name">Belege Ausgaben</span><span class="chip ok">steht</span><span class="how">Kategorien aus Lieferanten-Historie</span></li>
-        <li><span class="name">Fristen-Wächterin</span><span class="chip part">im Aufbau</span><span class="how">Fristen-Liste steht im Backoffice-Skill, das tägliche Morgen-Briefing fehlt noch</span></li>
+        <li><span class="name">Fristen-Wächterin</span><span class="chip ok">steht</span><span class="how">Fristen-Liste im Backoffice-Skill, Morgen-Briefing werktags um 7:00</span></li>
       </ul>
     </article>
   </div>
@@ -233,13 +233,13 @@ tr:last-child th,tr:last-child td{border-bottom:0}
 
 <section aria-labelledby="dienst">
   <span class="eyebrow">Selbstständig arbeiten</span>
-  <h2 id="dienst">Möglicher Dienstplan</h2>
+  <h2 id="dienst">Dienstplan</h2>
   <p class="lead">Das ist der Teil, der dir wirklich zuarbeitet, ohne dass du etwas anstößt.</p>
   <div class="shifts">
     <div class="shift"><span class="when">Werktags 7:00</span><h3>Morgen-Briefing</h3><p>Was steht heute an, welche Fristen laufen ab, was ist seit gestern liegen geblieben.</p></div>
     <div class="shift"><span class="when">Montags 8:00</span><h3>Ads-Wochenbericht</h3><p>Auswertung in die Google-Tabelle plus drei Sätze, was auffällt.</p></div>
     <div class="shift"><span class="when">Freitags 16:00</span><h3>Instagram-Rückblick</h3><p>Welche Reels und Hooks diese Woche getragen haben.</p></div>
-    <div class="shift"><span class="when">Monatlich am 1.</span><h3>Mail-Auswertung</h3><p>Monatstabelle Mail Tag 1 bis 15, mit Differenz statt kumulierter Werte.</p></div>
+    <div class="shift"><span class="when">Monatlich am 1.</span><h3>Mail-Auswertung</h3><p>Erinnerung an die Screenshots um 8:30, danach Monatstabelle Mail Tag 1 bis 15 mit Differenz statt kumulierter Werte. Die Buchhaltung ThriveCart → Lexware läuft wie bisher am 1. um 6:00.</p></div>
   </div>
   <p class="note">Wichtig: Geplante Aufgaben, die an deine Dateien und Skripte müssen, laufen über den Rechner. Er muss dafür an sein. Cloud-Routinen laufen auch bei ausgeschaltetem Rechner, kommen aber nicht an deinen Workspace.</p>
 </section>
@@ -248,9 +248,9 @@ tr:last-child th,tr:last-child td{border-bottom:0}
   <h2 id="weiter">Wie es weitergeht</h2>
   <ol>
     <li>✅ <strong>Alle 7 Stellenbeschreibungen</strong> sind angelegt: mail-texterin, salespage-texterin, content-redaktion, ads-team, kundinnen-support, produkt-werkstatt, backoffice.</li>
-    <li><strong>Durchlesen und testen:</strong> Jede Stelle an der nächsten echten Aufgabe ausprobieren und nachschärfen.</li>
-    <li><strong>Assistenz:</strong> angepinnter Chat als Eingangskorb plus Gruppen pro Abteilung in der Seitenleiste.</li>
-    <li><strong>Dienstplan:</strong> Morgen-Briefing mit Fristen, Ads-Wochenbericht, Instagram-Rückblick, Mail-Auswertung.</li>
+    <li>✅ <strong>Durchgelesen</strong> und an fünf Stellen korrigiert (06.11.2026).</li>
+    <li>✅ <strong>Assistenz:</strong> angepinnter Chat „Assistenz“ als Eingangskorb plus 6 Gruppen pro Abteilung in der Seitenleiste.</li>
+    <li>✅ <strong>Dienstplan</strong> läuft als geplante Aufgaben. Nach zwei, drei Wochen prüfen, was davon wirklich hilft.</li><li><strong>Testen:</strong> Jede Stelle an der nächsten echten Aufgabe ausprobieren und nachschärfen.</li>
     <li>Erst danach entscheiden, ob du ein Dashboard oder Projekte fürs Handy brauchst.</li>
   </ol>
 </section>

@@ -1,7 +1,7 @@
 # Plan: KI-Team aus Skills aufbauen
 
 **Datum:** 06.11.2026
-**Status:** In Arbeit (Schritte 1 bis 3 erledigt, Anika liest noch gegen)
+**Status:** Aufgebaut (Schritte 1 bis 5 erledigt am 06.11.2026), jetzt im Alltag testen
 **Übersicht:** `outputs/ki-team/ki-team-organigramm.html`
 
 ## Ziel
@@ -26,6 +26,7 @@ Jeder Arbeitsbereich bekommt eine feste „Mitarbeiterin“ als Skill mit Stelle
 | 4 | `ads-team` | Ad-Texte, Kampagnenlogik, Tracking, alle Auswertungen (Ads, Launch, Webinar, Mails) | ✅ 06.11.26 |
 | 5 | `kundinnen-support` | Tiergespräch-Notizen, Support-Antworten, Community-Posts (`/gelaende-call` bleibt Command) | ✅ 06.11.26 |
 | 6 | `produkt-werkstatt` | Kursmodule, Workbooks, Video-Technik, Zertifikate | ✅ 06.11.26 |
+| 8 | `assistenz` | Eingangskorb, Überblick, Fristen, Morgen-Briefing, Verteilen an Abteilungen | ✅ 06.11.26 |
 | 7 | `backoffice` | Lexware, Belege, Devine-Pflege, Fristen, Banking | ✅ 06.11.26 |
 
 Schon vorhanden und bleibt: `hook-reel-coach`, `humanizer`, `ki-sprech-killer` (Lektorat).
@@ -35,6 +36,6 @@ Schon vorhanden und bleibt: `hook-reel-coach`, `humanizer`, `ki-sprech-killer` (
 1. ✅ Abteilungen festlegen (diese Datei)
 2. ✅ Skill `mail-texterin` bauen, Mail-Regeln aus der Memory umziehen, an der nächsten echten Mail testen
 3. ✅ Skills 2 bis 7 angelegt (06.11.26), rund 60 Memory-Einträge 1:1 in die jeweilige `wissen.md` umgezogen
-3b. ⏭️ Anika liest die Stellenbeschreibungen, dann an echten Aufgaben testen und nachschärfen
-4. Assistenz: Team-Übersicht in `CLAUDE.md`, angepinnter Chat „Assistenz“, Seitenleisten-Gruppen pro Abteilung
-5. Dienstplan: Morgen-Briefing mit Fristen, Ads-Wochenbericht, Instagram-Rückblick, Mail-Auswertung monatlich
+3b. ✅ Anika hat alle Stellenbeschreibungen gelesen und korrigiert (Hard-Sale, Button, Ads-Creatives und Anlegen, info@ statt support@, Devine selbst). Lesbare Seiten: `outputs/ki-team/stellenbeschreibungen/` (`node scripts/skills-als-html.js`). ⏭️ an echten Aufgaben testen und nachschärfen
+4. ✅ Assistenz: Skill `assistenz`, angepinnter Chat „Assistenz“, 6 Seitenleisten-Gruppen (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen), alte Chats einsortiert
+5. ✅ Dienstplan als geplante Aufgaben (Auto-Modus): `morgen-briefing` werktags 7:00, `ads-wochenbericht` montags 8:00, `instagram-rueckblick` freitags 16:00, `mail-auswertung-erinnerung` am 1. um 8:30; `buchhaltung-thrivecart-lexware` am 1. um 6:00 lief schon. Die tägliche `ads-auswertung-gelaende` bleibt aus (war schon deaktiviert). ⏭️ Nach 2 bis 3 Wochen prüfen, was hilft
