@@ -29,6 +29,7 @@ Claude sollte sich immer über `/prime` am Session-Start orientieren, dann mit v
 .
 ├── CLAUDE.md              # Diese Datei — Kern-Kontext, immer geladen
 ├── .claude/
+│   ├── skills/            # KI-Team: ein Skill pro Arbeitsbereich (siehe unten)
 │   └── commands/          # Slash-Commands, die Claude ausführen kann
 │       ├── prime.md       # /prime — Session-Initialisierung
 │       ├── create-plan.md  # /create-plan — Implementierungspläne erstellen
@@ -86,6 +87,28 @@ Beispiel: `/implement plans/2026-01-28-wettbewerbs-analyse-command.md`
 **Zweck:** Wöchentlichen Live-Call des Gelände-Programms auswerten.
 
 Liest das Zoom-Transkript (.vtt vom Desktop, optional Pfad als Argument), aktualisiert die Kundinnen-Übersicht in `outputs/gelaende-calls/kundinnen-uebersicht.md`, pusht sie via `scripts/gelaende-call-doc-update.ps1` ins Google Doc „Gelände-Programm — Call-Notizen Kundinnen" und sammelt Marketing-Insights (O-Töne, Einwände, häufige Fragen, Tina-Abgleich) in `outputs/gelaende-calls/marketing-insights.md`. Details im Command selbst.
+
+---
+
+## KI-Team (Skills als Mitarbeiterinnen)
+
+Jeder Arbeitsbereich bekommt einen eigenen Skill mit Stellenbeschreibung. Jeder Chat kann jeden Skill nutzen: Chats sind Aufgaben, Skills sind die Mitarbeiterinnen. Plan und Status: `plans/2026-11-06-ki-team-skills.md`, Organigramm: `outputs/ki-team/ki-team-organigramm.html`.
+
+| Skill | Zuständig für |
+| ----- | ------------- |
+| `mail-texterin` | Alle Mails: Webinar, Launch, Soft-/Hard-Sale, Aufwärm, Mehrwert, Betreffzeilen |
+| `salespage-texterin` | Salespages, Landing-/Opt-in-Seiten, Upsells, ThriveCart-Texte, Angebot und Garantie |
+| `content-redaktion` | Karussells (Canva), Captions, Yapping, Reel-Formate, Test-Reels, IG-Auswertung, Gemini-Bilder |
+| `ads-team` | Meta-Ads, Tracking, alle Auswertungen mit Zahlen (Ads, Launch, Webinar, Mails) |
+| `kundinnen-support` | Tiergespräch-Notizen, Support-Antworten, Freelancerin-Vorlagen, Community-Posts |
+| `produkt-werkstatt` | Kurse, Lektionen, Workbooks, Folien, Zertifikate, Thumbnails, Video-Technik |
+| `backoffice` | Lexware, Belege, Banking, Fristen, Devine, ThriveCart, ManyChat |
+| `hook-reel-coach` | Hooks und Reel-Ideen bewerten und entwickeln |
+| `humanizer`, `ki-sprech-killer` | Lektorat: jeder Text vor der Abgabe |
+
+Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibung mit 8 Feldern) und `wissen.md` (gesammeltes Bereichswissen, früher in der Memory).
+
+**Regel:** Neue Regeln und Learnings, die nur einen Bereich betreffen, unten in die `wissen.md` des passenden Skills schreiben, nicht in die Memory. In der Memory bleiben nur übergreifende Regeln, Positionierung, Projektstände und Fristen.
 
 ---
 
