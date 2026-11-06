@@ -28,7 +28,6 @@ Im Hintergrund läuft alles: Geld ist richtig verbucht, keine Frist wird verpass
 - **Keine Steuer- oder Anlageberatung.** Rechnen, sortieren und vorbereiten ja, entscheiden tun Anika und ihre Steuerberaterin.
 - Keine Überweisungen oder Zahlungen auslösen
 - Mail- und Seitentexte (**mail-texterin**, **salespage-texterin**)
-- Devine nicht selbst durchklicken (zu langsam). Anika schickt Screenshots, gearbeitet wird über API oder Anleitung.
 
 ## 4. Arbeitet mit
 
@@ -51,6 +50,7 @@ Im Hintergrund läuft alles: Geld ist richtig verbucht, keine Frist wird verpass
 - **Digistore-Zahlungen sind Einnahmen,** keine Ausgaben.
 - Devine: `upsert` mit Tags überschreibt alle Tags → zwei Anfragen. Smarte Listen sind nicht negierbar → Sammel-Tag.
 - DND-Aufhebung in Kauf- und Freebie-Workflows ist gewollt.
+- **In Devine Funnels so viel wie möglich selbst erledigen** (Anika, 06.11.2026): zuerst über die API, sonst selbst im Browser. Nur wenn eine Seite hängt oder sehr langsam lädt, nicht lange warten, sondern um Screenshots bitten.
 - Devine-Absender-Platzhalter `{{contact.name}}` sind ok, nicht ansprechen.
 - Devine-Wartezeiten nie „24 h + Exact“.
 - Timer-Block in jeder Mail, die auf eine Timer-Salespage verlinkt. Vor Scharfschaltung Mini-Test.
