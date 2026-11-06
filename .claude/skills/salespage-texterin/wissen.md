@@ -159,3 +159,43 @@ Bei JEDEM neuen Angebot/Kurs/Webinar fragen:
 
 ### Wichtigster Takeaway
 Eine starke Big Idea bestimmt Glaubenssätze und Gefühle für das Angebot, trägt das Business über Jahre und kann eine Bewegung auslösen. Je stärker die Big Idea, desto größer wird das Business.
+
+## Vorbild: interaktive Salespage „KI-Mastery“ (10xbusiness.de)
+
+Anika hat die Seite am 05.11.2026 gesehen und fand Aufbau und interaktive Elemente gut. Ausgelesen am 06.11.2026. Nur als Bauplan nutzen, keine Texte übernehmen.
+
+### Aufbau (Reihenfolge)
+1. **Countdown-Leiste ganz oben** mit Enddatum, Preis und Timer
+2. **Hero:** Produktname + Big Idea („7-Figure Business Engine“), ein Satz Versprechen, ein bildhaftes Vorher/Nachher („Selfie rein, neue Fotos raus“), zwei Buttons: „Ich bin dabei“ und „Zeig mir, wie das abläuft“
+3. **Schmerz als Fragen:** 6 Fragen „Wie oft …?“, jede mit kurzem Schmerzsatz und darunter die Lösung „Mit KI-Mastery …“
+4. **„So sieht das in deinem Alltag aus“:** 3 Prozesse als animierte Karten nach dem Muster **Du gibst rein → dein Team arbeitet (3 Schritte) → raus kommt**
+5. Button + Testimonials (3 Stück)
+6. **„Alles drin auf einen Blick“:** Leistungen als Liste mit fettem Stichwort vorne
+7. **10 Boni, je einer pro Zögern-Grund**, mit **Wert-Stack, der beim Scrollen hochzählt**, danach Gesamtwert gegen Deal-Preis
+8. **Kursbereich-Vorschau:** die 6 Bereiche nummeriert, Lektionen max. 5 Minuten
+9. Testimonials, dann **zweite Runde Alltags-Karten** (3 weitere Prozesse)
+10. **Klickbare Organigramm-Demo** (Setup auswählen → importiert → läuft)
+11. **Dashboard-Mockup** („Mein Tag“, Top 3, Energie-Auswahl)
+12. **Kreislauf-Grafik mit 7 Abteilungen zum Antippen**, jede zeigt „Du gibst rein / Dein Team liefert“
+13. Über mich mit 3 Kennzahlen-Kacheln
+14. **Rechner:** Schieberegler für Zeitaufwand, Ergebnis „VA kostet X €, das Programm Y €, Z € bleiben dir“
+15. Preisblock mit durchgestrichenem Preis, Timer, Mindestlaufzeit; Button-Unterzeile rechnet den Preis klein („weniger als 15 VA-Stunden“)
+16. Lange Testimonial-Wand mit Mini-Fallgeschichten vorweg
+17. **FAQ als Ich-Sätze** („Ich habe wenig Zeit, schaffe ich das?“), zum Antippen
+18. Abschluss-Stack „Das alles bekommst du“ + letzter Timer + Button
+
+### Was die Seite stark macht
+- **Nach fast jedem Abschnitt ein Button**, jeder mit eigenem Ich-Text passend zum Abschnitt („Ich will in den Kursbereich“, „Ich stelle jetzt mein AI-Team ein“) und einer Unterzeile mit Preis oder Frist
+- **Zeigen statt behaupten:** die Leserin sieht den Ablauf als kleine Animation, statt eine Leistungsliste zu lesen
+- **Interaktive Elemente machen die Leserin aktiv:** antippen, schieben, scrollen und zusehen, wie der Wert wächst
+- **Der Rechner rechnet den Preis gegen eine Alternative**, die die Leserin sonst bezahlen würde
+- **Ein Bonus pro Einwand** ist eine elegante Form der „Ich weiß, was du denkst“-Methode
+- FAQ in der Ich-Form klingt wie die eigene Frage der Leserin
+
+### Übertragen auf Anikas Gelände-Seiten (Ideen)
+- **Vorher/Nachher-Karten** „Du kommst mit … → wir üben … → raus kommt …“, z.B. „Pferd klebt am Hof → Sicherheitsanker + Pferdemagnet → ihr geht entspannt allein los“
+- **Gelände-Situationen zum Antippen** (Traktor, Flatterband, allein weg vom Stall, Losreißen) und jede zeigt, welcher Baustein hilft
+- **Rechner** „Was kostet dich eine Trainerin vor Ort?“ (z.B. 85 € pro Einheit × Einheiten) gegen den Programmpreis
+- **Einwand-Boni:** für Tinas Kern-Einwand „Schaffe ich das allein?“ einen Bonus, der genau das löst
+- **FAQ als Tinas eigene Sätze** („Meine Stute ist erst 4, ist das zu früh?“)
+- Technisch: auf Devine prüfen, was an HTML/JS geht; ThriveCart nimmt kein HTML (siehe oben)

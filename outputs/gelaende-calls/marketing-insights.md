@@ -19,6 +19,12 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Call 06.11.2026 (Sabine, Anne):**
+
+- **Sabines Vorher/Nachher in eigenen Worten:** Im März sang sie auf der kleinsten Nachbarwiese noch ununterbrochen „Happy Birthday", um sich und Flora zu beruhigen; jetzt seien sie „ein ganz, ganz Stück weitergekommen". Dazu der frische Beleg: Nach dem Auszug von Floras zwei Freundinnen (vor zwei Jahren war so eine Lage eskaliert) ging der erste Spaziergang „ganz entspannt". → Starke Abschluss-Story fürs Programm (Freigabe anfragen).
+- **Anne, Reitplatz Tag 2:** Er riss sich nicht mehr los, und die Osteopathin, die ihn nachmittags ritt, sagte: **„Er ging lange nicht so gut wie heute."**
+- **Wunsch nach Fortsetzung** (Sabine): „Unsere Calls laufen ja jetzt so langsam aus", sie schlug einen Call in einem Jahr vor, um die Entwicklung aller zu sehen. → Signal für ein Alumni- oder Folgeangebot.
+
 **Call 30.10.2026 (Sabine, Anne):**
 
 - **Anne, vier Wochen nach dem Onboarding:** „Ich kann mit meinem Pferd ins Gelände spazieren gehen. Das funktioniert." Beim Einstieg am 05.10. war das Losreißen ihr Hauptthema und sie ging gar nicht ins Gelände. → Testimonial-Kandidat fürs Gelände-Programm (Freigabe anfragen, vorher den Stand beim Losreißen klären).
@@ -88,6 +94,13 @@ Zweifel und Blockaden. Häufungen markieren → Kandidaten für die 3 Einwand-Co
 - **Garantie als Kaufhürde** (Corina): „Wenn ich nach 14 Tagen keine Verbesserung im Gelände merke, bekomme ich wirklich ohne weiteres das komplette Geld zurück?" → Garantie gehört klar und früh in Pitch + Verkaufsmails.
 - **„Angst vor dem Winter"** (Simone mit Tari, Losreißer, Unterstützungsband angerissen): Die Jahreszeit (dunkel, glatt, weniger Bewegung) ist ein echter Angst-Verstärker. → Saison-Winkel für Oktober–Dezember.
 
+**Call 06.11.2026:**
+
+- **„Liegt es am bekannten Gelände oder vertraut sie mir?"** (Sabine): Die Sorge, dass der Fortschritt in fremdem Terrain nicht hält. Anikas Antwort: „Das kannst du nicht trennen, das ist immer beides", Gruselstellen haben nichts mit fehlendem Vertrauen zu tun. → Starker Einwand- und Content-Winkel („Mein Pferd vertraut mir doch, warum hat es trotzdem Angst vor dieser Stelle?").
+- **Herz-Moment nach dem Losreißen** (Anne): „Mein Herz ist gerade unter der Kniescheibe", deshalb nicht aufgestiegen. → Echtes Wording für Phase 1 und für die Erlaubnis, auch mal nicht zu reiten.
+- **Trainer unterschätzen das Pferd** (Anne: „Auf dem Reitplatz macht er Handstand", draußen ist es anders). → Content-Winkel „Auf dem Platz ein Engel, draußen ein anderes Pferd".
+- **Hartes Durchgreifen nach dem Losreißen** (Annes Trainerin jagte ihn, Sabine nutzt die Longenhand hinter dem Rücken als Bremshebel): Die Kundinnen greifen zu Mitteln, von denen Anika eher abrät. → Eine klare Haltung zum Umgang mit Losreißen als Content oder Lektion lohnt sich.
+
 **Calls 14.10.2026 und 21.10.2026:**
 
 - **Vermeidung beim großen Ziel** (Sabine): „Wenn ich denke, vielleicht sollte ich das Maisfeld nochmal angehen, dann denke ich: Ne, heute eher nicht, doch zu kaputt." → Ehrlicher Einwand gegen das eigene Weiterkommen; passt als „Kennst du das?"-Hook und als Grund für die Begleitung (Accountability durch die Calls).
@@ -148,6 +161,13 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Call 06.11.2026:**
+
+- **Herdentrennung als Auslöser** (Sabine nach dem Auszug von Floras Freundinnen, vorher Caroline und Nicola): Das zurückbleibende Pferd ruft, das weggeführte will zurück. → Inzwischen bei mehreren Kundinnen Thema, Kandidat für eine eigene Lektion „Wenn sich die Herde verändert".
+- **Freiarbeit mit Halsring als Brücke zum Gelände** (Sabine): Trab frei mit Handwechsel nur mit dem Seil, Anikas Zwischenstufe Halsring statt Halfter. → Bestätigt „Freiarbeit ist das Gegenteil von Losreißen" mit einem echten Fortschritt; Cross-sell Traumteam.
+- **Pferd im Stall nicht einzufangen** (Einstallerin bei Sabine, ein bis zwei Stunden Hinterherlaufen): zweite Empfehlungs-Chance aus Sabines Stall; Anika hat ihren Kontakt angeboten.
+- **Führen von rechts** (Anne, Sabine): Beide testen die ungewohnte Seite. → kleine FAQ „Von welcher Seite führe ich ein Pferd, das sich losreißt?".
 
 **Call 30.10.2026:**
 

@@ -101,6 +101,8 @@ Routine für die wöchentlichen Live-Calls des Gelände-Programms (siehe [[proje
 
 ⚠️ Anikas Tonspur in Zoom-Transkripten oft lückenhaft (wie bei [[tiergespraech-zusammenfassungen]]).
 
+**Nachtrag 06.11.2026:** 9. Feedbackrunde 06.11. ausgewertet (Sabine, Anne). Programm (12 Wochen, Start 03.09.) läuft Ende November aus; Sabine wünscht sich einen Jahres-Call. Annes Trainerin heißt Madeleine. Reihenfolge beim Ablegen beachten: erst die Lesefassung `JJJJ-MM-TT-call-transkript.md` schreiben, dann die `roh-*.txt` löschen.
+
 **Nachtrag 30.10.2026:** 8. Feedbackrunde 30.10. ausgewertet (Sabine, Anne erstmals live). Wieder freitags 11 Uhr. Einfüge-Weg: `sed -f` mit Zeilennummern aus `grep -n`, danach `## `-Überschriften (9) und Datumszeilen (8) zählen; kein `replace_all`. Programm läuft jetzt generell **12 Wochen** (Anika, 30.10.); Pulsgurt- und Anti-Fress-Netz-Tipps sind hochgeladen. Offenes Anika-ToDo: Reitvideos Beinschluss (Kenzie Dysli).
 
 **Nachtrag 22.10.2026:** Calls 14.10. (nur Sabine) + 21.10. (Sabine, Caroline, Annes schriftliche Frage) ausgewertet. Herbstferien-Calls mittwochs 19 Uhr.  Reheschub-Pferd „Horst" = **Nicolas Hans** (von Anika bestätigt, eingetragen); Nicola ist mit beiden Pferden umgezogen. ⚠️ Lektion: `replace_all` auf eine Zeile wie „09.10. … Nicht dabei." trifft auch längere Zeilen mit demselben Anfang (Miriam) → danach immer per grep prüfen. Anika fragt, ob ich Calls schon hatte → Abgleich über `ls transkripte/` (Dateinamen tragen das Call-Datum).

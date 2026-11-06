@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Content 14 Tage im Voraus</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--card:#fff;--ink:#2b2420;--muted:#7a6a5e;--rose:#c98b7f;--gold:#c9a24a;--rust:#a4552f;--red:#691212;--ok:#4f7a4a;--line:#eadfd2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.55}
+main{max-width:860px;margin:0 auto;padding:28px 16px 60px}
+h1{font-size:28px;margin:0 0 4px;color:var(--red)}
+.sub{color:var(--muted);margin:0 0 26px}
+h2{font-size:20px;margin:34px 0 10px;color:var(--rust)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:12px 0}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.kpi b{display:block;font-size:26px;color:var(--red)}
+.kpi span{color:var(--muted);font-size:14px}
+ul{padding-left:20px;margin:6px 0}
+li{margin:4px 0}
+.flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0}
+.st{padding:6px 12px;border-radius:999px;font-weight:600;font-size:14px;color:#fff}
+.s1{background:#a99a8c}.s2{background:var(--gold)}.s3{background:var(--ok)}.s4{background:var(--rust)}.s5{background:var(--red)}
+.arrow{color:var(--muted)}
+.warn{border-left:5px solid var(--gold)}
+.good{border-left:5px solid var(--ok)}
+.todo{border-left:5px solid var(--red)}
+table{width:100%;border-collapse:collapse;font-size:15px}
+td,th{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:2px 8px;border-radius:6px;background:#f1e7da;color:var(--rust)}
+small{color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<h1>Content 14 Tage im Voraus</h1>
+<p class="sub">Bestandsaufnahme und Vorschlag der Content-Redaktion · Stand 06.11.2026 · <b>noch nichts gebaut, wartet auf dein Ok</b></p>
+
+<h2>1. Bestandsaufnahme</h2>
+<div class="kpis">
+  <div class="kpi"><b>31.10.</b><span>letzter Test-Reel-Batch (5 Varianten am 30.10.)</span></div>
+  <div class="kpi"><b>seit 02.11.</b><span>nur noch Karussells aus dem Vorrat vom 27.10.</span></div>
+  <div class="kpi"><b>ca. 8 bis 10</b><span>fertige Karussells noch ungepostet (Schätzung)</span></div>
+  <div class="kpi"><b>0</b><span>Beiträge im Devine Social Planner</span></div>
+</div>
+
+<div class="card warn">
+<b>So weit hängst du hinterher:</b>
+<ul>
+<li>Im Oktober lief es rund: <b>jeden Tag ein Feed-Post</b> und alle 2 bis 4 Tage ein Test-Reel-Batch.</li>
+<li>Seit dem 31.10. gibt es <b>keine neuen Yapping-Themen und Test-Reels</b> mehr. Damit fehlen in deiner Kette auch die Shorts in 14 Tagen und die Karussells in 28 Tagen.</li>
+<li>Die Karussells vom 27.10. tragen dich noch etwa <b>bis Mitte November</b> (1 pro Tag). Danach ist der Vorrat leer.</li>
+<li>Einige der Vorrats-Karussells sind Webinar-Karussells. Die passen nur, wenn ein Webinar ansteht.</li>
+</ul>
+</div>
+
+<div class="card todo">
+<b>Was ich nicht sehen kann:</b> deinen Planer für die nächsten 14 Tage. Die Daten der Content-Maschine liegen hinter deinem Login (Supabase). Genau das ist auch der Engpass für alles Weitere: <b>Solange die Redaktion nicht in die Content-Maschine schreiben darf, kann sie dort nichts zum Abnicken hinlegen.</b> Die Lösung steht unten bei „Was du einmal tun musst“.
+</div>
+
+<h2>2. Neue Absprache: Ich produziere, du nickst ab</h2>
+<div class="card good">
+<b>Die Redaktion hält immer 14 Tage Vorlauf fertig:</b>
+<ul>
+<li><b>Karussells</b> (Text, Caption, Codewort, fertig in Canva) für jeden Karussell-Tag der nächsten 14 Tage. Max. 10 Slides, damit sie auch automatisch gepostet werden können.</li>
+<li><b>Yapping-Skripte</b> für die nächsten Drehtermine, passend zur Kette Yapping → Short → Karussell → B-Roll.</li>
+<li><b>Short-Texte</b> (Situation + zwei falsche Ansätze + Caption) für jedes Yapping-Thema.</li>
+<li>Du machst nur noch, was nur du kannst: <b>abnicken, Videos drehen, Test-Reels posten.</b></li>
+</ul>
+</div>
+
+<p><b>Neuer Freigabe-Status auf jeder Karte</b> (zusätzlich zu deinen bisherigen Status-Listen, die bleiben unverändert):</p>
+<div class="flow">
+  <span class="st s1">Entwurf</span><span class="arrow">→</span>
+  <span class="st s2">Wartet auf Freigabe</span><span class="arrow">→</span>
+  <span class="st s3">Freigegeben</span><span class="arrow">→</span>
+  <span class="st s4">Geplant (Devine)</span><span class="arrow">→</span>
+  <span class="st s5">Gepostet</span>
+</div>
+
+<div class="card">
+<b>So sieht das in der Content-Maschine aus:</b>
+<ul>
+<li>Oben in der Übersicht ein Kasten <b>„✋ Wartet auf deine Freigabe (n)“</b> wie bei deiner Mentorin.</li>
+<li>Je Karte zwei Knöpfe: <b>„👍 Freigeben“</b> und <b>„✎ Änderungswunsch“</b> (kurze Notiz, die Redaktion überarbeitet).</li>
+<li>Eine Anzeige <b>„Vorlauf: 9 von 14 Tagen fertig“</b>.</li>
+<li>Im Planer bekommt jeder Beitrag einen kleinen Farbpunkt mit seinem Freigabe-Status.</li>
+</ul>
+<small>Das ist ein Deploy (alles gebündelt in einem).</small>
+</div>
+
+<h2>3. Automatisch posten über Devine</h2>
+<div class="card good">
+<b>Geprüft und es geht:</b> Der Devine-Zugang in deinem Workspace darf den Social Planner nutzen. <b>Instagram, deine Facebook-Seite und YouTube sind dort schon verbunden.</b> Blotato brauchst du nicht.
+</div>
+<div class="card">
+<b>Ablauf für freigegebene Karussells:</b>
+<ul>
+<li>Ich exportiere die Slides aus Canva als Bilder.</li>
+<li>Ich lade sie in Devine hoch und plane den Post mit Caption, Datum und Uhrzeit ein.</li>
+<li>In der Content-Maschine springt die Karte auf <b>„Geplant“</b>, am Tag danach auf „Gepostet“.</li>
+<li>Kostet keine Netlify-Credits, läuft lokal über die Devine-API.</li>
+</ul>
+</div>
+<div class="card warn">
+<b>Grenzen, die du kennen solltest:</b>
+<ul>
+<li>Devine schafft wahrscheinlich nur <b>10 Bilder pro Karussell</b>. Deine bisherigen Karussells haben oft 12 bis 17 Slides. Neue Karussells baue ich deshalb mit höchstens 10.</li>
+<li><b>Test-Reels lassen sich nicht vorplanen.</b> Die postest du weiter selbst am Handy.</li>
+<li>Reels mit Instagram-Musik gehen nur in der App. Feed-Videos mit eigenem Ton könnte Devine auch planen.</li>
+<li>Bevor etwas live geht: <b>ein Test-Entwurf in Devine</b> (nur Entwurf, wird nicht veröffentlicht), du schaust ihn dir an.</li>
+</ul>
+</div>
+
+<h2>4. Morgen-Briefing bekommt einen Content-Block</h2>
+<div class="card">
+Werktags um 7:00 zusätzlich:
+<ul>
+<li><b>Nächste 3 Tage:</b> alles fertig und geplant oder fehlt etwas?</li>
+<li><b>Wartet auf deine Freigabe:</b> Anzahl, mit Link in die Content-Maschine.</li>
+<li><b>Vorlauf:</b> wie viele der nächsten 14 Tage fertig sind.</li>
+<li><b>Dein Teil heute:</b> z.B. „Yapping-Thema X drehen“ oder „5 Test-Reels posten“.</li>
+</ul>
+</div>
+
+<h2>5. Neue geplante Aufgabe „Content-Vorproduktion“</h2>
+<div class="card">
+<b>Vorschlag: montags und donnerstags um 6:00</b> (vor dem Briefing, läuft nur bei offener App).
+<ul>
+<li>Schaut, welche Tage der nächsten 14 Tage noch leer sind.</li>
+<li>Schreibt dafür Karussells, Captions, Yapping-Skripte und Short-Texte nach den Regeln aus dem Skill, mit Humanizer und KI-Sprech-Killer.</li>
+<li>Baut die Karussells in Canva (jedes mit anderem Bild).</li>
+<li>Legt alles als <b>„Wartet auf Freigabe“</b> in die Content-Maschine.</li>
+<li>Plant alles, was du freigegeben hast, in Devine ein.</li>
+<li><b>Postet nie etwas ohne deine Freigabe.</b></li>
+</ul>
+</div>
+
+<h2>Was du einmal tun musst</h2>
+<div class="card todo">
+<table>
+<tr><th>Schritt</th><th>Wofür</th><th>Aufwand</th></tr>
+<tr><td><b>Supabase-Schlüssel kopieren</b> (Secret Key aus dem Supabase-Dashboard in die Datei <code>scripts/.env</code>, ich zeige dir die 2 Klicks)</td><td>Damit die Redaktion Karten lesen und anlegen darf</td><td>2 Min.</td></tr>
+<tr><td><b>Ok für einen Deploy</b></td><td>Freigabe-Status und Freigabe-Kasten in der Content-Maschine</td><td>1 Klick von dir</td></tr>
+<tr><td><b>Ok für einen Devine-Test-Entwurf</b></td><td>Prüfen, ob Karussell und Caption sauber ankommen</td><td>kurz drüberschauen</td></tr>
+<tr><td><b>Fester Abnick-Termin</b> (Vorschlag: Montag, 15 Min.)</td><td>Damit der Vorlauf nie leerläuft</td><td>15 Min. pro Woche</td></tr>
+</table>
+<small>⚠️ Ein Punkt zum Schlüssel: Die Content-Maschine speichert alles als einen Block. Wenn du genau in dem Moment etwas änderst, in dem die Vorproduktion schreibt, kann eine Änderung verloren gehen. Deshalb läuft sie früh morgens und ich baue einen Abgleich ein, der nur neue Karten hinzufügt.</small>
+</div>
+
+<h2>Deine Entscheidungen</h2>
+<div class="card">
+<ul>
+<li>Wie viele <b>Karussells pro Woche</b>? Vorschlag: 5 (Mo bis Fr), dazu deine Yapping-Videos und Shorts.</li>
+<li>Um welche <b>Uhrzeit</b> soll Devine posten? Vorschlag: 18:00.</li>
+<li>Auch auf deiner <b>Facebook-Seite</b> gleichzeitig posten? Geht mit einem Häkchen.</li>
+<li>Reihenfolge beim Bauen: <span class="tag">1</span> Schlüssel + Freigabe-Status <span class="tag">2</span> Devine-Test <span class="tag">3</span> Briefing <span class="tag">4</span> Vorproduktion.</li>
+</ul>
+</div>
+</main>
+</body>
+</html>

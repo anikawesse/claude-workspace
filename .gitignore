@@ -16,3 +16,6 @@ outputs/aufwaermphase/*.mp4
 
 # Devine-Kontaktlisten (E-Mail-Adressen, DND-Status) - nur lokal, nicht ins Repo
 outputs/devine-dnd-wiederherstellung/*.csv
+
+# Sicherungen der Content-Maschine-Daten (privat)
+scripts/backups/

@@ -897,7 +897,9 @@
       "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-expenses.js\" --dry-run)",
       "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\book-expenses.js\")",
       "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\sweep.js\")",
-      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\check-status.js\")"
+      "PowerShell(node \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Olive-Desktop-claude-workspace\\\\7439d564-b8a0-4e67-9ddd-af60a19e05e9\\\\scratchpad\\\\check-status.js\")",
+      "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\optin-organisch.html\")",
+      "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\optin-organisch.html\"; Set-Clipboard -Value \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); \"Zwischenablage: \" + \\(Get-Clipboard -Raw\\).Length + \" Zeichen\")"
     ],
     "defaultMode": "bypassPermissions"
   }

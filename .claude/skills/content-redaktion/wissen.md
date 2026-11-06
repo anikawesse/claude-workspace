@@ -1028,3 +1028,56 @@ Falls doch mal in Canva gebaut wird, gelten diese Vorgaben:
 
 **Why:** Anika baut ihre Präsentationen sonst selbst in Canva; sie will schnell selbst nachbearbeiten und erwartet, dass ich in ihrem Look baue statt im KI-Default.
 **How to apply:** Bei jedem Canva-Folien-Bau fürs [[reference-webinar-playbook]] Gelände-Webinar diese Schritte gleich mitmachen, nicht erst auf Nachfrage.
+
+---
+
+## Content-Vorlauf 14 Tage: Absprache mit Anika (06.11.2026)
+
+Vorbild Mentorin: Content ist immer 14 Tage im Voraus fertig, Anika nickt nur ab. Vorschlag: `outputs/content-maschine/vorschlag-content-vorlauf-14-tage.html`, von Anika am 06.11.2026 freigegeben.
+
+- **Karussells Mo bis Fr**, je eins pro Tag, max. 10 Slides (Devine-Grenze).
+- **Feed-Posts gehen um 7:00 raus**, über den Devine Social Planner auf Instagram UND Facebook-Seite „Anika Wesse“. Test-Reels postet Anika weiter selbst.
+- **Freigabe-Status** je Karte: Entwurf → Wartet auf Freigabe → Freigegeben → Geplant → Gepostet. Nichts wird ohne Anikas Freigabe eingeplant.
+- **Vorproduktion einmal pro Woche, montags früh**, füllt bis 21 Tage im Voraus auf. So fällt der Vorlauf im Lauf der Woche nie unter 14 Tage.
+- **Codewort-Prüfung als Pflicht-Zwischenschritt:** Bei jedem Post mit Codewort prüfen, ob es dafür eine aktive ManyChat-Automation gibt (Instagram UND Facebook-Version). Fehlt sie oder ist sie ungeprüft, bekommt die Karte den Hinweis „⚠️ ManyChat-Automation fehlt“ und wird nicht eingeplant. Codewort-Tabelle im Skill backoffice (wissen.md, „ManyChat Automationen“) ist veraltet (Quiz und Gras fehlen) und muss einmal mit ManyChat abgeglichen werden.
+- Devine-Social-Planner-API: `GET /social-media-posting/{locationId}/accounts` (Header Version 2021-07-28) liefert instagram anikas_pferdeakademie, facebook page Anika Wesse, youtube. Planner war am 06.11.2026 leer.
+
+### Geprüfte ManyChat-Codewörter (Pflicht-Check vor jedem Codewort-Post)
+
+Nur Codewörter mit ✅ bei Instagram UND Facebook dürfen in vorproduzierten Posts stehen. Alles andere bekommt den Hinweis „⚠️ ManyChat-Automation fehlt oder ungeprüft“ und wird nicht eingeplant. Bei jeder Prüfung in ManyChat (app.manychat.com → Automations, nur lesen) Datum nachtragen.
+
+| Codewort (Auslöser „enthält“) | Automation | Instagram | Facebook | geprüft am |
+|---|---|---|---|---|
+| Quiz (quiz, qiz, plan) | Gelände-Quiz | ✅ | ✅ | 06.11.26 |
+| Verlasspferd / Videotraining | TTP - Videotraining | ✅ | ✅ | 06.11.26 |
+| Schlüssel / Gelände | Gelände-Schlüssel | ✅ | ✅ | 06.11.26 |
+| Webinar | Gelände-Webinar | ✅ | ✅ | 06.11.26 |
+| Gras | Gras-Videoanleitung mit E-Mail | ✅ | ✅ | 06.11.26 |
+| Kappzaum | Podcast Gebiss mit E-Mail | ✅ | ✅ | 06.11.26 |
+| Masterclass / Muskeln | Masterclass | ✅ | ✅ | 06.11.26 (Backend) |
+| Offenstall, Konzept, Trail | Offenstall-Themen | ✅ | ✅ | 06.11.26 (Backend) |
+| Keks | Höflichkeitsvideo | ✅ | ❌ | 06.11.26 |
+| Karotte | Youtube Video alleine ausreiten | ✅ | ❌ | 06.11.26 |
+| Respekt | Youtube Video respektloses Verhalten | ✅ | ❌ | 06.11.26 |
+| Ute, Tiergespräch, Futterplan | Ute-Interview, Tiergespräch, Futter-Fahrplan | ✅ | ❌ | 06.11.26 |
+| Check, Gruppe, Magie | keine Automation gefunden | ❌ | ❌ | 06.11.26 |
+
+⚠️ Der Quiz-Auslöser enthält „plan“. Ein Kommentar „Futterplan“ löst deshalb auch das Quiz aus. Für Gelände-Posts kein Codewort mit „plan“ nehmen.
+
+### B-Roll Shorts schneiden: Layout-Regel von Anika (06.11.2026)
+
+- ⛔ **Situationstext NIE mittig** (sitzt dann auf dem Pferdekopf). Position hängt vom Clip ab: **oben**, wenn dort Himmel/Hintergrund frei ist, sonst **unten**, je nachdem wo Pferd und Anika NICHT sind. Pro Clip ein Standbild ansehen und die freie Zone wählen.
+- Das erste Bild dient Anika oft als **Vorschaubild**, also muss der Situationstext dort gut lesbar sein und nichts Wichtiges verdecken.
+- Steht die Situation anfangs unten, rutscht sie nach oben, sobald ❌ Ansatz 1 erscheint. Dann ❌ 1, danach ❌ 2 darunter.
+- Anika korrigiert zur Not selbst, Ziel ist aber, dass sie nichts verschieben muss.
+- Rohclips müssen nicht vorgeschnitten sein. Anika legt ganze Clips ab, die Redaktion sucht sich ruhige Abschnitte (auch mehrere Abschnitte aus einem Clip) und schneidet selbst auf Länge.
+- Vor dem ersten Batch ein Testvideo zur Abnahme des Looks.
+
+### Short-Texte: Anikas Korrekturen (06.11.2026, 12 Shorts, 7 davon geändert)
+
+- **Situation aus Sicht ihres Wunsches oder ihrer Sorge, nicht als Befund.** ❌ „…aber dein Pferd nach jeder Runde einen immer tieferen Rücken bekommt.“ ✅ „…aber Angst hast, dem Rücken deines Pferdes zu schaden.“
+- **Nicht dramatisieren, auch positive Motive zählen.** ❌ „…und schon beim Satteln nervös wirst.“ ✅ „…und sicher gehen willst, dass du gut vorbereitet bist.“
+- **Pferdeverhalten in Alltagssprache:** ✅ „dieselbe Stelle gruselig findet“ statt „an derselben Stelle angespannt wird“.
+- **Keine fremden Meinungen in die Situation packen.** ❌ „…und alle sagen, es ist einfach nur stur.“ ✅ „…und keinen Schritt vom Hof machen will.“ Nur das Verhalten zeigen.
+- **Beim ❌-Ansatz das echte Motiv der Reiterin nennen:** „um es abzulenken“, „wieder aufmerksam zu machen“ statt bildhafter Unterstellungen wie „damit es dranbleibt“ oder „wieder einzufangen“.
+- **❌-Ansatz als Gewohnheit, nicht als Bild:** ✅ „Dich nur noch hinter einem erfahrenen Pferd raus zu trauen.“ statt „…zu verstecken und hinterherzulaufen“. ✅ „…die Runde zu schaffen“ statt „…loszureiten“.

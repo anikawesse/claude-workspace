@@ -30,3 +30,12 @@ ffmpeg -y -ss 0 -t 7 -i <clip.mp4> -i <hookN.png> -filter_complex "[0:v]scale=10
 
 - Hooks und Captions werden in der Google-Tabelle "Reels Hook-Caption-Übersicht" gepflegt (Blätter Hooks + Captions)
 - Test-Reels: Musik legt Anika beim Posten in der Instagram-App drauf (bessere Audio-Verlinkung), Posting-Rhythmus 1 bis 2 Minuten Abstand
+
+## B-Roll Shorts „Situation + 2 falsche Ansätze“ (seit 06.11.2026)
+
+1. Texte kommen aus den freigegebenen Short-Karten der Content-Maschine (`node scripts/content-maschine-db.mjs dump <datei>`, Felder hook, falsch1, falsch2). Jobs als JSON: `[{n, sit, f1, f2}]`.
+2. Overlays: `powershell -NoProfile -ExecutionPolicy Bypass -File build_shorts.ps1 -Jobs <jobs.json> -Out <ordner>` erzeugt je Thema `s<n>_top.png`, `s<n>_bot.png`, `s<n>_f1.png`, `s<n>_f2.png` (Box-Breite 860 px, rotes gezeichnetes X).
+3. Plan: pro Thema 5 Clips aus `Desktop\SM Content\Vorlage Reels\Rohclips`, keine ähnlichen Clips im selben Thema, pro Clip Position `top` oder `bot` nach Standbild (Situation NIE mittig, nicht über dem Pferdekopf).
+4. Rendern: `bash render_shorts.sh <plan.json> <overlay-ordner> <rohclip-ordner> "<...>\Vorlage Reels\Fertig"` → `Fertig\MM-TT Titel\Short 1..5.mp4`. Ablauf: 0 bis 3,2 s Situation allein, ab 3,2 s oben + Ansatz 1, ab 6 s Ansatz 2, 9 s.
+5. ffmpeg: das aus der CapCut-Installation (`AppData\Local\CapCut\Apps\<version>\ffmpeg.exe`). Dort fehlt libx264 und `h264_mf` stürzt ab, deshalb NVIDIA-Encoder `h264_nvenc`. Ein frisch geladenes ffmpeg darf Claude im Auto-Modus nicht starten.
+6. Clip-Notizen 06.11.: `3.mp4` ist identisch mit `Flow_VID_20260822_150130_02_011_1.mp4`, `20250401_094107.mp4` hat nur 4 s → beide nicht nutzen.

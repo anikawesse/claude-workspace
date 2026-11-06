@@ -762,3 +762,10 @@ Neuer Event/Funnel pro Launch mit eigener:
 
 **Why:** Anika fragte beim 3. Launch (Pferdesprache 2.0, 12.06.26) ob alte Liste reicht. Saubere Trennung ist Pflicht.
 **How to apply:** Bei JEDEM zukünftigen Webinar-Launch diese Logik anwenden.
+
+### Traumteam-Videotraining Tag-Logik (06.11.2026)
+- WebinarKit setzt `everg_web_traumteam_verpasst` bei 25/50 % geschaut UND (verzögert, ~5 Std.) bei Raum geöffnet mit 0 %. Live: `webttt-webinarkit-live` (startet Sales-Automation, wird nach 1. Sales-Mail entfernt); `everg_web_traumteam_live_final` kommt erst ganz am Ende der Sales-Mails (Technikhilfe, nicht anfassen).
+- Verpasst-Automation: Wait 2 Std. → If/Else „Verpasst-Tag noch da?" (Sales-Automation entfernt ihn bei Live) → ja: Feld „Webinar verpasst" + Mails. Live-Tags sind nach 2 Std. nicht verlässlich.
+- Sales-Automation: erster Schritt „Remove from Workflow: Verpasst".
+- Alte Verpasst-Tags aus früheren Runden blockieren den Neustart (Tag-Trigger feuert nicht) → Anmelde-Workflow (Trigger `everg_web_traumteam_reg`) entfernt den Verpasst-Tag. 06.11. bei Anja Schuster, Hella Peperkorn, Simone Limbach per API entfernt.
+- Anmelde-Workflow „Tags entfernen bei Anmeldung Videotraining" (Trigger `everg_web_traumteam_reg`, Wiedereintritt an): Remove Tag `everg_web_traumteam_verpasst` + `web_ttp_webinarkit_live` → Internal Notification an Anika (Benutzerdefinierte E-Mail) mit Name, Mail, Termin `{{contact.webinar_date__time}}`. ⏭️ 07.11. Hella + Simone prüfen, ob die Logik an echten Fällen greift.

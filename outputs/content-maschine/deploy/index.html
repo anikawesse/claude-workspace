@@ -223,6 +223,13 @@
   .pl-checks button.own{border-width:2px;border-color:var(--ink);}
   .pl-checks button.on{background:var(--ok);border-color:var(--ok);color:#fff;}
   .pl-checks button.on.own{border-color:#2f5a2e;}
+  .b-frei{background:#f6e7b8;color:#6b4e00;}
+  .fr-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px;border:1px solid var(--rose);border-radius:10px;margin:6px 0;background:var(--white);}
+  .fr-row .fr-t{flex:1;min-width:180px;cursor:pointer;}
+  .fr-row .fr-note{width:100%;font-size:12px;color:var(--rust);}
+  .fr-row button{border:1px solid var(--rose-dk);background:var(--cream);border-radius:999px;padding:5px 12px;font-size:13px;cursor:pointer;}
+  .fr-row button.ok{background:#4f7a4a;color:#fff;border-color:#4f7a4a;}
+  .vorlauf{font-size:13px;margin:0 0 8px;}
   .pl-item.warn{box-shadow:0 0 0 2px #d9534f;}
   #modalThemeBar{margin:0 0 12px;padding:9px 10px;background:var(--beige);border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column;gap:7px;}
   .tb-row{display:flex;flex-wrap:wrap;align-items:center;gap:6px;}
@@ -272,6 +279,7 @@
   <section class="view active" id="view-dashboard">
     <div class="view-head"><h2>Übersicht</h2><div class="sub">Dein Content auf einen Blick — Vorrat, Verteilung, nächste Schritte.</div></div>
     <div class="panel" id="todoPanel"><h3>📌 Heute zu posten</h3><div id="todoContent"></div></div>
+    <div class="panel" id="freigabePanel"><h3>✋ Wartet auf deine Freigabe</h3><div id="vorlaufInfo"></div><div id="freigabeList"></div></div>
     <div class="panel" style="background:linear-gradient(135deg,var(--gold),var(--rust));color:var(--cream);display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
       <div style="flex:1;min-width:200px;"><h3 style="color:var(--cream);margin:0 0 4px;">✨ Content erstellen</h3><div style="font-size:13px;opacity:.92;">Wähle Produkt und Ziel. Die Maschine baut dir mit Tina, deinen Hook-Typen und Frameworks den fertigen Auftrag.</div></div>
       <button onclick="openCreate()" style="background:var(--cream);color:var(--rust);font-weight:800;padding:12px 22px;border-radius:999px;font-size:15px;">Los geht's</button>
@@ -366,6 +374,9 @@ const PHASEN = ["Evergreen","Launch-Vorbereitung","Pre-Pre-Launch","Pre-Launch",
 const UNTERBEREICHE = ["Beziehung/Vertrauen","Training am Boden","Training im Sattel","Angst der Reiterin","Praxis im Gelände"];
 const FORMATE = ["Talking Head","B-Roll","Sonstiges"];
 const YAPPING_STATUS = ["Offen","Skript fertig","Gepostet"];
+/* Freigabe-Status für Beiträge, die die Content-Redaktion vorproduziert („—" = eigene Karte, keine Freigabe nötig) */
+const FREIGABE = ["—","Entwurf","Wartet auf Freigabe","Freigegeben","Geplant","Gepostet"];
+const FREIGABE_FIELDS = [{key:"freigabe",label:"✋ Freigabe (Content-Redaktion)",type:"seg",options:FREIGABE,card:"badge"},{key:"freigabeNotiz",label:"✎ Änderungswunsch an die Redaktion",type:"textarea"}];
 /* Gepostet/geplant-Häkchen pro Yapping-Thema (ein Thema → bis zu 4 Posts) */
 const POST_CHECKS = [{k:"yap",l:"Yapping",s:"Y"},{k:"short",l:"B-Roll Short",s:"S"},{k:"karussell",l:"Karussell",s:"K"},{k:"broll",l:"Lange B-Roll",s:"B"}];
 /* Kette pro Yapping-Thema: Susanne-Tag (Test-Reels) → +7 Yapping → +14 bester Short → +14 Karussell → +14 lange B-Roll */
@@ -375,7 +386,7 @@ const SHORTS_AB = "2026-10-12"; // ab diesem Susanne-Tag baut Susanne B-Roll Sho
 const IG_KATS = ["Yapping","B-Roll","B-Roll Short","Karussell","Reel"];
 const opt = a => ["—",...a];
 
-const BADGE_CLASS = {produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',unterbereich:'b-kat',format:'b-format',gruppe:'b-quelle',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
+const BADGE_CLASS = {freigabe:'b-frei',produktbereich:'b-prod',unterthema:'b-quelle',kategorie:'b-kat',unterbereich:'b-kat',format:'b-format',gruppe:'b-quelle',status:'b-status',plattform:'b-plat',cta:'b-cta',hookTyp:'b-typ',reelFormat:'b-format',kind:'b-kind',zweck:'b-zweck',phase:'b-phase',quelle:'b-quelle',typ:'b-typ'};
 
 /* ===== Schema ===== */
 const COLLECTIONS = {
@@ -395,6 +406,7 @@ const COLLECTIONS = {
     {key:"letztesPost",label:"Zuletzt gepostet am",type:"date",card:"date"},
     {key:"karussell",label:"Karussell daraus schon gemacht?",type:"bool",card:"flag",flagText:"🎠 Karussell ✓"},
     {key:"favorit",label:"⭐ Best Performer",type:"bool",card:"flag",flagText:"⭐ Best Performer"},
+    ...FREIGABE_FIELDS,
   ]},
   karussells:{label:"Karussells",icon:"🎠",single:"Karussell",three:false,fields:[
     {key:"titel",label:"Titel / Thema",type:"text",required:true,card:"title"},
@@ -408,6 +420,7 @@ const COLLECTIONS = {
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_ALLG,card:"badge"},
     {key:"postDatum",label:"📅 Post-Datum (für Planer)",type:"date",card:"date"},
+    ...FREIGABE_FIELDS,
   ]},
   hooks:{label:"Hooks",icon:"🪝",single:"Hook",three:true,hasArchiv:true,hasDone:true,fields:[
     {key:"text",label:"Hook-Text",type:"textarea",required:true,card:"title"},
@@ -445,6 +458,7 @@ const COLLECTIONS = {
     {key:"postDatumShort",label:"📅 Bester B-Roll Short neu ins Feed (auto +2 Wochen)",type:"date",card:"date"},
     {key:"postDatumKarussell",label:"📅 Karussell ins Feed (auto +2 Wochen)",type:"date",card:"date"},
     {key:"postDatumBroll",label:"📅 Lange B-Roll-Variante ins Feed (auto +2 Wochen)",type:"date",card:"date"},
+    ...FREIGABE_FIELDS,
   ]},
   shorts:{label:"B-Roll Shorts",icon:"🎞",single:"B-Roll Short",three:false,fields:[
     {key:"titel",label:"Thema",type:"text",required:true,card:"title"},
@@ -458,6 +472,7 @@ const COLLECTIONS = {
     {key:"cta",label:"CTA / Codewort",type:"select",options:CTA_ZIELE,card:"badge"},
     {key:"status",label:"Status",type:"seg",options:STATUS_SHORT,card:"badge"},
     {key:"postDatum",label:"📅 Bester Short neu ins Feed (für Planer)",type:"date",card:"date"},
+    ...FREIGABE_FIELDS,
   ]},
   ideen:{label:"Ideen",icon:"💡",single:"Idee",three:true,fields:[
     {key:"text",label:"Idee",type:"textarea",required:true,card:"title"},
@@ -1088,8 +1103,36 @@ function renderInstagram(){
     </div>
     ${banner}${body}`;
 }
+/* ===== Freigabe (Content-Redaktion produziert vor, Anika nickt ab) ===== */
+const FREI_COLS=['karussells','shorts','yapping','reels'];
+const FREI_ICON={karussells:'🎠',shorts:'🎞',yapping:'🎙️',reels:'🎬'};
+function freiDate(col,x){return x.postDatum||x.postDatumKarussell||x.postDatumShort||'';}
+function freiTitle(col,x){return x.titel||x.frage||x.hook||'(ohne Titel)';}
+function freiList(st){const out=[];FREI_COLS.forEach(c=>(DB[c]||[]).forEach(x=>{if(x.freigabe===st)out.push({col:c,x});}));return out.sort((a,b)=>(freiDate(a.col,a.x)||'9').localeCompare(freiDate(b.col,b.x)||'9'));}
+function vorlaufInfo(){
+  const today=localISO(new Date());const days=[];
+  for(let i=0;i<14;i++){const d=addDays(today,i);const wd=new Date(d+'T00:00:00').getDay();if(wd>=1&&wd<=5)days.push(d);}
+  const has=new Set();(DB.karussells||[]).forEach(k=>{if(k.postDatum)has.add(k.postDatum);});(DB.yapping||[]).forEach(y=>{if(y.postDatumKarussell)has.add(y.postDatumKarussell);});
+  const missing=days.filter(d=>!has.has(d));
+  return {n:days.length-missing.length,of:days.length,missing};
+}
+function renderFreigabe(){
+  const box=document.getElementById('freigabeList');if(!box)return;
+  const v=vorlaufInfo();
+  document.getElementById('vorlaufInfo').innerHTML=`<div class="vorlauf">🎠 <b>Karussell-Vorlauf:</b> ${v.n} von ${v.of} Werktagen der nächsten 14 Tage belegt${v.missing.length?` · <span style="color:var(--rust)">frei: ${v.missing.map(fmtDate).join(', ')}</span>`:' ✓'}</div>`;
+  const wait=freiList('Wartet auf Freigabe');const fix=freiList('Entwurf').filter(o=>o.x.freigabeNotiz);
+  const row=(o,btns)=>`<div class="fr-row"><span class="fr-t" onclick="openModal('${o.col}','${o.x.id}')" title="Öffnen und ansehen">${FREI_ICON[o.col]} ${freiDate(o.col,o.x)?'<b>'+fmtDate(freiDate(o.col,o.x))+'</b> · ':''}${escHTML(freiTitle(o.col,o.x).slice(0,80))}</span>${btns}${o.x.freigabeNotiz?`<div class="fr-note">✎ ${escHTML(o.x.freigabeNotiz)}</div>`:''}</div>`;
+  let h=wait.length?wait.map(o=>row(o,`<button class="ok" onclick="approveItem('${o.col}','${o.x.id}')">👍 Freigeben</button><button onclick="requestChange('${o.col}','${o.x.id}')">✎ Änderungswunsch</button>`)).join(''):'<div class="hint">Gerade wartet nichts auf dich. 🎉</div>';
+  if(fix.length)h+=`<div class="hint" style="margin-top:8px">In Überarbeitung bei der Redaktion:</div>`+fix.map(o=>row(o,'')).join('');
+  box.innerHTML=h;
+  const p=document.getElementById('freigabePanel');if(p)p.querySelector('h3').textContent=`✋ Wartet auf deine Freigabe (${wait.length})`;
+}
+function approveItem(col,id){const x=(DB[col]||[]).find(i=>i.id===id);if(!x)return;x.freigabe='Freigegeben';x.freigabeNotiz='';save();reRender();toast('👍 Freigegeben');}
+function requestChange(col,id){const x=(DB[col]||[]).find(i=>i.id===id);if(!x)return;const n=prompt('Was soll die Redaktion ändern?',x.freigabeNotiz||'');if(n===null||!n.trim())return;x.freigabeNotiz=n.trim();x.freigabe='Entwurf';save();reRender();toast('✎ Änderungswunsch notiert');}
+function freiMark(x){const it=x.yap||(DB[x.col]||[]).find(i=>i.id===x.id);const f=it&&it.freigabe;return f==='Wartet auf Freigabe'?'✋ ':f==='Entwurf'?'✏️ ':f==='Freigegeben'?'👍 ':f==='Geplant'?'📆 ':'';}
 function renderDashboard(){
   renderTodo();
+  renderFreigabe();
   document.getElementById("statGrid").innerHTML=[
     ["🎬",activeCount("reels"),"Reels"],["🎙️",activeCount("yapping"),"Yapping"],
     ["🪝",activeCount("hooks"),"Hooks aktiv"],["💡",DB.ideen.length,"Ideen"],
@@ -1552,7 +1595,7 @@ function planEntries(){
   return e;
 }
 function planItemHTML(x){
-  const short=escHTML(x.label.slice(0,22));
+  const short=(x.ig?'':freiMark(x))+escHTML(x.label.slice(0,22));
   if(x.ig) return `<div class="pl-item pl-ig done" onclick="window.open('${escAttr(x.ig.url)}','_blank','noopener')" title="${escAttr('Direkt in Instagram gepostet: '+x.label)}">${x.icon} ${short}</div>`;
   const col=x._tc||null;
   const sty=col?` style="border-left:9px solid ${col}"`:'';
