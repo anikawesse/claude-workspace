@@ -1,6 +1,7 @@
 # Erzeugt Overlay-PNGs (1080x1920) fuer B-Roll Shorts "Situation + 2 falsche Ansaetze".
 # Aufruf: powershell -NoProfile -ExecutionPolicy Bypass -File build_shorts.ps1 -Jobs <jobs.json> -Out <ordner>
 # jobs.json: [{ "n":1, "sit":"Wenn dein Pferd ...", "f1":"Versuche nicht: ...", "f2":"Versuche nicht: ..." }]
+# Zusaetzlich einmal sondern.png: Box "Sondern" + Emoji unten (Unterkante 1574), erscheint zum Schluss.
 # Pro Job: s<n>_top.png (Situation oben), s<n>_bot.png (Situation unten), s<n>_f1.png, s<n>_f2.png
 # Layout-Regel (Anika): Situation NIE mittig. Oben ab y=220 oder unten mit Unterkante 1574.
 param([string]$Jobs, [string]$Out)
@@ -14,7 +15,7 @@ $fam = $fc.Families[0]
 $W = 1080; $CANVAS_H = 1920
 $FONT_SIZE = 50.0; $LINE_H = 70.0; $PAD_X = 45.0; $PAD_Y = 38.0; $RADIUS = 10.0
 $MAX_TEXT_W = 860.0
-$TOP_Y = 220.0; $GAP = 26.0
+$TOP_Y = 220.0; $GAP = 26.0; $GAP_SIT = 90.0  # mehr Luft nach der Situation (Anika 06.11.)
 $BOTTOM_ANCHOR = 1574.0
 $ICON = 44.0
 
@@ -80,16 +81,28 @@ function New-Canvas() {
   return @($bmp, $g)
 }
 
+$emoji = [System.Drawing.Image]::FromFile((Join-Path $PSScriptRoot "emoji_1f447_512.png"))
 $font = New-Object System.Drawing.Font($fam, [single]$FONT_SIZE, [System.Drawing.FontStyle]::Regular, [System.Drawing.GraphicsUnit]::Pixel)
 $list = Get-Content -Raw -Encoding UTF8 $Jobs | ConvertFrom-Json
 $probeBmp = New-Object System.Drawing.Bitmap 10, 10; $pg = [System.Drawing.Graphics]::FromImage($probeBmp)
+
+# Sondern-Box mit Emoji (einmal fuer alle)
+$c = New-Canvas; $g = $c[1]
+$txt = "Sondern"; $tw = Measure-Text $g $txt $font; $ew = $LINE_H * 0.82
+$bw = $tw + 10 + $ew + 2 * $PAD_X; $bh = $LINE_H + 2 * $PAD_Y; $bx = ($W - $bw) / 2; $by = $BOTTOM_ANCHOR - $bh
+$path = New-Object System.Drawing.Drawing2D.GraphicsPath; Add-RoundRect $path $bx $by $bw $bh $RADIUS
+$g.FillPath((New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::White)), $path)
+$ty = $by + $PAD_Y + ($LINE_H - $font.GetHeight($g)) / 2
+$g.DrawString($txt, $font, (New-Object System.Drawing.SolidBrush ([System.Drawing.Color]::FromArgb(255, 17, 17, 17))), [single]($bx + $PAD_X), [single]$ty, [System.Drawing.StringFormat]::GenericTypographic)
+$g.DrawImage($emoji, [single]($bx + $PAD_X + $tw + 10), [single]($by + $PAD_Y + ($LINE_H - $ew) / 2), [single]$ew, [single]$ew)
+$c[0].Save((Join-Path $Out "sondern.png"), [System.Drawing.Imaging.ImageFormat]::Png); $g.Dispose(); $c[0].Dispose()
 
 foreach ($j in $list) {
   $sit = Wrap-Text $pg $j.sit $font $MAX_TEXT_W 0
   $f1 = Wrap-Text $pg $j.f1 $font $MAX_TEXT_W ($ICON + 14)
   $f2 = Wrap-Text $pg $j.f2 $font $MAX_TEXT_W ($ICON + 14)
   $hS = Block-Height $sit; $h1 = Block-Height $f1
-  $y1 = $TOP_Y + $hS + $GAP; $y2 = $y1 + $h1 + $GAP
+  $y1 = $TOP_Y + $hS + $GAP_SIT; $y2 = $y1 + $h1 + $GAP
   foreach ($v in @(@('top', $TOP_Y), @('bot', ($BOTTOM_ANCHOR - $hS)))) {
     $c = New-Canvas; Draw-Block $c[1] $sit $font $v[1] $false
     $c[0].Save((Join-Path $Out "s$($j.n)_$($v[0]).png"), [System.Drawing.Imaging.ImageFormat]::Png); $c[1].Dispose(); $c[0].Dispose()

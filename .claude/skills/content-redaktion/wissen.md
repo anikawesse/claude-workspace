@@ -1070,6 +1070,7 @@ Nur Codewörter mit ✅ bei Instagram UND Facebook dürfen in vorproduzierten Po
 - Das erste Bild dient Anika oft als **Vorschaubild**, also muss der Situationstext dort gut lesbar sein und nichts Wichtiges verdecken.
 - Steht die Situation anfangs unten, rutscht sie nach oben, sobald ❌ Ansatz 1 erscheint. Dann ❌ 1, danach ❌ 2 darunter.
 - Anika korrigiert zur Not selbst, Ziel ist aber, dass sie nichts verschieben muss.
+- Videos immer OHNE Ton (Musik legt Anika in Instagram drauf). Nach der Situation mehr Abstand (90 px) vor ❌ 1. Zum Schluss unten eine Box „Sondern 👇“ (Verweis auf die Lösung in der Caption).
 - Rohclips müssen nicht vorgeschnitten sein. Anika legt ganze Clips ab, die Redaktion sucht sich ruhige Abschnitte (auch mehrere Abschnitte aus einem Clip) und schneidet selbst auf Länge.
 - Vor dem ersten Batch ein Testvideo zur Abnahme des Looks.
 
