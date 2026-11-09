@@ -1082,3 +1082,31 @@ Nur Codewörter mit ✅ bei Instagram UND Facebook dürfen in vorproduzierten Po
 - **Keine fremden Meinungen in die Situation packen.** ❌ „…und alle sagen, es ist einfach nur stur.“ ✅ „…und keinen Schritt vom Hof machen will.“ Nur das Verhalten zeigen.
 - **Beim ❌-Ansatz das echte Motiv der Reiterin nennen:** „um es abzulenken“, „wieder aufmerksam zu machen“ statt bildhafter Unterstellungen wie „damit es dranbleibt“ oder „wieder einzufangen“.
 - **❌-Ansatz als Gewohnheit, nicht als Bild:** ✅ „Dich nur noch hinter einem erfahrenen Pferd raus zu trauen.“ statt „…zu verstecken und hinterherzulaufen“. ✅ „…die Runde zu schaffen“ statt „…loszureiten“.
+
+## Psychologische Prinzipien für alle Skripte (Anika, 09.11.2026)
+
+**Regel:** Bei jedem Skript (Reel, Yapping, B-Roll-Short, Karussell, Caption) diese Prinzipien mitdenken. Quelle: Karussell von @sarah_menges, das Anika weitergegeben hat.
+
+Nicht alle 17 in einen Text packen. Pro Skript bewusst 3 bis 5 auswählen, die zum Format passen, und vor der Abgabe kurz prüfen, welche drin sind.
+
+| Prinzip | Was es heißt | So nutzen wir es im Gelände-Content |
+|---|---|---|
+| **Pattern Interrupt** | Etwas Unerwartetes stoppt das Scrollen | Erster Satz oder erstes Bild bricht das Gewohnte, z.B. „Hör auf, dein Pferd am Traktor vorbeizuführen.“ |
+| **Zeigarnik-Effekt (Open Loops)** | Offene Fragen wollen geschlossen werden | Früh eine Frage aufmachen und erst am Ende auflösen („Warum das bei Stuten anders läuft, sage ich dir gleich.“) |
+| **Concreteness** | Konkret schlägt abstrakt | Flatterband, Mülltonne, Radfahrer von hinten statt „schwierige Situationen“ |
+| **Mere-Exposure-Effekt** | Was man oft sieht, wird vertraut | Wiederkehrende Begriffe (Verlasspferd, Sicherheitsanker, Pferdemagnet) und gleiche Formate immer wieder zeigen |
+| **Reziprozität** | Wer etwas bekommt, will etwas zurückgeben | Echten Mehrwert verschenken (eine Übung zum Sofort-Umsetzen), bevor ein CTA kommt |
+| **Violation of Expectation** | Gegen die Erwartung überrascht und bleibt hängen | Gängige Tipps drehen („Mehr Gelände ist nicht die Lösung.“) |
+| **Kontrast-Effekt** | Vorher/Nachher macht den Unterschied sichtbar | Pferd klebt am Hof vs. entspannt allein im Wald; Szene A gegen Szene B |
+| **Commitment-Konsistenz** | Kleines Ja führt zu größerem Ja | Kleine Mitmach-Aufforderung („Schreib mir ‚Wald‘, wenn …“), Kommentar-Codewörter |
+| **Social Proof** | Andere haben es geschafft | Nur **echte** Kundinnen-Fälle zum Gelände-Thema (keine erfundenen, keine Traumteam-Fälle) |
+| **Ankereffekt** | Die erste Zahl prägt die Bewertung | Zahlen bewusst setzen, z.B. „6 Jahre Reitbeteiligung, 3 Wochen Training“ |
+| **Verlustaversion** | Verlieren wiegt schwerer als Gewinnen | Zeigen, was ohne Lösung bleibt: verpasste Ausritte, der Sommer am Platz |
+| **Autoritätsprinzip** | Expertise schafft Vertrauen | Anikas Erfahrung zeigen (500+ Teams), Fachwissen in einem Satz erklären |
+| **Sympathie-Prinzip** | Wir folgen Menschen, die wir mögen | Persönliche Momente, eigene Fehler, Anikas Humor und Stall-Alltag |
+| **Knappheitsprinzip** | Begrenztes wirkt wertvoller | Nur bei **echter** Frist (Webinar-Termin, Launch-Ende), nie erfunden |
+| **Peak-End-Regel** | Höhepunkt und Ende bleiben in Erinnerung | Stärkster Moment in der Mitte, starker letzter Satz statt ausfransendem Ende |
+| **Storytelling-Effekt** | Geschichten bleiben besser als Fakten | Fakten in eine kurze Szene packen (Tina, ihre Stute, der Feldweg) |
+| **Primacy** | Das Erste wird am stärksten erinnert | Die wichtigste Aussage gehört in den ersten Satz oder auf die erste Folie |
+
+Die übrigen Regeln gelten weiter: Humanizer, keine Gedankenstriche, Wording-Don'ts.
