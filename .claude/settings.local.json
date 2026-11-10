@@ -901,7 +901,12 @@
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\optin-organisch.html\")",
       "PowerShell($p = \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\optin-organisch.html\"; Set-Clipboard -Value \\([System.IO.File]::ReadAllText\\($p, [System.Text.Encoding]::UTF8\\)\\); \"Zwischenablage: \" + \\(Get-Clipboard -Raw\\).Length + \" Zeichen\")",
       "PowerShell(Start-Process \"C:\\\\Users\\\\Olive\\\\Desktop\\\\claude-workspace\\\\outputs\\\\webinar-gelaende\\\\workbook-gelaende-workshop.html\")",
-      "Bash(git commit -m 'Gelaende-Workshop-Workbook \\(Entwurf\\): Fahrplan als Reise-Rahmen, Losreiss-Vertiefung mit Baustein-Check und Reflexion, Mitmach-Stopps, 9 Seiten *)"
+      "Bash(git commit -m 'Gelaende-Workshop-Workbook \\(Entwurf\\): Fahrplan als Reise-Rahmen, Losreiss-Vertiefung mit Baustein-Check und Reflexion, Mitmach-Stopps, 9 Seiten *)",
+      "Bash(node -e \"console.log\\('pdf-lib', require\\('pdf-lib/package.json'\\).version\\)\")",
+      "Bash(timeout 180 npm install pdf-lib)",
+      "Bash(node -e \"console.log\\('pdf-lib installiert:', require\\('pdf-lib/package.json'\\).version\\)\")",
+      "Bash(git commit -q -m 'Ausfuellbares Workbook: weissen Feld-Hintergrund entfernt, Zahlen 1-10 jetzt auch in Acrobat sichtbar *)",
+      "Bash(git commit -q -m 'Gelaende-Optin: Ads-Seite an organische angeglichen; bekommst/Kopfkino fett, Ablauf Punkt 1 '\\\\''von Zuhause'\\\\'' *)"
     ],
     "defaultMode": "bypassPermissions"
   }

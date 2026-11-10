@@ -11,7 +11,9 @@
 //   "bilder": ["C:/pfad/slide1.jpg", "https://…/slide2.jpg"],   // max. 10, lokale Dateien werden hochgeladen
 //   "datum": "2026-11-12",          // Post-Tag, Uhrzeit fest 07:00 deutscher Zeit
 //   "uhrzeit": "07:00",             // optional
-//   "entwurf": false                // true = nur Entwurf, wird nicht veröffentlicht
+//   "entwurf": false,               // true = nur Entwurf, wird nicht veröffentlicht
+//   "video": "C:/pfad/short.mp4",   // statt bilder: ein Video, wird als Reel gepostet (ohne Musik)
+//   "typ": "reel"                   // optional, Standard: "reel" bei Video, sonst "post"
 // }
 // Ausgabe: JSON {postId, status, scheduleDate}
 import fs from 'fs';
@@ -44,8 +46,9 @@ async function upload(src) {
     return uploadBlob(new Blob([await r.arrayBuffer()], { type: 'image/jpeg' }), 'slide.jpg');
   }
   const buf = fs.readFileSync(src);
-  return uploadBlob(new Blob([buf], { type: src.toLowerCase().endsWith('.png') ? 'image/png' : 'image/jpeg' }), path.basename(src));
+  return uploadBlob(new Blob([buf], { type: mime(src) }), path.basename(src));
 }
+function mime(u) { u = u.toLowerCase().split('?')[0]; return u.endsWith('.mp4') ? 'video/mp4' : u.endsWith('.mov') ? 'video/quicktime' : u.endsWith('.png') ? 'image/png' : 'image/jpeg'; }
 async function uploadBlob(blob, name) {
   const fd = new FormData(); fd.append('file', blob, name); fd.append('name', 'Content-Redaktion ' + name);
   for (let i = 0; i < 3; i++) {
@@ -68,10 +71,15 @@ if (arg === 'list') {
   if (!(j.results?.posts || []).length) console.log('Keine Beiträge im Zeitraum.');
   process.exit(0);
 }
+if (arg === 'loeschen') {
+  const r = await fetch(`${API}/social-media-posting/${LOC}/posts/${arg2}`, { method: 'DELETE', headers: H });
+  console.log(r.status, (await r.text()).slice(0, 200)); process.exit(0);
+}
 if (!arg) { console.log('Nutzung: node scripts/devine-social-post.mjs <auftrag.json> | list [tage]'); process.exit(0); }
 
 const job = JSON.parse(fs.readFileSync(path.resolve(arg), 'utf8'));
-if (!job.caption || !Array.isArray(job.bilder) || !job.bilder.length) throw new Error('caption und bilder sind Pflicht');
+if (job.video) job.bilder = [job.video];
+if (!job.caption || !Array.isArray(job.bilder) || !job.bilder.length) throw new Error('caption und bilder (oder video) sind Pflicht');
 if (job.bilder.length > 10) throw new Error(`Zu viele Bilder (${job.bilder.length}). Devine/Instagram-API erlaubt max. 10.`);
 if ([...job.caption].length > 2200) throw new Error('Caption über 2.200 Zeichen');
 if (!job.entwurf && !/^\d{4}-\d{2}-\d{2}$/.test(job.datum || '')) throw new Error('datum (JJJJ-MM-TT) fehlt');
@@ -79,8 +87,8 @@ if (!job.entwurf && !/^\d{4}-\d{2}-\d{2}$/.test(job.datum || '')) throw new Erro
 const urls = [];
 for (const b of job.bilder) urls.push(await upload(b));
 const body = {
-  accountIds: ACCOUNTS, userId: USER_ID, summary: job.caption, type: 'post',
-  media: urls.map(url => ({ url, type: url.endsWith('.png') ? 'image/png' : 'image/jpeg' })),
+  accountIds: ACCOUNTS, userId: USER_ID, summary: job.caption, type: job.typ || (job.video ? 'reel' : 'post'),
+  media: urls.map(url => ({ url, type: mime(url) })),
   status: job.entwurf ? 'draft' : 'scheduled',
 };
 if (!job.entwurf) body.scheduleDate = berlinISO(job.datum, job.uhrzeit || '07:00');

@@ -1,9 +1,9 @@
-# Einladungs-Mail — Vision/Traumzustand (Newsletterliste) — FINAL (Anika)
+# Einladungs-Mail — Vision/Traumzustand (Newsletterliste)
 
-**Webinar:** So, 27.09., 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
-**Aufhänger:** Vision zuerst (entspannter Alleinspaziergang, Traktor-Szene) + Meilenstein-Weg-Teaser.
-**Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
-**⚠️ Vor Versand: Anmelde-Button/Link einfügen (fehlt in Anikas Fassung, siehe Markierung unten).**
+**Workshop:** Sonntag, 22. November 2026, 19 Uhr · kostenlos · Thema: alleine entspannt ins Gelände (am Boden, ohne Begleitpferd)
+**Aufhänger:** Vision zuerst (entspannter Alleinspaziergang, Traktor-Szene) plus Meilenstein-Weg-Teaser.
+**Anmelde-Link:** [ANMELDELINK ZUM WORKSHOP]
+**Status:** umgeschrieben auf Workshop (2026-11-10)
 
 ---
 
@@ -14,7 +14,7 @@
 
 ---
 
-## Mailtext (finale Version)
+## Mailtext
 
 Hey {{contact.first_name}},
 
@@ -37,7 +37,7 @@ Und in diesem Moment merkst du: Ihr seid ein Team und könnt endlich im Gelände
 
 Ich weiß, für viele fühlt sich das gerade noch wie ein ferner Traum an. Aber es ist keiner. Um dieses Ziel zu erreichen, gibt es einen bewährten Weg mit einigen Meilensteinen und den möchte ich dir gerne kostenlos zeigen.🎁
 
-Genau diesen Weg zeige ich dir am Sonntag, den 27. September, um 19 Uhr in meinem kostenlosen Gelände-Webinar.
+Genau diesen Weg zeige ich dir am Sonntag, den 22. November, um 19 Uhr in meinem kostenlosen Gelände-Workshop.
 
 Darin zeige ich dir, wie du mit deinem Pferd endlich alleine und entspannt spazieren gehst. Ganz ohne Begleitpferd und ohne Kopfkino.
 
@@ -47,9 +47,9 @@ Du lernst,
 * wie ihr euch Schritt für Schritt vom Hof löst,
 * und wie du dein Pferd draußen in jeder Situation wieder beruhigst.
 
-Stell dir vor, ihr geht diesen Herbst schon eure ersten entspannten Runden. Genau darauf arbeiten wir hin.🤗
+Stell dir vor, ihr geht schon bald eure ersten entspannten Runden. Genau darauf arbeiten wir hin.🤗
 
-👉 Hier kannst du dich kostenlos anmelden: [Klicke hier.](https://aw.anikas-pferdeakademie.de/webinar-gelaende)
+👉 Hier kannst du dich kostenlos anmelden: [Klicke hier.]([ANMELDELINK ZUM WORKSHOP])
 
 Ich freue mich riesig, wenn du dabei bist.
 
@@ -57,4 +57,4 @@ Genieße die Zeit mit deinem Pferd.
 
 Deine Anika
 
-PS: Je früher du anfängst, desto mehr von dieser goldenen Jahreszeit könnt ihr gemeinsam genießen.
+PS: Je früher du anfängst, desto mehr entspannte Runden könnt ihr gemeinsam genießen.

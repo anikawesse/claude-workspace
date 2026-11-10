@@ -113,7 +113,7 @@ Jeder Skill-Ordner in `.claude/skills/<name>/` hat `SKILL.md` (Stellenbeschreibu
 
 **Seitenleiste:** Chats sind in Gruppen pro Abteilung sortiert (Marketing & Launch, Content & Reichweite, Ads & Zahlen, Produkte, Kundinnen & Support, Backoffice & Finanzen). Neue Chats in die passende Gruppe einsortieren. **Angepinnt ist nur die Assistenz** (Anika, 06.11.2026), höchstens vorübergehend ein brandaktuelles Projekt.
 
-**Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Content-Vorproduktion werktags 6:00 (montags 21 Tage vorproduzieren zur Freigabe, täglich Freigegebenes in Devine einplanen), Morgen-Briefing werktags 7:00 (mit Content-Block), Ads-Wochenbericht montags 8:00, Instagram-Rückblick alle zwei Wochen freitags 7:00 (gerade KW), Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
+**Dienstplan (geplante Aufgaben, laufen nur bei offener App):** Content-Vorproduktion werktags 6:00 (montags 21 Tage vorproduzieren zur Freigabe, täglich Freigegebenes in Devine einplanen), Morgen-Briefing werktags 7:00 (mit Content-Block), Shorts-Gewinner täglich 8:00 (Testreel-Gewinner nach 2 Tagen als Feed-Reel 18:00 ohne Musik in Devine, `scripts/shorts-gewinner.mjs`), Ads-Wochenbericht montags 8:00, Instagram-Rückblick alle zwei Wochen freitags 7:00 (gerade KW), Mail-Auswertung-Erinnerung und Buchhaltung ThriveCart → Lexware am 1. des Monats.
 
 **Content-Freigabe:** Die Content-Redaktion legt vorproduzierte Posts mit Freigabe-Status „Wartet auf Freigabe“ in die Content-Maschine, Anika nickt im Kasten oben in der Übersicht ab. Skripte: `scripts/content-maschine-db.mjs` (Content-Maschine lesen/schreiben, braucht `SUPABASE_SECRET_KEY`), `scripts/devine-social-post.mjs` (Post in Devine planen, IG + FB, 07:00).
 

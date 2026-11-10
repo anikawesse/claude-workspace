@@ -1,20 +1,21 @@
-# Mail 1 — Einladung Gelände-Webinar (Gesamtliste)
+# Mail 1 — Einladung Gelände-Workshop (Gesamtliste) · Angle: NEUES FORMAT
 
-**Launch:** Gelände-Webinar
-**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
+**Launch:** Gelände-Workshop
+**Workshop-Termin:** Sonntag, 22. November 2026, 19 Uhr (live)
 **Empfänger:** Gesamtliste
-**Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
-**Status:** final (Anika-Version, 2026-08-05)
+**Anmelde-Link:** [ANMELDELINK ZUM WORKSHOP]
+**Angle:** Ankündigung des neuen Formats (Workshop statt Webinar): interaktiv, mitarbeiten, eigenes Workbook, am Ende persönlicher Fahrplan in der Hand. Learnings u.a. Losreißen verhindern.
+**Status:** umgeschrieben auf Workshop, Neues-Format-Angle (2026-11-10)
 
 ---
 
 ## Betreffzeilen (zur Auswahl)
 
-1. Ich habe etwas Neues für euch entwickelt
-2. Ihr habt es euch gewünscht, jetzt kommt es
-3. Endlich mehr Unterstützung fürs Gelände
+1. Neu: mein erster Gelände-Workshop für dich 🐴
+2. Ich habe ein ganz neues Format für dich erarbeitet
+3. Diesmal schaust du nicht nur zu
 
-**Preheader:** Ein kostenloses Live-Webinar für entspannte Spaziergänge mit deinem Pferd.
+**Preheader:** Live, interaktiv und am Ende hältst du deinen persönlichen Fahrplan fürs Gelände in der Hand.
 
 ---
 
@@ -22,46 +23,32 @@
 
 Hey {{contact.first_name}},
 
-ich habe in den letzten Wochen im stillen Kämmerlein etwas Neues für dich zusammengestellt, und heute darf ich es dir endlich verraten.😍
+ich habe in den letzten Wochen etwas Neues für dich erarbeitet und freue mich riesig, es dir heute zu zeigen. 😍
 
-Der Grund dafür bist du. Denn in den vielen Nachrichten, Kommentaren und Gesprächen mit euch höre ich immer wieder denselben Wunsch heraus. Ihr möchtet mehr Input und mehr Unterstützung, wenn es um das Thema Gelände geht.🌳
+Bisher kennst du von mir die klassischen Webinare, bei denen du vor allem zuschaust. Dieses Mal mache ich es anders.
 
-Dabei steht ihr alle an ganz unterschiedlichen Stellen.
+Ich habe ein komplett neues Format für dich gebaut: meinen **Gelände-Workshop**. 🌳🐴
 
-Die eine wünscht sich vor allem mehr Sicherheit für sich selbst, weil dieses mulmige Gefühl im Bauch einfach nicht weichen will.🫣
+Der Unterschied: Du schaust nicht nur zu, du arbeitest live mit.
 
-Die Nächste hat schon damit zu kämpfen, überhaupt vom Hof zu kommen, weil ihr Pferd an der Ausfahrt stehen bleibt oder wieder umdrehen möchte.🫸🏻🛑
+Du bekommst vorab dein eigenes Workbook, das du dir ausdruckst oder direkt am PC ausfüllst. Damit gehen wir die Inhalte gemeinsam Schritt für Schritt durch. Am Ende der zwei Stunden hältst du deinen **persönlichen Fahrplan für entspannte Gelände-Spaziergänge** in der Hand. Nicht nur Theorie, sondern dein ganz eigener Plan. 💛
 
-Und wieder eine andere kommt zwar los, aber sobald es draußen stressig wird, weiß sie nicht, wie sie ihr Pferd in diesem Moment wieder beruhigen kann.🐲
+Darum geht es inhaltlich:
 
-So verschieden diese Situationen auch sind, sie haben eines gemeinsam. Ihr wünscht euch, den Spaziergang mit eurem Pferd wirklich genießen zu können, statt froh zu sein, wenn ihr wieder heile Zuhause angekommen seid. 😵‍💫
+✔️ **Wie du das Losreißen verhinderst,** damit dein Pferd auch im Schreckmoment bei dir bleibt statt davonzugaloppieren.
 
-Deshalb habe ich ein brandneues, kostenloses Live-Webinar für dich vorbereitet.🐴🤩
+✔️ **Was du tust, wenn dir draußen ein Trecker entgegenkommt,** damit ihr ruhig und sicher aneinander vorbeikommt.
 
-Darin zeige ich dir, wie du in den nächsten zwei Monaten Schritt für Schritt dahin kommst, entspannte Spaziergänge mit deinem Pferd zu genießen.🌳🐴
+✔️ **Dein roter Faden** von der richtigen Vorbereitung bis zum entspannten Spaziergang und ersten Ausritt.
 
-Und zwar auch dann, wenn ihr ganz alleine unterwegs seid, ohne einen zweiten Pferdekumpel an eurer Seite.
+Wir treffen uns am **Sonntag, den 22. November um 19 Uhr live.**
 
-Wir treffen uns am 27. September um 19 Uhr live.
+👉 [Jetzt für 0 € anmelden]([ANMELDELINK ZUM WORKSHOP])
 
-Diese drei Dinge nimmst du aus dem Webinar mit:
+Plane dir rund zwei Stunden ein, am Schluss beantworte ich all deine Fragen zu deiner Situation. Und du kannst dir im Workshop ein ganz besonderes Geschenk sichern: meinen Koffer mit 27 Notfallstrategien, den ich sonst nur meinen Schülerinnen gebe. Den lädst du dir live direkt herunter. 🎁
 
-* die einfachste Strategie, damit dein Pferd auch alleine gelassen vom Hof geht.
-
-* zwei konkrete Notfallstrategien, mit denen du dein Pferd im Gelände wieder beruhigst und die Kontrolle behältst.
-
-* und einen klaren roten Faden mit festen Meilensteinen von der perfekten Gelände-Vorbereitung bis zum sicheren Spaziergang.
-
-Egal, an welcher der Stellen du gerade stehst, in diesem Webinar findest du deinen nächsten Schritt.
-
-Sichere dir hier deinen kostenlosen Platz:
-
-👉 [Jetzt für 0 € anmelden](https://aw.anikas-pferdeakademie.de/webinar-gelaende)
-
-Ich freue mich riesig darauf, dich live dabei zu haben.
+Ich freue mich riesig, dich in meinem ersten Gelände-Workshop live dabei zu haben.
 
 Deine Anika
 
-PS: Sei an diesem Abend wirklich live dabei. Ich nehme mir die Zeit, um auf deine Fragen einzugehen und beantworte dir alles, was du wissen möchtest zu deiner Situation.
-
-Melde dich am besten gleich an, solange du gerade daran denkst: [Hier geht es zur Anmeldung](https://aw.anikas-pferdeakademie.de/webinar-gelaende)
+PS: Der Workshop ist live und interaktiv, es gibt keine Aufzeichnung. Sei also wirklich in Echtzeit dabei, damit du deinen Fahrplan direkt mit mir erarbeitest.

@@ -1,11 +1,11 @@
 # Mail 5 — Einladung Bestandsliste (Angle: Spaziergänge = unterschätztes Fundament)
 
-**Launch:** Gelände-Webinar
-**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
+**Launch:** Gelände-Workshop
+**Workshop-Termin:** Sonntag, 22. November 2026, 19 Uhr (live)
 **Empfänger:** Bestandsliste (alle), „angemeldet"-Tag ausschließen
-**Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
-**Angle:** Geländespaziergänge werden unterschätzt / kaum jemand auf dem Pferdemarkt fokussiert sich NUR darauf; überall geht es gleich ums Reiten. Dabei ist der Spaziergang die Basis (sicher & allein rauskommen + Vertrauen). Danach ist der Sprung zum Alleine-Ausreiten nur noch mini. Darum das Webinar-Fokusthema.
-**Status:** final (2026-08-09)
+**Anmelde-Link:** [ANMELDELINK ZUM WORKSHOP]
+**Angle:** Geländespaziergänge werden unterschätzt. Der Spaziergang ist die Basis (sicher und allein rauskommen plus Vertrauen). Danach ist der Sprung zum Alleine-Ausreiten nur noch mini.
+**Status:** umgeschrieben auf Workshop (2026-11-10)
 
 ---
 
@@ -18,7 +18,7 @@
 
 ---
 
-## Body (finale Anika-Fassung)
+## Body
 
 Hey {{contact.first_name}},
 
@@ -36,9 +36,9 @@ Und weißt du, was das Schöne daran ist? Wenn du diese Basis einmal hast, wenn 
 
 Ehrlich gesagt kenne ich kaum jemanden auf dem ganzen Pferdemarkt, der sich dem Thema Geländespaziergänge so ausführlich widmet und bei dem es wirklich nur darum geht.
 
-Genau deshalb habe ich ein brandneues Webinar auf die Beine gestellt, das sich ausschließlich um dieses eine Thema dreht.
+Genau deshalb habe ich einen brandneuen Workshop auf die Beine gestellt, der sich ausschließlich um dieses eine Thema dreht.
 
-👉 [Jetzt für 0 € anmelden](https://aw.anikas-pferdeakademie.de/webinar-gelaende)  ← Anmelde-Button
+👉 [Jetzt für 0 € anmelden]([ANMELDELINK ZUM WORKSHOP])  ← Anmelde-Button
 
 Darin zeige ich dir:
 
@@ -48,16 +48,16 @@ Darin zeige ich dir:
 
 * und den roten Faden von der Vorbereitung bis zum entspannten Spaziergang.
 
-Und als Geschenk bekommst du meinen Koffer voller Notfallstrategien:
-27 konkrete Strategien zum Nachschlagen für den Ernstfall.
-Den gibt es für alle, die live dabei sind. 🎁
+Und du kannst dir ein ganz besonderes Geschenk sichern: meinen Koffer voller Notfallstrategien.
+27 konkrete Strategien zum Nachschlagen für den Ernstfall, die ich sonst nur meinen Schülerinnen gebe.
+Den lädst du dir live direkt herunter. 🎁
 
-📅 27. September, 19 Uhr, live
+📅 Sonntag, 22. November, 19 Uhr, live
 
 ⏰ Plane dir rund 2 Stunden ein, am Schluss beantworte ich all deine Fragen.
 
-Ich freue mich riesig, dir im Webinar alle meine Strategien für entspannte Geländeausflüge an die Hand zu geben.🐴
+Ich freue mich riesig, dir im Workshop alle meine Strategien für entspannte Geländeausflüge an die Hand zu geben.🐴
 
 Deine Anika
 
-PS: Sei wirklich live dabei. Das Geschenk gibt es nur an diesem einen Abend, und in der Fragerunde am Schluss kannst du mir genau deine individuelle Situation schildern.
+PS: Sei wirklich live dabei. In der Fragerunde am Schluss kannst du mir genau deine individuelle Situation schildern.

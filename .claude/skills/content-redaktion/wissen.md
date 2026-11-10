@@ -1070,9 +1070,20 @@ Nur Codewörter mit ✅ bei Instagram UND Facebook dürfen in vorproduzierten Po
 - Das erste Bild dient Anika oft als **Vorschaubild**, also muss der Situationstext dort gut lesbar sein und nichts Wichtiges verdecken.
 - Steht die Situation anfangs unten, rutscht sie nach oben, sobald ❌ Ansatz 1 erscheint. Dann ❌ 1, danach ❌ 2 darunter.
 - Anika korrigiert zur Not selbst, Ziel ist aber, dass sie nichts verschieben muss.
+- **Im Zweifel unten anfangen:** Oben sitzt bei vielen Clips die Reiterin oder ein Kind. Nachkorrektur 10.11.: Rohclips `20261022_162303` (Kind auf Schimmel) und `20261016_153545` (Kind führt Rappe) immer mit Situation unten. `20250130_140557` (Schimmel, rotes Halfter) je nach Abschnitt: Kopf hoch → unten, frisst mit Kopf unten (ab 1 s) → oben. Darum jeden Abschnitt einzeln am Standbild prüfen, nicht pro Clip.
 - Videos immer OHNE Ton (Musik legt Anika in Instagram drauf). Nach der Situation mehr Abstand (90 px) vor ❌ 1. Zum Schluss unten eine Box „Sondern 👇“ (Verweis auf die Lösung in der Caption).
 - Rohclips müssen nicht vorgeschnitten sein. Anika legt ganze Clips ab, die Redaktion sucht sich ruhige Abschnitte (auch mehrere Abschnitte aus einem Clip) und schneidet selbst auf Länge.
 - Vor dem ersten Batch ein Testvideo zur Abnahme des Looks.
+
+### Karussell-Korrekturen: Content-Maschine ist die Vorlage (10.11.2026)
+
+Anika korrigiert Slide-Texte und Caption direkt in der Content-Maschine und gibt dann frei. Canva gleicht die Redaktion an: Vor jedem Export (Schritt A der Content-Vorproduktion) werden die Canva-Texte mit dem Feld `slides` verglichen und abweichende Slides ersetzt, Kästen bei längeren Texten vergrößert. Anika muss Canva nie selbst anfassen.
+
+### B-Roll-Shorts: Posten und Gewinner (10.11.2026)
+
+- Ein Thema pro Tag, 5 Shorts als Testreels. Anika postet sie selbst in der Handy-App (am PC gibt es keinen Testreel-Schalter, Devine kann keine Testreels). Ordner `Fertig\MM-TT Titel` heißen nach dem Post-Datum, Anika zieht sie per Kabel aufs Handy.
+- Zwei Tage später plant die geplante Aufgabe **Shorts-Gewinner einplanen** (täglich 8:00, `node scripts/shorts-gewinner.mjs auto`) das Short mit den meisten Aufrufen als Feed-Reel um **18:00** auf IG + FB ein, **ohne Musik** (Anika: „Devine ohne Musik“). Zuordnung Testreel ↔ Datei über das Vorschaubild; ist sie unsicher, wird nichts eingeplant.
+- Warum nicht das Testreel mit Musik herunterladen: Über die Instagram-Schnittstelle sind 49 von 58 Testreels gar nicht abrufbar, die abrufbaren Reels kommen fast immer ohne Ton und nur in 720p (getestet 10.11.).
 
 ### Short-Texte: Anikas Korrekturen (06.11.2026, 12 Shorts, 7 davon geändert)
 
@@ -1082,6 +1093,13 @@ Nur Codewörter mit ✅ bei Instagram UND Facebook dürfen in vorproduzierten Po
 - **Keine fremden Meinungen in die Situation packen.** ❌ „…und alle sagen, es ist einfach nur stur.“ ✅ „…und keinen Schritt vom Hof machen will.“ Nur das Verhalten zeigen.
 - **Beim ❌-Ansatz das echte Motiv der Reiterin nennen:** „um es abzulenken“, „wieder aufmerksam zu machen“ statt bildhafter Unterstellungen wie „damit es dranbleibt“ oder „wieder einzufangen“.
 - **❌-Ansatz als Gewohnheit, nicht als Bild:** ✅ „Dich nur noch hinter einem erfahrenen Pferd raus zu trauen.“ statt „…zu verstecken und hinterherzulaufen“. ✅ „…die Runde zu schaffen“ statt „…loszureiten“.
+
+### Vorproduktion 09.11.2026 (Montag, automatisch)
+
+- Gebaut in „Karussell-Posts 2026“: Traktor-entgegen/Quiz (9) DAHaZdz-GCQ Bild MAHZNqMSaj4 (Schimmel im Paddock) für 24.11. und Grasziehen/Gras (10) DAHaZUA_h1o Bild MAGRL4aoB8I (Anika mit Rappe am Stall) für 26.11.
+- ⚠️ Bild-Check: MAGxDkWNr8c und MAGaMvxVeR0 sind Familienfotos (Mann, Baby, Hund), passen nicht für Gelände-Karussells. MAGIF01sbMg ist ein Schimmel von hinten mit Anika, wirkt neben MAHZNqMSaj4 zu ähnlich.
+- Die Content-Maschine hat keinen CTA-Wert für Gras oder Kappzaum. Gras-Karten bekommen deshalb cta „—“, das Codewort steht in Caption und letzter Slide.
+- Mehrere Karussell-Karten im Planer (10.11., 12.11., 16.11., 23.11., 25.11.) stehen auf Status „Idee“ ohne Canva-Link im Feld `medien`, obwohl die Designs am 27.10. gebaut wurden. Beim Einplanen über Devine fehlt dann der Link.
 
 ## Psychologische Prinzipien für alle Skripte (Anika, 09.11.2026)
 

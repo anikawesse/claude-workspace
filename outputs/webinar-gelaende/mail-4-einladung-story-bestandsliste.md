@@ -1,11 +1,11 @@
 # Mail 4 — Einladung an Bestandsliste (mit Jungbullen-Story)
 
-**Launch:** Gelände-Webinar
-**Webinar-Termin:** 27. September 2026, 19 Uhr (live)
-**Empfänger:** Bestandsliste (alle), ggf. „angemeldet"-Tag ausschließen, damit Angemeldete keine Einladung doppelt bekommen
-**Anmelde-Link:** https://aw.anikas-pferdeakademie.de/webinar-gelaende
-**Story:** Anikas eigene Jungbullen-Geschichte (feurige Spanierin an der Hand, ~30 Jungbullen brechen aus, einer durch den Stacheldrahtzaun) — dokumentiert in context/gelaendeschluessel/lektion-10-abschluss-naechster-schritt.md + Fragerunde. Echte Story, nichts erfunden.
-**Status:** final (2026-08-09)
+**Launch:** Gelände-Workshop
+**Workshop-Termin:** Sonntag, 22. November 2026, 19 Uhr (live)
+**Empfänger:** Bestandsliste (alle), „angemeldet"-Tag ausschließen, damit Angemeldete keine Einladung doppelt bekommen
+**Anmelde-Link:** [ANMELDELINK ZUM WORKSHOP]
+**Story:** Anikas eigene Jungbullen-Geschichte (feurige Spanierin an der Hand, ~30 Jungbullen brechen aus). Echte Story, nichts erfunden.
+**Status:** umgeschrieben auf Workshop (2026-11-10)
 
 ---
 
@@ -18,7 +18,7 @@
 
 ---
 
-## Body (finale Anika-Fassung)
+## Body
 
 Hey {{contact.first_name}},
 
@@ -58,24 +58,24 @@ Und mal ganz ehrlich, sowas kann dich jederzeit im Gelände treffen, da hast du 
 
 Bei mir ist die Situation glimpflich ausgegangen, weil ich sofort wusste, was ich tun muss, um Mari wieder runterzufahren und die Kontrolle zu behalten. Ohne darüber nachzudenken.🙏🏻
 
-Und weil ich mir diese Sicherheit auch für dich wünsche, gibt es ein brandneues Webinar NUR zum Thema Geländespaziergang.
+Und weil ich mir diese Sicherheit auch für dich wünsche, gibt es einen brandneuen Workshop NUR zum Thema Geländespaziergang.
 
 Dort zeige ich dir die Schritte um überhaupt erstmal entspannt vom Hof herunterzukommen bis hin zu meinem bunten Koffer an Notfallstrategien, falls auch mal 30 Jungbullen hinter dir her sind. (Ich wünsche es dir nicht💕)
 
 Merk dir:
 
-📅 27. September, 19 Uhr, live
+📅 Sonntag, 22. November, 19 Uhr, live
 
 ⏰ Plane dir rund 2 Stunden ein, am Schluss beantworte ich all deine Fragen.
 
-🎁 Den Koffer voller Notfallstrategien bekommst du sogar geschenkt, aber nur, wenn du live dabei bist.
+🎁 Im Workshop kannst du dir außerdem ein ganz besonderes Geschenk sichern: meinen Koffer voller Notfallstrategien, den ich sonst nur meinen Schülerinnen gebe. Den lädst du dir live direkt herunter.
 
 Meinem Nachbarn tat das übrigens ziemlich leid, weil er gesehen hat, wie Mari neben mir förmlich explodiert und mir um die Ohren geflogen ist. 💥
 
 Da gab es auf dem Dorffest am nächsten Tag erstmal eine Runde Kurzer ausgegeben auf den Schreck. Sehr pragmatisch hier auf´m Dorf.🤣
 
-Ich freue mich riesig, dir im Webinar alle meine Strategien für entspannte Geländeausflüge an die Hand zu geben.🐴
+Ich freue mich riesig, dir im Workshop alle meine Strategien für entspannte Geländeausflüge an die Hand zu geben.🐴
 
 Deine Anika
 
-PS: Sei wirklich live dabei. Das Geschenk gibt es nur an diesem einen Abend, und in der persönlichen Fragerunde am Schluss kannst du mir genau deine individuelle Situation schildern: Hier geht es zur Anmeldung
+PS: Sei wirklich live dabei. In der persönlichen Fragerunde am Schluss kannst du mir genau deine individuelle Situation schildern: [Hier geht es zur Anmeldung]([ANMELDELINK ZUM WORKSHOP])

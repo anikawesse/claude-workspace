@@ -63,7 +63,7 @@ Bei jedem Backoffice-Auftrag kurz prüfen, ob eine Frist in den nächsten 14 Tag
 
 | Frist | Stand laut Memory | Quelle |
 |---|---|---|
-| IOSS letzte Nullmeldung 09/2026 | Frist war 31.10.2026, **unklar ob erledigt** (Stand 06.11.26) → im BOP-Portal prüfen | Memory „IOSS/OSS-Klärung“ |
+| ~~IOSS letzte Nullmeldung 09/2026~~ | gestrichen 10.11.26: laut Anika gibt es keine Nullmeldung 09/2026 (mit Steuerberatung geklärt), IOSS ist erledigt | Memory „IOSS/OSS-Klärung“ |
 | OSS-Meldung Q4/2026 (erste) | bis 31.01.2027, danach quartalsweise bis Ende des Folgemonats | Memory „IOSS/OSS-Klärung“ |
 | USt-VA Juni bis Sept. 2026: EU-Umsätze korrigieren | **muss gemacht werden**, Anika erledigt es später (vor Q4 = deutsche USt 19 %, Lexware hat sie als OSS gebucht); bei Buchhaltungsaufgaben erinnern | `outputs/oss-klaerung/antwort-steuerberatung-hermes-partner.md` |
 | Schweiz und Drittländer | laut Steuerberatung kein Handlungsbedarf (06.11.26), erst bei deutlich mehr Umsatz prüfen | Memory „IOSS/OSS-Klärung“ |
