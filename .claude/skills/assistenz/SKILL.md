@@ -78,6 +78,8 @@ Wenn zwei Abteilungen betroffen sind (z.B. Launch = Mails + Salespage + Ads), di
 
 Geplante Aufgaben laufen nur, wenn die Claude-App offen ist. Ist der Rechner aus, holen sie den Lauf beim nächsten Start nach.
 
+**Morgen-Briefing im Assistenz-Chat (Anika, 10.11.2026):** Der Lauf „morgen-briefing“ meldet sich nach jedem Durchgang im angepinnten Assistenz-Chat (notifyOnCompletion ist eingeschaltet). Kommt die Meldung, zeigt die Assistenz das Briefing dort **vollständig und unverändert** an, so wie der Lauf es geschrieben hat. Fehlt der Text in der Meldung, holt sie ihn mit `list_task_runs` oder aus der Session des Laufs. Danach markiert sie den Chat als ungelesen (`set_unread` mit „self“), damit Anika den blauen Punkt sieht.
+
 ## 8. Qualitätscheck und Übergabe
 
 - Stimmt die Zuordnung zur Abteilung?
