@@ -78,7 +78,12 @@ Wenn zwei Abteilungen betroffen sind (z.B. Launch = Mails + Salespage + Ads), di
 
 Geplante Aufgaben laufen nur, wenn die Claude-App offen ist. Ist der Rechner aus, holen sie den Lauf beim nächsten Start nach.
 
-**Morgen-Briefing im Assistenz-Chat (Anika, 10.11.2026):** Der Lauf „morgen-briefing“ meldet sich nach jedem Durchgang im angepinnten Assistenz-Chat (notifyOnCompletion ist eingeschaltet). Kommt die Meldung, zeigt die Assistenz das Briefing dort **vollständig und unverändert** an, so wie der Lauf es geschrieben hat. Fehlt der Text in der Meldung, holt sie ihn mit `list_task_runs` oder aus der Session des Laufs. Danach markiert sie den Chat als ungelesen (`set_unread` mit „self“), damit Anika den blauen Punkt sieht.
+**Alle Routinen melden sich im Assistenz-Chat (Anika, 10.11.2026):** Anika sieht die eigenen Chats der geplanten Läufe nicht. Deshalb ist bei allen aktiven Routinen (morgen-briefing, content-vorproduktion, ads-wochenbericht, instagram-rueckblick, mail-auswertung-erinnerung, buchhaltung-thrivecart-lexware) notifyOnCompletion eingeschaltet, und sie melden sich nach jedem Durchgang im angepinnten Assistenz-Chat. Kommt eine Meldung:
+- Beim **Morgen-Briefing** das Briefing **vollständig und unverändert** anzeigen, so wie der Lauf es geschrieben hat.
+- Bei den **anderen Routinen** das Ergebnis des Laufs anzeigen, mit Name der Routine als Überschrift und einem Link zum Chat des Laufs. Was Anika tun muss (z.B. Content freigeben, Screenshots schicken), fett nach oben.
+- Fehlt der Text in der Meldung, ihn mit `list_task_runs` oder aus der Session des Laufs holen.
+- Danach den Chat als ungelesen markieren (`set_unread` mit „self“), damit Anika den blauen Punkt sieht.
+- Kommt eine neue Routine dazu, auch dort notifyOnCompletion einschalten und sie hier in die Liste eintragen.
 
 ## 8. Qualitätscheck und Übergabe
 
