@@ -906,7 +906,9 @@
       "Bash(timeout 180 npm install pdf-lib)",
       "Bash(node -e \"console.log\\('pdf-lib installiert:', require\\('pdf-lib/package.json'\\).version\\)\")",
       "Bash(git commit -q -m 'Ausfuellbares Workbook: weissen Feld-Hintergrund entfernt, Zahlen 1-10 jetzt auch in Acrobat sichtbar *)",
-      "Bash(git commit -q -m 'Gelaende-Optin: Ads-Seite an organische angeglichen; bekommst/Kopfkino fett, Ablauf Punkt 1 '\\\\''von Zuhause'\\\\'' *)"
+      "Bash(git commit -q -m 'Gelaende-Optin: Ads-Seite an organische angeglichen; bekommst/Kopfkino fett, Ablauf Punkt 1 '\\\\''von Zuhause'\\\\'' *)",
+      "Bash(ffprobe -version)",
+      "Bash(grep -nE \"vimeo|hero-mockup|Preisvorteil|Ersparnis|sparst|€|EUR|749|999|549|450|Oktober|November|Dezember|September|[0-9]{1,2}\\\\.[0-9]{1,2}\\\\.|Start|startet|Anmeldung|Frist|läuft|Uhr\" outputs/webinar-gelaende/salespage-programm.html)"
     ],
     "defaultMode": "bypassPermissions"
   }
