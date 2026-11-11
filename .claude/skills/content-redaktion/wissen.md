@@ -1128,3 +1128,9 @@ Nicht alle 17 in einen Text packen. Pro Skript bewusst 3 bis 5 auswählen, die z
 | **Primacy** | Das Erste wird am stärksten erinnert | Die wichtigste Aussage gehört in den ersten Satz oder auf die erste Folie |
 
 Die übrigen Regeln gelten weiter: Humanizer, keine Gedankenstriche, Wording-Don'ts.
+
+### Bildwahl: Motiv passend zum Thema (Anika, 11.11.2026)
+
+- Anika tauscht bei vorproduzierten Karussells das Bild gegen ein Motiv, das die Situation zeigt: Traktor-Karussell (DAHaZdz-GCQ) Slide 1 mit Traktorfoto, Gras-Karussell (DAHaZUA_h1o) mit Kind auf Pony im Gras (MAHagXfTWS4, Crop top −668.05, left 0, width 1259.41, height 2794.80), danach auf alle Slides übertragen.
+- Für neue Karussells deshalb zuerst ein Bild suchen, auf dem die Situation des Hooks zu sehen ist (Gras, Feldweg, Traktor). Erst wenn keins da ist, ein allgemeines Portrait aus „Portrait“ nehmen.
+- Fertige Shorts liegen unter `Desktop\SM Content\Vorlage Reels\Fertig\MM-TT Titel`.
