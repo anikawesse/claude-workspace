@@ -103,7 +103,7 @@ Jeder Arbeitsbereich bekommt einen eigenen Skill mit Stellenbeschreibung. Jeder 
 | `kundinnen-support` | Tiergespräch-Notizen, Support-Antworten, Freelancerin-Vorlagen, Community-Posts |
 | `produkt-werkstatt` | Kurse, Lektionen, Workbooks, Folien, Zertifikate, Thumbnails, Video-Technik |
 | `backoffice` | Lexware, Belege, Banking, Fristen, Devine, ThriveCart, ManyChat |
-| `assistenz` | Eingangskorb im angepinnten Chat „Assistenz“: verteilt Aufträge, Überblick, Fristen, Morgen-Briefing |
+| `assistenz` | Eingangskorb im angepinnten Chat „Assistenz“: verteilt Aufträge, Überblick, Fristen, Morgen-Briefing; alle geplanten Routinen melden ihr Ergebnis dort (notifyOnCompletion) |
 | `hook-reel-coach` | Hooks und Reel-Ideen bewerten und entwickeln |
 | `humanizer`, `ki-sprech-killer` | Lektorat: jeder Text vor der Abgabe |
 
