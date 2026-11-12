@@ -1,0 +1,64 @@
+# Videotraining-Ads: Auswertung nach 3 Tagen (Stand 12.11.2026, 10:50 Uhr)
+
+Kampagne „Videotraining Sandbox Nov 26" (Leads, ABO, 2 × 24,87 €/Tag), live seit 09.11.2026 18:11.
+Quellen: Meta Insights (Kosten, Klicks), WebinarKit-Export registrants.csv (echte Anmeldungen, utm_content = Anzeige), Devine (Bestandskontakte, Tags), ThriveCart (Käufe).
+
+## Gesamt
+
+| Kennzahl | Wert |
+|---|---|
+| Ausgegeben | 126,00 € |
+| Anmeldungen (WebinarKit) | 31 → **4,06 € pro Anmeldung** |
+| davon wirklich neue Kontakte | 22 → **5,73 € pro neuem Kontakt** |
+| davon schon bekannt (Newsletter/Kundinnen) | 9 (Nicole, Ilona, Julia K., Clarissa, Susanne S., Alex, Ellen, Lydia, Karin B.) |
+| Link-Klicks | 298, Link-CTR 1,7 %, Kosten pro Link-Klick 0,42 € |
+| Meta-Leads | 31 (stimmt zufällig mit WebinarKit überein: anfangs fehlten Leads, danach Doppelte) |
+| Käufe Traumteam aus der Anmeldeliste | 0 (die 2 TTP-Käufe am 09. und 10.11. kamen nicht aus den Ads) |
+
+Eric-KPIs: Kosten pro Anmeldung 2–10 € ✅, CPC < 2 € ✅, CTR 2–4 % ❌ (Link-CTR 1,7 %; die früher genannten 3,1 % waren alle Klicks, nicht nur Link-Klicks).
+
+## Pro Anzeige (Anmeldungen laut WebinarKit)
+
+| Anzeige | Ausgegeben | Link-CTR | Anmeldungen | € pro Anmeldung |
+|---|---|---|---|---|
+| Broad Gesucht | 58,74 € | 1,69 % | 15 | **3,92 €** |
+| Interessen Gesucht | 47,72 € | 1,66 % | 11 | 4,34 € |
+| Interessen Vertrauen | 15,18 € | **2,56 %** | 4 | **3,80 €** |
+| Broad Vertrauen | 4,36 € | 0,59 % | 1 | 4,36 € |
+
+- „Gesucht" trägt die Kampagne (26 von 31).
+- **„Vertrauen" in der Interessen-Gruppe hat sich gefangen:** Meta gibt ihr seit dem 11.11. mehr Budget (heute schon mehr als Gesucht), beste Link-CTR und günstigste Anmeldung. Die Einschätzung vom 10.11. („Vertrauen ist schwach") gilt nur noch für Broad.
+- Broad vs. Interessen: Broad etwas günstiger (3,92 € vs. 4,34 € bei Gesucht).
+
+## Pro Tag
+
+| Tag | Ausgegeben | Anmeldungen | € pro Anmeldung |
+|---|---|---|---|
+| 09.11. (ab 18 Uhr) | 17,24 € | 10 | 1,72 € |
+| 10.11. | 50,43 € | 8 | 6,30 € |
+| 11.11. | 40,29 € | 9 | 4,48 € |
+| 12.11. (bis 10:50) | 18,04 € | 4 | 4,51 € |
+
+## Webinar
+
+- 15 von 31 waren im Webinar-Raum, 10 davon länger als ein paar Sekunden.
+- Bis zum Angebot (über 90 %): 4 (Susanne H., Susanne S., Karin F., Lydia).
+- Angebot geklickt: 2 (Susanne H. neu, Lydia Bestandskundin).
+- Replay angesehen: 3 (Dees, Nadine, Karin B.).
+- Viele mit „0 %" trotz Teilnahme: Raum betreten und gleich wieder weg.
+
+## Placements und Alter (Meta-Leads, inkl. Doppelzählungen, nur grob)
+
+- Facebook 69,60 € / 14 Leads, Instagram 55,04 € / 16 Leads, Audience Network 1,07 €.
+- Alter: 35–44 am stärksten (11 Leads bei 28,72 €), 25–34 schwach (1 Lead bei 19,95 €).
+
+## Tags in Devine (Stichprobe aller 31)
+
+- Verpasst-Tag bei allen, die nicht bis zum Angebot kamen ✅. Wer bis zum Angebot kam (Karin F., Susanne H., Susanne S.), hat keinen Verpasst-Tag ✅.
+- `aufwärmsequenz` haben bisher die Anmeldungen vom 09.11. (Sequenz durch). Auch Alex, Ellen und Karin B. tragen ihn, obwohl sie schon den Newsletter-Tag haben. Ob der Türsteher sie trotzdem rausfiltert, hängt davon ab, ob der Tag vor oder nach dem Türsteher gesetzt wird.
+
+## Empfehlung
+
+1. **Kampagne weiterlaufen lassen.** 4 € pro Anmeldung ist gut, nichts darin ändern (Anikas Regel: keine einzelnen Anzeigen ausschalten).
+2. **Nicht „Vertrauen" streichen, sondern neue Hooks testen:** Eine zweite Sandbox-Kampagne mit 2–3 neuen Hooks aus der 10er-Liste (09.11.) aufsetzen. Gesucht und Interessen-Vertrauen sind die Vorlage.
+3. **Verkauf braucht Zeit:** Ein TTP-Verkauf (497 €) bezahlt rund 120 Anmeldungen. Nach 3 Tagen mit 4 Leuten am Angebot ist 0 Käufe normal, die Salesmails laufen noch. Erst nach etwa 2 Wochen über Käufe urteilen.
