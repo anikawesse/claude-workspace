@@ -1,0 +1,5 @@
+Mail-Button "Zum Kalender hinzufügen":
+https://aw.anikas-pferdeakademie.de/webinar-g#kalender
+
+(Führt auf die Danke-Seite, dort klappt das Kalender-Menü automatisch auf.
+ Apple, Google, Outlook.com und Office 365 wählt die Kundin dann dort.)

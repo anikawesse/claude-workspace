@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Anikas Pferdeakademie//Kalender-Button//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:gelaende-workshop-2026-11-22@anikas-pferdeakademie.de
+DTSTAMP:20261112T060504Z
+DTSTART:20261122T180000Z
+DTEND:20261122T200000Z
+SUMMARY:Gelände-Workshop mit Anika (live in Zoom)
+DESCRIPTION:Wir treffen uns live in Zoom. Klicke zum Start einfach auf dies
+ en Link:\nhttps://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8
+ MOBeSIh6.1\n\nPlane dir 2 Stunden ein und nimm dir gern etwas zu schreiben
+  mit.\n\nIch freue mich auf dich!\nAnika
+LOCATION:https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MO
+ BeSIh6.1
+URL:https://us06web.zoom.us/j/88243983552?pwd=CL5EcPERub3kjXO22tlcp8MOBeSIh
+ 6.1
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Gelände-Workshop mit Anika (live in Zoom)
+TRIGGER:-PT1440M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Gelände-Workshop mit Anika (live in Zoom)
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
