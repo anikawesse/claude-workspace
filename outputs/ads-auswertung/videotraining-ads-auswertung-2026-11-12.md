@@ -83,3 +83,19 @@ Neue Kontakte pro Tag (Devine): 09.11. 6 · 10.11. 5 · 11.11. 7 · **12.11. 13*
 Pro Anzeige (Meta-Leads, ungefähr): Broad Gesucht 81,03 € / 26 → 3,12 € · Interessen Gesucht 55,09 € / 11 → 5,01 € · Interessen Vertrauen 30,89 € / 6 → 5,15 € · Broad Vertrauen 4,72 € / 0.
 
 ⚠️ Meta hat den Kauf NICHT erfasst (keine Purchase-Events auf den Anzeigen). Über welche Anzeige Steffi kam, zeigt nur ein frischer WebinarKit-Export (utm_content).
+
+## Nachtrag 13.11.2026 mit frischem WebinarKit-Export
+
+**Steffi kam über „Interessen Vertrauen"**, hat das Videotraining zu 98 % gesehen und aufs Angebot geklickt. Also genau die Anzeige, die am 10.11. noch als schwach galt.
+
+| Anzeige | Ausgegeben (13.11. 7 Uhr) | Anmeldungen | € pro Anmeldung | Käufe |
+|---|---|---|---|---|
+| Broad Gesucht | 81,03 € | 23 | 3,52 € | 0 |
+| Interessen Gesucht | 55,09 € | 13 | 4,24 € | 0 |
+| Interessen Vertrauen | 30,89 € | 6 | 5,15 € | **1 (497 €)** |
+| Broad Vertrauen | 4,72 € | 1 | 4,72 € | 0 |
+| **Gesamt** | **171,73 €** | **43** | **3,99 €** | **1** |
+
+Bis zum Angebot (über 90 %): 5 (Susanne H., Susanne S., Karin F., Lydia, Steffi), dazu Andrea 83 %. Angebot geklickt: 3 (Lydia, Susanne H., Steffi).
+
+Meta sieht Käufe hier grundsätzlich nicht (Anika, 13.11.): Gekauft wird später in ThriveCart, meist über einen Link aus dem Webinar oder den Mails, nicht direkt nach dem Anzeigenklick. Käufe pro Anzeige deshalb immer über WebinarKit-Export (utm_content) und ThriveCart zuordnen.

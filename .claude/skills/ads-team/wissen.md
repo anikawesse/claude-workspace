@@ -935,3 +935,6 @@ Siehe verwandt: [[project-futterfahrplan]]
 
 ### Meta zählt Leads doppelt (Videotraining-Ads, 10.11.26)
 Meta zeigte am 10.11. um 8 Uhr 5 Leads, laut Devine und WebinarKit waren es nur 2 echte Anmeldungen. Ursache: Der Lead-Pixel sitzt auf der Dankeseite, und die „Event URL" aus WebinarKit (Link in den Erinnerungsmails) IST die Dankeseite samt fbclid. Jede Rückkehr über die Erinnerungsmail feuert also erneut einen Lead, der dem Ad zugerechnet wird. Für den echten CPL deshalb immer WebinarKit-Export oder Devine-Tag `everg_web_traumteam_reg_ads` (dateAdded) nehmen, nie die Meta-Zahl. Lösung, falls gewünscht: Lead nur einmal pro Browser feuern (localStorage-Flag im Dankeseiten-Code).
+
+### Videotraining-Ads: Käufe nur über WebinarKit-Export zuordnen (13.11.26)
+Meta kann Käufe aus dem Auto-Webinar nicht sehen (Anika: „ist doch klar, woher auch"): Kauf passiert später in ThriveCart über Webinar- oder Mail-Link, nicht direkt nach dem Anzeigenklick. Nicht als Tracking-Problem melden. Zuordnung: Käuferin in ThriveCart → E-Mail im WebinarKit-Export → utm_content = Anzeige. Erster Ads-Kauf (Steffi, 12.11., 497 €) kam über **Interessen Vertrauen**, die Anzeige mit dem teuersten CPL. Lehre: Anzeigen nicht nur nach CPL beurteilen, auch nach Webinar-Quote und Käufen.
