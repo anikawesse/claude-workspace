@@ -62,3 +62,24 @@ Eric-KPIs: Kosten pro Anmeldung 2–10 € ✅, CPC < 2 € ✅, CTR 2–4 % ❌
 1. **Kampagne weiterlaufen lassen.** 4 € pro Anmeldung ist gut, nichts darin ändern (Anikas Regel: keine einzelnen Anzeigen ausschalten).
 2. **Nicht „Vertrauen" streichen, sondern neue Hooks testen:** Eine zweite Sandbox-Kampagne mit 2–3 neuen Hooks aus der 10er-Liste (09.11.) aufsetzen. Gesucht und Interessen-Vertrauen sind die Vorlage.
 3. **Verkauf braucht Zeit:** Ein TTP-Verkauf (497 €) bezahlt rund 120 Anmeldungen. Nach 3 Tagen mit 4 Leuten am Angebot ist 0 Käufe normal, die Salesmails laufen noch. Erst nach etwa 2 Wochen über Käufe urteilen.
+
+---
+
+# Nachtrag 13.11.2026, 7:15 Uhr: erster Verkauf aus den Ads 🎉
+
+**Stefanie (Steffi) Liepe** hat sich am 12.11. um 15:43 über die Ads angemeldet (neuer Kontakt, Tag `everg_web_traumteam_reg_ads`) und um 20:34 das Traumteam-Programm gekauft (Einmalzahlung 497 €). Zwischen Anmeldung und Kauf lagen keine 5 Stunden.
+
+| Kennzahl | Wert |
+|---|---|
+| Ausgegeben | 171,73 € |
+| Anmeldungen (Devine, = Meta-Leads) | ca. 43 → **ca. 4,00 € pro Anmeldung** |
+| davon neue Kontakte | 33 → 5,20 € pro neuem Kontakt |
+| Käufe | **1 × 497 €** → Umsatz fast das Dreifache der Werbekosten |
+| Link-Klicks / Seitenaufrufe | 391 / 275, CPC 0,44 € |
+| Anmeldequote Anmeldeseite | ca. 16 % (43 von 275) |
+
+Neue Kontakte pro Tag (Devine): 09.11. 6 · 10.11. 5 · 11.11. 7 · **12.11. 13** · 13.11. (bis 7 Uhr) 2.
+
+Pro Anzeige (Meta-Leads, ungefähr): Broad Gesucht 81,03 € / 26 → 3,12 € · Interessen Gesucht 55,09 € / 11 → 5,01 € · Interessen Vertrauen 30,89 € / 6 → 5,15 € · Broad Vertrauen 4,72 € / 0.
+
+⚠️ Meta hat den Kauf NICHT erfasst (keine Purchase-Events auf den Anzeigen). Über welche Anzeige Steffi kam, zeigt nur ein frischer WebinarKit-Export (utm_content).
