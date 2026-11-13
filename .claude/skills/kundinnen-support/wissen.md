@@ -101,6 +101,8 @@ Routine für die wöchentlichen Live-Calls des Gelände-Programms (siehe [[proje
 
 ⚠️ Anikas Tonspur in Zoom-Transkripten oft lückenhaft (wie bei [[tiergespraech-zusammenfassungen]]).
 
+**Nachtrag 12.11.2026:** Call Mi 11.11. (19 Uhr, nur Sabine) ausgewertet; Anika führte dort ein Tiergespräch mit Number 1 in Annes Auftrag (Notiz outputs/tiergespraeche/2026-11-11-anne-ruehrer-number-1.md). Anikas Bremsvideo (Beinschluss) ist eingestellt. Sabine wünscht Jahres-Call, Anika soll sich Erinnerung setzen.
+
 **Nachtrag 06.11.2026:** 9. Feedbackrunde 06.11. ausgewertet (Sabine, Anne). Programm (12 Wochen, Start 03.09.) läuft Ende November aus; Sabine wünscht sich einen Jahres-Call. Annes Trainerin heißt Madeleine. Reihenfolge beim Ablegen beachten: erst die Lesefassung `JJJJ-MM-TT-call-transkript.md` schreiben, dann die `roh-*.txt` löschen.
 
 **Nachtrag 30.10.2026:** 8. Feedbackrunde 30.10. ausgewertet (Sabine, Anne erstmals live). Wieder freitags 11 Uhr. Einfüge-Weg: `sed -f` mit Zeilennummern aus `grep -n`, danach `## `-Überschriften (9) und Datumszeilen (8) zählen; kein `replace_all`. Programm läuft jetzt generell **12 Wochen** (Anika, 30.10.); Pulsgurt- und Anti-Fress-Netz-Tipps sind hochgeladen. Offenes Anika-ToDo: Reitvideos Beinschluss (Kenzie Dysli).
@@ -135,3 +137,9 @@ Routine für die wöchentlichen Live-Calls des Gelände-Programms (siehe [[proje
 **Technik-Trick fürs Massen-Taggen per Browser (Claude in Chrome):** Das Tag-Feld im „Update student"-Modal ist eine **Tagify**-Komponente. Der sichtbare Input ist per Koordinaten/Refs unzuverlässig; zuverlässig per JS: `document.querySelectorAll('input[placeholder="Enter tags.."]')` → letztes Element nehmen → `.__tagify.addTags(['tag'])`, dann letzten „Save changes"-Button klicken. Profil-URLs: `#/learn/students/view/<id>`.
 
 Siehe auch [[project-thrivecart]].
+
+## Meta Ads Guide 2027: echte Kundinnen-Videos sammeln (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`.
+- **Echte Videos von echten Kundinnen sind die besten Ads.** Gute Gelegenheiten: Challenges, Live-Calls, Erfolgsmeldungen in der Gruppe.
+- Bei Erfolgsgeschichten freundlich fragen, ob die Kundin ein kurzes Handy-Video aufnimmt. **Immer die Erlaubnis für die Nutzung in Werbung einholen** (schriftlich, z. B. per Mail).
+- Gesammelte Videos und Erlaubnisse ans Ads-Team und die Content-Redaktion melden.

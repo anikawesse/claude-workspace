@@ -101,3 +101,9 @@ So bleibt der Titel sichtbar, egal wie stark ThriveCart croppt. Build-Methode: P
 ⚠️ **Desktop-Dateien verschwinden ständig** (Sync-Problem) → wiederverwendbare Quell-Fotos in **`claude-workspace/reference/fotos/`** ablegen (stabil). Bisher: `paddock-ruhende-pferde.jpg` (Pferde im Paddock, für Offenstall/Paddock-Kurse). Fertige Thumbnails zeitnah in ThriveCart hochladen, solange sie auf dem Desktop liegen.
 
 Beispiel-Output: Desktop/Energetik_neu.png + Energetisch_Testen_neu.png (Juni 2026). Siehe [[project_thrivecart]].
+
+## Meta Ads Guide 2027: Video-Technik für Ads (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`.
+- Ads sollen **echt und unperfekt** aussehen: keine Filter, Handy-Look, verschiedene Blickwinkel. Profi-Schnitt erst, wenn ein Hook als schwarzes Text-Bild und als Handy-Reel schon funktioniert hat.
+- Formate für Ads: Hochformat für Reels/Stories, **Untertitel immer einbrennen** (es wird oft ohne Ton geschaut).
+- Ein Dreh liefert mehrere Ads: denselben Hook in verschiedenen Settings oder mit verschiedenen Anfängen schneiden. Aber: Varianten mit gleicher Message zählen für Meta als ähnliche Ads (Gegenauktion), also nicht alle gleichzeitig schalten.

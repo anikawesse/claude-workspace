@@ -199,3 +199,10 @@ Anika hat die Seite am 05.11.2026 gesehen und fand Aufbau und interaktive Elemen
 - **Einwand-Boni:** für Tinas Kern-Einwand „Schaffe ich das allein?“ einen Bonus, der genau das löst
 - **FAQ als Tinas eigene Sätze** („Meine Stute ist erst 4, ist das zu früh?“)
 - Technisch: auf Devine prüfen, was an HTML/JS geht; ThriveCart nimmt kein HTML (siehe oben)
+
+## Meta Ads Guide 2027: Bedeutung für Landingpages (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`.
+- **Hook + Landingpage machen 90 % des Ads-Ergebnisses.** Beim Ads-Schalten geht es nur darum, die richtige Kombination aus Hook und LP zu finden. Ads fixen keine schwache Seite.
+- Da 20 bis 30 sehr verschiedene Hooks auf dieselbe Opt-in-Seite führen, muss die Seite das **Kernversprechen** tragen, nicht nur einen einzelnen Hook. Bei einem klaren Gewinner-Hook lohnt eine eigene Variante der Seite, die diesen Hook aufgreift.
+- Steigt der CPL, wird laut Guide **erst ganz zuletzt** an LP und Angebot gedreht. Vorher Gegenauktion, Aufmerksamkeit (Watchtime, CTR) und Ad-Müdigkeit prüfen.
+- Das Creative muss klar machen, für wen das Angebot ist. Das gilt genauso für die Headline der Seite.

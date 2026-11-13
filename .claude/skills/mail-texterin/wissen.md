@@ -210,3 +210,8 @@ Beim Energetik-Webinar am 05.07.2026 (Auswertung 06.07.) hat sich gezeigt: Den L
 
 **Auswertungs-Methodik (für Wiederholung):** GHL-Link-Mail-Stats (3h/30min/nach Start) per E-Mail deduplizieren, „Geklickt"/„Beantwortet" = live dabei, dann gegen Ads.csv/Organisch.csv (Tag-Export) abgleichen. „Geöffnet" zählt NICHT als live.
 
+
+## Meta Ads Guide 2027: Bedeutung für Mails (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`.
+- Der Flow ist **Ad → Conversion-Vehikel (Webinar) → Kundin**. Die Webinar-Erinnerungs- und Verkaufsmails gehören zum Conversion-Vehikel. Ein guter CPL nützt nichts, wenn die Mails die Leads nicht ins Webinar holen.
+- Ads-Leads sind eher kalt und kommen über sehr unterschiedliche Hooks rein. Die erste Mail nach der Anmeldung sollte deshalb das Kernversprechen klar wiederholen und nicht einen bestimmten Hook voraussetzen.

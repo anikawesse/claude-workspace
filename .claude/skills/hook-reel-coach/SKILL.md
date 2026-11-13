@@ -78,3 +78,11 @@ Wähle nach dem Bewusstseinsgrad: kennt Tina das Problem schon und ist fast bere
 ## Ton
 
 Direkt, konkret, ehrlich. Wenn ein Hook schwach ist, sag es klar und zeig die bessere Version. Halte dich an Anikas Wording-Regeln — auch in deinen eigenen Formulierungen.
+
+## Ergänzung: Hooks für Ads (Meta Ads Guide 2027, Anika 13.11.2026)
+
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`. Wenn Hooks für Anzeigen gedacht sind, zusätzlich prüfen:
+- **Feed-Check in 1,7 Sekunden:** Beantwortet der Hook mindestens eine der 5 Feed-Fragen mit Ja? (Relevant für mich? Neu/interessant? Kenne ich die Person? Unterhaltung oder Info? Ist das echt?)
+- **6 Biases als zweite Brille:** Urgency/Scarcity, Social Proof/Authority, Problem Agitation, Curiosity Gap, Transformation/Outcome, Tactical/Specific. Einen guten Ansatz in mehreren Biases anbieten.
+- **Wirklich verschieden:** Zwei Hooks mit derselben Message zählen als derselbe Hook. Für Ads immer klar unterschiedliche Botschaften liefern.
+- **Konkret:** eine Zahl oder ein Fakt, gern etwas, dem manche widersprechen.

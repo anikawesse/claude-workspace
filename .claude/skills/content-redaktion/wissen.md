@@ -1134,3 +1134,34 @@ Die übrigen Regeln gelten weiter: Humanizer, keine Gedankenstriche, Wording-Don
 - Anika tauscht bei vorproduzierten Karussells das Bild gegen ein Motiv, das die Situation zeigt: Traktor-Karussell (DAHaZdz-GCQ) Slide 1 mit Traktorfoto, Gras-Karussell (DAHaZUA_h1o) mit Kind auf Pony im Gras (MAHagXfTWS4, Crop top −668.05, left 0, width 1259.41, height 2794.80), danach auf alle Slides übertragen.
 - Für neue Karussells deshalb zuerst ein Bild suchen, auf dem die Situation des Hooks zu sehen ist (Gras, Feldweg, Traktor). Erst wenn keins da ist, ein allgemeines Portrait aus „Portrait“ nehmen.
 - Fertige Shorts liegen unter `Desktop\SM Content\Vorlage Reels\Fertig\MM-TT Titel`.
+
+### Instagram-Rückblick KW 45/46 (13.11.2026, automatisch)
+
+Zeitraum 30.10. bis 12.11.2026, Vergleich 23.10. bis 29.10.2026, Abruf über `scripts/instagram-insights.mjs 60`.
+
+- **B-Roll-Shorts tragen die Test-Reels wieder.** 20 Test-Reels in vier Gruppen: Median **1.760 Aufrufe**, nur 1 von 20 unter 300. Vorwochen Median 1.067 (3 von 16 unter 300), Yapping-B-Rolls im September und Oktober Median 209 (67 % unter 300). Das bestätigt zum dritten Mal: kurzes Text-B-Roll-Format mit Situation schlägt Yapping deutlich.
+- **Gewinner neu im Feed hochladen funktioniert zuverlässig.** Reitergruppe (Test 22.10.: 2.324) als Feed-Reel 07.11.: 14.774 Aufrufe, 17 Speicherungen. „Rennt immer schneller“ (erster Feed-Post 28.10.: 35.549) als zweiter Upload 30.10.: 8.153 Aufrufe, 14 Speicherungen.
+- **Konkrete Gelände-Situation als Frage gewinnt** („Was machst du, wenn dir eine Reitergruppe entgegenkommt“, „Rennt dein Pferd plötzlich immer schneller“, „diese eine Stelle, an der dein Pferd angespannt wird“). Wunsch-Hooks mit „Möchtest du …“ (Gesundheit, Orientierung am Boden) landen im Mittelfeld bei 2.600 bis 3.800. Ausnahme „Möchtest du endlich erkennen, ob dein Pferd sich in deiner Nähe wohlfühlt“ mit 11.445, aber erst einen Tag alt und kein Gelände-Thema.
+- **Caption mit Codewort-CTA als erster Zeile bleibt schwach.** Test-Gruppe „Kommentiere mit Quiz“ (29.10.) Median 413, Wiedergabezeit 4,6 bis 7,2 s. Die vier Quiz-Karussells 03. bis 06.11. lagen bei 618 bis 1.313 Aufrufen mit 0 Speicherungen.
+- **Karussells über Devine 7:00 laufen leise:** Median rund 830 Aufrufe, fast keine Speicherungen (Ausnahme Leckerli 09.11.: 6). Reichweite kommt aktuell fast nur über Reels.
+- Wiedergabezeit bleibt der Marker: Gewinner liegen bei 9 bis 11 s, Varianten unter 300 Aufrufen bei 4 bis 6 s.
+
+## Meta Ads Guide 2027: was die Content-Redaktion wissen muss (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`. Ads werden heute über das Creative ausgespielt, deshalb ist die Redaktion der wichtigste Zulieferer fürs Ads-Team.
+
+**Wie im Feed geschaut wird:** Ein Post bekommt im Schnitt 1,7 Sekunden. Es wird gescannt, nicht gelesen. Das Gehirn prüft blitzschnell 5 Fragen: Ist das relevant für mich? Neu oder interessant? Kenne ich die Person? Unterhaltung oder Information? Ist das echt? Bei keinem Ja ist der Daumen weiter.
+
+**Native statt Werbung:** In den ersten 2 Sekunden soll man nicht merken, dass es eine Anzeige ist. „Boah, interessant“ statt „Anzeige“. So echt wie möglich: keine glatten Stock- oder Standard-KI-Bilder, lieber Selfies, Story-Look, Stall-Alltag.
+
+**Dogfood-Übung (Hook-Quelle für Ads und Reels):**
+1. Zum Angebot alles aufschreiben in 8 Kategorien: Inhalte, Ergebnisse, Social Proof, Experten-Proof, Benefits/USPs, Probleme, Emotionen, objektive Kaufgründe. Jeder Punkt ist ein Werbeansatz.
+2. Die 10 stärksten Ansätze je in **6 Biases** schreiben: Urgency/Scarcity, Social Proof/Authority, Problem Agitation, Curiosity Gap, Transformation/Outcome, Tactical/Specific (Bezug auf aktuelle Situation). 10 × 6 = 60 verschiedene Hooks.
+- Echte Knappheit und echte Kundinnenfälle gelten weiter (keine erfundenen Fälle, nur Gelände-Fälle fürs Gelände).
+
+**Schwarze Text-Ads zum Testen:** 1 Satz auf schlichtem Hintergrund (Design an Anikas Branding anpassbar). Wichtig: **wirklich verschiedene Hooks**, nicht 3 Varianten desselben Hooks. Geheimtipp: etwas Konkretes einbauen (Zahl, Fakt) und gern etwas, dem manche widersprechen. Bringt viele Kommentare.
+
+**Video-Formate neben Talking Head:** Case Study Snapshot (Kundin von A nach B), aggressiver Einwand zuerst, Q&A, Curious Friend (lockeres Gespräch im Alltag), Outtakes, Interview, Demo, Story-Modus (normale Insta-Story als Ad), Talking Head. Ohne Zeit: denselben Hook in verschiedenen Skripten, Settings oder von verschiedenen Leuten.
+
+**Pro Ad 2 bis 3 Primärtexte und 2 bis 3 Headlines** liefern, Meta kombiniert selbst.
+
+**Mengenziel:** 20 bis 30 wirklich verschiedene Ads pro Launch. Gute Reels und Test-Reels sind Kandidaten für Ads: Was als Content trägt, trägt oft auch als Ad.

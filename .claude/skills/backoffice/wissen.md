@@ -794,3 +794,9 @@ Neuer Event/Funnel pro Launch mit eigener:
 ### TTP-Sofortbonus: Tag muss VOR dem Kauf da sein (13.11.26)
 Steffi kaufte am 12.11. direkt im Videotraining (Ads-Webinar), bekam aber nur „🦄Willkommen", keine „🎁 Deine Boni" (am 13.11. 8:39 nachgeholt). Anikas Diagnose: Der Tag `ttp-sofortbonus` wurde erst mit dem Start der Sales-Mail-Automation vergeben. Wer schon im Webinar kauft, wird aus den Salesmails rausgefiltert und bekommt den Tag zu spät → „Kauf TTP" biegt in den Zweig ohne Boni ab. Fix (Anika): Tag schon in WebinarKit während des Webinars vergeben. Allgemein: Jede Wenn/Dann-Abfrage auf einen Tag in einem Kauf-Workflow braucht den Tag VOR dem Kauf.
 **Umsetzung 13.11.26 (WebinarKit Ads-Webinar 6af1c1e107cb498885392b71, Settings → Other):** 50 % → `everg_web_traumteam_verpasst`; 75 % → `web_ttp_webinarkit_live_ads, ttp-sofortbonus`; 100 % → `web_ttp_webinarkit_live_ads`. Empfehlung: `ttp-sofortbonus` zusätzlich bei „When someone clicks the webinar offer" eintragen (Absicherung, falls das Angebot vor 75 % erscheint, Klick kommt immer vor dem Kauf).
+
+## Meta Ads Guide 2027: Technik-Grundlagen (Anika, 13.11.2026)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`.
+- Voraussetzungen: Business Manager mit Werbekonto, **verifizierte Domain**, **Meta Pixel + Conversion API** auf allen Seiten. Ab ca. 10.000 € Werbebudget im Monat zusätzlich ein externes Tracking-Tool (z. B. Hyros, Onetrack). Für Anika aktuell noch nicht nötig.
+- Meta-Tracking weicht **bis 30 %** ab. Für Entscheidungen zählen die echten Leads und Käufe in Devine, WebinarKit und ThriveCart.
+- Neue Funnel-Domains immer auf die Pixel-Positivliste setzen (siehe Ads-Team-Wissen 09.11.26).

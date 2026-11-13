@@ -920,7 +920,7 @@ Siehe verwandt: [[project-futterfahrplan]]
 - Caveat 1: Nachöffnungen alter Empfänger fallen in den aktuellen Monat → Rate kann bei kleinem ΔEmpfänger über 100 % rutschen; dann ⚠️ markieren statt Unsinn eintragen. Caveat 2: Devine rundet die Prozente → absolute Zahlen auf 1–2 Kontakte genau.
 - Tabelle `outputs/mail-auswertung/gelaende-schluessel-mail-auswertung.md` ist entsprechend umgebaut: pro Monat Block „Stand (kumuliert)" + berechnete Monatswerte. **03.08.2026 = Basis-Stand** (erster vollständiger Snapshot, noch kein Monatswert möglich); erste echte Monatsauswertung ab September 2026.
 
-## Eric Steigner „Full Meta Ads Guide 2025" (Google Drive, geteilt von steignerer@gmail.com, File-ID 1KIB3b_2rCLG4iL02HSH2ZqI1KDff6BwTGQfcFCcRXDA)
+## ⚠️ VERALTET, ersetzt durch Guide 2027 (siehe unten): Eric Steigner „Full Meta Ads Guide 2025" (Google Drive, geteilt von steignerer@gmail.com, File-ID 1KIB3b_2rCLG4iL02HSH2ZqI1KDff6BwTGQfcFCcRXDA)
 - Hook + Conversion-Vehikel (Webinar) = 90 % des Ergebnisses. Start mit **5–10 KOMPLETT verschiedenen Hooks** (nicht 3 Varianten desselben Hooks), je 1 Satz auf schlichtem einfarbigem Bild (Canva-Vorlage im Guide). Produktion: Hook auf Bild → Hook im Handy-Reel → Profi-Video.
 - **Geheimtipp:** etwas Konkretes einbauen (Zahl, Fakt) und gern etwas, dem manche widersprechen → Kommentare/Interaktion.
 - Phase 1 Sandbox: 1 Kampagne Ziel Leads, ABO, max. 3 Ads pro Anzeigengruppe, mind. 10 €/Tag pro Anzeige, 2–3 Zielgruppen (inkl. Broad), krumme Budgets (z. B. 33,33 €), 3 Tage nicht anfassen. Phase 2 Scaling ABO (Gewinner duplizieren, 40–90 €). Phase 3 CBO mit Gebotsbegrenzung 15–20 % über CPL. Profitables nie ausschalten; horizontal vor vertikal skalieren (+15–20 %).
@@ -938,3 +938,65 @@ Meta zeigte am 10.11. um 8 Uhr 5 Leads, laut Devine und WebinarKit waren es nur 
 
 ### Videotraining-Ads: Käufe nur über WebinarKit-Export zuordnen (13.11.26)
 Meta kann Käufe aus dem Auto-Webinar nicht sehen (Anika: „ist doch klar, woher auch"): Kauf passiert später in ThriveCart über Webinar- oder Mail-Link, nicht direkt nach dem Anzeigenklick. Nicht als Tracking-Problem melden. Zuordnung: Käuferin in ThriveCart → E-Mail im WebinarKit-Export → utm_content = Anzeige. Erster Ads-Kauf (Steffi, 12.11., 497 €) kam über **Interessen Vertrauen**, die Anzeige mit dem teuersten CPL. Lehre: Anzeigen nicht nur nach CPL beurteilen, auch nach Webinar-Quote und Käufen.
+
+## ⭐ Meta Ads Guide 2027 (Eric Steigner, von Anika am 13.11.2026 als „ganz wichtig“ weitergegeben)
+Volltext: `reference/meta-ads-guide-2027-speedscaling.md`. Ersetzt den Guide 2025 oben. Gilt für alle neuen Kampagnen.
+
+### Der Kern: Andromeda
+- **Dein Creative ist dein neues Targeting.** Meta liest die Ad aus (was gesagt wird, wie es aussieht) und sucht die passenden Leute selbst. Targeting basteln bringt kaum noch etwas.
+- Meta bewertet Ads nicht nur über den Leadpreis, sondern auch über **Watchtime, Engagement und Klicks**. Ads, die sich wie Content anfühlen, werden belohnt.
+- Hook + Conversion-Vehikel (Webinar/LP) machen **90 %** des Ergebnisses. Ads fixen keinen schlechten Prozess.
+- Wer bestimmte Leute will (z. B. „kennt ihr Problem schon“), schreibt den Hook in deren Status. **Man targetiert über Hooks.**
+
+### Creatives
+- **20 bis 30 wirklich verschiedene Ads** pro Launch (2025 waren es 5 bis 10). Unterschiedliche Messages schlagen Volumen. In Testkonten sank der CPL so um 20 bis 50 %.
+- Hook-Quelle: **Dogfood-Übung × 6 Biases** (Details bei der Content-Redaktion). 10 Ansätze × 6 Biases = 60 Hooks.
+- Testen mit **schwarzen Text-Bildern** (1 Satz, Canva-Vorlage im Guide), skalieren mit Video und UGC. Ablauf: Hook auf schwarzem Bild → Handy-Reel → Profi-Video.
+- Pro Ad **2 bis 3 Primärtexte und 2 bis 3 Headlines**. Läuft eine Ad mit nur 1 Text gut: nicht anfassen.
+
+### Targeting
+- Fast alles **Broad bzw. Advantage+** (nur Land und Alter). Lookalikes kaum noch.
+- Bei Advantage+: Zielgruppe und Platzierung an, **alle automatischen Creative-Optimierungen aus**.
+- **Deutschland eigene Kampagne, Österreich + Schweiz zusammen in eine zweite** (AT/CH ca. 25 % teurer und schießen sonst gute DE-Ads ab).
+- Kommen die Falschen, liegt es an der Story im Creative, nicht am Targeting.
+- ⚠️ Ausnahme Anika: Videotraining-Ads laufen bewusst **weltweit + Sprache Deutsch** (Entscheidung 09.11.26). Das nicht ungefragt umbauen.
+
+### Phase 1: Sandbox ABO
+- Kampagne Ziel Leads, ABO, ein Land. **Anzeigengruppe 1: Broad, 4 bis 5 Ads. Anzeigengruppe 2: Broad, ca. 10 Ads.** Wenige gegen viele Ads testen. Stile ruhig mischen.
+- Krumme Budgets (5,21 statt 5 €). **24 Stunden nicht anfassen** (2025: 3 Tage).
+- Lieber viele Ads mit wenig Budget als viel Budget auf wenige Ads.
+
+### KPIs und wann eine Ad raus ist
+- CPL B2C-Webinar ohne Telefonnummer **2 bis 10 €**, CPC unter 2 €, CTR 2 bis 4 %. Neu dazu: Watchtime, Engagement, Klickrate als Frühwarnsystem.
+- **15 bis 20 € ohne Lead: pausieren, spätestens bei 25 €.** Nicht auf einen einzelnen schlechten Tag reagieren.
+- Ads, die von Meta kein Budget bekommen: drin schlummern lassen.
+- Ballert Meta viel Budget in 1 bis 2 Ads ohne Leads: diese sofort aus, Rest weiterlaufen lassen.
+- Meta-Tracking weicht bis 30 % ab. Es zählen die echten Leads im System. UGC/Native haben oft niedrigere CTR, aber trotzdem guten CPL: hinten raus auf Käufe schauen.
+
+### ⚠️ Die Gegenauktion
+- Zu viele **gleiche oder ähnliche Ads im Konto** (Duplikate, dieselbe Ad in neuen Kampagnen, gleiche Message nur anders eingesprochen) landen in derselben Auktion. **Man bietet gegen sich selbst**, der CPL steigt bei allen ähnlichen Ads. Von Meta bestätigt.
+- Gilt kontoweit, egal welche Kampagne.
+- Rettung: Duplikate aus, nur die ursprünglich gute Version laufen lassen, Ad nirgends sonst im Konto, 1 bis 2 Tage Ruhe.
+- Ausnahme: Länder (DE gegen AT/CH) dürfen dupliziert werden.
+
+### Phase 2: Skalieren über Budget, nicht über Duplikate
+- **Größte Änderung zu 2025:** Gewinner-Anzeigengruppen **nicht mehr duplizieren** (Gelerntes weg + Gegenauktion).
+- Stattdessen ab Tag 2 Budget erhöhen: **10 bis 20 % pro Tag**, lieber 2 × 10 % als 1 × 20 %. Morgens prüfen, ob das Budget ausgespielt wird.
+- Läuft eine Gruppe mit vielen Ads stark: daraus eine CBO machen, aber mit nur **1 Anzeigengruppe**.
+
+### Phase 3: Costcap CBO
+- Neue CBO mit **Gebotsbegrenzung 15 bis 20 % über dem echten CPL**, die besten Ads aus allen Gruppen in **1 Anzeigengruppe**. Ab 100 €/Tag, 2 Tage Ruhe. Wird das Budget nicht ausgespielt: Gebot um 1 bis 2 € hoch.
+- Gewinner aus Phase 1 und 2 laufen weiter. Nichts Profitables ausschalten.
+- **Notfallplan kurz vorm Webinar:** die anfangs guten Ads in 1 Anzeigengruppe, größeres Budget, Gebotsbegrenzung, laufen lassen.
+
+### Alltag und Fehlersuche
+- Neue Ads und Formate erst **risikoarm auf warme Zielgruppen** testen, dann in die Sandbox.
+- Bei vielen Ads: morgens, mittags, abends kurz rein. Ausmachen nur, wenn es brennt (z. B. 60 bis 70 € ohne Lead). Nie aus Angst alle 10 Minuten reinschauen.
+- **Checkliste, wenn der CPL plötzlich steigt:** 1. Dupliziert/ähnliche Ads hochgeladen? → Gegenauktion. 2. Fallen Watchtime, Engagement, CTR? → Aufmerksamkeitsproblem, neue Ads. 3. Läuft überall derselbe Ad-Stil? → andere Bildsprache. 4. Ad nach Tagen abgelehnt (gemeldet)? 5. Erst dann LP und Angebot.
+- Kein panisches Umbauen. Neue Strategien parallel mit kleinem Budget testen.
+
+### ⚠️ Abgleich mit Anikas bisherigem System (Entscheidung offen, Anika fragen)
+Anikas System „horizontales Skalieren" (17.09.26) und die Regel „keine einzelnen Creatives ausschalten" (05.10.26) widersprechen dem Guide an zwei Stellen:
+1. **Neue Kampagnen mit denselben Creatives** = laut Guide Gegenauktion-Gefahr. Guide empfiehlt stattdessen Budget in der bestehenden Gruppe zu erhöhen.
+2. **Einzelne Ads ausschalten**: Der Guide pausiert Ads nach 15 bis 25 € ohne Lead.
+Bis Anika entscheidet: ihre Regeln gelten weiter, aber bei Empfehlungen auf die Gegenauktion hinweisen (keine gleichen Creatives parallel in mehreren aktiven Kampagnen).
