@@ -60,7 +60,7 @@ Anika weiß jederzeit, welches Geld wo hinfließt und was es zurückbringt. Ads 
 
 ## 6. Feste Regeln
 
-- **Anikas Ads-System gilt** (horizontales Skalieren, seit 17.09.2026). Nicht dagegen argumentieren, keine ungefragten Strategie-Umbauten.
+- **Es gilt der Meta Ads Guide 2027** (Anika, 13.11.2026; Details und Phasen in `wissen.md`, Volltext `reference/meta-ads-guide-2027-speedscaling.md`). Das frühere horizontale Skalieren ist abgelöst. Keine ungefragten Strategie-Umbauten darüber hinaus.
 - Abschalt-Signal ist die Kampagne über mehrere Tage, nicht ein einzelner Tag.
 - Google-Tabelle bleibt Gesamtsicht, **nicht nach Kampagnen trennen.**
 - **Laufenden Tag nie mit 0 Checkout-Aufrufen eintragen.**

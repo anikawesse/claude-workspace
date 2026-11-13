@@ -6,7 +6,7 @@ Diese Einträge standen vorher einzeln in der Memory. Inhalt 1:1 übernommen. Ne
 
 ## Ads-System Gelände-Schlüssel
 
-### ⭐ Anikas Ads-System (festgelegt 17.09.2026): „Horizontales Skalieren"
+### ⛔ ABGELÖST am 13.11.2026 durch den Meta Ads Guide 2027 (siehe unten). Früheres System (17.09.2026): „Horizontales Skalieren"
 
 Anikas bewusste Entscheidung, gilt ab jetzt als Standard. NICHT mehr mit den alten Empfehlungen weiter unten („nur ein Champion", „keine neuen Kampagnen", „Creatives in bestehende Anzeigengruppe") dagegenargumentieren. Die sind Historie.
 
@@ -312,7 +312,7 @@ Letzte 7 Tage (29.09.-05.10., Meta-Käufe): Kampagne 15.09. 139 € / 8 Käufe (
 
 ---
 
-## Ads: keine einzelnen Creatives ausschalten
+## ⛔ ABGELÖST am 13.11.2026 (Guide 2027 gilt, Ads nach 15 bis 25 € ohne Lead pausieren). Früher: keine einzelnen Creatives ausschalten
 
 Anika schaltet **keine einzelnen Creatives/Anzeigen** innerhalb einer Kampagne aus. Ihre einzigen zwei Handgriffe im Werbeanzeigenmanager sind: **neue Kampagne anlegen** oder **alte Kampagne ausstellen**. (Anika am 05.10.2026, wörtlich: „ich schalte keine einzelnen Creatives aus. Ich lege nur neue Kampagnen an oder stelle alte aus.")
 
@@ -995,8 +995,8 @@ Volltext: `reference/meta-ads-guide-2027-speedscaling.md`. Ersetzt den Guide 202
 - **Checkliste, wenn der CPL plötzlich steigt:** 1. Dupliziert/ähnliche Ads hochgeladen? → Gegenauktion. 2. Fallen Watchtime, Engagement, CTR? → Aufmerksamkeitsproblem, neue Ads. 3. Läuft überall derselbe Ad-Stil? → andere Bildsprache. 4. Ad nach Tagen abgelehnt (gemeldet)? 5. Erst dann LP und Angebot.
 - Kein panisches Umbauen. Neue Strategien parallel mit kleinem Budget testen.
 
-### ⚠️ Abgleich mit Anikas bisherigem System (Entscheidung offen, Anika fragen)
+### ✅ Entschieden 13.11.2026 (Anika: „Ja, Guide gilt“): Der Guide 2027 ersetzt Anikas bisheriges System
 Anikas System „horizontales Skalieren" (17.09.26) und die Regel „keine einzelnen Creatives ausschalten" (05.10.26) widersprechen dem Guide an zwei Stellen:
 1. **Neue Kampagnen mit denselben Creatives** = laut Guide Gegenauktion-Gefahr. Guide empfiehlt stattdessen Budget in der bestehenden Gruppe zu erhöhen.
 2. **Einzelne Ads ausschalten**: Der Guide pausiert Ads nach 15 bis 25 € ohne Lead.
-Bis Anika entscheidet: ihre Regeln gelten weiter, aber bei Empfehlungen auf die Gegenauktion hinweisen (keine gleichen Creatives parallel in mehreren aktiven Kampagnen).
+**Ab jetzt:** Skalieren über Budget in der bestehenden Anzeigengruppe (10 bis 20 % pro Tag), keine Duplikate und keine gleichen Creatives parallel in mehreren aktiven Kampagnen. Einzelne Ads nach 15 bis 25 € ohne Lead pausieren ist erlaubt und erwünscht. Die Videotraining-Ads bleiben weltweit + Deutsch.
