@@ -123,3 +123,16 @@ Pro Anzeige (Meta-Leads, ungefähr): Broad Gesucht 108,51 € / 29 → 3,74 € 
 Engpass nach der Anmeldung: Von 43 Anmeldungen im Export kamen nur 5 bis zum Angebot (ca. 12 %), 40 von 49 Ads-Kontakten tragen den Verpasst-Tag.
 
 **Einschätzung:** Die Anzeigen liefern Anmeldungen im Rahmen (2–10 €). Das Problem liegt hinter der Anmeldung: wenige schauen bis zum Angebot, und der Einwand „ich brauche jemanden vor Ort“ kam beim ersten Kauf direkt zurück. Kampagne wie geplant bis ca. 23.11. (2 Wochen) laufen lassen und dann über Käufe urteilen; Hebel bis dahin eher Webinar-Quote und Einwand „allein umsetzbar“ im Video und in den Salesmails als neue Anzeigen.
+
+## Live-Teilnahme (Export 14.11.2026, 47 Termine, die schon stattgefunden haben)
+
+| Webinar-Tag | Anmeldungen | im Raum | länger als 5 % | bis 75 % | Angebot geklickt |
+|---|---|---|---|---|---|
+| 09.11. | 9 | 4 (44 %) | 3 | 2 | 1 |
+| 10.11. | 9 | 5 (56 %) | 4 | 2 | 1 |
+| 11.11. | 8 | 4 (50 %) | 2 | 0 | 0 |
+| 12.11. | 12 | 5 (42 %) | 4 | 2 | 1 |
+| 13.11. | 8 | 2 (25 %) | 1 | 1 | 0 |
+| **Gesamt** | **47** | **20 (43 %)** | **14 (30 %)** | **7 (15 %)** | **3** |
+
+Der 13.11. war schwächer (2 von 8), bei so kleinen Zahlen ist das aber eher ein Ausreißer als ein Trend. Auffällig: Nachts gewählte Sofort-Termine (2:00, 5:00) und Termine am nächsten Morgen wurden nicht wahrgenommen. Nach Wartezeit: Sofort-Termin (unter 20 Min) 42 %, über 3 Std Wartezeit 36 %.
