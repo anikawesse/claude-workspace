@@ -1,6 +1,6 @@
 # Bestätigungsmail Ads-Webinar (WebinarKit), Fassung Anika 14.11.2026
 
-Betreff: Du bist dabei!
+Betreff: Hier kommt dein Link! (vorher: „Du bist dabei!")
 Absendername: Bestätigung fürs Videotraining
 
 Änderung gegenüber vorher: Link und Termin direkt unter dem Webinartitel, neuer Hinweis für Sofort-Termine („klicke direkt auf den Link, dort läuft dein Countdown"), Notfall-Guide als Geschenk nach oben.
