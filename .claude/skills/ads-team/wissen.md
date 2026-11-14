@@ -1000,3 +1000,18 @@ Anikas System „horizontales Skalieren" (17.09.26) und die Regel „keine einze
 1. **Neue Kampagnen mit denselben Creatives** = laut Guide Gegenauktion-Gefahr. Guide empfiehlt stattdessen Budget in der bestehenden Gruppe zu erhöhen.
 2. **Einzelne Ads ausschalten**: Der Guide pausiert Ads nach 15 bis 25 € ohne Lead.
 **Ab jetzt:** Skalieren über Budget in der bestehenden Anzeigengruppe (10 bis 20 % pro Tag), keine Duplikate und keine gleichen Creatives parallel in mehreren aktiven Kampagnen. Einzelne Ads nach 15 bis 25 € ohne Lead pausieren ist erlaubt und erwünscht. Die Videotraining-Ads bleiben weltweit + Deutsch.
+
+### Ad-Format (Standard, 13.11.2026)
+Alles in **Hochformat** denken, weil die Ads vor allem in Reels und Stories laufen und echt aussehen sollen (Guide 2027).
+- **Video (Haupt-Format):** 9:16 hochkant, **1080 x 1920 px**, Datei MP4 (H.264). Hook in den ersten 3 Sekunden, Länge kurz halten, **Untertitel immer** (wird ohne Ton geschaut). Text und wichtige Elemente aus den oberen und unteren ca. 15 % raushalten (Safe Zone, da liegt die Bedienleiste drüber).
+- **Bild-Ads** (Story-Look mit Text, Selfie, KI-Karikatur): 4:5 hochkant, **1080 x 1350 px** für den Feed, Datei JPG oder PNG. Bei Bedarf zusätzlich als 9:16 (1080 x 1920) für Stories/Reels.
+- Kurz: Video 9:16, Bilder 4:5 (optional zusätzlich 9:16).
+
+### Tracking / URL-Parameter für Anmelde-Ads (Workshop in Devine-Funnel, 13.11.2026)
+Für Ads, die zu einer **Anmeldung/Lead** führen (Workshop, Webinar, Videotraining in einem Devine-Funnel), ins Feld „URL-Parameter für die Website" (Anzeigenebene, unten im Tracking-Block) eintragen:
+`utm_source=facebook&utm_medium=paid&utm_campaign={{campaign.name}}&utm_content={{ad.name}}`
+Meta füllt `{{campaign.name}}` und `{{ad.name}}` automatisch. **Kein passthrough** nötig, das ist nur für direkte ThriveCart-Checkouts (siehe product-52 oben). Im Tracking-Block darüber: „Website-Events" angehakt, Meta-Pixel/Dataset ausgewählt, Conversion-Event = **Lead** (feuert auf der Devine-Danke-Seite beim Absenden des Anmeldeformulars).
+
+### On-Demand-Webinar: Teilnahmequote-Ziel 50–60 % (Anika, 14.11.26)
+Erics „über 40 %" gilt für LIVE-Webinare. Für Anikas On-Demand-/Auto-Webinar (Videotraining, WebinarKit) peilt sie **50–60 % oder mehr** an, mit kalten Ads-Leads darf es etwas darunter liegen. 43 % (Ads-Sandbox 09.–13.11.) ist also NICHT ordentlich. Nicht wieder mit Erics Live-Wert einordnen.
+Befund 14.11.: 19 von 27 Nicht-Schauerinnen hatten einen Sofort-Termin (Anmeldung 1–13 Min vor Start). Sofort-Termin 14 von 33 live (42 %), späterer Termin 6 von 14 (43 %), also kein Unterschied. Replay haben nur 2 der 27 angesehen.
