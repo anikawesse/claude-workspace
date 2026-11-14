@@ -1001,6 +1001,9 @@ Anikas System „horizontales Skalieren" (17.09.26) und die Regel „keine einze
 2. **Einzelne Ads ausschalten**: Der Guide pausiert Ads nach 15 bis 25 € ohne Lead.
 **Ab jetzt:** Skalieren über Budget in der bestehenden Anzeigengruppe (10 bis 20 % pro Tag), keine Duplikate und keine gleichen Creatives parallel in mehreren aktiven Kampagnen. Einzelne Ads nach 15 bis 25 € ohne Lead pausieren ist erlaubt und erwünscht. Die Videotraining-Ads bleiben weltweit + Deutsch.
 
+### Leadpreis-Grenze (Anika, 14.11.2026)
+Anika ist **B2C**. Ihre **Schmerzgrenze liegt bei 10 € pro Lead**, und 10 € wäre schon ein echt hoher Leadpreis. Ziel also deutlich darunter. Diese 10 € bei jeder Anmelde-Ads-Auswertung als Messlatte nehmen (nicht nur der Guide-Wert 15–25 € ohne Lead zum Pausieren einzelner Ads). Erste Workshop-Auswertung dazu: `outputs/ads-auswertung/workshop-ads-auswertung-2026-11-14.md` (Gesamt-CPL 5,50 € ok, Broad 10,99 € der einzige Ausreißer, Interessen 3,68 € top).
+
 ### Ad-Format (Standard, 13.11.2026)
 Alles in **Hochformat** denken, weil die Ads vor allem in Reels und Stories laufen und echt aussehen sollen (Guide 2027).
 - **Video (Haupt-Format):** 9:16 hochkant, **1080 x 1920 px**, Datei MP4 (H.264). Hook in den ersten 3 Sekunden, Länge kurz halten, **Untertitel immer** (wird ohne Ton geschaut). Text und wichtige Elemente aus den oberen und unteren ca. 15 % raushalten (Safe Zone, da liegt die Bedienleiste drüber).
@@ -1015,3 +1018,4 @@ Meta füllt `{{campaign.name}}` und `{{ad.name}}` automatisch. **Kein passthroug
 ### On-Demand-Webinar: Teilnahmequote-Ziel 50–60 % (Anika, 14.11.26)
 Erics „über 40 %" gilt für LIVE-Webinare. Für Anikas On-Demand-/Auto-Webinar (Videotraining, WebinarKit) peilt sie **50–60 % oder mehr** an, mit kalten Ads-Leads darf es etwas darunter liegen. 43 % (Ads-Sandbox 09.–13.11.) ist also NICHT ordentlich. Nicht wieder mit Erics Live-Wert einordnen.
 Befund 14.11.: 19 von 27 Nicht-Schauerinnen hatten einen Sofort-Termin (Anmeldung 1–13 Min vor Start). Sofort-Termin 14 von 33 live (42 %), späterer Termin 6 von 14 (43 %), also kein Unterschied. Replay haben nur 2 der 27 angesehen.
+**WebinarKit-Mails Ads-Webinar (geprüft 14.11.26 im Browser, Settings → Other):** aktiv sind nur Bestätigung („Du bist dabei!", Absendername „Bestätigung fürs Videotraining"), 3-Std-Erinnerung und 30-Min-Erinnerung („Wir starten in wenigen Minuten."). Alles danach läuft über Devine (verpasst +4 Std, „Videotraining sofort starten" +24 Std). WebinarKit zeigt NICHT, wer welche Mail bekommen hat (kein Versandprotokoll, API liefert nur die Webinar-Liste). Folge: Wer einen Sofort-Termin wählt (1–13 Min), bekommt NUR die Bestätigung, beide Erinnerungen fallen weg. Die Bestätigung sagt „plane dir etwa 1:45 Std. ein und schau es dir am besten am Laptop oder PC an" und der Link steht erst nach langem Text. Vermutung: Handy-Anmelderinnen am Abend verschieben deshalb auf „später am Laptop" und kommen nicht.
