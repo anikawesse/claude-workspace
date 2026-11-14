@@ -99,3 +99,27 @@ Pro Anzeige (Meta-Leads, ungefähr): Broad Gesucht 81,03 € / 26 → 3,12 € �
 Bis zum Angebot (über 90 %): 5 (Susanne H., Susanne S., Karin F., Lydia, Steffi), dazu Andrea 83 %. Angebot geklickt: 3 (Lydia, Susanne H., Steffi).
 
 Meta sieht Käufe hier grundsätzlich nicht (Anika, 13.11.): Gekauft wird später in ThriveCart, meist über einen Link aus dem Webinar oder den Mails, nicht direkt nach dem Anzeigenklick. Käufe pro Anzeige deshalb immer über WebinarKit-Export (utm_content) und ThriveCart zuordnen.
+
+---
+
+# Auswertung 14.11.2026, 11 Uhr (Tag 5)
+
+**Steffi hat widerrufen** (Mail an Anika, 14.11.): Sie erkennt sich im Videotraining wieder, braucht aber „einen Trainer, der mich und mein Pferd direkt vor Ort begleitet“. Das ist genau Tinas Kern-Einwand („allein umsetzbar?“). Die Rückerstattung ist in ThriveCart noch nicht gebucht (Stand 11 Uhr). Damit gibt es netto **0 Verkäufe aus den Ads**.
+
+| Kennzahl | Wert |
+|---|---|
+| Ausgegeben | 226,20 € |
+| Anmeldungen | ca. 48 (43 im Export vom 13.11. + 5 laut Devine) → **ca. 4,70 € pro Anmeldung** |
+| davon neue Kontakte | 36 → 6,28 € pro neuem Kontakt |
+| Link-Klicks / Seitenaufrufe | 473 / 342, CPC 0,48 €, Link-CTR 1,64 % |
+| Anmeldequote Anmeldeseite | ca. 14 % |
+| Frequenz | 1,3–1,5 (noch keine Ermüdung) |
+| Verkäufe netto | 0 (1 Kauf, 1 Widerruf) |
+
+Pro Tag (neue Kontakte laut Devine): 09.11. 6 · 10.11. 5 · 11.11. 7 · 12.11. 13 · 13.11. 4 · 14.11. (bis 11 Uhr) 1. Der 13.11. war schwach (48,20 € Ausgaben, Link-CTR 1,37 %).
+
+Pro Anzeige (Meta-Leads, ungefähr): Broad Gesucht 108,51 € / 29 → 3,74 € · Interessen Gesucht 65,35 € / 12 → 5,45 € · Interessen Vertrauen 47,28 € / 7 → 6,75 € · Broad Vertrauen 5,06 € / 0.
+
+Engpass nach der Anmeldung: Von 43 Anmeldungen im Export kamen nur 5 bis zum Angebot (ca. 12 %), 40 von 49 Ads-Kontakten tragen den Verpasst-Tag.
+
+**Einschätzung:** Die Anzeigen liefern Anmeldungen im Rahmen (2–10 €). Das Problem liegt hinter der Anmeldung: wenige schauen bis zum Angebot, und der Einwand „ich brauche jemanden vor Ort“ kam beim ersten Kauf direkt zurück. Kampagne wie geplant bis ca. 23.11. (2 Wochen) laufen lassen und dann über Käufe urteilen; Hebel bis dahin eher Webinar-Quote und Einwand „allein umsetzbar“ im Video und in den Salesmails als neue Anzeigen.
