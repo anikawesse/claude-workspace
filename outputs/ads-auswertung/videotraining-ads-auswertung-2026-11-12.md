@@ -136,3 +136,34 @@ Engpass nach der Anmeldung: Von 43 Anmeldungen im Export kamen nur 5 bis zum Ang
 | **Gesamt** | **47** | **20 (43 %)** | **14 (30 %)** | **7 (15 %)** | **3** |
 
 Der 13.11. war schwächer (2 von 8), bei so kleinen Zahlen ist das aber eher ein Ausreißer als ein Trend. Auffällig: Nachts gewählte Sofort-Termine (2:00, 5:00) und Termine am nächsten Morgen wurden nicht wahrgenommen. Nach Wartezeit: Sofort-Termin (unter 20 Min) 42 %, über 3 Std Wartezeit 36 %.
+
+---
+
+# Auswertung 15.11.2026, 11:45 Uhr (Tag 6, Export registrants (3).csv)
+
+| Kennzahl | Wert |
+|---|---|
+| Ausgegeben | 278,23 € |
+| Anmeldungen (Export) | 51 → **5,46 € pro Anmeldung** |
+| davon neue Kontakte (Devine) | 37 → 7,52 € |
+| Link-Klicks / Seitenaufrufe | 562 / 404, CPC 0,50 € |
+| Verkäufe | 0 (Steffis 497 € am 14.11. 12:49 erstattet) |
+
+Pro Anzeige (Export): Broad Gesucht 133,05 € / 28 → 4,75 € · Interessen Gesucht 79,32 € / 14 → 5,67 € · Interessen Vertrauen 60,61 € / 8 → 7,58 € · Broad Vertrauen 5,25 € / 1.
+
+**Auffällig: Die Anmeldequote auf der Anmeldeseite ist eingebrochen.**
+
+| Tag | Seitenaufrufe (Meta) | Anmeldungen (Export) | Quote | CPM |
+|---|---|---|---|---|
+| 10.11. | 81 | 8 | 10 % | 7,28 € |
+| 11.11. | 68 | 9 | 13 % | 6,28 € |
+| 12.11. | 99 | 14 | 14 % | 8,15 € |
+| 13.11. | 64 | 6 | 9 % | 8,37 € |
+| 14.11. | 50 | 3 | 6 % | 10,24 € |
+| 15.11. (bis 11:45) | 27 | 1 | 4 % | 11,34 € |
+
+Bei 14 % wären am 14./15.11. rund 11 Anmeldungen zu erwarten gewesen, es kamen 4. Anmeldeseite lädt normal (geprüft 15.11. 11:45, Terminauswahl funktioniert, keine Fehler), eine Testanmeldung habe ich NICHT abgeschickt. Gleichzeitig steigen die Kosten pro 1.000 Einblendungen (6 → 11 €): Meta erreicht teurere und offenbar weniger passende Leute. Wochenende kommt dazu.
+
+**Live-Teilnahme vorher/nachher (neue Bestätigungsmail seit 14.11. ca. 11:30):**
+- vorher: 20 von 48 live (42 %), Sofort-Termin 14 von 33 (42 %), später 6 von 15 (40 %)
+- nachher: 2 von 2 live (Viktoria 20 %, Rainer 44 %), beide Sofort-Termin. Viel zu wenig für ein Urteil.
