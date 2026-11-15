@@ -167,3 +167,5 @@ Bei 14 % wären am 14./15.11. rund 11 Anmeldungen zu erwarten gewesen, es kamen 
 **Live-Teilnahme vorher/nachher (neue Bestätigungsmail seit 14.11. ca. 11:30):**
 - vorher: 20 von 48 live (42 %), Sofort-Termin 14 von 33 (42 %), später 6 von 15 (40 %)
 - nachher: 2 von 2 live (Viktoria 20 %, Rainer 44 %), beide Sofort-Termin. Viel zu wenig für ein Urteil.
+
+Testanmeldung Anika 15.11. 11:51: Anmeldung, Dankeseite, Bestätigungsmail und Devine-Tags (reg + reg_ads) funktionieren. Technik ist nicht die Ursache des Einbruchs der Anmeldequote.
