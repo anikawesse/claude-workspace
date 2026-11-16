@@ -194,3 +194,22 @@ Testanmeldung Anika 15.11. 11:51: Anmeldung, Dankeseite, Bestätigungsmail und D
 Pro Anzeige (Meta-Leads): Broad Gesucht 155,39 € / 32 → 4,86 € · Interessen Gesucht 88,39 € / 15 → 5,89 € · Interessen Vertrauen 75,69 € / 12 → 6,31 € · Broad Vertrauen 5,94 € / 0.
 
 Live-Quote nach den Änderungen vom 14./15.11. noch offen (braucht neuen WebinarKit-Export).
+
+## Live-Quote vorher/nachher (Export 16.11.2026, 9:20 Uhr)
+
+Änderungen: neue Bestätigungsmail ab 14.11. ca. 11:30, 720p-Video und Dankeseite-Umbau am 15.11. mittags. Anikas Testanmeldung rausgerechnet.
+
+| | vorher (09.–14.11. vormittags) | nachher (ab 14.11. 11:30) |
+|---|---|---|
+| Termine | 48 | 9 |
+| live im Raum | 20 (42 %) | **6 (67 %)** |
+| davon sofort wieder weg (0 %) | 6 | **0** |
+| bis 75 % geschaut | 7 (15 %) | 2 (22 %), dazu Michaela 73 % |
+| Sofort-Termin live | 14 von 33 (42 %) | **6 von 8 (75 %)** |
+| Angebot geklickt | 3 | 1 (Rainer, 98 %) |
+
+Nachher-Teilnehmerinnen: Viktoria 20 %, Rainer 98 % (Angebot geklickt), Sandra 98 %, Michaela 73 %, Gre 10 %, Sarah 34 %. Nicht gekommen: Alexa, José (Sofort), Nadine (späterer Termin).
+
+**Erster Eindruck sehr positiv** (Ziel 50–60 % erreicht, keine Sofort-Abbrüche mehr), aber erst 9 Termine. Urteil nach ca. 30 Terminen.
+
+Pro Anzeige laut Export (Kosten Stand 16.11. 9 Uhr): Broad Gesucht 29 Anm. → 5,36 € · Interessen Gesucht 17 → 5,20 € · Interessen Vertrauen 13 → 5,82 € · Broad Vertrauen 1. Gesamt 60 Anmeldungen (ohne Test) → 5,42 €.
