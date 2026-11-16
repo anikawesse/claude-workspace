@@ -169,3 +169,28 @@ Bei 14 % wären am 14./15.11. rund 11 Anmeldungen zu erwarten gewesen, es kamen 
 - nachher: 2 von 2 live (Viktoria 20 %, Rainer 44 %), beide Sofort-Termin. Viel zu wenig für ein Urteil.
 
 Testanmeldung Anika 15.11. 11:51: Anmeldung, Dankeseite, Bestätigungsmail und Devine-Tags (reg + reg_ads) funktionieren. Technik ist nicht die Ursache des Einbruchs der Anmeldequote.
+
+---
+
+# Auswertung 16.11.2026, 9:15 Uhr (Tag 7, ohne neuen Export)
+
+| Kennzahl | Wert |
+|---|---|
+| Ausgegeben | 325,41 € |
+| Anmeldungen (Meta-Leads, passt bisher gut zum Export) | ca. 59 → **ca. 5,50 € pro Anmeldung** |
+| davon neue Kontakte (Devine) | 44 → 7,40 € |
+| Reichweite / Frequenz | 18.837 Personen / 2,05 |
+| Verkäufe aus Ads | 0 |
+
+| Tag | Ausgegeben | Seitenaufrufe | Meta-Leads | Quote | Link-CTR | CPM |
+|---|---|---|---|---|---|---|
+| 13.11. | 48,26 € | 64 | 6 | 9 % | 1,37 % | 8,37 € |
+| 14.11. | 46,94 € | 50 | 3 | 6 % | 1,44 % | 10,23 € |
+| 15.11. | 53,43 € | 73 | 8 | **11 %** | **2,44 %** | 10,84 € |
+| 16.11. (bis 9 Uhr) | 12,02 € | 12 | 1 | – | 1,87 % | 8,63 € |
+
+**Der Einbruch hat sich am Sonntag teilweise erholt:** Anmeldequote wieder 11 %, Link-CTR mit 2,44 % der beste Tag seit dem Start. Der 14.11. war der Tiefpunkt.
+
+Pro Anzeige (Meta-Leads): Broad Gesucht 155,39 € / 32 → 4,86 € · Interessen Gesucht 88,39 € / 15 → 5,89 € · Interessen Vertrauen 75,69 € / 12 → 6,31 € · Broad Vertrauen 5,94 € / 0.
+
+Live-Quote nach den Änderungen vom 14./15.11. noch offen (braucht neuen WebinarKit-Export).
