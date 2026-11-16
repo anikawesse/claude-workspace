@@ -213,3 +213,10 @@ Nachher-Teilnehmerinnen: Viktoria 20 %, Rainer 98 % (Angebot geklickt), Sandra 9
 **Erster Eindruck sehr positiv** (Ziel 50–60 % erreicht, keine Sofort-Abbrüche mehr), aber erst 9 Termine. Urteil nach ca. 30 Terminen.
 
 Pro Anzeige laut Export (Kosten Stand 16.11. 9 Uhr): Broad Gesucht 29 Anm. → 5,36 € · Interessen Gesucht 17 → 5,20 € · Interessen Vertrauen 13 → 5,82 € · Broad Vertrauen 1. Gesamt 60 Anmeldungen (ohne Test) → 5,42 €.
+
+## 16.11.2026: Neue Headline auf der Anmeldeseite (Vorher/Nachher-Test)
+Anika ändert die Headline direkt im laufenden Ads-Webinar (6af1c1e107cb498885392b71). Der Klon dient nur als Backup.
+- Vorher: „In 90 Minuten erfährst du, wie du ein Verlassteam mit deinem Pferd wirst, damit es dir so sehr vertraut, dass es dir frei überallhin folgt."
+- Nachher: „In 90 Minuten erfährst du, wie dein Pferd dir so sehr vertraut, dass es sich ruhig und fein von dir führen lässt. Und dir später sogar frei überallhin folgt."
+- Vergleichswert vorher: Opt-in 11 bis 15 % (Export 16.11.: Broad Gesucht 11 %, Interessen Gesucht 15 %, Interessen Vertrauen 14 %). Ziel mindestens 20 bis 25 %.
+- Ab jetzt in jeder Auswertung die Opt-in-Quote vor und nach der Umstellung ausweisen (pro Tag und pro Anzeige). Frühestens nach 3 bis 4 Tagen bewerten.

@@ -14,7 +14,8 @@ Hey {{first_name}},
 wie schön, dass du dich für mein kostenloses Verlasspferde-Videotraining angemeldet hast. 🌸
 
 Für Freizeitreiterinnen mit jungem Pferd:
-In 90 Minuten erfährst du, wie du ein Verlassteam mit deinem Pferd wirst, damit es dir so sehr vertraut, dass es dir frei überallhin folgt.
+In 90 Minuten erfährst du, wie dein Pferd dir so sehr vertraut, dass es sich ruhig und fein von dir führen lässt. Und dir später sogar frei überallhin folgt.
+(Titel am 16.11.2026 an die neue Headline der Anmeldeseite angepasst)
 
 Dein Link zum Videotraining: {{link}}
 

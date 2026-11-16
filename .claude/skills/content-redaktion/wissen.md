@@ -1165,3 +1165,10 @@ Volltext: `reference/meta-ads-guide-2027-speedscaling.md`. Ads werden heute übe
 **Pro Ad 2 bis 3 Primärtexte und 2 bis 3 Headlines** liefern, Meta kombiniert selbst.
 
 **Mengenziel:** 20 bis 30 wirklich verschiedene Ads pro Launch. Gute Reels und Test-Reels sind Kandidaten für Ads: Was als Content trägt, trägt oft auch als Ad.
+
+### Vorproduktion 16.11.2026 (Montag, automatisch)
+
+- Gebaut in „Karussell-Posts 2026“, alle Vorlage 2b: Radfahrer/Verlasspferd (9) DAHbEGF8hUU Bild MAHZNhta2sA für 30.11., Kuhweide/Quiz (9) DAHbEJ-yKtk Bild MAHZNoWjodc für 01.12., Radius/Schlüssel (10) DAHbEFp4CIM Bild MAHZNs7LNrQ für 02.12., Heimweg/Verlasspferd (8) DAHbEJvL0js Bild MAHZNuu0LF0 für 03.12., Wald/Quiz (9) DAHbELpy5ZQ Bild MAHZNvkvaIE für 04.12.
+- Alle Yapping-Themen mit Gepostet-Status haben inzwischen ein Karussell. Neue Karussells kommen jetzt aus den offenen Gelände-Fragen der Sammlung yapping.
+- ⚠️ Bildvorrat: MAHZNhta2sA, MAHZNs7LNrQ und MAHZNuu0LF0 zeigen alle einen Schimmel und wirken nebeneinander ähnlich. Situationsfotos (Radfahrer, Kuhweide, Wald) gibt es im Ordner „Portrait“ nicht. Anika um passende Fotos bitten, wenn sie welche hat.
+- Schneller Box-Fit ohne zweiten Durchlauf: Zeilen vorab schätzen (bis ca. 75 Zeichen 2 Zeilen, bis ca. 110 Zeichen 3, bis ca. 145 Zeichen 4, darüber 5) und Text, Kasten und Position in EINEM edit-design-Call setzen. Danach nur die Seiten nachziehen, bei denen die zurückgegebene Höhe abweicht (diesmal 4 von 45). Seiten 1 bis 7 haben in jeder Kopie dieselben locator_ids, nur per merge eingefügte Seiten brauchen read-design.

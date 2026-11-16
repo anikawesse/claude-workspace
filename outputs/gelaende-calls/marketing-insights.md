@@ -19,6 +19,13 @@ Wörtliche Zitate, Aha-Momente, Fortschritte. Rohmaterial für Testimonials und 
 - **Andrea Schäfer (Programm-Teilnehmerin) bestätigt live im Chat:** „da bin ich ja auch ein Teilnehmer und kann das nur bestätigen, es hilft". Live-Social-Proof von einer Kundin wirkt stärker als Folien. → Testimonial-Freigabe anfragen.
 - **Anikas stärkster eigener Satz im Webinar:** „keine Landgewinnungsmentalität". Deckt sich mit Sabines Game Changer vom 11.09. („dass ich nicht irgendwo ankommen muss"). → **Zähler: 2 Quellen**, Kernbotschaft bestätigt.
 
+**Call 11.11.2026 (10. Feedbackrunde, nur Sabine):**
+
+- **Erster Galopp im Gelände, und sie blieb oben:** Flora schoss los, als ein Hund auf sie zurannte. Sabine: „Nicht runterfallen, geh in einen leichten Sitz“, und sie hatte sie schnell wieder. Im Nachhinein: „Eigentlich war es schön, sie ist schön durchgesprungen.“ Ihr Stallbesitzer: „Jetzt bist du ja wieder ein Stück weiter.“ → Starker Beleg zum Kern-Gegner „Losreißen und Durchgehen“: Es kann passieren, aber sie behält die Kontrolle.
+- **„Gar keine Idee von Losreißen“** (Sabine über ihren letzten Spaziergang, bei dem Flora abrupt stoppte und kurz loswollte, nach einem Zirkel aber sofort wieder bei ihr war).
+- **„Das ist schon krass, was da in dem halben Jahr passiert ist.“** (Sabine, mit Rückblick auf ihren „Happy Birthday“-Spaziergang im März) → Abschluss-Testimonial fürs Gelände-Programm, Freigabe anfragen.
+- **Tiergespräch Number 1** (in Annes Auftrag): Anne wirke auf ihn selbstbewusster, er verstehe sie, der Prozess bringe sie näher zusammen. → Testimonial-Kandidat fürs Tiergespräch, nicht fürs Gelände.
+
 **Call 06.11.2026 (Sabine, Anne):**
 
 - **Sabines Vorher/Nachher in eigenen Worten:** Im März sang sie auf der kleinsten Nachbarwiese noch ununterbrochen „Happy Birthday", um sich und Flora zu beruhigen; jetzt seien sie „ein ganz, ganz Stück weitergekommen". Dazu der frische Beleg: Nach dem Auszug von Floras zwei Freundinnen (vor zwei Jahren war so eine Lage eskaliert) ging der erste Spaziergang „ganz entspannt". → Starke Abschluss-Story fürs Programm (Freigabe anfragen).
@@ -161,6 +168,13 @@ Wiederkehrende Praxisfragen = Content-Ideen und Kurs-Lücken. Bei Wiederholung Z
 - **Sicherheit vom Boden in den Sattel** (M. Joost): „Zu Fuß klappt alles sehr gut. Wie transportiert man diese Sicherheit in den Sattel?" → Reit-Angle, passt zu „95 % der Strategien gelten auch beim Reiten".
 - **Trecker-Nuancen:** nur wenn er steht, nicht beim Vorbeifahren (Nina); Eisenbahn; Kastenwagen reicht beim Friesen (JG). → Content-Idee: „Stehender Trecker vs. fahrender Trecker".
 - **Wunsch nach Unterlagen** („Unterlagen von heute? Nicht nur die Links", iPhone Babs) + mehrfach Probleme mit dem Drive-Link zum Notfallkoffer. → VIP-Paket fest ans Ende der Q&A, Koffer über eine einfache eigene Seite + Mail.
+
+**Call 11.11.2026:**
+
+- **Komfortzone in Zahlen** (Tiergespräch Number 1): 70 % Entfernung zu anderen Pferden, 20 % unbekanntes Gelände, 10 % Wind. → Anschauliches Content-Stück „Warum dein Pferd nicht allein vom Hof will“; passt zur Positionierung „der Mensch als Sicherheitsanker statt Begleitpferd“.
+- **Bremsen über Beinschluss statt Zügel** (Anikas neues Video): Sabine will es mit Halsring testen. → Kurs-Lücke Tempokontrolle damit zumindest teilweise geschlossen; auch als Reel-Thema geeignet.
+- **Nicht genießen können** (Sabine: „Im Nachhinein habe ich mich geärgert, dass ich es noch nicht genießen konnte“): typischer Nachklang nach einem Schreckmoment, gut für Phase-1-Content.
+- **Wunsch nach Wiedersehen und Austausch** (Sabine fragt nach Susanne, Miriam, Nicola; Jahres-Call): Gruppengefühl ist bei den Aktiven da, die Teilnahme der anderen fehlt. → Für die nächste Runde Alumni-Treffen gleich mit einplanen.
 
 **Call 06.11.2026:**
 

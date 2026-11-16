@@ -908,7 +908,8 @@
       "Bash(git commit -q -m 'Ausfuellbares Workbook: weissen Feld-Hintergrund entfernt, Zahlen 1-10 jetzt auch in Acrobat sichtbar *)",
       "Bash(git commit -q -m 'Gelaende-Optin: Ads-Seite an organische angeglichen; bekommst/Kopfkino fett, Ablauf Punkt 1 '\\\\''von Zuhause'\\\\'' *)",
       "Bash(ffprobe -version)",
-      "Bash(grep -nE \"vimeo|hero-mockup|Preisvorteil|Ersparnis|sparst|€|EUR|749|999|549|450|Oktober|November|Dezember|September|[0-9]{1,2}\\\\.[0-9]{1,2}\\\\.|Start|startet|Anmeldung|Frist|läuft|Uhr\" outputs/webinar-gelaende/salespage-programm.html)"
+      "Bash(grep -nE \"vimeo|hero-mockup|Preisvorteil|Ersparnis|sparst|€|EUR|749|999|549|450|Oktober|November|Dezember|September|[0-9]{1,2}\\\\.[0-9]{1,2}\\\\.|Start|startet|Anmeldung|Frist|läuft|Uhr\" outputs/webinar-gelaende/salespage-programm.html)",
+      "PowerShell(& \"C:\\\\Users\\\\Olive\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\273a89040cea49d7\\\\8a5bb399-ce61-4df9-aa8d-57e1ccdfbf46\\\\scratchpad\\\\workshop-ads-auswertung.ps1\")"
     ],
     "defaultMode": "bypassPermissions"
   }
